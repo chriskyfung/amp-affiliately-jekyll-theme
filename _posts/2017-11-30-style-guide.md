@@ -4,11 +4,13 @@ image:
   path: /assets/images/shiva.jpg
 title: Style Guide
 date: 2017-11-30 04:00:00
-tags: guide
+author: Peter
+category: guide
+featured: true
 css:
   syntax: true
 meta: >-
-  <meta name="robots" content="noindex">  
+  <meta name="robots" content="noindex">
 ---
 
 <p>This shows how you can use html styling to achieve your hopes.</p>

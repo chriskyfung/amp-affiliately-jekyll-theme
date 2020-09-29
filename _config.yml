@@ -10,24 +10,35 @@ paginate: 12
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
 timezone: 'Asia/Hong_Kong'
-isSubdirectory: 
 baseurl: ''
 email: ''
 google_analytics: ''
 gtm: '' # Google Tag Manager ID
 adsense: '' # Google Adsense ID
 disqus: ''
-disqus-amp-baseurl: 'https://' #baseurl of your AMP disqus iframe element
+disqus_amp_baseurl: 'https://' #baseurl of your AMP disqus iframe element
 addthis: 
 cse_id: # Google Custom Search Engine ID
 buyme:
+sidebar:
+  featured: true
+  recent_posts: true
+repository: chriskyfung/amp-affiliately-jekyll-theme #<USERNAME>/<PROJECT>
 
 # Authors
 authors:
-  chris:
-    name: Chris
-    display_name: Chris
-    gravatar: abd876486b2caa54b43bf64a5a86f620
+  John:
+    name: John Washer
+    display_name: John
+    gravatar: 
+    email: 
+    web: 
+    facebook: https://www.facebook.com/
+    description: 
+  Peter:
+    name: Peter Mu
+    display_name: Peter
+    gravatar: 
     email: 
     web: 
     facebook: https://www.facebook.com/
@@ -45,6 +56,7 @@ plugins:
   - jekyll-gzip
   - jekyll-redirect-from
   - jekyll-extlinks
+  - jekyll-github-metadata
         
 # Archives
 jekyll-archives:
