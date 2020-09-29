@@ -52,10 +52,10 @@ amp:
             {% assign imgpath = page.image.path | remove: imgext %}
             {% unless page.image.hide %}
                 {% if imgext == "svg" %}
-                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ page.image.path }}" alt="{{ page.title }}"></amp-img>
+                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}" alt="{{ page.title }}"></amp-img>
                 {% else %}
-                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ imgpath }}webp" alt="{{ page.title }}">
-                        <amp-img fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ page.image.path }}" alt="{{ page.title }}"></amp-img>
+                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ imgpath }}webp" alt="{{ page.title }}">
+                        <amp-img fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}" alt="{{ page.title }}"></amp-img>
                     </amp-img>
                 {% endif %}
             {% endunless %}

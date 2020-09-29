@@ -10,16 +10,16 @@ paginate: 12
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
 timezone: 'Asia/Hong_Kong'
-baseurl: ''
+baseurl: '/amp-affiliately-jekyll-theme'
 email: ''
-google_analytics: ''
-gtm: '' # Google Tag Manager ID
-adsense: '' # Google Adsense ID
+google_analytics: 'UA-72575541-9'
+gtm: 'GTM-WQMQK3X' # Google Tag Manager ID
+cse_id: 011006674894885990812:tjln7k0nyjx # Google Custom Search Engine ID
+adsense: 'ca-pub-4819282024314540' # Google Adsense ID
 disqus: ''
 disqus_amp_baseurl: 'https://' #baseurl of your AMP disqus iframe element
-addthis: 
-cse_id: # Google Custom Search Engine ID
-buyme:
+addthis: ra-5d01c83d522ad580
+buyme: chrisfungky
 sidebar:
   featured: true
   recent_posts: true

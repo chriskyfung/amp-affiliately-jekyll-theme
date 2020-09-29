@@ -27,10 +27,10 @@
         {% assign lightbox = "" %}
     {% endif %}
     {% if ext == "svg" %}
-        <amp-img {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ path }}{{ img }}"></amp-img>
+        <amp-img {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ site.baseurl }}{{ path }}{{ img }}"></amp-img>
     {% else %}
-        <amp-img {{ lightbox }}  alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ path }}{{ name }}{{ suffix }}webp">
-            <amp-img fallback {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ path }}{{ name }}{{ suffix }}{{ ext }}"></amp-img>
+        <amp-img {{ lightbox }}  alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ site.baseurl }}{{ path }}{{ name }}{{ suffix }}webp">
+            <amp-img fallback {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ site.baseurl }}{{ path }}{{ name }}{{ suffix }}{{ ext }}"></amp-img>
         </amp-img>
     {% endif %}
     {% if include.link %}

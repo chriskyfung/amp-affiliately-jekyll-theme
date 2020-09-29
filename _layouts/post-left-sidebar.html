@@ -53,10 +53,10 @@ post_class: post-template
             {% if page.image %}
             {% unless page.image.hide %}
                 {% if page.image.ext == "svg" %}
-                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="/images/posts/{{ page.image.path }}.svg" alt="{{ page.title }}"></amp-img>
+                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}.svg" alt="{{ page.title }}"></amp-img>
                 {% else %}
-                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="/images/posts/{{ page.image.path }}.webp" alt="{{ page.title }}">
-                        <amp-img fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="/images/posts/{{ page.image.path }}.{{ page.image.ext }}" alt="{{ page.title }}"></amp-img>
+                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}.webp" alt="{{ page.title }}">
+                        <amp-img fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}.{{ page.image.ext }}" alt="{{ page.title }}"></amp-img>
                     </amp-img>
                 {% endif %}
             {% endunless %}

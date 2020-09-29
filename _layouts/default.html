@@ -71,8 +71,8 @@
 <body class="{{ layout }}">
 
 <!-- Google Tag Manager -->
-<amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-WQMQK3X&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
-<amp-auto-ads type="adsense" data-ad-client="ca-pub-4819282024314540" data-full-width>
+<amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm }}&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+<amp-auto-ads type="adsense" data-ad-client="{{ site.adsense }}" data-full-width>
     <div placeholder>Loading Ads...</div>
     <div fallback></div>
     <div overflow></div>
@@ -88,7 +88,7 @@
     <div class="container">
     
         <!-- Begin Logo -->
-        <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <a class="navbar-brand" href="/">
         <amp-img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140"></amp-img>
         </a>
         <!-- End Logo -->
@@ -100,24 +100,24 @@
             <ul class="navbar-nav ml-auto">
                 
                 <li class="nav-item">                
-                <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
+                <a class="nav-link" href="/">Home</a>
                 </li>
                 
                 <li class="nav-item dropdown" id="dropdown01">
                     <a class="nav-link dropdown-toggle" on="tap:dropdown01.toggleClass(class='show'),navbar.toggleClass(class='show')" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="{{ site.baseurl }}/blog/"><i class="far fa-newspaper mr-2"></i>All Stories</a>
-                    <a class="dropdown-item" href="{{ site.baseurl }}/category/"><i class="far fa-list-alt mr-2"></i>Categories</a>
-                    <a class="dropdown-item" href="{{ site.baseurl }}/tag/"><i class="fas fa-tag mr-2"></i>Tags</a>
+                    <a class="dropdown-item" href="/blog/"><i class="far fa-newspaper mr-2"></i>All Stories</a>
+                    <a class="dropdown-item" href="/category/"><i class="far fa-list-alt mr-2"></i>Categories</a>
+                    <a class="dropdown-item" href="/tag/"><i class="fas fa-tag mr-2"></i>Tags</a>
                     </div>
                 </li>
                 
                 <li class="nav-item">                
-                    <a class="nav-link" href="{{ site.baseurl }}/category/cloud/">Cloud</a>
+                    <a class="nav-link" href="/category/cloud/">Cloud</a>
                 </li> 
                 
                 <li class="nav-item">                
-                    <a class="nav-link" href="{{ site.baseurl }}/category/academic/">Academic</a>
+                    <a class="nav-link" href="/category/academic/">Academic</a>
                 </li>
                 
                 <li class="nav-item">                
@@ -150,7 +150,7 @@
             </div>
             <div class="modal-body">
                 <div class="search_form">
-                    <form method="GET" action="/search" target="_top">
+                    <form method="GET" action="{{ site.baseurl }}/search" target="_top">
                         <amp-autocomplete id="searchbox" filter="substring" src="/assets/data/suggestions.json">
                             <input class="form-control" name="q" type="search" placeholder="Search" required />
                         </amp-autocomplete>
@@ -195,7 +195,7 @@ License: https://www.wowthemes.net/freebies-license/
                     <h3>Want to talk about a new or existing project?</h3>
                     <p>See anything that can be improved?</p>                        
                     <p>Feel free to send me a message using the form below. I will get back to you as soon as possible!</p>
-                    <a class="btn btn-primary btn-lg" href="{{ site.baseurl }}/contact">Contact Me</a>
+                    <a class="btn btn-primary btn-lg" href="/contact">Contact Me</a>
                 </div>
                 <div class="col-md-4 text-center footersocial">
                     <div class="mb-4">
@@ -222,7 +222,7 @@ License: https://www.wowthemes.net/freebies-license/
             <div class="row">
                 <div class="col-sm-3">
                 <div class="footer-widget">
-                    <a id="footer-image" href="{{site.baseurl}}">
+                    <a id="footer-image" href="/">
                         <amp-img class="pr-lg-3" src="{{ site.baseurl }}/assets/images/knowledge__flatline.svg" height="179" width="255" layout="responsive"></amp-img>
                     </a>
                 </div>
@@ -232,10 +232,10 @@ License: https://www.wowthemes.net/freebies-license/
                 <div class="footer-widget">
                 <h5 class="title">Quick Links</h5>
                 <ul>
-                <li><a href="{{ site.baseurl }}/tag/qwiklabs">Qwiklabs Logbooks & Tools</a></li>
-                <li><a href="{{ site.baseurl }}/tag/tumblr">For Tumblr Developer</a></li>
-                <li><a href="{{ site.baseurl }}/tag/matlab">MATLAB Tips</a></li>
-                <li><a href="{{ site.baseurl }}/tag/evernote/">Evernote Tips</a></li>
+                <li><a href="/tag/qwiklabs">Qwiklabs Logbooks & Tools</a></li>
+                <li><a href="/tag/tumblr">For Tumblr Developer</a></li>
+                <li><a href="/tag/matlab">MATLAB Tips</a></li>
+                <li><a href="/tag/evernote/">Evernote Tips</a></li>
                 <li></li>
                 </ul>
                 </div>
@@ -245,9 +245,9 @@ License: https://www.wowthemes.net/freebies-license/
                 <div class="footer-widget">
                 <h5 class="title">Author</h5>
                 <ul>
-                <li><a href="{{ site.baseurl }}/about">About Me</a></li>
-                <li><a href="{{ site.baseurl }}/#projects">My Projects</a></li>
-                <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/#projects">My Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li><a href="https://invitation.codes/@chriskyfung" data-type="badge1" target="_blank" rel="noopener noreferrer">Referral codes</a></li>
                 </ul>
                 </div>
