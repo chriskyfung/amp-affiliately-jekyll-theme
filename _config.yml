@@ -10,6 +10,7 @@ paginate: 12
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
 timezone: 'Asia/Hong_Kong'
+isSubdirectory: 
 baseurl: ''
 email: ''
 google_analytics: ''

@@ -7,7 +7,7 @@ License: https://www.wowthemes.net/freebies-license/
 
 <aside class="sidebar">
 
-        {% unless page.url == "/blog/" or page.url contains "/blog/page"%}
+        {% unless page.url == "/blog/" or page.url contains "/blog/page" or site.isSubdirectory %}
             <!-- Featured -->
             <div aria-label="featured posts" class="sidebar-section">
                 <h5><span>Featured</span></h5>
