@@ -1,0 +1,114 @@
+<!--
+Template Name:Affiliates
+Copyright:WowThemes.net,https://www.wowthemes.net
+Version:1.0.2
+License: https://www.wowthemes.net/freebies-license/
+-->
+
+<aside class="sidebar">
+
+        {% unless page.url == "/blog/" or page.url contains "/blog/page"%}
+            <!-- Featured -->
+            <div aria-label="featured posts" class="sidebar-section">
+                <h5><span>Featured</span></h5>
+                
+                <section class="featured-posts">
+
+                    <div class="row listfeaturedtag">
+
+                    {% for post in site.posts %}
+
+                        {% if post.featured == true %}
+
+                            {% include featuredlist.html %}
+
+                        {% endif %}
+
+                    {% endfor %}
+
+                    </div>
+
+                </section>
+            </div>
+        {% endunless %}
+
+        {% unless page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
+            <!-- Recent Posts -->
+            <div aria-label="recent posts" class="sidebar-section">
+                <h5><span>Recent Posts</span></h5>
+                
+                <section class="recent-posts">
+
+                    <div class="row listfeaturedtag">
+
+                    {% for post in site.posts limit:4 %}
+
+                            {% include featuredlist.html %}
+
+                    {% endfor %}
+
+                    </div>
+
+                </section>
+            </div>
+        {% endunless %}
+            
+        <div aria-label="useful links" class="sidebar-section">
+            <h5><span>Useful</span></h5>
+            <ul style="list-style:list-none">
+            <li><a href="{{ site.baseurl }}/tag/qwiklabs">Qwiklabs Logbooks & Tools</a></li>
+            <li><a href="{{ site.baseurl }}/tag/tumblr">For Tumblr Developer</a></li>
+            <li><a href="{{ site.baseurl }}/tag/matlab">MATLAB Tips</a></li>
+            <li><a href="{{ site.baseurl }}/tag/evernote/">Evernote Tips</a></li>
+            <li><a href="{{ site.baseurl }}/contact">Partner with Me</a></li>
+            <li><a href="https://invitation.codes/@chriskyfung" data-type="badge1" target="_blank" rel="noopener noreferrer">Use my referral codes</a></li>
+            </ul>
+        </div>
+
+        <!-- {% unless page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
+        <div class="sidebar-section">
+            <h5><span>Recommended for You</span></h5>
+            <div class="addthis_relatedposts_inline"></div>
+        </div>
+        {% endunless %} -->
+
+        <div aria-label="youtube" class="sidebar-section">
+            <h5><span><i class='fab fa-youtube' style="color:red"></i> YouTube</span></h5>
+            <h6><span>Featured Video 📹</span></h6>
+            <ul style="list-style:list-none">
+                <li>{% include youtube-thumb.html id="5UrQ9D-epG8" title='GSP315 Perform Foundational Infrastructure Tasks in Google Cloud: Challenge Lab' %}</li>
+            </ul>
+            <amp-iframe
+                width="240"
+                height="100"
+                sandbox="allow-scripts allow-same-origin"
+                layout="intrinsic"
+                frameborder="0"
+                src="https://chriskyfung.gitlab.io/youtube_subscribe_button/youtube_subscribe_button.html"
+                >
+                <div fallback>Fail to load script</div>
+            </amp-iframe>
+        </div>
+            
+        <div aria-label="sidbar-ads" class="sidebar-section">
+            <h5><span>Ads</span></h5>
+            {% include sidebar-adsense.html %}
+        </div>
+
+        <div aria-label="craftweeks" class="sidebar-section">
+            <h5><span>Related Sites</span></h5>
+            <a href="https://craftweeks.com/en/" target="_blank">
+                {% include picture.html img="craftweeks-logo-with-black-title-transparent-bg-200x67.png" width="200" height="67" alt="Craftweeks logo" source="assets" lightbox=false %}
+            </a>
+            <h6><span>Recommended 📬</span></h6>
+            <ul style="list-style:list-none">
+                <li>
+                    <a href="https://craftweeks.com/en/tag/postman/" target="_blank">
+                        {% include picture.html img="postman-tutorials-disqus-rest-api.thumb.jpg" width="267" height="150" alt="Postman Tutorials: Case Study of Disqus REST API" source="assets" %}
+                        <b>Postman Tutorials: Case Study of Disqus API</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+</aside>

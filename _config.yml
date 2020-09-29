@@ -1,0 +1,107 @@
+# Site
+name: ""
+title: ""
+description: ""
+meta_description: ""
+url: 
+logo: 'assets/images/logo-plainSVG.svg'
+favicon: 'assets/images/favicon.png'
+paginate: 12
+paginate_path: "/blog/page:num/"
+permalink: /blog/:year/:month/:day/:title
+timezone: 'Asia/Hong_Kong'
+baseurl: ''
+email: ''
+google_analytics: ''
+gtm: '' # Google Tag Manager ID
+adsense: '' # Google Adsense ID
+disqus: ''
+disqus-amp-baseurl: 'https://' #baseurl of your AMP disqus iframe element
+addthis: 
+cse_id: # Google Custom Search Engine ID
+buyme:
+
+# Authors
+authors:
+  chris:
+    name: Chris
+    display_name: Chris
+    gravatar: abd876486b2caa54b43bf64a5a86f620
+    email: 
+    web: 
+    facebook: https://www.facebook.com/
+    description: 
+
+# Plugins
+plugins: 
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-loading-lazy
+  - jekyll-webp
+  - jekyll-gzip
+  - jekyll-redirect-from
+  - jekyll-extlinks
+        
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks: 
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# Jekyll ExtLinks
+extlinks:
+  attributes: {rel: noopener noreferrer, target: _blank}
+
+# Other
+markdown: kramdown
+highlighter: rouge
+environment: production
+
+jekyll-minifier:
+  exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+
+
+############################################################
+# Site configuration for the WebP Generator Plugin
+# The values here represent the defaults if nothing is set
+webp:
+  enabled: true
+  
+  # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
+  quality: 75
+
+  # List of directories containing images to optimize, nested directories will only be checked if `nested` is true
+  # By default the generator will search for a folder called `/img` under the site root and process all jpg, png and tiff image files found there.
+  img_dir: ["/images/", "/assets/images"]
+
+  # Whether to search in nested directories or not
+  nested: true
+
+  # add ".gif" to the format list to generate webp for animated gifs as well
+  formats: [".jpeg", ".jpg", ".png", ".tiff"]
+
+  # File extensions for animated gif files 
+  gifs: [".gif"]
+
+  # Set to true to always regenerate existing webp files
+  regenerate: false
+
+  # Local path to the WebP utilities to use (relative or absolute)
+  # Omit or leave as nil to use the utilities shipped with the gem, override only to use your local install
+  webp_path: nil
+
+  # List of files or directories to excludes
+  # e.g. custom or hand generated webp conversion files
+  exclude: []
+
+  # append '.webp' to filename after original extension rather than replacing it.
+  # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
+  append_ext: false
+############################################################

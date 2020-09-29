@@ -1,0 +1,42 @@
+{% assign img = include.img %}
+{% assign layout = include.layout %}
+
+{% if include.source == "assets" %}
+    {% assign path = "/assets/images/" %}
+{% elsif include.source == "projects" %}
+    {% assign path = "/images/projects/" %}
+{% elsif include.source == "raw" %}
+    {% assign path = "" %}
+{% else %}
+    {% assign path = "/images/posts/" %}
+{% endif %}
+
+{% if include.lightbox == false %}
+    {% assign lightbox = "" %}
+{% else %}
+    {% assign lightbox = 'on="tap:lightbox1" role="button" tabindex="0"' %}
+{% endif %}
+
+{% assign ext = img | split: "." | last %}
+{% assign name = img | remove: ext %}
+{% assign suffix = include.suffix %}
+
+<figure {% if include.class %}class="{{ include.class }}"{% endif %}>
+    {% if include.link %}
+        <a href="{{ include.link }}">
+        {% assign lightbox = "" %}
+    {% endif %}
+    {% if ext == "svg" %}
+        <amp-img {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ path }}{{ img }}"></amp-img>
+    {% else %}
+        <amp-img {{ lightbox }}  alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ path }}{{ name }}{{ suffix }}webp">
+            <amp-img fallback {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ path }}{{ name }}{{ suffix }}{{ ext }}"></amp-img>
+        </amp-img>
+    {% endif %}
+    {% if include.link %}
+        </a>
+    {% endif %}
+    {% if include.caption %}
+        <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>
