@@ -1,0 +1,54 @@
+{% if post.image.width %}
+    {% assign imgwidth = post.image.width %}
+{% else %}
+    {% assign imgwidth =  "730" %}
+{% endif %}
+{% if post.image.height %}
+    {% assign imgheight = post.image.height %}
+{% else %}
+    {% assign imgheight =  "411" %}
+{% endif %}
+
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+
+<div class="col-md-6 grid-item">
+<div class="card">
+    <a href="{{ post.url | absolute_url }}">
+        {% if post.image.path %}
+            {% include picture.html img=post.image.path ext=post.image.ext width=imgwidth height=imgheight layout="intrinsic" lightbox=false %}
+        {% else %}
+            {% include picture.html img="write-2160925.svg" source="assets" width="auto" height="197" layout="fixed-height" lightbox=false %}
+        {% endif %}
+    </a>
+
+    <!--
+    Template Name:Affiliates
+    Copyright:WowThemes.net,https://www.wowthemes.net
+    Version:1.0.2
+    License: https://www.wowthemes.net/freebies-license/
+    -->
+
+
+    <div class="card-block">
+        <h2 class="card-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</h4>
+        <div class="metafooter">
+            <div class="wrapfooter">
+                {% if post.author %}
+                <span class="meta-footer-thumb">
+                <amp-img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" width="40" height="40" alt="{{ author.display_name }}"></amp-img>
+                </span>                
+                <span class="author-meta">
+                <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a></span><br/>
+                {% endif %}
+                <span class="post-date">{{ post.date | date_to_string }}</span>
+                </span>
+                <span class="post-read-more"><a href="{{ post.url | absolute_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- end post -->

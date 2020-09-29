@@ -1,0 +1,200 @@
+/* navigation items */
+.fixed-top {
+  position: sticky;
+}
+
+#toggle-search {
+  margin-left: 15px;
+  margin-top: inherit;
+}
+
+.navbar-nav .invitation-codes {
+  margin-left: 15px;
+  margin-top: inherit;
+
+  a {
+    background: linear-gradient(139deg,#ffc92f,#ff185c,#f316d5,#b81ed2);
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0 10px;
+    height: 36px;
+    display: inline-block;
+  }
+  svg {
+    float: left;
+    vertical-align: middle;
+    display: inline!important;
+    margin-right: 7px;
+    margin-left: 1px;
+    padding-top: 6px;
+    height: 20px;
+    padding-top: 7px;
+    height: 28px;
+  }
+  span {
+    padding: 0 12px;
+    vertical-align: middle;
+    float: left;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  #toggle-search {
+    margin-left: inherit;
+    margin-top: 15px;
+  }
+  
+  .navbar-nav .invitation-codes {
+    margin-left: inherit;
+    margin-top: 15px;
+  }
+}
+/* END navigation items */
+
+/* footer items */
+#footer-image {
+  background: #e9e4ff;
+  display: block;
+  border-radius: 60% 70% 500% 70%;
+}
+/* END footer items */
+
+/* post layout */
+.addthis_inline_share_toolbox {
+  margin-bottom: 15px;
+}
+
+.featured-image.shadow-none {
+  box-shadow: none;
+}
+
+.article-post {
+  h2 {
+    margin-top: 6rem;
+  }
+  h3, h4 {
+    margin-top: 3rem;
+  }
+  del {
+    color: #999;
+    text-decoration-color: #f05f70;
+    a {
+      box-shadow: none;
+      border-bottom: 1px solid #ddd;
+      text-decoration: inherit;
+    }
+  }  
+  figure.shadow-none img {
+    box-shadow: none;
+  }
+  a>code {
+    padding: .2rem .4rem;
+    color: #bd4147;
+    background-color: #f7f7f9;
+    box-shadow: inset 0 -2px 0 rgba(255, 229, 31,1), 0 2px 0 rgba(255, 229, 31,1);
+  }
+  a.footnote {
+    box-shadow: none;
+    background-color: rgba(255, 229, 31,1);
+  }
+}
+
+ul.tags.rounded-tags {
+  li a {
+    background: transparent;
+    border: 1px solid;
+    border-radius: 20px;
+  }
+
+  code a {
+    box-shadow: inherit;
+  }
+}
+/* END post layout */
+
+/* featuredlist.html */
+.listfeaturedtag {
+  .card{
+    .thumbnail img {
+      width: 500px;
+      height: 258px;
+      object-fit: cover;
+    }
+  }
+  .card-list{
+    height: auto;
+    width: 100%;
+
+    .thumbnail img {
+      width: 500px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    h2.card-title {
+      font-size: 1rem;
+    }
+    .wrapthumbnail {
+      height: 150px;
+    }
+    
+    .wrapfooter {
+      bottom: 1rem;
+    }
+  }
+}
+/* END featuredlist.html */
+
+/* Buy Me A Coffee */
+.bmc-button img {
+	height: 34px !important;
+	width: 35px !important;
+	margin-bottom: 1px !important;
+	box-shadow: none !important;
+	border: none !important;
+	vertical-align: middle !important;
+}
+
+.bmc-button {
+  padding: 7px 15px 7px 10px !important;
+	line-height: 35px !important;
+	height: 51px !important;
+	text-decoration: none !important;
+	display: inline-flex !important;
+	color: #ffffff !important;
+	background-color: #FF813F !important;
+	border-radius: 5px !important;
+	border: 1px solid transparent !important;
+	padding: 7px 15px 7px 10px !important;
+	font-size: 28px !important;
+	letter-spacing: 0.6px !important;
+	box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+	-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+	margin: 0 auto !important;
+	font-family: 'Cookie', cursive !important;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+	-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+	text-decoration: none !important;
+	box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+	opacity: 0.85 !important;
+	color: #ffffff !important;
+}
+/* END Buy Me A Coffee */
+
+/* Viglink */
+a.vglnk {
+  border-bottom:2px dashed gray;
+  box-shadow: unset;
+}
+/* END Viglink */
