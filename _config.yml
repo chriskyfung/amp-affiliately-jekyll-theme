@@ -3,7 +3,7 @@ name: ""
 title: ""
 description: ""
 meta_description: ""
-url: 
+url: https://chriskyfung.github.io
 logo: 'assets/images/logo-plainSVG.svg'
 favicon: 'assets/images/favicon.png'
 paginate: 12
@@ -57,7 +57,8 @@ jekyll-archives:
 
 # Jekyll ExtLinks
 extlinks:
-  attributes: {rel: noopener noreferrer, target: _blank}
+  attributes: {rel: noopener noreferrer}
+  rel_exclude: ['chriskyfung.github.com', 'localhost']
 
 # Other
 markdown: kramdown
