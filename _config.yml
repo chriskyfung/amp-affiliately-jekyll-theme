@@ -1,8 +1,8 @@
 # Site
-name: ""
-title: ""
-description: ""
-meta_description: ""
+name: "AMP Affiliately Jekyll Theme"
+title: "AMP Affiliately Jekyll Theme"
+description: "An AMP-ready Jekyll blog theme"
+meta_description: "An AMP-ready Jekyll blog theme"
 url: https://chriskyfung.github.io
 logo: 'assets/images/logo-plainSVG.svg'
 favicon: 'assets/images/favicon.png'
