@@ -34,7 +34,7 @@ amp:
                         {% assign sortedCategories = page.categories | sort %}
                         {% for category in sortedCategories %}
                         <li>
-                            <a href="/category/{{ category | slugify }}/">{{ category }}</a>
+                            <a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a>
                         </li>
                         {% endfor %}
                     </ul>
