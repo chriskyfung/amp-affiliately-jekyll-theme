@@ -55,7 +55,6 @@ plugins:
   - jekyll-webp
   - jekyll-gzip
   - jekyll-redirect-from
-  - jekyll-extlinks
   - jekyll-github-metadata
         
 # Archives
@@ -67,11 +66,6 @@ jekyll-archives:
   permalinks: 
     category: '/category/:name/'
     tag: '/tag/:name/'
-
-# Jekyll ExtLinks
-extlinks:
-  attributes: {rel: noopener noreferrer}
-  rel_exclude: ['chriskyfung.github.com', 'localhost']
 
 # Other
 markdown: kramdown
