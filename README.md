@@ -1,6 +1,6 @@
 # AMP Affiliately Jekyll Theme
 
-![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20the%20GitHub%20Pages%20publication/badge.svg)
+![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg)
 
 Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 
@@ -40,6 +40,16 @@ Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 ## What is AMP
 
 AMP stands for [Accelerated Mobile Pages](https://www.ampproject.org/), a Google-backed project designed as an open standard for any publisher to have pages load quickly on mobile devices.
+
+## Installation
+
+There are different ways to install the theme -
+
+### 1. Cloning the repository and updating settings
+1. Fork this repository and clone the forked repository.
+2. Update the _config.yml file as per your requirements.
+3. Add your posts to the _posts directory.
+4. Deploy to Github Pages or your own server.
 
 ## Writing Posts
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
