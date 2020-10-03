@@ -89,7 +89,7 @@
     
         <!-- Begin Logo -->
         <a class="navbar-brand" href="/">
-        <amp-img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140"></amp-img>
+        <amp-img src="/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140"></amp-img>
         </a>
         <!-- End Logo -->
         
@@ -133,12 +133,6 @@
     </div>
 </header>
 
-
-
-    <nav class="ap-o-burger-menu" [class]="mainmenuopen ? 'ap-o-burger-menu mainmenuopen' : 'ap-o-burger-menu'">
-
-    </nav>
-
 <amp-lightbox scrollable id="amp-searchbar" layout="nodisplay" animate-in="fade-in">
     <div class="modal-dialog modal-lg">
         
@@ -181,7 +175,7 @@ License: https://www.wowthemes.net/freebies-license/
         <!-- Content
         ================================================== --> 
         <div class="main-content" style="margin-top: 88px;">
-            {{ content | extlinks }}
+            {{ content }}
         </div>
     
     </div><!-- /.container --> 
@@ -248,7 +242,7 @@ License: https://www.wowthemes.net/freebies-license/
                 <li><a href="/about">About Me</a></li>
                 <li><a href="/#projects">My Projects</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="https://invitation.codes/@chriskyfung" data-type="badge1" target="_blank" rel="noopener noreferrer">Referral codes</a></li>
+                <li><a href="https://invitation.codes/@chriskyfung" target="_blank" rel="noopener noreferrer" data-vars-event-label="Invitation.codes Badge">Referral codes</a></li>
                 </ul>
                 </div>
                 </div>
@@ -257,9 +251,9 @@ License: https://www.wowthemes.net/freebies-license/
                 <div class="footer-widget">
                     <h5 class="title">Disclosures</h5>
                     <!-- Copyscape Banner -->
-                    <div id="copyscape-banner"><a href="http://www.copyscape.com/"><amp-img src="//banners.copyscape.com/img/copyscape-banner-white-130x46.png" width="130" height="46" alt="Protected by Copyscape" title="Protected by Copyscape - Do not copy content from this page."></amp-img></a></div>
+                    <div id="copyscape-banner"><a href="http://www.copyscape.com/" data-vars-event-label="Copyscape Badge" rel="noopener noreferrer"><amp-img src="//banners.copyscape.com/img/copyscape-banner-white-130x46.png" width="130" height="46" alt="Protected by Copyscape" title="Protected by Copyscape - Do not copy content from this page."></amp-img></a></div>
                     <!-- Affiliate Disclouse -->
-                    <div id="vig-disclose"><a href="https://www.viglink.com/legal/disclosures/users?vgtag=badge"><amp-img alt="VigLink badge" src="https://www.viglink.com/images/badges/120x60.png" title="Links monetized by VigLink" width="120" height="60" style="margin: 5px;"></amp-img></a></div>
+                    <div id="vig-disclose"><a href="https://www.viglink.com/legal/disclosures/users?vgtag=badge" data-vars-event-label="Viglink Badge" rel="noopener noreferrer"><amp-img alt="VigLink badge" src="https://www.viglink.com/images/badges/120x60.png" title="Links monetized by VigLink" width="120" height="60" style="margin: 5px;"></amp-img></a></div>
                 </div>
                 </div>
             </div>
@@ -281,6 +275,33 @@ License: https://www.wowthemes.net/freebies-license/
     ================================================== -->
 
 </div> <!-- /.site-content -->
+
+<!-- Configure analytics to use gtag -->
+<amp-analytics type="gtag" data-credentials="include">
+    <script type="application/json">
+        {
+            "vars": {
+                "gtag_id": "{{ site.google_analytics }}",
+                "config": {
+                    "{{ site.google_analytics }}": { "groups": "default" }
+                }
+            },
+            "triggers": {
+                "trackAnchorClicks": {
+                    "selector": "a:not([href^='{{ site.url }}'])",
+                    "on": "click",
+                    "request": "event",
+                    "vars": {
+                        "event_category": "External Link",
+                        "event_name": "${eventLabel}",
+                        "event_label": "{{ page.title }}",
+                        "method": "Google"
+                    }
+                }
+            }
+        }
+    </script>
+</amp-analytics>
 
 <amp-image-lightbox id="lightbox1" layout="nodisplay" data-close-button-aria-label="Close"></amp-image-lightbox>
 <amp-link-rewriter layout="nodisplay">
