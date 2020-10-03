@@ -2,8 +2,7 @@
     <amp-iframe width=600 height=140 layout="responsive"
     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
     resizable
-    src="https://{{ site.disqus_amp_baseurl }}/disqus-amp/q.html?url={{ site.url }}{{ page.url }}&title='{{ page.title }}'"
-    >
+    src="{{ site.amp_disqus_url }}?url={{ site.url }}{{ page.url }}&title='{{ page.title }}'">
         <div overflow
         tabindex=0
         role=button
