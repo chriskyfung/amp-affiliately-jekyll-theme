@@ -51,25 +51,26 @@ There are different ways to install the theme -
 3. Add your posts to the _posts directory.
 4. Deploy to Github Pages or your own server.
 
-## Add Custom Codes to HTML Head to Page/Post
+## Configures
 
-In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
+### Enabling 3rd-party components
 
-```yaml
-custom_head: >-
-  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-```
+#### Google Analytics
+1. Set up your Analytics Tracking ID in _config.yml.
 
-## Add Custom Codes to Header to Page/Post
+#### Google Tag Manager
+1. Set up your GTM AMP container ID in _config.yml.
 
-In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
+#### Google Adsense
+1. Set up your Adsense ID in _config.yml.
 
-```yaml
-css:
-   custom: >
-      .ml-2 { margin-left: 2rem }
-      table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
-```
+#### Google Custom Search Engine
+1. Set up your gcse ID in _config.yml.
+
+#### Disqus Comments
+1. Deploy disqus-amp.html to another domain or subdoamin.
+2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
+
 
 ## Writing Posts
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
@@ -78,7 +79,7 @@ You cannot use Markdown format or normal HTML tags. AMP provides its own custom 
 
 ### Examples -
 
-**Images**
+#### Images
 
 Use the `picture.html` template to insert an image in the AMP format with automatically serving the image in the WebP format.
 The template also wraps the image with a `<figure>` tag with an optional caption element.
@@ -98,7 +99,7 @@ Options:
   - `projects` - get image from the `/images/projects/` directory
   - `raw` - get image from the specified URL
 
-**YouTube Videos**
+#### YouTube Videos
 
 You must include the following front matter variable to enable YouTube embeds.
 
@@ -118,7 +119,7 @@ To embed a playlist, you must set it with both the playlist ID and the ID of the
 
 `{% include youtube.html id="<YOUTUBE_VIDEO_UID>" playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}`
 
-**Codes**
+#### Codes
 
 To enable syntax highlighter, you must add the following to the post front matter.
 
@@ -127,7 +128,9 @@ css:
   syntax: true
 ```
 
-## Set Featured Image for Page/Post
+### Front Matters
+
+#### Set Featured Image for Page/Post
 
 You can assign an image (with 730×431 pixels in size) as the featured image of a post in the front matter like this:
 
@@ -170,10 +173,30 @@ image:
    fit: left
 ```
 
-## Set Last Modified Date
+#### Set Last Modified Date
 
 ```yaml
 last_modified_at: 2020-06-20 23:36 +0800`
+```
+
+#### Add Custom Codes to HTML Head to Page/Post
+
+In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
+
+```yaml
+custom_head: >-
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+```
+
+#### Add Custom CSS Styles to Header to Page/Post
+
+In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
+
+```yaml
+css:
+   custom: >
+      .ml-2 { margin-left: 2rem }
+      table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
 ```
 
 ### Using AMP Components
@@ -191,22 +214,6 @@ Example -
 http://localhost:4000/#development=1
 
 If you have errors on your page, AMP will list those for you in the console. If you do not have any errors, you'll get a message "AMP Validation Successful" on your console.
-
-## Enabling Google Analytics
-1. Set up your Analytics Tracking ID in _config.yml.
-
-## Enabling Google Tag Manager
-1. Set up your GTM AMP container ID in _config.yml.
-
-## Enabling Google Adsense
-1. Set up your Adsense ID in _config.yml.
-
-## Enabling Google Custom Search Engine
-1. Set up your gcse ID in _config.yml.
-
-## Enabling Disqus Comments
-1. Deploy disqus-amp.html to another domain or subdoamin.
-2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
 
 ## Contributing
 
