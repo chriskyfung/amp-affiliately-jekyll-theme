@@ -51,6 +51,26 @@ There are different ways to install the theme -
 3. Add your posts to the _posts directory.
 4. Deploy to Github Pages or your own server.
 
+## Add Custom Codes to HTML Head to a Page/Post
+
+In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
+
+```yaml
+custom_head: >-
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+```
+
+## Add Custom Codes to Header to a Page/Post
+
+In the front matter, you can add your custom CSS styles to the end of the <style amp-custom> tag inside the HTML header.
+
+```yaml
+css:
+   custom: >
+      .ml-2 { margin-left: 2rem }
+      table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
+```
+
 ## Writing Posts
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
 
@@ -63,6 +83,22 @@ You cannot use Markdown format or normal HTML tags. AMP provides its own custom 
 
 **Videos**
 `{% include youtube.html id="mGENRKrdoGY" }`
+
+In addition, you must include the following code to the post front matter.
+
+```yaml
+amp:
+   youtube: true
+```
+
+**Codes**
+
+To enable syntax highlighter, you must add the following to the post front matter.
+
+```yaml
+css:
+  syntax: true
+```
 
 ### Using AMP Components
 Some AMP components require you to specify external scripts before using them.
