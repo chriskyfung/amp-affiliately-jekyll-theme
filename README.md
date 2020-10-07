@@ -199,6 +199,32 @@ css:
       table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
 ```
 
+#### Display Download Buttons in Post's sidebar
+
+When you use this theme for the Github Pages of a Github project repository, it is available to show a download button or links to the repository in the sidebar of a Post.
+
+To display the button to the project repository, declare the repository name in your `_config.yml`.
+
+```yaml
+repository: <USERNAME>/<PROJECT>
+```
+
+Also, appending the `download` variable to the post front matter.
+
+```yaml
+download: true
+```
+
+If an release exists in the repository, an additional button that links to the latest release will be shown.
+
+You can also override the latest release button by defining a URL under the `download` variable, _e.g._:
+
+```yaml
+downlod:
+  url: //.../filename.zip
+```
+
+
 ### Using AMP Components
 Some AMP components require you to specify external scripts before using them.
 You can specify these scripts in the head.html file in the includes directory after the already imported scripts and then use these components in any post.
