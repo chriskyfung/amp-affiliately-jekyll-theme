@@ -6,7 +6,7 @@ meta_description: "An AMP-ready Jekyll blog theme"
 url: https://chriskyfung.github.io
 logo: 'assets/images/logo-plainSVG.svg'
 favicon: 'assets/images/favicon.png'
-paginate: 12
+paginate: 6
 paginate_path: "/blog/page:num/"
 permalink: /blog/:year/:month/:day/:title
 timezone: 'Asia/Hong_Kong'
