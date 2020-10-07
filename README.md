@@ -51,7 +51,7 @@ There are different ways to install the theme -
 3. Add your posts to the _posts directory.
 4. Deploy to Github Pages or your own server.
 
-## Add Custom Codes to HTML Head to a Page/Post
+## Add Custom Codes to HTML Head to Page/Post
 
 In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
 
@@ -60,9 +60,9 @@ custom_head: >-
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 ```
 
-## Add Custom Codes to Header to a Page/Post
+## Add Custom Codes to Header to Page/Post
 
-In the front matter, you can add your custom CSS styles to the end of the <style amp-custom> tag inside the HTML header.
+In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
 
 ```yaml
 css:
@@ -79,17 +79,44 @@ You cannot use Markdown format or normal HTML tags. AMP provides its own custom 
 ### Examples -
 
 **Images**
-`{% include picture.html img="welcome.jpg" alt="Welcome" height="400" width="800" caption="Welcome" class="text-center" %}`
 
-**Videos**
-`{% include youtube.html id="mGENRKrdoGY" }`
+Use the `picture.html` template to insert an image in the AMP format with automatically serving the image in the WebP format.
+The template also wraps the image with a `<figure>` tag with an optional caption element.
 
-In addition, you must include the following code to the post front matter.
+`{% include picture.html img="welcome.jpg" height="400" width="800" ="Welcome" ="text-center" %}`
+
+Options:
+- **alt**
+- **caption** (_support HTML codes_)
+- **class** (_e.g._ `text-center`)
+- **layout** (_amp-img supported layouts_: `fill`, `fixed`, `fixed-height`, `flex-item`, `intrinsic`, `nodisplay` or `responsive`. _default_: `intrinsic`)
+- **lightbox** (_default_: `true`)
+- **link** (_assign a URL for the HTML a tag that wraps the amp-img tag when the key is present_)
+- **source** (`assets`, `projects` or `raw`)
+  - _default_ - get image from the `/images/posts/` directory 
+  - `assets` - get image from the `/assets/images/` directory
+  - `projects` - get image from the `/images/projects/` directory
+  - `raw` - get image from the specified URL
+
+**YouTube Videos**
+
+You must include the following front matter variable to enable YouTube embeds.
 
 ```yaml
 amp:
    youtube: true
 ```
+
+To embed a single video, use the following tag to include the `youtube.html` template.
+
+`{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" %}`
+
+- **id** _required_
+- **title** _optional_
+
+To embed a playlist, you must set it with both the playlist ID and the ID of the first video within the playlist.
+
+`{% include youtube.html id="<YOUTUBE_VIDEO_UID>" playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}`
 
 **Codes**
 
@@ -98,6 +125,55 @@ To enable syntax highlighter, you must add the following to the post front matte
 ```yaml
 css:
   syntax: true
+```
+
+## Set Featured Image for Page/Post
+
+You can assign an image (with 730×431 pixels in size) as the featured image of a post in the front matter like this:
+
+```yaml
+image:
+   path: /assets/images/filename.png
+```
+
+If the image is not at 16:9 aspect ratio, you need to define it width and height under the `image` variable, _e.g._:
+
+```yaml
+image:
+   path: /assets/images/filename.png
+   width: 640
+   height: 480
+```
+
+If you do not want to display the featured image on the post page, append a `hide` option to the `image` variable, _e.g._:
+
+```yaml
+image:
+   path: /assets/images/filename.png
+   hide: true
+```
+
+If you want to remove the shadow of the featured image on the post page, append the following class to the `image` variable, _e.g._
+
+```yaml
+image:
+   path: /assets/images/filename.png
+   class: shadow-none
+```
+
+By default, the thumbnail of featured images is cropped at the center inside the cards of the Featured Boxes/Lists. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
+
+
+```yaml
+image:
+   path: /assets/images/filename.png
+   fit: left
+```
+
+## Set Last Modified Date
+
+```yaml
+last_modified_at: 2020-06-20 23:36 +0800`
 ```
 
 ### Using AMP Components
@@ -148,4 +224,4 @@ Affiliately is based on [Affiliates](https://github.com/wowthemesnet/affiliates-
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
