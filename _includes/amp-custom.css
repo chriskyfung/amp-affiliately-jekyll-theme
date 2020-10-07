@@ -164,6 +164,14 @@ ul.tags.rounded-tags code a {
     height: 150px
 }
 
+.thumbnail.fit-left img {
+    object-position: left
+}
+
+.thumbnail.fit-right img {
+    object-position: right
+}
+
 .bmc-button img {
     height: 34px;
     width: 35px;

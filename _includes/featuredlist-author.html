@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-5 wrapthumbnail">
             <a href="{{ post.url | absolute_url }}">
-            <div class="thumbnail">
+            <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
                 {% if post.image.path %}
                     {% include picture.html img=post.image.path ext=post.image.ext width="112" height="150" layout="intrinsic" lightbox=false %}
                 {% else %}
