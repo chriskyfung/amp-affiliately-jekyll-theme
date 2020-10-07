@@ -9,7 +9,7 @@ category: guide
 featured: true
 css:
   syntax: true
-meta: >-
+custom_head: >-
   <meta name="robots" content="noindex">
 ---
 
