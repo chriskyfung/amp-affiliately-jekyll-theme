@@ -179,6 +179,12 @@ image:
 last_modified_at: 2020-06-20 23:36 +0800`
 ```
 
+#### Pin to Featured Boxes/Lists
+
+```yaml
+featured: true
+```
+
 #### Add Custom Codes to HTML Head to Page/Post
 
 In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
@@ -215,7 +221,10 @@ Also, appending the `download` variable to the post front matter.
 download: true
 ```
 
-If an release exists in the repository, an additional button that links to the latest release will be shown.
+If a release exists in the repository, an additional button that links to the latest release will be shown.
+
+**Note**: Authentication is required to get your repository data in order to show the release button. Please follow the docs of [jekyll
+/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) to set up your personal access token.
 
 You can also override the latest release button by defining a URL under the `download` variable, _e.g._:
 
