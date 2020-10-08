@@ -36,10 +36,13 @@ Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 - Easily Customisable
 - Support deploy to Github Pages via Github Action
 
+* * *
 
 ## What is AMP
 
 AMP stands for [Accelerated Mobile Pages](https://www.ampproject.org/), a Google-backed project designed as an open standard for any publisher to have pages load quickly on mobile devices.
+
+* * *
 
 ## Installation
 
@@ -50,6 +53,8 @@ There are different ways to install the theme -
 2. Update the _config.yml file as per your requirements.
 3. Add your posts to the _posts directory.
 4. Deploy to Github Pages or your own server.
+
+* * *
 
 ## Configures
 
@@ -71,6 +76,7 @@ There are different ways to install the theme -
 1. Deploy disqus-amp.html to another domain or subdoamin.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
 
+* * *
 
 ## Writing Posts
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
@@ -128,55 +134,62 @@ css:
   syntax: true
 ```
 
+* * *
+
 ### Front Matters
 
-#### Set Featured Image for Page/Post
+#### Set Featured Image for a Page/Post
 
 You can assign an image (with 730×431 pixels in size) as the featured image of a post in the front matter like this:
 
 ```yaml
 image:
-   path: /assets/images/filename.png
+   path: /assets/images/cover-image.png
 ```
+
+##### Create thumbnail images for display in Featured Boxes/Lists
+
+1. Make a copy of each featured image file in the same folder.
+2. Rename the copies to have a filename in form of `<filename>.thumb.<ext>`, _e.g._ `cover-image.thumb.png`.
+3. Rescale it to a heigth of 150px.
+
+By default, the thumbnail of featured images is cropped at the center inside the cards of the Featured Boxes/Lists. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
+
+```yaml
+image:
+   path: /assets/images/cover-image.png
+   fit: left
+```
+
+##### For images that do not have an aspect ratio of 16:9
 
 If the image is not at 16:9 aspect ratio, you need to define it width and height under the `image` variable, _e.g._:
 
 ```yaml
 image:
-   path: /assets/images/filename.png
+   path: /assets/images/cover-image.png
    width: 640
    height: 480
 ```
 
-If you do not want to display the featured image on the post page, append a `hide` option to the `image` variable, _e.g._:
+##### Hide Featured Image on a Page/Post
+
+If you do not want to render the featured image on the post page, append a `hide` option to the `image` variable, _e.g._:
 
 ```yaml
 image:
-   path: /assets/images/filename.png
+   path: /assets/images/cover-image.png
    hide: true
 ```
+
+##### Remove Box Shadow from a Featured Image
 
 If you want to remove the shadow of the featured image on the post page, append the following class to the `image` variable, _e.g._
 
 ```yaml
 image:
-   path: /assets/images/filename.png
+   path: /assets/images/cover-image.png
    class: shadow-none
-```
-
-By default, the thumbnail of featured images is cropped at the center inside the cards of the Featured Boxes/Lists. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
-
-
-```yaml
-image:
-   path: /assets/images/filename.png
-   fit: left
-```
-
-#### Set Last Modified Date
-
-```yaml
-last_modified_at: 2020-06-20 23:36 +0800`
 ```
 
 #### Pin to Featured Boxes/Lists
@@ -185,7 +198,13 @@ last_modified_at: 2020-06-20 23:36 +0800`
 featured: true
 ```
 
-#### Add Custom Codes to HTML Head to Page/Post
+##### Set Last Modified Date
+
+```yaml
+last_modified_at: 2020-06-20 23:36 +0000`
+```
+
+#### Add Custom Codes to HTML Head to a Page/Post
 
 In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
 
@@ -194,7 +213,7 @@ custom_head: >-
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 ```
 
-#### Add Custom CSS Styles to Header to Page/Post
+#### Add Custom CSS Styles to Header to a Page/Post
 
 In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
 
@@ -205,7 +224,7 @@ css:
       table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
 ```
 
-#### Display Download Buttons in Post's sidebar
+#### Display Download Buttons in a Post's sidebar
 
 When you use this theme for the Github Pages of a Github project repository, it is available to show a download button or links to the repository in the sidebar of a Post.
 
@@ -233,6 +252,7 @@ downlod:
   url: //.../filename.zip
 ```
 
+* * *
 
 ### Using AMP Components
 Some AMP components require you to specify external scripts before using them.
@@ -249,6 +269,8 @@ Example -
 http://localhost:4000/#development=1
 
 If you have errors on your page, AMP will list those for you in the console. If you do not have any errors, you'll get a message "AMP Validation Successful" on your console.
+
+* * *
 
 ## Contributing
 

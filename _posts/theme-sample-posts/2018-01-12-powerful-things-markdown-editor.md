@@ -11,9 +11,13 @@
 layout: post
 title:  "Powerful things you can do with the Markdown editor"
 author: sal
-categories: [ Jekyll, tutorial ]
-image: assets/images/4.jpg
+image: 
+    path: /assets/images/4.jpg
+    height: 383
+amp:
+   youtube: true
 ---
+
 There are lots of powerful things you can do with the Markdown editor
 
 If you've gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!
@@ -29,6 +33,7 @@ As well as bold and italics, you can also use some other special formatting in M
 + ==highlight==
 + \*escaped characters\*
 
+{% include picture.html source="assets" img="4.jpg" width="730" height="383" %}
 
 ## Writing code blocks
 
@@ -42,9 +47,6 @@ There are two types of code elements which can be inserted in Markdown, the firs
 
 If you want to get really fancy, you can even add syntax highlighting using Rouge.
 
-
-![walking]({{ site.baseurl }}/assets/images/3.jpg)
-
 ## Reference lists
 
 The quick brown jumped over the lazy.
@@ -53,6 +55,6 @@ Another way to insert links in markdown is using reference lists. You might want
 
 ## Full HTML
 
-Perhaps the best part of Markdown is that you're never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here's a standard YouTube embed code as an example:
+Perhaps the best part of Markdown is that you're never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here's a YouTube embed code as an example:
 
-<iframe style="width:100%;" height="315" src="https://www.youtube.com/embed/Cniqsc9QfDo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id="Cniqsc9QfDo" %}
