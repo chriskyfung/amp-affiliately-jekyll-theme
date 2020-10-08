@@ -43,6 +43,14 @@ authors:
     web: 
     facebook: https://www.facebook.com/
     description: 
+  Peter:
+    name: Sal
+    display_name: Sal
+    gravatar: 
+    email: 
+    web: 
+    facebook: https://www.facebook.com/
+    description: 
 
 # Plugins
 plugins: 
