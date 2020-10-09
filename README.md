@@ -52,7 +52,26 @@ There are different ways to install the theme -
 1. Fork this repository and clone the forked repository.
 2. Update the _config.yml file as per your requirements.
 3. Add your posts to the _posts directory.
-4. Deploy to Github Pages or your own server.
+4. Deploy to your own server or Github Pages (read **Deploying to GitHub Pages with GitHub Actions** ).
+
+### 2. Set up as a remote theme and updating settings
+1. Add `gem "jekyll-remote-theme"` to your Gemfile to add the theme as a dependancy.
+2. run `bundle install` to install the plugin.
+3. Add the following to your site's _config.yml file to activate the plugin
+   ```yaml
+   plugins:
+      - jekyll-remote-theme
+   ```
+4. Add `remote_theme: chriskyfung/amp-affiliately-jekyll-theme` to your _config.yml file to set the site theme.
+5. Set site-wide options in your site's_config.yml.
+
+**Note**: You must update the jekyll-remote-theme plugin to v0.4.2 or higher if you use Jekyll 4.0+.
+
+You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., chriskyfung/amp-affiliately-jekyll-theme@v1.2.8). If you don't specify a Git ref, the master branch will be used.
+
+### Deploying to GitHub Pages with GitHub Actions
+
+This theme includes Jekyll plugins that are not in the whitelist of Github Pages. If you are going to deploy it to your Github Pages, you need to deploy it via Github Action. The Action workflow is configured in the /.github/workflows/jekyll.yml which uses [helaili/jekyll-action@2.0.3](https://github.com/helaili/jekyll-action).  It needs access to a `JEKYLL_PAT` secret set with a Personal Access Token (needs public_repo scope).
 
 * * *
 
