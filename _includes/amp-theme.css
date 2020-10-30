@@ -1162,6 +1162,10 @@ iframe {
         margin-top: 1rem
     }
 
+    .left-sidebar {
+        order:2;
+    }
+
     .sidebar {
         max-width: 100%;
     }
