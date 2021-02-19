@@ -3,7 +3,7 @@
 
 <div class="col-md-6 grid-item">
 <div class="card">
-    <a href="{{ post.url | absolute_url }}">
+    <a href="{{ post.url | relative_url }}">
         {% if post.image.path %}
             {% if post.image.width %}
                 {% assign imgwidth = post.image.width %}
@@ -30,7 +30,7 @@
 
 
     <div class="card-block">
-        <h2 class="card-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</h4>
         <div class="metafooter">
             <div class="wrapfooter">
@@ -47,7 +47,7 @@
                 </div>
                 <!-- End Tags -->
                 <span class="post-date">{{ post.date | date_to_string }}</span>
-                <span class="post-read-more"><a href="{{ post.url | absolute_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
+                <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
                 {% if page.url == "/blog/" or page.url contains "/blog/page"%}
                 <div class="post-meta">
                     <ul class="tags">
