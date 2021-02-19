@@ -4,7 +4,7 @@
 <div class="card">
     <div class="row">
         <div class="col-md-5 wrapthumbnail">
-            <a href="{{ post.url | absolute_url }}">
+            <a href="{{ post.url | relative_url }}">
             <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
                 {% if post.image.path %}
                     {% include picture.html img=post.image.path source="raw" width="208" height="258" layout="intrinsic" lightbox=false %}
@@ -16,11 +16,11 @@
         </div>
         <div class="col-md-7">
             <div class="card-block">
-                <h2 class="card-title"><a href="{{ post.url | absolute_url }}">{{ post.title | truncate:70 }}</a></h2>
+                <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | truncate:70 }}</a></h2>
                 <h4 class="card-text">{{ post.excerpt | strip_html | truncate:115 }}</h4>
                 <div class="metafooter">
                     <div class="wrapfooter">
-                        <span class="post-read-more"><a href="{{ post.url | absolute_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
+                        <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
                         <div class="post-meta">
                             <span class="post-date">{{ post.date | date_to_string }}</span>
                             <ul class="tags">
