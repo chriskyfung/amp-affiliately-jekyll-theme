@@ -54,11 +54,14 @@
 {% include amp-bs4.css %}
 {% include amp-theme.css %}
 {% include amp-custom.css %}
-{% if page.css.badge == true %}
+{% if layout.css.badge == true or page.css.badge == true %}
 {% include amp-bs4-badge.css %}
 {% endif %}
-{% if page.css.syntax == true %}
+{% if layout.css.syntax == true or page.css.syntax == true %}
 {% include amp-syntax-highlight.css %}
+{% endif %}
+{% if layout.css.custom %}
+{{ layout.css.custom }}
 {% endif %}
 {% if page.css.custom %}
 {{ page.css.custom }}
