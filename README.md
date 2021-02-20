@@ -95,6 +95,29 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 1. Deploy disqus-amp.html to another domain or subdoamin.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
 
+### Enabling Lists of Categories and Tags
+1. In your root directory, create a folder named __category__ and __tag__, respectively.
+2. New a file and name it to **index.html** in your __category__ and/or __tag__ folder(s).
+3. Copy the following front matters to the corresponding **index.html**:
+
+   - For __category/index.html__,
+
+      ```html
+      ---
+      layout: category-list
+      title: List of Categories
+      ---
+      ```
+
+   - For __tag/index.html__
+
+      ```html
+      ---
+      layout: tag-list
+      title: List of Tags
+      ---
+      ```
+
 * * *
 
 ## Writing Posts
