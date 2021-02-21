@@ -17,7 +17,8 @@ gtm: 'GTM-WQMQK3X' # Google Tag Manager ID
 cse_id: 011006674894885990812:tjln7k0nyjx # Google Custom Search Engine ID
 adsense: 'ca-pub-4819282024314540' # Google Adsense ID
 disqus: 'chriskyfung' # Disqus shortname
-amp_disqus_url: 'https://chriskyfung.gitlab.io/disqus-amp/q.html' #baseurl of your AMP disqus iframe element
+amp_disqus_url: 'https://chriskyfung.gitlab.io/disqus-amp/' #baseurl of your AMP disqus iframe element
+amp_disqus_height: 140
 addthis: ra-5d01c83d522ad580
 buyme: chriskyfung
 sidebar:
