@@ -1,5 +1,5 @@
 <section class="disqus">    
-    <amp-iframe width=600 height={{ site.amp_disqus_height | 140 }} layout="responsive"
+    <amp-iframe width=600 height={{ site.amp_disqus_height | default: 140 }} layout="responsive"
     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
     resizable
     src="{{ site.amp_disqus_url }}?url={{ site.url }}{{ page.url }}&title='{{ page.title | url_encode }}'">
