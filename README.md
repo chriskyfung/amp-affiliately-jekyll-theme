@@ -91,9 +91,10 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 #### Google Custom Search Engine
 1. Set up your gcse ID in _config.yml.
 
-#### Disqus Comments
-1. Deploy disqus-amp.html to another domain or subdoamin.
+#### Disqus Comments in AMP
+1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) and deploy it to another domain or subdoamin.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
+3. Use `amp_disqus_height` to configure the height of amp-iframe if needed (where the default is equal to `140`).
 
 ### Enabling Pagination for Blog Posts
 1. Make a new folder named _blog_ in your root directory.
