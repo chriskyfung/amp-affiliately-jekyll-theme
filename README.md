@@ -95,12 +95,23 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 1. Deploy disqus-amp.html to another domain or subdoamin.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
 
+### Enabling Pagination for Blog Posts
+1. Make a new folder named _blog_ in your root directory.
+2. Create an empty HTML file in the new folder and name it to **index.html**.
+3. Copy the following front matter to the HTML file:
+
+   ```html
+   ---
+   layout: blog-pagination
+   ---
+   ```
+
 ### Enabling Lists of Categories and Tags
-1. In your root directory, create a folder named __category__ and __tag__, respectively.
-2. New a file and name it to **index.html** in your __category__ and/or __tag__ folder(s).
+1. In your root directory, create a folder named _category_ and _tag_, respectively.
+2. New a file and name it to **index.html** in your _category_ and/or _tag_ folder(s).
 3. Copy the following front matters to the corresponding **index.html**:
 
-   - For __category/index.html__,
+   - For _category/index.html_,
 
       ```html
       ---
@@ -109,7 +120,7 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
       ---
       ```
 
-   - For __tag/index.html__
+   - For _tag/index.html_
 
       ```html
       ---
