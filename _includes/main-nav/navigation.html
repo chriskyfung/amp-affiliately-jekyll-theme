@@ -4,15 +4,8 @@
     <a class="nav-link" href="/">Home</a>
     </li>
     
-    <li class="nav-item dropdown" id="dropdown01">
-        <a class="nav-link dropdown-toggle" on="tap:dropdown01.toggleClass(class='show'),navbar.toggleClass(class='show')" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-        <a class="dropdown-item" href="/blog/"><i class="far fa-newspaper mr-2"></i>All Stories</a>
-        <a class="dropdown-item" href="/category/"><i class="far fa-list-alt mr-2"></i>Categories</a>
-        <a class="dropdown-item" href="/tag/"><i class="fas fa-tag mr-2"></i>Tags</a>
-        </div>
-    </li>
-    
+    {% include main-nav/dropdown1.html %}
+
     <li class="nav-item">                
         <a class="nav-link" href="/category/cloud/">Cloud</a>
     </li> 

@@ -1,0 +1,14 @@
+{% assign dropdown_id = "dropdown2" %}
+
+<li class="nav-item dropdown" id="{{ dropdown_id }}">
+    <a class="nav-link dropdown-toggle" 
+        on="tap:{{ dropdown_id }}.toggleClass(class='show'),navbar.toggleClass(class='show', force=true)"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown2
+    </a>    
+    <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
+        <a class="dropdown-item" href="/item-1/">item-1</a>
+        <a class="dropdown-item" href="/item-2/">item-2</a>
+        <a class="dropdown-item" href="/item-3/">item-3</a>
+    </div>
+</li>
