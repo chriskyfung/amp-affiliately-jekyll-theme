@@ -16,7 +16,7 @@ title: Archive
 ================================================== -->
 <section class="row recent-posts">
     <div class="col-md-4 col-lg-4 left-sidebar">
-        {% include sidebar.html %}
+        {% include sidebar/sidebar.html %}
     </div>
 
     <div class="col-md-8 col-lg-8">
@@ -27,7 +27,7 @@ title: Archive
 
             {% for post in page.posts %}
 
-            {% include postbox.html %}
+            {% include blocks/post-box.html %}
 
             {% endfor %}
 

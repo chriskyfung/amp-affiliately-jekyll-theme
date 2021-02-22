@@ -34,7 +34,7 @@
 
                     {% if post.featured == true %}
 
-                        {% include featuredlist.html %}
+                        {% include sidebar/featured-list.html %}
 
                     {% endif %}
 
@@ -57,7 +57,7 @@
 
                 {% for post in site.posts limit:4 %}
 
-                        {% include featuredlist.html %}
+                        {% include sidebar/featured-list.html %}
 
                 {% endfor %}
 
@@ -79,18 +79,11 @@
         </ul>
     </div>
 
-    <!-- {% unless page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
-    <div class="sidebar-section">
-        <h5><span>Recommended for You</span></h5>
-        <div class="addthis_relatedposts_inline"></div>
-    </div>
-    {% endunless %} -->
-
     <div aria-label="youtube" class="sidebar-section">
         <h5><span><i class='fab fa-youtube' style="color:red"></i> YouTube</span></h5>
         <h6><span>Featured Video 📹</span></h6>
         <ul style="list-style:list-none">
-            <li>{% include youtube-thumb.html id="5UrQ9D-epG8" title='GSP315 Perform Foundational Infrastructure Tasks in Google Cloud: Challenge Lab' %}</li>
+            <li>{% include sidebar/youtube-thumb.html id="5UrQ9D-epG8" title='GSP315 Perform Foundational Infrastructure Tasks in Google Cloud: Challenge Lab' %}</li>
         </ul>
         <amp-iframe
             width="240"
@@ -103,11 +96,13 @@
             <div fallback>Fail to load script</div>
         </amp-iframe>
     </div>
-        
+    
+    {% if site.sidebar.ads == true %}
     <div aria-label="sidbar-ads" class="sidebar-section">
         <h5><span>Ads</span></h5>
-        {% include sidebar-adsense.html %}
+        {% include sidebar/ad-sidebar.html %}
     </div>
+    {% endif %}
 
     <div aria-label="craftweeks" class="sidebar-section">
         <h5><span>Related Sites</span></h5>

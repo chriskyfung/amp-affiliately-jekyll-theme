@@ -16,7 +16,7 @@ License: https://www.wowthemes.net/freebies-license/
 <section class="recent-posts row">
 
     <div class="col-sm-4">
-        {% include sidebar.html %}
+        {% include sidebar/sidebar.html %}
     </div>
 
     <div class="col-sm-8">
@@ -31,7 +31,7 @@ License: https://www.wowthemes.net/freebies-license/
 
             {% unless post.featured == true %}
 
-                {% include postbox.html %}
+                {% include blocks/post-box.html %}
 
             {% endunless %}
 
@@ -44,7 +44,7 @@ License: https://www.wowthemes.net/freebies-license/
 
             <span class="navigation" role="navigation">
 
-                {% include pagination.html %}
+                {% include blocks/pagination.html %}
 
             </span>
 

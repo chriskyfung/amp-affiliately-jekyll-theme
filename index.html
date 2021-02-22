@@ -7,7 +7,7 @@ pagination:
 
 <!-- Home Jumbotron
     ================================================== -->    
-    <section class="intro full-width">
+  <section class="intro full-width">
       <div class="wrapintro">
           <h1>AMP Affiliately Theme</h1>
           <h2 class="lead">An AMP-ready Jekyll blog theme</h2>    
@@ -29,7 +29,7 @@ pagination:
 
         {% if post.featured == true %}
 
-            {% include featuredbox.html %}
+            {% include blocks/featured-box.html %}
 
         {% endif %}
 
@@ -57,7 +57,7 @@ pagination:
         
         {% for post in paginator.posts %}
         
-        {% include postbox.html %}
+        {% include blocks/post-box.html %}
         
         {% endfor %}
         
@@ -68,7 +68,7 @@ pagination:
         
         <span class="navigation" role="navigation">
           
-          {% include pagination.html %}
+          {% include blocks/pagination.html %}
           
         </span>
         

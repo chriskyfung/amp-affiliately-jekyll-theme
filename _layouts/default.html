@@ -51,14 +51,14 @@
 {{ page.custom_head }}
 {% endif %}
 <style amp-custom>
-{% include amp-bs4.css %}
-{% include amp-theme.css %}
-{% include amp-custom.css %}
+{% include css/amp-bs4.css %}
+{% include css/amp-theme.css %}
+{% include css/amp-custom.css %}
 {% if layout.css.badge == true or page.css.badge == true %}
-{% include amp-bs4-badge.css %}
+{% include css/amp-bs4-badge.css %}
 {% endif %}
 {% if layout.css.syntax == true or page.css.syntax == true %}
-{% include amp-syntax-highlight.css %}
+{% include css/amp-syntax-highlight.css %}
 {% endif %}
 {% if layout.css.custom %}
 {{ layout.css.custom }}
@@ -98,41 +98,9 @@
         
         <!-- Begin Menu -->
         <div class="collapse navbar-collapse" id="navbarsWow">
-            
-            <!-- Begin Menu -->
-            <ul class="navbar-nav ml-auto">
-                
-                <li class="nav-item">                
-                <a class="nav-link" href="/">Home</a>
-                </li>
-                
-                <li class="nav-item dropdown" id="dropdown01">
-                    <a class="nav-link dropdown-toggle" on="tap:dropdown01.toggleClass(class='show'),navbar.toggleClass(class='show')" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="/blog/"><i class="far fa-newspaper mr-2"></i>All Stories</a>
-                    <a class="dropdown-item" href="/category/"><i class="far fa-list-alt mr-2"></i>Categories</a>
-                    <a class="dropdown-item" href="/tag/"><i class="fas fa-tag mr-2"></i>Tags</a>
-                    </div>
-                </li>
-                
-                <li class="nav-item">                
-                    <a class="nav-link" href="/category/cloud/">Cloud</a>
-                </li> 
-                
-                <li class="nav-item">                
-                    <a class="nav-link" href="/category/academic/">Academic</a>
-                </li>
-                
-                <li class="nav-item">                
-                    <div class="invitation-codes"><a class="invitation-codes-badge" href="https://invitation.codes/@chriskyfung" data-type="" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="comment-alt-dots" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class=" " style="display:none;"><path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm16 352c0 8.8-7.2 16-16 16H288l-12.8 9.6L208 428v-60H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16h384c8.8 0 16 7.2 16 16v288zM128 176c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm128 0c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm128 0c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z" class=""></path></svg><span>Check out my 19 referral codes</span></a></div>
-                </li>
-                
-                <li class="nav-item">
-                    <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary" data-toggle="modal" data-target="#searchbar"><i class="fas fa-search"></i></button>
-                </li>
-            </ul>
-            <!-- End Menu -->
+            {% include blocks/navigation.html %}
         </div>
+        <!-- End Menu -->
     </div>
 </header>
 
@@ -189,22 +157,14 @@ License: https://www.wowthemes.net/freebies-license/
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h3>Want to talk about a new or existing project?</h3>
-                    <p>See anything that can be improved?</p>                        
-                    <p>Feel free to send me a message using the form below. I will get back to you as soon as possible!</p>
-                    <a class="btn btn-primary btn-lg" href="/contact">Contact Me</a>
+                    {% include footer/call-for-action.html %}
                 </div>
                 <div class="col-md-4 text-center footersocial">
                     <div class="mb-4">
-                        <h5>Support Me</h5>
-                        {% include buymeacoffee.html %}
+                        {% include footer/subscription-button.html %}
                     </div>
                     <div>
-                        <h5>Follow Me on</h5>
-                        <a href="https://www.facebook.com/chriskyfung/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.pinterest.com/chriskyfung/_created/" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest"></i></a>
-                        <a href="https://github.com/chriskyfung" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        <a href="https://medium.com/@chriskyfung" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
+                        {% include footer/follow-buttons.html %}
                     </div>
                 </div>
             </div>
@@ -218,56 +178,37 @@ License: https://www.wowthemes.net/freebies-license/
 
             <div class="row">
                 <div class="col-sm-3">
-                <div class="footer-widget">
-                    <a id="footer-image" href="/">
-                        <amp-img class="pr-lg-3" src="{{ site.baseurl }}/assets/images/knowledge__flatline.svg" height="179" width="255" layout="responsive"></amp-img>
-                    </a>
-                </div>
+                    <div class="footer-widget">
+                        {% include footer/footer-widget-col0.html %}
+                    </div>
                 </div>
 
                 <div class="col-sm-3">
-                <div class="footer-widget">
-                <h5 class="title">Quick Links</h5>
-                <ul>
-                <li><a href="/tag/qwiklabs/">Qwiklabs Logbooks & Tools</a></li>
-                <li><a href="/tag/tumblr/">For Tumblr Developer</a></li>
-                <li><a href="/tag/matlab/">MATLAB Tips</a></li>
-                <li><a href="/tag/evernote/">Evernote Tips</a></li>
-                <li></li>
-                </ul>
-                </div>
+                    <div class="footer-widget">
+                    {% include footer/footer-widget-col1.html %}
+                    </div>
                 </div>
 
                 <div class="col-sm-3">
-                <div class="footer-widget">
-                <h5 class="title">Author</h5>
-                <ul>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/#projects">My Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="https://invitation.codes/@chriskyfung" target="_blank" rel="noopener noreferrer" data-vars-event-label="Invitation.codes Badge">Referral codes</a></li>
-                </ul>
-                </div>
+                    <div class="footer-widget">
+                        {% include footer/footer-widget-col2.html %}
+                    </div>
                 </div>
 
                 <div class="col-sm-3">
-                <div class="footer-widget">
-                    <h5 class="title">Disclosures</h5>
-                    <!-- Copyscape Banner -->
-                    <div id="copyscape-banner"><a href="https://www.copyscape.com/" data-vars-event-label="Copyscape Badge" rel="noopener noreferrer"><amp-img src="//banners.copyscape.com/img/copyscape-banner-white-130x46.png" width="130" height="46" alt="Protected by Copyscape" title="Protected by Copyscape - Do not copy content from this page."></amp-img></a></div>
-                    <!-- Affiliate Disclouse -->
-                    <div id="vig-disclose"><a href="https://www.viglink.com/legal/consumer-disclosure/" data-vars-event-label="Viglink Badge" rel="noopener noreferrer"><amp-img alt="VigLink badge" src="https://www.viglink.com/images/badges/120x60.png" title="Links monetized by VigLink" width="120" height="60" style="margin: 5px;"></amp-img></a></div>
-                </div>
+                    <div class="footer-widget">
+                        {% include footer/footer-widget-col3.html %}
+                    </div>
                 </div>
             </div>
 
             <div aria-label="copyright" class="copyright">
                 <p class="float-lg-left">
-                    Copyright © 2014-{{ site.time | date: "%Y" }} <a href="/">{{ site.name }}</a>. All rights reserved.
+                    {% include footer/copyright-notice.html %}
                 </p>
                 <p class="float-lg-right">
                     Powered by <a aria-label="theme credit" href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="noopener noreferrer">AMP Affiliately Theme</a> | 
-                    <a aria-label="privacy policy" href="/privacy-policy">Privacy Policy</a>
+                    {% include footer/footer-right-text.html %}
                 </p>
                 <div class="clearfix"></div>
             </div>
@@ -279,6 +220,7 @@ License: https://www.wowthemes.net/freebies-license/
 
 </div> <!-- /.site-content -->
 
+{% if site.google_analytics %}
 <!-- Configure analytics to use gtag -->
 <amp-analytics type="gtag" data-credentials="include">
     <script type="application/json">
@@ -305,6 +247,7 @@ License: https://www.wowthemes.net/freebies-license/
         }
     </script>
 </amp-analytics>
+{% endif %}
 
 <amp-image-lightbox id="lightbox1" layout="nodisplay" data-close-button-aria-label="Close"></amp-image-lightbox>
 <amp-link-rewriter layout="nodisplay">
