@@ -1,24 +1,25 @@
 # Site
-name: "AMP Affiliately Jekyll Theme"
-title: "AMP Affiliately Jekyll Theme"
-description: "An AMP-ready Jekyll blog theme"
-meta_description: "An AMP-ready Jekyll blog theme"
+remote_theme: chriskyfung/amp-affiliately-jekyll-theme
+
+name: "Chris KY FUNG's Page"
+title: "Chris KY FUNG's Blog"
+description: "Feel free to bookmark this to keep an eye on my project updates"
+meta_description: "Chris KY FUNG's Blog."
+baseurl: ''
 url: https://chriskyfung.github.io
-baseurl: '/amp-affiliately-jekyll-theme'
-favicon: 'assets/images/favicon.png'
+favicon: 'assets/images/favicon_96x96.png'
 logo: 'assets/images/logo-plainSVG.svg'
-permalink: /blog/:year/:month/:day/:title
-paginate_path: "/blog/page:num/"
-paginate: 6
 timezone: 'Asia/Hong_Kong'
 
-# Set <USERNAME>/<PROJECT> to display the button to the project
-repository: chriskyfung/amp-affiliately-jekyll-theme
+permalink: /blog/:year/:month/:day/:title
+paginate_path: "/blog/page:num/"
+paginate: 12
 
-# Sidebar Features
+remote_theme: chriskyfung/amp-affiliately-jekyll-theme
+repository: chriskyfung/AutoFetcher-IG-Stories-to-GDrive
 sidebar:
-  featured: true
-  recent_posts: true
+  featured: false
+  recent_posts: false
 
 # AddThis Inline Share Buttons
 addthis: 
@@ -56,36 +57,20 @@ buymeacoffee: chriskyfung
 
 # Copyright Start Year
 copyright: 
-  prefix: 
+  prefix: 2014-
   ownership: Chris KY FUNG
   link: https://chriskyfung.github.io/
 
 # Authors
 authors:
-  John:
-    name: John Washer
-    display_name: John
-    gravatar: 
+  chris:
+    name: Chris KY Fung
+    display_name: Chris F.
+    gravatar: abd876486b2caa54b43bf64a5a86f620
     email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  Peter:
-    name: Peter Mu
-    display_name: Peter
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  Peter:
-    name: Sal
-    display_name: Sal
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
+    web: https://en.gravatar.com/chrisfungky
+    facebook: https://www.facebook.com/chriskyfung/
+    description: "Author of this blog, M.Phil."
 
 # Plugins
 plugins: 
@@ -95,11 +80,13 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-loading-lazy
-  - jekyll-webp
   - jekyll-gzip
+  - jekyll-webp
   - jekyll-redirect-from
-  - jekyll-github-metadata
-        
+  - jekyll-remote-theme
+  - jekyll-relative-links
+  - jekyll-minifier
+
 # Archives
 jekyll-archives:
   enabled:
@@ -118,6 +105,9 @@ environment: production
 jekyll-minifier:
   exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
 
+relative_links:
+  enabled: true
+  collections: true
 
 ############################################################
 # Site configuration for the WebP Generator Plugin
@@ -156,3 +146,6 @@ webp:
   # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
   append_ext: false
 ############################################################
+
+# Directories and/or files from the conversion
+exclude: [sync.ffs_db]
