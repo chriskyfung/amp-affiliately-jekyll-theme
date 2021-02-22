@@ -66,58 +66,13 @@
             </section>
         </div>
     {% endunless %}
-        
-    <div aria-label="useful links" class="sidebar-section">
-        <h5><span>Useful</span></h5>
-        <ul style="list-style:list-none">
-        <li><a href="/tag/qwiklabs/">Qwiklabs Logbooks & Tools</a></li>
-        <li><a href="/tag/tumblr/">For Tumblr Developer</a></li>
-        <li><a href="/tag/matlab/">MATLAB Tips</a></li>
-        <li><a href="/tag/evernote/">Evernote Tips</a></li>
-        <li><a href="/contact">Partner with Me</a></li>
-        <li><a href="https://invitation.codes/@chriskyfung" data-type="badge1" target="_blank" rel="noopener noreferrer">Use my referral codes</a></li>
-        </ul>
-    </div>
 
-    <div aria-label="youtube" class="sidebar-section">
-        <h5><span><i class='fab fa-youtube' style="color:red"></i> YouTube</span></h5>
-        <h6><span>Featured Video 📹</span></h6>
-        <ul style="list-style:list-none">
-            <li>{% include sidebar/youtube-thumb.html id="5UrQ9D-epG8" title='GSP315 Perform Foundational Infrastructure Tasks in Google Cloud: Challenge Lab' %}</li>
-        </ul>
-        <amp-iframe
-            width="240"
-            height="100"
-            sandbox="allow-scripts allow-same-origin"
-            layout="intrinsic"
-            frameborder="0"
-            src="https://chriskyfung.gitlab.io/youtube_subscribe_button/youtube_subscribe_button.html"
-            >
-            <div fallback>Fail to load script</div>
-        </amp-iframe>
-    </div>
+    {% include sidebar/sidebar-widget0.html %}
     
-    {% if site.sidebar.ads == true %}
-    <div aria-label="sidbar-ads" class="sidebar-section">
-        <h5><span>Ads</span></h5>
-        {% include sidebar/ad-sidebar.html %}
-    </div>
-    {% endif %}
+    {% include sidebar/sidebar-widget1.html %}
 
-    <div aria-label="craftweeks" class="sidebar-section">
-        <h5><span>Related Sites</span></h5>
-        <a href="https://craftweeks.com/en/" target="_blank">
-            {% include picture.html img="craftweeks-logo-with-black-title-transparent-bg-200x67.png" width="200" height="67" alt="Craftweeks logo" source="assets" lightbox=false %}
-        </a>
-        <h6><span>Recommended 📬</span></h6>
-        <ul style="list-style:list-none">
-            <li>
-                <a href="https://craftweeks.com/en/tag/postman/" target="_blank">
-                    {% include picture.html img="postman-tutorials-disqus-rest-api.thumb.jpg" width="267" height="150" alt="Postman Tutorials: Case Study of Disqus REST API" source="assets" %}
-                    <b>Postman Tutorials: Case Study of Disqus API</b>
-                </a>
-            </li>
-        </ul>
-    </div>
+    {% include sidebar/sidebar-widget2.html %}
+
+    {% include sidebar/sidebar-widget3.html %}
         
 </aside>
