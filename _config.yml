@@ -4,27 +4,59 @@ title: "AMP Affiliately Jekyll Theme"
 description: "An AMP-ready Jekyll blog theme"
 meta_description: "An AMP-ready Jekyll blog theme"
 url: https://chriskyfung.github.io
-logo: 'assets/images/logo-plainSVG.svg'
-favicon: 'assets/images/favicon.png'
-paginate: 6
-paginate_path: "/blog/page:num/"
-permalink: /blog/:year/:month/:day/:title
-timezone: 'Asia/Hong_Kong'
 baseurl: '/amp-affiliately-jekyll-theme'
-email: ''
-google_analytics: 'UA-72575541-9' # Google Analytics Tracking ID
-gtm: 'GTM-WQMQK3X' # Google Tag Manager ID
-cse_id: 011006674894885990812:tjln7k0nyjx # Google Custom Search Engine ID
-adsense: 'ca-pub-4819282024314540' # Google Adsense ID
-disqus: 'chriskyfung' # Disqus shortname
-amp_disqus_url: 'https://chriskyfung.gitlab.io/disqus-amp/' #baseurl of your AMP disqus iframe element
-amp_disqus_height: 140
-addthis: ra-5d01c83d522ad580
-buyme: chriskyfung
+favicon: 'assets/images/favicon.png'
+logo: 'assets/images/logo-plainSVG.svg'
+permalink: /blog/:year/:month/:day/:title
+paginate_path: "/blog/page:num/"
+paginate: 6
+timezone: 'Asia/Hong_Kong'
+
+# Sidebar Features
 sidebar:
   featured: true
   recent_posts: true
-repository: chriskyfung/amp-affiliately-jekyll-theme #<USERNAME>/<PROJECT>
+  ads: true
+
+# AddThis Inline Share Buttons
+addthis: 
+  pid: ra-5d01c83d522ad580 # Addthis profile id
+  wid: 7kfz # Addthis widget id
+
+# Disqus Comments
+amp_disqus: 
+  shortname: 'chriskyfung' # Disqus shortname
+  url: 'https://chriskyfung.gitlab.io/disqus-amp/' #baseurl of your AMP disqus iframe element
+  height: 140
+
+# Google Custom Search Engine ID
+cse_id: 011006674894885990812:tjln7k0nyjx 
+
+# Analytics
+google_analytics: 'UA-72575541-9' # Google Analytics Tracking ID
+gtm: 'GTM-WQMQK3X' # Google Tag Manager ID
+
+# Google Ads
+adsense: 
+  client_id: 'ca-pub-4819282024314540' # Google Adsense client ID
+  ad_slot:
+    before_content: 2454411055 # Ad Slot that places before content
+    sidebar: 1391498756 # Ad Slot that places to sidebar
+
+# Soical Buttons
+facebook_id: chriskyfung
+pinterest_id: chriskyfung
+github_id : chriskyfung
+medium_id: chriskyfung
+
+# Buy Me a Coffee
+buymeacoffee: chriskyfung
+
+# Copyright Start Year
+copyright: 
+  prefix: 
+  ownership: Chris KY FUNG
+  link: https://chriskyfung.github.io/
 
 # Authors
 authors:

@@ -1,8 +1,9 @@
+{% if site.amp_disqus %}
 <section class="disqus">    
-    <amp-iframe width=600 height={{ site.amp_disqus_height | default: 140 }} layout="responsive"
+    <amp-iframe width=600 height={{ site.amp_disqus.height | default: 140 }} layout="responsive"
     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
     resizable
-    src="{{ site.amp_disqus_url }}?url={{ site.url }}{{ page.url }}&title='{{ page.title | url_encode }}'">
+    src="{{ site.amp_disqus.url }}?url={{ site.url }}{{ page.url }}&title='{{ page.title | url_encode }}'">
         <div overflow
         tabindex=0
         role=button
@@ -17,3 +18,4 @@
         </div>
     </amp-iframe>
 </section>
+{% endif %}

@@ -72,20 +72,9 @@ amp:
                 </small>
             </p>
             
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <amp-addthis width="320" height="55"  data-pub-id="ra-5d01c83d522ad580" data-widget-id="7kfz" data-widget-type="inline" style="margin-left:-10px;"></amp-addthis>
+            {% include blocks/share-buttons.html %}
 
-            <!-- github_resp_before_content -->
-            <amp-ad width="100vw" height="320"
-                type="adsense"
-                data-ad-client="ca-pub-4819282024314540"
-                data-ad-slot="2454411055"
-                data-auto-format="rspv"
-                data-full-width>
-                <div overflow=""></div>
-                <div placeholder>Loading ...</div>
-                <div fallback>No ad for you</div>
-            </amp-ad>
+            {% include blocks/ad-before-content.html %}
 
 			<!-- Post Content -->
 			<div class="article-post">
@@ -140,7 +129,7 @@ amp:
             ================================================== -->
             <section>
             <div id="comments">                          
-                {% include disqus.html %} 
+                {% include blocks/disqus.html %} 
             </div>
             </section>
             <!--End Comments
@@ -152,7 +141,7 @@ amp:
         <!-- Right Sidebar -->
         <div class="col-md-4 col-lg-4">
             <div class="sidebar-right">
-            {% include sidebar.html %}
+            {% include sidebar/sidebar.html %}
             </div>
         </div>
 

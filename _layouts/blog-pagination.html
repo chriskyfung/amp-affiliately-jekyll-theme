@@ -16,7 +16,7 @@ layout: default
 
         {% if post.featured == true %}
 
-            {% include featuredbox.html %}
+            {% include blocks/featured-box.html %}
 
         {% endif %}
 
@@ -37,7 +37,7 @@ layout: default
 <section class="recent-posts row">
 
     <div class="col-sm-4 left-sidebar">
-        {% include sidebar.html %}
+        {% include sidebar/sidebar.html %}
     </div>
 
     <div class="col-sm-8">
@@ -52,7 +52,7 @@ layout: default
 
             {% unless post.featured == true %}
 
-                {% include postbox.html %}
+                {% include blocks/post-box.html %}
 
             {% endunless %}
 

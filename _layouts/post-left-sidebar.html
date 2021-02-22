@@ -21,7 +21,7 @@ post_class: post-template
 
 		<!-- Sidebar -->
         <div class="col-sm-4 left-sidebar">
-        {% include sidebar.html %}
+        {% include sidebar/sidebar.html %}
         </div>
 		
 
@@ -73,8 +73,7 @@ post_class: post-template
                 </small>
             </p>
 
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <amp-addthis width="320" height="55"  data-pub-id="ra-5d01c83d522ad580" data-widget-id="7kfz" data-widget-type="inline" style="margin-left:-10px;"></amp-addthis>
+            {% include blocks/share-buttons.html %}
 
 			<!-- Post Content -->
 			<div class="article-post">
@@ -129,7 +128,7 @@ post_class: post-template
             ================================================== -->
             <section>
             <div id="comments">                          
-                {% include disqus.html %} 
+                {% include blocks/disqus.html %} 
             </div>
             </section>
             <!--End Comments

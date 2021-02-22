@@ -1,11 +1,13 @@
 <!-- github_resp_sidebar -->
+{% if site.adsense %}
 <amp-ad width="100vw" height="320"
   type="adsense"
-  data-ad-client="{{ site.adsense }}"
-  data-ad-slot="1391498756"
+  data-ad-client="{{ site.adsense.client_id }}"
+  data-ad-slot="{{ site.adsense.ad_slot.sidebar }}"
   data-auto-format="rspv"
   data-full-width>
   <div overflow></div>
   <div placeholder>Loading ...</div>
   <div fallback>No ad for you</div>
 </amp-ad>
+{% endif %}
