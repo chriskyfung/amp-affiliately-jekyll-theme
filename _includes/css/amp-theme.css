@@ -574,6 +574,10 @@ blockquote {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1)
 }
 
+.featured-image[fallback] {
+    margin-bottom: 0;
+}
+
 .article-post amp-img,
 .article-post amp-iframe {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1)
