@@ -154,14 +154,14 @@ Options:
 - **lightbox** (_default_: `true`)
 - **link** (_assign a URL for the HTML \<a\> tag that wraps the \<amp-img\> tag when the key is present_)
 - **source** (`assets`, `projects` or `raw`)
-  - _default_ - get image from the `/images/posts/` directory
-  - `assets` - get image from the `/assets/images/` directory
-  - `projects` - get image from the `/images/projects/` directory
+  - _default_ - get image from the `/images/posts/` directory (, or the path configured as the `image_path.default` in `_config.yml`)
+  - `assets` - get image from the `/assets/images/` directory (, or the path configured as the `image_path.assets` in `_config.yml`)
+  - `projects` - get image from the `/images/projects/` directory (, or the path configured as the `image_path.projects` in `_config.yml`)
   - `raw` - get image from the specified URL
 
 #### 📹 YouTube Videos
 
-You must include the following front matter variable to enable YouTube embeds.
+You need to include the following front matter variable to enable YouTube embeds.
 
 ```yaml
 amp:
@@ -177,7 +177,7 @@ To embed a single video, use the following tag to include the `youtube.html` tem
 - **id** - _required_
 - **title** - _optional_
 
-To embed a playlist, you must set it with both the _playlist ID_ and the _ID of first video within the playlist_.
+To embed a playlist, you need to set both the _playlist ID_ and the _ID of first video within the playlist_.
 
 ```liquid
 {% include youtube.html id="<YOUTUBE_VIDEO_UID>" \
