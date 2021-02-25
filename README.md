@@ -10,9 +10,9 @@ Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 
 
 ## Features
-- AMP-ready
+- [AMP-ready](#what-is-amp)
 - Responsive
-- Syntax Highlighting for code
+- [Syntax Highlighting for code](#codes)
 - Cover Images for homepage and blog posts
 - Social Sharing via AddThis (AMP)
 - Simple Navigation Menu
@@ -20,19 +20,19 @@ Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 - Pagination
 - Multiple Authors
 - Featured Box/List
-- Category and Tag Archives
-- Include `amp-img` with `<figure>` and `<figcaption>` wrapper
+- [Category and Tag Archives](#enabling-lists-of-categories-and-tags)
+- [Include `amp-img` with `<figure>` and `<figcaption>` wrapper](#images)
 - Support WebP image format
 - Lightbox (AMP)
-- Include YouTube (AMP) with GA video tracking
-- Disqus Comments in AMP
-- Site Search via Google Custom Search Engine
+- [Include YouTube (AMP) with GA video tracking](#youtube-videos)
+- [Disqus Comments in AMP](#disqus-comments-in-amp)
+- [Site Search via Google Custom Search Engine](#google-custom-search-engine)
 - Auto-suggestion search bar
-- Tracking with Google Analytics and Google Tag Manager (AMP)
-- Monetize via Google Adsense and Buy Me A Coffee
+- Tracking with [Google Analytics](#google-analytics) and [Google Tag Manager (AMP)](#google-tag-manager)
+- Monetize via [Google Adsense](#google-adsense) and Buy Me A Coffee
 - Can be easily installed using `remote_theme`
 - Easily Customisable
-- Support deploy to Github Pages via Github Action
+- [Support deploying to Github Pages via Github Action](#deploying-to-github-pages-with-github-actions)
 
 * * *
 
@@ -48,8 +48,8 @@ There are different ways to install the theme -
 
 ### 1. Cloning the repository and updating settings
 1. Fork this repository and clone the forked repository.
-2. Update the _config.yml file as per your requirements.
-3. Add your posts to the _posts directory.
+2. Update the `_config.yml` file as per your requirements.
+3. Add your posts to the `_posts` directory.
 4. Deploy to your own server or Github Pages (read **Deploying to GitHub Pages with GitHub Actions** ).
 
 ### 2. Set up as a remote theme and updating settings
@@ -78,50 +78,50 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 ### Enabling 3rd-party components
 
 #### Google Analytics
-1. Set up your Analytics Tracking ID in _config.yml.
+1. Set up your _Analytics Tracking ID_ in `_config.yml`.
 
 #### Google Tag Manager
-1. Set up your GTM AMP container ID in _config.yml.
+1. Set up your _GTM AMP container ID_ in `_config.yml`.
 
 #### Google Adsense
-1. Set up your Adsense ID in _config.yml.
+1. Set up your _Adsense ID_ in `_config.yml`.
 
 #### Google Custom Search Engine
-1. Set up your gcse ID in _config.yml.
+1. Set up your _gcse ID_ in `_config.yml`.
 
 #### Disqus Comments in AMP
 1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) and deploy it to another domain or subdoamin.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
-3. Use `amp_disqus_height` to configure the height of amp-iframe if needed (where the default is equal to `140`).
+3. Use `amp_disqus_height` to configure the height of \<amp-iframe\> if needed (default is `140`).
 
 ### Enabling Pagination for Blog Posts
-1. Make a new folder named _blog_ in your root directory.
-2. Create an empty HTML file in the new folder and name it to **index.html**.
+1. Make a new folder named `blog` in your _root_ directory.
+2. Create an empty HTML file in the new folder and name it to `index.html`.
 3. Copy the following front matter to the HTML file:
 
-   ```html
+   ```yaml
    ---
    layout: blog-pagination
    ---
    ```
 
 ### Enabling Lists of Categories and Tags
-1. In your root directory, create a folder named _category_ and _tag_, respectively.
-2. New a file and name it to **index.html** in your _category_ and/or _tag_ folder(s).
-3. Copy the following front matters to the corresponding **index.html**:
+1. In your root directory, create a folder named `category` and `tag`, respectively.
+2. New a file and name it to `index.html` in your `category` and/or `tag` folder(s).
+3. Copy the following front matters to the corresponding `index.html`:
 
-   - For _category/index.html_,
+   - For `category/index.html`,
 
-      ```html
+      ```yaml
       ---
       layout: category-list
       title: List of Categories
       ---
       ```
 
-   - For _tag/index.html_
+   - For `tag/index.html`
 
-      ```html
+      ```yaml
       ---
       layout: tag-list
       title: List of Tags
@@ -137,12 +137,14 @@ You cannot use Markdown format or normal HTML tags. AMP provides its own custom 
 
 ### Examples -
 
-#### Images
+#### 🖼 Images
 
-Use the `picture.html` template to insert an image in the AMP format with automatically serving the image in the WebP format.
+Use the `picture.html` template to insert an image in the AMP format with automatically serving the image in the **WebP** format.
 The template also wraps the image with a `<figure>` tag with an optional caption element.
 
-`{% include picture.html img="welcome.jpg" height="400" width="800" ="Welcome" ="text-center" %}`
+```liquid
+{% include picture.html img="welcome.jpg" height="400" width="800" %}
+```
 
 Options:
 - **alt**
@@ -150,14 +152,14 @@ Options:
 - **class** (_e.g._ `text-center`)
 - **layout** (_amp-img supported layouts_: `fill`, `fixed`, `fixed-height`, `flex-item`, `intrinsic`, `nodisplay` or `responsive`. _default_: `intrinsic`)
 - **lightbox** (_default_: `true`)
-- **link** (_assign a URL for the HTML a tag that wraps the amp-img tag when the key is present_)
+- **link** (_assign a URL for the HTML \<a\> tag that wraps the \<amp-img\> tag when the key is present_)
 - **source** (`assets`, `projects` or `raw`)
-  - _default_ - get image from the `/images/posts/` directory 
+  - _default_ - get image from the `/images/posts/` directory
   - `assets` - get image from the `/assets/images/` directory
   - `projects` - get image from the `/images/projects/` directory
   - `raw` - get image from the specified URL
 
-#### YouTube Videos
+#### 📹 YouTube Videos
 
 You must include the following front matter variable to enable YouTube embeds.
 
@@ -168,22 +170,47 @@ amp:
 
 To embed a single video, use the following tag to include the `youtube.html` template.
 
-`{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" %}`
+```liquid
+{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" %}
+```
 
-- **id** _required_
-- **title** _optional_
+- **id** - _required_
+- **title** - _optional_
 
-To embed a playlist, you must set it with both the playlist ID and the ID of the first video within the playlist.
+To embed a playlist, you must set it with both the _playlist ID_ and the _ID of first video within the playlist_.
 
-`{% include youtube.html id="<YOUTUBE_VIDEO_UID>" playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}`
+```liquid
+{% include youtube.html id="<YOUTUBE_VIDEO_UID>" \
+   playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}
+```
 
-#### Codes
+- **id** - _required_
+- **playlist** - _required_
+- **title** - _optional_
 
-To enable syntax highlighter, you must add the following to the post front matter.
+#### 💻 Codes
+
+This theme supports [syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) based on [Rouge](http://rouge.jneen.net/), which is the default highlighter in Jekyll 3 and above. All CSS styles for syntax highlighting stores in the `amp-syntax-highlight.css` under the `_includes/css/` directory.
+
+By default, this theme excludes the CSS styles for syntax highlighting. The AMP framework limits the total CSS styles up to 75,000 bytes per AMP page. This keeps light-weight and rendering fast.
+
+To include the stylesheet on-demand, you need to add the following to your post's front matter:
 
 ```yaml
 css:
   syntax: true
+```
+
+#### 📌 Callout
+
+A shortcode for creating a colored box, e.g. tips/memo.
+
+```liquid
+{% capture label %}
+   PUT YOUR MARKDOWN CONTENT HERE...
+{% endcapture %}
+
+{% include callout.html content=label %}
 ```
 
 * * *
@@ -192,7 +219,7 @@ css:
 
 #### Set Featured Image for a Page/Post
 
-You can assign an image (with 730×431 pixels in size) as the featured image of a post in the front matter like this:
+You can assign an image (with **730×431** pixels in size) as the featured image of a post in the front matter like this:
 
 ```yaml
 image:
@@ -202,8 +229,8 @@ image:
 ##### Create thumbnail images for display in Featured Boxes/Lists
 
 1. Make a copy of each featured image file in the same folder.
-2. Rename the copies to have a filename in form of `<filename>.thumb.<ext>`, _e.g._ `cover-image.thumb.png`.
-3. Rescale it to a heigth of 150px.
+2. Rename the copies to have a filename like `<filename>.thumb.<ext>`, _e.g._ `cover-image.thumb.png`.
+3. Rescale it to a height of **150px**.
 
 By default, the thumbnail of featured images is cropped at the center inside the cards of the Featured Boxes/Lists. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
 
@@ -338,12 +365,13 @@ To submit a pull request -
 ## Thanks
 Affiliately is based on [Affiliates](https://github.com/wowthemesnet/affiliates-jekyll-theme) jekyll theme. Thank You.
 
-## License
-
-The theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Like my stuff?
 
 Would you like to buy me a coffee? I would really appreciate it if you could support me for the development.
 
 <a href="https://www.buymeacoffee.com/chrisfungky"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></a>
+
+## License
+
+The theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
