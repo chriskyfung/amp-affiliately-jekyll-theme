@@ -100,7 +100,6 @@ jekyll-archives:
 # Other
 markdown: kramdown
 highlighter: rouge
-environment: production
 
 jekyll-minifier:
   exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns

@@ -7,8 +7,8 @@ url: https://chriskyfung.github.io
 baseurl: '/amp-affiliately-jekyll-theme'
 favicon: 'assets/images/favicon.png'
 logo: 'assets/images/logo-plainSVG.svg'
-permalink: /blog/:year/:month/:day/:title
-paginate_path: "/blog/page:num/"
+permalink: /:year/:month/:day/:title
+paginate_path: "/page:num/"
 paginate: 6
 timezone: 'Asia/Hong_Kong'
 
@@ -78,14 +78,14 @@ authors:
     web: 
     facebook: https://www.facebook.com/
     description: 
-  Peter:
-    name: Sal
-    display_name: Sal
-    gravatar: 
+  chris:
+    name: Chris KY Fung
+    display_name: Chris F.
+    gravatar: abd876486b2caa54b43bf64a5a86f620
     email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
+    web: https://en.gravatar.com/chrisfungky
+    facebook: https://www.facebook.com/chriskyfung/
+    description: "Author of this blog, M.Phil."
 
 # Plugins
 plugins: 
@@ -113,7 +113,6 @@ jekyll-archives:
 # Other
 markdown: kramdown
 highlighter: rouge
-environment: production
 
 jekyll-minifier:
   exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
