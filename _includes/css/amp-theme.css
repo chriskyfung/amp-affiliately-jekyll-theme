@@ -173,8 +173,7 @@ section.recent-posts {
 @media (min-width:992px) {
     .mediumnavigation .dropdown-menu {
         border: 0;
-        box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .05);
-        margin: 15px 0
+        box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .1);
     }
 }
 
@@ -379,7 +378,7 @@ span.post-read-more a:hover {
 
 .dropdown:hover .dropdown-menu {
     display: block;
-  }
+}
 
 .mediumnavigation .search-icon {
     margin-left: -40px;
