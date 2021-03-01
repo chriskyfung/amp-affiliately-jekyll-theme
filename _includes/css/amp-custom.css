@@ -4,11 +4,6 @@
     right: 0;
     left: 0;
     z-index: 1030;
-    overflow: hidden;
-}
-
-.fixed-top.show {
-    overflow: visible;
 }
 
 #toggle-search {
@@ -219,4 +214,16 @@ a.vglnk {
 
 .card .row {
     height: 100%;
+}
+
+amp-ad {
+    background-image: url(https://icon-library.com/images/b8d82a619c.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer>amp-ad {
+    max-width: 1140px;
+    margin: auto auto;
 }

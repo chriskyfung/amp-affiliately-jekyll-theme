@@ -12,7 +12,7 @@ Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 ## Features
 - [AMP-ready](#what-is-amp)
 - Responsive
-- [Syntax Highlighting for code](#codes)
+- [Syntax Highlighting for code](#-codes)
 - Cover Images for homepage and blog posts
 - Social Sharing via AddThis (AMP)
 - Simple Navigation Menu
@@ -21,10 +21,10 @@ Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
 - Multiple Authors
 - Featured Box/List
 - [Category and Tag Archives](#enabling-lists-of-categories-and-tags)
-- [Include `amp-img` with `<figure>` and `<figcaption>` wrapper](#images)
+- [Include `amp-img` with `<figure>` and `<figcaption>` wrapper](#-images)
 - Support WebP image format
 - Lightbox (AMP)
-- [Include YouTube (AMP) with GA video tracking](#youtube-videos)
+- [Include YouTube (AMP) with GA video tracking](#-youtube-videos)
 - [Disqus Comments in AMP](#disqus-comments-in-amp)
 - [Site Search via Google Custom Search Engine](#google-custom-search-engine)
 - Auto-suggestion search bar
@@ -159,6 +159,8 @@ Options:
   - `projects` - get image from the `/images/projects/` directory (, or the path configured as the `image_path.projects` in `_config.yml`)
   - `raw` - get image from the specified URL
 
+[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/02/25/media#image-in-amp)
+
 #### 📹 YouTube Videos
 
 You need to include the following front matter variable to enable YouTube embeds.
@@ -187,6 +189,8 @@ To embed a playlist, you need to set both the _playlist ID_ and the _ID of first
 - **id** - _required_
 - **playlist** - _required_
 - **title** - _optional_
+
+[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/02/25/media#video)
 
 #### 💻 Codes
 

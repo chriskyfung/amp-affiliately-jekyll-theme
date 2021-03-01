@@ -904,14 +904,6 @@ a.btn.disabled,fieldset[disabled] a.btn {
     background-color: #0275d8
 }
 
-.show>.dropdown-menu {
-    display: block
-}
-
-.show>a {
-    outline: 0
-}
-
 .nav-link {
     display: block;
     padding: .5em 1em
