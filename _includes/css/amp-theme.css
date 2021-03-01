@@ -369,8 +369,17 @@ span.post-read-more a:hover {
 
 .mediumnavigation .nav-item,
 .dropdown-menu {
-    font-size: .9rem
+    font-size: .9rem;
 }
+
+.dropdown-menu {
+    display: none;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
 .mediumnavigation .search-icon {
     margin-left: -40px;
@@ -572,6 +581,10 @@ blockquote {
     display: block;
     margin-bottom: 2rem;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1)
+}
+
+.featured-image[fallback] {
+    margin-bottom: 0;
 }
 
 .article-post amp-img,

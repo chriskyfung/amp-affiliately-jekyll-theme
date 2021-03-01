@@ -1,14 +1,14 @@
 {% assign img = include.img %}
-{% assign layout = include.layout %}
+{% assign layout = include.layout | default: "intrinsic" %}
 
 {% if include.source == "assets" %}
-    {% assign path = "/assets/images/" %}
+    {% assign path = site.image_path.assets | default: "/assets/images/" %}
 {% elsif include.source == "projects" %}
-    {% assign path = "/images/projects/" %}
+    {% assign path = site.image_path.projects | default: "/images/projects/" %}
 {% elsif include.source == "raw" %}
     {% assign path = "" %}
 {% else %}
-    {% assign path = "/images/posts/" %}
+    {% assign path = site.image_path.default | default: "/images/posts/" %}
 {% endif %}
 
 {% if include.lightbox == false %}
@@ -21,16 +21,23 @@
 {% assign name = img | remove: ext %}
 {% assign suffix = include.suffix %}
 
+{% assign set_width = include.width | default: 730 %}
+{% assign set_height = include.height %}
+
+{% assign img_pathname = site.baseurl | append: path | append: name  %}
+{% assign img_alt = include.alt | { default: "Image in " | append: page.title } | escape_once %}
+
+
 <figure {% if include.class %}class="{{ include.class }}"{% endif %}>
     {% if include.link %}
         <a href="{{ include.link }}">
         {% assign lightbox = "" %}
     {% endif %}
     {% if ext == "svg" %}
-        <amp-img {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ site.baseurl }}{{ path }}{{ img }}"></amp-img>
+        <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}svg" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
     {% else %}
-        <amp-img {{ lightbox }}  alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ site.baseurl }}{{ path }}{{ name }}{{ suffix }}webp">
-            <amp-img fallback {{ lightbox }} alt="{{ include.alt }}" width="{{ include.width | default: 730 }}" height="{{ include.height }}" layout="{{ layout | default: "intrinsic" }}" src="{{ site.baseurl }}{{ path }}{{ name }}{{ suffix }}{{ ext }}"></amp-img>
+        <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}webp" alt="{{ img_alt }}" {{ lightbox }} >
+            <amp-img fallback width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}{{ ext }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
         </amp-img>
     {% endif %}
     {% if include.link %}

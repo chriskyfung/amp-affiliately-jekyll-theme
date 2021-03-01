@@ -12,6 +12,9 @@ layout: default
 disqus: false
 archive: false
 post_class: post-template
+amp:
+    iframe: true
+    addthis: true
 ---
 
 <!-- Begin Article
@@ -51,15 +54,17 @@ post_class: post-template
 
             <!-- Post Featured Image -->
             {% if page.image %}
-            {% unless page.image.hide %}
-                {% if page.image.ext == "svg" %}
-                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}.svg" alt="{{ page.title }}"></amp-img>
-                {% else %}
-                    <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}.webp" alt="{{ page.title }}">
-                        <amp-img fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}.{{ page.image.ext }}" alt="{{ page.title }}"></amp-img>
-                    </amp-img>
-                {% endif %}
-            {% endunless %}
+                {% unless page.image.hide %}
+                    {% assign imgext = page.image.path | split: "." | last %}
+                    {% assign imgpath = page.image.path | remove: imgext %}
+                    {% if imgext == "svg" %}
+                        <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}" alt="{{ page.title }}"></amp-img>
+                    {% else %}
+                        <amp-img class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ imgpath }}webp" alt="{{ page.title }}">
+                            <amp-img fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ site.baseurl }}{{ page.image.path }}" alt="{{ page.title }}"></amp-img>
+                        </amp-img>
+                    {% endif %}
+                {% endunless %}
             {% endif %}
             <!-- End Featured Image -->
 
