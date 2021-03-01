@@ -25,7 +25,7 @@
 {% assign set_height = include.height %}
 
 {% assign img_pathname = site.baseurl | append: path | append: name  %}
-{% assign img_alt = include.alt | escape_once %}
+{% assign img_alt = include.alt | { default: "Image in " | append: page.title } | escape_once %}
 
 
 <figure {% if include.class %}class="{{ include.class }}"{% endif %}>
