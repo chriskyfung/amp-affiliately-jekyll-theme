@@ -369,8 +369,17 @@ span.post-read-more a:hover {
 
 .mediumnavigation .nav-item,
 .dropdown-menu {
-    font-size: .9rem
+    font-size: .9rem;
 }
+
+.dropdown-menu {
+    display: none;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
 .mediumnavigation .search-icon {
     margin-left: -40px;
