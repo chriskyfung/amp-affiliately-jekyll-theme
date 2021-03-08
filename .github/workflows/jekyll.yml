@@ -24,5 +24,7 @@ jobs:
       with:
         target_branch: 'gh-pages'
 
-    # HTMLProofer
-    - uses: chabad360/htmlproofer@v1.1
+    # HTML5 Validator
+    - uses: Cyb3r-Jak3/html5validator-action@v0.4.4
+
+
