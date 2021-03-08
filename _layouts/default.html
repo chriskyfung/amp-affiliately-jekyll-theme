@@ -84,9 +84,9 @@
 <!-- Begin Menu Navigation
 ================================================== -->
 <header amp-fx="float-in-top" id="navbar" class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-    <button class="navbar-toggler navbar-toggler-right" on="tap:navbarsWow.toggleClass(class='show')" type="button" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="navbar-toggler navbar-toggler-right" on="tap:navbarsWow.toggleClass(class='show')" role="button" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-    </button>
+    </div>
     
     <div class="container">
     
@@ -111,7 +111,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Search for</h5>
-                <button type="button" on="tap:amp-searchbar.close" tabindex="-1" class="close">&times;</button>
+                <div on="tap:amp-searchbar.close" tabindex="-1" class="close" role="button">&times;</div>
             </div>
             <div class="modal-body">
                 <div class="search_form">
@@ -202,8 +202,8 @@ License: https://www.wowthemes.net/freebies-license/
                 </div>
             </div>
 
-            <div aria-label="copyright" class="copyright">
-                <p class="float-lg-left">
+            <div class="copyright">
+                <p class="float-lg-left" aria-label="copyright">
                     {% include footer/copyright-notice.html %}
                 </p>
                 <p class="float-lg-right">
