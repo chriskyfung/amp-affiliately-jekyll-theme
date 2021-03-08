@@ -23,3 +23,6 @@ jobs:
         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
       with:
         target_branch: 'gh-pages'
+
+    # HTMLProofer
+    - uses: chabad360/htmlproofer@v1.1
