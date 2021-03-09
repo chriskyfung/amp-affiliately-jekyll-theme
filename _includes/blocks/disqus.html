@@ -1,5 +1,5 @@
 {% if site.amp_disqus %}
-<section class="disqus">    
+<div class="disqus">    
     <amp-iframe width=600 height={{ site.amp_disqus.height | default: 140 }} layout="responsive"
     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
     resizable
@@ -17,5 +17,5 @@
             Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </div>
     </amp-iframe>
-</section>
+</div>
 {% endif %}

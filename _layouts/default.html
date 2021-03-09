@@ -84,9 +84,9 @@
 <!-- Begin Menu Navigation
 ================================================== -->
 <header amp-fx="float-in-top" id="navbar" class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
-    <div class="navbar-toggler navbar-toggler-right" on="tap:navbarsWow.toggleClass(class='show')" role="button" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" on="tap:navbarsWow.toggleClass(class='show')" type="button" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-    </div>
+    </button>
     
     <div class="container">
     
@@ -111,7 +111,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Search for</h5>
-                <div on="tap:amp-searchbar.close" tabindex="-1" class="close" role="button">&times;</div>
+                <button type="button" on="tap:amp-searchbar.close" tabindex="-1" class="close">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="search_form">
