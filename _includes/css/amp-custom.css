@@ -16,7 +16,7 @@
     margin-top: inherit
 }
 
-#searchbox {
+.searchbox {
     display: inline;
     width: calc(100% - 86px);
 }
