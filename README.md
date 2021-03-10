@@ -2,14 +2,16 @@
 
 ![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg)
 
-Affiliately is an AMP-ready Jekyll theme for your blogs and websites.
+**AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.
 
 ## Live Demo
-## [AMP Affiliately Jekyll Theme](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+
+### [AMP Affiliately Jekyll Theme](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+
 ![AMP Affiliately Jekyll Theme](/Screenshots/amp-affiliately-theme.png "AMP Affiliately Jekyll Theme Preview")
 
-
 ## Features
+
 - [AMP-ready](#what-is-amp)
 - Responsive
 - [Syntax Highlighting for code](#-codes)
@@ -47,29 +49,33 @@ AMP stands for [Accelerated Mobile Pages](https://www.ampproject.org/), a Google
 There are different ways to install the theme -
 
 ### 1. Cloning the repository and updating settings
+
 1. Fork this repository and clone the forked repository.
 2. Update the `_config.yml` file as per your requirements.
 3. Add your posts to the `_posts` directory.
 4. Deploy to your own server or Github Pages (read **Deploying to GitHub Pages with GitHub Actions** ).
 
 ### 2. Set up as a remote theme and updating settings
-1. Add `gem "jekyll-remote-theme"` to your Gemfile to add the theme as a dependancy.
+
+1. Add `gem "jekyll-remote-theme"` to your Gemfile to add the theme as a dependency.
 2. run `bundle install` to install the plugin.
 3. Add the following to your site's _config.yml file to activate the plugin
+   
    ```yaml
    plugins:
       - jekyll-remote-theme
    ```
-4. Add `remote_theme: chriskyfung/amp-affiliately-jekyll-theme` to your _config.yml file to set the site theme.
-5. Set site-wide options in your site's_config.yml.
 
-**Note**: You must update the jekyll-remote-theme plugin to v0.4.2 or higher if you use Jekyll 4.0+.
+4. Add `remote_theme: chriskyfung/amp-affiliately-jekyll-theme` to your _config.yml file to set the site theme.
+5. Set site-wide options in your site's `_config.yml` file.
+
+**Note**: You must update the `jekyll-remote-theme` plugin to `v0.4.2` or higher if you use **Jekyll 4.0+**.
 
 You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., chriskyfung/amp-affiliately-jekyll-theme@v1.2.8). If you don't specify a Git ref, the master branch will be used.
 
 ### Deploying to GitHub Pages with GitHub Actions
 
-This theme includes Jekyll plugins that are not in the whitelist of Github Pages. If you are going to deploy it to your Github Pages, you need to deploy it via Github Action. The Action workflow is configured in the /.github/workflows/jekyll.yml which uses [helaili/jekyll-action@2.0.3](https://github.com/helaili/jekyll-action).  It needs access to a `JEKYLL_PAT` secret set with a Personal Access Token (needs public_repo scope).
+This theme includes Jekyll plugins that are not in the whitelist of Github Pages. If you are going to deploy it to your Github Pages, you need to deploy it via Github Action. The Action workflow is configured in the `/.github/workflows/jekyll.yml`, which uses [helaili/jekyll-action@2.0.3](https://github.com/helaili/jekyll-action).  It needs access to a `JEKYLL_PAT` secret set with a Personal Access Token (needs public_repo scope).
 
 * * *
 
@@ -78,16 +84,20 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 ### Enabling 3rd-party components
 
 #### Google Analytics
-1. Set up your _Analytics Tracking ID_ in `_config.yml`.
+
+- Set up your _Analytics Tracking ID_ in `_config.yml`.
 
 #### Google Tag Manager
-1. Set up your _GTM AMP container ID_ in `_config.yml`.
+
+- Set up your _GTM AMP container ID_ in `_config.yml`.
 
 #### Google Adsense
-1. Set up your _Adsense ID_ in `_config.yml`.
+
+- Set up your _Adsense ID_ in `_config.yml`.
 
 #### Google Custom Search Engine
-1. Set up your _gcse ID_ in `_config.yml`.
+
+- Set up your _gcse ID_ in `_config.yml`.
 
 #### Disqus Comments in AMP
 1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) and deploy it to another domain or subdoamin.
@@ -128,12 +138,24 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
       ---
       ```
 
+### Sidebar Widgets
+
+- In the `_config.yml` file, add the following to enable showing **FEATURED** and **RECENT POSTS** widgets on your sidebar.
+
+   ```yaml
+   sidebar:
+   featured: true
+   recent_posts: true
+   ```
+
+   *Set `false` to disable the widgets as you need.*
+
 * * *
 
 ## Writing Posts
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
 
-You cannot use Markdown format or normal HTML tags. AMP provides its own custom tags for images, videos etc...
+You cannot use Markdown format or normal HTML tags. AMP provides its own custom tags for images, videos, etc...
 
 ### Examples -
 
@@ -246,7 +268,7 @@ image:
 
 ##### For images that do not have an aspect ratio of 16:9
 
-If the image is not at 16:9 aspect ratio, you need to define it width and height under the `image` variable, _e.g._:
+If the image is not at 16:9 aspect ratio, you need to define its width and height under the `image` variable, _e.g._:
 
 ```yaml
 image:
@@ -257,7 +279,7 @@ image:
 
 ##### Hide Featured Image on a Page/Post
 
-If you do not want to render the featured image on the post page, append a `hide` option to the `image` variable, _e.g._:
+If you do not want to render the featured image on a post, append a `hide` option to the `image` variable, _e.g._:
 
 ```yaml
 image:
@@ -317,7 +339,7 @@ To display the button to the project repository, declare the repository name in 
 repository: <USERNAME>/<PROJECT>
 ```
 
-Also, appending the `download` variable to the post front matter.
+Also, appending the `download` variable to the post's front matter.
 
 ```yaml
 download: true
@@ -344,14 +366,9 @@ You can specify these scripts in the head.html file in the includes directory af
 [See Full AMP Documentation.](https://www.ampproject.org/docs/)
 
 ## Validating your page with AMP
-AMP provides built-in validator to validate your pages so that they can rendered quickly.
+AMP provides a built-in validator to validate your pages. You can access this validator by opening the Developer Console in your browser and apending `#development=1` to the end of any URL of your site, e.g. [`http://localhost:4000/#development=1`](http://localhost:4000/#development=1).
 
-You can access this validator by opening the Developer Console in your browser and adding #development=1 to any url of your site.
-
-Example -
-http://localhost:4000/#development=1
-
-If you have errors on your page, AMP will list those for you in the console. If you do not have any errors, you'll get a message "AMP Validation Successful" on your console.
+If you have errors on your page, AMP will list those for you in the console. If no errors are on your page, you'll get a message "AMP Validation Successful" on the DevTools console.
 
 * * *
 
@@ -366,16 +383,16 @@ To submit a pull request -
 3. Create a new branch from the master branch.
 4. Open a pull request on Github describing what was fixed or added.
 
-## Thanks
-Affiliately is based on [Affiliates](https://github.com/wowthemesnet/affiliates-jekyll-theme) jekyll theme. Thank You.
-
-
 ## Like my stuff?
 
-Would you like to buy me a coffee? I would really appreciate it if you could support me for the development.
+Would you like to buy me a coffee? I would really appreciate it if you could support me for the theme development.
 
 <a href="https://www.buymeacoffee.com/chrisfungky"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></a>
 
+## Thanks
+
+**AMP Affiliately** is developed based on MIT-licensed [Affiliates](https://github.com/wowthemesnet/affiliates-jekyll-theme) Jekyll theme designed by Sal, [WowThemes.net](https://www.wowthemes.net/).
+
 ## License
 
-The theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
