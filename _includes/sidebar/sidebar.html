@@ -21,7 +21,7 @@
         </div>
     {% endif %}
 
-    {% unless site.sidebar.recent_posts == false or page.url == "/blog/" or page.url contains "/blog/page" %}
+    {% unless site.sidebar.featured == false or page.url == "/blog/" or page.url contains "/blog/page" %}
         <!-- Featured -->
         <div aria-label="featured posts" class="sidebar-section">
             <h5><span>Featured</span></h5>
@@ -46,7 +46,7 @@
         </div>
     {% endunless %}
 
-    {% unless page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
+    {% unless site.sidebar.recent_posts == false or page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
         <!-- Recent Posts -->
         <div aria-label="recent posts" class="sidebar-section">
             <h5><span>Recent Posts</span></h5>
