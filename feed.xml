@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2021-03-10T09:57:16+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Media</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2021/02/25/media" rel="alternate" type="text/html" title="Media" /><published>2021-02-25T10:42:00+00:00</published><updated>2021-02-25T10:42:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2021/02/25/media</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2021/02/25/media">&lt;h3 id=&quot;image-markdown&quot;&gt;Image (Markdown)&lt;/h3&gt;
+
+&lt;p&gt;You should &lt;strong style=&quot;color:red;&quot;&gt;AVOID&lt;/strong&gt; using Markdown to add an image. Otherwise, you will get the following AMP validation error:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The tag 'img' may only appear as a descendant of tag 'noscript'. Did you mean 'amp-img'?
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;image-in-amp&quot;&gt;Image in AMP&lt;/h3&gt;
+
+&lt;p&gt;For AMP pages, you need to display an image with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;amp-img&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;You can use inline HTML to add an image in Jekyll, like is:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;amp-img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/YOUR_BASE_URL/PATH/FILENAME.jpg&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IMG_WIDTH&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IMG_HEIGHT&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;layout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;responsive&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/amp-img&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample:&lt;/strong&gt;&lt;/p&gt;
+&lt;amp-img src=&quot;/amp-affiliately-jekyll-theme/assets/images/science-in-hd-37-obwmRiAI-unsplash_1024x683.jpg&quot; width=&quot;1024&quot; height=&quot;683&quot; layout=&quot;responsive&quot;&gt;&lt;/amp-img&gt;
+&lt;p&gt;Advanced bi-additives stabilize the vanadium electrolyte at higher energy content and in wider temperature range at Pacific Northwest National Laboratories.
+&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Science in HD&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I know that you absolutely don’t want to type in this way, because it is easily to get mistakes.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I created the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;picture.html&lt;/code&gt; template for you to include an image with AMP vaild format. The basic usage is:&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;picture.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;FILENAME&amp;gt;.jpg&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;IMG_WIDTH&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;IMG_HEIGHT&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Options:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;alt&lt;/strong&gt; (&lt;em&gt;if not specific, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Image in &amp;lt;YOUR_POST_TITLE&amp;gt;&lt;/code&gt; will be automatically generated as the alt text for SEO purpose&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;caption&lt;/strong&gt; (&lt;em&gt;support HTML codes&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;class&lt;/strong&gt; (&lt;em&gt;e.g.&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text-center&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;layout&lt;/strong&gt; (&lt;em&gt;amp-img supported layouts&lt;/em&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fill&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed-height&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flex-item&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;intrinsic&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nodisplay&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;responsive&lt;/code&gt;. &lt;em&gt;default&lt;/em&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;intrinsic&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;lightbox&lt;/strong&gt; (&lt;em&gt;default&lt;/em&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;link&lt;/strong&gt; (&lt;em&gt;assign a URL for the HTML &amp;lt;a&amp;gt; tag that wraps the &amp;lt;amp-img&amp;gt; tag when the key is present&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;source&lt;/strong&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;projects&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raw&lt;/code&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;default&lt;/em&gt; - get image from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/images/posts/&lt;/code&gt; directory (, or the path configured as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image_path.default&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assets&lt;/code&gt; - get image from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/assets/images/&lt;/code&gt; directory (, or the path configured as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image_path.assets&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;projects&lt;/code&gt; - get image from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/images/projects/&lt;/code&gt; directory (, or the path configured as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image_path.projects&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;raw&lt;/code&gt; - get image from the specified URL&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sample:&lt;/p&gt;
+
+&lt;figure&gt;
+    
+    
+        &lt;amp-img width=&quot;1024&quot; height=&quot;683&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/lucas-vasques-9vnACvX2748-unsplash_1024x683.webp&quot; alt=&quot;Photo captured during office hours of a company in Brazil.Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;1024&quot; height=&quot;683&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/lucas-vasques-9vnACvX2748-unsplash_1024x683.jpg&quot; alt=&quot;Photo captured during office hours of a company in Brazil.Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+&lt;/figure&gt;
+&lt;p&gt;Photo captured during office hours of a company in Brazil.
+&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@luvqs?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Lucas Vasques&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;image-with-caption&quot;&gt;Image With Caption&lt;/h4&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;picture.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;...&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;__descriptions__&amp;lt;br /&amp;gt;__attributions__&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Sample:&lt;/p&gt;
+
+&lt;figure&gt;
+    
+    
+        &lt;amp-img width=&quot;1024&quot; height=&quot;682&quot; layout=&quot;responsive&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/science-in-hd-N4-deIU3kQI-unsplash_1024x682.webp&quot; alt=&quot;Image in Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;1024&quot; height=&quot;682&quot; layout=&quot;responsive&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/science-in-hd-N4-deIU3kQI-unsplash_1024x682.jpg&quot; alt=&quot;Image in Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+        &lt;figcaption&gt;NREL researcher holds a perovskite ink painted cell. NREL researchers have developed an interdigitated back contact solar cell design in which the metals and transport materials are solution processed by either ink jet or spray coating. Combined with a perovskite ink formulation with a low boiling point (&amp;lt;80 C) allows &quot;paintable&quot; solar cells.&lt;br /&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Science in HD&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;image-with-link&quot;&gt;Image With Link&lt;/h4&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;picture.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;...&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;DESTINATION_URL&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Sample:&lt;/p&gt;
+
+&lt;figure&gt;
+    
+        &lt;a href=&quot;https://unsplash.com/photos/NP6JLl_2C-c&quot;&gt;
+        
+    
+    
+        &lt;amp-img width=&quot;1024&quot; height=&quot;683&quot; layout=&quot;responsive&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/science-in-hd-NP6JLl_2C-c-unsplash_1024x683.webp&quot; alt=&quot;Image in Media&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;1024&quot; height=&quot;683&quot; layout=&quot;responsive&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/science-in-hd-NP6JLl_2C-c-unsplash_1024x683.jpg&quot; alt=&quot;Image in Media&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+        &lt;/a&gt;
+    
+    
+        &lt;figcaption&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Science in HD&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/37-obwmRiAI?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+&lt;p class=&quot;text-center&quot;&gt;&lt;strong&gt;Click the Image Above to View the Original Image on Unsplash&lt;/strong&gt; 👆&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;image-with-disabling-lightbox&quot;&gt;Image With Disabling Lightbox&lt;/h4&gt;
+
+&lt;p&gt;Sample:&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;picture.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;...&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lightbox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    
+    
+        &lt;amp-img width=&quot;96&quot; height=&quot;96&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/favicon_96x96.webp&quot; alt=&quot;Image in Media&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;96&quot; height=&quot;96&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/favicon_96x96.png&quot; alt=&quot;Image in Media&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+&lt;h4 id=&quot;image-with-classes&quot;&gt;Image With Classes&lt;/h4&gt;
+
+&lt;p&gt;Sample 1:&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;picture.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;...&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text-center shadow-none&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure class=&quot;text-center shadow-none&quot;&gt;
+    
+    
+        &lt;amp-img width=&quot;96&quot; height=&quot;96&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/favicon_96x96.webp&quot; alt=&quot;Image in Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;96&quot; height=&quot;96&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/favicon_96x96.png&quot; alt=&quot;Image in Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Sample 2:&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;picture.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;...&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text-center fa-rotate-180&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure class=&quot;text-center fa-rotate-180&quot;&gt;
+    
+    
+        &lt;amp-img width=&quot;96&quot; height=&quot;96&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/favicon_96x96.webp&quot; alt=&quot;Image in Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;96&quot; height=&quot;96&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/favicon_96x96.png&quot; alt=&quot;Image in Media&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;video&quot;&gt;Video&lt;/h3&gt;
+
+&lt;p&gt;You need to include the following front matter variable to enable YouTube embeds.&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+   &lt;span class=&quot;na&quot;&gt;youtube&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Embedding a YouTube Video&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To embed a single video, use the following tag to include the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;youtube.html&lt;/code&gt; template.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;youtube.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;YOUTUBE_VIDEO_UID&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;id&lt;/strong&gt; - &lt;em&gt;required&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;title&lt;/strong&gt; - &lt;em&gt;optional&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Sample:&lt;/p&gt;
+
+&lt;amp-youtube width=&quot;480&quot; height=&quot;270&quot; layout=&quot;responsive&quot; data-videoid=&quot;8jumRGDgxiY&quot; data-param-rel=&quot;0&quot;&gt;
+    &lt;div fallback=&quot;&quot;&gt;
+        &lt;p&gt;This browser does not support the YouTube video player. &lt;a href=&quot;https://youtu.be/8jumRGDgxiY&quot; target=&quot;_blank&quot;&gt;Watch on YouTube&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/amp-youtube&gt;
+
+&lt;amp-analytics type=&quot;gtag&quot; data-credentials=&quot;include&quot;&gt;
+    &lt;script type=&quot;application/json&quot;&gt;
+        {
+            &quot;vars&quot; : {
+                &quot;gtag_id&quot;: &quot;UA-72575541-9&quot;,
+                &quot;config&quot; : {
+                    &quot;UA-72575541-9&quot;: { &quot;groups&quot;: &quot;default&quot; }
+                }
+            },
+            &quot;triggers&quot;: {
+                &quot;videoPlay&quot;: {
+                    &quot;on&quot;: &quot;video-play&quot;,
+                    &quot;request&quot;: &quot;event&quot;,
+                    &quot;selector&quot;: &quot;amp-youtube[data-videoid='8jumRGDgxiY']&quot;,
+                    &quot;vars&quot;: {
+                        &quot;event_category&quot;: &quot;AMP YouTube player (client-side)&quot;,
+                        &quot;event_name&quot;: &quot;Video Started&quot;,
+                        &quot;event_label&quot;: &quot;youtu.be/8jumRGDgxiY&quot;,
+                        &quot;method&quot;: &quot;Google&quot;
+                    }
+                },
+                &quot;videoPause&quot;: {
+                    &quot;on&quot;: &quot;video-pause&quot;,
+                    &quot;request&quot;: &quot;event&quot;,
+                    &quot;selector&quot;: &quot;amp-youtube[data-videoid='8jumRGDgxiY']&quot;,
+                    &quot;vars&quot;: {
+                        &quot;event_category&quot;: &quot;AMP YouTube player (client-side)&quot;,
+                        &quot;event_name&quot;: &quot;Video Paused&quot;,
+                        &quot;event_label&quot;: &quot;youtu.be/8jumRGDgxiY&quot;,
+                        &quot;method&quot;: &quot;Google&quot;
+                    }
+                },
+                &quot;videoEnded&quot;: {
+                    &quot;on&quot;: &quot;video-ended&quot;,
+                    &quot;request&quot;: &quot;event&quot;,
+                    &quot;selector&quot;: &quot;amp-youtube[data-videoid='8jumRGDgxiY']&quot;,
+                    &quot;vars&quot;: {
+                        &quot;event_name&quot;: &quot;Video Ended&quot;,
+                        &quot;event_category&quot;: &quot;AMP YouTube player (client-side)&quot;,
+                        &quot;event_label&quot;: &quot;youtu.be/8jumRGDgxiY&quot;,
+                        &quot;method&quot;: &quot;Google&quot;
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/amp-analytics&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Embedding a YouTube Playlist&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To embed a playlist, you need to set both the &lt;em&gt;playlist ID&lt;/em&gt; and the &lt;em&gt;ID of first video within the playlist&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-liquid highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;youtube.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;YOUTUBE_VIDEO_UID&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;playlist&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;YOUTUBE_PLAYLIST_UID&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;id&lt;/strong&gt; - &lt;em&gt;required&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;playlist&lt;/strong&gt; - &lt;em&gt;required&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;title&lt;/strong&gt; - &lt;em&gt;optional&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;audio&quot;&gt;Audio&lt;/h3&gt;
+
+&lt;p&gt;By default, this theme does not include the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;amp-audio&lt;/code&gt; components. But you can enable the feature by adding the following to your post’s front matter:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;custom-element=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;amp-audio&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.ampproject.org/v0/amp-audio-0.1.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In your post body, use inline HTML to embed an audio using the &amp;lt;amp-audio&amp;gt; tag, e.g.:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;amp-audio&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;auto&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;HTTPS_URL_TO_LOAD__AUDIO&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fallback&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Your browser doesn’t support HTML5 audio&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/amp-audio&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Sample:&lt;/p&gt;
+&lt;amp-audio width=&quot;auto&quot; height=&quot;50&quot; src=&quot;https://ia801402.us.archive.org/16/items/EDIS-SRP-0197-06/EDIS-SRP-0197-06.mp3&quot;&gt;
+  &lt;div fallback=&quot;&quot;&gt;
+    &lt;p&gt;Your browser doesn’t support HTML5 audio&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/amp-audio&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>chris</name></author><category term="test" /><category term="media" /><summary type="html">Demos for Images, Videos, and Audios</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/gui-2457115.svg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/gui-2457115.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is Intelligence Enough</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/is-intelligence-enough" rel="alternate" type="text/html" title="Is Intelligence Enough" /><published>2018-01-12T00:00:00+00:00</published><updated>2018-01-12T00:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/is-intelligence-enough</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/is-intelligence-enough">&lt;p&gt;Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one’s self is very difficult.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We are prone to let our mental life become invaded by legions of half truths, prejudices, and propaganda. At this point, I often wonder whether or not education is fulfilling its purpose. A great majority of the so-called educated people do not think logically and scientifically.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Even the press, the classroom, the platform, and the pulpit in many instances do not give us objective and unbiased truths. To save man from the morass of propaganda, in my opinion, is one of the chief aims of education. Education must enable one to sift and weigh evidence, to discern the true from the false, the real from the unreal, and the facts from the fiction.&lt;/p&gt;
+
+&lt;p&gt;The function of education, therefore, is to teach one to think intensively and to think critically. But education which stops with efficiency may prove the greatest menace to society. The most dangerous criminal may be the man gifted with reason, but with no morals.&lt;/p&gt;
+
+&lt;p&gt;The late Eugene Talmadge, in my opinion, possessed one of the better minds of Georgia, or even America. Moreover, he wore the Phi Beta Kappa key. By all measuring rods, Mr. Talmadge could think critically and intensively; yet he contends that I am an inferior being. Are those the types of men we call educated?&lt;/p&gt;
+
+&lt;p&gt;We must remember that intelligence is not enough. Intelligence plus character–that is the goal of true education. The complete education gives one not only power of concentration, but worthy objectives upon which to concentrate. The broad education will, therefore, transmit to one not only the accumulated knowledge of the race but also the accumulated experience of social living.&lt;/p&gt;</content><author><name>sal</name></author><summary type="html">Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one’s self is very difficult.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/5.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/5.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Powerful things you can do with the Markdown editor</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/powerful-things-markdown-editor" rel="alternate" type="text/html" title="Powerful things you can do with the Markdown editor" /><published>2018-01-12T00:00:00+00:00</published><updated>2018-01-12T00:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/powerful-things-markdown-editor</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/powerful-things-markdown-editor">&lt;p&gt;There are lots of powerful things you can do with the Markdown editor&lt;/p&gt;
+
+&lt;p&gt;If you’ve gotten pretty comfortable with writing in Markdown, then you may enjoy some more advanced tips about the types of things you can do with Markdown!&lt;/p&gt;
+
+&lt;p&gt;As with the last post about the editor, you’ll want to be actually editing this post as you read it so that you can see all the Markdown code we’re using.&lt;/p&gt;
+
+&lt;h2 id=&quot;special-formatting&quot;&gt;Special formatting&lt;/h2&gt;
+
+&lt;p&gt;As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;del&gt;strike through&lt;/del&gt;&lt;/li&gt;
+  &lt;li&gt;==highlight==&lt;/li&gt;
+  &lt;li&gt;*escaped characters*&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    
+    
+        &lt;amp-img width=&quot;730&quot; height=&quot;383&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/4.webp&quot; alt=&quot;Image in Powerful things you can do with the Markdown editor&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;730&quot; height=&quot;383&quot; layout=&quot;intrinsic&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/4.jpg&quot; alt=&quot;Image in Powerful things you can do with the Markdown editor&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;writing-code-blocks&quot;&gt;Writing code blocks&lt;/h2&gt;
+
+&lt;p&gt;There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;like this&lt;/code&gt;. Larger snippets of code can be displayed across multiple lines using triple back ticks:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.my-link {
+    text-decoration: underline;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want to get really fancy, you can even add syntax highlighting using Rouge.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference-lists&quot;&gt;Reference lists&lt;/h2&gt;
+
+&lt;p&gt;The quick brown jumped over the lazy.&lt;/p&gt;
+
+&lt;p&gt;Another way to insert links in markdown is using reference lists. You might want to use this style of linking to cite reference material in a Wikipedia-style. All of the links are listed at the end of the document, so you can maintain full separation between content and its source or reference.&lt;/p&gt;
+
+&lt;h2 id=&quot;full-html&quot;&gt;Full HTML&lt;/h2&gt;
+
+&lt;p&gt;Perhaps the best part of Markdown is that you’re never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here’s a YouTube embed code as an example:&lt;/p&gt;
+
+&lt;amp-youtube width=&quot;480&quot; height=&quot;270&quot; layout=&quot;responsive&quot; data-videoid=&quot;Cniqsc9QfDo&quot; data-param-rel=&quot;0&quot;&gt;
+    &lt;div fallback=&quot;&quot;&gt;
+        &lt;p&gt;This browser does not support the YouTube video player. &lt;a href=&quot;https://youtu.be/Cniqsc9QfDo&quot; target=&quot;_blank&quot;&gt;Watch on YouTube&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/amp-youtube&gt;
+
+&lt;amp-analytics type=&quot;gtag&quot; data-credentials=&quot;include&quot;&gt;
+    &lt;script type=&quot;application/json&quot;&gt;
+        {
+            &quot;vars&quot; : {
+                &quot;gtag_id&quot;: &quot;UA-72575541-9&quot;,
+                &quot;config&quot; : {
+                    &quot;UA-72575541-9&quot;: { &quot;groups&quot;: &quot;default&quot; }
+                }
+            },
+            &quot;triggers&quot;: {
+                &quot;videoPlay&quot;: {
+                    &quot;on&quot;: &quot;video-play&quot;,
+                    &quot;request&quot;: &quot;event&quot;,
+                    &quot;selector&quot;: &quot;amp-youtube[data-videoid='Cniqsc9QfDo']&quot;,
+                    &quot;vars&quot;: {
+                        &quot;event_category&quot;: &quot;AMP YouTube player (client-side)&quot;,
+                        &quot;event_name&quot;: &quot;Video Started&quot;,
+                        &quot;event_label&quot;: &quot;youtu.be/Cniqsc9QfDo&quot;,
+                        &quot;method&quot;: &quot;Google&quot;
+                    }
+                },
+                &quot;videoPause&quot;: {
+                    &quot;on&quot;: &quot;video-pause&quot;,
+                    &quot;request&quot;: &quot;event&quot;,
+                    &quot;selector&quot;: &quot;amp-youtube[data-videoid='Cniqsc9QfDo']&quot;,
+                    &quot;vars&quot;: {
+                        &quot;event_category&quot;: &quot;AMP YouTube player (client-side)&quot;,
+                        &quot;event_name&quot;: &quot;Video Paused&quot;,
+                        &quot;event_label&quot;: &quot;youtu.be/Cniqsc9QfDo&quot;,
+                        &quot;method&quot;: &quot;Google&quot;
+                    }
+                },
+                &quot;videoEnded&quot;: {
+                    &quot;on&quot;: &quot;video-ended&quot;,
+                    &quot;request&quot;: &quot;event&quot;,
+                    &quot;selector&quot;: &quot;amp-youtube[data-videoid='Cniqsc9QfDo']&quot;,
+                    &quot;vars&quot;: {
+                        &quot;event_name&quot;: &quot;Video Ended&quot;,
+                        &quot;event_category&quot;: &quot;AMP YouTube player (client-side)&quot;,
+                        &quot;event_label&quot;: &quot;youtu.be/Cniqsc9QfDo&quot;,
+                        &quot;method&quot;: &quot;Google&quot;
+                    }
+                }
+            }
+        }
+    &lt;/script&gt;
+&lt;/amp-analytics&gt;</content><author><name>sal</name></author><summary type="html">There are lots of powerful things you can do with the Markdown editor</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/4.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/4.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Red Riding Hood</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/red-riding" rel="alternate" type="text/html" title="Red Riding Hood" /><published>2018-01-12T00:00:00+00:00</published><updated>2018-01-12T00:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/red-riding</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/red-riding">&lt;p&gt;The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.&lt;/p&gt;
+
+&lt;p&gt;An 1868 Prang catalogue would later claim that such “books in the shape of a regular paper Doll… originated with us”.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It would seem the claim could also extend to die cut books in general, as we can’t find anything sooner, but do let us know in the comments if you have further light to shed on this! Such books are, of course, still popular in children’s publishing today, though the die cutting is not now limited to mere outlines, as evidenced in a beautiful 2014 version of the same Little Red Riding Hood story.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The die cut has also been employed in the non-juvenile sphere as well, a recent example being Jonathan Safran Foer’s ambitious Tree of Codes.&lt;/p&gt;
+
+&lt;p&gt;As for this particular rendition of Charles Perrault’s classic tale, the text and design is by Lydia Very (1823-1901), sister of Transcendentalist poet Jones Very. The gruesome ending of the original — which sees Little Red Riding Hood being gobbled up as well as her grandmother — is avoided here, the gore giving way to the less bloody aims of the morality tale, and the lesson that one should not disobey one’s mother.&lt;/p&gt;</content><author><name>sal</name></author><summary type="html">The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/3.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/3.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Tree of Codes</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/tree-of-codes" rel="alternate" type="text/html" title="Tree of Codes" /><published>2018-01-12T00:00:00+00:00</published><updated>2018-01-12T00:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/tree-of-codes</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/tree-of-codes">&lt;p&gt;The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.&lt;/p&gt;
+
+&lt;p&gt;As for this particular rendition of Charles Perrault’s classic tale, the text and design is by Lydia Very (1823-1901), sister of Transcendentalist poet Jones Very. The gruesome ending of the original — which sees Little Red Riding Hood being gobbled up as well as her grandmother — is avoided here, the gore giving way to the less bloody aims of the morality tale, and the lesson that one should not disobey one’s mother.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It would seem the claim could also extend to die cut books in general, as we can’t find anything sooner, but do let us know in the comments if you have further light to shed on this! Such books are, of course, still popular in children’s publishing today, though the die cutting is not now limited to mere outlines, as evidenced in a beautiful 2014 version of the same Little Red Riding Hood story.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An 1868 Prang catalogue would later claim that such “books in the shape of a regular paper Doll… originated with us”.&lt;/p&gt;
+
+&lt;p&gt;The die cut has also been employed in the non-juvenile sphere as well, a recent example being Jonathan Safran Foer’s ambitious Tree of Codes.&lt;/p&gt;</content><author><name>sal</name></author><summary type="html">The first mass-produced book to deviate from a rectilinear format, at least in the United States, is thought to be this 1863 edition of Red Riding Hood, cut into the shape of the protagonist herself with the troublesome wolf curled at her feet. Produced by the Boston-based publisher Louis Prang, this is the first in their “Doll Series”, a set of five “die-cut” books, known also as shape books — the other titles being Robinson Crusoe, Goody Two-Shoes (also written by Red Riding Hood author Lydia Very), Cinderella, and King Winter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/2.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">We all wait for summer</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/we-all-wait-for-summer" rel="alternate" type="text/html" title="We all wait for summer" /><published>2018-01-12T00:00:00+00:00</published><updated>2018-01-12T00:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/we-all-wait-for-summer</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/12/we-all-wait-for-summer">&lt;p&gt;This is changed. As I engage in the so-called “bull sessions” around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the “brethren” think that &lt;a href=&quot;#&quot;&gt;education should equip&lt;/a&gt; them with the proper instruments of exploitation so that they can forever trample over the masses. Still others think that education should furnish them with noble ends rather than means to an end.&lt;/p&gt;
+
+&lt;p&gt;It seems to me that education has a two-fold function to perform in the life of man and in society: the one is utility and the other is culture. Education must enable a man to become more efficient, to achieve with increasing facility the ligitimate goals of his life.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is changed. As I engage in the so-called “bull sessions” around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the “brethren” think that education should equip them with the proper instruments of exploitation so that they can forever trample over the masses. Still others think that education should furnish them with noble ends rather than means to an end.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/1.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Markdown Example</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/11/markup-example" rel="alternate" type="text/html" title="Markdown Example" /><published>2018-01-11T00:00:00+00:00</published><updated>2018-01-11T00:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/11/markup-example</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2018/01/11/markup-example">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated. Something.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>john</name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Something.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/6.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Style Guide</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide" rel="alternate" type="text/html" title="Style Guide" /><published>2017-11-30T04:00:00+00:00</published><updated>2017-11-30T04:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide">&lt;p&gt;This shows how you can use html styling to achieve your hopes.&lt;/p&gt;
+
+&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;heading1&quot;&gt;Heading 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;heading2&quot;&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading3&quot;&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading4&quot;&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;heading5&quot;&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;heading6&quot;&gt;Heading 6&lt;/h6&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;a title=&quot;test link&quot; href=&quot;#&quot;&gt;test link&lt;/a&gt; adipiscing elit. &lt;strong&gt;This is strong.&lt;/strong&gt; Nullam dignissim convallis est. Quisque aliquam. &lt;em&gt;This is emphasized.&lt;/em&gt; Donec faucibus. Nunc iaculis suscipit dui. 5&lt;sup&gt;3&lt;/sup&gt; = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. &lt;cite&gt;The New York Times&lt;/cite&gt; (That’s a citation). Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
+
+&lt;p&gt;&lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; and &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt; are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type &lt;code&gt;COPY &lt;var&gt;filename&lt;/var&gt;&lt;/code&gt;. &lt;del&gt;Dinner’s at 5:00.&lt;/del&gt; &lt;ins&gt;Let’s make that 7.&lt;/ins&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Media&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
+
+&lt;h3&gt;Image&lt;/h3&gt;
+
+&lt;figure class=&quot;mb3&quot;&gt;
+    
+    
+        &lt;amp-img width=&quot;656&quot; height=&quot;400&quot; layout=&quot;responsive&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/shiva.webp&quot; alt=&quot;Image in Style Guide&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+            &lt;amp-img fallback=&quot;&quot; width=&quot;656&quot; height=&quot;400&quot; layout=&quot;responsive&quot; src=&quot;/amp-affiliately-jekyll-theme/assets/images/shiva.jpg&quot; alt=&quot;Image in Style Guide&quot; on=&quot;tap:lightbox1&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/amp-img&gt;
+        &lt;/amp-img&gt;
+    
+    
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Buttons&lt;/h3&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column mb2 items-center&quot;&gt;
+&lt;h4&gt;Primary&lt;/h4&gt;
+&lt;button class=&quot;ampstart-btn&quot;&gt;
+SUBMIT
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex flex-column mb2 items-center&quot;&gt;
+&lt;h4&gt;Primary Disabled&lt;/h4&gt;
+&lt;button class=&quot;ampstart-btn&quot; disabled=&quot;&quot;&gt;
+SUBMIT
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column mb2 items-center&quot;&gt;
+&lt;h4&gt;Secondary&lt;/h4&gt;
+&lt;button class=&quot;ampstart-btn ampstart-btn-secondary&quot;&gt;
+SUBMIT
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex flex-column mb2 items-center&quot;&gt;
+&lt;h4&gt;Secondary Disabled&lt;/h4&gt;
+&lt;button class=&quot;ampstart-btn ampstart-btn-secondary&quot; disabled=&quot;&quot;&gt;
+SUBMIT
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;hr /&gt;
+
+&lt;h3&gt;Form&lt;/h3&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;On&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input ampstart-input-chk inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;checkbox&quot; value=&quot;1&quot; name=&quot;cb&quot; id=&quot;cb1&quot; class=&quot;p0 m0 relative&quot; checked=&quot;&quot; /&gt;
+    &lt;label for=&quot;cb1&quot; class=&quot;&quot; aria-hidden=&quot;true&quot;&gt;Chkbox 1&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Off&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input ampstart-input-chk inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;checkbox&quot; value=&quot;2&quot; name=&quot;cb&quot; id=&quot;cb2&quot; class=&quot;p0 m0 relative&quot; /&gt;
+    &lt;label for=&quot;cb2&quot; class=&quot;&quot; aria-hidden=&quot;true&quot;&gt;Chkbox 2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Disabled&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input ampstart-input-chk inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;checkbox&quot; value=&quot;3&quot; name=&quot;cb&quot; id=&quot;cb3&quot; class=&quot;p0 m0 relative&quot; disabled=&quot;&quot; /&gt;
+    &lt;label for=&quot;cb3&quot; class=&quot;&quot; aria-hidden=&quot;true&quot;&gt;Chkbox 3&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;On&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input ampstart-input-radio inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;radio&quot; value=&quot;1&quot; name=&quot;rb&quot; id=&quot;rb1&quot; class=&quot;relative&quot; checked=&quot;&quot; /&gt;
+    &lt;label for=&quot;rb1&quot; class=&quot;&quot; aria-hidden=&quot;true&quot;&gt;Radio 1&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Off&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input ampstart-input-radio inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;radio&quot; value=&quot;2&quot; name=&quot;rb&quot; id=&quot;rb2&quot; class=&quot;relative&quot; /&gt;
+    &lt;label for=&quot;rb2&quot; class=&quot;&quot; aria-hidden=&quot;true&quot;&gt;Radio 2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Disabled&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input ampstart-input-radio inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;radio&quot; value=&quot;3&quot; name=&quot;rb&quot; id=&quot;rb3&quot; class=&quot;relative&quot; disabled=&quot;&quot; /&gt;
+    &lt;label for=&quot;rb3&quot; class=&quot;&quot; aria-hidden=&quot;true&quot;&gt;Radio 3&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Textbox&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;name1&quot; id=&quot;ip1&quot; class=&quot;block border-none p0 m0 user-valid valid&quot; placeholder=&quot;Enter your Name&quot; /&gt;
+    &lt;label for=&quot;ip1&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Enter your Name&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Textbox Filled&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;John Smith&quot; name=&quot;name1&quot; id=&quot;ip1&quot; class=&quot;block border-none p0 m0 user-valid valid&quot; placeholder=&quot;Enter your Name&quot; /&gt;
+    &lt;label for=&quot;ip1&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Enter your Name&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Disabled Textbox&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;name1&quot; id=&quot;ip1&quot; class=&quot;block border-none p0 m0&quot; placeholder=&quot;This input is Disabled&quot; disabled=&quot;&quot; /&gt;
+    &lt;label for=&quot;ip1&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;This input is Disabled&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Date Input&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;date&quot; value=&quot;2020-10-10&quot; name=&quot;name4&quot; id=&quot;ip4&quot; class=&quot;block border-none p0 m0&quot; placeholder=&quot;Date of Expiry&quot; /&gt;
+    &lt;label for=&quot;ip4&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Date of Expiry&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Range Input&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;range&quot; value=&quot;&quot; name=&quot;name11&quot; id=&quot;ip11&quot; class=&quot;block border-none p0 m0&quot; placeholder=&quot;Select a range&quot; /&gt;
+    &lt;label for=&quot;ip11&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Select a range&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Disabled Range Input&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;input type=&quot;range&quot; value=&quot;&quot; name=&quot;name11&quot; id=&quot;ip11a&quot; class=&quot;block border-none p0 m0&quot; placeholder=&quot;Select a range&quot; disabled=&quot;&quot; /&gt;
+    &lt;label for=&quot;ip11a&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Select a range&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Textarea&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;textarea name=&quot;name13&quot; id=&quot;ip13&quot; class=&quot;block border-none  p0 m0&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;
+    &lt;label for=&quot;ip13&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Write your story&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Disabled Textarea&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;textarea name=&quot;name13&quot; id=&quot;ip13a&quot; class=&quot;block border-none  p0 m0&quot; rows=&quot;5&quot; disabled=&quot;&quot;&gt;&lt;/textarea&gt;
+    &lt;label for=&quot;ip13a&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;This input is disabled&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;main class=&quot;flex flex-wrap justify-around align-item items-center&quot;&gt;
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Select&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;select name=&quot;name12&quot; id=&quot;ip12&quot; class=&quot;block border-none p0 m0 user-valid valid&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;Apple&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Orange&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Lemon&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Grape&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label for=&quot;ip12&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Select a fruit&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex flex-column items-center&quot;&gt;
+  &lt;label class=&quot;www-example-label bold mb3&quot;&gt;Disabled Select&lt;/label&gt;
+  &lt;div class=&quot;ampstart-input inline-block relative m0 p0 mb3 &quot;&gt;
+    &lt;select name=&quot;name12&quot; id=&quot;ip12a&quot; class=&quot;block border-none  p0 m0&quot; disabled=&quot;&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;Apple&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Orange&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Lemon&lt;/option&gt;
+        &lt;option value=&quot;&quot;&gt;Grape&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label for=&quot;ip12a&quot; class=&quot;absolute top-0 right-0 bottom-0 left-0&quot; aria-hidden=&quot;true&quot;&gt;Select a fruit&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;List Types&lt;/h2&gt;
+
+&lt;h3&gt;Definition List&lt;/h3&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Definition List Title&lt;/dt&gt;
+  &lt;dd&gt;This is a definition list division.&lt;/dd&gt;
+  &lt;dt&gt;Definition&lt;/dt&gt;
+  &lt;dd&gt;An exact statement or description of the nature, scope, or meaning of something: &lt;strong&gt;our definition of what constitutes poetry.&lt;/strong&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3&gt;Ordered List&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;List Item 1  &lt;/li&gt;
+&lt;li&gt;List Item 2 &lt;br /&gt;
+&lt;ol&gt;&lt;li&gt;Nested list item A&lt;/li&gt;
+&lt;li&gt;Nested list item B&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;List Item 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;List Item 1&lt;/li&gt;
+&lt;li&gt;List Item 2
+&lt;ul&gt;&lt;li&gt;Nested list item A&lt;/li&gt;
+&lt;li&gt;Nested list item B&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;List Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Preformatted Text&lt;/h2&gt;
+
+&lt;p&gt;Typographically, preformatted text is not the same thing as code. Sometimes, a faithful execution of the text requires preformatted text that may not have anything to do with code. Most browsers use Courier and that’s a good default — with one slight adjustment, Courier 10 Pitch over regular Courier for Linux users.&lt;/p&gt;
+
+&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+
+&lt;p&gt;Code can be presented inline, like &lt;code&gt;&amp;lt;?php bloginfo('stylesheet_url'); ?&amp;gt;&lt;/code&gt;, or within a &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; block. Because we have more specific typographic needs for code, we’ll specify Consolas and Monaco ahead of the browser-defined monospace font.&lt;/p&gt;
+
+&lt;p&gt;Code blocks can also be inserted with the highlight tag as below:&lt;/p&gt;
+&lt;pre&gt;
+    
+    {% highlight language-x %}
+    # some code
+    {% endhighlight %}
+    
+&lt;/pre&gt;
+
+&lt;p&gt;More information about code highlighting in jekyll can be found  &lt;a href=&quot;https://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;in Jekyll documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;These area a couple of examples showing the resulting highlighted code:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* css code sample */&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// javascript code sample&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;backend.php&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;q=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// on success use return data here&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xhr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// if ajax fails display error alert&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ajax error response type &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Swift code sample&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Foundation&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;@objc&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Entity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+
+  &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;cm&quot;&gt;/* /* ... */ */&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Return a descriptive string for this person&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; is &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;offset&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; years old&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
+
+&lt;p&gt;Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Good afternoon, gentlemen. I am a HAL 9000 computer. I became operational at the H.A.L. plant in Urbana, Illinois on the 12th of January 1992. My instructor was Mr. Langley, and he taught me to sing a song. If you’d like to hear it I can sing it for you. &lt;cite&gt;— &lt;a href=&quot;http://en.wikipedia.org/wiki/HAL_9000&quot;&gt;HAL 9000&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And here’s a bit of trailing text.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;textlevelsemantics&quot;&gt;Text-level semantics&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;#&quot;&gt;a element&lt;/a&gt; example &lt;br /&gt;
+The &lt;abbr&gt;abbr element&lt;/abbr&gt; and &lt;abbr title=&quot;Title text&quot;&gt;abbr element with title&lt;/abbr&gt; examples &lt;br /&gt;
+The &lt;b&gt;b element&lt;/b&gt; example &lt;br /&gt;
+The &lt;cite&gt;cite element&lt;/cite&gt; example &lt;br /&gt;
+The &lt;code&gt;code element&lt;/code&gt; example &lt;br /&gt;
+The &lt;del&gt;del element&lt;/del&gt; example &lt;br /&gt;
+The &lt;dfn&gt;dfn element&lt;/dfn&gt; and &lt;dfn title=&quot;Title text&quot;&gt;dfn element with title&lt;/dfn&gt; examples &lt;br /&gt;
+The &lt;em&gt;em element&lt;/em&gt; example &lt;br /&gt;
+The &lt;i&gt;i element&lt;/i&gt; example &lt;br /&gt;
+The &lt;ins&gt;ins element&lt;/ins&gt; example &lt;br /&gt;
+The &lt;kbd&gt;kbd element&lt;/kbd&gt; example &lt;br /&gt;
+The &lt;mark&gt;mark element&lt;/mark&gt; example &lt;br /&gt;
+The &lt;q&gt;q element &lt;q&gt;inside&lt;/q&gt; a q element&lt;/q&gt; example &lt;br /&gt;
+The &lt;s&gt;s element&lt;/s&gt; example &lt;br /&gt;
+The &lt;samp&gt;samp element&lt;/samp&gt; example &lt;br /&gt;
+The &lt;small&gt;small element&lt;/small&gt; example &lt;br /&gt;
+The &lt;span&gt;span element&lt;/span&gt; example &lt;br /&gt;
+The &lt;strong&gt;strong element&lt;/strong&gt; example &lt;br /&gt;
+The &lt;sub&gt;sub element&lt;/sub&gt; example &lt;br /&gt;
+The &lt;sup&gt;sup element&lt;/sup&gt; example &lt;br /&gt;
+The &lt;var&gt;var element&lt;/var&gt; example &lt;br /&gt;
+The &lt;u&gt;u element&lt;/u&gt; example&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;video&quot;&gt;Video&lt;/h3&gt;
+
+&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+
+&lt;amp-youtube width=&quot;480&quot; height=&quot;270&quot; layout=&quot;responsive&quot; data-videoid=&quot;lBTCB7yLs8Y&quot;&gt;
+&lt;/amp-youtube&gt;</content><author><name>Peter</name></author><category term="guide" /><summary type="html">This shows how you can use html styling to achieve your hopes.</summary></entry><entry><title type="html">Sample</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/29/sample" rel="alternate" type="text/html" title="Sample" /><published>2017-11-29T04:00:00+00:00</published><updated>2017-11-29T04:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/29/sample</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/29/sample">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</content><author><name>Peter</name></author><category term="test" /><summary type="html">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/tree.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/tree.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/28/code" rel="alternate" type="text/html" title="Code" /><published>2017-11-28T04:00:00+00:00</published><updated>2017-11-28T04:00:00+00:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/28/code</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/28/code">&lt;p&gt;Code can be presented inline, like &lt;code&gt;&amp;lt;?php bloginfo('stylesheet_url'); ?&amp;gt;&lt;/code&gt;, or within a &lt;code&gt;``` ```&lt;/code&gt; block.&lt;/p&gt;
+
+&lt;p&gt;More information about code highlighting in jekyll can be found  &lt;a href=&quot;https://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;in Jekyll documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are a couple of examples showing the resulting highlighted code:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;css&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;sample&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// javascript code sample&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;POST&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;backend.php&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;q=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;myform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// on success use return data here&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xhr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exception&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// if ajax fails display error alert&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ajax error response type &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>John</name></author><category term="test" /><category term="code" /><summary type="html">Code can be presented inline, like &amp;lt;?php bloginfo('stylesheet_url'); ?&amp;gt;, or within a ``` ``` block.</summary></entry></feed>

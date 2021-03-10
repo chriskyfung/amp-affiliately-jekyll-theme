@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="650" height="500" version="1.1" viewBox="0 0 650.00001 500.00001" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="a" x="-.068536" y="-.10456" width="1.1371" height="1.2091" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="13.463792"/>
+  </filter>
+ </defs>
+ <g transform="translate(0 -552.36)">
+  <rect y="552.36" width="650" height="500" fill="#6dd4c7"/>
+ </g>
+ <rect x="89.262" y="110.62" width="471.48" height="309.03" ry="0" fill-opacity=".090426" filter="url(#a)"/>
+ <rect x="89.262" y="95.484" width="471.48" height="309.03" ry="0" fill="#fff"/>
+ <rect x="89.262" y="95.484" width="471.48" height="16.293" fill="#ededed"/>
+ <circle cx="97.408" cy="103.63" r="2.812" fill="#62d5e9"/>
+ <circle cx="114.28" cy="103.63" r="2.812" fill="#ff8d72"/>
+ <circle cx="105.84" cy="103.63" r="2.812" fill="#58f9a2"/>
+ <rect x="157.28" y="165.03" width="335.43" height="185.07" ry="3.0161" fill="#ff8d72" stroke="#ededed" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+ <g transform="translate(-10.878 .75037)">
+  <circle cx="335.88" cy="256.82" r="45.256" fill="#fff"/>
+  <path d="m359.9 256.82-37.135 21.44v-42.88z" fill="#ededed"/>
+ </g>
+ <path d="m165.02 337.68h317.7" fill="none" stroke="#ededed" stroke-width="4"/>
+ <path d="m165.02 337.68h62.46" fill="none" stroke="#62d5e9" stroke-width="4"/>
+ <rect x="226.04" y="331.9" width="2.878" height="11.567" fill="#f0ef94"/>
+</svg>
