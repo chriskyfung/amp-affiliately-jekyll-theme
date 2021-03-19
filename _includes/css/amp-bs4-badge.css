@@ -22,8 +22,7 @@
 
 a.badge:focus,a.badge:hover {
     color: #fff;
-    text-decoration: none;
-    cursor: pointer
+    text-decoration: none
 }
 
 .badge-pill {
