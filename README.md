@@ -144,8 +144,8 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 
    ```yaml
    sidebar:
-   featured: true
-   recent_posts: true
+      featured: true
+      recent_posts: true
    ```
 
    *Set `false` to disable the widgets as you need.*
