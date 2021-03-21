@@ -1,13 +1,16 @@
-{{ if site.adsense }}
+{{- if site.adsense -}}
 <!-- github_resp_before_content -->
-<amp-ad width="100vw" height="320"
+<amp-ad width="100vw" height="200"
     type="adsense"
     data-ad-client="{{ site.adsense.client_id }}"
     data-ad-slot="{{ site.adsense.ad_slot.before_content }}"
     data-auto-format="rspv"
+    {%- unless jekyll.environment == 'production' -%}
+    data-adtest="on"
+    {%- endunless -%}
     data-full-width>
     <div overflow=""></div>
     <div placeholder>Loading ...</div>
     <div fallback>No ad for you</div>
 </amp-ad>
-{{ endif }}
+{{- endif -}}

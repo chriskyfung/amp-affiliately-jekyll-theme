@@ -69,14 +69,18 @@
   {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
   <body class="{{ layout }}">
+    {%- if site.gtm -%}
     <!-- Google Tag Manager -->
     <amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm }}&gtm.url=SOURCE_URL"
       data-credentials="include" style="width:1px;height:1px;"></amp-analytics>
-    <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" data-full-width>
+    {%- endif -%}
+    {%- if site.adsense.client_id -%}      
+    <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" data-full-width{% unless jekyll.environment == 'production' %} data-adtest="on"{% endunless %}>
       <div placeholder>Loading Ads...</div>
       <div fallback></div>
       <div overflow></div>
     </amp-auto-ads>
+    {%- endif -%}
 
     <!-- Begin Menu Navigation -->
     <header amp-fx="float-in-top" id="navbar"
