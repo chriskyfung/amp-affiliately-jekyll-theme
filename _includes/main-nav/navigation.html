@@ -1,18 +1,26 @@
 <ul class="navbar-nav ml-auto">
 
+  {%- if site.repository -%}
+  <li class="nav-item">
+    <a class="nav-link" href="{{ site.baseurl }}/">{{ site.title | truncate: 20 }} <i class="fas fa-level-up-alt"></i></a>
+  </li>
+  {%- endif -%}
+
   <li class="nav-item">
     <a class="nav-link" href="/">Home</a>
   </li>
-
+  
   {% include main-nav/dropdown1.html %}
-
+  
+  {%- unless site.repository -%}
+  
   <li class="nav-item">
     <a class="nav-link" href="/category/cloud/">Cloud</a>
   </li>
-
   <li class="nav-item">
     <a class="nav-link" href="/category/academic/">Academic</a>
   </li>
+  {%- endunless -%}
 
   <li class="nav-item">
     <div class="invitation-codes"><a class="invitation-codes-badge" href="https://invitation.codes/@chriskyfung" data-type=""
