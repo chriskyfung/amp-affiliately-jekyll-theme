@@ -2,75 +2,73 @@
 layout: default
 ---
 
-<!-- Featured
-================================================== -->
+<!-- Featured Posts -->
 <section class="featured-posts">
 
-    <div class="section-title">
-        <h2><span>Featured</span></h2>
-    </div>
+  <div class="section-title">
+    <h2><span>Featured</span></h2>
+  </div>
 
-    <div class="row listfeaturedtag">
+  <div class="row listfeaturedtag">
 
-    {% for post in site.posts %}
+    {%- for post in site.posts -%}
 
-        {% if post.featured == true %}
+    {%- if post.featured == true -%}
 
-            {% include blocks/featured-box.html %}
+    {%- include blocks/featured-box.html -%}
 
-        {% endif %}
+    {%- endif -%}
 
-    {% endfor %}
+    {%- endfor -%}
 
-    </div>
+  </div>
 
 </section>
 
-<!-- Posts Index
-================================================== -->
-{% if paginator.previous_page %}
-{% if paginator.previous_page > 0 %}
+<!-- Posts Index -->
+{%- if paginator.previous_page -%}
+{%- if paginator.previous_page > 0 -%}
 <div id="jumptopageof"></div>
-{% endif %}
-{% endif %}    
+{%- endif -%}
+{%- endif -%}
 
 <section class="recent-posts row">
 
-    <div class="col-sm-4 left-sidebar">
-        {% include sidebar/sidebar.html %}
+  <div class="col-sm-4 left-sidebar">
+    {%- include sidebar/sidebar.html -%}
+  </div>
+
+  <div class="col-sm-8">
+
+    <div class="section-title">
+      <h2><span>All Stories</span></h2>
     </div>
 
-    <div class="col-sm-8">
+    <div class="masonrygrid row listrecent">
 
-        <div class="section-title">
-            <h2><span>All Stories</span></h2>    
-        </div>
+      {%- for post in paginator.posts -%}
 
-        <div class="masonrygrid row listrecent">
+      {%- unless post.featured == true -%}
 
-            {% for post in paginator.posts %}
+      {%- include blocks/post-box.html -%}
 
-            {% unless post.featured == true %}
+      {%- endunless -%}
 
-                {% include blocks/post-box.html %}
-
-            {% endunless %}
-
-            {% endfor %}
-
-        </div> 
-
-        <!-- Pagination -->
-        <div class="bottompagination">
-
-            <span class="navigation" role="navigation">
-
-                {% include blocks/pagination.html basepath="blog/"%}
-
-            </span>
-
-        </div>
+      {%- endfor -%}
 
     </div>
+
+    <!-- Pagination -->
+    <div class="bottompagination">
+
+      <span class="navigation" role="navigation">
+
+        {%- include blocks/pagination.html basepath="blog/"%}
+
+      </span>
+
+    </div>
+
+  </div>
 
 </section>

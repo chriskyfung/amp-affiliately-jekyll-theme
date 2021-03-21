@@ -2,23 +2,23 @@
 layout: page-right-sidebar
 comments: false
 css:
-    badge: true
+badge: true
 ---
 
 <div class="tag-expo">
-    <ul class="tags rounded-tags">
-        {% assign sorted_tags = site.tags | sort %}
-        {% assign init_letter = "" %}
-        {% for tag in sorted_tags %}
-            {% assign first_letter = tag[0]| slice: 0 %} 
-            {% if init_letter != first_letter %}
-                {% assign init_letter = first_letter %} 
-                <h4 id="start-with-{{ init_letter }}">{{ init_letter }}</h4>
-            {% endif %}
-            <li>
-                <a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}/" class="post-tag">{{ tag[0] }}</a>
-                <span class="badge badge-pill badge-primary">{{ tag[1] | size }}</span>
-            </li>
-        {% endfor %}
-    </ul>
+  <ul class="tags rounded-tags">
+    {%- assign sorted_tags = site.tags | sort -%}
+    {%- assign init_letter = "" -%}
+    {%- for tag in sorted_tags -%}
+    {%- assign first_letter = tag[0]| slice: 0 -%}
+    {%- if init_letter != first_letter -%}
+    {% assign init_letter = first_letter -%}
+    <h4 id="start-with-{{ init_letter }}">{{ init_letter }}</h4>
+    {%- endif -%}
+    <li>
+      <a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}/" class="post-tag">{{ tag[0] }}</a>
+      <span class="badge badge-pill badge-primary">{{ tag[1] | size }}</span>
+    </li>
+    {%- endfor -%}
+  </ul>
 </div>

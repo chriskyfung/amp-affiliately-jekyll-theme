@@ -1,67 +1,67 @@
-{% if include.playlist %}
+{%- if include.playlist -%}
 <amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-listType="playlist" data-param-list="{{ include.playlist }}" data-param-rel="0">
-    <div fallback>
-        <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" target="_blank">Watch on YouTube</a></p>
-    </div>
+  <div fallback>
+    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" target="_blank">Watch on YouTube</a></p>
+  </div>
 </amp-youtube>
-{% else %}
+{%- else -%}
 <amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-rel="0">
-    <div fallback>
-        <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" target="_blank">Watch on YouTube</a></p>
-    </div>
+  <div fallback>
+    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" target="_blank">Watch on YouTube</a></p>
+  </div>
 </amp-youtube>
-{% endif %}
+{%- endif -%}
 
-{% if include.title %}
-    {% capture label %}{{include.title }} | youtu.be/{{ include.id }}{% endcapture %}
-{% else %}
-    {% capture label %}youtu.be/{{ include.id }}{% endcapture %}
-{% endif %}
+{%- if include.title -%}
+{% capture label %}{{include.title }} | youtu.be/{{ include.id }}{% endcapture %}
+{%- else -%}
+{% capture label %}youtu.be/{{ include.id }}{% endcapture %}
+{%- endif -%}
 
 <amp-analytics type="gtag" data-credentials="include">
-    <script type="application/json">
-        {
-            "vars" : {
-                "gtag_id": "{{ site.google_analytics }}",
-                "config" : {
-                    "{{ site.google_analytics }}": { "groups": "default" }
-                }
-            },
-            "triggers": {
-                "videoPlay": {
-                    "on": "video-play",
-                    "request": "event",
-                    "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-                    "vars": {
-                        "event_category": "AMP YouTube player (client-side)",
-                        "event_name": "Video Started",
-                        "event_label": "{{ label }}",
-                        "method": "Google"
-                    }
-                },
-                "videoPause": {
-                    "on": "video-pause",
-                    "request": "event",
-                    "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-                    "vars": {
-                        "event_category": "AMP YouTube player (client-side)",
-                        "event_name": "Video Paused",
-                        "event_label": "{{ label }}",
-                        "method": "Google"
-                    }
-                },
-                "videoEnded": {
-                    "on": "video-ended",
-                    "request": "event",
-                    "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-                    "vars": {
-                        "event_name": "Video Ended",
-                        "event_category": "AMP YouTube player (client-side)",
-                        "event_label": "{{ label }}",
-                        "method": "Google"
-                    }
-                }
-            }
+  <script type="application/json">
+    {
+      "vars" : {
+        "gtag_id": "{{ site.google_analytics }}",
+        "config" : {
+          "{{ site.google_analytics }}": { "groups": "default" }
         }
-    </script>
+      },
+      "triggers": {
+        "videoPlay": {
+          "on": "video-play",
+          "request": "event",
+          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+          "vars": {
+            "event_category": "AMP YouTube player (client-side)",
+            "event_name": "Video Started",
+            "event_label": "{{ label }}",
+            "method": "Google"
+          }
+        },
+        "videoPause": {
+          "on": "video-pause",
+          "request": "event",
+          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+          "vars": {
+            "event_category": "AMP YouTube player (client-side)",
+            "event_name": "Video Paused",
+            "event_label": "{{ label }}",
+            "method": "Google"
+          }
+        },
+        "videoEnded": {
+          "on": "video-ended",
+          "request": "event",
+          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+          "vars": {
+            "event_name": "Video Ended",
+            "event_category": "AMP YouTube player (client-side)",
+            "event_label": "{{ label }}",
+            "method": "Google"
+          }
+        }
+      }
+    }
+  </script>
 </amp-analytics>
