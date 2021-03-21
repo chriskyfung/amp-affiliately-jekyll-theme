@@ -15,9 +15,9 @@
     <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
-    {%- if layout.amp.addthis or page.amp.addthis -%}
+    {% if layout.amp.addthis or page.amp.addthis %}
     <script async custom-element="amp-addthis" src="https://cdn.ampproject.org/v0/amp-addthis-0.1.js"></script>
-    {%- endif -%}
+    {% endif %}
     {%- if layout.amp.iframe or page.amp.iframe or true -%}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {%- endif -%}

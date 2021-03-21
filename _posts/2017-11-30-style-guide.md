@@ -4,6 +4,8 @@ title: Style Guide
 date: 2017-11-30 04:00:00
 author: Peter
 category: guide
+amp:
+  youtube: true
 css:
   syntax: true
 custom_head: >-
