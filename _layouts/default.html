@@ -68,7 +68,7 @@
 
   {%- capture layout -%}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%- endcapture -%}
 
-  <body class="{{ layout }}">
+  <body class="{{ layout }}" data-amp-auto-lightbox-disable>
     {%- if site.gtm -%}
     <!-- Google Tag Manager -->
     <amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm }}&gtm.url=SOURCE_URL"
