@@ -959,56 +959,56 @@ pre code {
     flex: 0 0 25%;
     max-width: 25%
   }
-  
+
   .col-sm-4 {
     -webkit-flex: 0 0 33.333333%;
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%
   }
-  
+
   .col-sm-6 {
     -webkit-flex: 0 0 50%;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%
   }
-  
+
   .col-sm-8 {
     -webkit-flex: 0 0 66.666667%;
     -ms-flex: 0 0 66.666667%;
     flex: 0 0 66.666667%;
     max-width: 66.666667%
   }
-  
+
   .col-md-4 {
     -webkit-flex: 0 0 33.333333%;
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%
   }
-  
+
   .col-md-5 {
     -webkit-flex: 0 0 41.666667%;
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%
   }
-  
+
   .col-md-6 {
     -webkit-flex: 0 0 50%;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%
   }
-  
+
   .col-md-7 {
     -webkit-flex: 0 0 58.333333%;
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%
   }
-  
+
   .col-md-8 {
     -webkit-flex: 0 0 66.666667%;
     -ms-flex: 0 0 66.666667%;
@@ -1379,7 +1379,7 @@ fieldset[disabled] a.btn {
     position: static;
     float: none
   }
-  
+
   .navbar-toggleable-md>.container {
     padding-right: 0;
     padding-left: 0
@@ -1397,7 +1397,7 @@ fieldset[disabled] a.btn {
     -ms-flex-align: center;
     align-items: center
   }
-  
+
   .navbar-toggleable-md,
   .navbar-toggleable-md .navbar-nav {
     -webkit-box-orient: horizontal;
@@ -1406,12 +1406,12 @@ fieldset[disabled] a.btn {
     -ms-flex-direction: row;
     flex-direction: row
   }
-  
+
   .navbar-toggleable-md .navbar-nav .nav-link {
     padding-right: 0.5rem;
     padding-left: 0.5rem
   }
-  
+
   .navbar-toggleable-md>.container {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
@@ -1421,7 +1421,7 @@ fieldset[disabled] a.btn {
     -ms-flex-align: center;
     align-items: center
   }
-  
+
   .navbar-toggleable-md .navbar-collapse,
   .navbar-toggleable-md>.container {
     display: -webkit-box;
@@ -1429,7 +1429,7 @@ fieldset[disabled] a.btn {
     display: -ms-flexbox;
     display: flex
   }
-  
+
   .navbar-toggleable-md .navbar-collapse {
     width: 100%
   }
@@ -1665,7 +1665,7 @@ button.close {
   .float-lg-left {
     float: left
   }
-  
+
   .float-lg-right {
     float: right
   }

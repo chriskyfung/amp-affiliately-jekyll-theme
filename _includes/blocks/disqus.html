@@ -1,21 +1,15 @@
-{% if site.amp_disqus %}
-<div class="disqus">    
-    <amp-iframe width=600 height={{ site.amp_disqus.height | default: 140 }} layout="responsive"
-    sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
-    resizable
+{%- if site.amp_disqus -%}
+<div class="disqus">
+  <amp-iframe width=600 height={{ site.amp_disqus.height | default: 140 }} layout="responsive"
+    sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
     src="{{ site.amp_disqus.url }}?url={{ site.url }}{{ page.url }}&title='{{ page.title | url_encode }}'">
-        <div overflow
-        tabindex=0
-        role=button
-        aria-label="Load more"
-        style="display:block;font-size:12px;font-weight:500;font-family:Helvetica Neue, arial, sans-serif;text-align:center;line-height:1.1;padding:12px 16px;border-radius:4px;background:rgba(29,47,58,0.6);color:rgb(255,255,255)"
-        >
-        Load more
-        </div>
-        <div placeholder>Loading Disqus Comments...</div>
-        <div fallback>
-            Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </div>
-    </amp-iframe>
+    <div overflow tabindex=0 role=button aria-label="Load more"
+      style="display:block;font-size:12px;font-weight:500;font-family:Helvetica Neue, arial, sans-serif;text-align:center;line-height:1.1;padding:12px 16px;border-radius:4px;background:rgba(29,47,58,0.6);color:rgb(255,255,255)"
+      >Load more</div>
+    <div placeholder>Loading Disqus Comments...</div>
+    <div fallback>
+      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </div>
+  </amp-iframe>
 </div>
-{% endif %}
+{%- endif -%}

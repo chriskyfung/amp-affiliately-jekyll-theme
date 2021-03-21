@@ -15,21 +15,21 @@
     <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
-    {% if layout.amp.addthis or page.amp.addthis %}
+    {%- if layout.amp.addthis or page.amp.addthis -%}
     <script async custom-element="amp-addthis" src="https://cdn.ampproject.org/v0/amp-addthis-0.1.js"></script>
-    {% endif %}
-    {% if layout.amp.iframe or page.amp.iframe or true %}
+    {%- endif -%}
+    {%- if layout.amp.iframe or page.amp.iframe or true -%}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    {% endif %}
-    {% if layout.amp.script or page.amp.script %}
+    {%- endif -%}
+    {%- if layout.amp.script or page.amp.script -%}
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
-    {% endif %}
-    {% if page.amp.youtube %}
+    {%- endif -%}
+    {%- if page.amp.youtube -%}
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-    {% endif %}
-    {% if page.amp.gist %}
+    {%- endif -%}
+    {%- if page.amp.gist -%}
     <script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>
-    {% endif %}
+    {%- endif -%}
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-autocomplete" src="https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"></script>
     <script async custom-element="amp-link-rewriter" src="https://cdn.ampproject.org/v0/amp-link-rewriter-0.1.js"></script>
@@ -40,33 +40,33 @@
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-solid-900.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" crossorigin="anonymous">
-    
-    {% if jekyll.environment == 'production' %}
-    {% endif %}
-    {% if page.custom_head %}
+
+    {%- if jekyll.environment == 'production' -%}
+    {%- endif -%}
+    {%- if page.custom_head -%}
     {{ page.custom_head }}
-    {% endif %}
+    {%- endif -%}
 
     <style amp-custom>
     {% include css/amp-bs4.css %}
     {% include css/amp-theme.css %}
     {% include css/amp-custom.css %}
-    {% if layout.css.badge == true or page.css.badge == true %}
+    {%- if layout.css.badge == true or page.css.badge == true -%}
     {% include css/amp-bs4-badge.css %}
-    {% endif %}
-    {% if layout.css.syntax == true or page.css.syntax == true %}
+    {%- endif -%}
+    {%- if layout.css.syntax == true or page.css.syntax == true -%}
     {% include css/amp-syntax-highlight.css %}
-    {% endif %}
-    {% if layout.css.custom %}
+    {%- endif %}
+    {%- if layout.css.custom -%}
     {{ layout.css.custom }}
-    {% endif %}
-    {% if page.css.custom %}
+    {%- endif -%}
+    {%- if page.css.custom -%}
     {{ page.css.custom }}
-    {% endif %}
+    {%- endif -%}
     </style>
   </head>
 
-  {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+  {%- capture layout -%}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%- endcapture -%}
 
   <body class="{{ layout }}">
     {%- if site.gtm -%}
@@ -74,7 +74,7 @@
     <amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm }}&gtm.url=SOURCE_URL"
       data-credentials="include" style="width:1px;height:1px;"></amp-analytics>
     {%- endif -%}
-    {%- if site.adsense.client_id -%}      
+    {%- if site.adsense.client_id -%}
     <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" data-full-width{% unless jekyll.environment == 'production' %} data-adtest="on"{% endunless %}>
       <div placeholder>Loading Ads...</div>
       <div fallback></div>
@@ -88,8 +88,8 @@
       <button class="navbar-toggler navbar-toggler-right" on="tap:navbarsWow.toggleClass(class='show')" type="button"
         data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false"
         aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        
-      <div class="container">    
+
+      <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
           <amp-img src="/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;"></amp-img>
@@ -132,14 +132,14 @@
     License: https://www.wowthemes.net/freebies-license/
     -->
 
-    <div class="site-content">    
+    <div class="site-content">
       <div class="container">
-        <!-- Content --> 
+        <!-- Content -->
         <div class="main-content" style="margin-top: 88px;">
           {{ content }}
         </div>
-      </div>    
-      <!-- Before Footer --> 
+      </div>
+      <!-- Before Footer -->
       <div class="beforefooter">
         <div class="container">
           <div class="row justify-content-center">
@@ -166,19 +166,19 @@
                 {% include footer/footer-widget-col0.html %}
               </div>
             </div>
-            
+
             <div class="col-sm-3">
               <div class="footer-widget">
                 {% include footer/footer-widget-col1.html %}
               </div>
             </div>
-            
+
             <div class="col-sm-3">
               <div class="footer-widget">
                 {% include footer/footer-widget-col2.html %}
               </div>
             </div>
-            
+
             <div class="col-sm-3">
               <div class="footer-widget">
                 {% include footer/footer-widget-col3.html %}
@@ -191,7 +191,7 @@
               {% include footer/copyright-notice.html %}
             </p>
             <p class="float-lg-right">Powered by <a aria-label="theme credit"
-              href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="noopener noreferrer">AMP Affiliately Theme</a> | 
+              href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="noopener noreferrer">AMP Affiliately Theme</a> |
               {% include footer/footer-right-text.html %}
             </p>
             <div class="clearfix"></div>
@@ -201,7 +201,7 @@
       <!-- End Footer -->
     </div><!-- /.site-content -->
 
-    {% if site.google_analytics %}
+    {%- if site.google_analytics -%}
     <!-- Configure analytics to use gtag -->
     <amp-analytics type="gtag" data-credentials="include" style="width:1px;height:1px;">
       <script type="application/json">
@@ -228,7 +228,7 @@
         }
       </script>
     </amp-analytics>
-    {% endif %}
+    {%- endif -%}
 
     <amp-image-lightbox id="lightbox1" layout="nodisplay" data-close-button-aria-label="Close" hidden="hidden"></amp-image-lightbox>
     <amp-link-rewriter layout="nodisplay">
@@ -242,5 +242,5 @@
       </script>
     </amp-link-rewriter>
 
-  </body>    
+  </body>
 </html>

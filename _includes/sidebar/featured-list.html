@@ -1,41 +1,41 @@
 <!-- begin post -->
-{% assign author = site.authors[post.author] %}
+{%- assign author = site.authors[post.author] -%}
 
 <div class="card card-list">
-    <div class="row">
-        <div class="col-md-5 wrapthumbnail">
-            <a href="{{ post.url | relative_url }}">
-            <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
-                {% if post.image.path %}
-                    {% include picture.html img=post.image.path source="raw" width="112" height="150" layout="intrinsic" lightbox=false suffix="thumb." %}
-                {% else %}
-                    {% include picture.html img="write-2160925.svg" source="assets" width="112" height="150" layout="intrinsic" lightbox=false %}
-                {% endif %}
-            </div>
-            </a>
+  <div class="row">
+    <div class="col-md-5 wrapthumbnail">
+      <a href="{{ post.url | relative_url }}">
+        <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
+          {%- if post.image.path -%}
+          {%- include picture.html img=post.image.path source="raw" width="112" height="150" layout="intrinsic" lightbox=false suffix="thumb." -%}
+          {%- else -%}
+          {%- include picture.html img="write-2160925.svg" source="assets" width="112" height="150" layout="intrinsic" lightbox=false -%}
+          {%- endif -%}
         </div>
-        <div class="col-md-7 p-0">
-            <div class="card-block pt-3">
-                <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 68 }}</a></h2>
-                <div class="metafooter">
-                    <div class="wrapfooter">
-                        <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
-                        <div class="post-meta">
-                            <span class="post-date">{{ post.date | date_to_string }}</span>
-                            <ul class="tags">
-                                {% assign sortedCategories = post.categories | sort %}
-                                {% for category in sortedCategories %}
-                                <li>
-                                    <small><a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a></small>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </a>
     </div>
+    <div class="col-md-7 p-0">
+      <div class="card-block pt-3">
+        <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 68 }}</a></h2>
+        <div class="metafooter">
+          <div class="wrapfooter">
+            <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date_to_string }}</span>
+              <ul class="tags">
+                {%- assign sortedCategories = post.categories | sort -%}
+                {%- for category in sortedCategories -%}
+                <li>
+                  <small><a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a></small>
+                </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- end post -->

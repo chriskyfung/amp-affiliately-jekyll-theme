@@ -2,23 +2,23 @@
 layout: page-right-sidebar
 comments: false
 css:
-    badge: true
+badge: true
 ---
 
 <div class="tag-expo">
-    <ul class="tags">
-        {% assign sorted_cats = site.categories | sort %}
-        {% assign init_letter = "" %}
-        {% for cat in sorted_cats %}
-        {% assign first_letter = cat[0]| slice: 0 %} 
-        {% if init_letter != first_letter %}
-        {% assign init_letter = first_letter %} 
-        <h4>{{ init_letter }}</h4>
-        {% endif %}
-        <li>
-            <a href="{{ site.baseurl }}/category/{{ cat[0] | slugify }}/" class="post-tag">{{ cat[0] }}</a>
-            <span class="badge badge-pill badge-primary">{{ cat[1] | size }}</span>
-        </li>
-        {% endfor %}
-    </ul>
+  <ul class="tags">
+    {%- assign sorted_cats = site.categories | sort -%}
+    {%- assign init_letter = "" -%}
+    {%- for cat in sorted_cats -%}
+    {%- assign first_letter = cat[0]| slice: 0 -%}
+    {%- if init_letter != first_letter -%}
+    {%- assign init_letter = first_letter -%}
+    <h4>{{ init_letter }}</h4>
+    {%- endif -%}
+    <li>
+      <a href="{{ site.baseurl }}/category/{{ cat[0] | slugify }}/" class="post-tag">{{ cat[0] }}</a>
+      <span class="badge badge-pill badge-primary">{{ cat[1] | size }}</span>
+    </li>
+    {%- endfor -%}
+  </ul>
 </div>

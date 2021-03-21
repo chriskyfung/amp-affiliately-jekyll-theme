@@ -1,78 +1,78 @@
 <aside class="sidebar">
-        
-    {% if page.download %}
-        <div aria-label="download links" class="sidebar-section">
-            <h5><span>Resources</span></h5>
-            {% if site.github.repository_url %}
-            <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.repository_url }}" rel="noopener noreferrer">View on GitHub <i class='fab fa-github'></i></a>
-            {% endif %}
-            {% if page.download.url %}
-            <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ page.download.url }}" rel="noopener noreferrer">Download <i class='fas fa-cloud-download-alt'></i></a>
-            {% elsif site.github.latest_release %}
-            <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.latest_release.html_url }}" rel="noopener noreferrer">Latest Release</a>
-            <div style="display:flex;flex-wrap: wrap;justify-content: space-between;">
-                <div><i class='fas fa-tag'></i> {{ site.github.latest_release.tag_name }}</div>
-                <div><i class='fas fa-clock'></i> <time datetime="{{ site.github.latest_release.published_at }}">{{ site.github.latest_release.published_at | date: "%b %d, %Y" }}</time></div>
-                {% endif %}
-                {% if site.github.license %}
-                <div><i class='fas fa-balance-scale'></i> {{ site.github.license.spdx_id }} License</div>
-                {% endif %}
-            </div>
-        </div>
-    {% endif %}
 
-    {% unless site.sidebar.featured == false or page.url == "/blog/" or page.url contains "/blog/page" %}
-        <!-- Featured -->
-        <div aria-label="featured posts" class="sidebar-section">
-            <h5><span>Featured</span></h5>
-            
-            <section class="featured-posts">
+  {%- if page.download -%}
+  <div aria-label="download links" class="sidebar-section">
+    <h5><span>Resources</span></h5>
+    {%- if site.github.repository_url -%}
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.repository_url }}" rel="noopener noreferrer">View on GitHub <i class='fab fa-github'></i></a>
+    {%- endif -%}
+    {%- if page.download.url -%}
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ page.download.url }}" rel="noopener noreferrer">Download <i class='fas fa-cloud-download-alt'></i></a>
+    {%- elsif site.github.latest_release -%}
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.latest_release.html_url }}" rel="noopener noreferrer">Latest Release</a>
+    <div style="display:flex;flex-wrap: wrap;justify-content: space-between;">
+      <div><i class='fas fa-tag'></i> {{ site.github.latest_release.tag_name }}</div>
+      <div><i class='fas fa-clock'></i> <time datetime="{{ site.github.latest_release.published_at }}">{{ site.github.latest_release.published_at | date: "%b %d, %Y" }}</time></div>
+      {%- endif -%}
+      {%- if site.github.license -%}
+      <div><i class='fas fa-balance-scale'></i> {{ site.github.license.spdx_id }} License</div>
+      {%- endif -%}
+    </div>
+  </div>
+  {%- endif -%}
 
-                <div class="row listfeaturedtag">
+  {%- unless site.sidebar.featured == false or page.url == "/blog/" or page.url contains "/blog/page" -%}
+  <!-- Featured -->
+  <div aria-label="featured posts" class="sidebar-section">
+    <h5><span>Featured</span></h5>
 
-                {% for post in site.posts %}
+    <section class="featured-posts">
 
-                    {% if post.featured == true %}
+      <div class="row listfeaturedtag">
 
-                        {% include sidebar/featured-list.html %}
+        {%- for post in site.posts -%}
 
-                    {% endif %}
+        {%- if post.featured == true -%}
 
-                {% endfor %}
+        {%- include sidebar/featured-list.html -%}
 
-                </div>
+        {%- endif -%}
 
-            </section>
-        </div>
-    {% endunless %}
+        {%- endfor -%}
 
-    {% unless site.sidebar.recent_posts == false or page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
-        <!-- Recent Posts -->
-        <div aria-label="recent posts" class="sidebar-section">
-            <h5><span>Recent Posts</span></h5>
-            
-            <section class="recent-posts">
+      </div>
 
-                <div class="row listfeaturedtag">
+    </section>
+  </div>
+  {%- endunless -%}
 
-                {% for post in site.posts limit:4 %}
+  {% unless site.sidebar.recent_posts == false or page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
+  <!-- Recent Posts -->
+  <div aria-label="recent posts" class="sidebar-section">
+    <h5><span>Recent Posts</span></h5>
 
-                        {% include sidebar/featured-list.html %}
+    <section class="recent-posts">
 
-                {% endfor %}
+      <div class="row listfeaturedtag">
 
-                </div>
+        {%- for post in site.posts limit:4 -%}
 
-            </section>
-        </div>
-    {% endunless %}
+        {%- include sidebar/featured-list.html -%}
 
-    {% include sidebar/sidebar-widget0.html %}
-    
-    {% include sidebar/sidebar-widget1.html %}
+        {%- endfor -%}
 
-    {% include sidebar/sidebar-widget2.html %}
+      </div>
 
-    {% include sidebar/sidebar-widget3.html %}
-        
+    </section>
+  </div>
+  {%- endunless -%}
+
+  {%- include sidebar/sidebar-widget0.html -%}
+
+  {%- include sidebar/sidebar-widget1.html -%}
+
+  {%- include sidebar/sidebar-widget2.html -%}
+
+  {%- include sidebar/sidebar-widget3.html -%}
+
 </aside>
