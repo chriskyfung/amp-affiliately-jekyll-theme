@@ -227,6 +227,8 @@ css:
   syntax: true
 ```
 
+[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/03/20/code)
+
 #### 📌 Callout
 
 A shortcode for creating a colored box, e.g. tips/memo.
