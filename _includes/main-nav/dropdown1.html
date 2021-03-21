@@ -1,13 +1,11 @@
-{% assign dropdown_id = "dropdown1" %}
+{%- assign dropdown_id = "dropdown1" -%}
 
 <li class="nav-item dropdown" id="{{ dropdown_id }}">
-    <a class="nav-link dropdown-toggle" 
-        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Blog
-    </a>
-    <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">Blog</a>
+  <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
     <a class="dropdown-item" href="/blog/"><i class="far fa-newspaper mr-2"></i>All Stories</a>
     <a class="dropdown-item" href="/category/"><i class="far fa-list-alt mr-2"></i>Categories</a>
     <a class="dropdown-item" href="/tag/"><i class="fas fa-tag mr-2"></i>Tags</a>
-    </div>
+  </div>
 </li>
