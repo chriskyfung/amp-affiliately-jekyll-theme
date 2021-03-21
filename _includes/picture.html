@@ -1,49 +1,49 @@
-{% assign img = include.img %}
-{% assign layout = include.layout | default: "intrinsic" %}
+{%- assign img = include.img -%}
+{%- assign layout = include.layout | default: "intrinsic" -%}
 
-{% if include.source == "assets" %}
-    {% assign path = site.image_path.assets | default: "/assets/images/" %}
-{% elsif include.source == "projects" %}
-    {% assign path = site.image_path.projects | default: "/images/projects/" %}
-{% elsif include.source == "raw" %}
-    {% assign path = "" %}
-{% else %}
-    {% assign path = site.image_path.default | default: "/images/posts/" %}
-{% endif %}
+{%- if include.source == "assets" -%}
+{%- assign path = site.image_path.assets | default: "/assets/images/" -%}
+{%- elsif include.source == "projects" -%}
+{%- assign path = site.image_path.projects | default: "/images/projects/" -%}
+{%- elsif include.source == "raw" -%}
+{%- assign path = "" -%}
+{%- else -%}
+{%- assign path = site.image_path.default | default: "/images/posts/" -%}
+{%- endif -%}
 
-{% if include.lightbox == false %}
-    {% assign lightbox = "" %}
-{% else %}
-    {% assign lightbox = 'on="tap:lightbox1" role="button" tabindex="0"' %}
-{% endif %}
+{%- if include.lightbox == false -%}
+{%- assign lightbox = "" -%}
+{%- else -%}
+{%- assign lightbox = 'on="tap:lightbox1" role="button" tabindex="0" aria-modal="true"' -%}
+{%- endif -%}
 
-{% assign ext = img | split: "." | last %}
-{% assign name = img | remove: ext %}
-{% assign suffix = include.suffix %}
+{%- assign ext = img | split: "." | last -%}
+{%- assign name = img | remove: ext -%}
+{%- assign suffix = include.suffix -%}
 
-{% assign set_width = include.width | default: 730 %}
-{% assign set_height = include.height %}
+{%- assign set_width = include.width | default: 730 -%}
+{%- assign set_height = include.height -%}
 
-{% assign img_pathname = site.baseurl | append: path | append: name  %}
-{% assign img_alt = include.alt | { default: "Image in " | append: page.title } | escape_once %}
+{%- assign img_pathname = site.baseurl | append: path | append: name  -%}
+{%- assign img_alt = include.alt | { default: "Image in " | append: page.title } | escape_once -%}
 
 
-<figure {% if include.class %}class="{{ include.class }}"{% endif %}>
-    {% if include.link %}
-        <a href="{{ include.link }}">
-        {% assign lightbox = "" %}
-    {% endif %}
-    {% if ext == "svg" %}
-        <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}svg" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
-    {% else %}
-        <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}webp" alt="{{ img_alt }}" {{ lightbox }} >
-            <amp-img fallback width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}{{ ext }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
-        </amp-img>
-    {% endif %}
-    {% if include.link %}
-        </a>
-    {% endif %}
-    {% if include.caption %}
-        <figcaption>{{ include.caption }}</figcaption>
-    {% endif %}
+<figure {%- if include.class %}class="{{ include.class }}"{% endif -%}>
+  {%- if include.link -%}
+  <a href="{{ include.link }}">
+    {%- assign lightbox = "" -%}
+    {%- endif -%}
+    {%- if ext == "svg" -%}
+    <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}svg" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
+    {%- else -%}
+    <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}webp" alt="{{ img_alt }}" {{ lightbox }} >
+      <amp-img fallback width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}{{ ext }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
+    </amp-img>
+    {%- endif -%}
+    {%- if include.link -%}
+  </a>
+  {%- endif -%}
+  {%- if include.caption -%}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif -%}
 </figure>

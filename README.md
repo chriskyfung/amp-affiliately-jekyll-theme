@@ -144,8 +144,8 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 
    ```yaml
    sidebar:
-   featured: true
-   recent_posts: true
+      featured: true
+      recent_posts: true
    ```
 
    *Set `false` to disable the widgets as you need.*
@@ -181,7 +181,7 @@ Options:
   - `projects` - get image from the `/images/projects/` directory (, or the path configured as the `image_path.projects` in `_config.yml`)
   - `raw` - get image from the specified URL
 
-[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/02/25/media#image-in-amp)
+[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/#image-in-amp)
 
 #### 📹 YouTube Videos
 
@@ -212,7 +212,7 @@ To embed a playlist, you need to set both the _playlist ID_ and the _ID of first
 - **playlist** - _required_
 - **title** - _optional_
 
-[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/02/25/media#video)
+[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/)
 
 #### 💻 Codes
 
@@ -226,6 +226,8 @@ To include the stylesheet on-demand, you need to add the following to your post'
 css:
   syntax: true
 ```
+
+[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/03/20/code)
 
 #### 📌 Callout
 
