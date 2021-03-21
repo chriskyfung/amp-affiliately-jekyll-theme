@@ -14,7 +14,7 @@
 {%- if include.lightbox == false -%}
 {%- assign lightbox = "" -%}
 {%- else -%}
-{%- assign lightbox = 'on="tap:lightbox1" role="button" tabindex="0" aria-modal="true"' -%}
+{%- assign lightbox = 'on="tap:lightbox1" role="button" tabindex="0" aria-label="lightbox"' -%}
 {%- endif -%}
 
 {%- assign ext = img | split: "." | last -%}
