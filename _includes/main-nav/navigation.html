@@ -1,8 +1,13 @@
 <ul class="navbar-nav ml-auto">
 
-  {%- if site.repository -%}
+  {%- if site.repository and site.pages.size > 1 -%}
+    {%- if page.url == '/' -%}
+      {%- assign icon = '' -%}
+    {%- else -%}
+      {%- assign icon = ' <i class="fas fa-level-up-alt"></i>' -%}
+    {%- endif -%}
   <li class="nav-item">
-    <a class="nav-link" href="{{ site.baseurl }}/">{{ site.title | truncate: 20 }} <i class="fas fa-level-up-alt"></i></a>
+    <a class="nav-link" href="{{ site.baseurl }}/">{{ site.title | truncate: 30 }}{{ icon }}</a>
   </li>
   {%- endif -%}
 
