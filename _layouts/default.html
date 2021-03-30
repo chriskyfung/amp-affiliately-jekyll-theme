@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" crossorigin="anonymous">
 
     {%- if jekyll.environment == 'production' -%}
+      {%- assign adtest_status = '' -%}
+    {%- else -%}
+      {%- assign adtest_status = 'data-adtest="on"' -%}
     {%- endif -%}
     {%- if page.custom_head -%}
     {{ page.custom_head }}
@@ -75,7 +78,7 @@
       data-credentials="include" style="width:1px;height:1px;"></amp-analytics>
     {%- endif -%}
     {%- if site.adsense.client_id -%}
-    <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" data-full-width{% unless jekyll.environment == 'production' %} data-adtest="on"{% endunless %}>
+    <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" {{ adtest_status }} data-full-width>
       <div placeholder>Loading Ads...</div>
       <div fallback></div>
       <div overflow></div>
@@ -92,7 +95,9 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
-          <amp-img src="/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;"></amp-img>
+          <amp-img src="/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
+            <amp-img fallback src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
+          </amp-img>
         </a>
         <!-- Begin Menu -->
         <div class="collapse navbar-collapse" id="navbarsWow">

@@ -24,7 +24,7 @@
               <amp-img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" width="40" height="40" alt="{{ author.display_name }}"></amp-img>
             </span>
             <span class="author-meta">
-              <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a></span><br/>
+              <span class="post-name"><a href="{{ author.web }}" rel="noopener" target="_blank">{{ author.display_name }}</a></span><br/>
             </span>
             {%- endif -%}
             <span class="post-date">{{ post.date | date_to_string }}</span>

@@ -33,12 +33,16 @@
   <a href="{{ include.link }}">
     {%- assign lightbox = "" -%}
     {%- endif -%}
-    {%- if ext == "svg" -%}
-    <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}svg" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
+    {%- if include.source == "raw" and include.img contains "://" -%}
+      <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ include.img }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
     {%- else -%}
-    <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}webp" alt="{{ img_alt }}" {{ lightbox }} >
-      <amp-img fallback width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}{{ ext }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
-    </amp-img>
+      {%- if ext == "svg" -%}
+      <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}svg" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
+      {%- else -%}
+      <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}webp" alt="{{ img_alt }}" {{ lightbox }} >
+        <amp-img fallback width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ img_pathname }}{{ suffix }}{{ ext }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
+      </amp-img>
+      {%- endif -%}
     {%- endif -%}
     {%- if include.link -%}
   </a>
