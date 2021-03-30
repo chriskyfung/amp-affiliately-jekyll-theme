@@ -117,7 +117,7 @@ amp:
         <amp-img class="author-thumb" width="72" height="72" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}"></amp-img>
       </div>
       <div class="col-md-10">
-        <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.facebook }}" class="btn follow">Follow</a>
+        <a class="link-dark" href="{{ author.web }}" rel="noopener" target="_blank">{{ author.display_name }}</a><a href="{{ author.facebook }}" class="btn follow" rel="noopener" target="_blank">Follow</a>
         <span class="author-description">{{ author.description }}</span>
       </div>
     </div>
