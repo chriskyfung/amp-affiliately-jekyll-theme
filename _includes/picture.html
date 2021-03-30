@@ -5,6 +5,8 @@
 {%- assign path = site.image_path.assets | default: "/assets/images/" -%}
 {%- elsif include.source == "projects" -%}
 {%- assign path = site.image_path.projects | default: "/images/projects/" -%}
+{%- elsif include.source == "raw" -%}
+{%- assign path = "" -%}
 {%- else -%}
 {%- assign path = site.image_path.default | default: "/images/posts/" -%}
 {%- endif -%}
@@ -31,7 +33,7 @@
   <a href="{{ include.link }}">
     {%- assign lightbox = "" -%}
     {%- endif -%}
-    {%- if include.source == "raw" -%}
+    {%- if include.source == "raw" and include.img contains "://" -%}
       <amp-img width="{{ set_width }}" height="{{ set_height }}" layout="{{ layout }}" src="{{ include.img }}" alt="{{ img_alt }}" {{ lightbox }}></amp-img>
     {%- else -%}
       {%- if ext == "svg" -%}
