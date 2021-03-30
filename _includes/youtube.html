@@ -1,13 +1,13 @@
 {%- if include.playlist -%}
 <amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-listType="playlist" data-param-list="{{ include.playlist }}" data-param-rel="0">
   <div fallback>
-    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" target="_blank">Watch on YouTube</a></p>
+    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
 </amp-youtube>
 {%- else -%}
 <amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-rel="0">
   <div fallback>
-    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" target="_blank">Watch on YouTube</a></p>
+    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
 </amp-youtube>
 {%- endif -%}
