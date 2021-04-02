@@ -11,6 +11,8 @@
 layout: post
 title:  "Markdown Example"
 author: john
+category: sample
+tags: [markdown]
 image: 
     path: /assets/images/6.jpg
     height: 383
