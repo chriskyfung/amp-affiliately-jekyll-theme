@@ -27,6 +27,17 @@
   color: #fff;
   text-decoration: none
 }
+.footer amp-ad{max-width:1140px;margin:auto}
+.footer-bar {
+  padding-top: 1.5rem;
+  font-size: 0.9em
+}
+.footer-bar a {
+  color: #eee
+}
+.footer .textwidget a {
+  border-bottom: 1px dashed
+}
 .footer-widget {
   margin-bottom: 3rem;
   margin-top: 3rem;
@@ -43,17 +54,23 @@
   list-style: none;
   padding-left: 0
 }
-.footer-widget ul li {
+.footer-widget li {
   margin: 12px 0
 }
 .footer-widget .recent-posts img {
   float: left;
   margin-right: 10px
 }
-.footer .textwidget a {
-  border-bottom: 1px dashed
+.footer-widget-blob {
+  background: #e9e4ff;
+  border-radius: 60% 70% 500% 70%;
 }
-.footersocial i {
+.footer-widget-image-wrapper {
+  display: block;
+  margin: auto;
+  max-width: 350px
+}
+.footersocial .fab {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -66,16 +83,4 @@
   margin-left: 5px;
   color: #3c3838;
   margin-top: 10px
-}
-#footer-image {
-  background: #e9e4ff;
-  display: block;
-  border-radius: 60% 70% 500% 70%
-}
-.copyright {
-  padding-top: 1.5rem;
-  font-size: 0.9em
-}
-.copyright a {
-  color: #eee
 }
