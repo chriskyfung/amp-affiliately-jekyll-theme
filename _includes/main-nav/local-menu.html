@@ -1,0 +1,11 @@
+{%- assign dropdown_id = "local-dropdown" -%}
+
+<li class="nav-item dropdown" id="{{ dropdown_id }}">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false" role="button"><i class="fas fa-tags"></i></a>
+  <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
+    {%- for tag in site.tags -%}
+    <a class="dropdown-item" href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}/">{{ tag[0] }}</a>
+    {%- endfor -%}
+  </div>
+</li>
