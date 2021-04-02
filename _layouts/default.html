@@ -53,7 +53,17 @@
     <style amp-custom>
     {% include css/amp-bs4.css %}
     {% include css/amp-theme.css %}
+    {% include css/amp-navigation.css %}
+    {% include css/amp-invitation-codes.css %}
+    {%- if site.adsense.client_id -%}
+    {% include css/amp-ad-styles.css %}
+    {%- endif -%}
     {% include css/amp-custom.css %}
+    {% include css/amp-sidebar.css %}
+    {% include css/amp-tags.css %}
+    {% include css/amp-footer.css %}
+    {% include css/amp-bmc-button.css %}
+    {% include css/amp-responsive.css %}
     {%- if layout.css.badge == true or page.css.badge == true -%}
     {% include css/amp-bs4-badge.css %}
     {%- endif -%}
