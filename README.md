@@ -327,7 +327,6 @@ In the front matter, you can add your custom CSS styles to the end of the `<styl
 ```yaml
 css:
    custom: >
-      .ml-2 { margin-left: 2rem }
       table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
 ```
 
