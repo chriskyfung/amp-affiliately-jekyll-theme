@@ -8,16 +8,20 @@
     <link rel="preload" href="https://cdn.ampproject.org/v0.js" as="script">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
     <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    {%- endif -%}
+    {%- if site.adsense.client_id -%}
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    {%- endif -%}
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
-    {% if layout.amp.addthis or page.amp.addthis %}
+    {%- if layout.amp.addthis or page.amp.addthis -%}
     <script async custom-element="amp-addthis" src="https://cdn.ampproject.org/v0/amp-addthis-0.1.js"></script>
-    {% endif %}
+    {%- endif -%}
     {%- if layout.amp.iframe or page.amp.iframe or true -%}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {%- endif -%}
@@ -55,7 +59,7 @@
     {% include css/amp-theme.css %}
     {% include css/amp-navigation.css %}
     {% include css/amp-invitation-codes.css %}
-    {%- if site.adsense.client_id -%}
+    {%- if site.adsense.client_id and site.adstyle != false -%}
     {% include css/amp-ad-styles.css %}
     {%- endif -%}
     {% include css/amp-custom.css %}
@@ -87,7 +91,7 @@
     <amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm }}&gtm.url=SOURCE_URL"
       data-credentials="include" style="width:1px;height:1px;"></amp-analytics>
     {%- endif -%}
-    {%- if site.adsense.client_id -%}
+    {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
     <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" {{ adtest_status }} data-full-width>
       <div placeholder>Loading Ads...</div>
       <div fallback></div>
@@ -201,7 +205,7 @@
             </div>
           </div>
 
-          <div class="copyright">
+          <div class="footer-bar">
             <p class="float-lg-left" aria-label="copyright">
               {% include footer/copyright-notice.html %}
             </p>
