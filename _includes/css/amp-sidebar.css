@@ -44,9 +44,8 @@
 }
 .sidebar-section {
   margin-bottom: 2rem;
+  padding: 30px 10px 30px 20px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .14);
-  padding: 30px
 }
 .sidebar #mc_embed_signup form {
   padding: 0
