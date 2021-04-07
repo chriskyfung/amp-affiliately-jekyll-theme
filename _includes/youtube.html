@@ -13,7 +13,7 @@
 {%- endif -%}
 
 {%- if include.title -%}
-{% capture label %}{{include.title | jsonify }} | youtu.be/{{ include.id }}{% endcapture %}
+{% capture label %}{{ include.title | escape_once }} | youtu.be/{{ include.id }}{% endcapture %}
 {%- else -%}
 {% capture label %}youtu.be/{{ include.id }}{% endcapture %}
 {%- endif -%}
