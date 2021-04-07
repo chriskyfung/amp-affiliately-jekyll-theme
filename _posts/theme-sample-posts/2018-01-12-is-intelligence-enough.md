@@ -11,9 +11,12 @@
 layout: post
 title:  "Is Intelligence Enough"
 author: sal
+category: sample
 image: 
     path: /assets/images/5.jpg
     height: 383
+custom_head: >-
+  <meta name="robots" content="noindex">
 ---
 
 Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one's self is very difficult. 

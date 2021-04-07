@@ -15,6 +15,20 @@ timezone: 'Asia/Hong_Kong'
 # Set <USERNAME>/<PROJECT> to display the button to the project
 repository: chriskyfung/amp-affiliately-jekyll-theme
 
+# Navigation features
+nav:
+  global:
+    dropdown: false
+  local:
+    items:
+      - name: Guides
+        url: category/guide/
+      - name: Samples
+        url: category/sample/
+    menu: true
+    title:
+      limit: 25
+
 # Sidebar Features
 sidebar:
   featured: true
@@ -39,8 +53,10 @@ google_analytics: 'UA-72575541-9' # Google Analytics Tracking ID
 gtm: 'GTM-WQMQK3X' # Google Tag Manager ID
 
 # Google Ads
+adstyle: true
 adsense: 
   client_id: 'ca-pub-4819282024314540' # Google Adsense client ID
+  auto_ads: true
   ad_slot:
     before_content: 2454411055 # Ad Slot that places before content
     sidebar: 1391498756 # Ad Slot that places to sidebar
