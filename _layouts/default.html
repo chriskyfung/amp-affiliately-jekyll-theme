@@ -239,7 +239,7 @@
               "vars": {
                 "event_category": "External Link",
                 "event_name": "${eventLabel}",
-                "event_label": "{{ page.url }}",
+                "event_label": "{{ page.url | jsonify }}",
                 "method": "Google"
               }
             }
