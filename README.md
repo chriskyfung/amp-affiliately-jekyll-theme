@@ -1,16 +1,14 @@
-# AMP Affiliately Jekyll Theme
-
-![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg)
+# 🎨 AMP Affiliately Jekyll Theme
 
 **AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.
 
+![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-1f425f.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/chriskyfung/amp-affiliately-jekyll-theme) ![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg) [![Website
+ Monitoring](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fchriskyfung.github.io%2Famp-affiliately-jekyll-theme%2F)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
 ## Live Demo
 
-### [AMP Affiliately Jekyll Theme](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+[![AMP Affiliately Jekyll Theme](/Screenshots/amp-affiliately-theme.png "AMP Affiliately Jekyll Theme Preview")](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
 
-![AMP Affiliately Jekyll Theme](/Screenshots/amp-affiliately-theme.png "AMP Affiliately Jekyll Theme Preview")
-
-## Features
+## 🌈 Features
 
 - [AMP-ready](#what-is-amp)
 - Responsive
@@ -38,13 +36,13 @@
 
 * * *
 
-## What is AMP
+## What is AMP ⚡
 
 AMP stands for [Accelerated Mobile Pages](https://www.ampproject.org/), a Google-backed project designed as an open standard for any publisher to have pages load quickly on mobile devices.
 
 * * *
 
-## Installation
+## Installation 🧰
 
 There are different ways to install the theme -
 
@@ -79,7 +77,7 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 
 * * *
 
-## Configures
+## Configurations 🛠
 
 ### Enabling 3rd-party components
 
@@ -152,7 +150,8 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 
 * * *
 
-## Writing Posts
+## Writing Posts 📝
+
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
 
 You cannot use Markdown format or normal HTML tags. AMP provides its own custom tags for images, videos, etc...
@@ -373,7 +372,7 @@ If you have errors on your page, AMP will list those for you in the console. If 
 
 * * *
 
-## Contributing
+## 🤝 Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/chriskyfung/amp-affiliately-jekyll-theme/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
@@ -384,16 +383,17 @@ To submit a pull request -
 3. Create a new branch from the master branch.
 4. Open a pull request on Github describing what was fixed or added.
 
-## Like my stuff?
+## 💗 Support Me
 
 Would you like to buy me a coffee? I would really appreciate it if you could support me for the theme development.
 
 <a href="https://www.buymeacoffee.com/chrisfungky"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></a>
 
-## Thanks
+## 🙏 Thanks
 
 **AMP Affiliately** is developed based on MIT-licensed [Affiliates](https://github.com/wowthemesnet/affiliates-jekyll-theme) Jekyll theme designed by Sal, [WowThemes.net](https://www.wowthemes.net/).
 
-## License
+## ⚖ License
 
-This theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This theme is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT) under the same upstream license.
+
