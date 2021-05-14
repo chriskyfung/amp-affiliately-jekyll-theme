@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v1
+    - uses: actions/cache@v2
       with:
         path: vendor/bundle
         key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
@@ -18,8 +18,8 @@ jobs:
           ${{ runner.os }}-gems-
 
     # Standard usage
-    - uses:  helaili/jekyll-action@2.0.3
+    - uses:  helaili/jekyll-action@v2
       env:
-        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+        token: ${{ secrets.JEKYLL_PAT }}
       with:
         target_branch: 'gh-pages'
