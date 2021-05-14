@@ -19,7 +19,6 @@ jobs:
 
     # Standard usage
     - uses:  helaili/jekyll-action@v2
-      env:
-        token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
       with:
+        token: ${{ secrets.GH_PAGES_TOKEN }}
         target_branch: 'gh-pages'
