@@ -77,12 +77,12 @@ GEM
     mercenary (0.4.0)
     mini_portile2 (2.5.1)
     multipart-post (2.1.1)
-    nokogiri (1.11.3)
+    nokogiri (1.11.5)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.3-x64-mingw32)
+    nokogiri (1.11.5-x64-mingw32)
       racc (~> 1.4)
-    nokogiri (1.11.3-x86_64-linux)
+    nokogiri (1.11.5-x86_64-linux)
       racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
@@ -112,7 +112,6 @@ GEM
     tzinfo-data (1.2021.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.7.0)
-    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -132,7 +131,6 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-webp
   tzinfo-data
-  wdm (>= 0.1.0)
 
 RUBY VERSION
    ruby 2.6.6p146
