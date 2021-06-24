@@ -394,3 +394,31 @@ The <u>u element</u> example</p>
   layout="responsive"
   data-videoid="lBTCB7yLs8Y">
 </amp-youtube>
+
+### Callout
+
+A shortcode for creating a colored box, e.g. tips/memo.
+
+Example:
+
+{% capture callout1 %}
+  _PUT YOUR MARKDOWN CONTENT HERE..._
+
+  {% include picture.html source="assets" img="shiva.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
+
+  - item 1
+  - item 2
+  - item 3
+
+  1. first
+  2. second
+  3. thrid
+
+  > blockquote
+
+  ```js
+  Code block
+  ```
+{% endcapture %}
+
+{% include callout.html content=callout1 %}
