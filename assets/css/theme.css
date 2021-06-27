@@ -250,10 +250,10 @@ section.recent-posts {
 	text-overflow:ellipsis!important;
 	overflow:hidden!important;
 }
-span.post-name,span.post-date,span.author-meta {
+div.post-date,span.post-name,span.author-meta {
 	display:inline-block;
 }
-span.post-date,span.post-read {
+div.post-date,span.post-read {
 	color:rgba(0,0,0,.44);
     margin: 7px 0;
 }
