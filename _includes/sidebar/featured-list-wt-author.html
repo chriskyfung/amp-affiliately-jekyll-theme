@@ -27,7 +27,7 @@
               <span class="post-name"><a href="{{ author.web }}" rel="noopener" target="_blank">{{ author.display_name }}</a></span><br/>
             </span>
             {%- endif -%}
-            <span class="post-date">{{ post.date | date_to_string }}</span>
+            {% include blocks/post-date.html %}
             <div class="clearfix"></div>
           </div>
         </div>

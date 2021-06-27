@@ -1,0 +1,10 @@
+{% if post %}
+  {% assign this = post %}
+{% else %}
+  {% assign this = page %}
+{% endif %}  
+<span class="post-date"><time datetime="{{ this.date | date_to_xmlschema }}" itemprop="datePublished"  title="Published on">{{ this.date | date_to_string }}</time>
+  {%- if this.last_modified_at %} | 
+    <span class="fa-stack fa-xs" aria-label="Updated on"><i class='far fa-calendar-alt fa-stack-2x'></i><i class="fas fa-sync-alt fa-stack-1x" style="margin:.8em .8em"></i></span> <time datetime="{{ this.last_modified_at | date_to_xmlschema }}" itemprop="dateModified" title="Updated on">{{ this.last_modified_at | date_to_string }}</time>
+  {%- endif -%}
+</span>

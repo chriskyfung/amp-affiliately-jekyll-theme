@@ -236,7 +236,8 @@ span.post-name {
 }
 span.post-date,
 span.post-read {
-  color: rgba(0, 0, 0, .44)
+  color: rgba(0, 0, 0, .44);
+  margin: 7px 0
 }
 span.post-read-more a {
   color: rgba(0, 0, 0, .44);
