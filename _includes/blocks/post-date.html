@@ -4,12 +4,13 @@
 {%- else -%}
   {%- assign this = page -%}
 {%- endif -%}
+{%- unless post and this.last_modified_at -%}
+<span aria-label="Publish on"><i class="far fa-calendar-alt fa-lg"></i></span> 
+<time datetime="{{ this.date | date_to_xmlschema }}" itemprop="datePublished"  title="Published on">{{ this.date | date_to_string }}</time>
+{%- if this.last_modified_at %} | {% endif -%}
+{%- endunless -%}
 {%- if this.last_modified_at -%} 
-  {%- unless post -%}
-  <time datetime="{{ this.date | date_to_xmlschema }}" itemprop="datePublished"  title="Published on">{{ this.date | date_to_string }}</time> | 
-  {%- endunless -%}
-    <span class="fa-stack fa-xs" aria-label="Updated on"><i class='far fa-calendar-alt fa-stack-2x'></i><i class="fas fa-sync-alt fa-stack-1x" style="margin:.8em .8em"></i></span> <time datetime="{{ this.last_modified_at | date_to_xmlschema }}" itemprop="dateModified" title="Updated on">{{ this.last_modified_at | date_to_string }}</time>
-{%- else -%}
-  <time datetime="{{ this.date | date_to_xmlschema }}" itemprop="datePublished"  title="Published on">{{ this.date | date_to_string }}</time>
+    <span aria-label="Updated on"><i class="far fa-calendar-alt fa-lg"></i><i class="fas fa-sync-alt fa-xs" style="color:#0293d8;margin-left:-.5em;vertical-align:bottom"></i></span>
+    <time datetime="{{ this.last_modified_at | date_to_xmlschema }}" itemprop="dateModified" title="Updated on">{{ this.last_modified_at | date_to_string }}</time>
 {%- endif -%}
 </div>
