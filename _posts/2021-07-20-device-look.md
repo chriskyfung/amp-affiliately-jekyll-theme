@@ -7,7 +7,7 @@ tags: [responsive design, devices]
 permalink: /device-look/
 image: 
    path: /assets/images/responsive-1622825_730.png
-excerpt: 
+excerpt: Preview the look for different devices (smartphone 📱, tablet 💻 and laptop 🖥️)
 css:
    custom: >-
       .device-wrapper {
@@ -149,6 +149,8 @@ css:
 
 featured: true
 ---
+
+Preview the look of the responsive design for different devices (smartphone <i class="fas fa-mobile-alt"></i> , tablet <i class="fas fa-tablet-alt"></i> and laptop <i class="fas fa-laptop"></i>)
 
 <div style="display:flex;flex-wrap:wrap;">
 

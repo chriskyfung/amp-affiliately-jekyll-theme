@@ -16,7 +16,7 @@ image:
     path: /assets/images/5.jpg
     height: 383
 custom_head: >-
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex, nofollow">
 ---
 
 Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one's self is very difficult. 

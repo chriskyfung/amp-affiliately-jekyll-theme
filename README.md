@@ -4,9 +4,14 @@
 
 ![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-1f425f.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/chriskyfung/amp-affiliately-jekyll-theme) [![CodeQL](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/codeql-analysis.yml) ![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg) [![Website
  Monitoring](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fchriskyfung.github.io%2Famp-affiliately-jekyll-theme%2F)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
-## Live Demo
+## 👀 Live Demo
 
 [![AMP Affiliately Jekyll Theme](/Screenshots/amp-affiliately-theme.png "AMP Affiliately Jekyll Theme Preview")](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+
+- [💻 📱 Preview the look of the responsive design for smartphone, tablet  and laptop](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/device-look/)
+- [📷🔉 Preview media blocks (for images, videos and audios) in AMP](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/)
+- [🖥️⌨ Preview code blocks and snippet highlighting](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/)
+- [📝⌨ Preview avaliable Markdown styles](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide)
 
 ## 🌈 Features
 
@@ -180,7 +185,7 @@ Options:
   - `projects` - get image from the `/images/projects/` directory (, or the path configured as the `image_path.projects` in `_config.yml`)
   - `raw` - get image from the specified URL
 
-[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/#image-in-amp)
+[DEMOS - Image in AMP](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/#image-in-amp)
 
 #### 📹 YouTube Videos
 
@@ -211,7 +216,7 @@ To embed a playlist, you need to set both the _playlist ID_ and the _ID of first
 - **playlist** - _required_
 - **title** - _optional_
 
-[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/)
+[DEMOS - YouTube Embeds](https://chriskyfung.github.io/amp-affiliately-jekyll-theme//media/#video)
 
 #### 💻 Codes
 
@@ -226,7 +231,7 @@ css:
   syntax: true
 ```
 
-[DEMOS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/amp-affiliately-jekyll-theme/2021/03/20/code)
+[DEMOS - Code Block](https://chriskyfung.github.io/amp-affiliately-jekyll-theme//code)
 
 #### 📌 Callout
 
@@ -259,7 +264,7 @@ image:
 2. Rename the copies to have a filename like `<filename>.thumb.<ext>`, _e.g._ `cover-image.thumb.png`.
 3. Rescale it to a height of **150px**.
 
-By default, the thumbnail of featured images is cropped at the center inside the cards of the Featured Boxes/Lists. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
+By default, the thumbnail of featured images is cropped at the center inside the cards of the list/grid of Featured Posts. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
 
 ```yaml
 image:
@@ -298,7 +303,9 @@ image:
    class: shadow-none
 ```
 
-#### Pin to Featured Boxes/Lists
+#### Pin Featured Posts
+
+You can pin a post to the list/grid of Featured Posts in the theme by the following front matter:
 
 ```yaml
 featured: true
@@ -310,7 +317,7 @@ featured: true
 last_modified_at: 2020-06-20 23:36 +0000`
 ```
 
-#### Add Custom Codes to HTML Head to a Page/Post
+#### Add Custom Codes to HTML <head> Section of a Page/Post
 
 In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
 
@@ -319,7 +326,7 @@ custom_head: >-
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 ```
 
-#### Add Custom CSS Styles to Header to a Page/Post
+#### Add Custom CSS Styles to HTML <head> Section of a Page/Post
 
 In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
 
@@ -329,7 +336,7 @@ css:
       table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
 ```
 
-#### Display Download Buttons in a Post's sidebar
+#### Display Download Buttons in a Post's Sidebar
 
 When you use this theme for the Github Pages of a Github project repository, it is available to show a download button or links to the repository in the sidebar of a Post.
 
