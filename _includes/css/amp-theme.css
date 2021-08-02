@@ -229,14 +229,15 @@ section.recent-posts {
   text-overflow: ellipsis;
   overflow: hidden
 }
+div.post-date,
 span.author-meta,
-span.post-date,
 span.post-name {
   display: inline-block
 }
-span.post-date,
+div.post-date,
 span.post-read {
-  color: rgba(0, 0, 0, .44)
+  color: rgba(0, 0, 0, .44);
+  margin: 7px 0
 }
 span.post-read-more a {
   color: rgba(0, 0, 0, .44);

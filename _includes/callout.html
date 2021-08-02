@@ -1,3 +1,5 @@
-<div style="padding: 1rem; background-color: {{ include.color | default: '#ede89a' }}; box-shadow: 0 2px 4px;">
-  {{ include.content | markdownify }}
+{%- assign markdown = include.content | markdownify -%}
+{%- assign bgcolor = include.color | default: '#ede89a' -%}
+<div class="callout" style="margin-bottom: 24px; padding: 16px 16px 8px; background-color: {{ bgcolor }}; box-shadow: 0 2px 4px;">
+  {{ markdown }}
 </div>

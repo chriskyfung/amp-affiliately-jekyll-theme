@@ -46,7 +46,7 @@
             </ul>
           </div>
           <!-- End Tags -->
-          <span class="post-date">{{ post.date | date_to_string }}</span>
+          {% include blocks/post-date.html %}
           <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
           {% if page.url == "/blog/" or page.url contains "/blog/page"%}
           <div class="post-meta">

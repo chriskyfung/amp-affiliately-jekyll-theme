@@ -22,7 +22,7 @@
             <div class="wrapfooter">
               <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
               <div class="post-meta">
-                <span class="post-date">{{ post.date | date_to_string }}</span>
+                {% include blocks/post-date.html %}
                 <ul class="tags">
                   {%- assign sortedCategories = post.categories | sort -%}
                   {%- for category in sortedCategories -%}

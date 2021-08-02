@@ -26,7 +26,9 @@
     height: calc(100% - 15px)
   }
   .listfeaturedtag .wrapfooter {
-    width: calc(100% - 65px)
+    right: 0;
+    left: 0;
+    margin: auto;
   }
   .listfeaturedtag .card-block {
     padding: 20px 20px 50px
