@@ -1,14 +1,20 @@
 # AMP Affiliately Jekyll Theme
 
-![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg)
-
 **AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.
 
-## Live Demo
+![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-1f425f.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/chriskyfung/amp-affiliately-jekyll-theme) [![CodeQL](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/codeql-analysis.yml) ![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg) [![Website
+ Monitoring](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fchriskyfung.github.io%2Famp-affiliately-jekyll-theme%2F)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
 
-### [AMP Affiliately Jekyll Theme](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+## 👀 Live Demo
 
-![AMP Affiliately Jekyll Theme](/Screenshots/amp-affiliately-theme.png "AMP Affiliately Jekyll Theme Preview")
+[![AMP Affiliately Jekyll Theme](/Screenshots/amp-affiliately-theme.png "AMP Affiliately Jekyll Theme Preview")](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+
+[ [Demo Site 🌐](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/) ]
+
+- [💻 📱 Preview the look of the responsive design for smartphone, tablet, and laptop](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/device-look/)
+- [📷🔉 Preview media blocks (for images, videos and audios) in AMP](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/)
+- [🖥️⌨ Preview code blocks and snippet highlighting](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/)
+- [📝⌨ Preview available Markdown styles](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide)
 
 ## Features
 
@@ -53,14 +59,14 @@ There are different ways to install the theme -
 1. Fork this repository and clone the forked repository.
 2. Update the `_config.yml` file as per your requirements.
 3. Add your posts to the `_posts` directory.
-4. Deploy to your own server or Github Pages (read **Deploying to GitHub Pages with GitHub Actions** ).
+4. Deploy to your server or Github Pages (read **Deploying to GitHub Pages with GitHub Actions** ).
 
 ### 2. Set up as a remote theme and updating settings
 
 1. Add `gem "jekyll-remote-theme"` to your Gemfile to add the theme as a dependency.
 2. run `bundle install` to install the plugin.
 3. Add the following to your site's _config.yml file to activate the plugin
-   
+
    ```yaml
    plugins:
       - jekyll-remote-theme
@@ -71,7 +77,7 @@ There are different ways to install the theme -
 
 **Note**: You must update the `jekyll-remote-theme` plugin to `v0.4.2` or higher if you use **Jekyll 4.0+**.
 
-You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., chriskyfung/amp-affiliately-jekyll-theme@v1.2.8). If you don't specify a Git ref, the master branch will be used.
+You may also optionally specify a branch, tag, or commit to using by appending an @ and the Git ref (e.g., chriskyfung/amp-affiliately-jekyll-theme@v1.2.8). If you don't specify a Git ref, the master branch will be used.
 
 ### Deploying to GitHub Pages with GitHub Actions
 
@@ -100,13 +106,15 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 - Set up your _gcse ID_ in `_config.yml`.
 
 #### Disqus Comments in AMP
-1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) and deploy it to another domain or subdoamin.
+
+1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) and deploy it to another domain or subdomain.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
 3. Use `amp_disqus_height` to configure the height of \<amp-iframe\> if needed (default is `140`).
 
 ### Enabling Pagination for Blog Posts
+
 1. Make a new folder named `blog` in your _root_ directory.
-2. Create an empty HTML file in the new folder and name it to `index.html`.
+2. Create an empty HTML file in the new folder and name it `index.html`.
 3. Copy the following front matter to the HTML file:
 
    ```yaml
@@ -116,6 +124,7 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
    ```
 
 ### Enabling Lists of Categories and Tags
+
 1. In your root directory, create a folder named `category` and `tag`, respectively.
 2. New a file and name it to `index.html` in your `category` and/or `tag` folder(s).
 3. Copy the following front matters to the corresponding `index.html`:
@@ -153,6 +162,7 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 * * *
 
 ## Writing Posts
+
 You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
 
 You cannot use Markdown format or normal HTML tags. AMP provides its own custom tags for images, videos, etc...
@@ -169,6 +179,7 @@ The template also wraps the image with a `<figure>` tag with an optional caption
 ```
 
 Options:
+
 - **alt**
 - **caption** (_support HTML codes_)
 - **class** (_e.g._ `text-center`)
@@ -185,7 +196,7 @@ Options:
 
 #### 📹 YouTube Videos
 
-You need to include the following front matter variable to enable YouTube embeds.
+You need to include the following front-matter variable to enable YouTube embeds.
 
 ```yaml
 amp:
@@ -201,7 +212,7 @@ To embed a single video, use the following tag to include the `youtube.html` tem
 - **id** - _required_
 - **title** - _optional_
 
-To embed a playlist, you need to set both the _playlist ID_ and the _ID of first video within the playlist_.
+To embed a playlist, you need to set both the _playlist ID_ and the _ID of the first video within the playlist_.
 
 ```liquid
 {% include youtube.html id="<YOUTUBE_VIDEO_UID>" \
@@ -348,7 +359,7 @@ download: true
 
 If a release exists in the repository, an additional button that links to the latest release will be shown.
 
-**Note**: Authentication is required to get your repository data in order to show the release button. Please follow the docs of [jekyll
+**Note**: Authentication is required to get your repository data to show the release button. Please follow the docs of [jekyll
 /github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) to set up your personal access token.
 
 You can also override the latest release button by defining a URL under the `download` variable, _e.g._:
@@ -361,13 +372,15 @@ downlod:
 * * *
 
 ### Using AMP Components
+
 Some AMP components require you to specify external scripts before using them.
 You can specify these scripts in the head.html file in the includes directory after the already imported scripts and then use these components in any post.
 
 [See Full AMP Documentation.](https://www.ampproject.org/docs/)
 
 ## Validating your page with AMP
-AMP provides a built-in validator to validate your pages. You can access this validator by opening the Developer Console in your browser and apending `#development=1` to the end of any URL of your site, e.g. [`http://localhost:4000/#development=1`](http://localhost:4000/#development=1).
+
+AMP provides a built-in validator to validate your pages. You can access this validator by opening the Developer Console in your browser and appending `#development=1` to the end of any URL of your site, e.g. [`http://localhost:4000/#development=1`](http://localhost:4000/#development=1).
 
 If you have errors on your page, AMP will list those for you in the console. If no errors are on your page, you'll get a message "AMP Validation Successful" on the DevTools console.
 
@@ -375,7 +388,7 @@ If you have errors on your page, AMP will list those for you in the console. If 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/chriskyfung/amp-affiliately-jekyll-theme/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/chriskyfung/amp-affiliately-jekyll-theme/>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 To submit a pull request -
 

@@ -8,7 +8,6 @@ tags: [Adsense]
 permalink: /ads-settings/
 image:
   path: /assets/images/web-5771064_730.png
-  class: shadow-none
 css:
   syntax: true
   custom: >-
@@ -26,7 +25,7 @@ css:
 excerpt: "Ads Styles and Configuration"
 ---
 
-This theme supports Ads display with Google Adsense using `<amp-ad>` and `<amp-auto-ads>` components.
+This theme supports Ad display with Google Adsense using `<amp-ad>` and `<amp-auto-ads>` components.
 
 You have to set up your _Adsense client ID_ in `_config.yml` as below.
 
@@ -83,11 +82,11 @@ adsense:
 
 ## Ad Background
 
-Basically, Adsense Term of Service (TOS) disalllows publishers to modify Ads appearance with CSS.
-But it leaves blank spaces on the webpage sometimes, when it cannot suggest any Ads that match wtih the page content.
-This is higly undesirable, because it will give very bad user experience.
+In general, Adsense Term of Service (TOS) disallows publishers to modify Ads appearance with CSS.
+But it leaves blank spaces on the webpage sometimes, when it cannot suggest any Ads that match with the page content.
+This is highly undesirable because it will give a very bad user experience.
 
-To make a little nicer, a small icon is set as the background image of each `<amp-ad>` element as shown below.
+To make it a little nicer, a small icon is set as the background image of each `<amp-ad>` element as shown below.
 
 {% include picture.html img="ad-placement-background-image.png" width="751" height="285" source="assets" alt="Icon displays at the Ad placement" %}
 
@@ -102,7 +101,7 @@ amp-ad {
 }
 ```
 
-When an Ad unit is successfully loaded and rendered, the entire icon will be covered and will not affect to the Ad appearance.
+When an Ad unit is successfully loaded and rendered, the entire icon will be covered and will not affect the Ad appearance.
 
 If you still worry about violating the Adsense Policy, you can exclude the CSS styles by setting the following in the `_config.yml` file.
 
