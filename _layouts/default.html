@@ -38,7 +38,7 @@
     <script async custom-element="amp-autocomplete" src="https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"></script>
     <script async custom-element="amp-link-rewriter" src="https://cdn.ampproject.org/v0/amp-link-rewriter-0.1.js"></script>
 
-    <link rel="shortcut icon" href="{{ site.baseurl }}/{{ site.favicon }}">
+    <link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
@@ -109,7 +109,7 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
-          <amp-img src="/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
+          <amp-img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
             <amp-img fallback src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
           </amp-img>
         </a>
