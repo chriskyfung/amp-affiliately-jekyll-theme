@@ -59,7 +59,9 @@
 }
 .fixed-top:focus-visible,
 .fixed-top:hover {
-  overflow: visible
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible
 }
 #toggle-search {
   margin-left: 15px;
