@@ -55,24 +55,25 @@
     {%- endif -%}
 
     <style amp-custom>
-    {% include css/amp-bs4.css %}
-    {% include css/amp-theme.css %}
-    {% include css/amp-navigation.css %}
-    {% include css/amp-invitation-codes.css %}
+    {% include css/amp-bs4.min.css %}
+    {% include css/amp-theme.min.css %}
+    {% include css/amp-navigation.min.css %}
+    {% include css/amp-invitation-codes.min.css %}
     {%- if site.adsense.client_id and site.adstyle != false -%}
-    {% include css/amp-ad-styles.css %}
+    {% include css/amp-ad-styles.min.css %}
     {%- endif -%}
-    {% include css/amp-custom.css %}
-    {% include css/amp-sidebar.css %}
-    {% include css/amp-tags.css %}
-    {% include css/amp-footer.css %}
-    {% include css/amp-bmc-button.css %}
-    {% include css/amp-responsive.css %}
+    {% include css/amp-custom.min.css %}
+    {% include css/amp-toc.min.css %}
+    {% include css/amp-sidebar.min.css %}
+    {% include css/amp-tags.min.css %}
+    {% include css/amp-footer.min.css %}
+    {% include css/amp-bmc-button.min.css %}
+    {% include css/amp-responsive.min.css %}
     {%- if layout.css.badge == true or page.css.badge == true -%}
-    {% include css/amp-bs4-badge.css %}
+    {% include css/amp-bs4-badge.min.css %}
     {%- endif -%}
     {%- if layout.css.syntax == true or page.css.syntax == true -%}
-    {% include css/amp-syntax-highlight.css %}
+    {% include css/amp-syntax-highlight.min.css %}
     {%- endif %}
     {%- if layout.css.custom -%}
     {{ layout.css.custom }}

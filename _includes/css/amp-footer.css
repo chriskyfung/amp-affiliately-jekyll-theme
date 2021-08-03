@@ -13,7 +13,7 @@
   margin-bottom: 1rem
 }
 .footer {
-  border-top: 1px solid rgba(0, 0, 0, .05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   color: #999;
   margin-top: 50px;
   margin-bottom: 0;
@@ -27,7 +27,10 @@
   color: #fff;
   text-decoration: none
 }
-.footer amp-ad{max-width:1140px;margin:auto}
+.footer amp-ad {
+  max-width: 1140px;
+  margin: auto
+}
 .footer-bar {
   padding-top: 1.5rem;
   font-size: 0.9em
@@ -78,7 +81,7 @@
   display: inline-block;
   background: #fff;
   border-radius: 3px;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   font-size: 18px;
   margin-left: 5px;
   color: #3c3838;
