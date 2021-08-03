@@ -1,0 +1,7 @@
+.screen-reader-only {
+  position: absolute;
+  left: -5000px;
+}
+.screen-reader-only:focus {
+  left: 0;
+}
