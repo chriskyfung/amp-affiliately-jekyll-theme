@@ -12,7 +12,7 @@
     {%- assign sorted_tags = site.tags | sort -%}
     {%- for tag in sorted_tags -%}
     <div>
-      <a class="dropdown-item" href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}/" [hidden]="'{{ tag[0] }}'.indexOf(dropdownfilter)==-1">{{ tag[0] }}</a>
+      <a class="dropdown-item" href="{{ tag[0] | slugify | prepend: "tag/" | relative_url }}/" [hidden]="'{{ tag[0] }}'.indexOf(dropdownfilter)==-1">{{ tag[0] }}</a>
     </div>
     {%- endfor -%}
   </div>

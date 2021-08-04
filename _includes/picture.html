@@ -24,7 +24,7 @@
 {%- assign set_width = include.width | default: 730 -%}
 {%- assign set_height = include.height -%}
 
-{%- assign img_pathname = site.baseurl | append: path | append: name  -%}
+{%- assign img_pathname = path | append: name | relative_url -%}
 {%- assign img_alt = include.alt | { default: "Image in " | append: page.title } | escape_once -%}
 
 

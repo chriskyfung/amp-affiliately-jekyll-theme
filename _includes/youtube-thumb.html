@@ -1,7 +1,7 @@
 <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">
   <figure>
-    <amp-img width="246" height="138" layout="intrinsic" src="{{ site.baseurl }}/assets/images/{{ include.id }}.webp" alt="{{ include.title }}" style="border:1px solid #eee">
-      <amp-img fallback width="246" height="138" layout="intrinsic" src="{{ site.baseurl }}/assets/images/{{ include.id }}.jpg"></amp-img>
+    <amp-img width="246" height="138" layout="intrinsic" src="{{ include.id | prepend: "assets/images/" | relative_url }}.webp" alt="{{ include.title }}" style="border:1px solid #eee">
+      <amp-img fallback width="246" height="138" layout="intrinsic" src="{{ include.id | prepend: "assets/images/" | relative_url }}.jpg"></amp-img>
     </amp-img>
     <figcaption><strong>{{ include.title }}</strong></figcaption>
   </figure>

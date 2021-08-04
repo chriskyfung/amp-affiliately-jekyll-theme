@@ -8,18 +8,17 @@
   {%- endif -%}
   {%- assign maxLength = site.nav.local.title.limit | default: 30 -%}
   <li class="nav-item">
-    <a class="nav-link" href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title | truncate: maxLength }}{{ icon }}</a>
+    <a class="nav-link" href="{{ "/" | relative_url }}" title="{{ site.title }}">{{ site.title | truncate: maxLength }}{{ icon }}</a>
   </li>
   {%- for item in site.nav.local.items -%}
   <li class="nav-item">
-    <a class="nav-link" href="{{ site.baseurl }}/{{ item.url }}">{{ item.name }}</a>
+    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
   </li>
   {%- endfor -%}
   {%- if site.nav.local.menu -%}
   {% include main-nav/local-menu.html %}
   {%- endif -%}
   {%- endif -%}
-
 
   {%- unless site.nav.global.home == false %}
   <li class="nav-item">
@@ -31,7 +30,6 @@
   {% include main-nav/global-dropdown.html %}
   {%- endunless -%}
 
-  
   {%- unless site.repository -%}  
   <li class="nav-item">
     <a class="nav-link" href="/category/cloud/">Cloud</a>
@@ -45,6 +43,8 @@
 
   <li class="nav-item">
     <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"
-      data-toggle="modal" data-target="#searchbar" role="search" accesskey="/"><i class="fas fa-search"></i></button>
+      data-toggle="modal" data-target="#searchbar" role="search" accesskey="/">
+      <i class="fas fa-search"></i>
+    </button>
   </li>
 </ul>

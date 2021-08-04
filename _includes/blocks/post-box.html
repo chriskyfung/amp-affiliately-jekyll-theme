@@ -28,7 +28,6 @@
       License: https://www.wowthemes.net/freebies-license/
     -->
 
-
     <div class="card-block">
       <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
       <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</h4>
@@ -40,7 +39,7 @@
               {%- assign sortedTags = post.tags | sort -%}
               {%- for tag in sortedTags -%}
               <li>
-                <small><a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/">{{ tag }}</a></small>
+                <small><a href="{{ tag | slugify | prepend: "tag/" | relative_url }}/">{{ tag }}</a></small>
               </li>
               {%- endfor -%}
             </ul>
@@ -54,7 +53,7 @@
               {%- assign sortedCategories = post.categories | sort -%}
               {%- for category in sortedCategories -%}
               <li>
-                <small><a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a></small>
+                <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
               </li>
               {%- endfor -%}
             </ul>

@@ -26,7 +26,7 @@
                 {%- assign sortedCategories = post.categories | sort -%}
                 {%- for category in sortedCategories -%}
                 <li>
-                  <small><a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a></small>
+                  <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
                 </li>
                 {%- endfor -%}
               </ul>

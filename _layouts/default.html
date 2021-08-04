@@ -38,7 +38,7 @@
     <script async custom-element="amp-autocomplete" src="https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"></script>
     <script async custom-element="amp-link-rewriter" src="https://cdn.ampproject.org/v0/amp-link-rewriter-0.1.js"></script>
 
-    <link rel="icon" href="{{ site.baseurl }}/{{ site.favicon }}">
+    <link rel="icon" href="{{ site.favicon | relative_url }}">
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
@@ -110,8 +110,8 @@
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
-          <amp-img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
-            <amp-img fallback src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
+          <amp-img src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
+            <amp-img fallback src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
           </amp-img>
         </a>
         <!-- Begin Menu -->
@@ -131,7 +131,7 @@
           </div>
           <div class="modal-body">
             <div class="search_form">
-              <form method="GET" action="{{ site.baseurl }}/search" target="_top">
+              <form method="GET" action="{{ "search" | relative_url }}" target="_top">
                 <amp-autocomplete class="searchbox" filter="substring" src="/assets/data/suggestions.json">
                   <input class="form-control" name="q" type="search" placeholder="Search" required />
                 </amp-autocomplete>
