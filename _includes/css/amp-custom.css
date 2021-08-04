@@ -18,6 +18,17 @@ amp-lightbox {
   border-bottom: 1px solid #ddd;
   text-decoration: inherit
 }
+.article-post .anchor-link {
+  box-shadow: none;
+  color: #bf8f22;
+  margin-left: -1.5rem;
+  padding-right: .5rem;
+  vertical-align: super;
+}
+.article-post .anchor-link:hover {
+  box-shadow: none;
+  color: #ffb100;
+}
 .article-post .box-highlight {
   box-shadow: 1px 2px 15px #675bff
 }
