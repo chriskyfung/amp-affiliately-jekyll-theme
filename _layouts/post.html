@@ -74,7 +74,25 @@ amp:
 
     <!-- Post Content -->
     <div class="article-post">
-      {{ content }}
+      {%- assign splited_by_a = content | split: '<a ' -%}
+      {%- assign modified_content = splited_by_a | first -%}
+      {% for splited_a_part in splited_by_a offset:1 %}
+        {%- assign a_splits = splited_a_part | split: '</a>' -%}
+        {%- assign a_tag = a_splits | first | split: '>' -%}
+        {%- assign a_attrs = a_tag | first -%}
+        {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
+          {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
+            {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
+            {%- assign modified_content = modified_content | append: '<a class="external" data-vars-event-label="' | append: a_href | append: '" ' | append: a_attrs | append: ' rel="noopener noreferrer" target="_blank">' | append: a_tag[1] | append: '</a>' | append: a_splits[1] -%}
+          {%- else -%}
+            {%- assign modified_content = modified_content | append: '<a ' | append: splited_a_part -%}
+          {%- endunless -%}    
+        {%- else -%}
+          {%- assign modified_content = modified_content | append: '<a ' | append: splited_a_part -%}
+        {%- endif -%}
+      {% endfor %}
+
+      {{ modified_content }}
       <div class="clearfix"></div>
     </div>
 
