@@ -21,6 +21,10 @@ a.vglnk {
   border-bottom: 2px dashed gray;
   box-shadow: unset
 }
+figure.shadow-none *,
+.shadow-none {
+  box-shadow: none;
+}
 h1 {
   font-size: 2.5rem
 }
@@ -82,9 +86,9 @@ h6 {
 .card .row {
   height: 100%
 }
-.shadow-none,
-figure.shadow-none * {
-  box-shadow: none;
+.container {
+  width: 96%;
+  max-width: 100%
 }
 .listfeaturedtag .card .thumbnail img {
   width: 500px;
@@ -92,7 +96,6 @@ figure.shadow-none * {
   object-fit: cover
 }
 .listfeaturedtag .card-list {
-  height: auto;
   width: 100%
 }
 .listfeaturedtag .card-list .thumbnail img {

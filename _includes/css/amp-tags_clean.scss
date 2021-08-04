@@ -1,0 +1,46 @@
+$darkslategray_333: #333333;
+$yellow_fff100: #fff100;
+
+.tags {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1.5rem;
+
+  li {
+    display: inline-block;
+    font-size: .9rem;
+
+    a {
+      background: $yellow_fff100;
+      color: $darkslategray_333;
+      padding: 3px 10px;
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: .93em;
+      text-transform: capitalize;
+      text-decoration: none;
+      box-shadow: 0 6px 10px 0 rgba(168, 168, 168, .1);
+
+      &:hover {
+        background: rgba(0, 0, 0, .07);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.rounded-tags {
+    li {
+      a {
+        background: transparent;
+        border: 1px solid;
+        border-radius: 20px;
+      }
+    }
+
+    code {
+      a {
+        box-shadow: inherit;
+      }
+    }
+  }
+}

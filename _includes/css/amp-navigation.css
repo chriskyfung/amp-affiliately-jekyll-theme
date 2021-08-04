@@ -64,8 +64,8 @@
   overflow-y: visible
 }
 #toggle-search {
-  margin-left: 15px;
-  margin-top: inherit
+  margin-left: inherit;
+  margin-top: 15px
 }
 .searchbox {
   display: inline;

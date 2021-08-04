@@ -1,0 +1,141 @@
+$darkslateblue_025aa5: #025aa5;
+$darkslategray_4b5257: #4b5257;
+$deepskyblue_31b0d5: #31b0d5;
+$dimgray_636c72: #636c72;
+$dodgerblue_0275d8: #0275d8;
+$firebrick_c9302c: #c9302c;
+$forestgreen_449d44: #449d44;
+$indianred_d9534f: #d9534f;
+$mediumseagreen_5cb85c: #5cb85c;
+$orange_ec971f: #ec971f;
+$sandybrown_f0ad4e: #f0ad4e;
+$skyblue_5bc0de: #5bc0de;
+$white_fff: #ffffff;
+
+.badge {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: $white_fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.btn {
+  .badge {
+    position: relative;
+    top: -1px;
+  }
+}
+
+a {
+  &.badge {
+    &:focus {
+      color: $white_fff;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $white_fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.badge-pill {
+  border-radius: 10rem;
+  padding-left: .6em;
+  padding-right: .6em;
+}
+
+.badge-default {
+  background-color: $dimgray_636c72;
+}
+
+.badge-default[href] {
+  &:focus {
+    background-color: $darkslategray_4b5257;
+  }
+
+  &:hover {
+    background-color: $darkslategray_4b5257;
+  }
+}
+
+.badge-primary {
+  background-color: $dodgerblue_0275d8;
+}
+
+.badge-primary[href] {
+  &:focus {
+    background-color: $darkslateblue_025aa5;
+  }
+
+  &:hover {
+    background-color: $darkslateblue_025aa5;
+  }
+}
+
+.badge-success {
+  background-color: $mediumseagreen_5cb85c;
+}
+
+.badge-success[href] {
+  &:focus {
+    background-color: $forestgreen_449d44;
+  }
+
+  &:hover {
+    background-color: $forestgreen_449d44;
+  }
+}
+
+.badge-info {
+  background-color: $skyblue_5bc0de;
+}
+
+.badge-info[href] {
+  &:focus {
+    background-color: $deepskyblue_31b0d5;
+  }
+
+  &:hover {
+    background-color: $deepskyblue_31b0d5;
+  }
+}
+
+.badge-warning {
+  background-color: $sandybrown_f0ad4e;
+}
+
+.badge-warning[href] {
+  &:focus {
+    background-color: $orange_ec971f;
+  }
+
+  &:hover {
+    background-color: $orange_ec971f;
+  }
+}
+
+.badge-danger {
+  background-color: $indianred_d9534f;
+}
+
+.badge-danger[href] {
+  &:focus {
+    background-color: $firebrick_c9302c;
+  }
+
+  &:hover {
+    background-color: $firebrick_c9302c;
+  }
+}

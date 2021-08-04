@@ -1,6 +1,6 @@
 .navbar-nav .invitation-codes {
-  margin-left: 15px;
-  margin-top: inherit
+  margin-left: inherit;
+  margin-top: 15px
 }
 .navbar-nav .invitation-codes a {
   background: linear-gradient(139deg,#ffc92f,#ff185c,#f316d5,#b81ed2);

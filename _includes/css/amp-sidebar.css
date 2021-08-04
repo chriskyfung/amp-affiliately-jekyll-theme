@@ -1,6 +1,9 @@
+.left-sidebar {
+  order: 2;
+}
 .sidebar {
-  max-width: 340px;
-  font-size: 15px
+  font-size: 15px;
+  max-width: 100%;
 }
 .sidebar h5 {
   margin-bottom: 1rem;
