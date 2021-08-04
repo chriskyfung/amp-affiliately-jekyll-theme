@@ -266,10 +266,10 @@ span.post-read-more a:hover {
 }
 .mainheading h1.posttitle {
   font-weight: 700;
-  margin-bottom: 1rem
+  font-family: Cambria, Times, serif, fantasy;
 }
 .intro {
-  background-image: url({{site.baseurl}}/assets/images/head.svg);
+  background-image: url({{ "assets/images/head.svg" | relative_url }} );
   background-size: contain;
   padding: 9rem 0;
   margin-top: -87px;
@@ -577,35 +577,32 @@ a.btn {
 .sidebar-right .sidebar {
   max-width: inherit
 }
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: inherit;
+  font-display: swap;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
-  font-display: swap
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
-.article-post .h1,
-.article-post .h2,
-.article-post .h3,
-.article-post .h4,
-.article-post .h5,
-.article-post .h6,
 .article-post h1,
 .article-post h2,
 .article-post h3,
 .article-post h4,
 .article-post h5,
 .article-post h6 {
-  font-weight: 500;
-  margin-bottom: 1.5rem
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: Cambria, Times, serif, fantasy;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 .article-post img.shadow {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);

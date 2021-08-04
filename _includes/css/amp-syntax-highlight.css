@@ -239,3 +239,7 @@
   color: #0086f7;
   font-weight: bold
 }
+.rouge-table pre {
+  border: none;
+  margin: 0;
+}
