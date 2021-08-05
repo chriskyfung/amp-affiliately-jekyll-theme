@@ -1,11 +1,9 @@
-$darkgoldenrod_bf8f22: #bf8f22;
 $darkgray_999: #999999;
 $gainsboro_ddd: #dddddd;
 $gold_ffe51f: #ffe51f;
 $indianred_bd4147: #bd4147;
 $indianred_f05f70: #f05f70;
 $mediumslateblue_675bff: #675bff;
-$orange_ffb100: #ffb100;
 $whitesmoke_f7f7f9: #f7f7f9;
 
 amp-img[aria-label=lightbox] {
@@ -100,15 +98,23 @@ h6 {
   }
 
   .anchor-link {
+    visibility: hidden;
     box-shadow: none;
-    color: $darkgoldenrod_bf8f22;
-    margin-left: -1.5rem;
-    padding-right: .5rem;
+    color: goldenrod;
+    font-size: 1rem;
+    margin-left: .5rem;
     vertical-align: super;
 
     &:hover {
       box-shadow: none;
-      color: $orange_ffb100;
+    }
+  }
+
+  * {
+    &:hover {
+      >.anchor-link {
+        visibility: visible;
+      }
     }
   }
 
@@ -137,6 +143,12 @@ h6 {
       background-color: $gold_ffe51f;
       box-shadow: none;
     }
+  }
+}
+
+.anchor-link {
+  &:focus {
+    visibility: visible;
   }
 }
 

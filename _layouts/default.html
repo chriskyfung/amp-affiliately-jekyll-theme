@@ -62,6 +62,9 @@
     {%- if site.adsense.client_id and site.adstyle != false -%}
     {% include css/amp-ad-styles.min.css %}
     {%- endif -%}
+    {%- unless site.anchor_link == false -%}
+    {% include css/amp-anchor-link.min.css %}
+    {%- endunless -%}
     {% include css/amp-custom.min.css %}
     {% include css/amp-toc.min.css %}
     {% include css/amp-sidebar.min.css %}

@@ -616,7 +616,6 @@ h6 {
 .article-post h5,
 .article-post h6 {
   -webkit-font-smoothing: antialiased;
-  display: inline-block;
   font-family: Cambria, Times, serif, fantasy;
   font-weight: 700;
   margin-top: 2rem;

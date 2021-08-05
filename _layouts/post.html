@@ -67,24 +67,28 @@ amp:
 
     <!-- Post Content -->
     <div class="article-post">
-      {%- assign splited_by_h2 = content | split: '<h2 id=' -%}
+      
+      {%- if site.anchor_link == false -%}
+        {%- assign modified_content_2 = content -%}
+      {%- else -%}
+        {%- assign splited_by_h2 = content | split: '<h2 id=' -%}
+        {%- assign modified_content_1 = splited_by_h2 | first -%}
+        {% for splited_h2_part in splited_by_h2 offset:1 %}
+          {%- assign h2_splits = splited_h2_part | split: '</h2>' -%}
+          {%- assign h2_tag = h2_splits | first | split: '>' -%}
+          {%- assign h2_id = h2_tag | first | replace: '"', '' -%}
+          {% assign modified_content_1 = modified_content_1 | append: '<h2 id=' | append: h2_splits.first | append: '<a class="anchor-link" href="#' | append: h2_id | append: '"><i class="fas fa-link"></i></a></h2>' |  append: h2_splits[1] -%}
+        {% endfor %}
 
-      {%- assign modified_content_1 = splited_by_h2 | first -%}
-      {% for splited_h2_part in splited_by_h2 offset:1 %}
-        {%- assign h2_splits = splited_h2_part | split: '</h2>' -%}
-        {%- assign h2_tag = h2_splits | first | split: '>' -%}
-        {%- assign h2_id = h2_tag | first | replace: '"', '' -%}
-        {% assign modified_content_1 = modified_content_1 | append: '<div><a class="anchor-link" href="#' | append: h2_id | append: '"><i class="fas fa-link"></i></a><h2 id=' | append: h2_splits.first | append: '</h2></div>' |  append: h2_splits[1] -%}
-      {% endfor %}
-
-      {%- assign splited_by_h3 = modified_content_1 | split: '<h3 id=' -%}
-      {%- assign modified_content_2 = splited_by_h3 | first -%}
-      {% for splited_h3_part in splited_by_h3 offset:1 %}
-        {%- assign h3_splits = splited_h3_part | split: '</h3>' -%}
-        {%- assign h3_tag = h3_splits | first | split: '>' -%}
-        {%- assign h3_id = h3_tag | first | replace: '"', '' -%}
-        {% assign modified_content_2 = modified_content_2 | append: '<div><a class="anchor-link" href="#' | append: h3_id | append: '"><i class="fas fa-link"></i></a><h3 id=' | append: h3_splits[0] | append: '</h3></div>' |  append: h3_splits[1] -%}
-      {% endfor %}
+        {%- assign splited_by_h3 = modified_content_1 | split: '<h3 id=' -%}
+        {%- assign modified_content_2 = splited_by_h3 | first -%}
+        {% for splited_h3_part in splited_by_h3 offset:1 %}
+          {%- assign h3_splits = splited_h3_part | split: '</h3>' -%}
+          {%- assign h3_tag = h3_splits | first | split: '>' -%}
+          {%- assign h3_id = h3_tag | first | replace: '"', '' -%}
+          {% assign modified_content_2 = modified_content_2 | append: '<h3 id=' | append: h3_splits[0] | append: '<a class="anchor-link" href="#' | append: h3_id | append: '"><i class="fas fa-link"></i></a></h3>' |  append: h3_splits[1] -%}
+        {% endfor %}
+      {%- endif -%}
 
       {%- if site.target_blank == false -%}
         {%- assign modified_content_3 = modified_content_2 -%}
