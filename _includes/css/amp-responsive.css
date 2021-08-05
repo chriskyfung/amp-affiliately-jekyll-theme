@@ -84,7 +84,7 @@
     margin-top: 3rem;
   }
   .left-sidebar {
-    order: initial;
+    order: -1;
   }
   .sidebar {
     max-width: 340px;

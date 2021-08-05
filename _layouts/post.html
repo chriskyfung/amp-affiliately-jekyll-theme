@@ -8,6 +8,14 @@ amp:
   addthis: true
 ---
 
+{%- assign sidebar = page.sidebar | default: layout.sidebar | default: "right" -%}
+{%- if sidebar == "none" -%}
+{%- assign post_class = "no-sidebar" -%}
+{%- else -%}
+{%- assign post_class = "col-md-8 col-lg-8" -%}
+{%- assign sidebar_class = sidebar | append: '-sidebar' -%}
+{%- endif -%}
+
 <!-- Begin Article -->
 
 <div class="row">
@@ -15,7 +23,7 @@ amp:
   <!-- Post -->
   {%- assign author = site.authors[page.author] -%}
 
-  <div id="post" class="col-md-8 col-lg-8">
+  <div id="post" class="{{ post_class }}">
     <div class="mainheading">
 
       <!-- Post Categories -->
@@ -67,54 +75,7 @@ amp:
 
     <!-- Post Content -->
     <div class="article-post">
-      
-      {%- if site.anchor_link == false -%}
-        {%- assign modified_content_2 = content -%}
-      {%- else -%}
-        {%- assign splited_by_h2 = content | split: '<h2 id=' -%}
-        {%- assign modified_content_1 = splited_by_h2 | first -%}
-        {% for splited_h2_part in splited_by_h2 offset:1 %}
-          {%- assign h2_splits = splited_h2_part | split: '</h2>' -%}
-          {%- assign h2_tag = h2_splits | first | split: '>' -%}
-          {%- assign h2_id = h2_tag | first | replace: '"', '' -%}
-          {% assign modified_content_1 = modified_content_1 | append: '<h2 id=' | append: h2_splits.first | append: '<a class="anchor-link" href="#' | append: h2_id | append: '"><i class="fas fa-link"></i></a></h2>' |  append: h2_splits[1] -%}
-        {% endfor %}
-
-        {%- assign splited_by_h3 = modified_content_1 | split: '<h3 id=' -%}
-        {%- assign modified_content_2 = splited_by_h3 | first -%}
-        {% for splited_h3_part in splited_by_h3 offset:1 %}
-          {%- assign h3_splits = splited_h3_part | split: '</h3>' -%}
-          {%- assign h3_tag = h3_splits | first | split: '>' -%}
-          {%- assign h3_id = h3_tag | first | replace: '"', '' -%}
-          {% assign modified_content_2 = modified_content_2 | append: '<h3 id=' | append: h3_splits[0] | append: '<a class="anchor-link" href="#' | append: h3_id | append: '"><i class="fas fa-link"></i></a></h3>' |  append: h3_splits[1] -%}
-        {% endfor %}
-      {%- endif -%}
-
-      {%- if site.target_blank == false -%}
-        {%- assign modified_content_3 = modified_content_2 -%}
-      {%- else -%}
-        {%- assign splited_by_a = modified_content_2 | split: '<a ' -%}
-        {%- assign modified_content_3 = splited_by_a | first -%}
-        {% for splited_a_part in splited_by_a offset:1 %}
-          {%- assign a_splits = splited_a_part | split: '</a>' -%}
-          {%- assign a_tag = a_splits | first | split: '>' -%}
-          {%- assign a_attrs = a_tag | first -%}
-          {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
-            {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
-              {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
-              {%- assign a_inner = a_tag | slice: 1, a_tag.size | join: '>' -%}
-              
-              {%- assign modified_content_3 = modified_content_3 | append: '<a class="external" data-vars-event-label="' | append: a_href | append: '" ' | append: a_attrs | append: ' rel="noopener noreferrer" target="_blank">' | append: a_inner | append: '</a>' | append: a_splits[1] -%}
-            {%- else -%}
-              {%- assign modified_content_3 = modified_content_3 | append: '<a ' | append: splited_a_part -%}
-            {%- endunless -%}    
-          {%- else -%}
-            {%- assign modified_content_3 = modified_content_3 | append: '<a ' | append: splited_a_part -%}
-          {%- endif -%}
-        {% endfor %}
-      {%- endif -%}
-
-      {{ modified_content_3 }}
+      {%- include blocks/postproc-content.html -%}      
       <div class="clearfix"></div>
     </div>
 
@@ -172,12 +133,12 @@ amp:
   </div>
   <!-- End Post -->
 
-  <!-- Right Sidebar -->
-  <div class="col-md-4 col-lg-4">
-    <div class="sidebar-right">
+  {%- if sidebar != "none" -%}
+  <!-- Sidebar -->
+    <div class="col-md-4 col-lg-4 {{ sidebar_class }}">
       {%- include sidebar/sidebar.html -%}
     </div>
-  </div>
+  {%- endif -%}
 
 </div>
 
