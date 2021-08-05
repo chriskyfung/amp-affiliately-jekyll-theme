@@ -86,23 +86,29 @@ amp:
         {% assign modified_content_2 = modified_content_2 | append: '<div><a class="anchor-link" href="#' | append: h3_id | append: '"><i class="fas fa-link"></i></a><h3 id=' | append: h3_splits[0] | append: '</h3></div>' |  append: h3_splits[1] -%}
       {% endfor %}
 
-      {%- assign splited_by_a = modified_content_2 | split: '<a ' -%}
-      {%- assign modified_content_3 = splited_by_a | first -%}
-      {% for splited_a_part in splited_by_a offset:1 %}
-        {%- assign a_splits = splited_a_part | split: '</a>' -%}
-        {%- assign a_tag = a_splits | first | split: '>' -%}
-        {%- assign a_attrs = a_tag | first -%}
-        {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
-          {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
-            {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
-            {%- assign modified_content_3 = modified_content_3 | append: '<a class="external" data-vars-event-label="' | append: a_href | append: '" ' | append: a_attrs | append: ' rel="noopener noreferrer" target="_blank">' | append: a_tag[1] | append: '</a>' | append: a_splits[1] -%}
+      {%- if site.target_blank == false -%}
+        {%- assign modified_content_3 = modified_content_2 -%}
+      {%- else -%}
+        {%- assign splited_by_a = modified_content_2 | split: '<a ' -%}
+        {%- assign modified_content_3 = splited_by_a | first -%}
+        {% for splited_a_part in splited_by_a offset:1 %}
+          {%- assign a_splits = splited_a_part | split: '</a>' -%}
+          {%- assign a_tag = a_splits | first | split: '>' -%}
+          {%- assign a_attrs = a_tag | first -%}
+          {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
+            {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
+              {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
+              {%- assign a_inner = a_tag | slice: 1, a_tag.size | join: '>' -%}
+              
+              {%- assign modified_content_3 = modified_content_3 | append: '<a class="external" data-vars-event-label="' | append: a_href | append: '" ' | append: a_attrs | append: ' rel="noopener noreferrer" target="_blank">' | append: a_inner | append: '</a>' | append: a_splits[1] -%}
+            {%- else -%}
+              {%- assign modified_content_3 = modified_content_3 | append: '<a ' | append: splited_a_part -%}
+            {%- endunless -%}    
           {%- else -%}
             {%- assign modified_content_3 = modified_content_3 | append: '<a ' | append: splited_a_part -%}
-          {%- endunless -%}    
-        {%- else -%}
-          {%- assign modified_content_3 = modified_content_3 | append: '<a ' | append: splited_a_part -%}
-        {%- endif -%}
-      {% endfor %}
+          {%- endif -%}
+        {% endfor %}
+      {%- endif -%}
 
       {{ modified_content_3 }}
       <div class="clearfix"></div>
