@@ -76,7 +76,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .article-post {
@@ -94,27 +94,6 @@ h6 {
       border-bottom: 1px solid $gainsboro_ddd;
       box-shadow: none;
       text-decoration: inherit;
-    }
-  }
-
-  .anchor-link {
-    visibility: hidden;
-    box-shadow: none;
-    color: goldenrod;
-    font-size: 1rem;
-    margin-left: .5rem;
-    vertical-align: super;
-
-    &:hover {
-      box-shadow: none;
-    }
-  }
-
-  * {
-    &:hover {
-      >.anchor-link {
-        visibility: visible;
-      }
     }
   }
 
@@ -143,12 +122,6 @@ h6 {
       background-color: $gold_ffe51f;
       box-shadow: none;
     }
-  }
-}
-
-.anchor-link {
-  &:focus {
-    visibility: visible;
   }
 }
 
