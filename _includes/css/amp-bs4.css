@@ -658,18 +658,15 @@ select.form-control:focus::-ms-value {
 .btn:hover {
   text-decoration: none
 }
-.btn.focus,
 .btn:focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .25);
   box-shadow: 0 0 0 2px rgba(2, 117, 216, .25)
 }
-.btn.disabled,
 .btn:disabled {
   cursor: not-allowed;
   opacity: .65
 }
-.btn.active,
 .btn:active {
   background-image: none
 }
@@ -687,17 +684,14 @@ fieldset[disabled] a.btn {
   background-color: #025aa5;
   border-color: #01549b
 }
-.btn-primary.focus,
 .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
   box-shadow: 0 0 0 2px rgba(2, 117, 216, .5)
 }
-.btn-primary.disabled,
 .btn-primary:disabled {
   background-color: #0275d8;
   border-color: #0275d8
 }
-.btn-primary.active,
 .btn-primary:active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
@@ -705,6 +699,39 @@ fieldset[disabled] a.btn {
   background-image: none;
   border-color: #01549b
 }
+.btn-dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-dark:focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.btn-dark:disabled {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-dark:active,
+.show > .btn-dark.dropdown-toggle {
+  color: #fff;
+  background-color: #1d2124;
+  border-color: #171a1d;
+}
+
+.btn-dark:focus {
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
 .btn-group-lg > .btn,
 .btn-lg {
   padding: 0.75rem 1.5rem;

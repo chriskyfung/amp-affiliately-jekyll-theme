@@ -49,6 +49,9 @@
   vertical-align: text-bottom;
   max-width: none
 }
+.navbar-nav .btn {
+  margin-left: 15px;
+}
 .fixed-top {
   position: fixed;
   top: 0;
@@ -62,10 +65,6 @@
   overflow: visible;
   overflow-x: visible;
   overflow-y: visible
-}
-#toggle-search {
-  margin-left: inherit;
-  margin-top: 15px
 }
 .searchbox {
   display: inline;

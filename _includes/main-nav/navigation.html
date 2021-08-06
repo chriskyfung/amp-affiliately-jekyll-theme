@@ -1,15 +1,18 @@
 <ul class="navbar-nav ml-auto">
 
-  {%- if site.repository and site.pages.size > 1 -%}
-  {%- if page.url == '/' -%}
-    {%- assign icon = '' -%}
-  {%- else -%}
-    {%- assign icon = ' <i class="fas fa-level-up-alt"></i>' -%}
-  {%- endif -%}
-  {%- assign maxLength = site.nav.local.title.limit | default: 30 -%}
+  {%- assign home_position = site.nav.global.home.location | default: "menu-start" -%}
+
+  {%- capture link_to_home -%}
   <li class="nav-item">
-    <a class="nav-link" href="{{ "/" | relative_url }}" title="{{ site.title }}">{{ site.title | truncate: maxLength }}{{ icon }}</a>
+    <a class="nav-link" href="/">Home</a>
   </li>
+  {%- endcapture -%}
+
+  {%- if site.nav.global.home != false and home_position == "menu-start" %}
+  {{ link_to_home }}
+  {%- endif -%}
+
+  {%- if site.repository and site.pages.size > 1 -%}
   {%- for item in site.nav.local.items -%}
   <li class="nav-item">
     <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
@@ -19,32 +22,34 @@
   {% include main-nav/local-menu.html %}
   {%- endif -%}
   {%- endif -%}
-
-  {%- unless site.nav.global.home == false %}
-  <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
-  </li>
-  {%- endunless -%}
   
-  {%- unless site.nav.global.dropdown == false %}
-  {% include main-nav/global-dropdown.html %}
+  {%- unless site.nav.global == false -%}
+  {% include main-nav/global-menu.html %}
   {%- endunless -%}
 
-  {%- unless site.repository -%}  
-  <li class="nav-item">
-    <a class="nav-link" href="/category/cloud/">Cloud</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/category/academic/">Academic</a>
-  </li>
-  {%- endunless -%}
+  {%- if site.nav.global.home != false and home_position == "menu-end" %}
+  {{ link_to_home }}
+  {%- endif -%}
+  
+  <div class="row ml-auto">
+    {%- unless site.invitation_codes == false -%}
+    <li class="nav-item">
+      {% include main-nav/invitation-codes.html %}
+    </li>
+    {%- endunless -%}
 
-  {% include main-nav/invitation-codes.html %}
+    {%- if site.repository -%}
+    <li class="nav-item">
+      <a class="btn btn-dark" href="{{ site.github.repository_url }}" role="button" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+    </li>
+    {%- endif -%}
+    
+    <li class="nav-item">
+      <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"
+        data-toggle="modal" data-target="#searchbar" role="search" title="search" accesskey="/">
+        <i class="fas fa-search"></i>
+      </button>
+    </li>
 
-  <li class="nav-item">
-    <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"
-      data-toggle="modal" data-target="#searchbar" role="search" accesskey="/">
-      <i class="fas fa-search"></i>
-    </button>
-  </li>
+  </div>
 </ul>

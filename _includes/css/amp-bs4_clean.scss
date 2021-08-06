@@ -1,8 +1,12 @@
 $black_000: #000000;
+$black_171a1d: #171a1d;
 $black_1d1e1f: #1d1e1f;
+$black_1d2124: #1d2124;
+$black_23272b: #23272b;
 $black_292b2c: #292b2c;
 $darkslateblue_01549b: #01549b;
 $darkslateblue_025aa5: #025aa5;
+$darkslategray_343a40: #343a40;
 $darkslategray_464a4c: #464a4c;
 $deepskyblue_5cb3fd: #5cb3fd;
 $dimgray_636c72: #636c72;
@@ -1333,24 +1337,9 @@ small {
     text-decoration: none;
   }
 
-  &.focus {
-    -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .25);
-            box-shadow: 0 0 0 2px rgba(2, 117, 216, .25);
-    outline: 0;
-  }
-
-  &.disabled {
-    cursor: not-allowed;
-    opacity: .65;
-  }
-
   &:disabled {
     cursor: not-allowed;
     opacity: .65;
-  }
-
-  &.active {
-    background-image: none;
   }
 
   &:active {
@@ -1377,31 +1366,14 @@ fieldset[disabled] {
     color: $white_fff;
   }
 
-  &.focus {
-    -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
-            box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
-  }
-
   &:focus {
     -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
             box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
   }
 
-  &.disabled {
-    background-color: $dodgerblue_0275d8;
-    border-color: $dodgerblue_0275d8;
-  }
-
   &:disabled {
     background-color: $dodgerblue_0275d8;
     border-color: $dodgerblue_0275d8;
-  }
-
-  &.active {
-    background-color: $darkslateblue_025aa5;
-    background-image: none;
-    border-color: $darkslateblue_01549b;
-    color: $white_fff;
   }
 
   &:active {
@@ -1420,6 +1392,42 @@ fieldset[disabled] {
       border-color: $darkslateblue_01549b;
       color: $white_fff;
     }
+  }
+
+  >.btn-dark {
+    &.dropdown-toggle {
+      background-color: $black_1d2124;
+      border-color: $black_171a1d;
+      color: $white_fff;
+    }
+  }
+}
+
+.btn-dark {
+  color: $white_fff;
+  background-color: $darkslategray_343a40;
+  border-color: $darkslategray_343a40;
+
+  &:hover {
+    background-color: $black_23272b;
+    border-color: $black_1d2124;
+    color: $white_fff;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 .2rem rgba(52, 58, 64, .5);
+  }
+
+  &:disabled {
+    background-color: $darkslategray_343a40;
+    border-color: $darkslategray_343a40;
+    color: $white_fff;
+  }
+
+  &:active {
+    background-color: $black_1d2124;
+    border-color: $black_171a1d;
+    color: $white_fff;
   }
 }
 

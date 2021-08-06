@@ -55,34 +55,36 @@
     {%- endif -%}
 
     <style amp-custom>
-    {% include css/amp-bs4.min.css %}
-    {% include css/amp-theme.min.css %}
-    {% include css/amp-navigation.min.css %}
-    {% include css/amp-invitation-codes.min.css %}
-    {%- if site.adsense.client_id and site.adstyle != false -%}
-    {% include css/amp-ad-styles.min.css %}
+      {% include css/amp-bs4.min.css %}
+      {% include css/amp-theme.min.css %}
+      {% include css/amp-navigation.min.css %}
+    {%- if site.invitation_codes != false -%}
+      {% include css/amp-invitation-codes.min.css %}
     {%- endif -%}
-    {%- unless site.anchor_link == false -%}
-    {% include css/amp-anchor-link.min.css %}
-    {%- endunless -%}
-    {% include css/amp-custom.min.css %}
-    {% include css/amp-toc.min.css %}
-    {% include css/amp-sidebar.min.css %}
-    {% include css/amp-tags.min.css %}
-    {% include css/amp-footer.min.css %}
-    {% include css/amp-bmc-button.min.css %}
-    {% include css/amp-responsive.min.css %}
+      {%- if site.adsense.client_id and site.adstyle != false -%}
+        {% include css/amp-ad-styles.min.css %}
+      {%- endif -%}
+    {%- if site.anchor_link != false -%}
+      {% include css/amp-anchor-link.min.css %}
+    {%- endif -%}
+      {% include css/amp-custom.min.css %}
+      {% include css/amp-toc.min.css %}
+      {% include css/amp-sidebar.min.css %}
+      {% include css/amp-tags.min.css %}
+      {% include css/amp-footer.min.css %}
+      {% include css/amp-bmc-button.min.css %}
+      {% include css/amp-responsive.min.css %}
     {%- if layout.css.badge == true or page.css.badge == true -%}
-    {% include css/amp-bs4-badge.min.css %}
+      {% include css/amp-bs4-badge.min.css %}
     {%- endif -%}
     {%- if layout.css.syntax == true or page.css.syntax == true -%}
-    {% include css/amp-syntax-highlight.min.css %}
+      {% include css/amp-syntax-highlight.min.css %}
     {%- endif %}
     {%- if layout.css.custom -%}
-    {{ layout.css.custom }}
+      {{ layout.css.custom }}
     {%- endif -%}
     {%- if page.css.custom -%}
-    {{ page.css.custom }}
+      {{ page.css.custom }}
     {%- endif -%}
     </style>
   </head>
@@ -112,11 +114,19 @@
 
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/" title="Site Home">
           <amp-img src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
             <amp-img fallback src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
           </amp-img>
         </a>
+        {%- if site.repository and site.pages.size > 1 -%}
+        {%- assign maxLength = site.nav.local.title.limit | default: 30 -%}
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "/" | relative_url }}" title="↰ Top Page">{{ site.title | truncate: maxLength }} <i class="fas fa-anchor"></i></a>
+          </li>
+        </ul>
+        {%- endif -%}
         <!-- Begin Menu -->
         <div class="collapse navbar-collapse" id="navbarsWow">
           {% include main-nav/navigation.html %}
@@ -258,6 +268,7 @@
       <script type="application/json">
         {
           "output": "https://redirect.viglink.com?key=${apiKey}&u=${href}&type=ap&loc=SOURCE_URL&ref=DOCUMENT_REFERRER",
+          "section" ".external",
           "vars": {
             "apiKey": "56a8cde8bc46ec169ed23320c0e35c68"
           }

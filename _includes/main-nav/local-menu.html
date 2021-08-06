@@ -1,7 +1,7 @@
 {%- assign dropdown_id = "local-dropdown" -%}
 <li class="nav-item dropdown" id="{{ dropdown_id }}">
   <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-    aria-expanded="false" role="button"><i class="fas fa-tags"></i></a>
+    aria-expanded="false" role="button" title="Tags"><i class="fas fa-tags"></i></a>
   <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
     {% if site.tags.size > 10 %}
     <div class="dropdown-filter">
