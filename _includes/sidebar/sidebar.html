@@ -4,13 +4,13 @@
   <div aria-label="download links" class="sidebar-section">
     <h5><span>Resources</span></h5>
     {%- if site.github.repository_url -%}
-    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.repository_url }}" rel="noopener noreferrer">View on GitHub <i class='fab fa-github'></i></a>
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.repository_url }}" role="button" rel="noopener noreferrer" target="_blank">View on GitHub <i class='fab fa-github'></i></a>
     {%- endif -%}
     {%- if page.download.url -%}
-    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ page.download.url }}" rel="noopener noreferrer">Download <i class='fas fa-cloud-download-alt'></i></a>
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ page.download.url }}" role="button" rel="noopener noreferrer" download>Download <i class='fas fa-cloud-download-alt'></i></a>
     {%- elsif site.github.latest_release -%}
-    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.latest_release.html_url }}" rel="noopener noreferrer">Latest Release</a>
-    <div style="display:flex;flex-wrap: wrap;justify-content: space-between;">
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.latest_release.html_url }}" role="button" rel="noopener noreferrer" target="_blank">Latest Release</a>
+    <div class="row" style="justify-content: space-between;">
       <div><i class='fas fa-tag'></i> {{ site.github.latest_release.tag_name }}</div>
       <div><i class='fas fa-clock'></i> <time datetime="{{ site.github.latest_release.published_at }}">{{ site.github.latest_release.published_at | date: "%b %d, %Y" }}</time></div>
       {%- endif -%}
