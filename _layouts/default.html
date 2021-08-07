@@ -119,7 +119,7 @@
             <amp-img fallback src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
           </amp-img>
         </a>
-        {%- if site.repository and site.pages.size > 1 -%}
+        {%- if site.baseurl != "" and site.baseurl != "/" and site.pages.size > 1 -%}
         {%- assign maxLength = site.nav.local.title.limit | default: 30 -%}
         <ul class="navbar-nav">
           <li class="nav-item">

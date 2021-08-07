@@ -12,7 +12,7 @@
   {{ link_to_home }}
   {%- endif -%}
 
-  {%- if site.repository and site.pages.size > 1 -%}
+  {%- if site.baseurl != "" and site.baseurl != "/" and site.pages.size > 1 -%}
   {%- for item in site.nav.local.items -%}
   <li class="nav-item">
     <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
@@ -38,9 +38,9 @@
     </li>
     {%- endunless -%}
 
-    {%- if site.repository -%}
+    {%- if site.github.is_project_page -%}
     <li class="nav-item">
-      <a class="btn btn-dark" href="{{ site.github.repository_url }}" role="button" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+      <a class="btn btn-dark" href="{{ site.github.repository_url }}" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
     </li>
     {%- endif -%}
     

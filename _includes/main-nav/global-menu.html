@@ -2,11 +2,11 @@
 {% include main-nav/global-dropdown.html %}
 {%- endunless -%}
 
-{%- unless site.repository -%}  
+{%- if site.url contains "chriskyfung.github.io" and site.baseurl == "" and site.baseurl == "/" -%}  
 <li class="nav-item">
   <a class="nav-link" href="/category/cloud/">Cloud</a>
 </li>
 <li class="nav-item">
   <a class="nav-link" href="/category/academic/">Academic</a>
 </li>
-{%- endunless -%}
+{%- endif -%}
