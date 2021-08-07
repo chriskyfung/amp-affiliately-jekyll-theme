@@ -79,6 +79,13 @@ h6 {
   width: 96%;
   max-width: 100%
 }
+.inline-fix + * {
+  display: inline;
+}
+.inline-fix + * + .badge {
+  vertical-align: text-top;
+}
+
 .listfeaturedtag .card .thumbnail img {
   width: 500px;
   height: 258px;

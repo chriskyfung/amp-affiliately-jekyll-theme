@@ -136,6 +136,16 @@ h6 {
   width: 96%;
 }
 
+.inline-fix {
+  +* {
+    display: inline;
+
+    +.badge {
+      vertical-align: text-top;
+    }
+  }
+}
+
 .listfeaturedtag {
   .card {
     .thumbnail {
