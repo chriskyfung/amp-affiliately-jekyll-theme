@@ -2,23 +2,27 @@
 layout: post
 title: Front Matter
 date: 2021-07-31 12:05 +0800
+last_modified_at: 2021-08-10 00:01 +0800
 category: [guide, config]
 tags: [front matter]
 permalink: /front-matter/
 image: 
    path: /assets/images/frontend-4342425_730.png
 css:
+  badge: true
   syntax: true
   custom: >-
-    table { font-size: smaller; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    td { padding: 0 15px; }
+    table { font-size: .95rem; margin-bottom: 1.5rem }
+    tr:nth-child(odd) { backgroud-color: #e3edf3 }
+    td { padding: .5em }
 featured: true
 ---
 
-## For a Page/Post
+{% include toc.md %}
 
-### General front matters for a blog post
+* * *
+
+## General Front Matters for A Post
 
 A Jekyll post should contain the front matters as the following example:
 
@@ -46,9 +50,11 @@ excerpt: This is the first blog post for my Jekyll site.
 | `tags`             | Similar to categories, one or multiple tags can be added to a post.  |
 | `excerpt`          | (_Optional_) To custom the short text to show on the card of a post list/grid     |
 
-**💡 Learn more:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation"){:.external}
+**💡 Learn more:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
 
-### Set featured image
+* * *
+
+## Set Featured Image
 
 You can assign an image (with **730×431** pixels in size) as the featured image of a post in the front matter like this:
 
@@ -66,7 +72,9 @@ image:
 | `height`  | (_Optional_) Specify the image height (in px). _Default:_ 411 (px)                                          |
 | `fit`     | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`/`right`    |
 
-### Pin featured posts
+* * *
+
+## Pin Featured Posts
 
 You can pin a post to the list/grid of Featured Posts in the theme by the following front matter:
 
@@ -74,7 +82,9 @@ You can pin a post to the list/grid of Featured Posts in the theme by the follow
 featured: true
 ```
 
-### Add custom CSS to HTML <head> section
+* * *
+
+## Add Custom CSS to HTML &lt;head&gt; Section
 
 In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
 
@@ -91,17 +101,17 @@ For example, you can format the table elements with a zebra-striped design by th
 ```yaml
 css:
   custom: >-
-    table { font-size: smaller; margin-bottom: 1.5rem; }
+    table { font-size: .95rem; margin-bottom: 1.5rem; }
     tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    td { padding: 0 15px; }
+    th, td { padding: .5em; }
 ```
 
 {: style="margin-bottom: auto;" }
 **💡 Learn more:**
 
-- [Badges](https://getbootstrap.com/docs/4.0/components/badge/ "Bootstrap 4"){:.external}
+- [Badges](https://getbootstrap.com/docs/4.0/components/badge/ "Bootstrap 4")
 - [Code Block](/code/ "AMP Affiliately Jekyll Theme")
-- [How To Create A Zebra Striped Table](https://www.w3schools.com/howto/howto_css_table_zebra.asp "W3Schools"){:.external}
+- [How To Create A Zebra Striped Table](https://www.w3schools.com/howto/howto_css_table_zebra.asp "W3Schools")
 
 ```yaml
 amp:
@@ -114,7 +124,9 @@ amp:
 
 **💡 Related:** [How to include YouTube Video and Playlist embeds](/amp-affiliately-jekyll-theme/media/#video  "AMP Affiliately Jekyll Theme")
 
-### Add custom codes to HTML <head> section
+* * *
+
+## Add Custom Codes to HTML <head> Section
 
 In the front matter, you can add your codes to the HTML header using the variable `custom_header`.
 
@@ -137,39 +149,85 @@ custom_head: >-
   <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
 ```
 
-**💡 Learn more**: [Robots meta tag, data-nosnippet, and X-Robots-Tag specifications](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag "Google Search Central"){:.external}
+**💡 Learn more**: [Robots meta tag, data-nosnippet, and X-Robots-Tag specifications](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag "Google Search Central")
 
-## For GitHub Project Pages Only
+* * *
 
-### Display download buttons in a post's sidebar
+## Sidebar Options
 
-When you use this theme for the Github Pages of a Github project repository, it is available to show a download button or links to the repository in the sidebar of a Post.
+### Override Default Sidebar Setting <span class="badge badge-default">v2.0</span>
 
-To display the button to the project repository, declare the repository name in your `_config.yml`.
+**Options:** `left`, `right`, and `none`
+
+For example, you can set a left sidebar on a post page by the following:
 
 ```yaml
-repository: <USERNAME>/<PROJECT>
+sidebar: left
 ```
 
-Also, appending the `download` variable to the post's front matter.
+### Options for Resources Widget
+
+#### Display GitHub Metadata for Project Repo
+
+When you use this theme for the website of a Github project repository, it is available to show buttons that link to the repository and a release file in the sidebar.
+
+Follow our [Config Guide]({% post_url 2021-08-02-config-guides %}) to set up your `_config.yml` file.
+
+If a release exists in the repository, an additional button that links to the webpage of the latest release will be shown in the widget.
+
+**Note**: Authentication is required to get your repository data to show the release button. Please follow the docs of [jekyll
+/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) to set up your personal access token.
+
+##### <span class="badge badge-default">v1.2</span> <sup>(Deprecated)</sup>
+
+Add the following front matter to every page that you want to show the **Resources** Widget.
 
 ```yaml
 download: true
 ```
 
-If a release exists in the repository, an additional button that links to the latest release will be shown.
-
-**Note**: Authentication is required to get your repository data to show the release button. Please follow the docs of [jekyll
-/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) to set up your personal access token.
-
-You can also override the latest release button by defining a URL under the `download` variable, _e.g._:
+You can replace the second button and point it to a downloadable file by configuring it like this:
 
 ```yaml
-downlod:
+download:
   url: //.../filename.zip
 ```
 
-## Further Readings
+##### <span class="badge badge-success">v2.0</span>
 
-- [Front Matter Defaults \| Jekyllrb](https://jekyllrb.com/docs/configuration/front-matter-defaults/ "Official Jekyll Documentation"){:.external}
-- [README.md - amp-affiliately-jekyll-theme](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/README.md "GitHub"){:.external}
+You can globally configure the widget by using the attribute `resources_widget` in the `_config.yml` file. It is not necessary to add `download: true` to the front matter of individual pages for enabling the widget.
+
+Any file download buttons will display separately, and the button that links to the webpage of the latest release will no longer be overridden.
+
+#### Display Download Buttons
+
+##### <span class="badge badge-default">v1.2</span> <sup>(Deprecated)</sup>
+
+A Download button shows on a page when you declare the URL of a download file in the front matter like this:
+
+```yaml
+download:
+  url: //.../filename.zip
+```
+
+This button will substitute the button for linking to the latest release if GitHub metadata is also presented in the widget.
+
+##### <span class="badge badge-success">v2.0</span>
+
+The new version has been redesigned to support creating a list of buttons for multiple files on-page. You need to itemize the `name` and `url` of each file in the front matter, for example:
+
+```yaml
+download:
+  files:
+    - url: ../training-01/labsheet.pdf
+      name: Lab Sheet
+    - url: ../training-01/lab-files.zip
+      name: Lab Files
+```
+
+* * *
+
+## See Also 📚
+
+- [Front Matter Defaults \| Jekyllrb](https://jekyllrb.com/docs/configuration/front-matter-defaults/ "Official Jekyll Documentation")
+- [README.md - amp-affiliately-jekyll-theme](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/README.md "GitHub")

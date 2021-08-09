@@ -42,6 +42,15 @@
 - Easily Customisable
 - [Support deploying to Github Pages via Github Action](#deploying-to-github-pages-with-github-actions)
 
+## ✨ New Features in v2.0
+
+- Add anchor links to H2, H3, and H4 headings inside post content
+- Insert `rel` and `target` attributes to outbound links without plugins or dependencies
+- Support on-page sidebar options
+- Allow configuring **Resources** Widget globally in `_config.yml`
+- Support creating multiple download buttons in the sidebar widget
+- Allow fully customizing copyright notice in `_config.yml`
+
 * * *
 
 ## What is AMP ⚡
@@ -63,21 +72,7 @@ There are different ways to install the theme -
 
 ### 2. Set up as a remote theme and updating settings
 
-1. Add `gem "jekyll-remote-theme"` to your Gemfile to add the theme as a dependency.
-2. run `bundle install` to install the plugin.
-3. Add the following to your site's _config.yml file to activate the plugin
-
-   ```yaml
-   plugins:
-      - jekyll-remote-theme
-   ```
-
-4. Add `remote_theme: chriskyfung/amp-affiliately-jekyll-theme` to your _config.yml file to set the site theme.
-5. Set site-wide options in your site's `_config.yml` file.
-
-**Note**: You must update the `jekyll-remote-theme` plugin to `v0.4.2` or higher if you use **Jekyll 4.0+**.
-
-You may also optionally specify a branch, tag, or commit to using by appending an @ and the Git ref (e.g., chriskyfung/amp-affiliately-jekyll-theme@v1.2.8). If you don't specify a Git ref, the master branch will be used.
+Read the procedures in the [Config Guide](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/#-use-amp-affiliately-theme-as-remote-theme).
 
 ### Deploying to GitHub Pages with GitHub Actions
 
@@ -89,21 +84,12 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 
 ### Enabling 3rd-party components
 
-#### Google Analytics
+- Read [Google Services](https://chriskyfung.github.io//amp-affiliately-jekyll-theme/config-guide/#-google-services) in the Config Guide. For the following:
 
-- Set up your _Analytics Tracking ID_ in `_config.yml`.
-
-#### Google Tag Manager
-
-- Set up your _GTM AMP container ID_ in `_config.yml`.
-
-#### Google Adsense
-
-- Set up your _Adsense ID_ in `_config.yml`.
-
-#### Google Custom Search Engine
-
-- Set up your _gcse ID_ in `_config.yml`.
+- Google Analytics
+- Google Adsense
+- Google Custom Search Engine
+- Google Tag Manager
 
 #### Disqus Comments in AMP
 
@@ -149,15 +135,8 @@ This theme includes Jekyll plugins that are not in the whitelist of Github Pages
 
 ### Sidebar Widgets
 
-- In the `_config.yml` file, add the following to enable showing **FEATURED** and **RECENT POSTS** widgets on your sidebar.
-
-   ```yaml
-   sidebar:
-      featured: true
-      recent_posts: true
-   ```
-
-   *Set `false` to disable the widgets as you need.*
+- [Enable showing **FEATURED** and **RECENT POSTS** widgets on your sidebar](https://chriskyfung.github.io//amp-affiliately-jekyll-theme/config-guide/#sidebar-options).
+- [Show Github Metadata Widget in Sidebar (v2.0)](https://chriskyfung.github.io//amp-affiliately-jekyll-theme//config-guide/#-github)
 
 * * *
 
@@ -174,7 +153,7 @@ You cannot use Markdown format or normal HTML tags. AMP provides its own custom 
 Use the `picture.html` template to insert an image in the AMP format with automatically serving the image in the **WebP** format.
 The template also wraps the image with a `<figure>` tag with an optional caption element.
 
-```liquid
+```ruby
 {% include picture.html img="welcome.jpg" height="400" width="800" %}
 ```
 
@@ -205,7 +184,7 @@ amp:
 
 To embed a single video, use the following tag to include the `youtube.html` template.
 
-```liquid
+```ruby
 {% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" %}
 ```
 
@@ -214,7 +193,7 @@ To embed a single video, use the following tag to include the `youtube.html` tem
 
 To embed a playlist, you need to set both the _playlist ID_ and the _ID of the first video within the playlist_.
 
-```liquid
+```ruby
 {% include youtube.html id="<YOUTUBE_VIDEO_UID>" \
    playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}
 ```
@@ -244,7 +223,7 @@ css:
 
 A shortcode for creating a colored box, e.g. tips/memo.
 
-```liquid
+```ruby
 {% capture label %}
    PUT YOUR MARKDOWN CONTENT HERE...
 {% endcapture %}
@@ -255,6 +234,11 @@ A shortcode for creating a colored box, e.g. tips/memo.
 * * *
 
 ### Front Matters
+
+- [Pin Featured Posts](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#pin-featured-posts)
+- [Add Custom Codes to HTML <head> Section](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#add-custom-css-to-html-head-section)
+- [Add Custom CSS Styles to HTML <head> Section](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#add-custom-codes-to-html-head-section)
+- [Display Download Buttons in a Post's Sidebar]((https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#display-download-buttons)
 
 #### Set Featured Image for a Page/Post
 
@@ -308,67 +292,6 @@ If you want to remove the shadow of the featured image on the post page, append 
 image:
    path: /assets/images/cover-image.png
    class: shadow-none
-```
-
-#### Pin Featured Posts
-
-You can pin a post to the list/grid of Featured Posts in the theme by the following front matter:
-
-```yaml
-featured: true
-```
-
-##### Set Last Modified Date
-
-```yaml
-last_modified_at: 2020-06-20 23:36 +0000`
-```
-
-#### Add Custom Codes to HTML <head> Section of a Page/Post
-
-In the front matter, you can add your codes to the HTML header using the variable `custom_header`. For example, include the script for the `amp-accordion` component:
-
-```yaml
-custom_head: >-
-  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-```
-
-#### Add Custom CSS Styles to HTML <head> Section of a Page/Post
-
-In the front matter, you can add your custom CSS styles to the end of the `<style amp-custom>` tag inside the HTML header.
-
-```yaml
-css:
-   custom: >
-      table { width: 100%; max-width: 400px; margin-bottom: 1.5rem; }
-```
-
-#### Display Download Buttons in a Post's Sidebar
-
-When you use this theme for the Github Pages of a Github project repository, it is available to show a download button or links to the repository in the sidebar of a Post.
-
-To display the button to the project repository, declare the repository name in your `_config.yml`.
-
-```yaml
-repository: <USERNAME>/<PROJECT>
-```
-
-Also, appending the `download` variable to the post's front matter.
-
-```yaml
-download: true
-```
-
-If a release exists in the repository, an additional button that links to the latest release will be shown.
-
-**Note**: Authentication is required to get your repository data to show the release button. Please follow the docs of [jekyll
-/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) to set up your personal access token.
-
-You can also override the latest release button by defining a URL under the `download` variable, _e.g._:
-
-```yaml
-downlod:
-  url: //.../filename.zip
 ```
 
 * * *

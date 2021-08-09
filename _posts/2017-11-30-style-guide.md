@@ -2,7 +2,7 @@
 layout: post
 title: Style Guide
 date: 2017-11-30 04:00:00
-last_modified_at: 2021-06-27 15:10 +0800
+last_modified_at: 2021-08-02 11:14 +0800
 author: Peter
 category: [demo, guide]
 tags: [markdown, styles]
@@ -10,6 +10,7 @@ amp:
   youtube: true
 css:
   syntax: true
+download: true
 ---
 
 <p>This shows how you can use html styling to achieve your hopes.</p>
@@ -413,3 +414,10 @@ Example:
 {% endcapture %}
 
 {% include callout.html content=callout1 %}
+
+* * *
+
+## Learn More
+
+- [Kramdown Cheat Sheet \| Alberto’s repos](https://aoterodelaroza.github.io/devnotes/kramdown-cheatsheet/)
+- [Markdown Kramdown Tips & Tricks \| GitLab](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/)
