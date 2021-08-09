@@ -120,7 +120,7 @@
           </amp-img>
         </a>
         {%- if site.baseurl != "" and site.baseurl != "/" and site.pages.size > 1 -%}
-        {%- assign maxLength = site.nav.local.title.limit | default: 30 -%}
+        {%- assign maxLength = site.nav.local.max_title_length | default: 30 -%}
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="{{ "/" | relative_url }}" title="↰ Top Page">{{ site.title | truncate: maxLength }} <i class="fas fa-anchor"></i></a>

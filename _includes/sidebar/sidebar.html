@@ -1,36 +1,42 @@
 <aside class="sidebar">
 
-  {%- if page.download != nil -%}
-    {%- assign download_widget = page.download -%}
-  {%- elsif layout.download != nil -%}
-    {%- assign download_widget = site.download -%}
-  {%- elsif site.download != nil -%}
-    {%- assign download_widget = page.download -%}
+  {%- if page.resources_widget != nil -%}
+    {%- assign resources_widget = page.resources_widget -%}
+  {%- elsif layout.resources != nil -%}
+    {%- assign resources_widget = site.resources_widget -%}
+  {%- elsif site.resources.download != nil -%}
+    {%- assign resources_widget = page.resources_widget -%}
   {%- else -%}
-    {%- assign download_widget = true -%}
+    {%- assign resources_widget = true -%}
   {%- endif -%}
 
-  {%- if download_widget != false -%}
-  <div aria-label="download links" class="sidebar-section">
+  {%- if resources_widget != false or page.download == true or page.download.url -%}
+  <div id="resources-widget" class="sidebar-section">
     <h5><span>Resources</span></h5>
-    {%- if site.target_blank -%}
-      {%- assign rel_target = ' rel="noopener noreferrer" target="_blank"' -%}
-    {%- endif -%}
     {%- if site.repository and site.github.repository_url -%}
-    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.repository_url }}"{{ rel_target }}>View on GitHub <i class='fab fa-github'></i></a>
-    {%- endif -%}
-    {%- if site.repository and page.download.url -%}
-    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ page.download.url }}" download>Download <i class='fas fa-cloud-download-alt'></i></a>
-    {%- elsif site.github.latest_release -%}
-    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.latest_release.html_url }}"{{ rel_target }}>Latest Release</a>
-    <div class="row" style="justify-content: space-between;">
-      <div><i class='fas fa-tag'></i> {{ site.github.latest_release.tag_name }}</div>
-      <div><i class='fas fa-clock'></i> <time datetime="{{ site.github.latest_release.published_at }}">{{ site.github.latest_release.published_at | date: "%b %d, %Y" }}</time></div>
-      {%- if site.repository and site.github.license -%}
-      <div><i class='fas fa-balance-scale'></i> {{ site.github.license.spdx_id }} License</div>
+      {%- if site.target_blank -%}
+        {%- assign rel_target = ' rel="noopener noreferrer" target="_blank"' -%}
+      {%- endif -%}
+      <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.repository_url }}"{{ rel_target }}>View on GitHub <i class="fab fa-github"></i></a>    
+      {%- if site.github.latest_release -%}
+      <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ site.github.latest_release.html_url }}"{{ rel_target }}>Latest Release</a>
+      <div class="row mb-3" style="justify-content: space-between;">
+        <div><i class='fas fa-tag'></i> {{ site.github.latest_release.tag_name }}</div>
+        <div><i class='fas fa-clock'></i> <time datetime="{{ site.github.latest_release.published_at }}">{{ site.github.latest_release.published_at | date: "%b %d, %Y" }}</time></div>
+        {%- if site.repository and site.github.license -%}
+        <div><i class='fas fa-balance-scale'></i> {{ site.github.license.spdx_id }} License</div>
+        {%- endif -%}
+      </div>
       {%- endif -%}
     {%- endif -%}
-    </div>
+    {%- if page.download.url or page.download.files -%}
+      {%- if page.download.url -%}
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ page.download.url }}" download>Download</a>
+      {%- endif -%}
+      {% for file in page.download.files -%}
+    <a class="btn btn-primary btn-lg col-12 mb-3" href="{{ file.url }}" download><i class='fas fa-download' style="float:left"></i> {{ file.name }}</a>
+      {%- endfor -%}
+    {%- endif -%}
   </div>
   {%- endif -%}
 

@@ -1,6 +1,6 @@
-{%- unless site.nav.global.dropdown == false %}
+{%- if site.nav.global.dropdown != false %}
 {% include main-nav/global-dropdown.html %}
-{%- endunless -%}
+{%- endif -%}
 
 {%- if site.url contains "chriskyfung.github.io" and site.baseurl == "" and site.baseurl == "/" -%}  
 <li class="nav-item">

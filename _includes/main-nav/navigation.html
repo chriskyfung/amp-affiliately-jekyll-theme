@@ -4,7 +4,7 @@
 
   {%- capture link_to_home -%}
   <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/">{{ site.home.text | default: "Home" }}</a>
   </li>
   {%- endcapture -%}
 
@@ -23,9 +23,9 @@
   {%- endif -%}
   {%- endif -%}
   
-  {%- unless site.nav.global == false -%}
+  {%- if site.nav.global.menu == true -%}
   {% include main-nav/global-menu.html %}
-  {%- endunless -%}
+  {%- endif -%}
 
   {%- if site.nav.global.home != false and home_position == "menu-end" %}
   {{ link_to_home }}
