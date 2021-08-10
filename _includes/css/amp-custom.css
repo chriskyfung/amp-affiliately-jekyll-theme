@@ -1,13 +1,50 @@
+amp-img[aria-label=lightbox] {
+  cursor: zoom-in;
+}
+amp-image-lightbox img {
+  object-fit: scale-down;
+}
+amp-image-lightbox button:last-of-type {
+  cursor: zoom-out;
+  min-width: 100%;
+  min-height: 100%
+}
+amp-image-viewer img {
+  max-width: fit-content;
+  transition: width 0.25s linear
+}
 amp-lightbox {
-  background-color: rgba(0, 0, 0, .6);
-  z-index: 1050
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1050;
 }
-.article-post h2:not(:first-child) {
-  margin-top: 6rem
+a.vglnk {
+  border-bottom: 2px dashed gray;
+  box-shadow: unset
 }
-.article-post h3,
-.article-post h4 {
-  margin-top: 3rem
+figure.shadow-none *,
+.shadow-none {
+  box-shadow: none;
+}
+h1 {
+  font-size: 2.5rem
+}
+h2 {
+  font-size: 2rem
+}
+h3 {
+  font-size: 1.6rem
+}
+h4 {
+  font-size: 1.3rem
+}
+h5 {
+  font-size: 1.1rem
+}
+h6 {
+  font-size: 1.05rem
+}
+.article-post h2:not(:first-of-type) {
+  margin-top: 5rem;
 }
 .article-post del {
   color: #999;
@@ -16,7 +53,7 @@ amp-lightbox {
 .article-post del a {
   box-shadow: none;
   border-bottom: 1px solid #ddd;
-  text-decoration: inherit
+  text-decoration: inherit;
 }
 .article-post .box-highlight {
   box-shadow: 1px 2px 15px #675bff
@@ -28,39 +65,33 @@ amp-lightbox {
   padding: 0.2rem 0.4rem;
   color: #bd4147;
   background-color: #f7f7f9;
-  box-shadow: inset 0 -2px 0 #ffe51f, 0 2px 0 #ffe51f
+  box-shadow: inset 0 -2px 0 #ffe51f, 0 2px 0 #ffe51f;
 }
 .article-post a.footnote,
 .article-post a.reversefootnote {
   box-shadow: none;
-  background-color: #ffe51f
+  background-color: #ffe51f;
 }
-.shadow-none,
-figure.shadow-none * {
-  box-shadow: none
+.card .row {
+  height: 100%
 }
-amp-img[aria-label=lightbox] {
-  cursor: zoom-in
+.container {
+  width: 96%;
+  max-width: 100%
 }
-amp-image-lightbox img {
-  object-fit: scale-down
+.inline-fix + * {
+  display: inline;
 }
-amp-image-lightbox button:last-of-type {
-  cursor: zoom-out;
-  min-width: 100%;
-  min-height: 100%
+.inline-fix + * + .badge {
+  vertical-align: text-top;
 }
-amp-image-viewer img {
-  max-width: fit-content;
-  transition: width 0.25s linear
-}
+
 .listfeaturedtag .card .thumbnail img {
   width: 500px;
   height: 258px;
   object-fit: cover
 }
 .listfeaturedtag .card-list {
-  height: auto;
   width: 100%
 }
 .listfeaturedtag .card-list .thumbnail img {
@@ -79,11 +110,4 @@ amp-image-viewer img {
 }
 .thumbnail.fit-right img {
   object-position: right
-}
-a.vglnk {
-  border-bottom: 2px dashed gray;
-  box-shadow: unset
-}
-.card .row {
-  height: 100%
 }

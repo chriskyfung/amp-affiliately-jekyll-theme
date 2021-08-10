@@ -1,0 +1,12 @@
+{%- if site.nav.global.dropdown != false %}
+{% include main-nav/global-dropdown.html %}
+{%- endif -%}
+
+{%- if site.url contains "chriskyfung.github.io" -%}  
+<li class="nav-item">
+  <a class="nav-link" href="/category/cloud/">Cloud</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/category/academic/">Academic</a>
+</li>
+{%- endif -%}

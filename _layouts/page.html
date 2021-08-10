@@ -11,6 +11,16 @@
 layout: default
 ---
 
+{%- assign sidebar = page.sidebar | default: layout.sidebar | default: "none" -%}
+{%- if sidebar == "none" -%}
+{%- assign page_class = "no-sidebar" -%}
+{%- else -%}
+{%- assign page_class = "col-md-8 col-lg-8" -%}
+{%- assign sidebar_class = sidebar | append: '-sidebar' -%}
+{%- endif -%}
+
+{%- if sidebar == "none" -%}
+
 <section>
   <div class="section-title">
     <h2><span>{{ page.title }}</span></h2>
@@ -28,3 +38,30 @@ layout: default
   </div>
   {%- endif -%}
 </section>
+
+{%- else -%}
+
+<div class="row">
+  <!-- Main Content -->
+  <div class="col-md-8 col-lg-8">
+    <h1 class="posttitle">{{ page.title }}</h1>
+    <div class="article-post">
+      {{ content }}
+    </div>
+
+    {%- if page.comments == true -%}
+    <div id="comments" class="row mb-5">
+      <div class="col-md-8">
+        {%- include blocks/disqus.html -%}
+      </div>
+    </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Sidebar -->
+    <div class="col-md-4 col-lg-4 {{ sidebar_class }}">
+      {%- include sidebar/sidebar.html -%}
+    </div>
+</div>
+
+{%- endif -%}

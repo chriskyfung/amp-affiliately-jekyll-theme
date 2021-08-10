@@ -16,7 +16,7 @@ css:
     <h4 id="start-with-{{ init_letter }}">{{ init_letter }}</h4>
     {%- endif -%}
     <li>
-      <a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}/" class="post-tag">{{ tag[0] }}</a>
+      <a href="{{ tag[0] | slugify | prepend: "tag/" | relative_url }}/" class="post-tag">{{ tag[0] }}</a>
       <span class="badge badge-pill badge-primary">{{ tag[1] | size }}</span>
     </li>
     {%- endfor -%}

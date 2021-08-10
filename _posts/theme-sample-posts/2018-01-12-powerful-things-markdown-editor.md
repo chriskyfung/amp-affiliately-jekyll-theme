@@ -26,7 +26,6 @@ If you've gotten pretty comfortable with writing in Markdown, then you may enjoy
 
 As with the last post about the editor, you'll want to be actually editing this post as you read it so that you can see all the Markdown code we're using.
 
-
 ## Special formatting
 
 As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:
@@ -41,7 +40,7 @@ As well as bold and italics, you can also use some other special formatting in M
 
 There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, `like this`. Larger snippets of code can be displayed across multiple lines using triple back ticks:
 
-```
+```css
 .my-link {
     text-decoration: underline;
 }

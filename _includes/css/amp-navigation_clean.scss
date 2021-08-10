@@ -1,0 +1,100 @@
+.mediumnavigation {
+  .form-control {
+    border: 1px solid rgba(0, 0, 0, .04);
+    border-radius: 30px;
+    font-size: .8rem;
+    overflow: hidden;
+  }
+
+  .form-inline {
+    margin-left: 15px;
+
+    .btn {
+      margin-left: -50px;
+      border: 0;
+      border-radius: 30px;
+      cursor: pointer;
+
+      &:active {
+        background: transparent;
+        color: green;
+      }
+
+      &:hover {
+        background: transparent;
+        color: green;
+      }
+    }
+  }
+
+  .navbar-brand {
+    font-weight: 500;
+    padding: 0;
+
+    img {
+      margin-right: 7px;
+      max-width: none;
+      vertical-align: text-bottom;
+    }
+  }
+
+  .nav-item {
+    font-size: .9rem;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -40px;
+    margin-top: 3px;
+  }
+}
+
+.dropdown-item {
+  display: block;
+  padding: 7px 1.5rem;
+  width: 100%;
+}
+
+.dropdown-menu {
+  display: none;
+  font-size: .9rem;
+  z-index: 1;
+}
+
+.dropdown {
+  &:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.navbar-nav {
+  .btn {
+    margin-left: 15px;
+  }
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  overflow: hidden;
+
+  &:focus-visible {
+    overflow: visible;
+  }
+
+  &:hover {
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+}
+
+.searchbox {
+  display: inline;
+  width: calc(100% - 86px);
+}

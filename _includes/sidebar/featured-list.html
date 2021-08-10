@@ -14,7 +14,7 @@
         </div>
       </a>
     </div>
-    <div class="col-md-7 p-0">
+    <div class="wrapmeta">
       <div class="card-block pt-3">
         <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 68 }}</a></h2>
         <div class="metafooter">
@@ -26,7 +26,7 @@
                 {%- assign sortedCategories = post.categories | sort -%}
                 {%- for category in sortedCategories -%}
                 <li>
-                  <small><a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a></small>
+                  <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
                 </li>
                 {%- endfor -%}
               </ul>

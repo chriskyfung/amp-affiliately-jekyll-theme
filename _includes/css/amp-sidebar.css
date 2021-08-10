@@ -1,6 +1,9 @@
+.left-sidebar {
+  order: 1;
+}
 .sidebar {
-  max-width: 340px;
-  font-size: 15px
+  font-size: 15px;
+  max-width: 100%;
 }
 .sidebar h5 {
   margin-bottom: 1rem;
@@ -45,7 +48,7 @@
 .sidebar-section {
   margin-bottom: 2rem;
   padding: 30px 10px 30px 20px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 .sidebar #mc_embed_signup form {
   padding: 0
@@ -56,7 +59,7 @@
   height: auto;
   padding: 6px 20px;
   font-weight: 600;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1)
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1)
 }
 .sidebar #mc_embed_signup h2 {
   font-weight: 400;

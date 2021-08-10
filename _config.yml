@@ -2,13 +2,11 @@
 name: "AMP Affiliately Jekyll Theme"
 title: "AMP Affiliately Jekyll Theme"
 description: "An AMP-ready Jekyll blog theme"
-meta_description: "An AMP-ready Jekyll blog theme"
 url: https://chriskyfung.github.io
 baseurl: '/amp-affiliately-jekyll-theme'
 favicon: 'assets/images/favicon.png'
 logo: 'assets/images/logo-plainSVG.svg'
 permalink: /:year/:month/:day/:title
-paginate_path: "/page:num/"
 paginate: 6
 timezone: 'Asia/Hong_Kong'
 
@@ -27,7 +25,11 @@ nav:
         url: category/sample/
     menu: true
     title:
-      limit: 25
+      limit: 40
+
+# Content Post-processing
+target_blank: false
+anchor_link: true
 
 # Sidebar Features
 sidebar:
@@ -58,7 +60,7 @@ adsense:
   client_id: 'ca-pub-4819282024314540' # Google Adsense client ID
   auto_ads: true
   ad_slot:
-    before_content: 2454411055 # Ad Slot that places before content
+    # before_content: 2454411055 # Ad Slot that places before content
     sidebar: 1391498756 # Ad Slot that places to sidebar
 
 # Soical Buttons
@@ -72,8 +74,7 @@ buymeacoffee: chriskyfung
 
 # Copyright Start Year
 copyright: 
-  prefix: 
-  ownership: Chris KY FUNG
+  owner: Chris KY FUNG
   link: https://chriskyfung.github.io/
 
 # Authors
@@ -115,7 +116,7 @@ plugins:
   - jekyll-gzip
   - jekyll-redirect-from
   - jekyll-github-metadata
-        
+
 # Archives
 jekyll-archives:
   enabled:

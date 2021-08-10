@@ -16,7 +16,7 @@ css:
     <h4>{{ init_letter }}</h4>
     {%- endif -%}
     <li>
-      <a href="{{ site.baseurl }}/category/{{ cat[0] | slugify }}/" class="post-tag">{{ cat[0] }}</a>
+      <a href="{{ cat[0] | slugify | prepend: "category/" | relative_url }}/" class="post-tag">{{ cat[0] }}</a>
       <span class="badge badge-pill badge-primary">{{ cat[1] | size }}</span>
     </li>
     {%- endfor -%}

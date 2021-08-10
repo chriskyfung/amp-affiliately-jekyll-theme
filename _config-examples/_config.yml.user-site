@@ -4,9 +4,8 @@ remote_theme: chriskyfung/amp-affiliately-jekyll-theme
 name: "Chris KY FUNG's Page"
 title: "Chris KY FUNG's Blog"
 description: "Feel free to bookmark this to keep an eye on my project updates"
-meta_description: "Chris KY FUNG's Blog."
-baseurl: ''
 url: https://chriskyfung.github.io
+baseurl: ''
 favicon: 'assets/images/favicon_96x96.png'
 logo: 'assets/images/logo-plainSVG.svg'
 timezone: 'Asia/Hong_Kong'
@@ -15,11 +14,9 @@ permalink: /blog/:year/:month/:day/:title
 paginate_path: "/blog/page:num/"
 paginate: 12
 
-remote_theme: chriskyfung/amp-affiliately-jekyll-theme
-repository: chriskyfung/AutoFetcher-IG-Stories-to-GDrive
 sidebar:
-  featured: false
-  recent_posts: false
+  featured: true
+  recent_posts: true
 
 # AddThis Inline Share Buttons
 addthis: 
@@ -57,8 +54,8 @@ buymeacoffee: chriskyfung
 
 # Copyright Start Year
 copyright: 
-  prefix: 2014-
-  ownership: Chris KY FUNG
+  prepend: Copyright © 2014-
+  owner: Chris KY FUNG
   link: https://chriskyfung.github.io/
 
 # Authors

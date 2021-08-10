@@ -2,7 +2,7 @@
 layout: post
 title: Style Guide
 date: 2017-11-30 04:00:00
-last_modified_at: 2021-06-27 15:10 +0800
+last_modified_at: 2021-08-02 11:14 +0800
 author: Peter
 category: [demo, guide]
 tags: [markdown, styles]
@@ -10,14 +10,12 @@ amp:
   youtube: true
 css:
   syntax: true
-featured: true
+download: true
 ---
 
 <p>This shows how you can use html styling to achieve your hopes.</p>
 
-
 <p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
-
 
 <hr />
 
@@ -115,7 +113,6 @@ SUBMIT
 </div>
 </main>
 
-
 <main class="flex flex-wrap justify-around align-item items-center" markdown="0">
 <div class="flex flex-column items-center">
   <label class="www-example-label bold mb3">On</label>
@@ -194,7 +191,6 @@ SUBMIT
 </div>
 </main>
 
-
 <main class="flex flex-wrap justify-around align-item items-center" markdown="0">
 <div class="flex flex-column items-center">
   <label class="www-example-label bold mb3">Textarea</label>
@@ -247,20 +243,17 @@ SUBMIT
 
 <h3>Definition List</h3>
 
-
 Definition List Title
 : This is a definition list division.
 
-
 Definition
 : An exact statement or description of the nature, scope, or meaning of something: **our definition of what constitutes poetry.**
-
 
 <h3>Ordered List</h3>
 
 <ol>
 <li>List Item 1  </li>
-<li>List Item 2 <br />
+<li>List Item 2 <br>
 <ol><li>Nested list item A</li>
 <li>Nested list item B</li></ol></li>
 <li>List Item 3</li>
@@ -308,7 +301,6 @@ Definition
 }
 ```
 
-
 ```javascript
 // javascript code sample
 $.ajax({
@@ -324,7 +316,6 @@ $.ajax({
   }
 });
 ```
-
 
 ```swift
 // Swift code sample
@@ -345,7 +336,6 @@ import Foundation
 }
 ```
 
-
 <hr />
 
 <h2 id="blockquotes">Blockquotes</h2>
@@ -362,27 +352,27 @@ import Foundation
 
 <h2 id="textlevelsemantics">Text-level semantics</h2>
 
-<p>The <a href="#">a element</a> example <br />
-The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples <br />
-The <b>b element</b> example <br />
-The <cite>cite element</cite> example <br />
-The <code>code element</code> example <br />
-The <del>del element</del> example <br />
-The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples <br />
-The <em>em element</em> example <br />
-The <i>i element</i> example <br />
-The <ins>ins element</ins> example <br />
-The <kbd>kbd element</kbd> example <br />
-The <mark>mark element</mark> example <br />
-The <q>q element <q>inside</q> a q element</q> example <br />
-The <s>s element</s> example <br />
-The <samp>samp element</samp> example <br />
-The <small>small element</small> example <br />
-The <span>span element</span> example <br />
-The <strong>strong element</strong> example <br />
-The <sub>sub element</sub> example <br />
-The <sup>sup element</sup> example <br />
-The <var>var element</var> example <br />
+<p>The <a href="#">a element</a> example <br>
+The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples <br>
+The <b>b element</b> example <br>
+The <cite>cite element</cite> example <br>
+The <code>code element</code> example <br>
+The <del>del element</del> example <br>
+The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples <br>
+The <em>em element</em> example <br>
+The <i>i element</i> example <br>
+The <ins>ins element</ins> example <br>
+The <kbd>kbd element</kbd> example <br>
+The <mark>mark element</mark> example <br>
+The <q>q element <q>inside</q> a q element</q> example <br>
+The <s>s element</s> example <br>
+The <samp>samp element</samp> example <br>
+The <small>small element</small> example <br>
+The <span>span element</span> example <br>
+The <strong>strong element</strong> example <br>
+The <sub>sub element</sub> example <br>
+The <sup>sup element</sup> example <br>
+The <var>var element</var> example <br>
 The <u>u element</u> example</p>
 
 <hr />
@@ -424,3 +414,10 @@ Example:
 {% endcapture %}
 
 {% include callout.html content=callout1 %}
+
+* * *
+
+## Learn More
+
+- [Kramdown Cheat Sheet \| Alberto’s repos](https://aoterodelaroza.github.io/devnotes/kramdown-cheatsheet/)
+- [Markdown Kramdown Tips & Tricks \| GitLab](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/)

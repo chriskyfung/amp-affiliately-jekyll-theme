@@ -1,0 +1,66 @@
+{%- comment -%}
+Modify every link with an external URL with the followings:
+- If `site.google_analytics` is configured, add the attribute `data-vars-event-label` to the anchor tag for using AMP Google Analytics to track outbound link events
+- If `site.target_blank` is configured, add rel="noopener noreferrer" and target="_blank" to the anchor tag
+{%- endcomment -%}
+{%- if site.google_analytics or site.target_blank == true -%}
+  {%- assign splited_by_a = page.content | split: '<a ' -%}
+  {%- assign modified_content_1 = splited_by_a | first -%}
+  {% for splited_a_part in splited_by_a offset:1 %}
+    {%- assign a_splits = splited_a_part | split: '</a>' -%}
+    {%- assign a_tag = a_splits | first | split: '>' -%}
+    {%- assign a_attrs = a_tag | first -%}
+    {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
+      {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
+        {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
+        {%- assign a_inner = a_tag | slice: 1, a_tag.size | join: '>' -%}
+        {%- if site.google_analytics  -%}
+          {%- assign event_label = 'data-vars-event-label="' | append: a_href | append: '" ' -%}
+        {%- endif -%}
+        {%- if site.target_blank == true -%}
+          {%- assign rel_target = ' rel="noopener noreferrer" target="_blank"' -%}
+        {%- endif -%}
+        {%- assign modified_content_1 = modified_content_1 | append: '<a ' | append: event_label | append: a_attrs | append: rel_target | append: ' >' | append: a_inner | append: '</a>' | append: a_splits[1] -%}
+      {%- else -%}
+        {%- assign modified_content_1 = modified_content_1 | append: '<a ' | append: splited_a_part -%}
+      {%- endunless -%}    
+    {%- else -%}
+      {%- assign modified_content_1 = modified_content_1 | append: '<a ' | append: splited_a_part -%}
+    {%- endif -%}
+  {% endfor %}
+{%- else -%}
+  {%- assign modified_content_1 = page.content -%}
+{%- endif -%}
+
+{%- if site.anchor_link == true -%}
+  {%- assign splited_by_h2 = modified_content_1 | split: '<h2 id=' -%}
+  {%- assign modified_content_2 = splited_by_h2 | first -%}
+  {% for splited_h2_part in splited_by_h2 offset:1 %}
+    {%- assign h2_splits = splited_h2_part | split: '</h2>' -%}
+    {%- assign h2_tag = h2_splits | first | split: '>' -%}
+    {%- assign h2_id = h2_tag | first | replace: '"', '' -%}
+    {% assign modified_content_2 = modified_content_2 | append: '<h2 id=' | append: h2_splits.first | append: '<a class="anchor-link" href="#' | append: h2_id | append: '"><i class="fas fa-link"></i></a></h2>' |  append: h2_splits[1] -%}
+  {% endfor %}
+
+  {%- assign splited_by_h3 = modified_content_2 | split: '<h3 id=' -%}
+  {%- assign modified_content_3 = splited_by_h3 | first -%}
+  {% for splited_h3_part in splited_by_h3 offset:1 %}
+    {%- assign h3_splits = splited_h3_part | split: '</h3>' -%}
+    {%- assign h3_tag = h3_splits | first | split: '>' -%}
+    {%- assign h3_id = h3_tag | first | replace: '"', '' -%}
+    {% assign modified_content_3 = modified_content_3 | append: '<h3 id=' | append: h3_splits[0] | append: '<a class="anchor-link" href="#' | append: h3_id | append: '"><i class="fas fa-link"></i></a></h3>' |  append: h3_splits[1] -%}
+  {% endfor %}
+
+  {%- assign splited_by_h4 = modified_content_3 | split: '<h4 id=' -%}
+  {%- assign modified_content_4 = splited_by_h4 | first -%}
+  {% for splited_h4_part in splited_by_h4 offset:1 %}
+    {%- assign h4_splits = splited_h4_part | split: '</h4>' -%}
+    {%- assign h4_tag = h4_splits | first | split: '>' -%}
+    {%- assign h4_id = h4_tag | first | replace: '"', '' -%}
+    {% assign modified_content_4 = modified_content_4 | append: '<h4 id=' | append: h4_splits[0] | append: '<a class="anchor-link" href="#' | append: h4_id | append: '"><i class="fas fa-link"></i></a></h4>' |  append: h4_splits[1] -%}
+  {% endfor %}
+{%- else -%}
+  {%- assign modified_content_4 = modified_content_1 -%}
+{%- endif -%}
+
+{{ modified_content_4 }}

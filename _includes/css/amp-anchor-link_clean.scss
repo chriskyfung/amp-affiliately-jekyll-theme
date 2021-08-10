@@ -1,0 +1,28 @@
+.article-post {
+  .anchor-link {
+    visibility: hidden;
+    box-shadow: none;
+    color: goldenrod;
+    font-size: 1rem;
+    margin-left: .5rem;
+    vertical-align: super;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  * {
+    &:hover {
+      >.anchor-link {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.anchor-link {
+  &:focus {
+    visibility: visible;
+  }
+}

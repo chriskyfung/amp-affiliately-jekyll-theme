@@ -124,12 +124,13 @@ section.recent-posts {
   z-index: 9999
 }
 .navbar-toggleable-md .navbar-nav .nav-link {
-  margin-left: 1rem;
-  font-weight: 500;
   color: #333;
-  text-transform: uppercase;
+  font-size: 0.94em;
+  font-weight: 500;
   letter-spacing: 1px;
-  font-size: 0.94em
+  margin-left: 0;
+  margin-top: 10px;
+  text-transform: uppercase;
 }
 .mediumnavigation .dropdown-menu {
   margin: 0 0 15px;
@@ -139,16 +140,33 @@ section.recent-posts {
 .card-columns .card {
   margin-bottom: 20px
 }
+.listfeaturedtag .wrapmeta,
 .listfeaturedtag .wrapthumbnail {
-  height: 258px;
-  flex: 0 0 auto
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding: 0 15px;
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%
+}
+.listfeaturedtag .wrapmeta {
+  padding: 0;
+}
+.listfeaturedtag .wrapthumbnail {
+  height: 250px;
 }
 .listfeaturedtag .card {
   border-radius: 2px;
-  height: 260px;
+  height: calc(100% - 15px);
   padding-left: 0;
   margin-bottom: 15px;
   box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, .2)
+}
+.listfeaturedtag .card-block {
+  padding: 20px 20px 50px;
 }
 .listfeaturedtag .thumbnail {
   background-size: cover;
@@ -157,9 +175,6 @@ section.recent-posts {
   background-position: 38% 22%;
   background-origin: border-box;
   border-top-left-radius: 2px
-}
-.listfeaturedtag .card-block {
-  padding-left: 0
 }
 .listfeaturedtag h2.card-title,
 .listrecent h2.card-title {
@@ -188,8 +203,12 @@ section.recent-posts {
   position: absolute;
   font-size: 12px;
   display: block;
-  width: 85%;
-  bottom: -15px
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  margin: auto;
+  padding: 0 20px;
 }
 .listrecent .wrapfooter {
   font-size: 12px;
@@ -206,17 +225,17 @@ section.recent-posts {
   margin-bottom: 1rem;
   margin-top: 3rem
 }
+.post-top-meta span {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, .44);
+  display: inline-block;
+}
 .post-top-meta .author-thumb {
   width: 72px;
   height: 72px
 }
 .post-top-meta.authorpage .author-thumb {
   margin-top: 40px
-}
-.post-top-meta span {
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, .44);
-  display: inline-block
 }
 .post-top-meta .author-description {
   margin-bottom: 5px;
@@ -242,7 +261,6 @@ span.post-read {
 span.post-read-more a {
   color: rgba(0, 0, 0, .44);
   align-items: center;
-  display: inline-block;
   float: right;
   width: 30px;
   height: 30px;
@@ -255,8 +273,8 @@ span.post-name a,
 span.post-read-more a:hover {
   color: rgba(0, 0, 0, .8)
 }
-.dot:after {
-  content: "·";
+.dot::after {
+  content: "&middot;";
   margin-left: 3px;
   margin-right: 3px
 }
@@ -266,16 +284,16 @@ span.post-read-more a:hover {
 }
 .mainheading h1.posttitle {
   font-weight: 700;
-  margin-bottom: 1rem
+  font-family: Cambria, Times, serif, fantasy;
 }
 .intro {
-  background-image: url({{site.baseurl}}/assets/images/head.svg);
+  background-image: url( "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/head.svg" );
   background-size: contain;
-  padding: 9rem 0;
   margin-top: -87px;
   margin-bottom: 3.5rem;
+  padding: 3rem 0;
+  position: relative;
   z-index: 1;
-  position: relative
 }
 .intro .btn {
   background: #fff100;
@@ -293,25 +311,25 @@ span.post-read-more a:hover {
   font-weight: 700
 }
 .intro h2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: #888;
   line-height: 1.6
 }
 .wrapintro {
   background: rgba(211, 201, 255, .871);
-  width: 700px;
-  padding: 3rem;
   max-width: 90%;
+  width: 700px;
   margin: 0 auto;
-  text-align: center
+  padding: 2rem 1rem;
+  text-align: center;
 }
 .article-post,
 .link-dark {
   color: rgba(0, 0, 0, .8)
 }
 .article-post {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.8
 }
 .article-post a {
@@ -533,6 +551,9 @@ a.btn {
   font-size: 1rem;
   color: rgba(0, 0, 0, .6)
 }
+.post-top-meta.authorpage {
+  text-align: center;
+}
 .post-top-meta.authorpage .btn.follow {
   padding: 7px 20px;
   margin-top: 10px;
@@ -574,38 +595,31 @@ a.btn {
 #mc_embed_signup {
   font-family: inherit
 }
-.sidebar-right .sidebar {
-  max-width: inherit
-}
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: inherit;
+  font-display: swap;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
-  font-display: swap
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
-.article-post .h1,
-.article-post .h2,
-.article-post .h3,
-.article-post .h4,
-.article-post .h5,
-.article-post .h6,
 .article-post h1,
 .article-post h2,
 .article-post h3,
 .article-post h4,
 .article-post h5,
 .article-post h6 {
-  font-weight: 500;
-  margin-bottom: 1.5rem
+  -webkit-font-smoothing: antialiased;
+  font-family: Cambria, Times, serif, fantasy;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 .article-post img.shadow {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
