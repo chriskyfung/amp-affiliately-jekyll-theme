@@ -220,7 +220,7 @@ You can learn more about the usage of the SEO tag plugin from [here](https://git
 
 * * *
 
-### Options For 3rd-Party Components
+### Options For Third-Party Components
 
 #### <i class="fab fa-google fa-fw"></i> Google Services
 

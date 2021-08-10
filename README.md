@@ -44,8 +44,9 @@
 
 ## ✨ New Features in v2.0
 
-- Add anchor links to H2, H3, and H4 headings inside post content
-- Insert `rel` and `target` attributes to outbound links without plugins or dependencies
+- New block for including Table of Contents to a page/post
+- New post-processing for adding anchor links next to H2, H3, and H4 headings inside post content
+- New post-processing for inserting `rel` and `target` attributes to outbound links without plugins or dependencies
 - Support on-page sidebar options
 - Allow configuring **Resources** Widget globally in `_config.yml`
 - Support creating multiple download buttons in the sidebar widget
