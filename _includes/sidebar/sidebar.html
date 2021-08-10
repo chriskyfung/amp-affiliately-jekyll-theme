@@ -2,10 +2,10 @@
 
   {%- if page.resources_widget != nil -%}
     {%- assign resources_widget = page.resources_widget -%}
-  {%- elsif layout.resources != nil -%}
+  {%- elsif layout.resources_widget != nil -%}
+    {%- assign resources_widget = layout.resources_widget -%}
+  {%- elsif site.resources_widget != nil -%}
     {%- assign resources_widget = site.resources_widget -%}
-  {%- elsif site.resources.download != nil -%}
-    {%- assign resources_widget = page.resources_widget -%}
   {%- else -%}
     {%- assign resources_widget = true -%}
   {%- endif -%}
