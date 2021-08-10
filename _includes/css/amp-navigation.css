@@ -60,9 +60,10 @@
   z-index: 1030;
   overflow: hidden
 }
-.fixed-top:focus-visible,
+.fixed-top:focus-visible {
+  overflow: visible
+}
 .fixed-top:hover {
-  overflow: visible;
   overflow-x: visible;
   overflow-y: visible
 }
