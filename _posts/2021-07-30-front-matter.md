@@ -39,16 +39,16 @@ excerpt: This is the first blog post for my Jekyll site.
 ---
 ```
 
-| Parameter          | Description                                                          |
-| ------------------ | ---------------------------------------------------------------------|
-| `layout`           | Specify the Jekyll layout file to use. _Options:_ `page`, `page-right-sidebar`, `post`, `post-left-sidebar`, `archive`, `category-list` and `tag-list`  |
-| `permalink`        | If you need your processed blog post URLs to be something other than the site-wide style (default `/year/month/day/title.html`), then you can set this variable and it will be used as the final URL. |
-| `title`            | The title of a page/post                                             |
-| `date`             | A date here overrides the date from the name of the post file. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`; hours, minutes, seconds, and timezone offset are optional. |
-| `last_modified_at` | (_Optional_) Specify a date when the post was the last modified      |
-| `category`         | Specify one or more categories that the post belongs to              |
-| `tags`             | Similar to categories, one or multiple tags can be added to a post.  |
-| `excerpt`          | (_Optional_) To custom the short text to show on the card of a post list/grid     |
+| Parameter          | Description                                                                                                                                                                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`           | Specify the Jekyll layout file to use. _Options:_ `page`{:.plaintext}, `page-right-sidebar`{:.plaintext}, `post`{:.plaintext}, `post-left-sidebar`{:.plaintext}, `archive`{:.plaintext}, `category-list`{:.plaintext} and `tag-list`{:.plaintext} |
+| `permalink`        | If you need your processed blog post URLs to be something other than the site-wide style (default `/year/month/day/title.html`{:.plaintext}), then you can set this variable and it will be used as the final URL.                                |
+| `title`            | The title of a page/post                                                                                                                                                                                                                          |
+| `date`             | A date here overrides the date from the name of the post file. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                           |
+| `last_modified_at` | (_Optional_) Specify a date when the post was the last modified                                                                                                                                                                                   |
+| `category`         | Specify one or more categories that the post belongs to                                                                                                                                                                                           |
+| `tags`             | Similar to categories, one or multiple tags can be added to a post.                                                                                                                                                                               |
+| `excerpt`          | (_Optional_) To custom the short text to show on the card of a post list/grid                                                                                                                                                                     |
 
 **💡 Learn more:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
 
@@ -63,14 +63,14 @@ image:
   path: /assets/images/picture.png
 ```
 
-| Parameter | Description                                                                                                 |
-| --------- | ----------------------------------------------------------------------------------------------------------- |
-| `path`    | (_Required_) Absolute or relative path of a JPG, PNG, or SVG file                                           |
-| `hide`    | (_Optional_) Set to `true` to not embed the image on the page                                               |
-| `class`   | (_Optional_) Additional class names for the &lt;amp-img&gt; component, e.g. `shadow-none` to remove the box shallow  |
-| `width`   | (_Optional_) Specify the image width (in px). _Default:_ 730 (px)                                           |
-| `height`  | (_Optional_) Specify the image height (in px). _Default:_ 411 (px)                                          |
-| `fit`     | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`/`right`    |
+| Parameter | Description                                                                                                                          |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `path`    | (_Required_) Absolute or relative path of a JPG, PNG, or SVG file                                                                    |
+| `hide`    | (_Optional_) Set to `true`{:.plaintext} to not embed the image on the page                                                           |
+| `class`   | (_Optional_) Additional class names for the &lt;amp-img&gt; component, e.g. `shadow-none`{:.plaintext} to remove the box shallow     |
+| `width`   | (_Optional_) Specify the image width (in px). _Default:_ 730 (px)                                                                    |
+| `height`  | (_Optional_) Specify the image height (in px). _Default:_ 411 (px)                                                                   |
+| `fit`     | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext} |
 
 * * *
 
