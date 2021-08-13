@@ -9,6 +9,11 @@ $yellow_fff100: #fff100;
   li {
     display: inline-block;
     font-size: .9rem;
+    margin-right: .2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     a {
       background: $yellow_fff100;
