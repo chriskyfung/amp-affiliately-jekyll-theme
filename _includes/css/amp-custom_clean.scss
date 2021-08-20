@@ -127,6 +127,11 @@ kbd {
       padding: .2rem .4rem;
     }
 
+    &.citation {
+      background-color: $gold_ffe51f;
+      box-shadow: none;
+    }
+
     &.footnote {
       background-color: $gold_ffe51f;
       box-shadow: none;

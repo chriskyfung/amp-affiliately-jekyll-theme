@@ -78,6 +78,7 @@ kbd {
   background-color: #f7f7f9;
   box-shadow: inset 0 -2px 0 #ffe51f, 0 2px 0 #ffe51f;
 }
+.article-post a.citation,
 .article-post a.footnote,
 .article-post a.reversefootnote {
   box-shadow: none;
