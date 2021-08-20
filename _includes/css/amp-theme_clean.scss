@@ -60,7 +60,7 @@ pre {
   background: $whitesmoke_f7fafb;
   border: $aliceblue_e3edf3 1px solid;
   border-radius: 3px;
-       box-sizing: border-box;
+    box-sizing: border-box;
   font-display: swap;
   font-family: monospace, sans-serif;
   font-size: 14px;
@@ -158,20 +158,10 @@ section {
 .article-post {
   ol {
     margin-bottom: 1.5rem;
-
-    ol {
-      list-style: disc;
-      margin-bottom: 0;
-    }
   }
 
   ul {
     margin-bottom: 1.5rem;
-
-    ul {
-      list-style: disc;
-      margin-bottom: 0;
-    }
   }
   color: rgba(0, 0, 0, .8);
   font-size: 1.1rem;
