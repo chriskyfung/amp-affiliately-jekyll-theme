@@ -154,11 +154,12 @@ section.recent-posts {
   height: 250px;
 }
 .listfeaturedtag .card {
+  border: 0;
   border-radius: 2px;
   height: calc(100% - 15px);
   padding-left: 0;
   margin-bottom: 15px;
-  box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, .2)
+  box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, .2);
 }
 .listfeaturedtag .card-block {
   padding: 20px 20px 50px;
@@ -408,11 +409,7 @@ blockquote {
   padding: 40px 0 46px;
   position: relative
 }
-.listrelated .card {
-  box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
-  border: 0
-}
-.card {
+.listrecent .card {
   border-radius: 4px;
   margin-bottom: 30px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, .14);
