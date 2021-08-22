@@ -110,7 +110,7 @@ css:
 **💡 Learn more:**
 
 - [Badges](https://getbootstrap.com/docs/4.0/components/badge/ "Bootstrap 4")
-- [Code Block](/code/ "AMP Affiliately Jekyll Theme")
+- [Code Block]({% post_url 2017-11-28-code %} "AMP Affiliately Jekyll Theme")
 - [How To Create A Zebra Striped Table](https://www.w3schools.com/howto/howto_css_table_zebra.asp "W3Schools")
 
 ```yaml
@@ -122,7 +122,7 @@ amp:
   youtube: true  # page level
 ```
 
-**💡 Related:** [How to include YouTube Video and Playlist embeds](/amp-affiliately-jekyll-theme/media/#video  "AMP Affiliately Jekyll Theme")
+**💡 Related:** [How to include YouTube Video and Playlist embeds]({% post_url 2017-11-27-media %}#video  "AMP Affiliately Jekyll Theme")
 
 * * *
 
