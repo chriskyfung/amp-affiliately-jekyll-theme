@@ -28,14 +28,7 @@ amp:
 
       <!-- Post Categories -->
       <div class="after-post-tags">
-        <ul class="tags">
-          {%- assign sortedCategories = page.categories | sort -%}
-          {%- for category in sortedCategories -%}
-          <li>
-            <a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a>
-          </li>
-          {%- endfor -%}
-        </ul>
+        {% include /blocks/list-categories.html %}
       </div>
       <!-- End Categories -->
 
@@ -81,14 +74,7 @@ amp:
 
     <!-- Post Tags -->
     <div class="after-post-tags">
-      <ul class="tags rounded-tags">
-        {%- assign sortedTags = page.tags | sort -%}
-        {%- for tag in sortedTags -%}
-        <li>
-          <a href="{{ tag | slugify | prepend: "tag/" | relative_url }}/">{{ tag }}</a>
-        </li>
-        {%- endfor -%}
-      </ul>
+      {% include blocks/list-tags.html %}
     </div>
     <!-- End Tags -->
 

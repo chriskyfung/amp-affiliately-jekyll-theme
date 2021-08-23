@@ -35,28 +35,14 @@
         <div class="wrapfooter">
           <!-- Post Tags -->
           <div class="after-post-tags">
-            <ul class="tags rounded-tags">
-              {%- assign sortedTags = post.tags | sort -%}
-              {%- for tag in sortedTags -%}
-              <li>
-                <small><a href="{{ tag | slugify | prepend: "tag/" | relative_url }}/">{{ tag }}</a></small>
-              </li>
-              {%- endfor -%}
-            </ul>
+            {% include blocks/list-tags.html %}
           </div>
           <!-- End Tags -->
           {% include blocks/post-date.html %}
           <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
           {% if page.url == "/blog/" or page.url contains "/blog/page"%}
           <div class="post-meta">
-            <ul class="tags">
-              {%- assign sortedCategories = post.categories | sort -%}
-              {%- for category in sortedCategories -%}
-              <li>
-                <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
-              </li>
-              {%- endfor -%}
-            </ul>
+            {% include blocks/list-categories.html %}
           </div>
           {%- endif -%}
           <div class="clearfix"></div>
