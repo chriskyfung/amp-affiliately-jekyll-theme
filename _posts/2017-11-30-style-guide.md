@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Style Guide
+title: Styles
 date: 2017-11-30 04:00:00
 last_modified_at: 2021-08-02 11:14 +0800
 author: Peter
-category: [demo, guide]
-tags: [markdown, styles]
+category: [feature]
+tags: [markdown, styles, demo]
+permalink: /style-guide/
+redirect_from: [/2017/11/30/style-guide]
 amp:
   youtube: true
 css:

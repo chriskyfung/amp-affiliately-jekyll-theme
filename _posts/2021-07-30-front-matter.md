@@ -3,8 +3,8 @@ layout: post
 title: Front Matter
 date: 2021-07-31 12:05 +0800
 last_modified_at: 2021-08-10 00:01 +0800
-category: [guide, config]
-tags: [front matter]
+category: [doc]
+tags: [front matter, styles, AMP]
 permalink: /front-matter/
 image: 
    path: /assets/images/frontend-4342425_730.png

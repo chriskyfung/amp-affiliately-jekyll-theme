@@ -2,9 +2,9 @@
 layout: post
 title: Config Guide
 date: 2021-08-10 00:01 +0800
-last_modified_at: 2021-08-22 09:41 +0800
-category: [guide, config]
-tags: [_config.yml]
+last_modified_at: 2021-08-23 23:00 +0800
+category: [doc]
+tags: [_config]
 permalink: /config-guide/
 image: 
    path: /assets/images/settings-3311592.svg
@@ -130,6 +130,15 @@ Use the following options to configure the menu items that will be shown on the 
 |           | `max_title_length` | <span class="badge badge-success">v2.0</span> The maximun number of characters to display _`site.title`_ in the navigation bar._Default_: `40`{:.plaintext}. |
 |           | `items`            | <span class="badge badge-success">v1.7.2</span> An array of simple menu items that consists of the `name` and `url` key-value pairs.                         |
 |           | `menu`             | <span class="badge badge-success">v1.7.2</span> Set `true`{:.plaintext} to include menu items from `local-menu.html`.<br>_Default:_ `false`{:.plaintext}.    |
+
+* * *
+
+### List Sorting Options <span class="badge badge-default">v2.3</span>
+
+|      Setting      | Description                                                                                                     |
+| :---------------: | --------------------------------------------------------------------------------------------------------------- |
+| `sort_categories` | Set `false`{:.plaintext} to disable sorting the items of post's categories.<br> _Default:_ `true`{:.plaintext}. |
+|    `sort_tags`    | Set `false`{:.plaintext} to disable sorting the items of post's tags.<br> _Default:_ `true`{:.plaintext}.       |
 
 * * *
 

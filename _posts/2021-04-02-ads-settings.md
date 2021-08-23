@@ -3,8 +3,8 @@ layout: post
 title: Ads Settings
 date: 2021-04-02 11:00:00 +0800
 author: chris
-category: [guide, config]
-tags: [adsense]
+category: [feature, doc]
+tags: [Adsense, _config, styles, AMP]
 permalink: /ads-settings/
 image:
   path: /assets/images/web-5771064_730.png
@@ -25,6 +25,8 @@ css:
 excerpt: "Ads Styles and Configuration"
 download: true
 ---
+
+{% include toc.md %}
 
 This theme supports Ad display with Google Adsense using `<amp-ad>` and `<amp-auto-ads>` components.
 
@@ -73,8 +75,6 @@ adsense:
     before_content: xxxxxxxxxx # Ad Slot that places before content
     sidebar: xxxxxxxxxx # Ad Slot that places to sidebar
 ```
-
-{% include toc.md %}
 
 ### Recommended Ad sizes
 
