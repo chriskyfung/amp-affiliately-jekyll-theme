@@ -13,10 +13,10 @@ Modify every link with an external URL with the followings:
     {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
       {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
         {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
-        {%- if a_tag.size == 2 -%}
         {%- assign a_inner = a_tag | slice: 1, a_tag.size | join: '>' -%}
-        {%- else -%}
-        {%- assign a_inner = a_tag | slice: 1, a_tag.size | join: '>' | append: '>' -%}
+        {% assign a_tag_lastchar = a_splits | first | slice: -1, 1 %}
+        {%- if a_tag_lastchar == '>' -%}
+        {%- assign a_inner = a_inner | append: '>' -%}
         {%- endif -%}
         {%- if site.google_analytics  -%}
           {%- assign event_label = 'data-vars-event-label="' | append: a_href | append: '" ' -%}
