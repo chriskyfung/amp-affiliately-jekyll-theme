@@ -15,6 +15,7 @@ css:
     table { font-size: .95rem; margin-bottom: 1.5rem }
     tr:nth-child(odd) { backgroud-color: #e3edf3 }
     td { padding: .5em }
+excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
 featured: true
 ---
 
@@ -171,7 +172,7 @@ sidebar: left
 
 When you use this theme for the website of a Github project repository, it is available to show buttons that link to the repository and a release file in the sidebar.
 
-Follow our [Config Guide]({% post_url 2021-08-02-config-guides %}) to set up your `_config.yml` file.
+Follow our [Config Guide]({% post_url 2021-08-02-config-guide %}) to set up your `_config.yml` file.
 
 If a release exists in the repository, an additional button that links to the webpage of the latest release will be shown in the widget.
 

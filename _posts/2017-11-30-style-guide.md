@@ -10,7 +10,7 @@ amp:
   youtube: true
 css:
   syntax: true
-download: true
+excerpt: The demos for HTML styling and Markdown output as it appears in the browser.
 ---
 
 <p>This shows how you can use html styling to achieve your hopes.</p>

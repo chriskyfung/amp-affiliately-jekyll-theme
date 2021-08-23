@@ -17,8 +17,8 @@ css:
     th, td { padding: .5em; }
     .box { border: 1px solid #e3edf3; padding: 1rem; }
     .plaintext { color: mediumseagreen; }
+excerpt: The docs for the theme settings that let you control the global styling like logo, navigation, sidebar, footer, pagnitation, etc.
 featured: true
-download: true
 ---
 
 {% include toc.md %}

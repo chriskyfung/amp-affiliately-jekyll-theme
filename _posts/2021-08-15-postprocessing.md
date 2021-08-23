@@ -18,11 +18,12 @@ css:
     .box { border: 1px solid #e3edf3; padding: 1rem; }
     .plaintext { color: mediumseagreen; }
 featured: true
+excerpt: The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.
 ---
 
 ## Add Anchor Link For H2, H3 And H4 Headings
 
-Starting from <span class="badge badge-success">v2.0</span>, it is enable to attach an anchor link to **H2**-**H4** elements inside posts’ content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/) with no dependencies. See the [Config Guide]({% post_url 2021-08-02-config-guides %}#-add-anchor-link-for-h2-h3-and-h4-headings) if you perfer to disable this feature in your site.
+Starting from <span class="badge badge-success">v2.0</span>, it is enable to attach an anchor link to **H2**-**H4** elements inside posts’ content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/) with no dependencies. See the [Config Guide]({% post_url 2021-08-02-config-guide %}#-add-anchor-link-for-h2-h3-and-h4-headings) if you perfer to disable this feature in your site.
 
 {% capture headings %}
 
@@ -53,6 +54,24 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+##### H5 Heading (_no anchor_)
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+###### H6 Heading (_no anchor_)
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 {% endcapture %}
 
 **Examples**
@@ -67,7 +86,7 @@ To enable outbound link tracking with Google Analytics in AMP, you need to inser
 
 Starting from <span class="badge badge-success">v2.0</span>, this theme replace the non-whitelist `jekyll-target-blank.rb` plugin with pure Liquid templating language to modify the links.
 
-See the [Config Guide]({% post_url 2021-08-02-config-guides %}#-modify-external-links-to-open-in-new-tab) if you also want to set opening the external links in a new tab.
+See the [Config Guide]({% post_url 2021-08-02-config-guide %}#-modify-external-links-to-open-in-new-tab) if you also want to set opening the external links in a new tab.
 
 {% capture links %}
 
