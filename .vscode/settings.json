@@ -1,0 +1,11 @@
+{
+  "frontMatter.taxonomy.modifiedField": "last_modified_at",
+  "grammarly.domain": "technical",
+  "grammarly.userWords": [
+    "css",
+    "jekyll",
+    "html"
+  ],
+  "grammarly.audience": "general",
+  "grammarly.hideUnavailablePremiumAlerts": true
+}

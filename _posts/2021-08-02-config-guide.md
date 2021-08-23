@@ -2,6 +2,7 @@
 layout: post
 title: Config Guide
 date: 2021-08-10 00:01 +0800
+last_modified_at: 2021-08-22 09:41 +0800
 category: [guide, config]
 tags: [_config.yml]
 permalink: /config-guide/
@@ -16,8 +17,8 @@ css:
     th, td { padding: .5em; }
     .box { border: 1px solid #e3edf3; padding: 1rem; }
     .plaintext { color: mediumseagreen; }
+excerpt: The docs for the theme settings that let you control the global styling like logo, navigation, sidebar, footer, pagnitation, etc.
 featured: true
-download: true
 ---
 
 {% include toc.md %}
@@ -136,9 +137,9 @@ Use the following options to configure the menu items that will be shown on the 
 
 #### <i class="fas fa-link fa-fw"></i> Add Anchor Link For H2, H3 And H4 Headings
 
-|    Setting    | Description                                                                                                                                                                                     |
-| :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `anchor_link` | Set `true`{:.plaintext} to attach an anchor link next to H2-H4 elements inside posts' content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/).<br> _Default:_ `false`{:.plaintext}. |
+|    Setting    | Description                                                                                                                                                                                                                                                                                  |
+| :-----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `anchor_link` | Set `true`{:.plaintext} to attach an anchor link to H2-H4 elements inside posts' content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/) ([View Demo]({% post_url 2021-08-15-postprocessing %}#add-anchor-link-for-h2-h3-and-h4-headings)).<br> _Default:_ `false`{:.plaintext}. |
 
 #### <i class="fas fa-door-open fa-fw"></i> Modify External Links To Open In New Tab
 
@@ -252,7 +253,7 @@ You can learn more about the usage of the SEO tag plugin from [here](https://git
 |           | `ad_slot`   | `before_content` - Slot ID of ad unit that places before content<br>`sidebar` - Slot ID of ad unit that places to sidebar          |
 | `adstyle` |             | Set `false` to not apply custom styles to indicate empty Ad containers.<br>_Default:_ `true`{:.plaintext}.                         |
 
-💡 Read the [Ads Settings](/amp-affiliately-jekyll-theme/ads-settings/) documentation
+💡 Read the [Ads Settings]({% post_url 2021-04-02-ads-settings %}) documentation
 
 ##### <i class="fas fa-expand fa-fw" style="transform: rotate(45deg)"></i> Google Tag Manager (GTM)
 

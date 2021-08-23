@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ginfuru.vscode-jekyll-snippets",
+    "eliostruyf.vscode-front-matter",
+    "amphtml.amphtml-validator",
+    "catherinekorres.amp-snippets",
+    "mervin.markdown-formatter",
+    "rohgarg.jekyll-post",
+    "piotrpalarz.vscode-gitignore-generator",
+    "znck.grammarly",
+    "sissel.shopify-liquid"
+  ]
+}

@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   overflow-x: hidden;
   font-display: swap
 }
@@ -20,7 +20,6 @@ pre {
   border: #e3edf3 1px solid;
   width: 100%;
   padding: 10px;
-  font-family: monospace, sans-serif;
   font-size: 14px;
   white-space: pre;
   overflow: auto;
@@ -91,11 +90,6 @@ section.recent-posts {
 .article-post ul {
   margin-bottom: 1.5rem
 }
-.article-post ol ol,
-.article-post ul ul {
-  list-style: disc;
-  margin-bottom: 0
-}
 .prevnextlinks .thepostlink {
   padding: 20px 0;
   font-size: 17px;
@@ -159,11 +153,12 @@ section.recent-posts {
   height: 250px;
 }
 .listfeaturedtag .card {
+  border: 0;
   border-radius: 2px;
   height: calc(100% - 15px);
   padding-left: 0;
   margin-bottom: 15px;
-  box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, .2)
+  box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, .2);
 }
 .listfeaturedtag .card-block {
   padding: 20px 20px 50px;
@@ -274,17 +269,17 @@ span.post-read-more a:hover {
   color: rgba(0, 0, 0, .8)
 }
 .dot::after {
-  content: "&middot;";
+  content: "\00b7";
   margin-left: 3px;
   margin-right: 3px
 }
 .mainheading h1.sitetitle {
-  font-family: Georgia;
-  font-display: swap
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-display: swap;
 }
 .mainheading h1.posttitle {
   font-weight: 700;
-  font-family: Cambria, Times, serif, fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .intro {
   background-image: url( "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/head.svg" );
@@ -329,7 +324,8 @@ span.post-read-more a:hover {
   color: rgba(0, 0, 0, .8)
 }
 .article-post {
-  font-size: 1.05rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.1rem;
   line-height: 1.8
 }
 .article-post a {
@@ -413,11 +409,7 @@ blockquote {
   padding: 40px 0 46px;
   position: relative
 }
-.listrelated .card {
-  box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
-  border: 0
-}
-.card {
+.listrecent .card {
   border-radius: 4px;
   margin-bottom: 30px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, .14);
@@ -602,10 +594,8 @@ h4,
 h5,
 h6 {
   color: inherit;
-  font-display: swap;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -615,9 +605,6 @@ h6 {
 .article-post h4,
 .article-post h5,
 .article-post h6 {
-  -webkit-font-smoothing: antialiased;
-  font-family: Cambria, Times, serif, fantasy;
-  font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }

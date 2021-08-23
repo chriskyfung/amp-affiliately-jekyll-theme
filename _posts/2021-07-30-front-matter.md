@@ -15,6 +15,7 @@ css:
     table { font-size: .95rem; margin-bottom: 1.5rem }
     tr:nth-child(odd) { backgroud-color: #e3edf3 }
     td { padding: .5em }
+excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
 featured: true
 ---
 
@@ -110,7 +111,7 @@ css:
 **💡 Learn more:**
 
 - [Badges](https://getbootstrap.com/docs/4.0/components/badge/ "Bootstrap 4")
-- [Code Block](/code/ "AMP Affiliately Jekyll Theme")
+- [Code Block]({% post_url 2017-11-28-code %} "AMP Affiliately Jekyll Theme")
 - [How To Create A Zebra Striped Table](https://www.w3schools.com/howto/howto_css_table_zebra.asp "W3Schools")
 
 ```yaml
@@ -122,7 +123,7 @@ amp:
   youtube: true  # page level
 ```
 
-**💡 Related:** [How to include YouTube Video and Playlist embeds](/amp-affiliately-jekyll-theme/media/#video  "AMP Affiliately Jekyll Theme")
+**💡 Related:** [How to include YouTube Video and Playlist embeds]({% post_url 2017-11-27-media %}#video  "AMP Affiliately Jekyll Theme")
 
 * * *
 
@@ -171,7 +172,7 @@ sidebar: left
 
 When you use this theme for the website of a Github project repository, it is available to show buttons that link to the repository and a release file in the sidebar.
 
-Follow our [Config Guide]({% post_url 2021-08-02-config-guides %}) to set up your `_config.yml` file.
+Follow our [Config Guide]({% post_url 2021-08-02-config-guide %}) to set up your `_config.yml` file.
 
 If a release exists in the repository, an additional button that links to the webpage of the latest release will be shown in the widget.
 

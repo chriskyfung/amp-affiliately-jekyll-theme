@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%
@@ -28,7 +28,7 @@ hr {
   overflow: visible
 }
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace, sans-serif;
   font-size: 1em
 }
 a {
@@ -48,7 +48,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace, sans-serif;
   font-size: 1em
 }
 sub,
@@ -72,7 +72,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0
