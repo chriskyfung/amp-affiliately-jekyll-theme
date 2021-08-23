@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   overflow-x: hidden;
   font-display: swap
 }
@@ -20,7 +20,6 @@ pre {
   border: #e3edf3 1px solid;
   width: 100%;
   padding: 10px;
-  font-family: monospace, sans-serif;
   font-size: 14px;
   white-space: pre;
   overflow: auto;
@@ -270,17 +269,17 @@ span.post-read-more a:hover {
   color: rgba(0, 0, 0, .8)
 }
 .dot::after {
-  content: "&middot;";
+  content: "\00b7";
   margin-left: 3px;
   margin-right: 3px
 }
 .mainheading h1.sitetitle {
-  font-family: Georgia;
-  font-display: swap
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-display: swap;
 }
 .mainheading h1.posttitle {
   font-weight: 700;
-  font-family: Cambria, Times, serif, fantasy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .intro {
   background-image: url( "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/head.svg" );
@@ -325,6 +324,7 @@ span.post-read-more a:hover {
   color: rgba(0, 0, 0, .8)
 }
 .article-post {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.05rem;
   line-height: 1.8
 }
@@ -594,8 +594,6 @@ h4,
 h5,
 h6 {
   color: inherit;
-  font-display: swap;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   margin-top: 0;
@@ -607,9 +605,6 @@ h6 {
 .article-post h4,
 .article-post h5,
 .article-post h6 {
-  -webkit-font-smoothing: antialiased;
-  font-family: Cambria, Times, serif, fantasy;
-  font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
