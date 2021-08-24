@@ -7,7 +7,7 @@ category: [feature, doc]
 tags: [Adsense, _config, styles, AMP]
 permalink: /ads-settings/
 image:
-  path: /assets/images/web-5771064_730.png
+  path: /assets/images/web-5771064_730.jpg
 css:
   syntax: true
   custom: >-
@@ -23,7 +23,6 @@ css:
       padding: 5px;
     }
 excerpt: "Ads Styles and Configuration"
-download: true
 ---
 
 {% include toc.md %}
