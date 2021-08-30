@@ -152,7 +152,7 @@ featured: true
 download: true
 ---
 
-Preview the look of the responsive design for different devices (smartphone <i class="fas fa-mobile-alt"></i> , tablet <i class="fas fa-tablet-alt"></i> and laptop <i class="fas fa-laptop"></i>)
+Preview the look of the responsive design for different devices (smartphone <i class="fas fa-mobile-alt"></i> , tablet <i class="fas fa-tablet-alt"></i> and laptop <i class="fas fa-laptop"></i>) &ndash; _**Remark**: This page does not support for Internet Explorer (IE)_
 
 <div style="display:flex;flex-wrap:wrap;">
 

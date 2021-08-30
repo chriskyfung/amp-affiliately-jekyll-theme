@@ -84,7 +84,7 @@ kbd {
   box-shadow: none;
   background-color: #ffe51f;
 }
-.card .row {
+.card .row, .card > a {
   height: 100%
 }
 .container {
@@ -97,17 +97,15 @@ kbd {
 .inline-fix + * + .badge {
   vertical-align: text-top;
 }
-
 .listfeaturedtag .card .thumbnail img {
   width: 500px;
   height: 258px;
-  object-fit: cover
 }
 .listfeaturedtag .card-list {
   width: 100%
 }
 .listfeaturedtag .card-list .thumbnail img {
-  width: 500px;
+  width: 291px;
   height: 150px;
   object-fit: cover
 }

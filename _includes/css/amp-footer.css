@@ -1,6 +1,5 @@
 .beforefooter {
-  background: #fff100;
-  background-image: url('/images/header-bg.jpg');
+  background: linear-gradient(rgba(255,241,0,.8),rgba(255,241,0,.8)), url('https://chriskyfung.github.io/images/header-bg.jpg');
   background-size: contain;
   background-position-x: center;
   background-blend-mode: overlay;
@@ -9,6 +8,13 @@
   margin: 50px auto -50px;
   padding: 50px 0;
   text-align: center;
+}
+@supports (background-blend-mode: overlay) {
+  .beforefooter {
+    background-color: #fff100;
+    background-image: url('https://chriskyfung.github.io/images/header-bg.jpg');
+    background-blend-mode: overlay;
+  }
 }
 .beforefooter h3 {
   margin-bottom: 1rem

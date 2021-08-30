@@ -205,6 +205,9 @@ section.recent-posts {
   margin: auto;
   padding: 0 20px;
 }
+.listrecent {
+  width: 100%;
+}
 .listrecent .wrapfooter {
   font-size: 12px;
   margin-top: 30px
