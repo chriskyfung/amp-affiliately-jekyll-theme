@@ -25,6 +25,9 @@
     max-width: 500px;
     overflow-x: hidden;
     }
+  .listfeaturedtag .card-list .thumbnail img {
+      width: 291px;
+  }
   .sidebar {
     max-width: 340px;
   }
