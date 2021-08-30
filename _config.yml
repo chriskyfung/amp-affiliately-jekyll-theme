@@ -19,13 +19,19 @@ nav:
     dropdown: false
   local:
     items:
-      - name: Guides
-        url: category/guide/
+      - name: Features
+        url: category/feature/
+      - name: Docs
+        url: category/doc/
       - name: Samples
         url: category/sample/
     menu: true
     title:
       limit: 40
+
+# List Sorting
+sort_categories: false
+sort_tags: false
 
 # Content Post-processing
 target_blank: false

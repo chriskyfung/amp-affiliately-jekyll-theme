@@ -148,6 +148,10 @@ kbd {
   .row {
     height: 100%;
   }
+
+  >a {
+    height: 100%;
+  }
 }
 
 .container {
@@ -170,7 +174,6 @@ kbd {
     .thumbnail {
       img {
         height: 258px;
-        object-fit: cover;
         width: 500px;
       }
     }

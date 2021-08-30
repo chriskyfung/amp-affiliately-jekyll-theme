@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Front Matter
+title: Front Matter Guide
 date: 2021-07-31 12:05 +0800
-last_modified_at: 2021-08-10 00:01 +0800
-category: [guide, config]
-tags: [front matter]
-permalink: /front-matter/
+last_modified_at: 2021-08-24 00:01 +0800
+category: [doc]
+tags: [front matter, styles, AMP]
+permalink: /front-matter-guide/
+redirect_from: [/front-matter/]
 image: 
    path: /assets/images/frontend-4342425_730.png
 css:
@@ -15,6 +16,7 @@ css:
     table { font-size: .95rem; margin-bottom: 1.5rem }
     tr:nth-child(odd) { backgroud-color: #e3edf3 }
     td { padding: .5em }
+    .plaintext { color: mediumseagreen; }
 excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
 featured: true
 ---
@@ -40,16 +42,16 @@ excerpt: This is the first blog post for my Jekyll site.
 ---
 ```
 
-| Parameter          | Description                                                                                                                                                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout`           | Specify the Jekyll layout file to use. _Options:_ `page`{:.plaintext}, `page-right-sidebar`{:.plaintext}, `post`{:.plaintext}, `post-left-sidebar`{:.plaintext}, `archive`{:.plaintext}, `category-list`{:.plaintext} and `tag-list`{:.plaintext} |
-| `permalink`        | If you need your processed blog post URLs to be something other than the site-wide style (default `/year/month/day/title.html`{:.plaintext}), then you can set this variable and it will be used as the final URL.                                |
-| `title`            | The title of a page/post                                                                                                                                                                                                                          |
-| `date`             | A date here overrides the date from the name of the post file. A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                           |
-| `last_modified_at` | (_Optional_) Specify a date when the post was the last modified                                                                                                                                                                                   |
-| `category`         | Specify one or more categories that the post belongs to                                                                                                                                                                                           |
-| `tags`             | Similar to categories, one or multiple tags can be added to a post.                                                                                                                                                                               |
-| `excerpt`          | (_Optional_) To custom the short text to show on the card of a post list/grid                                                                                                                                                                     |
+| Attribute          | Description                                                                                                                                                                                                                                                                  |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`           | The Jekyll layout file to use.<br>_Options:_ `page`{:.plaintext}, `post`{:.plaintext}, `archive`{:.plaintext}, `category-list`{:.plaintext} and `tag-list`{:.plaintext}.<br>**Note**: `page-right-sidebar`{:.plaintext} and `post-left-sidebar`{:.plaintext} are deprecated. |
+| `title`            | The title of the page or post.                                                                                                                                                                                                                                               |
+| `date`             | The date here overrides the date from the name of the post file.<br>**Note**: A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                                       |
+| `last_modified_at` | (_Optional_) The date when the post was the last modified.<br>**Note**: A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                                             |
+| `permalink`        | (_Optional_) The custom URL for the page or post, if you need your processed blog post URLs to be something other than the site-wide style. _Default:_ `/year/month/day/title.html`{:.plaintext}.                                                                            |
+| `category`         | (_Optional_) One or multiple categories that the post belongs to.                                                                                                                                                                                                            |
+| `tags`             | (_Optional_) One or multiple tags that the post associates with.                                                                                                                                                                                                             |
+| `excerpt`          | (_Optional_) The short text to show on the card of the list/grid of posts, and use as the meta description of the page or post.                                                                                                                                              |
 
 **💡 Learn more:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
 
@@ -64,14 +66,16 @@ image:
   path: /assets/images/picture.png
 ```
 
-| Parameter | Description                                                                                                                          |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `path`    | (_Required_) Absolute or relative path of a JPG, PNG, or SVG file                                                                    |
-| `hide`    | (_Optional_) Set to `true`{:.plaintext} to not embed the image on the page                                                           |
-| `class`   | (_Optional_) Additional class names for the &lt;amp-img&gt; component, e.g. `shadow-none`{:.plaintext} to remove the box shallow     |
-| `width`   | (_Optional_) Specify the image width (in px). _Default:_ 730 (px)                                                                    |
-| `height`  | (_Optional_) Specify the image height (in px). _Default:_ 411 (px)                                                                   |
-| `fit`     | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext} |
+| Property | Description                                                                                                                           |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `path`   | (_Required_) Absolute or relative path of a JPG, PNG, or SVG file.                                                                    |
+| `hide`   | (_Optional_) Set to `true`{:.plaintext} to not embed the image on the page.                                                           |
+| `class`  | (_Optional_) Additional class names for the &lt;amp-img&gt; component, e.g. `shadow-none`{:.plaintext} to remove the box shallow.     |
+| `width`  | (_Optional_) Specify the image width (in px). _Default:_ 730 (px).                                                                    |
+| `height` | (_Optional_) Specify the image height (in px). _Default:_ 411 (px).                                                                   |
+| `fit`    | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext}. |
+
+**Note**: The `path`, `width` and `height` properties are also inheriting the feature from [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output)'s `image` property.
 
 * * *
 
@@ -225,6 +229,31 @@ download:
     - url: ../training-01/lab-files.zip
       name: Lab Files
 ```
+
+* * *
+
+## On-Page SEO
+
+| Attribute       | Description                                                                                                                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `canonical_url` | (_Optional_) The custom [Canonical URL](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls) for the page or post.                                                                      |
+| `author`        | (_Optional_) The lookup key for author information to be propagated to JSON-LD structured data. See also [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information). |
+| `description`   | (_Optional_) A brief summary of a web page to be shown in search engine results.<br>**Note**: This will takes priority over existing front matter attribute `excerpt`.                                                     |
+| `locale`        | (_Optional_) The custom locale to override the site-level locale information for the page or post.                                                                                                                         |
+| `image`         | (_Optional_) **Note**: This is inherited by the attribute for setting the [featured image](#set-featured-image) for the page or post.                                                                                      |
+
+💡 Learn more from the [basic usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "jekyll-seo-tag/docs/usage") and [advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md "jekyll-seo-tag/docs/advanced-usage") in the Jekyll SEO Tag documentation.
+
+* * *
+
+## Set URL Redirects
+
+| Attribute       | Description                                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `redirect_from` | (_Optional_) One or multiple relative URLs that will redirect to the page or post, _e.g._ `/post/2019/10/31/index.html`{:.plaintext} |
+| `redirect_to`   | (_Optional_) The destination URL of the redirection, _e.g._ `http://www.github.com`{:.plaintext}                                     |
+
+💡 Learn more about the usage from the [Jekyll Redirect From](https://github.com/jekyll/jekyll-redirect-from) documentation.
 
 * * *
 

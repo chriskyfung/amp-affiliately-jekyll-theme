@@ -1,0 +1,17 @@
+<ul class="tags">
+  {%- if post -%}
+    {%- assign this = post -%}
+  {%- else -%}
+    {%- assign this = page -%}
+  {%- endif -%}
+  {%- if site.sort_categories == false -%}
+    {%- assign categorylist = this.categories -%}
+  {%- else -%}
+    {%- assign categorylist = this.categories | sort -%}
+  {%- endif -%}
+  {%- for category in categorylist -%}
+  <li>
+    <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
+  </li>
+  {%- endfor -%}
+</ul>

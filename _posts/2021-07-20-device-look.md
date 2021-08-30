@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Device Look
+title: Responsive Web Design
 date: 2021-07-20 10:47 +0800
-category: [demo, guide]
-tags: [responsive design, devices]
-permalink: /device-look/
+category: [feature]
+tags: [demo]
+permalink: /responsive-web-design/
+redirect_from: [/device-look/]
 image: 
    path: /assets/images/responsive-1622825_730.png
 excerpt: Preview the look for different devices (smartphone 📱, tablet 💻 and laptop 🖥️)
@@ -151,7 +152,7 @@ featured: true
 download: true
 ---
 
-Preview the look of the responsive design for different devices (smartphone <i class="fas fa-mobile-alt"></i> , tablet <i class="fas fa-tablet-alt"></i> and laptop <i class="fas fa-laptop"></i>)
+Preview the look of the responsive design for different devices (smartphone <i class="fas fa-mobile-alt"></i> , tablet <i class="fas fa-tablet-alt"></i> and laptop <i class="fas fa-laptop"></i>) &ndash; _**Remark**: This page does not support for Internet Explorer (IE)_
 
 <div style="display:flex;flex-wrap:wrap;">
 

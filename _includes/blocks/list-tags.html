@@ -1,0 +1,17 @@
+<ul class="tags rounded-tags">
+  {%- if post -%}
+    {%- assign this = post -%}
+  {%- else -%}
+    {%- assign this = page -%}
+  {%- endif -%}
+  {%- if site.sort_tags == false -%}
+    {%- assign taglist = this.tags -%}
+  {%- else -%}
+    {%- assign taglist = this.tags | sort -%}
+  {%- endif -%}
+  {%- for tag in taglist -%}
+  <li>
+    <small><a href="{{ tag | slugify | prepend: "tag/" | relative_url }}/">{{ tag }}</a></small>
+  </li>
+  {%- endfor -%}
+</ul>

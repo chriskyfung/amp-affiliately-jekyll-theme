@@ -22,14 +22,7 @@
             <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
             <div class="post-meta">
               {% include blocks/post-date.html %}
-              <ul class="tags">
-                {%- assign sortedCategories = post.categories | sort -%}
-                {%- for category in sortedCategories -%}
-                <li>
-                  <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
-                </li>
-                {%- endfor -%}
-              </ul>
+              {% include blocks/list-categories.html %}
             </div>
             <div class="clearfix"></div>
           </div>

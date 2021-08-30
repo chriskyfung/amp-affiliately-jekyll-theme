@@ -20,6 +20,14 @@
   .left-sidebar {
     order: -1;
   }
+  .listfeaturedtag .card .thumbnail img {
+    left: -50%;
+    max-width: 500px;
+    overflow-x: hidden;
+    }
+  .listfeaturedtag .card-list .thumbnail img {
+      width: 291px;
+  }
   .sidebar {
     max-width: 340px;
   }
@@ -28,6 +36,9 @@
 @media(min-width:768px) {
   .bmc-button {
     font-size: 28px;
+  }
+  .listfeaturedtag .card .thumbnail img {
+    left: -25%;
   }
   .post-top-meta.authorpage {
     text-align: left;
@@ -44,6 +55,9 @@
   }
   .listfeaturedtag .card {
     height: 260px;
+  }
+  .listfeaturedtag .card .thumbnail img {
+    left: -75%;
   }
   .listfeaturedtag .card-list {
     height: auto;
@@ -92,5 +106,13 @@
   .container {
     width: 1140px;
     max-width: 100%
+  }
+}
+
+@supports (object-fit: cover) {
+  .listfeaturedtag .card .thumbnail img {
+    left: inherit;
+    max-width: inherit;
+    object-fit: cover;
   }
 }

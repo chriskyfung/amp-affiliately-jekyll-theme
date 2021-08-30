@@ -28,6 +28,26 @@
     order: -1;
   }
 
+  .listfeaturedtag {
+    .card {
+      .thumbnail {
+        img {
+          left: -50%;
+          max-width: 500px;
+          overflow-x: hidden;
+        }
+      }
+    }
+
+    .card-list {
+      .thumbnail {
+        img {
+          width: 291px;
+        }
+      }
+    }
+  }
+
   .sidebar {
     max-width: 340px;
   }
@@ -36,6 +56,16 @@
 @media (min-width: 768px) {
   .bmc-button {
     font-size: 28px;
+  }
+
+  .listfeaturedtag {
+    .card {
+      .thumbnail {
+        img {
+          left: -25%;
+        }
+      }
+    }
   }
 
   .post-top-meta {
@@ -58,6 +88,12 @@
   .listfeaturedtag {
     .card {
       height: 260px;
+
+      .thumbnail {
+        img {
+          left: -75%;
+        }
+      }
     }
 
     .card-list {
@@ -123,5 +159,19 @@
   .container {
     max-width: 100%;
     width: 1140px;
+  }
+}
+
+@supports (object-fit: cover) {
+  .listfeaturedtag {
+    .card {
+      .thumbnail {
+        img {
+          left: inherit;
+          max-width: inherit;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
