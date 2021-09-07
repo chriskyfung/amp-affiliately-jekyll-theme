@@ -234,15 +234,15 @@ download:
 
 ## On-Page SEO
 
-| Attribute       | Description                                                                                                                                                                                                                |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `canonical_url` | (_Optional_) The custom [Canonical URL](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls) for the page or post.                                                                      |
-| `author`        | (_Optional_) The lookup key for author information to be propagated to JSON-LD structured data. See also [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information). |
-| `description`   | (_Optional_) A brief summary of a web page to be shown in search engine results.<br>**Note**: This will takes priority over existing front matter attribute `excerpt`.                                                     |
-| `locale`        | (_Optional_) The custom locale to override the site-level locale information for the page or post.                                                                                                                         |
-| `image`         | (_Optional_) **Note**: This is inherited by the attribute for setting the [featured image](#set-featured-image) for the page or post.                                                                                      |
+| Attribute       | Description                                                                                                                                                            |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `canonical_url` | (_Optional_) The custom [Canonical URL][google-developers-canonical-url] for the page or post.                                                                         |
+| `author`        | (_Optional_) The lookup key for author information to be propagated to JSON-LD structured data. See [Jekyll SEO Tag][jekyll-seo-tag-advanced-usage].                   |
+| `description`   | (_Optional_) A brief summary of a web page to be shown in search engine results.<br>**Note**: This will takes priority over existing front matter attribute `excerpt`. |
+| `locale`        | (_Optional_) The custom locale to override the site-level locale information for the page or post.                                                                     |
+| `image`         | (_Optional_) **Note**: This is inherited by the attribute for setting the [featured image](#set-featured-image) for the page or post.                                  |
 
-💡 Learn more from the [basic usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "jekyll-seo-tag/docs/usage") and [advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md "jekyll-seo-tag/docs/advanced-usage") in the Jekyll SEO Tag documentation.
+💡 Learn more from the [basic usage][jekyll-seo-tag-usage] and [advanced usage][jekyll-seo-tag-advanced-usage] in the Jekyll SEO Tag documentation.
 
 * * *
 
@@ -261,3 +261,7 @@ download:
 
 - [Front Matter Defaults \| Jekyllrb](https://jekyllrb.com/docs/configuration/front-matter-defaults/ "Official Jekyll Documentation")
 - [README.md - amp-affiliately-jekyll-theme](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/README.md "GitHub")
+
+[google-developers-canonical-url]: https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls "Google Developers"
+[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+[jekyll-seo-tag-advanced-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md
