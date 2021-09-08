@@ -53,7 +53,7 @@ excerpt: This is the first blog post for my Jekyll site.
 | `tags`             | (_Optional_) One or multiple tags that the post associates with.                                                                                                                                                                                                             |
 | `excerpt`          | (_Optional_) The short text to show on the card of the list/grid of posts, and use as the meta description of the page or post.                                                                                                                                              |
 
-**💡 Learn more:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
+**💡 See:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
 
 * * *
 
@@ -75,7 +75,7 @@ image:
 | `height` | (_Optional_) Specify the image height (in px). _Default:_ 411 (px).                                                                   |
 | `fit`    | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext}. |
 
-**Note**: The `path`, `width` and `height` properties are also inheriting the feature from [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output)'s `image` property.
+**Note**: The front matter `image` also inherits the properties from [Jekyll Feed](https://github.com/jekyll/jekyll-feed#optional-front-matter) and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output).
 
 * * *
 
