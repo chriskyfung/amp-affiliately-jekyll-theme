@@ -21,7 +21,10 @@ amp:
 <div class="row">
 
   <!-- Post -->
+  {%- assign author = site.data.authors[page.author] -%}
+  {%- unless author -%}
   {%- assign author = site.authors[page.author] -%}
+  {%- endunless -%}
 
   <div id="post" class="{{ post_class }}">
     <div class="mainheading">

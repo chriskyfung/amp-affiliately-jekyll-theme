@@ -57,17 +57,18 @@ You may also optionally specify a branch, tag, or commit to using by appending a
 
 ## <i class="fas fa-cogs fa-fw"></i> Global Configuration
 
-| Attribute       | Description                                                                                                                                                                                                                                                        |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `permalink`     | `/:year/:month/:day/:title`                                                                                                                                                                                                                                        |
-| `paginate`      | The maximum number of Posts you’d like to be displayed per-page in the generated site, e.g. `10` (See also [Pagination](https://jekyllrb.com/docs/pagination/ "Official Jekyll Documentation"))                                                                    |
-| `paginate_path` | The destination of the pagination pages (See also [Pagination](https://jekyllrb.com/docs/pagination/ "Official Jekyll Documentation"))                                                                                                                             |
-| `timezone`      | Any entry from the [IANA Time Zone Database](https://en.wikipedia.org/wiki/Tz_database "Wikipedia") is valid, e.g. America/New_York. A list of all available values can be found [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones "Wikipedia"). |
+| Attribute       | Description                                                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `permalink`     | `/:year/:month/:day/:title`                                                                                                                                       |
+| `timezone`      | Any entry from the [IANA Time Zone Database][wiki-tz-database] is valid, e.g. America/New_York. A list of all available values can be found [here][wiki-tz-list]. |
+| `paginate`      | (_Optional_) The maximum number of posts you’d like to be displayed per-page in the generated site, e.g. `10`.                                                    |
+| `paginate_path` | (_Optional_) The destination of the pagination pages.                                                                                                             |
 
 **💡 Learn More:**
 
 - [Configuration Options \| Jekyllrb](https://jekyllrb.com/docs/configuration/options/ "Offical Jekyll Documentation")
-- [Default Configuration](https://jekyllrb.com/docs/configuration/default/ "Offical Jekyll Documentation")
+- [Default Configuration \| Jekyllrb](https://jekyllrb.com/docs/configuration/default/ "Offical Jekyll Documentation")
+- [Render Paginated Posts]({% post_url 2021-08-24-plugins %}#-jekyll-paginate)
 
 * * *
 
@@ -75,14 +76,16 @@ You may also optionally specify a branch, tag, or commit to using by appending a
 
 You should include the following in the `_config.yml` file to set up the theme.
 
-| Attribute | Description                                                                                                                                                                                                                                      |
-| --------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|   `title` | Your site's title (See also [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "jekyll-seo-tag/docs/usage")). Also, used as the text of the first menu item if _`repostory`_ is configured in the `_config.yml` |
-|     `url` | The web address of your site including the protocol, subdomain, and domain name, e.g. `https://yourdomain.com`{:.plaintext} or `https://www.yourdomain.com`{:.plaintext}                                                                         |
-| `baseurl` | The first route parameter after your domain name in the URL, e.g. `''` if the site is deployed to `www.yourdomain.com`{:.plaintext} and `/repo-1`{:.plaintext} if the root is `www.yourdomain.com/repo-1/`{:.plaintext}.                         |
-| `favicon` | The path to the [favicon](https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website) file                                                                                                                  |
-|    `logo` | The path to the (JPG/PNG/SVG) image that will be displayed on the navigation bar. The URL will also be included to JSON-LD structured data by [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md).              |
-|    `name` | Your site's name used as the alt text of your logo image. Also, displayed in the copyright notice, if _`copyright.owner`_ is not configured in the `_config.yml`.                                                                                |
+| Attribute | Description                                                                                                                                                                                                                         |
+| --------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   `title` | Your site's title. Also, used as the text of the first menu item if _`repostory`_ is configured in the `_config.yml`                                  |
+|     `url` | The web address of your site including the protocol, subdomain, and domain name, e.g. `https://yourdomain.com`{:.plaintext} or `https://www.yourdomain.com`{:.plaintext}                                                            |
+| `baseurl` | The first route parameter after your domain name in the URL, e.g. `''` if the site is deployed to `www.yourdomain.com`{:.plaintext} and `/repo-1`{:.plaintext} if the root is `www.yourdomain.com/repo-1/`{:.plaintext}.            |
+| `favicon` | The path to the [favicon](https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website) file                                                                                                     |
+|    `logo` | The path to the (JPG/PNG/SVG) image that will be displayed on the navigation bar. The URL will also be included to JSON-LD structured data by [Jekyll SEO Tag][jekyll-seo-tag-usage]. |
+|    `name` | Your site's name used as the alt text of your logo image. Also, displayed in the copyright notice, if _`copyright.owner`_ is not configured in the `_config.yml`.                                                                   |
+
+**Note**: Regarding to `title` and `url`, please alse read the documentation of [Jekyll Feed][jekyll-feed] and [Jekyll SEO Tag][jekyll-seo-tag-usage].
 
 * * *
 
@@ -222,15 +225,18 @@ copyright:
 
 | Attribute     | Description                                                                                                           |
 | ------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `tagline`     | A short description used as part of the title tag                                                                     |
+| `author`      | Global author informaiton                                                                                             |
 | `description` | A longer description used for the description meta tag                                                                |
 | `locate`      | The locale these tags are marked up in. Default is `en_US`{:.plaintext}. Takes priority over existing config key lang |
+| `tagline`     | A short description used as part of the title tag                                                                     |
 
-💡 Learn more about the usage of the SEO tag plugin from [here](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "jekyll-seo-tag/docs/usage").
+💡 Learn more about the usage of the SEO tag plugin from [here][jekyll-seo-tag-usage].
+
+**Note**: Regarding to `author` and `description`, please alse read the documentation of [Jekyll Feed][jekyll-feed] and [Jekyll SEO Tag][jekyll-seo-tag-usage].
 
 Moreover, it is a good idea to set a default image using [Front Matter defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/), provide a default [Open Graph](https://developers.facebook.com/docs/sharing/webmasters/) image (`og:image`) and [Twitter Card](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image) image (`twitter:image`) to all of your posts and pages.
 
-Here is a basic example from [Jekyll Scholar's Advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information):
+Here is a basic example from [Jekyll SEO Tag's Advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information):
 
 ```yaml
 defaults:
@@ -296,3 +302,13 @@ You have to declare the repository name in the `_config.yml` file, like this:
 | :----------------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
 |    `Repository`    | <span class="badge badge-success">v1.2</span> Declare The Repository Name in the `<Username>/<Project>`{:.plaintext}.                         |
 | `resources_widget` | <span class="badge badge-success">v2.0</span> Enable side-widely display **Resourece** widget in sidebar.<Br> _Default:_ `true`{:.plaintext}. |
+
+[jekyll-feed]: https://github.com/jekyll/jekyll-feed "GitHub"
+
+[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
+
+[pagination]: https://jekyllrb.com/docs/pagination/ "Official Jekyll Documentation"
+
+[wiki-tz-database]: https://en.wikipedia.org/wiki/Tz_database "Wikipedia"
+
+[wiki-tz-list]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones "Wikipedia"

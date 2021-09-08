@@ -10,7 +10,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
-    faraday (1.7.0)
+    faraday (1.7.1)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -29,8 +29,8 @@ GEM
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
-    ffi (1.15.3)
-    ffi (1.15.3-x64-mingw32)
+    ffi (1.15.4)
+    ffi (1.15.4-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
     i18n (1.8.10)
@@ -54,16 +54,9 @@ GEM
       jekyll (>= 3.6, < 5.0)
     jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-gist (1.5.0)
-      octokit (~> 4.2)
     jekyll-github-metadata (2.13.0)
       jekyll (>= 3.4, < 5.0)
       octokit (~> 4.0, != 4.4.0)
-    jekyll-gzip (2.5.1)
-      jekyll (>= 3.0, < 5.0)
-    jekyll-loading-lazy (0.1.1)
-      jekyll (>= 3.0, < 5.0)
-      nokogiri (>= 1.10, < 2.0)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
@@ -75,32 +68,22 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-webp (1.0.0)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.6.0)
+    listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    mini_portile2 (2.6.1)
     multipart-post (2.1.1)
-    nokogiri (1.12.3)
-      mini_portile2 (~> 2.6.1)
-      racc (~> 1.4)
-    nokogiri (1.12.3-x64-mingw32)
-      racc (~> 1.4)
-    nokogiri (1.12.3-x86_64-linux)
-      racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
-    racc (1.5.2)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -134,15 +117,11 @@ DEPENDENCIES
   jekyll (~> 4.2.0)
   jekyll-archives
   jekyll-feed
-  jekyll-gist
   jekyll-github-metadata
-  jekyll-gzip
-  jekyll-loading-lazy
   jekyll-paginate
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-webp
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
