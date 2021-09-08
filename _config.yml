@@ -85,16 +85,13 @@ copyright:
 
 # Plugins
 plugins: 
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-loading-lazy
-  - jekyll-webp
-  - jekyll-gzip
-  - jekyll-redirect-from
+  - jekyll-feed
   - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Archives
 jekyll-archives:
@@ -118,7 +115,7 @@ jekyll-minifier:
 # Site configuration for the WebP Generator Plugin
 # The values here represent the defaults if nothing is set
 webp:
-  enabled: true
+  enabled: false
   
   # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
   quality: 75

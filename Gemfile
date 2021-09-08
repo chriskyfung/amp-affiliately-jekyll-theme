@@ -17,16 +17,12 @@ gem "jekyll", "~> 4.2.0"
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-paginate'
-  gem 'jekyll-seo-tag'
   gem 'jekyll-archives'
-  gem 'jekyll-gist'
-  gem 'jekyll-loading-lazy'
-  gem 'jekyll-webp'
-  gem 'jekyll-gzip'
+  gem 'jekyll-feed'
+  gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
   gem "jekyll-github-metadata"
 end
 
