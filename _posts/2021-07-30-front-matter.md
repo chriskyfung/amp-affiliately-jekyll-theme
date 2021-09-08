@@ -53,7 +53,7 @@ excerpt: This is the first blog post for my Jekyll site.
 | `tags`             | (_Optional_) One or multiple tags that the post associates with.                                                                                                                                                                                                             |
 | `excerpt`          | (_Optional_) The short text to show on the card of the list/grid of posts, and use as the meta description of the page or post.                                                                                                                                              |
 
-**💡 Learn more:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
+**💡 See:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
 
 * * *
 
@@ -75,7 +75,7 @@ image:
 | `height` | (_Optional_) Specify the image height (in px). _Default:_ 411 (px).                                                                   |
 | `fit`    | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext}. |
 
-**Note**: The `path`, `width` and `height` properties are also inheriting the feature from [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output)'s `image` property.
+**Note**: The front matter `image` also inherits the properties from [Jekyll Feed](https://github.com/jekyll/jekyll-feed#optional-front-matter) and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output).
 
 * * *
 
@@ -234,15 +234,15 @@ download:
 
 ## On-Page SEO
 
-| Attribute       | Description                                                                                                                                                                                                                |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `canonical_url` | (_Optional_) The custom [Canonical URL](https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls) for the page or post.                                                                      |
-| `author`        | (_Optional_) The lookup key for author information to be propagated to JSON-LD structured data. See also [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information). |
-| `description`   | (_Optional_) A brief summary of a web page to be shown in search engine results.<br>**Note**: This will takes priority over existing front matter attribute `excerpt`.                                                     |
-| `locale`        | (_Optional_) The custom locale to override the site-level locale information for the page or post.                                                                                                                         |
-| `image`         | (_Optional_) **Note**: This is inherited by the attribute for setting the [featured image](#set-featured-image) for the page or post.                                                                                      |
+| Attribute       | Description                                                                                                                                                            |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `canonical_url` | (_Optional_) The custom [Canonical URL][google-developers-canonical-url] for the page or post.                                                                         |
+| `author`        | (_Optional_) The lookup key for author information to be propagated to JSON-LD structured data. See [Jekyll SEO Tag][jekyll-seo-tag-advanced-usage].                   |
+| `description`   | (_Optional_) A brief summary of a web page to be shown in search engine results.<br>**Note**: This will takes priority over existing front matter attribute `excerpt`. |
+| `locale`        | (_Optional_) The custom locale to override the site-level locale information for the page or post.                                                                     |
+| `image`         | (_Optional_) **Note**: This is inherited by the attribute for setting the [featured image](#set-featured-image) for the page or post.                                  |
 
-💡 Learn more from the [basic usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "jekyll-seo-tag/docs/usage") and [advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md "jekyll-seo-tag/docs/advanced-usage") in the Jekyll SEO Tag documentation.
+💡 Learn more from the [basic usage][jekyll-seo-tag-usage] and [advanced usage][jekyll-seo-tag-advanced-usage] in the Jekyll SEO Tag documentation.
 
 * * *
 
@@ -261,3 +261,7 @@ download:
 
 - [Front Matter Defaults \| Jekyllrb](https://jekyllrb.com/docs/configuration/front-matter-defaults/ "Official Jekyll Documentation")
 - [README.md - amp-affiliately-jekyll-theme](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/README.md "GitHub")
+
+[google-developers-canonical-url]: https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls "Google Developers"
+[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+[jekyll-seo-tag-advanced-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md

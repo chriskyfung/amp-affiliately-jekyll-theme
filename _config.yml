@@ -83,45 +83,15 @@ copyright:
   owner: Chris KY FUNG
   link: https://chriskyfung.github.io/
 
-# Authors
-authors:
-  John:
-    name: John Washer
-    display_name: John
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  Peter:
-    name: Peter Mu
-    display_name: Peter
-    gravatar: 
-    email: 
-    web: 
-    facebook: https://www.facebook.com/
-    description: 
-  chris:
-    name: Chris KY Fung
-    display_name: Chris F.
-    gravatar: abd876486b2caa54b43bf64a5a86f620
-    email: 
-    web: https://en.gravatar.com/chrisfungky
-    facebook: https://www.facebook.com/chriskyfung/
-    description: "Author of this blog, M.Phil."
-
 # Plugins
 plugins: 
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-archives
-  - jekyll-loading-lazy
-  - jekyll-webp
-  - jekyll-gzip
-  - jekyll-redirect-from
+  - jekyll-feed
   - jekyll-github-metadata
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Archives
 jekyll-archives:
@@ -145,7 +115,7 @@ jekyll-minifier:
 # Site configuration for the WebP Generator Plugin
 # The values here represent the defaults if nothing is set
 webp:
-  enabled: true
+  enabled: false
   
   # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
   quality: 75

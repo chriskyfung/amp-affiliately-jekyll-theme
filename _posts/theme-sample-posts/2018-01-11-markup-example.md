@@ -10,7 +10,7 @@
 
 layout: post
 title:  "Markdown Example"
-author: john
+author: John
 category: sample
 tags: [markdown]
 image: 

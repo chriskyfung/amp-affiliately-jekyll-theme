@@ -1,5 +1,8 @@
 <!-- begin post -->
-{%- assign author = site.authors[post.author] -%}
+{%- assign author = site.data.authors[page.author] -%}
+{%- unless author -%}
+{%- assign author = site.authors[page.author] -%}
+{%- endunless -%}
 
 <div class="col-md-6 grid-item">
   <div class="card">
