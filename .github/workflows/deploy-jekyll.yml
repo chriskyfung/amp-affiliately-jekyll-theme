@@ -27,8 +27,8 @@ jobs:
       with:
         #token: ${{ secrets.GH_PAGES_TOKEN }}
         #target_branch: 'gh-pages'
-        #pre_build_commands: apt-get update && apt-get install build-essential
         jekyll_src: './'
+        target_path: './build'
         build_only: true
 
     - name: Optimize AMP
