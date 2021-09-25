@@ -31,6 +31,12 @@ jobs:
         target_path: './build'
         build_only: true
 
+    - name: List files
+      run: ls
+
+    - name: List Build
+      run: ls ./build
+
     - name: Optimize AMP
       run: npx gulp
 
