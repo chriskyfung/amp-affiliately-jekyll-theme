@@ -31,11 +31,11 @@ jobs:
         target_path: './build'
         build_only: true
 
-    - name: List files
-      run: ls
-
     - name: List Build
       run: ls ./build
+
+    - name: Change Permissions
+      run: sudo chmod -R 777 ./build
 
     - name: Optimize AMP
       run: npx gulp
@@ -44,4 +44,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
-        folder: 'dest'
+        folder: 'build'
