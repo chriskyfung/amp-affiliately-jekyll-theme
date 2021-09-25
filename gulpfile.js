@@ -1,4 +1,6 @@
 const {src, dest} = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const minifyInline = require('gulp-minify-inline');
 const through2 = require('through2');
 
 const AmpOptimizer = require('@ampproject/toolbox-optimizer');
@@ -17,6 +19,8 @@ function build(cb) {
         cb(null, file);
       })
     )
+    .pipe(minifyInline())
+    .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(dest('/github/workspace/build/'));
 }
 

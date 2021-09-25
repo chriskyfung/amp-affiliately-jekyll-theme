@@ -2,6 +2,8 @@
   "devDependencies": {
     "@ampproject/toolbox-optimizer": "^2.8.3",
     "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-inline": "^1.1.0",
     "through2": "^4.0.2"
   }
 }
