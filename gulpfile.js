@@ -5,7 +5,7 @@ const AmpOptimizer = require('@ampproject/toolbox-optimizer');
 const ampOptimizer = AmpOptimizer.create();
 
 function build(cb) {
-  return src('build/**/*.html')
+  return src('/github/workspace/build/**/*.html')
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -17,7 +17,7 @@ function build(cb) {
         cb(null, file);
       })
     )
-    .pipe(dest('build/'));
+    .pipe(dest('/github/workspace/build/'));
 }
 
 exports.default = build;
