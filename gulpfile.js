@@ -21,7 +21,6 @@ function build(cb) {
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
-    .pipe(postcss())
     .pipe(minifyInline())
     .pipe(dest('./build/'));
 }
