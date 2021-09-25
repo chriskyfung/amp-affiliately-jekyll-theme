@@ -8,7 +8,7 @@ const AmpOptimizer = require('@ampproject/toolbox-optimizer');
 const ampOptimizer = AmpOptimizer.create();
 
 function build(cb) {
-  return src('/github/workspace/build/**/*.html')
+  return src('./build/**/*.html')
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -23,7 +23,7 @@ function build(cb) {
     .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(postcss())
     .pipe(minifyInline())
-    .pipe(dest('/github/workspace/build/'));
+    .pipe(dest('./build/'));
 }
 
 exports.default = build;
