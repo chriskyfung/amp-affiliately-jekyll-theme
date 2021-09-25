@@ -22,7 +22,7 @@ function build(cb) {
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(minifyInline())
-    .pipe(dest('./build/'));
+    .pipe(dest('./dest/'));
 }
 
 exports.default = build;
