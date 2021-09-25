@@ -31,10 +31,10 @@ jobs:
     - name: Optimize AMP
       uses: asurbernardo/amp-optimizer-action@1.0.2
       with:
-        root: ''
+        root: 'build'
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
-        folder: ''
+        folder: 'build'
