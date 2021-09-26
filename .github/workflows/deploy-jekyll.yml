@@ -25,7 +25,7 @@ jobs:
           #token: ${{ secrets.GH_PAGES_TOKEN }}
           #target_branch: 'gh-pages'
           jekyll_src: './'
-          target_path: './_site'
+          jekyll_build_options: '--destination ./_site'
           build_only: true
 
       - name: Cache node modules
