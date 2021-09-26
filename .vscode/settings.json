@@ -53,5 +53,10 @@
         }
       ]
     }
-  ]
+  ],
+  "liveServer.settings.proxy": {
+    "enable": true,
+    "baseUri": "/amp-affiliately-jekyll-theme",
+    "proxyUri": "http://127.0.0.1:5500/_site"
+  }
 }
