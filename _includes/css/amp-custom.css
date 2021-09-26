@@ -109,7 +109,7 @@ kbd {
   height: 150px;
   object-fit: cover
 }
-.listfeaturedtag .card-list h2.card-title {
+.listfeaturedtag .card-list .card-title {
   font-size: 1rem
 }
 .listfeaturedtag .card-list .wrapthumbnail {

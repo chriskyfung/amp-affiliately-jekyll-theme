@@ -16,12 +16,13 @@
 {%- endunless -%}
 
 <div class="col-md-6 grid-item">
-  <div class="card">
-    <a href="{{ post.url | relative_url }}">
+  <article class="card">
+    <a href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
+      {%- assign thumb_alt = post.title | truncate: 15, '...' | prepend: "thumbnail for " -%}
       {%- if post.image.path -%}
-      {%- include picture.html img=post.image.path ext=post.image.ext width=imgwidth height=imgheight layout="intrinsic" lightbox=false -%}
+      {%- include picture.html img=post.image.path ext=post.image.ext width=imgwidth height=imgheight layout="intrinsic" alt=thumb_alt lightbox=false -%}
       {%- else -%}
-      {%- include picture.html img="write-2160925.svg" source="assets" width="auto" height="197" layout="fixed-height" lightbox=false -%}
+      {%- include picture.html img="write-2160925.svg" source="assets" width="auto" height="197" layout="fixed-height" alt=thumb_alt lightbox=false -%}
       {%- endif -%}
     </a>
 
@@ -33,8 +34,8 @@
     -->
 
     <div class="card-block">
-      <h2 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</h4>
+      <h3 class="card-title"><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a></h3>
+      <p class="card-text">{{ post.excerpt | strip_html | truncatewords:30 }}</p>
       <div class="metafooter">
         <div class="wrapfooter">
           {%- if post.author -%}

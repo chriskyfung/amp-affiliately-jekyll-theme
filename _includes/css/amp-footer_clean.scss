@@ -76,14 +76,12 @@ $yellow_fff100: #fff100;
   margin-top: 1rem;
   margin-bottom: 1rem;
 
-  h5 {
-    &.title {
-      color: $white_fff;
-      font-size: 18px;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-    }
+  .title {
+    color: $white_fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
   }
 
   ul {
@@ -115,7 +113,9 @@ $yellow_fff100: #fff100;
 }
 
 .footersocial {
-  margin-top: 1rem;
+  h3 {
+    font-size: 1.48rem;
+  }
 
   .fab {
     background: $white_fff;
