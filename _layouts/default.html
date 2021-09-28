@@ -42,21 +42,21 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
-    <link rel="preload" href="{{ site.logo | relative_url }}" as="image">
+    <link rel="preload" href="{{ site.logo | relative_url }}" as="image" crossorigin>
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-brands-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-regular-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-solid-900.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" crossorigin="anonymous">
     {%- if site.adsense.client_id and site.adstyle != false -%}
-    <link rel="preload" href="https://icon-library.com/images/b8d82a619c.png" as="image">
+    <link rel="preload" href="https://icon-library.com/images/b8d82a619c.png" as="image" crossorigin>
     {%- endif -%}
     {%- if page.image.path -%}
       {%- assign img_ext = page.image.path | split: "." | last -%}
       {%- if img_ext == "svg" -%}
-    <link rel="preload" href="{{ page.image.path | relative_url }}" as="image">
+    <link rel="preload" href="{{ page.image.path | relative_url }}" as="image" crossorigin>
       {%- else -%}
         {%- assign img_name = page.image.path | remove: img_ext -%}
-    <link rel="preload" href="{{ img_name }}.webp" as="image" type="image/webp">
+    <link rel="preload" href="{{ img_name }}.webp" as="image" type="image/webp" crossorigin>
       {%- endif -%}
     {%- endif -%}
 
