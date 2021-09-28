@@ -31,7 +31,7 @@ css:
       <div class="wrapintro">
           <h1>AMP Affiliately Theme</h1>
           <h2 class="lead">An AMP-ready Jekyll blog theme</h2>    
-          <a class="btn" href="https://github.com/chriskyfung/amp-affiliately-jekyll-theme/" rel="noopenner" target="_blank">View on GitHub <i class='fab fa-github'></i></a>
+          <a class="btn" href="https://github.com/chriskyfung/amp-affiliately-jekyll-theme/" rel="noopener noreferrer" target="_blank">View on GitHub <i class='fab fa-github'></i></a>
       </div>
   </section>
 
