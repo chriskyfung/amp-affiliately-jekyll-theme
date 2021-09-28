@@ -171,24 +171,23 @@ section.recent-posts {
   background-origin: border-box;
   border-top-left-radius: 2px
 }
-.listfeaturedtag h2.card-title,
-.listrecent h2.card-title {
+.listfeaturedtag .card-title,
+.listrecent .card-title {
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 1.25
 }
-.listfeaturedtag h2.card-title a,
-.listrecent h2.card-title a {
+.listfeaturedtag .card-title a,
+.listrecent .card-title a {
   color: #111;
   font-weight: 500
 }
-.listfeaturedtag h2.card-title a:hover,
-.listrecent h2.card-title a:hover {
+.listfeaturedtag .card-title a:hover,
+.listrecent .card-title a:hover {
   color: rgba(0, 0, 0, .6);
   text-decoration: none
 }
-.listfeaturedtag h4.card-text,
-.listrecent h4.card-text {
+.card-text {
   color: #666;
   font-size: 0.95rem;
   line-height: 1.8;
@@ -253,11 +252,11 @@ span.post-name {
 }
 div.post-date,
 span.post-read {
-  color: rgba(0, 0, 0, .44);
+  color: #75748a;
   margin: 7px 0
 }
 span.post-read-more a {
-  color: rgba(0, 0, 0, .44);
+  color: #75748a;
   align-items: center;
   float: right;
   width: 30px;
@@ -450,7 +449,11 @@ a.btn {
 }
 .btn-primary {
   background-color: #675bff;
-  border-color: #675bff
+  border-color: #483aff
+}
+.btn-primary:hover {
+  background-color: #483aff;
+  border-color: #372cd8
 }
 .btn.follow {
   border-color: #6fd350;

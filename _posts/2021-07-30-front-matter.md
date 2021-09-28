@@ -2,7 +2,7 @@
 layout: post
 title: Front Matter Guide
 date: 2021-07-31 12:05 +0800
-last_modified_at: 2021-08-24 00:01 +0800
+last_modified_at: 2021-09-28 15:00 +0800
 category: [doc]
 tags: [front matter, styles, AMP]
 permalink: /front-matter-guide/
@@ -76,6 +76,51 @@ image:
 | `fit`    | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext}. |
 
 **Note**: The front matter `image` also inherits the properties from [Jekyll Feed](https://github.com/jekyll/jekyll-feed#optional-front-matter) and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output).
+
+### Hide Featured Image on a Page/Post
+
+If you do not want to render the featured image on a post, append a `hide` option to the `image` variable, _e.g._:
+
+```yaml
+image:
+   path: /assets/images/cover-image.png
+   hide: true
+```
+
+### Remove Box Shadow from Featured Image
+
+If you want to remove the shadow of the featured image on the post page, append the following class to the `image` variable, _e.g._
+
+```yaml
+image:
+   path: /assets/images/cover-image.png
+   class: shadow-none
+```
+
+### Featured Images That Do Not Have an Aspect Ratio of 16:9
+
+If the image is not at 16:9 aspect ratio, you need to define its width and height under the `image` variable, _e.g._:
+
+```yaml
+image:
+   path: /assets/images/cover-image.png
+   width: 640
+   height: 480
+```
+
+### Show Thumbnail Image in Sidebar Widgets
+
+1. Make a copy of each featured image file in the same folder.
+2. Rename the copies to have a filename like `<filename>.thumb.<ext>`, _e.g._ `cover-image.thumb.png`.
+3. Rescale it to a height of **150px**.
+
+By default, the thumbnail of featured images is cropped at the center inside the cards of the list/grid of Featured Posts. A new variable for the thumbnail positioning was added to the theme on 2020-10-07. You can now change the image position to the _left_ or _right_ by appending a `fit` option to the `image` variable, _e.g._:
+
+```yaml
+image:
+   path: /assets/images/cover-image.png
+   fit: left
+```
 
 * * *
 

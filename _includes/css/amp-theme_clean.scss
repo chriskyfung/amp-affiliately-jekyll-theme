@@ -9,8 +9,11 @@ $gray_888: #888888;
 $lightgray_d0d0d0: #d0d0d0;
 $limegreen_6FD350: #6fd350;
 $limegreen_6fd350: #6fd350;
+$mediumblue_372cd8: #372cd8;
+$mediumblue_483aff: #483aff;
 $mediumslateblue_675bff: #675bff;
 $seagreen_1c9963: #1c9963;
+$slategray_75748a: #75748a;
 $white_fafafa: #fafafa;
 $white_fff: #ffffff;
 $whitesmoke_eaeaea: #eaeaea;
@@ -335,30 +338,19 @@ section {
     height: 100%;
   }
 
-  h2 {
-    &.card-title {
-      font-size: 1.3rem;
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.25;
+
+    a {
+      color: $black_111;
       font-weight: 500;
-      line-height: 1.25;
 
-      a {
-        color: $black_111;
-        font-weight: 500;
-
-        &:hover {
-          color: rgba(0, 0, 0, .6);
-          text-decoration: none;
-        }
+      &:hover {
+        color: rgba(0, 0, 0, .6);
+        text-decoration: none;
       }
-    }
-  }
-
-  h4 {
-    &.card-text {
-      color: $dimgray_666;
-      font-size: .95rem;
-      font-weight: 400;
-      line-height: 1.8;
     }
   }
 
@@ -376,30 +368,19 @@ section {
 }
 
 .listrecent {
-  h2 {
-    &.card-title {
-      font-size: 1.3rem;
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.25;
+
+    a {
+      color: $black_111;
       font-weight: 500;
-      line-height: 1.25;
 
-      a {
-        color: $black_111;
-        font-weight: 500;
-
-        &:hover {
-          color: rgba(0, 0, 0, .6);
-          text-decoration: none;
-        }
+      &:hover {
+        color: rgba(0, 0, 0, .6);
+        text-decoration: none;
       }
-    }
-  }
-
-  h4 {
-    &.card-text {
-      color: $dimgray_666;
-      font-size: .95rem;
-      font-weight: 400;
-      line-height: 1.8;
     }
   }
   width: 100%;
@@ -415,6 +396,13 @@ section {
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, .14);
     margin-bottom: 30px;
   }
+}
+
+.card-text {
+  color: $dimgray_666;
+  font-size: .95rem;
+  font-weight: 400;
+  line-height: 1.8;
 }
 
 .author-thumb {
@@ -480,7 +468,7 @@ section {
 
 div {
   &.post-date {
-    color: rgba(0, 0, 0, .44);
+    color: $slategray_75748a;
     display: inline-block;
     margin: 7px 0;
   }
@@ -500,13 +488,13 @@ span {
   }
 
   &.post-read {
-    color: rgba(0, 0, 0, .44);
+    color: $slategray_75748a;
     margin: 7px 0;
   }
 
   &.post-read-more {
     a {
-      color: rgba(0, 0, 0, .44);
+      color: $slategray_75748a;
       align-items: center;
       float: right;
       width: 30px;
@@ -742,7 +730,12 @@ blockquote {
 
 .btn-primary {
   background-color: $mediumslateblue_675bff;
-  border-color: $mediumslateblue_675bff;
+  border-color: $mediumblue_483aff;
+
+  &:hover {
+    background-color: $mediumblue_483aff;
+    border-color: $mediumblue_372cd8;
+  }
 }
 
 .alertbar {

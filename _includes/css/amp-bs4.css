@@ -674,16 +674,6 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none
 }
-.btn-primary {
-  color: #fff;
-  background-color: #0275d8;
-  border-color: #0275d8
-}
-.btn-primary:hover {
-  color: #fff;
-  background-color: #025aa5;
-  border-color: #01549b
-}
 .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
   box-shadow: 0 0 0 2px rgba(2, 117, 216, .5)

@@ -1,0 +1,40 @@
+{
+  "devDependencies": {
+    "@ampproject/toolbox-optimizer": "^2.8.3",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-inline": "^1.1.0",
+    "through2": "^4.0.2"
+  },
+  "dependencies": {},
+  "name": "amp-affiliately-jekyll-theme-fork",
+  "description": "**AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.",
+  "version": "2.4.0",
+  "scripts": {
+    "build": "bundle exec jekyll build && gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fumikr/amp-affiliately-jekyll-theme.git"
+  },
+  "keywords": [
+    "jekyll",
+    "theme",
+    "jekyll-theme",
+    "github-pages",
+    "amp",
+    "jekyll-themes",
+    "accelerated-mobile-pages",
+    "blog-theme",
+    "responsive-theme",
+    "amp-jekyll",
+    "jekyll-theme-amp"
+  ],
+  "author": "Chris K.Y. Fung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fumikr/amp-affiliately-jekyll-theme/issues"
+  },
+  "homepage": "https://github.com/fumikr/amp-affiliately-jekyll-theme#readme"
+}

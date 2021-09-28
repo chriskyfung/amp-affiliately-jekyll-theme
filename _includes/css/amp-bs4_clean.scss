@@ -1356,16 +1356,6 @@ fieldset[disabled] {
 }
 
 .btn-primary {
-  color: $white_fff;
-  background-color: $dodgerblue_0275d8;
-  border-color: $dodgerblue_0275d8;
-
-  &:hover {
-    background-color: $darkslateblue_025aa5;
-    border-color: $darkslateblue_01549b;
-    color: $white_fff;
-  }
-
   &:focus {
     -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);
             box-shadow: 0 0 0 2px rgba(2, 117, 216, .5);

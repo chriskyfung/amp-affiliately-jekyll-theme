@@ -54,7 +54,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.footer-widget h5.title {
+.footer-widget .title {
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -81,8 +81,8 @@
   margin: auto;
   max-width: 350px
 }
-.footersocial {
-  margin-top: 1rem
+.footersocial h3{
+  font-size: 1.48rem;
 }
 .footersocial .fab {
   width: 40px;
