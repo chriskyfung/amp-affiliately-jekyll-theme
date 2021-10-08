@@ -8,6 +8,7 @@ const through2 = require('through2');
 const AmpOptimizer = require('@ampproject/toolbox-optimizer');
 const ampOptimizer = AmpOptimizer.create();
 const gulpAmpValidator = require('gulp-amphtml-validator');
+const amphtmlValidator = require('amphtml-validator');
 
 const cssConverter = require('styleflux');
 
@@ -38,7 +39,31 @@ function test() {
       .pipe(gulpAmpValidator.format())
       // Exit the process with error code (1) if an AMP validation error
       // occurred.
-      .pipe(gulpAmpValidator.failAfterError());
+      .pipe(gulpAmpValidator.failAfterWarningOrError());
+}
+
+function validate() {
+  return src('./_site/**/*.html')
+    .pipe(
+      through2.obj(async (file, _, cb) => {
+        if (file.isBuffer()) {
+          const validator = await amphtmlValidator.getInstance();
+          const result = validator.validateString(file.contents.toString());
+          if (result.status !== 'PASS') console.error(`\n${result.status}: ${file.relative}`);
+          // (result.status === 'PASS' ? console.log : console.error)(result.status);
+          for (var ii = 0; ii < result.errors.length; ii++) {
+            var error = result.errors[ii];
+            var msg =
+              'line ' + error.line + ', col ' + error.col + ': ' + error.message;
+            if (error.specUrl !== null) {
+              msg += ' (see ' + error.specUrl + ')';
+            }
+            (error.severity === 'ERROR' ? console.error : console.warn)(msg);
+          }     
+        }
+        cb(null, file);
+      })
+    );
 }
 
 function css2scss() {
@@ -71,5 +96,7 @@ exports.default = function() {
 
 exports.build = build;
 exports.test = test;
+exports.convert = parallel(css2scss, minifyCSS);
 exports.css2scss = css2scss;
 exports.minifyCSS = minifyCSS;
+exports.validate = validate;

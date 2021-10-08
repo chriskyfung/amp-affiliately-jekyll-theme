@@ -1,7 +1,7 @@
 {
   "name": "amp-affiliately-jekyll-theme",
   "description": "**AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.",
-  "version": "2.4.1",
+  "version": "2.5.0",
   "author": "Chris K.Y. Fung",
   "license": "MIT",
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
@@ -27,6 +27,7 @@
   ],
   "devDependencies": {
     "@ampproject/toolbox-optimizer": "^2.8.3",
+    "amphtml-validator": "^1.0.35",
     "glob-parent": ">=5.1.2",
     "gulp": "^4.0.2",
     "gulp-amphtml-validator": "^1.0.6",
@@ -42,9 +43,11 @@
   },
   "dependencies": {},
   "scripts": {
-    "jekyll": "bundle exec jekyll server",
-    "build": "bundle exec jekyll build && gulp",
-    "trace": "bundle exec jekyll server --trace",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "convert": "npx gulp convert",
+    "jekyll": "bundle exec jekyll serve",
+    "jekyll:trace": "bundle exec jekyll serve --trace",
+    "build": "bundle exec jekyll build && gulp build",
+    "test": "npx gulp validate",
+    "watch": "npx gulp"
   }
 }
