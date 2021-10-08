@@ -5,16 +5,17 @@
   font-size: 15px;
   max-width: 100%;
 }
-.sidebar h5 {
+.sidebar h3 {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 700
 }
-.sidebar h5,
-.sidebar h5 span {
+.sidebar h3,
+.sidebar h3 span {
   text-align: center;
   position: relative
 }
-.sidebar h5 span {
+.sidebar h3 span {
   background-color: #fff;
   z-index: 2;
   display: inline-block;
@@ -23,7 +24,7 @@
   text-transform: uppercase;
   letter-spacing: 1px
 }
-.sidebar h5:before {
+.sidebar h3:before {
   margin-bottom: 0;
   position: absolute;
   z-index: 1;

@@ -1,5 +1,7 @@
 <aside class="sidebar">
 
+  <h2 class="sr-only">Sidebar</h2>
+
   {%- if page.resources_widget != nil -%}
     {%- assign resources_widget = page.resources_widget -%}
   {%- elsif layout.resources_widget != nil -%}
@@ -12,7 +14,7 @@
 
   {%- if resources_widget != false or page.download == true or page.download.url -%}
   <div id="resources-widget" class="sidebar-section">
-    <h5><span>Resources</span></h5>
+    <h3><span>Resources</span></h3>
     {%- if site.repository and site.github.repository_url -%}
       {%- if site.target_blank -%}
         {%- assign rel_target = ' rel="noopener noreferrer" target="_blank"' -%}
@@ -43,7 +45,7 @@
   {%- unless site.sidebar.featured == false or page.url == "/blog/" or page.url contains "/blog/page" -%}
   <!-- Featured -->
   <div aria-label="featured posts" class="sidebar-section">
-    <h5><span>Featured</span></h5>
+    <h3><span>Featured</span><span class="sr-only"> Posts</span></h3>
 
     <section class="featured-posts">
 
@@ -68,7 +70,7 @@
   {% unless site.sidebar.recent_posts == false or page.url == "/" or page.url == "/blog/" or page.url contains "/blog/page"%}
   <!-- Recent Posts -->
   <div aria-label="recent posts" class="sidebar-section">
-    <h5><span>Recent Posts</span></h5>
+    <h3><span>Recent</span><span class="sr-only"> Posts</span></h3>
 
     <section class="recent-posts">
 

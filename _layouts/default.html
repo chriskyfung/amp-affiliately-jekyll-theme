@@ -47,15 +47,15 @@
     <link rel="preload" href="https://use.fontawesome.com/releases/v5.13.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" crossorigin>
     {%- if site.adsense.client_id and site.adstyle != false -%}
-    <link rel="preload" href="https://icon-library.com/images/b8d82a619c.png" as="image">
+    <link rel="preload" href="https://icon-library.com/images/b8d82a619c.png" as="image" crossorigin>
     {%- endif -%}
     {%- if page.image.path -%}
       {%- assign img_ext = page.image.path | split: "." | last -%}
       {%- if img_ext == "svg" -%}
-    <link rel="preload" href="{{ page.image.path | relative_url }}" as="image">
+    <link rel="preload" href="{{ page.image.path | relative_url }}" as="image" crossorigin>
       {%- else -%}
         {%- assign img_name = page.image.path | remove: img_ext -%}
-    <link rel="preload" href="{{ img_name }}.webp" as="image" type="image/webp">
+    <link rel="preload" href="{{ img_name }}.webp" as="image" type="image/webp" crossorigin>
       {%- endif -%}
     {%- endif -%}
 

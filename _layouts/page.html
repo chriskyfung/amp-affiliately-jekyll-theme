@@ -22,13 +22,15 @@ layout: default
 {%- if sidebar == "none" -%}
 
 <section>
-  <div class="section-title">
-    <h2><span>{{ page.title }}</span></h2>
-  </div>
-
-  <div class="article-post">
-    {{ content }}
-  </div>
+  <div class="col-md-8 col-lg-8">
+    {%- if layout.title == "Archive" -%}
+      {{ content }}
+    {% else %}
+    <h1 class="posttitle">{{ page.title }}</h1>
+    <div class="article-post">
+      {{ content }}
+    </div>
+    {%- endif -%}
 
   {%- if page.comments == true -%}
   <div id="comments" class="row mb-5">
@@ -44,10 +46,14 @@ layout: default
 <div class="row">
   <!-- Main Content -->
   <div class="col-md-8 col-lg-8">
+    {%- if layout.title == "Archive" -%}
+      {{ content }}
+    {% else %}
     <h1 class="posttitle">{{ page.title }}</h1>
     <div class="article-post">
       {{ content }}
     </div>
+    {%- endif -%}
 
     {%- if page.comments == true -%}
     <div id="comments" class="row mb-5">

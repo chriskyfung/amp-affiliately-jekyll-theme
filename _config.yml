@@ -107,9 +107,13 @@ jekyll-archives:
 markdown: kramdown
 highlighter: rouge
 
-jekyll-minifier:
-  exclude: 'feed.xml' # Exclude files from processing - file name, glob pattern or array of file names and glob patterns
-
+# Directories and/or files from the conversion
+exclude:
+  - frontmatter.json
+  - gulpfile.js
+  - LICENSE
+  - package-lock.json
+  - package.json
 
 ############################################################
 # Site configuration for the WebP Generator Plugin
