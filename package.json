@@ -1,7 +1,7 @@
 {
   "name": "amp-affiliately-jekyll-theme",
   "description": "**AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "author": "Chris K.Y. Fung",
   "license": "MIT",
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
@@ -39,6 +39,7 @@
     "nth-check": ">=2.0.1",
     "set-value": ">=4.0.1",
     "styleflux": "^1.2.0",
+    "tar": ">=4.4.18",
     "through2": "^4.0.2"
   },
   "dependencies": {},
