@@ -7,8 +7,11 @@
     {% if site.tags.size > 10 %}
     <div class="dropdown-filter">
       <label>
-        <input type="text" on="input-throttled:AMP.setState({ dropdownfilter: event.value })" style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;" aria-label="tag filter">
-        <i class="fas fa-filter" style="color: #675bff; margin-left: -1.75em; padding-right: .25em;" aria-hidden="true"></i>
+        <small style="color: #675bff;margin-left: .3rem;">
+        <i class="fas fa-filter fa-sm" aria-hidden="true"></i>
+        Tag Filter
+      </small>
+        <input type="text" on="input-throttled:AMP.setState({ dropdownfilter: event.value })" style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;" >
       </label>
     </div>
     {% endif %}
