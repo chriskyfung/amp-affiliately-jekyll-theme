@@ -3,6 +3,8 @@ const csso = require('gulp-csso');
 const ext_replace = require('gulp-ext-replace');
 const htmlmin = require('gulp-htmlmin');
 const minifyInline = require('gulp-minify-inline');
+const processIfModified = require('gulp-process-if-modified');
+
 const through2 = require('through2');
 
 const AmpOptimizer = require('@ampproject/toolbox-optimizer');
@@ -14,6 +16,7 @@ const cssConverter = require('styleflux');
 
 function build(cb) {
   return src('./_site/**/*.html')
+    .pipe(processIfModified())
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -68,6 +71,7 @@ function validate() {
 
 function css2scss() {
   return src(['./_includes/css/*.css', '!**/*.min.css'])
+    .pipe(processIfModified())
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -85,6 +89,7 @@ function css2scss() {
 
 function minifyCSS() {
   return src(['./_includes/css/*.css', '!**/*.min.css'])
+    .pipe(processIfModified())
     .pipe(csso())
     .pipe(ext_replace('.min.css'))
     .pipe(dest('./_includes/css/'));

@@ -1,12 +1,15 @@
 {%- assign dropdown_id = "local-dropdown" -%}
 <li class="nav-item dropdown" id="{{ dropdown_id }}">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-    aria-expanded="false" role="button" title="Tags"><i class="fas fa-tags"></i></a>
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+    <i class="fas fa-tags"></i> <span class="sr-only">Tags</span>
+  </a>
   <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
     {% if site.tags.size > 10 %}
     <div class="dropdown-filter">
-        <label style="color: #675bff; position: absolute; right: 0; padding: .2em .7em;"><i class='fas fa-filter'></i></label>
-        <input type="text" on="input-throttled:AMP.setState({ dropdownfilter: event.value })" style="border-color: #675bff; margin: 0 .3em;">
+      <label>
+        <input type="text" on="input-throttled:AMP.setState({ dropdownfilter: event.value })" style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;" aria-label="tag filter">
+        <i class="fas fa-filter" style="color: #675bff; margin-left: -1.75em; padding-right: .25em;" aria-hidden="true"></i>
+      </label>
     </div>
     {% endif %}
     {%- assign sorted_tags = site.tags | sort -%}

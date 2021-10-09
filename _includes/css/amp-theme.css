@@ -34,6 +34,11 @@ pre {
   padding: 1.5rem 1rem;
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .05)
 }
+.navbar-toggler-right {
+  position: absolute;
+  right: -2%;
+  top: 0;
+}
 .nav-up {
   box-shadow: none
 }
@@ -105,6 +110,10 @@ section.recent-posts {
 }
 .prevnextlinks .rightborder {
   border-right: 1px solid #eee
+}
+.navbar-btngroup {
+  padding-left: 0;
+  flex-wrap: nowrap;
 }
 .navbar-toggleable-md .navbar-nav .nav-link.highlight {
   background: #6FD350;

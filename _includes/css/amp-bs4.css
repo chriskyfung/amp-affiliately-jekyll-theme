@@ -295,30 +295,6 @@ pre code {
   margin-right: -15px;
   margin-left: -15px
 }
-@media(min-width:576px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px
-  }
-}
-@media(min-width:768px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px
-  }
-}
-@media(min-width:992px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px
-  }
-}
-@media(min-width:1200px) {
-  .row {
-    margin-right: -15px;
-    margin-left: -15px
-  }
-}
 .col,
 .col-1,
 .col-2,
@@ -765,9 +741,6 @@ fieldset[disabled] a.btn {
   border-right: 0.3em solid transparent;
   border-left: 0.3em solid transparent
 }
-.dropdown-toggle:focus {
-  outline: 0
-}
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -857,6 +830,9 @@ fieldset[disabled] a.btn {
   padding-right: 0;
   padding-left: 0
 }
+.navbar-nav .row {
+  list-style: none;
+}
 .navbar-toggler {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -881,10 +857,6 @@ fieldset[disabled] a.btn {
   background: no-repeat 50%;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%
-}
-.navbar-toggler-right {
-  position: absolute;
-  right: 1rem
 }
 @media(max-width:991px) {
   .navbar-toggleable-md .navbar-nav .dropdown-menu {
