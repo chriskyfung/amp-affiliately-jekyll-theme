@@ -68,11 +68,27 @@
       display: block;
     }
   }
+
+  &:focus-within {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.dropdown-toggle {
+  &:focus {
+    ~ {
+      .dropdown-menu {
+        display: block;
+      }
+    }
+  }
 }
 
 .navbar-nav {
   .btn {
-    margin-left: 15px;
+    margin-left: .5rem;
   }
 }
 
@@ -84,11 +100,17 @@
   z-index: 1030;
   overflow: hidden;
 
-  &:focus-visible {
-    overflow: visible;
+  &:focus {
+    overflow-x: visible;
+    overflow-y: visible;
   }
 
   &:hover {
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  &:focus-within {
     overflow-x: visible;
     overflow-y: visible;
   }

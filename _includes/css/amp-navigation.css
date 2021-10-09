@@ -35,8 +35,12 @@
   display: none;
   z-index: 1
 }
-.dropdown:hover .dropdown-menu {
-  display: block
+.dropdown:hover .dropdown-menu,
+.dropdown-toggle:focus~.dropdown-menu {
+  display: block;
+}
+.dropdown:focus-within .dropdown-menu {
+    display: block;
 }
 .mediumnavigation .search-icon {
   margin-left: -40px;
@@ -50,7 +54,7 @@
   max-width: none
 }
 .navbar-nav .btn {
-  margin-left: 15px;
+  margin-left: .5rem;
 }
 .fixed-top {
   position: fixed;
@@ -60,12 +64,14 @@
   z-index: 1030;
   overflow: hidden
 }
-.fixed-top:focus-visible {
-  overflow: visible
-}
+.fixed-top:focus,
 .fixed-top:hover {
   overflow-x: visible;
   overflow-y: visible
+}
+.fixed-top:focus-within {
+  overflow-x: visible;
+  overflow-y: visible;
 }
 .searchbox {
   display: inline;

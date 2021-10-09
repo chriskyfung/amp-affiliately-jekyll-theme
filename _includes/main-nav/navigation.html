@@ -31,7 +31,7 @@
   {{ link_to_home }}
   {%- endif -%}
   
-  <div class="row ml-auto">
+  <ul class="navbar-btngroup row ml-auto">
     {%- unless site.invitation_codes == false -%}
     <li class="nav-item">
       {% include main-nav/invitation-codes.html %}
@@ -51,5 +51,5 @@
       </button>
     </li>
 
-  </div>
+  </ul>
 </ul>

@@ -87,6 +87,12 @@ pre {
   }
 }
 
+.navbar-toggler-right {
+  position: absolute;
+  right: -2%;
+  top: 0;
+}
+
 .nav-up {
   box-shadow: none;
 }
@@ -256,6 +262,11 @@ section {
   .rightborder {
     border-right: 1px solid $whitesmoke_eee;
   }
+}
+
+.navbar-btngroup {
+  flex-wrap: nowrap;
+  padding-left: 0;
 }
 
 .navbar-toggleable-md {

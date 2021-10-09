@@ -136,7 +136,7 @@
   .navbar-toggleable-md {
     .navbar-nav {
       .nav-link {
-        margin-left: 1rem;
+        margin-left: .5rem;
         margin-top: initial;
       }
     }
@@ -147,10 +147,18 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .post-top-meta {
-    .col-md-10 {
-      text-align: center;
+@media (min-width: 1025px) {
+  .navbar-nav {
+    .btn {
+      margin-left: .75rem;
+    }
+  }
+
+  .navbar-toggleable-md {
+    .navbar-nav {
+      .nav-link {
+        margin-left: .75rem;
+      }
     }
   }
 }
@@ -159,6 +167,20 @@
   .container {
     max-width: 100%;
     width: 1140px;
+  }
+
+  .navbar-nav {
+    .btn {
+      margin-left: 1rem;
+    }
+  }
+
+  .navbar-toggleable-md {
+    .navbar-nav {
+      .nav-link {
+        margin-left: 1rem;
+      }
+    }
   }
 }
 

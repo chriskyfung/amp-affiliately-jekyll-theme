@@ -431,11 +431,6 @@ small {
     padding-right: 15px;
   }
 
-  .row {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
   .col-sm-3 {
         -ms-flex: 0 0 25%;
     -webkit-box-flex: 0;
@@ -519,22 +514,12 @@ small {
     padding-left: 15px;
     padding-right: 15px;
   }
-
-  .row {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
 }
 
 @media (min-width: 992px) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .row {
-    margin-left: -15px;
-    margin-right: -15px;
   }
 
   .navbar-toggleable-md {
@@ -602,11 +587,6 @@ small {
   .container {
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .row {
-    margin-left: -15px;
-    margin-right: -15px;
   }
 }
 
@@ -1481,10 +1461,6 @@ fieldset[disabled] {
     vertical-align: middle;
     width: 0;
   }
-
-  &:focus {
-    outline: 0;
-  }
 }
 
 .dropdown-menu {
@@ -1591,6 +1567,10 @@ fieldset[disabled] {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .row {
+    list-style: none;
+  }
 }
 
 .navbar-toggler {
@@ -1622,11 +1602,6 @@ fieldset[disabled] {
   height: 1.5em;
   vertical-align: middle;
   width: 1.5em;
-}
-
-.navbar-toggler-right {
-  position: absolute;
-  right: 1rem;
 }
 
 @media (max-width: 991px) {

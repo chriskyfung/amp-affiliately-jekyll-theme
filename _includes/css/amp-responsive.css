@@ -89,7 +89,7 @@
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1)
   }
   .navbar-toggleable-md .navbar-nav .nav-link {
-    margin-left: 1rem;
+    margin-left: .50rem;
     margin-top: initial;
   }
   .wrapintro {
@@ -97,15 +97,20 @@
   }
 }
 
-@media(max-width:1024px) {
-  .post-top-meta .col-md-10 {
-    text-align: center
+@media(min-width:1025px) {
+  .navbar-nav .btn,
+  .navbar-toggleable-md .navbar-nav .nav-link {
+    margin-left: .75rem;
   }
 }
 @media(min-width:1200px) {
   .container {
     width: 1140px;
     max-width: 100%
+  }
+  .navbar-nav .btn,
+  .navbar-toggleable-md .navbar-nav .nav-link {
+    margin-left: 1rem;
   }
 }
 
