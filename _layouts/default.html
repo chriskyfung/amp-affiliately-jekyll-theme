@@ -120,46 +120,47 @@
     {%- endif -%}
 
     <!-- Begin Menu Navigation -->
-    <header amp-fx="float-in-top" id="navbar" class="navbar navbar-toggleable-md navbar-light fixed-top mediumnavigation">
+    <nav amp-fx="float-in-top" id="navbar" class="navbar navbar-toggleable-md navbar-light fixed-top mediumnavigation" aria-label="primary">
 
-      <div class="container">
+      <div class="container" role="menu">
         <!-- Logo -->
-        <a class="navbar-brand" href="/" title="Site Home">
-          <amp-img src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" style="width:140px;height:36px;" noloading>
-            <amp-img fallback src="{{ site.logo | relative_url }}" alt="{{ site.name }}" height="36" width="140" noloading></amp-img>
+        <a class="navbar-brand" href="/" role="menuitem" title="Go to Site Home">
+          <amp-img src="{{ site.logo | relative_url }}" alt="site logo" height="36" width="140" style="width:140px;height:36px;" noloading>
+            <amp-img fallback src="{{ site.logo | relative_url }}" alt="site logo" height="36" width="140" noloading></amp-img>
           </amp-img>
         </a>
         {%- if site.baseurl != "" and site.baseurl != "/" and site.pages.size > 1 -%}
         {%- assign maxLength = site.nav.local.max_title_length | default: 30 -%}
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ "/" | relative_url }}" title="↰ Top Page">{{ site.title | truncate: maxLength }} <i class="fas fa-anchor" aria-hidden="true"></i></a>
-          </li>
-        </ul>
+        <div class="navbar-nav">
+          <div class="nav-item">
+            <a class="nav-link" href="{{ "/" | relative_url }}" role="menuitem" title="↰ Top Page" aria-label="Go to the Top Page of {{ site.title }}">{{ site.title | truncate: maxLength }} <i class="fas fa-anchor" aria-hidden="true"></i></a>
+          </div>
+        </div>
         {%- endif -%}
         <!-- Begin Menu -->
-        <button class="navbar-toggler navbar-toggler-right" on="tap:navbarsWow.toggleClass(class='show')" type="button"
-        data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false"
-        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <a class="navbar-toggler navbar-toggler-right" href="#" on="tap:navbarsWow.toggleClass(class='show'),AMP.setState({primaryMenuExpanded: !primaryMenuExpanded}),nav-item-0.focus" 
+          data-toggle="collapse" data-target="#navbarsWow" role="button" aria-controls="navbarsWow" aria-label="Toggle navigation menu" aria-expanded="false" [aria-expanded]="primaryMenuExpanded ? 'true' : 'false'" tabindex="0">
+          <span class="navbar-toggler-icon"></span>
+        </a>
         <div class="collapse navbar-collapse" id="navbarsWow">
           {% include main-nav/navigation.html %}
         </div>
         <!-- End Menu -->
       </div>
-    </header>
+    </nav>
 
     <amp-lightbox scrollable id="amp-searchbar" layout="nodisplay" animate-in="fade-in" hidden="hidden">
       <div class="modal-dialog modal-lg">
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Search for</h5> <button type="button" on="tap:amp-searchbar.close" tabindex="-1" class="close">×</button>
+            <h5 class="modal-title">Search for</h5> <button class="close" type="button" on="tap:amp-searchbar.close" aria-label="Close Search Modal" tabindex="-1">×</button>
           </div>
           <div class="modal-body">
             <div class="search_form">
               <form method="GET" action="{{ "search" | relative_url }}" target="_top">
                 <amp-autocomplete class="searchbox" filter="substring" src="/assets/data/suggestions.json">
-                  <input class="form-control" name="q" type="search" placeholder="Search" required />
+                  <input class="form-control" name="q" type="search" placeholder="Search" required>
                 </amp-autocomplete>
                 <input hidden name="sitesearch" value="chriskyfung.github.io"/>
                 <button class="btn btn-primary" type="submit">Search</button>
@@ -185,65 +186,68 @@
           {{ content }}
         </div>
       </div>
-      <h2 class="sr-only">Footer</h2>
-      <!-- Before Footer -->
-      <div class="beforefooter">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 mt-3">
-              {% include footer/call-for-action.html %}
-            </div>
-            <div class="col-md-4 text-center footersocial">
-              <div class="mb-4">
-                {% include footer/subscription-button.html %}
+
+      <footer>
+        <h2 class="sr-only">Footer</h2>
+        <!-- Before Footer -->
+        <section class="beforefooter">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-8 mt-3">
+                {% include footer/call-for-action.html %}
               </div>
-              <div>
-                {% include footer/follow-buttons.html %}
+              <div class="col-md-4 text-center footersocial">
+                <div class="mb-4">
+                  {% include footer/subscription-button.html %}
+                </div>
+                <div>
+                  {% include footer/follow-buttons.html %}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- Begin Footer  -->
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="footer-widget">
-                {% include footer/footer-widget-col0.html %}
+        </section>
+        <!-- Begin Footer  -->
+        <section class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="footer-widget">
+                  {% include footer/footer-widget-col0.html %}
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="footer-widget">
+                  {% include footer/footer-widget-col1.html %}
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="footer-widget">
+                  {% include footer/footer-widget-col2.html %}
+                </div>
+              </div>
+
+              <div class="col-sm-3">
+                <div class="footer-widget">
+                  {% include footer/footer-widget-col3.html %}
+                </div>
               </div>
             </div>
 
-            <div class="col-sm-3">
-              <div class="footer-widget">
-                {% include footer/footer-widget-col1.html %}
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="footer-widget">
-                {% include footer/footer-widget-col2.html %}
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="footer-widget">
-                {% include footer/footer-widget-col3.html %}
-              </div>
+            <div class="footer-bar">
+              <p class="float-lg-left">
+                {% include footer/copyright-notice.html %}
+              </p>
+              <p class="float-lg-right">Powered by <a aria-label="theme credit"
+                href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="noopener noreferrer">AMP Affiliately Theme</a> |
+                {% include footer/footer-right-text.html %}
+              </p>
+              <div class="clearfix"></div>
             </div>
           </div>
-
-          <div class="footer-bar">
-            <p class="float-lg-left" aria-label="copyright">
-              {% include footer/copyright-notice.html %}
-            </p>
-            <p class="float-lg-right">Powered by <a aria-label="theme credit"
-              href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="noopener noreferrer">AMP Affiliately Theme</a> |
-              {% include footer/footer-right-text.html %}
-            </p>
-            <div class="clearfix"></div>
-          </div>
-        </div>
+        </sect>
       </footer>
       <!-- End Footer -->
     </div><!-- /.site-content -->
