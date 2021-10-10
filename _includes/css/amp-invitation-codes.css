@@ -1,4 +1,4 @@
-.navbar-nav .invitation-codes a {
+.invitation-codes a {
   background: linear-gradient(139deg,#ffc92f,#ff185c,#f316d5,#b81ed2);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -9,7 +9,7 @@
   height: 36px;
   display: inline-block
 }
-.navbar-nav .invitation-codes svg {
+.invitation-codes svg {
   float: left;
   vertical-align: middle;
   display: inline;
@@ -18,7 +18,7 @@
   padding-top: 7px;
   height: 28px
 }
-.navbar-nav .invitation-codes span {
+.invitation-codes span {
   padding: 0 12px;
   vertical-align: middle;
   float: left;

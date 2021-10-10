@@ -1,3 +1,8 @@
+$gainsboro_ddd: #dddddd;
+$gray_888: #888888;
+$lightgray_ccc: #cccccc;
+$whitesmoke_eee: #eeeeee;
+
 .mediumnavigation {
   .form-control {
     border: 1px solid rgba(0, 0, 0, .04);
@@ -59,6 +64,7 @@
 .dropdown-menu {
   display: none;
   font-size: .9rem;
+  overflow: auto;
   z-index: 1;
 }
 
@@ -86,10 +92,25 @@
   }
 }
 
-.navbar-nav {
+.navbar-collapse {
+  border-top: 1px solid $gainsboro_ddd;
+}
+
+.navbar-btngroup {
+  flex-wrap: nowrap;
+  justify-content: right;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+
   .btn {
     margin-left: .5rem;
   }
+}
+
+.navbar-nav {
+  max-height: 60vh;
+  overflow: auto;
 }
 
 .fixed-top {
@@ -113,6 +134,28 @@
   &:focus-within {
     overflow-x: visible;
     overflow-y: visible;
+  }
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+
+  &:-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &:-webkit-scrollbar-track {
+    background: $whitesmoke_eee;
+    border-radius: 0 3px 3px 0;
+  }
+
+  &:-webkit-scrollbar-thumb {
+    background: $lightgray_ccc;
+    border-radius: 3px;
+
+    &:hover {
+      background: $gray_888;
+    }
   }
 }
 

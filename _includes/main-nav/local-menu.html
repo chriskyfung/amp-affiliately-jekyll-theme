@@ -1,25 +1,35 @@
-{%- assign dropdown_id = "local-dropdown" -%}
-<li class="nav-item dropdown" id="{{ dropdown_id }}">
-  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0">
+<li id="tag-dropdown" class="nav-item dropdown" role="none">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-controls="tags-submenu" aria-haspopup="true" aria-expanded="false"
+  [aria-expanded]="tagsDropdownExpanded ? 'true' : 'false'" tabindex="0"
+  on="tap:AMP.setState({tagsDropdownExpanded: !tagsDropdownExpanded}),tag-filter.focus">
     <i class="fas fa-tags"></i> <span class="sr-only">Tags</span>
   </a>
-  <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
+  <div id="tags-submenu" class="dropdown-menu scrollbar-thin" aria-labelledby="{{ dropdown_id }}">
     {% if site.tags.size > 10 %}
     <div class="dropdown-filter">
+      <amp-state id="tagfilterState">
+        <script type="application/json">
+          {
+            "value": ""
+          }
+        </script>
+      </amp-state>
       <label>
         <small style="color: #675bff;margin-left: .3rem;">
         <i class="fas fa-filter fa-sm" aria-hidden="true"></i>
         Tag Filter
       </small>
-        <input type="text" on="input-throttled:AMP.setState({ dropdownfilter: event.value })" style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;" >
+        <input id="tag-filter" type="text" on="input-throttled:AMP.setState({ tagfilterState:{ value: event.value }})" placeholder="Find..." style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;">
       </label>
     </div>
     {% endif %}
-    {%- assign sorted_tags = site.tags | sort -%}
-    {%- for tag in sorted_tags -%}
-    <div>
-      <a class="dropdown-item" href="{{ tag[0] | slugify | prepend: "tag/" | relative_url }}/" [hidden]="'{{ tag[0] }}'.indexOf(dropdownfilter)==-1">{{ tag[0] }}</a>
-    </div>
-    {%- endfor -%}
+    <ul style="list-style: none; padding-left: 0;">
+      {%- assign sorted_tags = site.tags | sort -%}
+      {%- for tag in sorted_tags -%}
+      <li>
+        <a class="dropdown-item" href="{{ tag[0] | slugify | prepend: "tag/" | relative_url }}/" [hidden]="'{{ tag[0] }}'.indexOf(tagfilterState.value)==-1">{{ tag[0] }}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
   </div>
 </li>

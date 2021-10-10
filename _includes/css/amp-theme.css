@@ -111,10 +111,6 @@ section.recent-posts {
 .prevnextlinks .rightborder {
   border-right: 1px solid #eee
 }
-.navbar-btngroup {
-  padding-left: 0;
-  flex-wrap: nowrap;
-}
 .navbar-toggleable-md .navbar-nav .nav-link.highlight {
   background: #6FD350;
   color: #fff;
