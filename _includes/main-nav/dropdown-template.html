@@ -1,10 +1,32 @@
-{%- assign dropdown_id = "dropdown2" -%}
+{%- assign dropdown_text = "Dropdown2" -%}
+{%- assign dropdown_id = dropdown_text | slugify -%}
+{%- assign dropdown_id_tokens = dropdown_id | split: "-" -%}
+{%- assign dropdown_var = dropdown_id_tokens[0] | first -%}
+{%- for token in dropdown_id_tokens offset:1 -%}
+{%- assign dropdown_var = token | capitalize | prepend: dropdown_var -%}
+{% endfor %}
+{%- assign dropdown_submenu_id = dropdown_id | append: "-dropdown" -%}
+{%- assign dropdown_expanded_var = dropdown_var | append: "DropdownExpanded" -%}
+{%- assign dropdown_expanded_focus = dropdown_id | append: "-expanded-focus" -%}
 
-<li class="nav-item dropdown" id="{{ dropdown_id }}">
-  <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" tabindex="0">Dropdown2</a>
-  <div class="dropdown-menu" aria-labelledby="{{ dropdown_id }}">
-    <a class="dropdown-item" href="/item-1/">item-1</a>
-    <a class="dropdown-item" href="/item-2/">item-2</a>
-    <a class="dropdown-item" href="/item-3/">item-3</a>
+<li id="{{ dropdown_id }}" class="nav-item dropdown" role="none">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" 
+    aria-controls="{{ dropdown_submenu_id }}" aria-haspopup="true" aria-expanded="false"
+    [aria-expanded]="{{ dropdown_expanded_var }} ? 'true' : 'false'" tabindex="0"
+    on="tap:AMP.setState({ {{ dropdown_expanded_var }}: !{{ dropdown_expanded_var }} }),{{ dropdown_expanded_focus }}.focus">
+    {{ dropdown_text }}
+  </a>
+  <div id="{{ dropdown_submenu_id }}" class="dropdown-menu scrollbar-thin" aria-labelledby="{{ dropdown_id }}">
+    <ul style="list-style: none; padding-left: 0;">
+      <li>
+        <a id="{{ dropdown_expanded_focus }}" class="dropdown-item" href="/item-1/">item-1</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="/item-2/">item-2</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="/item-3/">item-3</a>
+      </li>
+    </ul>
   </div>
 </li>

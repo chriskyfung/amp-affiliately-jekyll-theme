@@ -16,7 +16,8 @@ repository: chriskyfung/amp-affiliately-jekyll-theme
 # Navigation features
 nav:
   global:
-    dropdown: false
+    menu: false
+    dropdown: false # Show menu with dropdown submenu
   local:
     items:
       - name: Features
@@ -114,6 +115,7 @@ exclude:
   - LICENSE
   - package-lock.json
   - package.json
+  - README.md
 
 ############################################################
 # Site configuration for the WebP Generator Plugin

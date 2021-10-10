@@ -12,7 +12,7 @@ const ampOptimizer = AmpOptimizer.create();
 const gulpAmpValidator = require('gulp-amphtml-validator');
 const amphtmlValidator = require('amphtml-validator');
 
-const cssConverter = require('styleflux');
+const cssConverter = require('@gecka/styleflux');
 
 function build(cb) {
   return src('./_site/**/*.html')
