@@ -23,6 +23,11 @@ css:
       /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
         background: #555;
+      }
+      
+      * {
+        scrollbar-width: thin;
+      }
 ---
 
 <!-- Home Jumbotron

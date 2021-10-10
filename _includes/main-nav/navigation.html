@@ -1,21 +1,21 @@
-<ul class="navbar-nav ml-auto">
+<ul class="navbar-nav ml-auto scrollbar-thin" role="menubar">
 
   {%- assign home_position = site.nav.global.home.location | default: "menu-start" -%}
 
-  {%- capture link_to_home -%}
-  <li class="nav-item">
-    <a class="nav-link" href="/">{{ site.home.text | default: "Home" }}</a>
-  </li>
-  {%- endcapture -%}
+  {%- assign nav_item_index = 0 -%}
 
   {%- if site.nav.global.home != false and home_position == "menu-start" %}
-  {{ link_to_home }}
+  <li class="nav-item" role="none">
+    <a id="nav-item-0" class="nav-link" href="/" role="menuitem">{{ site.home.text | default: "Home" }}</a>
+    {%- assign nav_item_index = nav_item_index | plus: 1 -%}
+  </li>
   {%- endif -%}
 
   {%- if site.baseurl != "" and site.baseurl != "/" and site.pages.size > 1 -%}
   {%- for item in site.nav.local.items -%}
-  <li class="nav-item">
-    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+  <li class="nav-item" role="none">
+    <a id="nav-item-{{ nav_item_index }}" class="nav-link" href="{{ item.url | relative_url }}" role="menuitem">{{ item.name }}</a>
+    {%- assign nav_item_index = nav_item_index | plus: 1 -%}
   </li>
   {%- endfor -%}
   {%- if site.nav.local.menu -%}
@@ -28,28 +28,29 @@
   {%- endif -%}
 
   {%- if site.nav.global.home != false and home_position == "menu-end" %}
-  {{ link_to_home }}
+  <li class="nav-item">
+    <a class="nav-link" href="/" role="menuitem">{{ site.home.text | default: "Home" }}</a>
+  </li>
+  {%- endif -%}
+</ul>
+<ul class="navbar-btngroup row ml-auto">
+  {%- unless site.invitation_codes == false -%}
+  <li class="nav-item">
+    {% include main-nav/invitation-codes.html %}
+  </li>
+  {%- endunless -%}
+
+  {%- if site.github.is_project_page -%}
+  <li class="nav-item">
+    <a class="btn btn-dark" href="{{ site.github.repository_url }}" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+  </li>
   {%- endif -%}
   
-  <ul class="navbar-btngroup row ml-auto">
-    {%- unless site.invitation_codes == false -%}
-    <li class="nav-item">
-      {% include main-nav/invitation-codes.html %}
-    </li>
-    {%- endunless -%}
+  <li class="nav-item">
+    <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"
+      data-toggle="modal" data-target="#searchbar" title="search" accesskey="/">
+      <i class="fas fa-search"></i>
+    </button>
+  </li>
 
-    {%- if site.github.is_project_page -%}
-    <li class="nav-item">
-      <a class="btn btn-dark" href="{{ site.github.repository_url }}" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
-    </li>
-    {%- endif -%}
-    
-    <li class="nav-item">
-      <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"
-        data-toggle="modal" data-target="#searchbar" role="search" title="search" accesskey="/">
-        <i class="fas fa-search"></i>
-      </button>
-    </li>
-
-  </ul>
 </ul>
