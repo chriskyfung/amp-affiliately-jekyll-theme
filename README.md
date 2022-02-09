@@ -2,6 +2,7 @@
 
 **AMP Affiliately** is an AMP-ready Jekyll theme for your blogs and websites.
 
+
 ![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-1f425f.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/chriskyfung/amp-affiliately-jekyll-theme) [![CodeQL](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/codeql-analysis.yml) ![Deploy GitHub Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/workflows/Deploy%20GitHub%20Pages/badge.svg) [![Website
  Monitoring](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fchriskyfung.github.io%2Famp-affiliately-jekyll-theme%2F)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
 
