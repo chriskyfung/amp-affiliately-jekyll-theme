@@ -17,6 +17,7 @@ image:
     height: 383
 custom_head: >-
   <meta name="robots" content="noindex, nofollow">
+sitemap: false
 ---
 
 Education must also train one for quick, resolute and effective thinking. To think incisively and to think for one's self is very difficult.

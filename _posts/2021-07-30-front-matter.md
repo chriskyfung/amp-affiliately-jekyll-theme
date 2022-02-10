@@ -300,6 +300,16 @@ download:
 
 💡 Learn more about the usage from the [Jekyll Redirect From](https://github.com/jekyll/jekyll-redirect-from) documentation.
 
+## Exclude from Sitemap
+
+> If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page/post.
+>
+> ```yaml
+  sitemap: false
+  ```
+
+💡 Learn more from the [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap#exclusions) documentation.
+
 * * *
 
 ## See Also 📚
