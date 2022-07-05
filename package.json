@@ -26,7 +26,7 @@
     "jekyll-theme-amp"
   ],
   "devDependencies": {
-    "@ampproject/toolbox-optimizer": "^2.8.10",
+    "@ampproject/toolbox-optimizer": "^2.9.0",
     "@gecka/styleflux": "^1.2.0-gecka2",
     "amphtml-validator": "^1.0.35",
     "glob-parent": "^6.0.2",
@@ -38,7 +38,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-minify-inline": "^1.1.0",
     "gulp-process-if-modified": "^1.0.4",
-    "nth-check": ">=2.0.1",
+    "nth-check": "^2.1.1",
     "set-value": ">=4.0.1",
     "tar": ">=4.4.18",
     "through2": "^4.0.2",
