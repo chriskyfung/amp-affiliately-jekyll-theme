@@ -1,7 +1,7 @@
 {
   "name": "amp-affiliately-jekyll-theme",
   "description": "AMP Affiliately is an AMP-ready Jekyll theme for your blogs and websites.",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "author": "Chris K.Y. Fung",
   "license": "MIT",
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
@@ -49,6 +49,7 @@
     },
     "gulp": {
       "glob-parent": ">=5.1.2",
+      "minimatch": "^3.1.2",
       "set-value": ">=4.1.0"
     },
     "gulp-minify-inline": {
