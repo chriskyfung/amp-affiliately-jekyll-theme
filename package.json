@@ -39,10 +39,10 @@
     "gulp-minify-inline": "^1.1.0",
     "gulp-process-if-modified": "^1.0.4",
     "nth-check": "^2.1.1",
-    "set-value": ">=4.0.1",
+    "set-value": ">=4.1.0",
     "tar": "^6.1.12",
     "through2": "^4.0.2",
-    "trim-newlines": ">=3.0.1"
+    "trim-newlines": ">=4.0.2"
   },
   "dependencies": {},
   "scripts": {
