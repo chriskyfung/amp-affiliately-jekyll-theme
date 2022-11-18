@@ -29,7 +29,7 @@ function build(cb) {
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
-    .pipe(minifyInline())
+    // .pipe(minifyInline())
     .pipe(dest('./_site/'));
 }
 
