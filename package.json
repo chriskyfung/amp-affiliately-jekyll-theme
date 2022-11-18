@@ -1,7 +1,7 @@
 {
   "name": "amp-affiliately-jekyll-theme",
   "description": "AMP Affiliately is an AMP-ready Jekyll theme for your blogs and websites.",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "author": "Chris K.Y. Fung",
   "license": "MIT",
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
@@ -29,7 +29,6 @@
     "@ampproject/toolbox-optimizer": "^2.9.0",
     "@gecka/styleflux": "^1.2.0-gecka2",
     "amphtml-validator": "^1.0.35",
-    "glob-parent": "^6.0.2",
     "gulp": "^4.0.2",
     "gulp-amphtml-validator": "^1.0.6",
     "gulp-csso": "^4.0.1",
@@ -38,13 +37,26 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-minify-inline": "^1.1.0",
     "gulp-process-if-modified": "^1.0.4",
-    "nth-check": "^2.1.1",
-    "set-value": ">=4.0.1",
-    "tar": ">=4.4.18",
     "through2": "^4.0.2",
-    "trim-newlines": ">=3.0.1"
+    "trim-newlines": ">=4.0.2"
   },
-  "dependencies": {},
+  "overrides": {
+    "@ampproject/toolbox-optimizer": {
+      "terser": ">=5.14.2"
+    },
+    "@gecka/styleflux": {
+      "postcss": ">=7.0.36"
+    },
+    "gulp": {
+      "glob-parent": ">=5.1.2",
+      "minimatch": "^3.1.2",
+      "set-value": ">=4.1.0"
+    },
+    "gulp-minify-inline": {
+      "nth-check": "^2.1.1",
+      "terser": ">=5.14.2"
+    }
+  },
   "scripts": {
     "convert": "npx gulp convert",
     "jekyll": "bundle exec jekyll serve",
