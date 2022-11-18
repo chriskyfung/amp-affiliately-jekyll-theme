@@ -25,6 +25,10 @@
     "amp-jekyll",
     "jekyll-theme-amp"
   ],
+  "engines": {
+    "node": ">=18.12.1",
+    "npm": ">=9.1.2"
+  },
   "devDependencies": {
     "@ampproject/toolbox-optimizer": "^2.9.0",
     "@gecka/styleflux": "^1.2.0-gecka2",
