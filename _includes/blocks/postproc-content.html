@@ -1,9 +1,9 @@
 {%- comment -%}
 Modify every link with an external URL with the followings:
-- If `site.google_analytics` is configured, add the attribute `data-vars-event-label` to the anchor tag for using AMP Google Analytics to track outbound link events
+- If `site.google_analytics` or `or site.ga4` is configured, add the attribute `data-vars-event-label` to the anchor tag for using AMP Google Analytics to track outbound link events
 - If `site.target_blank` is configured, add rel="noopener noreferrer" and target="_blank" to the anchor tag
 {%- endcomment -%}
-{%- if site.google_analytics or site.target_blank == true -%}
+{%- if site.google_analytics or site.ga4 or site.target_blank == true -%}
   {%- assign splited_by_a = page.content | split: '<a ' -%}
   {%- assign modified_content_1 = splited_by_a | first -%}
   {% for splited_a_part in splited_by_a offset:1 %}
@@ -18,7 +18,7 @@ Modify every link with an external URL with the followings:
         {%- if a_tag_lastchar == '>' -%}
         {%- assign a_inner = a_inner | append: '>' -%}
         {%- endif -%}
-        {%- if site.google_analytics  -%}
+        {%- if site.google_analytics or site.ga4 -%}
           {%- assign event_label = 'data-vars-event-label="' | append: a_href | append: '" ' -%}
         {%- endif -%}
         {%- if site.target_blank == true -%}

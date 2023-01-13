@@ -18,6 +18,7 @@
 {% capture label %}youtu.be/{{ include.id }}{% endcapture %}
 {%- endif -%}
 
+{%- if site.google_analytics -%}
 <amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
     {
@@ -65,3 +66,59 @@
     }
   </script>
 </amp-analytics>
+{%- endif -%}
+{%- if site.ga4 -%}
+<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
+  <script type="application/json">
+  {
+      "vars": {
+        "GA4_MEASUREMENT_ID": "{{ site.ga4 }}",
+        "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
+        "DEFAULT_PAGEVIEW_ENABLED": false,    
+        "GOOGLE_CONSENT_ENABLED": false,
+        "WEBVITALS_TRACKING": false,
+        "PERFORMANCE_TIMING_TRACKING": false,
+        "SEND_DOUBLECLICK_BEACON": false
+      },
+      "triggers": {
+        "videoPlay": {
+          "on": "video-play",
+          "request": "ga4Event",
+          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+          "vars": {
+            "ga4_event_name": "video_played"
+          },
+          "extraUrlParams": {
+            "event__str_video_title": "{{ label }}",
+            "event__num_video_duration": "${duration}"
+          }
+        },
+        "videoPause": {
+          "on": "video-pause",
+          "request": "ga4Event",
+          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+          "vars": {
+            "ga4_event_name": "video_paused"
+          },
+          "extraUrlParams": {
+            "event__str_video_title": "{{ label }}",
+            "event__num_video_duration": "${duration}"
+          }
+        },
+        "videoEnded": {
+          "on": "video-ended",
+          "request": "ga4Event",
+          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+          "vars": {
+            "ga4_event_name": "video_ended"
+          },
+          "extraUrlParams": {
+            "event__str_video_title": "{{ label }}",
+            "event__num_video_duration": "${duration}"
+          }
+        }
+      }
+  }
+  </script>
+</amp-analytics> 
+{%- endif -%}
