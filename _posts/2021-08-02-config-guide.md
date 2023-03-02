@@ -2,7 +2,7 @@
 layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
-last_modified_at: 2021-08-23 23:00 +0800
+last_modified_at: 2023-03-02 16:30 +0800
 category: [doc]
 tags: [_config]
 permalink: /config-guide/
@@ -95,6 +95,9 @@ You will need to configure the navigation bar for this theme in the following hi
 
 ```yaml
 nav:
+   buttons:
+      ... # Settings for menu buttons
+      ...
    global:
       ... # Settings for global/domain-Level menu items
       ...
@@ -102,6 +105,19 @@ nav:
       ... # Settings for local/baseURL-level menu items
       ...
 ```
+
+#### Settings for Menu Buttons <span class="badge badge-default">v2.7</span>
+
+Use the following option to configure the menu buttons.
+
+| Attribute | Property      | Description                                                                                                                                                                                         |
+| :-------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buttons` |               |                                                                                                                                                                                                     |
+|           | `gh_sponsors` | <span class="badge badge-success">v2.7</span> Set `true` to show **GitHub Sponsors** button in the navigation bar, if `social.github` is also configured in in the `_config.yml`.<br>_Default:_ `false`{:.plaintext}. |
+
+**Example:**
+
+<iframe src="https://github.com/sponsors/chriskyfung/button" title="Sponsor chriskyfung" height="32" width="114" style="border: 0; border-radius: 6px; margin-left: 2rem"></iframe>
 
 #### Settings for Global Menu Items
 
@@ -172,6 +188,37 @@ Use the following options to configure the menu items that will be shown on the 
 |           | `recent_posts` | Add **RECENT POSTS** widget to sidebar.<br> _Default:_ `true`{:.plaintext}.                          |
 
 - Set `false` to disable the widgets as you need
+
+* * *
+
+### Social Buttons
+
+You can configure the links for social buttons by the following attributes.
+
+#### <span class="badge badge-default">v1.4</span> <sup>(Deprecated)</sup>
+
+```yaml
+# Soical Buttons
+facebook_id: your_facebook_username
+pinterest_id: your_pinterest_username
+github_id : your_github_username
+medium_id: your_medium_username
+```
+
+#### <span class="badge badge-success">v2.7</span>
+
+The social button will only show if the corresponding attribute is configured.
+
+```yaml
+# Soical Buttons
+social:
+   facebook: your_facebook_username
+   twitter: your_twitter_username
+   linkedin: your_linkedin_username
+   pinterest: your_pinerest_username
+   github : your_github_username
+   medium: your_medium_username
+```
 
 * * *
 

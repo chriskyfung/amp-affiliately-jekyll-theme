@@ -45,6 +45,11 @@
     <a class="btn btn-dark" href="{{ site.github.repository_url }}" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
   </li>
   {%- endif -%}
+  {%- if site.social.github and site.nav.buttons.gh_sponsors -%}
+  <li class="nav-item">
+    <iframe src="https://github.com/sponsors/{{ site.social.github }}/button" title="Sponsor {{ site.social.github }}" height="32" width="114" style="border: 0; border-radius: 6px; margin-top: 2px;"></iframe>
+  </li>
+  {%- endif -%}
   
   <li class="nav-item">
     <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"

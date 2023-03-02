@@ -1,5 +1,4 @@
 {
-  "frontMatter.taxonomy.modifiedField": "last_modified_at",
   "grammarly.domain": "technical",
   "grammarly.userWords": [
     "css",
@@ -8,55 +7,11 @@
   ],
   "grammarly.audience": "general",
   "grammarly.hideUnavailablePremiumAlerts": true,
-  "frontMatter.taxonomy.contentTypes": [
-    {
-      "name": "default",
-      "fields": [
-        {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime"
-        },
-        {
-          "title": "Article preview",
-          "name": "preview",
-          "type": "image"
-        },
-        {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "boolean"
-        },
-        {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
-        },
-        {
-          "name": "last_modified_at",
-          "type": "datetime"
-        }
-      ]
-    }
-  ],
   "liveServer.settings.proxy": {
     "enable": true,
     "baseUri": "/amp-affiliately-jekyll-theme",
     "proxyUri": "http://127.0.0.1:5500/_site"
-  }
+  },
+  "frontMatter.framework.startCommand": "bundle exec jekyll serve",
+  "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/"
 }

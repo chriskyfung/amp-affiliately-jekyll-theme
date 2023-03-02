@@ -10,6 +10,36 @@ favicon: 'assets/images/favicon_96x96.png'
 logo: 'assets/images/logo-plainSVG.svg'
 timezone: 'Asia/Hong_Kong'
 
+# Set <USERNAME>/<PROJECT> to display the button to the project
+repository: chriskyfung/amp-affiliately-jekyll-theme
+
+# Navigation features
+nav:
+  buttons:
+    gh_sponsors: true # Show GitHub Sponsors button
+  global:
+    menu: false
+    dropdown: false # Show menu with dropdown submenu
+  local:
+    items:
+      - name: Features
+        url: category/feature/
+      - name: Docs
+        url: category/doc/
+      - name: Samples
+        url: category/sample/
+    menu: true
+    title:
+      limit: 40
+
+# List Sorting
+sort_categories: false
+sort_tags: false
+
+# Content Post-processing
+target_blank: false
+anchor_link: true
+
 sidebar:
   featured: false
   recent_posts: false
@@ -40,10 +70,11 @@ adsense:
     sidebar: 1391498756 # Ad Slot that places to sidebar
 
 # Soical Buttons
-facebook_id: chriskyfung
-pinterest_id: chriskyfung
-github_id : chriskyfung
-medium_id: chriskyfung
+social:
+  facebook: chriskyfung
+  pinterest: chriskyfung
+  github : chriskyfung
+  medium: chriskyfung
 
 # Buy Me a Coffee
 buymeacoffee: chriskyfung

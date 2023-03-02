@@ -48,7 +48,7 @@
 - Improve accessibility 👩‍🦽
 - Improve the support for IE11
 - Support installing Jekyll-Scholar Plugin to format bibliographies
-- Set the sorting of post's tags and categories in `_config.yml`
+- Set the sorting of post tags and categories in `_config.yml`
 - New block for including Table of Contents to a page/post
 - New post-processing for adding anchor links next to H2, H3, and H4 headings inside post content
 - New post-processing for inserting `rel` and `target` attributes to outbound links without plugins or dependencies
@@ -56,6 +56,8 @@
 - Allow configuring **Resources** Widget globally in `_config.yml`
 - Support creating multiple download buttons in the sidebar widget
 - Allow fully customizing copyright notice in `_config.yml`
+- 🆕(`v2.7`) Show/hide the GitHub Sponsors button in the navigation bar
+- 🆕(`v2.7`) Add support of social buttons for Twitter and Linkedin
 
 * * *
 

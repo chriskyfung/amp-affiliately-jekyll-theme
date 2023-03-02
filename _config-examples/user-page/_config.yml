@@ -44,10 +44,11 @@ adsense:
     sidebar: 1391498756 # Ad Slot that places to sidebar
 
 # Soical Buttons
-facebook_id: chriskyfung
-pinterest_id: chriskyfung
-github_id : chriskyfung
-medium_id: chriskyfung
+social:
+  facebook: chriskyfung
+  pinterest: chriskyfung
+  github : chriskyfung
+  medium: chriskyfung
 
 # Buy Me a Coffee
 buymeacoffee: chriskyfung
