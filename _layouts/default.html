@@ -88,6 +88,9 @@
       {% include css/amp-footer.min.css %}
       {% include css/amp-bmc-button.min.css %}
       {% include css/amp-responsive.min.css %}
+    {%- if site.social.github and site.nav.buttons.gh_sponsors -%}
+      {% include css/amp-github-sponsors-embed.min.css %}
+    {%- endif -%}
     {%- if layout.css.badge == true or page.css.badge == true -%}
       {% include css/amp-bs4-badge.min.css %}
     {%- endif -%}
