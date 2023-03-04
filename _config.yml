@@ -85,7 +85,8 @@ buymeacoffee: chriskyfung
 
 # Copyright Start Year
 copyright: 
-  owner: Chris KY FUNG
+  prefix: 
+  ownership: Chris KY FUNG
   link: https://chriskyfung.github.io/
 
 # Plugins
