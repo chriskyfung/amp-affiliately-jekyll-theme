@@ -205,7 +205,7 @@ custom_head: >-
 
 ## Sidebar Options
 
-### Override Default Sidebar Setting <span class="badge badge-default">v2.0</span>
+### Override Default Sidebar Setting <span class="badge badge-success">v2.0</span>
 
 **Options:** `left`, `right`, and `none`
 

@@ -106,7 +106,7 @@ nav:
       ...
 ```
 
-#### Settings for Menu Buttons <span class="badge badge-default">v2.7</span>
+#### Settings for Menu Buttons <span class="badge badge-success">v2.7</span>
 
 Use the following option to configure the menu buttons.
 
@@ -152,7 +152,7 @@ Use the following options to configure the menu items that will be shown on the 
 
 * * *
 
-### List Sorting Options <span class="badge badge-default">v2.3</span>
+### List Sorting Options <span class="badge badge-success">v2.3</span>
 
 |     Attribute     | Description                                                                                                     |
 | :---------------: | --------------------------------------------------------------------------------------------------------------- |
@@ -161,7 +161,7 @@ Use the following options to configure the menu items that will be shown on the 
 
 * * *
 
-### Post-Processing Options <span class="badge badge-default">v2.0</span>
+### Post-Processing Options <span class="badge badge-success">v2.0</span>
 
 #### <i class="fas fa-link fa-fw"></i> Add Anchor Link For H2, H3 And H4 Headings
 
@@ -179,7 +179,7 @@ Use the following options to configure the menu items that will be shown on the 
 
 ### Sidebar Options
 
-#### <i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-default">v1.2</span>
+#### <i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-success">v1.2</span>
 
 | Attribute | Property       | Description                                                                                          |
 | :-------: | -------------- | ---------------------------------------------------------------------------------------------------- |
@@ -222,7 +222,7 @@ social:
 
 * * *
 
-### Footer Options <span class="badge badge-default">v2.0</span>
+### Footer Options <span class="badge badge-success">v2.0</span>
 
 |  Attribute  | Property  | Description                                                                                                                                      |
 | :---------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -339,7 +339,7 @@ defaults:
 
 #### <i class="fab fa-github fa-fw"></i> GitHub
 
-#### <i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-default">v2.0</span>
+#### <i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-success">v2.0</span>
 
 This theme supports rendering GitHub Metadata by using the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin. When you associate it with a GitHUb project repo, a sidebar widget named **RESOURCES** with a button link to the GitHub repository will be shown on the page.
 
