@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2023-04-06T17:35:56+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2021-09-08T12:00:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2023-05-12T09:40:26+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2021-09-08T12:00:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -117,7 +117,7 @@
 
 <p>See <a href="https://github.com/jekyll/jekyll-archives"><strong>jekyll-archives</strong></a>.</p>
 
-<p><strong>NOTE</strong>: Jekyll Scholar is not a GitHub Pages’ <a href="https://pages.github.com/versions/">whitelisted plugins</a>.</p>
+<p><strong>NOTE</strong>: Jekyll Archives is not a GitHub Pages’ <a href="https://pages.github.com/versions/">whitelisted plugins</a>.</p>
 
 <p>Add the following example to your <code class="language-plaintext highlighter-rouge">_config.yml</code> file will enable category and tag archives:</p>
 
@@ -136,7 +136,7 @@
 
 <p><a href="https://github.com/gildesmarais/jekyll-loading-lazy"><strong>jekyll-loading-lazy</strong></a> is a Jekyll plugin to load images on your sites lazily without JavaScript by automatically adding <code class="language-plaintext highlighter-rouge">loading="lazy"</code> to <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> tags.</p>
 
-<p><strong>NOTE</strong>: Jekyll Scholar is not a GitHub Pages’ <a href="https://pages.github.com/versions/">whitelisted plugins</a>.</p>
+<p><strong>NOTE</strong>: Jekyll Loading Lazy is not a GitHub Pages’ <a href="https://pages.github.com/versions/">whitelisted plugins</a>.</p>
 
 <p>You don’t need to use this plugin because, in this theme, all AMP elements are always lazy-loaded.</p>
 
@@ -146,7 +146,7 @@
 
 <p>See <a href="https://github.com/digitalsparky/jekyll-minifier"><strong>jekyll-minifier</strong></a>.</p>
 
-<p><strong>NOTE</strong>: Jekyll Scholar is not a GitHub Pages’ <a href="https://pages.github.com/versions/">whitelisted plugins</a>.</p>
+<p><strong>NOTE</strong>: Jekyll Minifier is not a GitHub Pages’ <a href="https://pages.github.com/versions/">whitelisted plugins</a>.</p>
 
 <h3 id="-jekyll-scholar"><i class="fas fa-graduation-cap fa-fw"></i> Jekyll Scholar</h3>
 
@@ -413,7 +413,14 @@
 
 <p><strong>Example:</strong></p>
 
-<iframe src="https://github.com/sponsors/chriskyfung/button" title="Sponsor chriskyfung" height="32" width="114" style="border: 0; border-radius: 6px; margin-left: 2rem"></iframe>
+<div style="border: 0; border-radius: 6px; margin-left: 2rem; width:114px; height=32px;">
+   <a class="gh-style btn btn-block" style="margin: 2px 0" aria-label="Sponsor @chriskyfung" target="_top" href="https://github.com/sponsors/chriskyfung?o=esb">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-heart icon-sponsor color-fg-sponsors">
+        <path fill-rule="evenodd" d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"></path>
+      </svg>
+      <span>Sponsor</span>
+   </a>
+</div>
 
 <h4 id="settings-for-global-menu-items">Settings for Global Menu Items</h4>
 
