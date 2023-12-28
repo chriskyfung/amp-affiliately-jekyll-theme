@@ -1,6 +1,6 @@
 Bug fixes
 - 🐛(picture.html, post.html, post-left-sidebar.html)
-  Fix images not found by adding the base URL to the image paths
+  Fix broken images by adding the base URL to the image URLs
 
 Improvements
 - 🔧(_config.yml) Set `/amp-affiliately-jekyll-theme` as base URL of
