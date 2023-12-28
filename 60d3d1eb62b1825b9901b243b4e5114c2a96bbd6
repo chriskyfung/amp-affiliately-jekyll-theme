@@ -1,0 +1,2 @@
+- Disabled to display Featured posts in sidebar, if `isSubdirectory` is
+  set to _config.yml
