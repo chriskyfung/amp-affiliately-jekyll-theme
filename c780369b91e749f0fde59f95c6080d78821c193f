@@ -1,13 +1,21 @@
 New Features
-- 🙈 Updated .gitignore to omit `.env` files
-- ➕ Added the `jekyll-github-metadata` gem
-- ✨ Introduced `sidebar.featured` and `sidebar.recent_posts` parameters
-- 🚚 Renamed the site-level parameter from `disqus-amp-baseurl` to `disqus_amp_baseurl`
-  to enable/disable displaying Featured and Recent posts in sidebar, respectively
+- ➕(Gemfile) Added the `jekyll-github-metadata` plugin
+- ✨(sidebar) Introduced `sidebar.featured` and `sidebar.recent_posts`
+  variables to enable/disable displaying "Featured" and "Recent Posts"
+  widgets in the sidebar, respectively
+- ✨(sidebar) Support displaying "Resources" widget (View on GitHub,
+  Latest Release, etc.) to the sidebar by listing `download` variable
+  in front matter
+- ✨(sidebar) Support switching "Latest Release" to "Download" button
+  by specifying `download.url` with an URL value in front matter
+- ✨(index.html) Added feature boxes and pagination to the landing page
 
 Improvements
-- 🔥 Removed chris's author data from _config.yml
 - 📝 Added tags to sample posts
+- 🚚 Renamed the site-level variable from `disqus-amp-baseurl` to
+  `disqus_amp_baseurl`
+- 🙈 Updated .gitignore to omit `.env` files
 
 Removed/Deprecated
-- 🔥 Dropped the site-level parameter `isSubdirectory`
+- 🔥 Dropped the site-level variable `isSubdirectory`
+- 🔥 Removed chris's author data from _config.yml
