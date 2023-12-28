@@ -1,1 +1,5 @@
 - Created new posts, namely sample, style-guide, code, and media
+- Created the project landing page (index.md)
+- Set https://chriskyfung.github.io as the site URL
+- Disabled Jekyll Extlinks to open external links in new tab
+- Excluded localhost and chriskyfung.github.io URLs from Jekyll Extlinks pipeline
