@@ -6,5 +6,5 @@ Improvements
 - 🔧(_config.yml) Set `/amp-affiliately-jekyll-theme` as base URL of
   the project page
 - 🔧(_config.yml) Configured `google_analytics`, `gtm`, `cse_id`,
-  `adsense`, `addthis` and `buyme` parameters for third-party elements
-- ♻(default.html) Replaced hardcoded values with site-level parameters
+  `adsense`, `addthis` and `buyme` variables for third-party elements
+- ♻(default.html) Replaced hardcoded values with site-level variables
