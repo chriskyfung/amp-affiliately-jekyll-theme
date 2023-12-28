@@ -1,0 +1,13 @@
+🐛 Bug Fix
+- (category-list.html, tag-list.html)
+  Fixed the indents for front matter css `badge` option
+- (post.html, post-left-sidebar.html)
+  Fixed the indents for front matter amp `iframe` and `addthis` options
+- (style-guide.md)
+  Fixed missing amp `youtube` option in the front matter
+
+🎨 Improvements/Enhancements
+- (default.html) Modified to add new lines before and after
+  `amp-addthis` component
+- (picture.html) Replaced lightbox attribute from `aria-modal="true"`
+  to `aria-label="lightbox"`
