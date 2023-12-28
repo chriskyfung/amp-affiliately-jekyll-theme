@@ -1,0 +1,13 @@
+New Features
+- 🙈 Updated .gitignore to omit `.env` files
+- ➕ Added the `jekyll-github-metadata` gem
+- ✨ Introduced `sidebar.featured` and `sidebar.recent_posts` parameters
+- 🚚 Renamed the site-level parameter from `disqus-amp-baseurl` to `disqus_amp_baseurl`
+  to enable/disable displaying Featured and Recent posts in sidebar, respectively
+
+Improvements
+- 🔥 Removed chris's author data from _config.yml
+- 📝 Added tags to sample posts
+
+Removed/Deprecated
+- 🔥 Dropped the site-level parameter `isSubdirectory`
