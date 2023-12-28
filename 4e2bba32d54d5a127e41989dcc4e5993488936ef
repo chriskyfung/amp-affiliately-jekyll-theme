@@ -1,0 +1,2 @@
+Configure jekyll-action@2.0.3 to output Jekyll build
+into the `gh-pages` branch in the GitHub Action workflow
