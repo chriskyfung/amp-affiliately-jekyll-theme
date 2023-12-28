@@ -1,0 +1,10 @@
+Bug fixes
+- 🐛(picture.html, post.html, post-left-sidebar.html)
+  Fix images not found by adding the base URL to the image paths
+
+Improvements
+- 🔧(_config.yml) Set `/amp-affiliately-jekyll-theme` as base URL of
+  the project page
+- 🔧(_config.yml) Configured `google_analytics`, `gtm`, `cse_id`,
+  `adsense`, `addthis` and `buyme` parameters for third-party elements
+- ♻(default.html) Replaced hardcoded values with site-level parameters
