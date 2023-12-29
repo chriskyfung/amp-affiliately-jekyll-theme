@@ -1,0 +1,42 @@
+New Design for Navigation Bar + Fixes for Accessibility Issues (#34)
+
+🌟 MAIN CHANGES
+
+* Refactored Navbar Menu with A11y Design 👨‍🦽
+
+   - Replaced the <div> soup with <ul> and <li> elements, following the [WAI-ARIA Authoring Practices 1.2](https://www.w3.org/TR/wai-aria-practices-1.2/#menu).
+   - Isolated the search button and right-aligned button-like links from the ul.navbar-nav list and grouped into an adjacent sibling list with a class name .navbar-btngroup.
+  - The items grouped in the .navbar-btngroup always align horizontally in a single row.
+   - Enabled to update the aria-expanded attributes of submenu toggles using amp-bind, by following [this amp-bind example on AMP for WordPress (amp-wp.org)](https://amp-wp.org/documentation/playbooks/enqueuing-scripts-and-using-amp-bind/).
+  - Enabled to move the focus to the first sub-item when a menu/submenu expands using [AMP tap event and focus action](https://amp.dev/documentation/guides-and-tutorials/learn/amp-actions-and-events/#*---all-elements).
+  - Add limits to the height of expanded menu and submenus:
+
+    + Hamburger menu: A max-height of `60vh on small screens only
+    + Submenus (navbar layout): A max-height of `60vh on large screens only
+
+  - Show a thin scrollbar if a menu/submenu overflows
+  - Added a separator above the first item of the hamburger menu
+  - Added CSS styles and media queries to responsively change the margin of menu items.
+
+* Restored initial-scale=1 in viewport settings. Learn more: [Controlling the viewport - amp.dev](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/responsive_design/#controlling-the-viewport)
+
+---
+
+✨ NEW FEATURE
+
+* A new CSS class called .scrollbar-thin for styling a narrower scrollbar.
+
+---
+
+🐛 BUG FIXES
+
+* Corrected and tested ARIA Landmarks and ARIA Labels with axe DevTools.
+* Fixed missing focus ring on focusing elements with .btn class.
+* Fixed missing the button to resize overflown Disqus Comments. Learn more: [<amp-iframe> - amp.dev](https://amp.dev/documentation/components/amp-iframe/#iframe-resizing).
+
+---
+
+📄 DOCUMENTATION
+
+* Fixed the crawl error of the redirected page /category/guide/.
+* Fixed the custom scrollbar not work on the /responsive-web-design/ page in Firefox.
