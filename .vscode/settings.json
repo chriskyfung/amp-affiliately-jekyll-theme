@@ -13,5 +13,18 @@
     "proxyUri": "http://127.0.0.1:5500/_site"
   },
   "frontMatter.framework.startCommand": "bundle exec jekyll serve",
-  "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/"
+  "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/",
+  "git-graph.customBranchGlobPatterns": [
+    {
+      "name": "All Except `origin/gh-pages`",
+      "glob": "[!notes]*[!gh-pages]"
+    }, 
+    {
+      "name": "Remote Except `origin/gh-pages`",
+      "glob": "remotes/origin/[!gh-pages]*"
+    }
+  ],
+  "git-graph.repository.onLoad.showSpecificBranches": [
+    "--glob=[!notes]*[!gh-pages]"
+  ]
 }
