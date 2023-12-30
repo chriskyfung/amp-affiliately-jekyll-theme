@@ -7,10 +7,14 @@
     "mervin.markdown-formatter",
     "rohgarg.jekyll-post",
     "piotrpalarz.vscode-gitignore-generator",
-    "znck.grammarly",
     "sissel.shopify-liquid",
     "jack89ita.copy-filename",
     "dedsec727.jekyll-run",
-    "thekalinga.bootstrap4-vscode"
+    "thekalinga.bootstrap4-vscode",
+    "kisstkondoros.vscode-gutter-preview",
+    "tchayen.markdown-links",
+    "mathiassoeholm.markdown-link-updater",
+    "redhat.vscode-yaml",
+    "josee9988.minifyall"
   ]
 }
