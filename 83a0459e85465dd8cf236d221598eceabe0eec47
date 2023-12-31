@@ -1,0 +1,7 @@
+- Drop tar from Dev dependencies
+- Fix security vulnerabilities with npm overrides:
+  * Override glob-parent to `>=5.14.2'
+  * Override nth-check to `^2.1.1`
+  * Override postcss to `>=7.0.36`
+  * Override set-value to `>=4.1.0`
+  * Override tarser to `>=5.14.2`
