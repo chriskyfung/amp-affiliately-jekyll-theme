@@ -19,7 +19,6 @@ gem "jekyll", "~> 3.9.0"
 group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-feed'
-  gem 'jekyll-gist'
   gem 'jekyll-gzip'
   gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
