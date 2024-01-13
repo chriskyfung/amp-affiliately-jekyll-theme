@@ -60,7 +60,7 @@
       "vinyl-fs": "^4.0.0"
     },
     "gulp-minify-inline": {
-      "nth-check": "^2.1.1",
+      "cheerio": "^1.0.0-rc.3",
       "terser": ">=5.14.2"
     }
   },
