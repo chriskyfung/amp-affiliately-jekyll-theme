@@ -16,10 +16,12 @@ const cssConverter = require('@gecka/styleflux');
 
 function build(cb) {
   return src('./_site/**/*.html')
-    .pipe(processIfModified())
+    .pipe(processIfModified()) // generate ./cache/-default.json
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
+          const date = new Date();
+          console.log(`[\x1b[90m${date.toLocaleTimeString('it-IT')}\x1b[0m] Running AMP Optimizer on ${file.path}`);
           const optimizedHtml = await ampOptimizer.transformHtml(
             file.contents.toString()
           );
