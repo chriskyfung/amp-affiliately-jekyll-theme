@@ -97,9 +97,9 @@ Read the procedures in the [Config Guide](https://chriskyfung.github.io/amp-affi
 
 #### Disqus Comments in AMP 💬
 
-1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) and deploy it to another domain or subdomain.
+1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) (last updated on **2024-01-13**) and deploy it to another domain or subdomain.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
-3. Use `amp_disqus_height` to configure the height of \<amp-iframe\> if needed (default is `140`).
+3. Use `amp_disqus_height` to configure the height of `<amp-iframe>` if needed (default is `140`).
 
 ### Enabling Pagination for Blog Posts ⏪⏩
 
