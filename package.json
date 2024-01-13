@@ -54,6 +54,7 @@
     "gulp": {
       "glob-parent": ">=5.1.2",
       "minimatch": "^3.1.2",
+      "semver": "^5.7.2",
       "set-value": ">=4.1.0"
     },
     "gulp-minify-inline": {
