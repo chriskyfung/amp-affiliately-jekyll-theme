@@ -46,6 +46,7 @@
   },
   "overrides": {
     "@ampproject/toolbox-optimizer": {
+      "postcss": "^8.4.31",
       "terser": ">=5.14.2"
     },
     "@gecka/styleflux": {
