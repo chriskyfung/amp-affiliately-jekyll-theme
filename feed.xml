@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-01-16T12:13:17+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2021-09-08T12:00:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-01-16T14:22:53+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -191,7 +191,7 @@
     </samp>
  </p>
   </li>
-</ul>]]></content><author><name></name></author><category term="[&quot;doc&quot;]" /><category term="plugin" /><category term="_config" /><summary type="html"><![CDATA[List of Jekyll plugins being used and/or supported by this AMP Jekyll theme]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/puzzle-3311601.svg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/puzzle-3311601.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Config Guide</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/" rel="alternate" type="text/html" title="Config Guide" /><published>2021-08-24T00:01:00+08:00</published><updated>2023-03-02T16:30:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/"><![CDATA[<aside style="position: relative;">
+</ul>]]></content><author><name></name></author><category term="[&quot;doc&quot;]" /><category term="plugin" /><category term="_config" /><summary type="html"><![CDATA[List of Jekyll plugins being used and/or supported by this AMP Jekyll theme]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/puzzle-3311601.svg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/puzzle-3311601.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Config Guide</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/" rel="alternate" type="text/html" title="Config Guide" /><published>2021-08-24T00:01:00+08:00</published><updated>2024-01-16T09:30:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -1029,7 +1029,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </amp-img></a></figure>
 
 
-</section>]]></content><author><name></name></author><category term="[&quot;feature&quot;]" /><category term="styles" /><category term="demo" /><summary type="html"><![CDATA[The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/processing_o128.png" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/processing_o128.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Front Matter Guide</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/" rel="alternate" type="text/html" title="Front Matter Guide" /><published>2021-07-31T12:05:00+08:00</published><updated>2021-09-28T15:00:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/"><![CDATA[<aside style="position: relative;">
+</section>]]></content><author><name></name></author><category term="[&quot;feature&quot;]" /><category term="styles" /><category term="demo" /><summary type="html"><![CDATA[The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/processing_o128.png" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/processing_o128.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Front Matter Guide</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/" rel="alternate" type="text/html" title="Front Matter Guide" /><published>2021-07-31T12:05:00+08:00</published><updated>2022-02-10T22:02:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -1038,7 +1038,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <ul id="markdown-toc">
   <li><a href="#general-front-matters-for-a-post" id="markdown-toc-general-front-matters-for-a-post">General Front Matters for A Post</a></li>
   <li><a href="#set-featured-image" id="markdown-toc-set-featured-image">Set Featured Image</a>    <ul>
-      <li><a href="#hide-featured-image-on-a-pagepost" id="markdown-toc-hide-featured-image-on-a-pagepost">Hide Featured Image on a Page/Post</a></li>
+      <li><a href="#hide-featured-image-on-a-post" id="markdown-toc-hide-featured-image-on-a-post">Hide Featured Image on A Post</a></li>
       <li><a href="#remove-box-shadow-from-featured-image" id="markdown-toc-remove-box-shadow-from-featured-image">Remove Box Shadow from Featured Image</a></li>
       <li><a href="#featured-images-that-do-not-have-an-aspect-ratio-of-169" id="markdown-toc-featured-images-that-do-not-have-an-aspect-ratio-of-169">Featured Images That Do Not Have an Aspect Ratio of 16:9</a></li>
       <li><a href="#show-thumbnail-image-in-sidebar-widgets" id="markdown-toc-show-thumbnail-image-in-sidebar-widgets">Show Thumbnail Image in Sidebar Widgets</a></li>
@@ -1081,9 +1081,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
 <span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
 <span class="na">permalink</span><span class="pi">:</span> <span class="s">/blog/my-first-post/</span>
+<span class="na">slug</span><span class="pi">:</span> <span class="s">index.html</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">My first blog post</span>
 <span class="na">date</span><span class="pi">:</span> <span class="s">2020-01-31 07:30 +0000</span>
-<span class="na">last_modified_at</span><span class="pi">:</span> <span class="s">2021-07-31 +0000</span>
+<span class="na">last_modified_at</span><span class="pi">:</span> <span class="s">2024-01-16 12:01 +0800</span>
 <span class="na">category</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">category1</span><span class="pi">,</span> <span class="nv">category2</span><span class="pi">]</span>
 <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">tag1</span><span class="pi">,</span> <span class="nv">tag2</span><span class="pi">,</span> <span class="nv">tag3</span><span class="pi">]</span>
 <span class="na">excerpt</span><span class="pi">:</span> <span class="s">This is the first blog post for my Jekyll site.</span>
@@ -1117,6 +1118,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
       <td>(<em>Optional</em>) The custom URL for the page or post, if you need your processed blog post URLs to be something other than the site-wide style. <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">/year/month/day/title.html</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slug</code></td>
+      <td>(Optional) The custom name for the page or post file, if you need your processed blog post file names to be something other than the original name. Default: The original file name.<br /><strong>Note</strong>: If the <code class="language-plaintext highlighter-rouge">permalink</code> option is set to a string that ends with <code class="language-plaintext highlighter-rouge">/</code>, you need to set the slug option to <code class="language-plaintext highlighter-rouge">" "</code> or <code class="language-plaintext highlighter-rouge">index.html</code> to avoid generating an invalid URL for the site preview feature of Front Matter CMS.</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">category</code></td>
@@ -1182,7 +1187,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <p><strong>Note</strong>: The front matter <code class="language-plaintext highlighter-rouge">image</code> also inherits the properties from <a href="https://github.com/jekyll/jekyll-feed#optional-front-matter">Jekyll Feed</a> and <a href="https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output">Jekyll SEO Tag</a>.</p>
 
-<h3 id="hide-featured-image-on-a-pagepost">Hide Featured Image on a Page/Post</h3>
+<h3 id="hide-featured-image-on-a-post">Hide Featured Image on A Post</h3>
 
 <p>If you do not want to render the featured image on a post, append a <code class="language-plaintext highlighter-rouge">hide</code> option to the <code class="language-plaintext highlighter-rouge">image</code> variable, <em>e.g.</em>:</p>
 
@@ -1193,7 +1198,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <h3 id="remove-box-shadow-from-featured-image">Remove Box Shadow from Featured Image</h3>
 
-<p>If you want to remove the shadow of the featured image on the post page, append the following class to the <code class="language-plaintext highlighter-rouge">image</code> variable, <em>e.g.</em></p>
+<p>If you want to remove the shadow of the featured image on a post, append the following class to the <code class="language-plaintext highlighter-rouge">image</code> variable, <em>e.g.</em></p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">image</span><span class="pi">:</span>
    <span class="na">path</span><span class="pi">:</span> <span class="s">/assets/images/cover-image.png</span>
@@ -1307,7 +1312,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <p><strong>Options:</strong> <code class="language-plaintext highlighter-rouge">left</code>, <code class="language-plaintext highlighter-rouge">right</code>, and <code class="language-plaintext highlighter-rouge">none</code></p>
 
-<p>For example, you can set a left sidebar on a post page by the following:</p>
+<p>For example, you can set a left sidebar on a post by the following:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">sidebar</span><span class="pi">:</span> <span class="s">left</span>
 </code></pre></div></div>
@@ -1433,7 +1438,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <h2 id="exclude-from-sitemap">Exclude from Sitemap</h2>
 
 <blockquote>
-  <p>If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page/post.</p>
+  <p>If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page or post.</p>
 
   <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">sitemap</span><span class="pi">:</span> <span class="no">false</span>
 </code></pre></div>  </div>
@@ -1601,7 +1606,7 @@ This is highly undesirable because it will give a very bad user experience.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">adstyle</span><span class="pi">:</span> <span class="no">false</span>
 </code></pre></div></div>
 
-<p><br /></p>]]></content><author><name>Chris KY Fung</name></author><category term="[&quot;feature&quot;, &quot;doc&quot;]" /><category term="Adsense" /><category term="_config" /><category term="styles" /><category term="AMP" /><summary type="html"><![CDATA[Ads Styles and Configuration]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code Block</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/" rel="alternate" type="text/html" title="Code Block" /><published>2021-03-21T08:00:00+08:00</published><updated>2024-01-13T09:01:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/"><![CDATA[<aside style="position: relative;">
+<p><br /></p>]]></content><author><name>Chris KY Fung</name></author><category term="[&quot;feature&quot;, &quot;doc&quot;]" /><category term="Adsense" /><category term="_config" /><category term="styles" /><category term="AMP" /><summary type="html"><![CDATA[Ads Styles and Configuration]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code Block</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/" rel="alternate" type="text/html" title="Code Block" /><published>2021-03-21T16:01:00+08:00</published><updated>2024-01-13T09:01:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -1785,7 +1790,7 @@ end
     <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">ajax error response type </span><span class="dl">"</span><span class="o">+</span><span class="nx">type</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
-</code></pre></div></div>]]></content><author><name>Chris</name></author><category term="[&quot;doc&quot;, &quot;feature&quot;]" /><category term="code" /><category term="markdown" /><category term="demo" /><summary type="html"><![CDATA[The demos and docs for Code Snippets with Syntex Highlighting.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/ubuntu-3145957_640.png" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/ubuntu-3145957_640.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Media</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/" rel="alternate" type="text/html" title="Media" /><published>2021-02-25T18:42:00+08:00</published><updated>2021-02-25T18:42:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/"><![CDATA[<aside style="position: relative;">
+</code></pre></div></div>]]></content><author><name>Chris</name></author><category term="[&quot;doc&quot;, &quot;feature&quot;]" /><category term="code" /><category term="markdown" /><category term="demo" /><summary type="html"><![CDATA[The demos and docs for Code Snippets with Syntex Highlighting.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/ubuntu-3145957_640.png" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/ubuntu-3145957_640.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Media</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/" rel="alternate" type="text/html" title="Media" /><published>2021-02-25T18:42:00+08:00</published><updated>2021-03-21T16:01:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
