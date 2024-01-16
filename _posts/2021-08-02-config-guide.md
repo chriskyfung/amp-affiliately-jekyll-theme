@@ -2,7 +2,7 @@
 layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
-last_modified_at: 2023-03-02 16:30 +0800
+last_modified_at: 2024-01-16 09:30 +0800
 category: [doc]
 tags: [_config]
 permalink: /config-guide/

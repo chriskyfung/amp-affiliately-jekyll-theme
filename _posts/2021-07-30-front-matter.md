@@ -2,10 +2,11 @@
 layout: post
 title: Front Matter Guide
 date: 2021-07-31 12:05 +0800
-last_modified_at: 2021-09-28 15:00 +0800
+last_modified_at: 2022-02-10 22:02 +0800
 category: [doc]
 tags: [front matter, styles, AMP]
 permalink: /front-matter-guide/
+slug: " "
 redirect_from: [/front-matter/]
 image: 
    path: /assets/images/frontend-4342425_730.png
@@ -33,25 +34,27 @@ A Jekyll post should contain the front matters as the following example:
 ---
 layout: post
 permalink: /blog/my-first-post/
+slug: index.html
 title: My first blog post
 date: 2020-01-31 07:30 +0000
-last_modified_at: 2021-07-31 +0000
+last_modified_at: 2024-01-16 12:01 +0800
 category: [category1, category2]
 tags: [tag1, tag2, tag3]
 excerpt: This is the first blog post for my Jekyll site.
 ---
 ```
 
-| Attribute          | Description                                                                                                                                                                                                                                                                  |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout`           | The Jekyll layout file to use.<br>_Options:_ `page`{:.plaintext}, `post`{:.plaintext}, `archive`{:.plaintext}, `category-list`{:.plaintext} and `tag-list`{:.plaintext}.<br>**Note**: `page-right-sidebar`{:.plaintext} and `post-left-sidebar`{:.plaintext} are deprecated. |
-| `title`            | The title of the page or post.                                                                                                                                                                                                                                               |
-| `date`             | The date here overrides the date from the name of the post file.<br>**Note**: A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                                       |
-| `last_modified_at` | (_Optional_) The date when the post was the last modified.<br>**Note**: A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                                             |
-| `permalink`        | (_Optional_) The custom URL for the page or post, if you need your processed blog post URLs to be something other than the site-wide style. _Default:_ `/year/month/day/title.html`{:.plaintext}.                                                                            |
-| `category`         | (_Optional_) One or multiple categories that the post belongs to.                                                                                                                                                                                                            |
-| `tags`             | (_Optional_) One or multiple tags that the post associates with.                                                                                                                                                                                                             |
-| `excerpt`          | (_Optional_) The short text to show on the card of the list/grid of posts, and use as the meta description of the page or post.                                                                                                                                              |
+| Attribute          | Description                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`           | The Jekyll layout file to use.<br>_Options:_ `page`{:.plaintext}, `post`{:.plaintext}, `archive`{:.plaintext}, `category-list`{:.plaintext} and `tag-list`{:.plaintext}.<br>**Note**: `page-right-sidebar`{:.plaintext} and `post-left-sidebar`{:.plaintext} are deprecated.                                                                                                                                     |
+| `title`            | The title of the page or post.                                                                                                                                                                                                                                                                                                                                                                                   |
+| `date`             | The date here overrides the date from the name of the post file.<br>**Note**: A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                                                                                                                                                                           |
+| `last_modified_at` | (_Optional_) The date when the post was the last modified.<br>**Note**: A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`{:.plaintext}; hours, minutes, seconds, and timezone offset are optional.                                                                                                                                                                                                 |
+| `permalink`        | (_Optional_) The custom URL for the page or post, if you need your processed blog post URLs to be something other than the site-wide style. _Default:_ `/year/month/day/title.html`{:.plaintext}.                                                                                                                                                                                                                |
+| `slug`             | (Optional) The custom name for the page or post file, if you need your processed blog post file names to be something other than the original name. Default: The original file name.<br>**Note**: If the `permalink` option is set to a string that ends with `/`, you need to set the slug option to `" "` or `index.html` to avoid generating an invalid URL for the site preview feature of Front Matter CMS. |
+| `category`         | (_Optional_) One or multiple categories that the post belongs to.                                                                                                                                                                                                                                                                                                                                                |
+| `tags`             | (_Optional_) One or multiple tags that the post associates with.                                                                                                                                                                                                                                                                                                                                                 |
+| `excerpt`          | (_Optional_) The short text to show on the card of the list/grid of posts, and use as the meta description of the page or post.                                                                                                                                                                                                                                                                                  |
 
 **💡 See:** [Front Matter \| Jekyllrb](https://jekyllrb.com/docs/front-matter/ "Official Jekyll Documentation")
 
@@ -77,7 +80,7 @@ image:
 
 **Note**: The front matter `image` also inherits the properties from [Jekyll Feed](https://github.com/jekyll/jekyll-feed#optional-front-matter) and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output).
 
-### Hide Featured Image on a Page/Post
+### Hide Featured Image on A Post
 
 If you do not want to render the featured image on a post, append a `hide` option to the `image` variable, _e.g._:
 
@@ -89,7 +92,7 @@ image:
 
 ### Remove Box Shadow from Featured Image
 
-If you want to remove the shadow of the featured image on the post page, append the following class to the `image` variable, _e.g._
+If you want to remove the shadow of the featured image on a post, append the following class to the `image` variable, _e.g._
 
 ```yaml
 image:
@@ -209,7 +212,7 @@ custom_head: >-
 
 **Options:** `left`, `right`, and `none`
 
-For example, you can set a left sidebar on a post page by the following:
+For example, you can set a left sidebar on a post by the following:
 
 ```yaml
 sidebar: left
@@ -302,7 +305,7 @@ download:
 
 ## Exclude from Sitemap
 
-> If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page/post.
+> If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page or post.
 >
 > ```yaml
   sitemap: false
