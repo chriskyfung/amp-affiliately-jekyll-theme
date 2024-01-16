@@ -2,7 +2,8 @@ const {src, dest, watch, series, parallel} = require('gulp');
 const csso = require('gulp-csso');
 const ext_replace = require('gulp-ext-replace');
 const htmlmin = require('gulp-htmlmin');
-const minifyInline = require('gulp-minify-inline');
+// TODO: Drop `gulp-minify-inline` from gulp pipline in next major release
+// const minifyInline = require('gulp-minify-inline');
 const processIfModified = require('gulp-process-if-modified');
 
 const through2 = require('through2');
@@ -12,14 +13,17 @@ const ampOptimizer = AmpOptimizer.create();
 const gulpAmpValidator = require('gulp-amphtml-validator');
 const amphtmlValidator = require('amphtml-validator');
 
-const cssConverter = require('@gecka/styleflux');
+// TODO: Drop `@gecka/styleflux` from gulp pipline in next major release
+const cssConverter = require('@gecka/styleflux');   // Deprecated
 
 function build(cb) {
   return src('./_site/**/*.html')
-    .pipe(processIfModified())
+    .pipe(processIfModified()) // generate ./cache/-default.json
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
+          const date = new Date();
+          console.log(`[\x1b[90m${date.toLocaleTimeString('it-IT')}\x1b[0m] Running AMP Optimizer on ${file.path}`);
           const optimizedHtml = await ampOptimizer.transformHtml(
             file.contents.toString()
           );
@@ -29,6 +33,7 @@ function build(cb) {
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
+    // TODO: Drop `gulp-minify-inline` from gulp pipline in next major release
     // .pipe(minifyInline())
     .pipe(dest('./_site/'));
 }
@@ -75,7 +80,7 @@ function css2scss() {
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
-          const scssify = await cssConverter.cssToScss(
+          const scssify = await cssConverter.cssToScss(   // Deprecated
             file.contents.toString()
           );
           file.contents = Buffer.from(scssify);

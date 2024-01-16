@@ -10,10 +10,10 @@ amp:
 
 {%- assign sidebar = page.sidebar | default: layout.sidebar | default: "right" -%}
 {%- if sidebar == "none" -%}
-{%- assign post_class = "no-sidebar" -%}
+  {%- assign post_class = "no-sidebar" -%}
 {%- else -%}
-{%- assign post_class = "col-md-8 col-lg-8" -%}
-{%- assign sidebar_class = sidebar | append: '-sidebar' -%}
+  {%- assign post_class = "col-md-8 col-lg-8" -%}
+  {%- assign sidebar_class = sidebar | append: '-sidebar' -%}
 {%- endif -%}
 
 <!-- Begin Article -->
@@ -21,10 +21,7 @@ amp:
 <div class="row">
 
   <!-- Post -->
-  {%- assign author = site.data.authors[page.author] -%}
-  {%- unless author -%}
-  {%- assign author = site.authors[page.author] -%}
-  {%- endunless -%}
+  {%- assign author = site.data.authors[page.author] | default: site.authors[page.author] | default: nil -%}
 
   <div id="post" class="{{ post_class }}">
     <div class="mainheading">
@@ -42,17 +39,17 @@ amp:
 
     <!-- Post Featured Image -->
     {%- if page.image -%}
-    {%- unless page.image.hide -%}
-    {%- assign imgext = page.image.path | split: "." | last -%}
-    {%- assign imgpath = page.image.path | remove: imgext -%}
-    {%- if imgext == "svg" -%}
-    <amp-img data-hero class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ page.image.path | relative_url }}" alt="{{ page.title }}"></amp-img>
-    {%- else -%}
-    <amp-img data-hero class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ imgpath | relative_url }}webp" alt="{{ page.title }}">
-      <amp-img data-hero fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ page.image.path | relative_url }}" alt="{{ page.title }}"></amp-img>
-    </amp-img>
-    {%- endif -%}
-    {%- endunless -%}
+      {%- unless page.image.hide -%}
+        {%- assign imgext = page.image.path | split: "." | last -%}
+        {%- assign imgpath = page.image.path | remove: imgext -%}
+        {%- if imgext == "svg" -%}
+        <amp-img data-hero class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ page.image.path | relative_url }}" alt="{{ page.title }}"></amp-img>
+        {%- else -%}
+        <amp-img data-hero class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ imgpath | relative_url }}webp" alt="{{ page.title }}">
+          <amp-img data-hero fallback class="featured-image {{ page.image.class }}" width="{{ page.image.width | default: 730 }}" height="{{ page.image.height | default: 411 }}" layout="responsive" src="{{ page.image.path | relative_url }}" alt="{{ page.title }}"></amp-img>
+        </amp-img>
+        {%- endif -%}
+      {%- endunless -%}
     {%- endif -%}
     <!-- End Featured Image -->
 
@@ -66,7 +63,7 @@ amp:
     {%- include blocks/share-buttons.html -%}
 
     {%- comment -%}
-    {%- include blocks/ad-before-content.html -%}
+      {%- include blocks/ad-before-content.html -%}
     {%- endcomment -%}
 
     <!-- Post Content -->
