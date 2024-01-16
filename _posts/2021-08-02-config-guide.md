@@ -321,7 +321,7 @@ defaults:
 
 | Attribute | Description                                                                                                                                                          |
 | :-------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cse_id`  | Your Search Engine ID 💡 [Find your Google CSE ID](https://support.google.com/programmable-search/answer/2649143 "Search engine ID - Programmable Search Engine Help") |
+| `cse_id`  | Your Search Engine ID 💡 [Find your Google CSE ID](https://support.google.com/programmable-search/answer/12499034?hl=en "Search engine ID - Programmable Search Engine Help") |
 
 - **Note:** Essential to feature the site's search function
 
