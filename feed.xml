@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2023-12-28T09:12:07+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2021-09-08T12:00:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-01-16T11:15:38+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2021-09-08T12:00:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -8,7 +8,6 @@
   <li><a href="#-github-pages-whitelisted-plugins" id="markdown-toc--github-pages-whitelisted-plugins"><i class="fas fa-cubes fa-fw"></i> GitHub Pages’ Whitelisted Plugins</a>    <ul>
       <li><a href="#-github-metadata" id="markdown-toc--github-metadata"><i class="fab fa-github fa-fw"></i> GitHub Metadata</a></li>
       <li><a href="#-jekyll-feed" id="markdown-toc--jekyll-feed"><i class="fas fa-rss fa-fw"></i> Jekyll Feed</a></li>
-      <li><a href="#-jekyll-gist" id="markdown-toc--jekyll-gist"><i class="fab fa-github-alt fa-fw"></i> Jekyll Gist</a></li>
       <li><a href="#-jekyll-paginate" id="markdown-toc--jekyll-paginate"><i class="fas fa-sort fa-rotate-90 fa-fw"></i> Jekyll Paginate</a></li>
       <li><a href="#-jekyll-redirect-from" id="markdown-toc--jekyll-redirect-from"><i class="fas fa-directions fa-fw"></i> Jekyll Redirect From</a></li>
       <li><a href="#-jekyll-relative-links" id="markdown-toc--jekyll-relative-links"><i class="fas fa-anchor fa-fw"></i> Jekyll Relative Links</a></li>
@@ -49,12 +48,6 @@
 <p>A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts.</p>
 
 <p>See <a href="https://github.com/jekyll/jekyll-feed"><strong>jekyll-feed</strong></a>.</p>
-
-<h3 id="-jekyll-gist"><i class="fab fa-github-alt fa-fw"></i> Jekyll Gist</h3>
-
-<p>A Jekyll plugin to allow using <code class="language-plaintext highlighter-rouge">{% gist %}</code> tag for displaying GitHub Gists in Jekyll sites.</p>
-
-<p>See <a href="https://github.com/jekyll/jekyll-gist"><strong>jekyll-gist</strong></a>.</p>
 
 <h3 id="-jekyll-paginate"><i class="fas fa-sort fa-rotate-90 fa-fw"></i> Jekyll Paginate</h3>
 
@@ -819,7 +812,7 @@ The following options provide the granular control to those menu items:</p>
   <tbody>
     <tr>
       <td style="text-align: center"><code class="language-plaintext highlighter-rouge">cse_id</code></td>
-      <td>Your Search Engine ID 💡 <a href="https://support.google.com/programmable-search/answer/2649143" title="Search engine ID - Programmable Search Engine Help">Find your Google CSE ID</a></td>
+      <td>Your Search Engine ID 💡 <a href="https://support.google.com/programmable-search/answer/12499034?hl=en" title="Search engine ID - Programmable Search Engine Help">Find your Google CSE ID</a></td>
     </tr>
   </tbody>
 </table>
@@ -1608,7 +1601,7 @@ This is highly undesirable because it will give a very bad user experience.</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">adstyle</span><span class="pi">:</span> <span class="no">false</span>
 </code></pre></div></div>
 
-<p><br /></p>]]></content><author><name>Chris KY Fung</name></author><category term="[&quot;feature&quot;, &quot;doc&quot;]" /><category term="Adsense" /><category term="_config" /><category term="styles" /><category term="AMP" /><summary type="html"><![CDATA[Ads Styles and Configuration]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code Block</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/" rel="alternate" type="text/html" title="Code Block" /><published>2021-03-21T08:00:00+08:00</published><updated>2021-08-02T11:14:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/"><![CDATA[<aside style="position: relative;">
+<p><br /></p>]]></content><author><name>Chris KY Fung</name></author><category term="[&quot;feature&quot;, &quot;doc&quot;]" /><category term="Adsense" /><category term="_config" /><category term="styles" /><category term="AMP" /><summary type="html"><![CDATA[Ads Styles and Configuration]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/web-5771064_730.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code Block</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/" rel="alternate" type="text/html" title="Code Block" /><published>2021-03-21T08:00:00+08:00</published><updated>2024-01-13T09:01:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -1618,8 +1611,9 @@ This is highly undesirable because it will give a very bad user experience.</p>
   <li><a href="#markdown-syntax" id="markdown-toc-markdown-syntax">Markdown Syntax</a>    <ul>
       <li><a href="#code-spans" id="markdown-toc-code-spans">Code spans</a></li>
       <li><a href="#fenced-code-blocks" id="markdown-toc-fenced-code-blocks">Fenced code blocks</a></li>
-      <li><a href="#use-highlight-tag" id="markdown-toc-use-highlight-tag">Use <strong>highlight</strong> tag</a></li>
+      <li><a href="#use-highlight-tags" id="markdown-toc-use-highlight-tags">Use <strong>highlight</strong> tags</a></li>
       <li><a href="#include-line-numbers" id="markdown-toc-include-line-numbers">Include line numbers</a></li>
+      <li><a href="#embedding-gists" id="markdown-toc-embedding-gists">Embedding gists</a></li>
     </ul>
   </li>
   <li><a href="#more-samples" id="markdown-toc-more-samples">More Samples</a>    <ul>
@@ -1675,7 +1669,7 @@ end
 <span class="k">end</span>
 </code></pre></div></div>
 
-<h3 id="use-highlight-tag"><a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting">Use <strong>highlight</strong> tag</a></h3>
+<h3 id="use-highlight-tags"><a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting">Use <strong>highlight</strong> tags</a></h3>
 
 <p>For example:</p>
 
@@ -1716,6 +1710,40 @@ end
 </pre></td></tr></tbody></table></code></pre></figure>
 
 <p>More information about code highlighting in jekyll can be found in <a href="https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting">Jekyll</a> and <a href="https://kramdown.gettalong.org/syntax.html#code-spans">kramdown</a> documentation.</p>
+
+<h3 id="embedding-gists">Embedding gists</h3>
+
+<p>A gist is a simple way to share snippets and pastes with others. To embed a gist in your markdown file, you need to use the <code class="language-plaintext highlighter-rouge">&lt;amp-gist&gt;</code> component in your markdown file. You will also need to set the following in front matter of a page or post that contains the <code class="language-plaintext highlighter-rouge">&lt;amp-gist&gt;</code> component:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="na">amp</span><span class="pi">:</span>
+     <span class="na">gist</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>To embed an entire gist, you need to:</p>
+
+<ul>
+  <li>Specify the <code class="language-plaintext highlighter-rouge">data-gistid</code> attribute with the ID of the gist you want to embed.</li>
+  <li>Specify the <code class="language-plaintext highlighter-rouge">layout</code> and <code class="language-plaintext highlighter-rouge">height</code> attributes for the component.</li>
+</ul>
+
+<p>For example, to embed the gist with the ID <code class="language-plaintext highlighter-rouge">a1b2c3d4</code>, you can use the following code:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;amp-gist</span> <span class="na">data-gistid=</span><span class="s">"a1b2c3d4"</span> <span class="na">layout=</span><span class="s">"fixed-height"</span> <span class="na">height=</span><span class="s">"300"</span><span class="nt">&gt;&lt;/amp-gist&gt;</span>
+</code></pre></div></div>
+
+<p>To embed one file out of a gist, you need to:</p>
+
+<ul>
+  <li>Specify the <code class="language-plaintext highlighter-rouge">data-file</code> attribute with the name of the file you want to embed.</li>
+  <li>Specify the <code class="language-plaintext highlighter-rouge">data-gistid</code>, <code class="language-plaintext highlighter-rouge">layout</code>, and <code class="language-plaintext highlighter-rouge">height</code> attributes as before.</li>
+</ul>
+
+<p>For example, to embed the file <code class="language-plaintext highlighter-rouge">hello.py</code> from the gist with the ID <code class="language-plaintext highlighter-rouge">a1b2c3d4</code>, you can use the following code:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;amp-gist</span> <span class="na">data-gistid=</span><span class="s">"a1b2c3d4"</span> <span class="na">data-file=</span><span class="s">"hello.py"</span> <span class="na">layout=</span><span class="s">"fixed-height"</span> <span class="na">height=</span><span class="s">"300"</span><span class="nt">&gt;&lt;/amp-gist&gt;</span>
+</code></pre></div></div>
+
+<p>To learn more about the <code class="language-plaintext highlighter-rouge">&lt;amp-gist&gt;</code> component, you can visit the official documentation on <a href="https://amp.dev/documentation/components/websites/amp-gist">https://amp.dev/documentation/components/websites/amp-gist</a>.</p>
 
 <h2 id="more-samples">More Samples</h2>
 
@@ -1872,9 +1900,9 @@ end
 
 <p>Sample:</p>
 
-<figure><a href="https://unsplash.com/photos/NP6JLl_2C-c"><amp-img width="1024" height="683" layout="responsive" src="/amp-affiliately-jekyll-theme/assets/images/science-in-hd-NP6JLl_2C-c-unsplash_1024x683.webp" alt="Image in Media">
+<figure><a href="http://web.archive.org/web/20210128032013/https://unsplash.com/photos/NP6JLl_2C-c"><amp-img width="1024" height="683" layout="responsive" src="/amp-affiliately-jekyll-theme/assets/images/science-in-hd-NP6JLl_2C-c-unsplash_1024x683.webp" alt="Image in Media">
         <amp-img fallback="" width="1024" height="683" layout="responsive" src="/amp-affiliately-jekyll-theme/assets/images/science-in-hd-NP6JLl_2C-c-unsplash_1024x683.jpg" alt="Image in Media"></amp-img>
-      </amp-img></a><figcaption><span>Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Science in HD</a> on <a href="https://unsplash.com/photos/37-obwmRiAI?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption></figure>
+      </amp-img></a><figcaption><span>Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Science in HD</a> on <a href="http://web.archive.org/web/20210807153741/https://unsplash.com/photos/37-obwmRiAI?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span></figcaption></figure>
 
 <p class="text-center"><strong>Click the Image Above to View the Original Image on Unsplash</strong> 👆</p>
 
