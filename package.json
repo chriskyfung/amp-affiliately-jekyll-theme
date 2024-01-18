@@ -1,9 +1,15 @@
 {
   "name": "amp-affiliately-jekyll-theme",
   "description": "AMP Affiliately is an AMP-ready Jekyll theme for your blogs and websites.",
-  "version": "2.7.1",
-  "author": "Chris K.Y. Fung",
-  "license": "MIT",
+  "version": "2.8.0",
+  "scripts": {
+    "convert": "npx gulp convert",
+    "jekyll": "bundle exec jekyll serve",
+    "jekyll:trace": "bundle exec jekyll serve --trace",
+    "build": "bundle exec jekyll build && gulp build",
+    "test": "npx gulp validate",
+    "watch": "npx gulp"
+  },
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
   "repository": {
     "type": "git",
@@ -25,6 +31,8 @@
     "amp-jekyll",
     "jekyll-theme-amp"
   ],
+  "author": "Chris K.Y. Fung",
+  "license": "MIT",
   "engines": {
     "node": ">=18.12.1",
     "npm": ">=9.1.2"
@@ -63,14 +71,6 @@
       "cheerio": "^1.0.0-rc.3",
       "terser": ">=5.14.2"
     }
-  },
-  "scripts": {
-    "convert": "npx gulp convert",
-    "jekyll": "bundle exec jekyll serve",
-    "jekyll:trace": "bundle exec jekyll serve --trace",
-    "build": "bundle exec jekyll build && gulp build",
-    "test": "npx gulp validate",
-    "watch": "npx gulp"
   },
   "resolutions": {
     "node-sass": "https://registry.npmjs.org/node-sass/-/node-sass-7.0.0.tgz"
