@@ -16,15 +16,28 @@
   "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/",
   "git-graph.customBranchGlobPatterns": [
     {
-      "name": "All Except `origin/gh-pages`",
-      "glob": "[!notes]*[!gh-pages]"
-    }, 
+      "name": "No gh-pages",
+      "glob": "heads/[^g][^h]*[^s]"
+    },
     {
-      "name": "Remote Except `origin/gh-pages`",
-      "glob": "remotes/origin/[!gh-pages]*"
+      "name": "No origin/gh-pages",
+      "glob": "remotes/origin/[^g][^h]*[^s]"
+    },
+    {
+      "name": "Stashes",
+      "glob": "stash"
+    },
+    {
+      "name": "Tags",
+      "glob": "tags/*"
     }
   ],
   "git-graph.repository.onLoad.showSpecificBranches": [
-    "--glob=[!notes]*[!gh-pages]"
+    "master",
+    "remotes/origin/master",
+    "--glob=heads/[^g][^h]*[^s]",
+    "--glob=remotes/origin/[^g][^h]*[^s]",
+    "--glob=stash",
+    "--glob=tags/*"
   ]
 }
