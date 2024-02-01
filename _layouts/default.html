@@ -54,7 +54,7 @@
     <link rel="preload" href="{{ page.image.path | relative_url }}" as="image" crossorigin>
       {%- else -%}
         {%- assign img_name = page.image.path | remove: img_ext -%}
-    <link rel="preload" href="{{ img_name }}.webp" as="image" type="image/webp" crossorigin>
+    <link rel="preload" href="{{ img_name }}webp" as="image" type="image/webp" crossorigin>
       {%- endif -%}
     {%- endif -%}
 
