@@ -1,15 +1,15 @@
 {%- if include.playlist -%}
-<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-listType="playlist" data-param-list="{{ include.playlist }}" data-param-rel="0">
+{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-listType="playlist" data-param-list="{{ include.playlist }}" data-param-rel="0">
   <div fallback>
     <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
-</amp-youtube>
+  {{ include.indent }}</amp-youtube>
 {%- else -%}
-<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-rel="0">
+{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-rel="0">
   <div fallback>
     <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
-</amp-youtube>
+  {{ include.indent }}</amp-youtube>
 {%- endif -%}
 
 {%- if include.title -%}
@@ -19,7 +19,7 @@
 {%- endif -%}
 
 {%- if site.google_analytics -%}
-<amp-analytics type="gtag" data-credentials="include">
+{{ include.indent }}<amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
     {
       "vars" : {
@@ -65,10 +65,10 @@
       }
     }
   </script>
-</amp-analytics>
+  {{ include.indent }}</amp-analytics>
 {%- endif -%}
 {%- if site.ga4 -%}
-<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
+{{ include.indent }}<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
   <script type="application/json">
   {
       "vars": {
@@ -120,5 +120,5 @@
       }
   }
   </script>
-</amp-analytics> 
+{{ include.indent }}</amp-analytics> 
 {%- endif -%}
