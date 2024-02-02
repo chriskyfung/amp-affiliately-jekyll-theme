@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-02-01T23:18:57+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-02-02T21:52:24+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -1974,6 +1974,7 @@ end
 <ul>
   <li><strong>id</strong> - <em>required</em></li>
   <li><strong>title</strong> - <em>optional</em></li>
+  <li><strong>indent</strong> - <em>optional</em></li>
 </ul>
 
 <p>Sample:</p>
@@ -1982,7 +1983,7 @@ end
   <div fallback="">
     <p>This browser does not support the YouTube video player. <a href="https://youtu.be/8jumRGDgxiY" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
-</amp-youtube>
+  </amp-youtube>
 <amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
     {
@@ -2029,7 +2030,7 @@ end
       }
     }
   </script>
-</amp-analytics>
+  </amp-analytics>
 <amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
   <script type="application/json">
   {
@@ -2099,6 +2100,7 @@ end
   <li><strong>id</strong> - <em>required</em></li>
   <li><strong>playlist</strong> - <em>required</em></li>
   <li><strong>title</strong> - <em>optional</em></li>
+  <li><strong>indent</strong> - <em>optional</em></li>
 </ul>
 
 <hr />
