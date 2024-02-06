@@ -53,8 +53,8 @@
       {%- if img_ext == "svg" -%}
     <link rel="preload" href="{{ page.image.path | relative_url }}" as="image" crossorigin>
       {%- else -%}
-        {%- assign img_name = page.image.path | remove: img_ext -%}
-    <link rel="preload" href="{{ img_name }}webp" as="image" type="image/webp" crossorigin>
+        {%- assign webp_img = page.image.path | remove: img_ext | append: "webp" -%}
+    <link rel="preload" href="{{ webp_img | relative_url }}" as="image" type="image/webp" crossorigin>
       {%- endif -%}
     {%- endif -%}
 
