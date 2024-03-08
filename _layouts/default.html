@@ -72,6 +72,7 @@
       {% include css/amp-bs4.min.css %}
       {% include css/amp-theme.min.css %}
       {% include css/amp-navigation.min.css %}
+      {% include css/amp-consent.css %}
     {%- if site.invitation_codes != false -%}
       {% include css/amp-invitation-codes.min.css %}
     {%- endif -%}
@@ -109,6 +110,8 @@
   {%- capture layout -%}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%- endcapture -%}
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
+    {% include consent/granular-user-consent.html %}
+    
     {%- if site.gtm -%}
     <!-- Google Tag Manager -->
     <amp-analytics config="https://www.googletagmanager.com/amp.json?id={{ site.gtm }}&gtm.url=SOURCE_URL"
