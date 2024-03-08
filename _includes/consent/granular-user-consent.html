@@ -15,7 +15,7 @@
 <amp-script script="get-stored-consentStates" nodom data-ampdevmode>
 </amp-script>
 <script id="get-stored-consentStates" type="text/plain" target="amp-script">
-  const str = atob(localStorage.getItem('amp-store:http://127.0.0.1:4000'));
+  const str = atob(localStorage.getItem('amp-store:{{ site.url }}'));
   const json = JSON.parse(str);
   const v = json.vv['amp-consent:site-consent']?.v;
   if (v.s === 1) {
