@@ -124,7 +124,11 @@
       data-credentials="include" style="width:1px;height:1px;"></amp-analytics>
     {%- endif -%}
     {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
-    <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}" {{ adtest_status }} data-full-width>
+    <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}"
+      {%- if site.consent == true %}
+        data-block-on-consent-purposes="advertising"
+      {% endif -%}
+      {{ adtest_status }} data-full-width>
       <div placeholder>Loading Ads...</div>
       <div fallback></div>
       <div overflow></div>
