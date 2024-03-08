@@ -7,7 +7,9 @@
     {% seo %}
     <link as="script" href="https://cdn.ampproject.org/v0.js" rel="preload">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    {%- if site.consent == true -%}
     <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
+    {%- endif -%}
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
     <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
@@ -26,10 +28,9 @@
     {%- if layout.amp.iframe or page.amp.iframe or true -%}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {%- endif -%}
-    {%- if layout.amp.script or page.amp.script -%}
+    {%- if site.consent == true or layout.amp.script or page.amp.script -%}
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
-    <!-- {%- if layout.amp.script or page.amp.script -%} -->
-    <!-- {%- endif -%} -->
+    {%- endif -%}
     {%- if page.amp.youtube -%}
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     {%- endif -%}
@@ -73,7 +74,9 @@
       {% include css/amp-bs4.min.css %}
       {% include css/amp-theme.min.css %}
       {% include css/amp-navigation.min.css %}
-      {% include css/amp-consent.css %}
+    {%- if site.consent == true -%}
+      {% include css/amp-consent.min.css %}
+    {%- endif -%}
     {%- if site.invitation_codes != false -%}
       {% include css/amp-invitation-codes.min.css %}
     {%- endif -%}
@@ -111,7 +114,9 @@
   {%- capture layout -%}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%- endcapture -%}
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
+    {%- if site.consent == true -%}
     {% include consent/granular-user-consent.html %}
+    {%- endif -%}
     
     {%- if site.gtm -%}
     <!-- Google Tag Manager -->

@@ -12,7 +12,11 @@
 </amp-state>
 
 <!-- Ref: https://amp.dev/documentation/examples/components/amp-script/#local-storage -->
+{%- if jekyll.environment == 'production' and site.consent_dev_mode == false -%}
+<amp-script script="get-stored-consentStates" nodom>
+{%- else -%}
 <amp-script script="get-stored-consentStates" nodom data-ampdevmode>
+{%- endif -%}
 </amp-script>
 <script id="get-stored-consentStates" type="text/plain" target="amp-script">
   const str = atob(localStorage.getItem('amp-store:{{ site.url }}'));

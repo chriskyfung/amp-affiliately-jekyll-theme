@@ -275,6 +275,15 @@ copyright:
 
 * * *
 
+### Cookie Consent Options <span class="badge badge-success">v2.9</span>
+
+|     Attribute      | Description                                                                                                                                                        |
+| :----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|     `consent`      | Set `true`{:.plaintext} to enable the cookie consent UI.<br> _Default:_ `false`{:.plaintext}.                                                                      |
+| `consent_dev_mode` | Set `false`{:.plaintext} to remove the `data-ampdevmode`{:.plaintext} attribute from the custom script for production builds. <br> _Default:_ `true`{:.plaintext}. |
+
+* * *
+
 ### SEO Configuration
 
 **AMP Affiliately Theme** uses [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) to output machine-readable metadata for search engines and social networks to index and display. The following is recommended to configure in the `_config.yml` file:
