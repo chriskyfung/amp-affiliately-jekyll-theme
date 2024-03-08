@@ -270,7 +270,11 @@
 
     {%- if site.google_analytics -%}
     <!-- Configure analytics to use gtag -->
-    <amp-analytics type="gtag" data-credentials="include" style="width:1px;height:1px;">
+    <amp-analytics type="gtag" data-credentials="include"
+      {%- if site.consent == true %}
+        data-block-on-consent-purposes="analytics"
+      {% endif -%}
+      style="width:1px;height:1px;">
       <script type="application/json">
         {
           "vars": {
@@ -312,7 +316,11 @@
       }
       </script>
     </amp-analytics>
-    <amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
+    <amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json"
+      {%- if site.consent == true %}
+        data-block-on-consent-purposes="analytics"
+      {% endif -%}
+      data-credentials="include">
       <script type="application/json">
         {
           "vars": {

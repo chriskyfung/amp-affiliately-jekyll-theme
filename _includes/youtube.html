@@ -19,7 +19,11 @@
 {%- endif -%}
 
 {%- if site.google_analytics -%}
-{{ include.indent }}<amp-analytics type="gtag" data-credentials="include">
+{{ include.indent }}<amp-analytics type="gtag" data-credentials="include"
+    {%- if site.consent == true %}
+      data-block-on-consent-purposes="analytics"
+    {% endif -%}
+  >
   <script type="application/json">
     {
       "vars" : {
@@ -68,7 +72,11 @@
   {{ include.indent }}</amp-analytics>
 {%- endif -%}
 {%- if site.ga4 -%}
-{{ include.indent }}<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
+{{ include.indent }}<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include"
+    {%- if site.consent == true %}
+      data-block-on-consent-purposes="analytics"
+    {% endif -%}
+  >
   <script type="application/json">
   {
       "vars": {
