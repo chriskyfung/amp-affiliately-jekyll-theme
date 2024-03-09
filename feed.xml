@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-02-06T16:23:43+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-03-09T22:27:03+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -223,6 +223,7 @@
         </ul>
       </li>
       <li><a href="#footer-options-v20" id="markdown-toc-footer-options-v20">Footer Options <span class="badge badge-success">v2.0</span></a></li>
+      <li><a href="#cookie-consent-options-v29" id="markdown-toc-cookie-consent-options-v29">Cookie Consent Options <span class="badge badge-success">v2.9</span></a></li>
       <li><a href="#seo-configuration" id="markdown-toc-seo-configuration">SEO Configuration</a></li>
       <li><a href="#options-for-third-party-components" id="markdown-toc-options-for-third-party-components">Options For Third-Party Components</a>        <ul>
           <li><a href="#-google-services" id="markdown-toc--google-services"><i class="fab fa-google fa-fw"></i> Google Services</a>            <ul>
@@ -682,6 +683,11 @@ The following options provide the granular control to those menu items:</p>
       <td><code class="language-plaintext highlighter-rouge">append</code></td>
       <td><span class="badge badge-success">v2.0</span> The text at the end of the copyright notice.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">. All rights reserved.</code>.</td>
     </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">privacy_policy</code></td>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td><span class="badge badge-success">v2.8.1</span> The URL to go when clicking on the privacy policy link.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">/privacy-policy</code>.</td>
+    </tr>
   </tbody>
 </table>
 
@@ -719,6 +725,29 @@ The following options provide the granular control to those menu items:</p>
 <blockquote>
   <p>Github © 2021</p>
 </blockquote>
+
+<hr />
+
+<h3 id="cookie-consent-options-v29">Cookie Consent Options <span class="badge badge-success">v2.9</span></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">consent</code></td>
+      <td>Set <code class="language-plaintext plaintext highlighter-rouge">true</code> to enable the cookie consent UI.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">consent_dev_mode</code></td>
+      <td>Set <code class="language-plaintext plaintext highlighter-rouge">false</code> to remove the <code class="language-plaintext plaintext highlighter-rouge">data-ampdevmode</code> attribute from the custom script for production builds. <br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 
@@ -1984,7 +2013,7 @@ end
     <p>This browser does not support the YouTube video player. <a href="https://youtu.be/8jumRGDgxiY" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
   </amp-youtube>
-<amp-analytics type="gtag" data-credentials="include">
+<amp-analytics type="gtag" data-credentials="include" data-block-on-consent-purposes="analytics">
   <script type="application/json">
     {
       "vars" : {
@@ -2031,56 +2060,53 @@ end
     }
   </script>
   </amp-analytics>
-<amp-analytics type="googleanalytics" config="https://amp.analytics-debugger.com/ga4.json" data-credentials="include">
+<amp-analytics type="gtag" data-credentials="include" data-block-on-consent-purposes="analytics">
   <script type="application/json">
   {
-      "vars": {
-        "GA4_MEASUREMENT_ID": "G-HP4LN87NJE",
-        "GA4_ENDPOINT_HOSTNAME": "www.google-analytics.com",
-        "DEFAULT_PAGEVIEW_ENABLED": false,    
-        "GOOGLE_CONSENT_ENABLED": false,
-        "WEBVITALS_TRACKING": false,
-        "PERFORMANCE_TIMING_TRACKING": false,
-        "SEND_DOUBLECLICK_BEACON": false
+    "vars": {
+      "gtag_id": "G-HP4LN87NJE",
+      "config": {
+        "G-HP4LN87NJE": { "groups": "default" }
+      }
+  },
+    "triggers": {
+      "videoPlay": {
+        "on": "video-play",
+        "request": "ga4Event",
+        "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
+        "vars": {
+          "ga4_event_name": "video_played"
+        },
+        "extraUrlParams": {
+          "event__str_video_title": "youtu.be/8jumRGDgxiY",
+          "event__num_video_duration": "${duration}"
+        }
       },
-      "triggers": {
-        "videoPlay": {
-          "on": "video-play",
-          "request": "ga4Event",
-          "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
-          "vars": {
-            "ga4_event_name": "video_played"
-          },
-          "extraUrlParams": {
-            "event__str_video_title": "youtu.be/8jumRGDgxiY",
-            "event__num_video_duration": "${duration}"
-          }
+      "videoPause": {
+        "on": "video-pause",
+        "request": "ga4Event",
+        "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
+        "vars": {
+          "ga4_event_name": "video_paused"
         },
-        "videoPause": {
-          "on": "video-pause",
-          "request": "ga4Event",
-          "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
-          "vars": {
-            "ga4_event_name": "video_paused"
-          },
-          "extraUrlParams": {
-            "event__str_video_title": "youtu.be/8jumRGDgxiY",
-            "event__num_video_duration": "${duration}"
-          }
+        "extraUrlParams": {
+          "event__str_video_title": "youtu.be/8jumRGDgxiY",
+          "event__num_video_duration": "${duration}"
+        }
+      },
+      "videoEnded": {
+        "on": "video-ended",
+        "request": "ga4Event",
+        "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
+        "vars": {
+          "ga4_event_name": "video_ended"
         },
-        "videoEnded": {
-          "on": "video-ended",
-          "request": "ga4Event",
-          "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
-          "vars": {
-            "ga4_event_name": "video_ended"
-          },
-          "extraUrlParams": {
-            "event__str_video_title": "youtu.be/8jumRGDgxiY",
-            "event__num_video_duration": "${duration}"
-          }
+        "extraUrlParams": {
+          "event__str_video_title": "youtu.be/8jumRGDgxiY",
+          "event__num_video_duration": "${duration}"
         }
       }
+    }
   }
   </script>
 </amp-analytics>
