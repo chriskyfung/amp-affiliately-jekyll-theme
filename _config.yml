@@ -18,6 +18,7 @@ nav:
   buttons:
     gh_sponsors: true # Show GitHub Sponsors button
   global:
+    home: false
     menu: false
     dropdown: false # Show menu with dropdown submenu
   local:
