@@ -26,6 +26,7 @@
     {%- if layout.amp.iframe or page.amp.iframe or true -%}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {%- endif -%}
+    {%- if layout.amp.script or page.amp.script -%}
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
     <!-- {%- if layout.amp.script or page.amp.script -%} -->
     <!-- {%- endif -%} -->
@@ -37,7 +38,7 @@
     {%- endif -%}
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-autocomplete" src="https://cdn.ampproject.org/v0/amp-autocomplete-0.1.js"></script>
-    
+
     <link rel="icon" href="{{ site.favicon | relative_url }}">
     <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
