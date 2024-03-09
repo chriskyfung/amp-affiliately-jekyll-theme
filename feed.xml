@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-03-09T22:27:03+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-03-09T22:35:47+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -2013,53 +2013,6 @@ end
     <p>This browser does not support the YouTube video player. <a href="https://youtu.be/8jumRGDgxiY" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
   </amp-youtube>
-<amp-analytics type="gtag" data-credentials="include" data-block-on-consent-purposes="analytics">
-  <script type="application/json">
-    {
-      "vars" : {
-        "gtag_id": "UA-72575541-9",
-        "config" : {
-          "UA-72575541-9": { "groups": "default" }
-        }
-      },
-      "triggers": {
-        "videoPlay": {
-          "on": "video-play",
-          "request": "event",
-          "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
-          "vars": {
-            "event_category": "AMP YouTube player (client-side)",
-            "event_name": "Video Started",
-            "event_label": "youtu.be/8jumRGDgxiY",
-            "method": "Google"
-          }
-        },
-        "videoPause": {
-          "on": "video-pause",
-          "request": "event",
-          "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
-          "vars": {
-            "event_category": "AMP YouTube player (client-side)",
-            "event_name": "Video Paused",
-            "event_label": "youtu.be/8jumRGDgxiY",
-            "method": "Google"
-          }
-        },
-        "videoEnded": {
-          "on": "video-ended",
-          "request": "event",
-          "selector": "amp-youtube[data-videoid='8jumRGDgxiY']",
-          "vars": {
-            "event_name": "Video Ended",
-            "event_category": "AMP YouTube player (client-side)",
-            "event_label": "youtu.be/8jumRGDgxiY",
-            "method": "Google"
-          }
-        }
-      }
-    }
-  </script>
-  </amp-analytics>
 <amp-analytics type="gtag" data-credentials="include" data-block-on-consent-purposes="analytics">
   <script type="application/json">
   {

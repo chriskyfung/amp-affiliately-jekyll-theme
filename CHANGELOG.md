@@ -2,33 +2,23 @@
 
 ## v2.9.0 (2024-03-08)
 
-### Added
+### ✨ Features
 
-- Support set the URL for the privacy policy page in the `_config.yml` file.
+- Added ability to customize the URL for the privacy policy page via the `_config.yml` file.
 
-- [#44](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/44) Implemented a Cookie Consent Notice.
-  - Imported the `amp-consent` extension into the default layout to manage user consent.
-  - Developed a sophisticated cookie consent interface, enabling granular consent on a per-purpose basis, located in `_includes/consent/granular-user-consent.html`.
-  - Defined the associated CSS styles for the consent interface in `_includes/css/amp_consent.css`.
-  - Imported the `amp_consent.css` into the HEAD element of the default layout using the Jekyll include tag, ensuring the styles are loaded at the onset of page rendering.
-  - Tmported the `granular-user-consent.html` to the default layout just below the `<body>` tag via the Jekyll include tag, guaranteeing immediate visibility of the consent interface upon page load.
+- Implemented a granular Cookie Consent Notice ([#44](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/44)):
+  - Integrated the `amp-consent` extension to manage user consent.
+  - Developed a comprehensive cookie consent interface that allows for detailed consent management based on specific purposes.
+  - Implemented CSS styles for the consent interface.
+  - Incorporated the consent interface into the default layout, ensuring its visibility upon page load.
+  - Enabled the consent UI when `consent: true` is set in the `_config.yml` file.
+  - Provided an option to remove the `data-ampdevmode` attribute from the custom script by setting `consent_dev_mode=false`.
+  - Implemented blocking of AddThis, Disqus, Google Analytics, and Google AdSense until user consent is obtained.
 
-### Changed
+### 🔧 Chore
 
-- Made the `amp-script` extension mandatory in the default layout. This change is necessary for enabling custom scripts to access and read consent states stored in the local storage.
-
-## Changelog
-
-### Added
-- [#44](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/44) Implemented a cookie consent notice banner.
-  - Integrated the `amp-consent` extension into the default layout to manage user consent.
-  - Developed a granular cookie consent UI, allowing users to provide consent on a per-cookie basis. The UI is created in the `_includes/consent/granular-user-consent.html` file.
-  - Defined the associated CSS styles for the granular cookie consent UI in the `_includes/css/amp_consent.css` file.
-  - Used Jekyll include tag to import the `amp_consent.css` to the HEAD element of the default layout. This ensures that the CSS styles for the consent UI are loaded at the start of the page load.
-  - Used Jekyll include tag to import the `granular-user-consent.html` to the default layout just below the `<body>` tag. This ensures that the consent UI is immediately visible to users when the page loads.
-
-### Changed
-- Made the `amp-script` extension mandatory in the default layout. This change is necessary for custom scripts that need to read the stored consent states from the local storage.
+- Extended the import of the `amp-script` extension to include cases where the consent UI is enabled, allowing custom scripts to access consent states stored locally.
+- Updated to the latest official Google Analytics 4 support.
 
 ## v2.8.0 (2024-01-15)
 
