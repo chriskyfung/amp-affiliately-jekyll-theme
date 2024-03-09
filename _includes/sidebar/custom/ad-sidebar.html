@@ -3,6 +3,9 @@
   {%- if site.adsense -%}
   <!-- github_resp_sidebar -->
   <amp-ad width="100vw" height="292"
+    {%- if site.consent == true %}
+      data-block-on-consent-purposes="advertising"
+    {% endif -%}
     type="adsense"
     data-ad-client="{{ site.adsense.client_id }}"
     data-ad-slot="{{ site.adsense.ad_slot.sidebar }}"

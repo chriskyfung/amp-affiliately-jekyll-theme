@@ -1,6 +1,9 @@
 {%- if site.amp_disqus -%}
 <div class="disqus">
   <amp-iframe width=600 height={{ site.amp_disqus.height | default: 140 }} layout="responsive"
+    {%- if site.consent == true %}
+      data-block-on-consent-purposes="functional"
+    {% endif -%}
     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
     src="{{ site.amp_disqus.url }}?url={{ page.url | absolute_url }}&title='{{ page.title | url_encode }}'">
     <div overflow style="background-color: #0003;display: block;position: relative;">

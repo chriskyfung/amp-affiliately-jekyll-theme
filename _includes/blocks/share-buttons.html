@@ -1,2 +1,10 @@
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<amp-addthis width="320" height="55"  data-pub-id="{{ site.addthis.pid }}" data-widget-id="{{ site.addthis.wid }}" data-widget-type="inline" style="margin-left:-10px;"></amp-addthis>
+<amp-addthis width="320" height="55"
+  {%- if site.consent == true %}
+    data-block-on-consent-purposes="functional"
+  {% endif -%}
+  data-pub-id="{{ site.addthis.pid }}"
+  data-widget-id="{{ site.addthis.wid }}"
+  data-widget-type="inline"
+  style="margin-left:-10px;">
+</amp-addthis>

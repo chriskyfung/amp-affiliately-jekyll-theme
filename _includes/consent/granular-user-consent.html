@@ -1,0 +1,146 @@
+<!-- Initialize state -->
+<amp-state id="consentState">
+  <script type="application/json">
+    {
+      "essential": false,
+      "functional": false,
+      "analytics": false,
+      "advertising": false,
+      "disallows": "advertising,analytics,functional"
+    }
+  </script>
+</amp-state>
+
+<!-- Ref: https://amp.dev/documentation/examples/components/amp-script/#local-storage -->
+{%- if jekyll.environment == 'production' and site.consent_dev_mode == false -%}
+<amp-script script="get-stored-consentStates" nodom>
+{%- else -%}
+<amp-script script="get-stored-consentStates" nodom data-ampdevmode>
+{%- endif -%}
+</amp-script>
+<script id="get-stored-consentStates" type="text/plain" target="amp-script">
+  const str = atob(localStorage.getItem('amp-store:{{ site.url }}'));
+  const json = JSON.parse(str);
+  const v = json.vv['amp-consent:site-consent']?.v;
+  if (v.s === 1) {
+    let jsonObject = Object.fromEntries(Object.entries(v.pc).map(([key, value]) => [key, value === 1]));
+    jsonObject.disallows = Object.keys(jsonObject).sort().filter(key => key != 'essential' && jsonObject[key] === false).join(',');
+    AMP.setState({"consentState": jsonObject})
+  }
+</script>
+
+<amp-consent layout="nodisplay" id="site-consent">
+  <script type="application/json">
+    {
+      "consentInstanceId": "site-consent",
+      "consentRequired": true,
+      "promptUI": "consent-ui",
+      "postPromptUI": "post-consent-ui",
+      "uiConfig": {
+        "overlay": true
+      },
+      "purposeConsentRequired": ["essential", "functional", "analytics", "advertising"]
+    }
+  </script>
+  <div id="consent-ui">
+    <div id="cookie-consent-banner" class="container">
+      <header>
+        <h2>
+          <i class="fas fa-cookie-bite"></i>
+          Cookie Consent
+        </h2>
+        <div class="description">
+          <p>This website use cookies to help you have a superior and more relevant browsing experience on the website.
+            <a href="{{ site.privacy-policy.url | default: '/privacy-policy'}}"> Read more...</a></p>
+        </div>
+      </header>
+
+      <div class="buttons">
+        <button id="consent-accept-all-button" class="button fill"
+          on="tap:site-consent.accept(purposeConsentDefault=true),AMP.navigateTo(url='?event=consent-accept-all')">
+          Accept All
+        </button>
+        <button id="consent-preference-button-e" class="button" [hidden]="consentState.disallows!='advertising,analytics,functional'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-ef" class="button" hidden [hidden]="consentState.disallows!='advertising,analytics'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,functional=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-ea" class="button" hidden [hidden]="consentState.disallows!='advertising,functional'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,analytics=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-ev" class="button" hidden [hidden]="consentState.disallows!='analytics,functional'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,advertising=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-eav" class="button" hidden [hidden]="consentState.disallows!='functional'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,analytics=true,advertising=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-efv" class="button" hidden [hidden]="consentState.disallows!='analytics'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,functional=true,advertising=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-efa" class="button" hidden [hidden]="consentState.disallows!='advertising'"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,functional=true,analytics=true)">
+          Preferences
+        </button>
+        <button id="consent-preference-button-all" class="button" hidden [hidden]="consentState.disallows!=''"
+          on="tap:cookie-preference-modal.show,cookie-consent-banner.hide,site-consent.setPurpose(essential=true,functional=true,analytics=true,advertising=true)">
+          Preferences
+        </button>
+      </div>
+    </div>
+
+    <div id="cookie-preference-modal" hidden class="container">
+      <header>
+        <h2>
+          <i class="fas fa-cookie-bite"></i>
+          Cookie Preferences
+        </h2>
+      </header>
+      <div id="consent-choices">
+        <label class="consentLabel" for="consent-purpose-essential">
+          <input id="consent-purpose-essential" type="checkbox" checked disabled
+            on="change:site-consent.setPurpose(essential=event.checked)">
+          Essential
+        </label>
+        <label class="consentLabel" for="consent-purpose-functional">
+          <input id="consent-purpose-functional" type="checkbox" [checked]="consentState.functional"
+            on="change:site-consent.setPurpose(functional=event.checked)">
+          Funcitonality
+        </label>
+        <label class="consentLabel" for="consent-purpose-analytics">
+          <input id="consent-purpose-analytics" type="checkbox" [checked]="consentState.analytics"
+            on="change:site-consent.setPurpose(analytics=event.checked)">
+          Analytics
+        </label>
+        <label class="consentLabel" for="consent-purpose-advertising">
+          <input id="consent-purpose-advertising" type="checkbox" [checked]="consentState.advertising"
+            on="change:site-consent.setPurpose(advertising=event.checked)">
+          Advertising
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="consent-accept-button" class="button fill"
+          on="tap:site-consent.accept(purposeConsentDefault=false),AMP.navigateTo(url='?event=consent-accepted')">
+          Accept
+        </button>
+        <button id="consent-decline-button" class="button"
+          on="tap:site-consent.setPurpose(functional=false,analytics=false,advertising=false),site-consent.reject,AMP.navigateTo(url='?event=consent-declined')">
+          Decline
+        </button>
+      </div>
+    </div>
+  </div>
+
+</amp-consent>
+
+<div id="post-consent-ui">
+  <button class="btn btn-primary" on="tap:AMP.setState({}),site-consent.prompt"><i
+      class="fas fa-cookie-bite"></i></button>
+</div>

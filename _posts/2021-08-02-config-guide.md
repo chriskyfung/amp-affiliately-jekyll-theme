@@ -232,13 +232,14 @@ social:
 
 ### Footer Options <span class="badge badge-success">v2.0</span>
 
-|  Attribute  | Property  | Description                                                                                                                                      |
-| :---------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `copyright` |           | Your custom setting of copyright notice:                                                                                                         |
-|             | `prepend` | <span class="badge badge-success">v2.0</span> The text prepend to the year.<br> _Default:_ `Copyright © `{:.plaintext}.                          |
-|             | `owner`   | The name of the copyright holder.<br> _Default:_ _`site.name`_.                                                                                  |
-|             | `link`    | The URL to go when clicking on the copyright notice.<br> _Default:_ `/`{:.plaintext}.                                                            |
-|             | `append`  | <span class="badge badge-success">v2.0</span> The text at the end of the copyright notice.<br> _Default:_ `. All rights reserved.`{:.plaintext}. |
+|    Attribute     | Property  | Description                                                                                                                                            |
+| :--------------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|   `copyright`    |           | Your custom setting of copyright notice:                                                                                                               |
+|                  | `prepend` | <span class="badge badge-success">v2.0</span> The text prepend to the year.<br> _Default:_ `Copyright © `{:.plaintext}.                                |
+|                  | `owner`   | The name of the copyright holder.<br> _Default:_ _`site.name`_.                                                                                        |
+|                  | `link`    | The URL to go when clicking on the copyright notice.<br> _Default:_ `/`{:.plaintext}.                                                                  |
+|                  | `append`  | <span class="badge badge-success">v2.0</span> The text at the end of the copyright notice.<br> _Default:_ `. All rights reserved.`{:.plaintext}.       |
+| `privacy_policy` | `url`     | <span class="badge badge-success">v2.8.1</span> The URL to go when clicking on the privacy policy link.<br> _Default:_ `/privacy-policy`{:.plaintext}. |
 
 **Default format:**
 
@@ -271,6 +272,15 @@ copyright:
 ```
 
 > Github © 2021
+
+* * *
+
+### Cookie Consent Options <span class="badge badge-success">v2.9</span>
+
+|     Attribute      | Description                                                                                                                                                        |
+| :----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|     `consent`      | Set `true`{:.plaintext} to enable the cookie consent UI.<br> _Default:_ `false`{:.plaintext}.                                                                      |
+| `consent_dev_mode` | Set `false`{:.plaintext} to remove the `data-ampdevmode`{:.plaintext} attribute from the custom script for production builds. <br> _Default:_ `true`{:.plaintext}. |
 
 * * *
 
