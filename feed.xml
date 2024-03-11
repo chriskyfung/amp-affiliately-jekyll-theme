@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-03-09T22:35:47+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml" rel="self" type="application/atom+xml" /><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/" rel="alternate" type="text/html" /><updated>2024-03-12T01:52:31+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/feed.xml</id><title type="html">AMP Affiliately Jekyll Theme</title><subtitle>An AMP-ready Jekyll blog theme</subtitle><entry><title type="html">Plugins and Extensions</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/" rel="alternate" type="text/html" title="Plugins and Extensions" /><published>2021-09-08T12:00:00+08:00</published><updated>2024-01-10T22:23:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/plugins/"><![CDATA[<aside style="position: relative;">
     <a href="#toc-skipped" class="screen-reader-only">Skip table of contents</a>
 </aside>
 
@@ -214,16 +214,16 @@
         </ul>
       </li>
       <li><a href="#sidebar-options" id="markdown-toc-sidebar-options">Sidebar Options</a>        <ul>
-          <li><a href="#-site-wide-display-featured-and-recent-posts-sidebar-widgets-v12" id="markdown-toc--site-wide-display-featured-and-recent-posts-sidebar-widgets-v12"><i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-success">v1.2</span></a></li>
+          <li><a href="#-site-wide-display-featured-and-recent-posts-sidebar-widgets-v16" id="markdown-toc--site-wide-display-featured-and-recent-posts-sidebar-widgets-v16"><i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-success">v1.6</span></a></li>
         </ul>
       </li>
       <li><a href="#social-buttons" id="markdown-toc-social-buttons">Social Buttons</a>        <ul>
-          <li><a href="#v14-deprecated" id="markdown-toc-v14-deprecated"><span class="badge badge-default">v1.4</span> <sup>(Deprecated)</sup></a></li>
+          <li><a href="#v14-deprecated" id="markdown-toc-v14-deprecated"><span class="badge badge-default">v1.4</span> <sup>Deprecated</sup></a></li>
           <li><a href="#v27" id="markdown-toc-v27"><span class="badge badge-success">v2.7</span></a></li>
         </ul>
       </li>
-      <li><a href="#footer-options-v20" id="markdown-toc-footer-options-v20">Footer Options <span class="badge badge-success">v2.0</span></a></li>
-      <li><a href="#cookie-consent-options-v29" id="markdown-toc-cookie-consent-options-v29">Cookie Consent Options <span class="badge badge-success">v2.9</span></a></li>
+      <li><a href="#footer-options" id="markdown-toc-footer-options">Footer Options</a></li>
+      <li><a href="#cookie-consent-v29" id="markdown-toc-cookie-consent-v29">Cookie Consent <span class="badge badge-success">v2.9</span></a></li>
       <li><a href="#seo-configuration" id="markdown-toc-seo-configuration">SEO Configuration</a></li>
       <li><a href="#options-for-third-party-components" id="markdown-toc-options-for-third-party-components">Options For Third-Party Components</a>        <ul>
           <li><a href="#-google-services" id="markdown-toc--google-services"><i class="fab fa-google fa-fw"></i> Google Services</a>            <ul>
@@ -234,7 +234,7 @@
             </ul>
           </li>
           <li><a href="#-github" id="markdown-toc--github"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
-          <li><a href="#-show-github-metadata-widget-in-sidebar-v20" id="markdown-toc--show-github-metadata-widget-in-sidebar-v20"><i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-success">v2.0</span></a></li>
+          <li><a href="#-show-github-metadata-widget-in-sidebar-v12" id="markdown-toc--show-github-metadata-widget-in-sidebar-v12"><i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-success">v1.2</span></a></li>
         </ul>
       </li>
     </ul>
@@ -286,26 +286,26 @@
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">permalink</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">permalink</code></td>
       <td><code class="language-plaintext highlighter-rouge">/:year/:month/:day/:title</code></td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">timezone</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">timezone</code></td>
       <td>Any entry from the <a href="https://en.wikipedia.org/wiki/Tz_database" title="Wikipedia">IANA Time Zone Database</a> is valid, e.g. America/New_York. A list of all available values can be found <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" title="Wikipedia">here</a>.</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">paginate</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">paginate</code></td>
       <td>(<em>Optional</em>) The maximum number of posts you’d like to be displayed per-page in the generated site, e.g. <code class="language-plaintext highlighter-rouge">10</code>.</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">paginate_path</code></td>
-      <td>(<em>Optional</em>) The destination of the pagination pages.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">paginate_path</code></td>
+      <td>(<em>Optional</em>) The destination of the <a href="https://jekyllrb.com/docs/pagination/" title="Official Jekyll Documentation">pagination</a> pages.</td>
     </tr>
   </tbody>
 </table>
@@ -338,11 +338,11 @@
     </tr>
     <tr>
       <td style="text-align: right"><code class="language-plaintext highlighter-rouge">url</code></td>
-      <td>The web address of your site including the protocol, subdomain, and domain name, e.g. <code class="language-plaintext plaintext highlighter-rouge">https://yourdomain.com</code> or <code class="language-plaintext plaintext highlighter-rouge">https://www.yourdomain.com</code></td>
+      <td>The web address of your site including the protocol, subdomain, and domain name, e.g. <code class="language-plaintext highlighter-rouge">https://yourdomain.com</code> or <code class="language-plaintext highlighter-rouge">https://www.yourdomain.com</code></td>
     </tr>
     <tr>
       <td style="text-align: right"><code class="language-plaintext highlighter-rouge">baseurl</code></td>
-      <td>The first route parameter after your domain name in the URL, e.g. <code class="language-plaintext highlighter-rouge">''</code> if the site is deployed to <code class="language-plaintext plaintext highlighter-rouge">www.yourdomain.com</code> and <code class="language-plaintext plaintext highlighter-rouge">/repo-1</code> if the root is <code class="language-plaintext plaintext highlighter-rouge">www.yourdomain.com/repo-1/</code>.</td>
+      <td>The first route parameter after your domain name in the URL, e.g. <code class="language-plaintext highlighter-rouge">''</code> if the site is deployed to <code class="language-plaintext highlighter-rouge">www.yourdomain.com</code> and <code class="language-plaintext highlighter-rouge">/repo-1</code> if the root is <code class="language-plaintext highlighter-rouge">www.yourdomain.com/repo-1/</code>.</td>
     </tr>
     <tr>
       <td style="text-align: right"><code class="language-plaintext highlighter-rouge">favicon</code></td>
@@ -386,21 +386,21 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Property</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">buttons</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">buttons</code></td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">gh_sponsors</code></td>
-      <td><span class="badge badge-success">v2.7</span> Set <code class="language-plaintext highlighter-rouge">true</code> to show <strong>GitHub Sponsors</strong> button in the navigation bar, if <code class="language-plaintext highlighter-rouge">social.github</code> is also configured in in the <code class="language-plaintext highlighter-rouge">_config.yml</code>.<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+      <td><span class="badge badge-success">v2.7</span><br /> Set <code class="language-plaintext highlighter-rouge">true</code> to show <strong>GitHub Sponsors</strong> button in the navigation bar, if <code class="language-plaintext highlighter-rouge">social.github</code> is also configured in in the <code class="language-plaintext highlighter-rouge">_config.yml</code>.<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">false</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -424,31 +424,31 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Property</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">global</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">global</code></td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">home</code></td>
-      <td><span class="badge badge-success">v2.0</span> Set <code class="language-plaintext highlighter-rouge">false</code> to disable rendering <strong>HOME</strong> menu item in the navigation menu.<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td><span class="badge badge-success">v2.0</span><br /> Set <code class="language-plaintext highlighter-rouge">false</code> to disable rendering <strong>HOME</strong> menu item in the navigation menu.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">menu</code></td>
-      <td><span class="badge badge-success">v2.0</span> Set <code class="language-plaintext plaintext highlighter-rouge">true</code> to include menu items from <code class="language-plaintext highlighter-rouge">global-menu.html</code> for your entire site/domain.<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+      <td><span class="badge badge-success">v2.0</span><br /> Set <code class="language-plaintext green highlighter-rouge">true</code> to include menu items from <code class="language-plaintext highlighter-rouge">global-menu.html</code> for your entire site/domain.<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">false</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">dropdown</code></td>
-      <td><span class="badge badge-success">v1.7.2</span> Set <code class="language-plaintext highlighter-rouge">false</code> to exclude global dropdown menus from the global menu.<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td><span class="badge badge-success">v1.7.2</span><br /> Set <code class="language-plaintext highlighter-rouge">false</code> to exclude global dropdown menus from the global menu.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -458,6 +458,7 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
+      <th style="text-align: right">Attribute</th>
       <th style="text-align: center">Property</th>
       <th>Key</th>
       <th>Description</th>
@@ -465,19 +466,22 @@ The following options provide the granular control to those menu items:</p>
   </thead>
   <tbody>
     <tr>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">global</code></td>
       <td style="text-align: center"><code class="language-plaintext highlighter-rouge">home</code></td>
       <td> </td>
       <td><span class="badge badge-success">v2.0</span></td>
     </tr>
     <tr>
+      <td style="text-align: right"> </td>
       <td style="text-align: center"> </td>
       <td><code class="language-plaintext highlighter-rouge">location</code></td>
-      <td>The location of <strong>HOME</strong> button in the navigation menu.<br /><em>Options:</em> <code class="language-plaintext highlighter-rouge">menu-start</code> or <code class="language-plaintext highlighter-rouge">menu-end</code>. <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">menu-start</code>.</td>
+      <td>The location of <strong>HOME</strong> button in the navigation menu.<br /> <em>Options:</em> <code class="language-plaintext highlighter-rouge">menu-start</code> or <code class="language-plaintext highlighter-rouge">menu-end</code>.<br /> <em>Default:</em> <code class="language-plaintext blue highlighter-rouge">menu-start</code>.</td>
     </tr>
     <tr>
+      <td style="text-align: right"> </td>
       <td style="text-align: center"> </td>
       <td><code class="language-plaintext highlighter-rouge">text</code></td>
-      <td>The text to display on the home menu item <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">Home</code>.</td>
+      <td>The text to display on the home menu item.<br /> <em>Default:</em> <code class="language-plaintext blue highlighter-rouge">Home</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -489,31 +493,31 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Property</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">local</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">local</code></td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">max_title_length</code></td>
-      <td><span class="badge badge-success">v2.0</span> The maximun number of characters to display <em><code class="language-plaintext highlighter-rouge">site.title</code></em> in the navigation bar.<em>Default</em>: <code class="language-plaintext plaintext highlighter-rouge">40</code>.</td>
+      <td><span class="badge badge-success">v2.0</span><br /> The maximun number of characters to display <em><code class="language-plaintext highlighter-rouge">site.title</code></em> in the navigation bar.<br /> <em>Default</em>: <code class="language-plaintext blue highlighter-rouge">40</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">items</code></td>
-      <td><span class="badge badge-success">v1.7.2</span> An array of simple menu items that consists of the <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">url</code> key-value pairs.</td>
+      <td><span class="badge badge-success">v1.7.2</span><br /> An array of simple menu items that consists of the <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">url</code> key-value pairs.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">menu</code></td>
-      <td><span class="badge badge-success">v1.7.2</span> Set <code class="language-plaintext plaintext highlighter-rouge">true</code> to include menu items from <code class="language-plaintext highlighter-rouge">local-menu.html</code>.<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+      <td><span class="badge badge-success">v1.7.2</span><br /> Set <code class="language-plaintext green highlighter-rouge">true</code> to include menu items from <code class="language-plaintext highlighter-rouge">local-menu.html</code>.<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">false</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -525,18 +529,18 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">sort_categories</code></td>
-      <td>Set <code class="language-plaintext plaintext highlighter-rouge">false</code> to disable sorting the items of post’s categories.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">sort_categories</code></td>
+      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to disable sorting the items of post’s categories.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">sort_tags</code></td>
-      <td>Set <code class="language-plaintext plaintext highlighter-rouge">false</code> to disable sorting the items of post’s tags.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">sort_tags</code></td>
+      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to disable sorting the items of post’s tags.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -550,14 +554,14 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">anchor_link</code></td>
-      <td>Set <code class="language-plaintext plaintext highlighter-rouge">true</code> to attach an anchor link to H2-H4 elements inside posts’ content similar to <a href="https://www.bryanbraun.com/anchorjs/">AnchorJS</a> (<a href="/amp-affiliately-jekyll-theme/post-processing/#add-anchor-link-for-h2-h3-and-h4-headings">View Demo</a>).<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">anchor_link</code></td>
+      <td>Set <code class="language-plaintext green highlighter-rouge">true</code> to attach an anchor link to H2-H4 elements inside posts’ content similar to <a href="https://www.bryanbraun.com/anchorjs/">AnchorJS</a> (<a href="/amp-affiliately-jekyll-theme/post-processing/#add-anchor-link-for-h2-h3-and-h4-headings">View Demo</a>).<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">false</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -567,14 +571,14 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">target_blank</code></td>
-      <td>Set <code class="language-plaintext plaintext highlighter-rouge">true</code> to insert <code class="language-plaintext plaintext highlighter-rouge">rel="noopener noreferrer"</code> and <code class="language-plaintext plaintext highlighter-rouge">target="_blank"</code> to each <code class="language-plaintext plaintext highlighter-rouge">&lt;a&gt;</code> element that links to an outbound URL <i class="fas fa-external-link-alt"></i> inside posts’ content.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">target_blank</code></td>
+      <td>Set <code class="language-plaintext green highlighter-rouge">true</code> to insert <code class="language-plaintext highlighter-rouge">rel="noopener noreferrer"</code> and <code class="language-plaintext highlighter-rouge">target="_blank"</code> to each <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> element that links to an outbound URL <i class="fas fa-external-link-alt"></i> inside posts’ content.<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">false</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -583,31 +587,31 @@ The following options provide the granular control to those menu items:</p>
 
 <h3 id="sidebar-options">Sidebar Options</h3>
 
-<h4 id="-site-wide-display-featured-and-recent-posts-sidebar-widgets-v12"><i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-success">v1.2</span></h4>
+<h4 id="-site-wide-display-featured-and-recent-posts-sidebar-widgets-v16"><i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-success">v1.6</span></h4>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Property</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">sidebar</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">sidebar</code></td>
       <td> </td>
-      <td><span class="badge badge-success">v1.2</span> Enable/disable built-in the following sidebar widgets:</td>
+      <td> </td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">featured</code></td>
-      <td>Add <strong>FEATURED</strong> widget to sidebar.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td>Add <strong>FEATURED</strong> widget to sidebar.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">recent_posts</code></td>
-      <td>Add <strong>RECENT POSTS</strong> widget to sidebar.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td>Add <strong>RECENT POSTS</strong> widget to sidebar.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -622,7 +626,7 @@ The following options provide the granular control to those menu items:</p>
 
 <p>You can configure the links for social buttons by the following attributes.</p>
 
-<h4 id="v14-deprecated"><span class="badge badge-default">v1.4</span> <sup>(Deprecated)</sup></h4>
+<h4 id="v14-deprecated"><span class="badge badge-default">v1.4</span> <sup>Deprecated</sup></h4>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Soical Buttons</span>
 <span class="na">facebook_id</span><span class="pi">:</span> <span class="s">your_facebook_username</span>
@@ -647,46 +651,46 @@ The following options provide the granular control to those menu items:</p>
 
 <hr />
 
-<h3 id="footer-options-v20">Footer Options <span class="badge badge-success">v2.0</span></h3>
+<h3 id="footer-options">Footer Options</h3>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Property</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">copyright</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">copyright</code></td>
       <td> </td>
       <td>Your custom setting of copyright notice:</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">prepend</code></td>
-      <td><span class="badge badge-success">v2.0</span> The text prepend to the year.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">Copyright © </code>.</td>
+      <td><span class="badge badge-success">v2.0</span><br /> The text prepend to the year.<br /> <em>Default:</em> <code class="language-plaintext blue highlighter-rouge">Copyright © </code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">owner</code></td>
       <td>The name of the copyright holder.<br /> <em>Default:</em> <em><code class="language-plaintext highlighter-rouge">site.name</code></em>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">link</code></td>
-      <td>The URL to go when clicking on the copyright notice.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">/</code>.</td>
+      <td>The URL to go when clicking on the copyright notice.<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">/</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">append</code></td>
-      <td><span class="badge badge-success">v2.0</span> The text at the end of the copyright notice.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">. All rights reserved.</code>.</td>
+      <td><span class="badge badge-success">v2.0</span><br /> The text at the end of the copyright notice.<br /> <em>Default:</em> <code class="language-plaintext blue highlighter-rouge">. All rights reserved.</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">privacy_policy</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">privacy_policy</code></td>
       <td><code class="language-plaintext highlighter-rouge">url</code></td>
-      <td><span class="badge badge-success">v2.8.1</span> The URL to go when clicking on the privacy policy link.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">/privacy-policy</code>.</td>
+      <td><span class="badge badge-success">v2.8.1</span><br /> The URL to go when clicking on the privacy policy link.<br /> <em>Default:</em> <code class="language-plaintext blue highlighter-rouge">/privacy-policy</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -728,23 +732,50 @@ The following options provide the granular control to those menu items:</p>
 
 <hr />
 
-<h3 id="cookie-consent-options-v29">Cookie Consent Options <span class="badge badge-success">v2.9</span></h3>
+<h3 id="cookie-consent-v29">Cookie Consent <span class="badge badge-success">v2.9</span></h3>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">consent</code></td>
-      <td>Set <code class="language-plaintext plaintext highlighter-rouge">true</code> to enable the cookie consent UI.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">false</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">consent</code></td>
+      <td>Set <code class="language-plaintext green highlighter-rouge">true</code> to enable the cookie consent UI.<br /> <em>Default:</em> <code class="language-plaintext highlighter-rouge">false</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">consent_dev_mode</code></td>
-      <td>Set <code class="language-plaintext plaintext highlighter-rouge">false</code> to remove the <code class="language-plaintext plaintext highlighter-rouge">data-ampdevmode</code> attribute from the custom script for production builds. <br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">consent_dev_mode</code></td>
+      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to remove the <code class="language-plaintext highlighter-rouge">data-ampdevmode</code> attribute from the custom script.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Attribute</th>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">amp_optimizer</code></td>
+      <td> </td>
+      <td><span class="badge badge-success">v2.9.1</span><br /> Set <code class="language-plaintext green highlighter-rouge">true</code> if you run AMP Optimizer after building the Jekyll site.<br /> <em>Default</em>: <code class="language-plaintext highlighter-rouge">false</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">script_hash</code></td>
+      <td> </td>
+      <td><span class="badge badge-success">v2.9.1</span></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"> </td>
+      <td><code class="language-plaintext highlighter-rouge">consent_gsc</code></td>
+      <td>The hash for the <code class="language-plaintext highlighter-rouge">get_stored_consentStates</code> script.<br /> 💡 <a href="https://amp.dev/documentation/components/amp-script#calculating-the-script-hash" title="Documentation: &lt;amp-script&gt; - amp.dev">Calculating the script hash</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -758,25 +789,25 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th>Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">author</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">author</code></td>
       <td>Global author informaiton</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">description</code></td>
       <td>A longer description used for the description meta tag</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">locate</code></td>
-      <td>The locale these tags are marked up in. Default is <code class="language-plaintext plaintext highlighter-rouge">en_US</code>. Takes priority over existing config key lang</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">locate</code></td>
+      <td>The locale these tags are marked up in. Default is <code class="language-plaintext highlighter-rouge">en_US</code>. Takes priority over existing config key lang</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">tagline</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">tagline</code></td>
       <td>A short description used as part of the title tag</td>
     </tr>
   </tbody>
@@ -786,7 +817,8 @@ The following options provide the granular control to those menu items:</p>
 
 <p><strong>Note</strong>: Regarding to <code class="language-plaintext highlighter-rouge">author</code> and <code class="language-plaintext highlighter-rouge">description</code>, please alse read the documentation of <a href="https://github.com/jekyll/jekyll-feed" title="GitHub">Jekyll Feed</a> and <a href="https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md" title="GitHub">Jekyll SEO Tag</a>.</p>
 
-<p>Moreover, it is a good idea to set a default image using <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">Front Matter defaults</a>, provide a default <a href="https://developers.facebook.com/docs/sharing/webmasters/">Open Graph</a> image (<code class="language-plaintext highlighter-rouge">og:image</code>) and <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image">Twitter Card</a> image (<code class="language-plaintext highlighter-rouge">twitter:image</code>) to all of your posts and pages.</p>
+<p>Moreover, it is a good idea to set a default image using <a href="https://jekyllrb.com/docs/configuration/front-matter-defaults/">Front Matter defaults</a>,
+provide a default <a href="https://developers.facebook.com/docs/sharing/webmasters/">Open Graph</a> image (<code class="language-plaintext highlighter-rouge">og:image</code>) and <a href="https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image">Twitter Card</a> image (<code class="language-plaintext highlighter-rouge">twitter:image</code>) to all of your posts and pages.</p>
 
 <p>Here is a basic example from <a href="https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information">Jekyll SEO Tag’s Advanced usage</a>:</p>
 
@@ -808,25 +840,24 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">google_analytics</code></td>
-      <td>Your (<code class="language-plaintext plaintext highlighter-rouge">UA-</code>) Tracking ID 💡 <a href="https://support.google.com/analytics/answer/1008080#trackingID" title="Set up the Analytics global site tag - Analytics Help">Find your Google Analytics ID</a></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">google_analytics</code></td>
+      <td><span class="badge badge-default">Deprecated</span><br /> Your (<code class="language-plaintext highlighter-rouge">UA-</code>) Tracking ID. 💡 <a href="https://support.google.com/analytics/answer/1008080#trackingID" title="Set up the Analytics global site tag - Analytics Help">Find your Google Analytics ID</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">ga4</code></td>
+      <td><span class="badge badge-success">v2.6.1</span><br /> Your (<code class="language-plaintext highlighter-rouge">G-</code> ) Measurement ID 💡. <a href="https://support.google.com/analytics/answer/12270356" title="\[GA4\] Measurement ID - Analytics Help">Find your GA4 Measurement ID</a></td>
     </tr>
   </tbody>
 </table>
 
 <ul>
-  <li>
-    <p><strong>Note:</strong> Google Analytics 4 (GA4) is not yet supported in AMP.</p>
-  </li>
-  <li>
-    <p>When <code class="language-plaintext highlighter-rouge">google_analytics</code> is configured, an attribute called <code class="language-plaintext plaintext highlighter-rouge">data-vars-event-label</code> will be added to every <code class="language-plaintext plaintext highlighter-rouge">&lt;a&gt;</code> tag that links to an external URL by the post-processing of posts’ content.</p>
-  </li>
+  <li>When <code class="language-plaintext highlighter-rouge">google_analytics</code> is configured, an attribute called <code class="language-plaintext highlighter-rouge">data-vars-event-label</code> will be added to every <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> tag that links to an external URL by the post-processing of posts’ content.</li>
 </ul>
 
 <h5 id="-google-custom-search-engine-cse"><i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)</h5>
@@ -834,14 +865,14 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">cse_id</code></td>
-      <td>Your Search Engine ID 💡 <a href="https://support.google.com/programmable-search/answer/12499034?hl=en" title="Search engine ID - Programmable Search Engine Help">Find your Google CSE ID</a></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">cse_id</code></td>
+      <td>Your Search Engine ID 💡 <a href="https://support.google.com/programmable-search/answer/12499034" title="Search engine ID - Programmable Search Engine Help">Find your Google CSE ID</a></td>
     </tr>
   </tbody>
 </table>
@@ -855,36 +886,36 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Property</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">adsense</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">adsense</code></td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">client_id</code></td>
-      <td>Your Google Adsense client ID, which starts with <code class="language-plaintext plaintext highlighter-rouge">ca-pub-</code></td>
+      <td>Your Google Adsense client ID, which starts with <code class="language-plaintext highlighter-rouge">ca-pub-</code></td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">auto_ads</code></td>
-      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to disable <a href="https://support.google.com/adsense/answer/9261805">Auto ads</a> in Adsense<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to disable <a href="https://support.google.com/adsense/answer/9261805">Auto ads</a> in Adsense<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
       <td><code class="language-plaintext highlighter-rouge">ad_slot</code></td>
-      <td><code class="language-plaintext highlighter-rouge">before_content</code> - Slot ID of ad unit that places before content<br /><code class="language-plaintext highlighter-rouge">sidebar</code> - Slot ID of ad unit that places to sidebar</td>
+      <td><code class="language-plaintext highlighter-rouge">before_content</code> - Slot ID of ad unit that places before content<br /> <code class="language-plaintext highlighter-rouge">sidebar</code> - Slot ID of ad unit that places to sidebar</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">adstyle</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">adstyle</code></td>
       <td> </td>
-      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to not apply custom styles to indicate empty Ad containers.<br /><em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td>Set <code class="language-plaintext highlighter-rouge">false</code> to not apply custom styles to indicate empty Ad containers.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
   </tbody>
 </table>
@@ -896,13 +927,13 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">gtm</code></td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">gtm</code></td>
       <td>Your GTM AMP container ID</td>
     </tr>
   </tbody>
@@ -912,7 +943,7 @@ The following options provide the granular control to those menu items:</p>
 
 <h4 id="-github"><i class="fab fa-github fa-fw"></i> GitHub</h4>
 
-<h4 id="-show-github-metadata-widget-in-sidebar-v20"><i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-success">v2.0</span></h4>
+<h4 id="-show-github-metadata-widget-in-sidebar-v12"><i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-success">v1.2</span></h4>
 
 <p>This theme supports rendering GitHub Metadata by using the <a href="https://github.com/jekyll/github-metadata">jekyll-github-metadata</a> plugin. When you associate it with a GitHUb project repo, a sidebar widget named <strong>RESOURCES</strong> with a button link to the GitHub repository will be shown on the page.</p>
 
@@ -921,18 +952,18 @@ The following options provide the granular control to those menu items:</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Attribute</th>
+      <th style="text-align: right">Attribute</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">Repository</code></td>
-      <td><span class="badge badge-success">v1.2</span> Declare The Repository Name in the <code class="language-plaintext plaintext highlighter-rouge">&lt;Username&gt;/&lt;Project&gt;</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">Repository</code></td>
+      <td><span class="badge badge-success">v1.2</span><br /> Declare The Repository Name in the <code class="language-plaintext highlighter-rouge">&lt;Username&gt;/&lt;Project&gt;</code>.</td>
     </tr>
     <tr>
-      <td style="text-align: center"><code class="language-plaintext highlighter-rouge">resources_widget</code></td>
-      <td><span class="badge badge-success">v2.0</span> Enable side-widely display <strong>Resourece</strong> widget in sidebar.<br /> <em>Default:</em> <code class="language-plaintext plaintext highlighter-rouge">true</code>.</td>
+      <td style="text-align: right"><code class="language-plaintext highlighter-rouge">resources_widget</code></td>
+      <td><span class="badge badge-success">v2.0</span><br /> Enable side-widely display <strong>Resourece</strong> widget in sidebar.<br /> <em>Default:</em> <code class="language-plaintext green highlighter-rouge">true</code>.</td>
     </tr>
   </tbody>
 </table>]]></content><author><name></name></author><category term="[&quot;doc&quot;]" /><category term="_config" /><summary type="html"><![CDATA[The docs for the theme settings that let you control the global styling like logo, navigation, sidebar, footer, pagnitation, etc.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/settings-3311592.svg" /><media:content medium="image" url="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/settings-3311592.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Post-Processing</title><link href="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/post-processing/" rel="alternate" type="text/html" title="Post-Processing" /><published>2021-08-15T23:15:00+08:00</published><updated>2021-08-22T09:41:00+08:00</updated><id>https://chriskyfung.github.io/amp-affiliately-jekyll-theme/postprocessing</id><content type="html" xml:base="https://chriskyfung.github.io/amp-affiliately-jekyll-theme/post-processing/"><![CDATA[<h2 id="add-anchor-link-for-h2-h3-and-h4-headings">Add Anchor Link For H2, H3 And H4 Headings</h2>
