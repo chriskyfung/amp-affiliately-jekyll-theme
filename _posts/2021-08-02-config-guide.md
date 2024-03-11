@@ -287,12 +287,20 @@ copyright:
 
 * * *
 
-### Cookie Consent Options <span class="badge badge-success">v2.9</span>
+### Cookie Consent <span>v2.9</span>{:.badge.badge-success}
 
-|     Attribute      | Description                                                                                                                                                        |
-| :----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|     `consent`      | Set `true`{:.plaintext} to enable the cookie consent UI.<br> _Default:_ `false`{:.plaintext}.                                                                      |
-| `consent_dev_mode` | Set `false`{:.plaintext} to remove the `data-ampdevmode`{:.plaintext} attribute from the custom script for production builds. <br> _Default:_ `true`{:.plaintext}. |
+|          Attribute | Description                                                                                                   |
+| -----------------: | ------------------------------------------------------------------------------------------------------------- |
+|          `consent` | Set `true`{:.green} to enable the cookie consent UI.<br> _Default:_ `false`.                                  |
+| `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}. |
+
+|       Attribute | Property      | Description                                                                                                                                         |
+| --------------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `amp_optimizer` |               | <span>v2.9.1</span>{:.badge.badge-success}<br> Set `true`{:.green} if you run AMP Optimizer after building the Jekyll site.<br> _Default_: `false`. |
+|   `script_hash` |               | <span>v2.9.1</span>{:.badge.badge-success}                                                                                                          |
+|                 | `consent_gsc` | The hash for the `get_stored_consentStates` script.<br> 💡 [Calculating the script hash].                                                             |
+
+[Calculating the script hash]: https://amp.dev/documentation/components/amp-script#calculating-the-script-hash "Documentation: <amp-script> - amp.dev"
 
 * * *
 

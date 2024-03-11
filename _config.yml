@@ -92,6 +92,9 @@ copyright:
 # Cookie Consent Notice
 consent: true
 consent_dev_mode: false
+amp_optimizer: true
+script_hash:
+  consent_gsc: sha384-n2-YMnb2FkeDk-Ca2pVnoYSR2FqNKqKgTwfK_UI0EAeVRCAHgCDjsecHJpVMv3Sl
 
 # Plugins
 plugins: 
