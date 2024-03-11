@@ -1,5 +1,31 @@
 # AMP Affiliately Jekyll Theme Changelog
 
+## v2.9.1 (2024-03-12)
+
+### 🐛 Fixes
+
+- Removed the `data-ampdevmode` attribute from the `<amp-script>` component in non-development environments. This attribute was previously used to enable development-specific features, such as the ability to load scripts from a local server. However, it was found to cause unintended behavior in production environments, such as preventing scripts from running or causing validation errors. By removing this attribute in non-development environments, we ensure that AMP pages are always served with the correct configuration and that scripts are executed as intended.
+
+### ✨ Features
+
+- Introduced two new options to the site configuration:
+  - `amp_optimizer`: Set to true if you run AMP Optimizer after building the Jekyll site. Defaults to false.
+  - `script_hash`: A hash for the `get_stored_consentStates` script. Defaults to empty.
+
+### 📝 Documentation
+
+- Corrected a typo in the `.github-sponsors-button` CSS class, resolving an error.
+- Updated badges that were labeled with incorrect version numbers.
+- Migrated `<span class="badge ..."">` elements to use the kramdown attribute syntax: `<span>...</span>{:.badge...}`.
+- Utilized reference links for inline markdown links in cases where lines become excessively long.
+- Inserted a line break after each badge using `<br>` tags.
+- Added `<br>` tags to create line breaks before default values.
+- Enhanced table styling by applying vertical-align: top to `th` and `td` elements.
+- Introduced two new CSS classes, `.blue` and `.green`, to provide additional styling options.
+- Appended `.green` to inline code blocks containing the text "true".
+- Appended `.blue` to inline code blocks containing non-boolean default values.
+- Removed the `.plaintext` CSS class to streamline the styling.
+
 ## v2.9.0 (2024-03-08)
 
 ### ✨ Features
