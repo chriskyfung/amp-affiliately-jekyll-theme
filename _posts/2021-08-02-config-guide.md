@@ -14,10 +14,11 @@ css:
   custom: >-
     table { font-size: .95rem; margin-bottom: 1.5rem; }
     tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; }
+    th, td { padding: .5em; vertical-align: top; }
     .box { border: 1px solid #e3edf3; padding: 1rem; }
-    .plaintext { color: mediumseagreen; }
-    .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width:114px; height=32px; }
+    .blue { color: #2266ff; }
+    .green { color: mediumseagreen; }
+    .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
 excerpt: The docs for the theme settings that let you control the global styling like logo, navigation, sidebar, footer, pagnitation, etc.
 featured: true
 ---
@@ -58,12 +59,16 @@ You may also optionally specify a branch, tag, or commit to using by appending a
 
 ## <i class="fas fa-cogs fa-fw"></i> Global Configuration
 
-| Attribute       | Description                                                                                                                                                       |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `permalink`     | `/:year/:month/:day/:title`                                                                                                                                       |
-| `timezone`      | Any entry from the [IANA Time Zone Database][wiki-tz-database] is valid, e.g. America/New_York. A list of all available values can be found [here][wiki-tz-list]. |
-| `paginate`      | (_Optional_) The maximum number of posts you’d like to be displayed per-page in the generated site, e.g. `10`.                                                    |
-| `paginate_path` | (_Optional_) The destination of the pagination pages.                                                                                                             |
+|       Attribute | Description                                                                                                                                     |
+| --------------: | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+|     `permalink` | `/:year/:month/:day/:title`                                                                                                                     |
+|      `timezone` | Any entry from the [IANA Time Zone Database] is valid, e.g. America/New_York. A list of all available values can be found [here][wiki-tz-list]. |
+|      `paginate` | (_Optional_) The maximum number of posts you’d like to be displayed per-page in the generated site, e.g. `10`.                                  |
+| `paginate_path` | (_Optional_) The destination of the [pagination] pages.                                                                                         |
+
+[IANA Time Zone Database]: https://en.wikipedia.org/wiki/Tz_database "Wikipedia"
+[wiki-tz-list]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones "Wikipedia"
+[pagination]: https://jekyllrb.com/docs/pagination/ "Official Jekyll Documentation"
 
 **💡 Learn More:**
 
@@ -77,16 +82,20 @@ You may also optionally specify a branch, tag, or commit to using by appending a
 
 You should include the following in the `_config.yml` file to set up the theme.
 
-| Attribute | Description                                                                                                                                                                                                                         |
-| --------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `title` | Your site's title. Also, used as the text of the first menu item if _`repostory`_ is configured in the `_config.yml`                                  |
-|     `url` | The web address of your site including the protocol, subdomain, and domain name, e.g. `https://yourdomain.com`{:.plaintext} or `https://www.yourdomain.com`{:.plaintext}                                                            |
-| `baseurl` | The first route parameter after your domain name in the URL, e.g. `''` if the site is deployed to `www.yourdomain.com`{:.plaintext} and `/repo-1`{:.plaintext} if the root is `www.yourdomain.com/repo-1/`{:.plaintext}.            |
-| `favicon` | The path to the [favicon](https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website) file                                                                                                     |
-|    `logo` | The path to the (JPG/PNG/SVG) image that will be displayed on the navigation bar. The URL will also be included to JSON-LD structured data by [Jekyll SEO Tag][jekyll-seo-tag-usage]. |
-|    `name` | Your site's name used as the alt text of your logo image. Also, displayed in the copyright notice, if _`copyright.owner`_ is not configured in the `_config.yml`.                                                                   |
+| Attribute | Description                                                                                                                                                                       |
+| --------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   `title` | Your site's title. Also, used as the text of the first menu item if _`repostory`_ is configured in the `_config.yml`                                                              |
+|     `url` | The web address of your site including the protocol, subdomain, and domain name, e.g. `https://yourdomain.com` or `https://www.yourdomain.com`                                    |
+| `baseurl` | The first route parameter after your domain name in the URL, e.g. `''` if the site is deployed to `www.yourdomain.com` and `/repo-1` if the root is `www.yourdomain.com/repo-1/`. |
+| `favicon` | The path to the [favicon](https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website) file                                                   |
+|    `logo` | The path to the (JPG/PNG/SVG) image that will be displayed on the navigation bar. The URL will also be included to JSON-LD structured data by [Jekyll SEO Tag].                   |
+|    `name` | Your site's name used as the alt text of your logo image. Also, displayed in the copyright notice, if _`copyright.owner`_ is not configured in the `_config.yml`.                 |
 
-**Note**: Regarding to `title` and `url`, please alse read the documentation of [Jekyll Feed][jekyll-feed] and [Jekyll SEO Tag][jekyll-seo-tag-usage].
+**Note**: Regarding to `title` and `url`, please alse read the documentation of [Jekyll Feed] and [Jekyll SEO Tag].
+
+[Jekyll Feed]: https://github.com/jekyll/jekyll-feed "GitHub"
+[Jekyll SEO Tag]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
+[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
 
 * * *
 
@@ -107,14 +116,14 @@ nav:
       ...
 ```
 
-#### Settings for Menu Buttons <span class="badge badge-success">v2.7</span>
+#### Settings for Menu Buttons <span>v2.7</span>{:.badge.badge-success}
 
 Use the following option to configure the menu buttons.
 
-| Attribute | Property      | Description                                                                                                                                                                                         |
-| :-------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `buttons` |               |                                                                                                                                                                                                     |
-|           | `gh_sponsors` | <span class="badge badge-success">v2.7</span> Set `true` to show **GitHub Sponsors** button in the navigation bar, if `social.github` is also configured in in the `_config.yml`.<br>_Default:_ `false`{:.plaintext}. |
+| Attribute | Property      | Description                                                                                                                                                                                              |
+| --------: | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buttons` |               |                                                                                                                                                                                                          |
+|           | `gh_sponsors` | <span>v2.7</span>{:.badge.badge-success}<br> Set `true` to show **GitHub Sponsors** button in the navigation bar, if `social.github` is also configured in in the `_config.yml`.<br> _Default:_ `false`. |
 
 **Example:**
 
@@ -132,68 +141,71 @@ Use the following option to configure the menu buttons.
 GitHub Pages allows you to deploy your multiple project pages under the same domain with different base URLs. In case, you may want to a menu item for back to the domain-level homepage and/or some principal menu items sharing across the sites for consistency.
 The following options provide the granular control to those menu items:
 
-| Attribute | Property   | Description                                                                                                                                                                          |
-| :-------: | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `global`  |            |                                                                                                                                                                                      |
-|           | `home`     | <span class="badge badge-success">v2.0</span> Set `false` to disable rendering **HOME** menu item in the navigation menu.<br>_Default:_ `true`{:.plaintext}.                         |
-|           | `menu`     | <span class="badge badge-success">v2.0</span> Set `true`{:.plaintext} to include menu items from `global-menu.html` for your entire site/domain.<br>_Default:_ `false`{:.plaintext}. |
-|           | `dropdown` | <span class="badge badge-success">v1.7.2</span> Set `false` to exclude global dropdown menus from the global menu.<br>_Default:_ `true`{:.plaintext}.                                |
+| Attribute | Property   | Description                                                                                                                                                         |
+| --------: | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  `global` |            |                                                                                                                                                                     |
+|           | `home`     | <span>v2.0</span>{:.badge.badge-success}<br> Set `false` to disable rendering **HOME** menu item in the navigation menu.<br> _Default:_ `true`{:.green}.            |
+|           | `menu`     | <span>v2.0</span>{:.badge.badge-success}<br> Set `true`{:.green} to include menu items from `global-menu.html` for your entire site/domain.<br> _Default:_ `false`. |
+|           | `dropdown` | <span>v1.7.2</span>{:.badge.badge-success}<br> Set `false` to exclude global dropdown menus from the global menu.<br> _Default:_ `true`{:.green}.                   |
 
 When `home` is not set to `false`, the following extra settings will be available and become effective:
 
-| Property | Key        | Description                                                                                                                             |
-| :------: | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-|  `home`  |            | <span class="badge badge-success">v2.0</span>                                                                                           |
-|          | `location` | The location of **HOME** button in the navigation menu.<br>_Options:_ `menu-start` or `menu-end`. _Default:_ `menu-start`{:.plaintext}. |
-|          | `text`     | The text to display on the home menu item _Default:_ `Home`{:.plaintext}.                                                               |
+| Attribute | Property | Key        | Description                                                                                                                             |
+| --------: | :------: | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+|  `global` |  `home`  |            | <span>v2.0</span>{:.badge.badge-success}                                                                                                |
+|           |          | `location` | The location of **HOME** button in the navigation menu.<br> _Options:_ `menu-start` or `menu-end`.<br> _Default:_ `menu-start`{:.blue}. |
+|           |          | `text`     | The text to display on the home menu item.<br> _Default:_ `Home`{:.blue}.                                                               |
 
 #### Settings for Local Menu Items
 
 Use the following options to configure the menu items that will be shown on the webpages under the same base URL.
 
-| Attribute | Property           | Description                                                                                                                                                  |
-| :-------: | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|  `local`  |                    |                                                                                                                                                              |
-|           | `max_title_length` | <span class="badge badge-success">v2.0</span> The maximun number of characters to display _`site.title`_ in the navigation bar._Default_: `40`{:.plaintext}. |
-|           | `items`            | <span class="badge badge-success">v1.7.2</span> An array of simple menu items that consists of the `name` and `url` key-value pairs.                         |
-|           | `menu`             | <span class="badge badge-success">v1.7.2</span> Set `true`{:.plaintext} to include menu items from `local-menu.html`.<br>_Default:_ `false`{:.plaintext}.    |
+| Attribute | Property           | Description                                                                                                                                                 |
+| --------: | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   `local` |                    |                                                                                                                                                             |
+|           | `max_title_length` | <span>v2.0</span>{:.badge.badge-success}<br> The maximun number of characters to display _`site.title`_ in the navigation bar.<br> _Default_: `40`{:.blue}. |
+|           | `items`            | <span>v1.7.2</span>{:.badge.badge-success}<br> An array of simple menu items that consists of the `name` and `url` key-value pairs.                         |
+|           | `menu`             | <span>v1.7.2</span>{:.badge.badge-success}<br> Set `true`{:.green} to include menu items from `local-menu.html`.<br> _Default:_ `false`.                    |
 
 * * *
 
-### List Sorting Options <span class="badge badge-success">v2.3</span>
+### List Sorting Options <span>v2.3</span>{:.badge.badge-success}
 
-|     Attribute     | Description                                                                                                     |
-| :---------------: | --------------------------------------------------------------------------------------------------------------- |
-| `sort_categories` | Set `false`{:.plaintext} to disable sorting the items of post's categories.<br> _Default:_ `true`{:.plaintext}. |
-|    `sort_tags`    | Set `false`{:.plaintext} to disable sorting the items of post's tags.<br> _Default:_ `true`{:.plaintext}.       |
+|         Attribute | Description                                                                                    |
+| ----------------: | ---------------------------------------------------------------------------------------------- |
+| `sort_categories` | Set `false` to disable sorting the items of post's categories.<br> _Default:_ `true`{:.green}. |
+|       `sort_tags` | Set `false` to disable sorting the items of post's tags.<br> _Default:_ `true`{:.green}.       |
 
 * * *
 
-### Post-Processing Options <span class="badge badge-success">v2.0</span>
+### Post-Processing Options <span>v2.0</span>{:.badge.badge-success}
 
 #### <i class="fas fa-link fa-fw"></i> Add Anchor Link For H2, H3 And H4 Headings
 
-|    Attribute    | Description                                                                                                                                                                                                                                                                                  |
-| :-----------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `anchor_link` | Set `true`{:.plaintext} to attach an anchor link to H2-H4 elements inside posts' content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/) ([View Demo]({% post_url 2021-08-15-postprocessing %}#add-anchor-link-for-h2-h3-and-h4-headings)).<br> _Default:_ `false`{:.plaintext}. |
+|     Attribute | Description                                                                                                                                       |
+| ------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `anchor_link` | Set `true`{:.green} to attach an anchor link to H2-H4 elements inside posts' content similar to [AnchorJS] ([View Demo]).<br> _Default:_ `false`. |
+
+[AnchorJS]: https://www.bryanbraun.com/anchorjs/
+[View Demo]: {% post_url 2021-08-15-postprocessing %}#add-anchor-link-for-h2-h3-and-h4-headings
 
 #### <i class="fas fa-door-open fa-fw"></i> Modify External Links To Open In New Tab
 
-|    Attribute     | Description                                                                                                                                                                                                                                                                         |
-| :------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target_blank` | Set `true`{:.plaintext} to insert `rel="noopener noreferrer"`{:.plaintext} and `target="_blank"`{:.plaintext} to each `<a>`{:.plaintext} element that links to an outbound URL <i class="fas fa-external-link-alt"></i> inside posts' content.<br> _Default:_ `false`{:.plaintext}. |
+|      Attribute | Description                                                                                                                                                                                                                 |
+| -------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target_blank` | Set `true`{:.green} to insert `rel="noopener noreferrer"` and `target="_blank"` to each `<a>` element that links to an outbound URL <i class="fas fa-external-link-alt"></i> inside posts' content.<br> _Default:_ `false`. |
 
 * * *
 
 ### Sidebar Options
 
-#### <i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span class="badge badge-success">v1.2</span>
+#### <i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span>v1.6</span>{:.badge.badge-success}
 
-| Attribute | Property       | Description                                                                                          |
-| :-------: | -------------- | ---------------------------------------------------------------------------------------------------- |
-| `sidebar` |                | <span class="badge badge-success">v1.2</span> Enable/disable built-in the following sidebar widgets: |
-|           | `featured`     | Add **FEATURED** widget to sidebar.<br> _Default:_ `true`{:.plaintext}.                              |
-|           | `recent_posts` | Add **RECENT POSTS** widget to sidebar.<br> _Default:_ `true`{:.plaintext}.                          |
+| Attribute | Property       | Description                                                             |
+| --------: | -------------- | ----------------------------------------------------------------------- |
+| `sidebar` |                |                                                                         |
+|           | `featured`     | Add **FEATURED** widget to sidebar.<br> _Default:_ `true`{:.green}.     |
+|           | `recent_posts` | Add **RECENT POSTS** widget to sidebar.<br> _Default:_ `true`{:.green}. |
 
 - Set `false` to disable the widgets as you need
 
@@ -203,7 +215,7 @@ Use the following options to configure the menu items that will be shown on the 
 
 You can configure the links for social buttons by the following attributes.
 
-#### <span class="badge badge-default">v1.4</span> <sup>(Deprecated)</sup>
+#### <span>v1.4</span>{:.badge.badge-default} <sup>Deprecated</sup>
 
 ```yaml
 # Soical Buttons
@@ -213,7 +225,7 @@ github_id : your_github_username
 medium_id: your_medium_username
 ```
 
-#### <span class="badge badge-success">v2.7</span>
+#### <span>v2.7</span>{:.badge.badge-success}
 
 The social button will only show if the corresponding attribute is configured.
 
@@ -230,16 +242,16 @@ social:
 
 * * *
 
-### Footer Options <span class="badge badge-success">v2.0</span>
+### Footer Options
 
-|    Attribute     | Property  | Description                                                                                                                                            |
-| :--------------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|   `copyright`    |           | Your custom setting of copyright notice:                                                                                                               |
-|                  | `prepend` | <span class="badge badge-success">v2.0</span> The text prepend to the year.<br> _Default:_ `Copyright © `{:.plaintext}.                                |
-|                  | `owner`   | The name of the copyright holder.<br> _Default:_ _`site.name`_.                                                                                        |
-|                  | `link`    | The URL to go when clicking on the copyright notice.<br> _Default:_ `/`{:.plaintext}.                                                                  |
-|                  | `append`  | <span class="badge badge-success">v2.0</span> The text at the end of the copyright notice.<br> _Default:_ `. All rights reserved.`{:.plaintext}.       |
-| `privacy_policy` | `url`     | <span class="badge badge-success">v2.8.1</span> The URL to go when clicking on the privacy policy link.<br> _Default:_ `/privacy-policy`{:.plaintext}. |
+|        Attribute | Property  | Description                                                                                                                                      |
+| ---------------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+|      `copyright` |           | Your custom setting of copyright notice:                                                                                                         |
+|                  | `prepend` | <span>v2.0</span>{:.badge.badge-success}<br> The text prepend to the year.<br> _Default:_ `Copyright © `{:.blue}.                                |
+|                  | `owner`   | The name of the copyright holder.<br> _Default:_ _`site.name`_.                                                                                  |
+|                  | `link`    | The URL to go when clicking on the copyright notice.<br> _Default:_ `/`.                                                                         |
+|                  | `append`  | <span>v2.0</span>{:.badge.badge-success}<br> The text at the end of the copyright notice.<br> _Default:_ `. All rights reserved.`{:.blue}.       |
+| `privacy_policy` | `url`     | <span>v2.8.1</span>{:.badge.badge-success}<br> The URL to go when clicking on the privacy policy link.<br> _Default:_ `/privacy-policy`{:.blue}. |
 
 **Default format:**
 
@@ -288,18 +300,23 @@ copyright:
 
 **AMP Affiliately Theme** uses [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) to output machine-readable metadata for search engines and social networks to index and display. The following is recommended to configure in the `_config.yml` file:
 
-| Attribute     | Description                                                                                                           |
-| ------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `author`      | Global author informaiton                                                                                             |
-| `description` | A longer description used for the description meta tag                                                                |
-| `locate`      | The locale these tags are marked up in. Default is `en_US`{:.plaintext}. Takes priority over existing config key lang |
-| `tagline`     | A short description used as part of the title tag                                                                     |
+|     Attribute | Description                                                                                              |
+| ------------: | -------------------------------------------------------------------------------------------------------- |
+|      `author` | Global author informaiton                                                                                |
+| `description` | A longer description used for the description meta tag                                                   |
+|      `locate` | The locale these tags are marked up in. Default is `en_US`. Takes priority over existing config key lang |
+|     `tagline` | A short description used as part of the title tag                                                        |
 
 💡 Learn more about the usage of the SEO tag plugin from [here][jekyll-seo-tag-usage].
 
-**Note**: Regarding to `author` and `description`, please alse read the documentation of [Jekyll Feed][jekyll-feed] and [Jekyll SEO Tag][jekyll-seo-tag-usage].
+**Note**: Regarding to `author` and `description`, please alse read the documentation of [Jekyll Feed] and [Jekyll SEO Tag].
 
-Moreover, it is a good idea to set a default image using [Front Matter defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/), provide a default [Open Graph](https://developers.facebook.com/docs/sharing/webmasters/) image (`og:image`) and [Twitter Card](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image) image (`twitter:image`) to all of your posts and pages.
+Moreover, it is a good idea to set a default image using [Front Matter defaults],
+provide a default [Open Graph] image (`og:image`) and [Twitter Card] image (`twitter:image`) to all of your posts and pages.
+
+[Front Matter defaults]: https://jekyllrb.com/docs/configuration/front-matter-defaults/
+[Open Graph]: https://developers.facebook.com/docs/sharing/webmasters/
+[Twitter Card]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image
 
 Here is a basic example from [Jekyll SEO Tag's Advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information):
 
@@ -319,61 +336,59 @@ defaults:
 
 ##### <i class="far fa-chart-bar fa-fw"></i> Google Analytics
 
-|     Attribute      | Description                                                                                                                                                                                    |
-| :----------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `google_analytics` | Your (`UA-`{:.plaintext}) Tracking ID 💡 [Find your Google Analytics ID](https://support.google.com/analytics/answer/1008080#trackingID "Set up the Analytics global site tag - Analytics Help") |
+|          Attribute | Description                                                                                                             |
+| -----------------: | ----------------------------------------------------------------------------------------------------------------------- |
+| `google_analytics` | <span>Deprecated</span>{:.badge.badge-default}<br> Your (`UA-`) Tracking ID. 💡 [Find your Google Analytics ID]           |
+|              `ga4` | <span>v2.6.1</span>{:.badge.badge-success}<br> Your (`G-`{:plaintext} ) Measurement ID 💡. [Find your GA4 Measurement ID] |
 
-- **Note:** Google Analytics 4 (GA4) is not yet supported in AMP.
+[Find your Google Analytics ID]: https://support.google.com/analytics/answer/1008080#trackingID "Set up the Analytics global site tag - Analytics Help"
+[Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "\[GA4\] Measurement ID - Analytics Help"
 
-- When `google_analytics` is configured, an attribute called `data-vars-event-label`{:.plaintext} will be added to every `<a>`{:.plaintext} tag that links to an external URL by the post-processing of posts' content.
+- When `google_analytics` is configured, an attribute called `data-vars-event-label` will be added to every `<a>` tag that links to an external URL by the post-processing of posts' content.
 
 ##### <i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)
 
-| Attribute | Description                                                                                                                                                          |
-| :-------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cse_id`  | Your Search Engine ID 💡 [Find your Google CSE ID](https://support.google.com/programmable-search/answer/12499034?hl=en "Search engine ID - Programmable Search Engine Help") |
+| Attribute | Description                                      |
+| -------: | ------------------------------------------------ |
+| `cse_id`  | Your Search Engine ID 💡 [Find your Google CSE ID] |
+
+[Find your Google CSE ID]: https://support.google.com/programmable-search/answer/12499034 "Search engine ID - Programmable Search Engine Help"
 
 - **Note:** Essential to feature the site's search function
 
 ##### <i class="fas fa-ad fa-fw"></i> Google Adsense
 
-| Attribute | Property    | Description                                                                                                                        |
-| :-------: | ----------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `adsense` |             |                                                                                                                                    |
-|           | `client_id` | Your Google Adsense client ID, which starts with `ca-pub-`{:.plaintext}                                                            |
-|           | `auto_ads`  | Set `false` to disable [Auto ads](https://support.google.com/adsense/answer/9261805) in Adsense<br>_Default:_ `true`{:.plaintext}. |
-|           | `ad_slot`   | `before_content` - Slot ID of ad unit that places before content<br>`sidebar` - Slot ID of ad unit that places to sidebar          |
-| `adstyle` |             | Set `false` to not apply custom styles to indicate empty Ad containers.<br>_Default:_ `true`{:.plaintext}.                         |
+| Attribute | Property    | Description                                                                                                                |
+| --------: | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `adsense` |             |                                                                                                                            |
+|           | `client_id` | Your Google Adsense client ID, which starts with `ca-pub-`                                                                 |
+|           | `auto_ads`  | Set `false` to disable [Auto ads] in Adsense<br> _Default:_ `true`{:.green}.                                               |
+|           | `ad_slot`   | `before_content` - Slot ID of ad unit that places before content<br> `sidebar` - Slot ID of ad unit that places to sidebar |
+| `adstyle` |             | Set `false` to not apply custom styles to indicate empty Ad containers.<br> _Default:_ `true`{:.green}.                    |
+
+[Auto ads]: https://support.google.com/adsense/answer/9261805
 
 💡 Read the [Ads Settings]({% post_url 2021-04-02-ads-settings %}) documentation
 
 ##### <i class="fas fa-expand fa-fw" style="transform: rotate(45deg)"></i> Google Tag Manager (GTM)
 
 | Attribute | Description               |
-| :-------: | ------------------------- |
-|   `gtm`   | Your GTM AMP container ID |
+| --------: | ------------------------- |
+|     `gtm` | Your GTM AMP container ID |
 
 * * *
 
 #### <i class="fab fa-github fa-fw"></i> GitHub
 
-#### <i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span class="badge badge-success">v2.0</span>
+#### <i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span>v1.2</span>{:.badge.badge-success}
 
-This theme supports rendering GitHub Metadata by using the [jekyll-github-metadata](https://github.com/jekyll/github-metadata) plugin. When you associate it with a GitHUb project repo, a sidebar widget named **RESOURCES** with a button link to the GitHub repository will be shown on the page.
+This theme supports rendering GitHub Metadata by using the [jekyll-github-metadata] plugin. When you associate it with a GitHUb project repo, a sidebar widget named **RESOURCES** with a button link to the GitHub repository will be shown on the page.
+
+[jekyll-github-metadata]: https://github.com/jekyll/github-metadata
 
 You have to declare the repository name in the `_config.yml` file, like this:
 
-|     Attribute      | Description                                                                                                                                   |
-| :----------------: | --------------------------------------------------------------------------------------------------------------------------------------------- |
-|    `Repository`    | <span class="badge badge-success">v1.2</span> Declare The Repository Name in the `<Username>/<Project>`{:.plaintext}.                         |
-| `resources_widget` | <span class="badge badge-success">v2.0</span> Enable side-widely display **Resourece** widget in sidebar.<Br> _Default:_ `true`{:.plaintext}. |
-
-[jekyll-feed]: https://github.com/jekyll/jekyll-feed "GitHub"
-
-[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
-
-[pagination]: https://jekyllrb.com/docs/pagination/ "Official Jekyll Documentation"
-
-[wiki-tz-database]: https://en.wikipedia.org/wiki/Tz_database "Wikipedia"
-
-[wiki-tz-list]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones "Wikipedia"
+|          Attribute | Description                                                                                                                              |
+| -----------------: | ---------------------------------------------------------------------------------------------------------------------------------------- |
+|       `Repository` | <span>v1.2</span>{:.badge.badge-success}<br> Declare The Repository Name in the `<Username>/<Project>`.                                  |
+| `resources_widget` | <span>v2.0</span>{:.badge.badge-success}<br> Enable side-widely display **Resourece** widget in sidebar.<Br> _Default:_ `true`{:.green}. |
