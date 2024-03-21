@@ -63,7 +63,7 @@
 
     {%- if jekyll.environment == 'production' -%}
       {%- assign adtest_status = '' -%}
-      {%- if site.amp_optimizer != true && site.script_hash.consent_gsc -%}
+      {%- if site.amp_optimizer != true and site.script_hash.consent_gsc -%}
         <meta name="amp-script-src" content="{{ site.script_hash.consent_gsc }}">
       {%- endif -%}
     {%- else -%}
