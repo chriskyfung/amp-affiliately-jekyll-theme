@@ -1,3 +1,4 @@
+{%- if site.addthis.pid and site.addthis.wid -%}
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <amp-addthis width="320" height="55"
   {%- if site.consent == true %}
@@ -8,3 +9,4 @@
   data-widget-type="inline"
   style="margin-left:-10px;">
 </amp-addthis>
+{%- endif -%}
