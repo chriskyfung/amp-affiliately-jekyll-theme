@@ -96,7 +96,7 @@ It is styled with the following CSS code:
 
 ```css
 amp-ad {
-  background-image: url('https://icon-library.com/images/b8d82a619c.png');
+  background-image: url('https://chriskyfung.github.io/amp-affiliately-jekyll-theme/assets/images/b8d82a619c.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 50px
