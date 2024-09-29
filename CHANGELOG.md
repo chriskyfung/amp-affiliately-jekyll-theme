@@ -1,5 +1,46 @@
 # AMP Affiliately Jekyll Theme Changelog
 
+## v3.0.0 (2024-09-29)
+
+### 🐛 Fixes
+
+- Resolved preload request credentials mismatch for 'logo-plainSVG.svg'.
+- Resolved CORS policy error by hosting image on the same domain.
+
+### ♻️ Refactors
+
+- Renamed `gulpfile.js` to `gulpfile.mjs` to support ES module syntax.
+- Added `css_to_scss.sh` script to convert CSS files to SCSS using `sass-convert`.
+- Updated SCSS files for various AMP components using the new `css_to_scss.sh` script.
+
+### 🗑️ Removed/Deprecated
+
+- Uninstalled `trim-newlines` and `gulp-format-md` from dev dependencies.
+- Removed deprecated `gulp-minify-inline` task from `gulpfile.mjs`
+- Removed deprecated `css2scss` task and `@gecka/styleflux` from the gulp pipeline.
+- Removed overrides for `gulp` dependencies: `glob-watcher`, `minimatch`, `semver`, `set-value`, and `vinyl-fs`.
+
+### 💚 CI/CD
+
+- Migrated Jekyll build action from deprecated `helaili/jekyll-action` to a new, maintained workflow.
+- Removed deprecated `deploy-jekyll.yml` workflow file due to `helaili/jekyll-action` deprecation.
+
+### ⬆️ Dependencies
+
+- Bumped `@ampproject/toolbox` from 2.9.0 to 2.10.1.
+- Upgraded `gulp` to version 5.0.0.
+- Upgraded `amphtml-validator` to version 1.0.38.
+- Upgraded `gulp-amphtml-validator` to version 1.0.8.
+- Added `gulp-changed` for improved file change detection.
+- Replaced `gulp-htmlmin` with `gulp-html-minifier-terser` for better HTML minification.
+- Updated `package.json` to include new dependencies and set `type` to `module`.
+
+### 📝 Documentation
+
+- Updated the status badge for CodeQL action.
+- Updated the status badge for Jekyll build workflow.
+- Updated README to document the new Jekyll build workflow. Included details on the new workflow steps and configuration.
+
 ## v2.9.1 (2024-03-12)
 
 ### 🐛 Fixes
