@@ -41,7 +41,7 @@
     "@ampproject/toolbox-optimizer": "^2.9.0",
     "@gecka/styleflux": "^1.2.0-gecka2",
     "amphtml-validator": "^1.0.35",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-amphtml-validator": "^1.0.6",
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
