@@ -1,13 +1,3 @@
-$darkgray_999: #999999;
-$darkgray_b4b4b4: #b4b4b4;
-$gainsboro_ddd: #dddddd;
-$gold_ffe51f: #ffe51f;
-$indianred_bd4147: #bd4147;
-$indianred_f05f70: #f05f70;
-$mediumslateblue_675bff: #675bff;
-$whitesmoke_eee: #eeeeee;
-$whitesmoke_f7f7f9: #f7f7f9;
-
 amp-img[aria-label=lightbox] {
   cursor: zoom-in;
 }
@@ -17,43 +7,29 @@ amp-image-lightbox {
     object-fit: scale-down;
   }
 
-  button {
-    &:last-of-type {
-      cursor: zoom-out;
-      min-height: 100%;
-      min-width: 100%;
-    }
+  button:last-of-type {
+    cursor: zoom-out;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
-amp-image-viewer {
-  img {
-    max-width: fit-content;
-    transition: width .25s linear;
-  }
+amp-image-viewer img {
+  max-width: fit-content;
+  transition: width 0.25s linear;
 }
 
 amp-lightbox {
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1050;
 }
 
-a {
-  &.vglnk {
-    border-bottom: 2px dashed gray;
-    box-shadow: unset;
-  }
+a.vglnk {
+  border-bottom: 2px dashed gray;
+  box-shadow: unset;
 }
 
-figure {
-  &.shadow-none {
-    * {
-      box-shadow: none;
-    }
-  }
-}
-
-.shadow-none {
+figure.shadow-none *, .shadow-none {
   box-shadow: none;
 }
 
@@ -82,10 +58,10 @@ h6 {
 }
 
 kbd {
-  background-color: $whitesmoke_eee;
-  border: 1px solid $darkgray_b4b4b4;
+  background-color: #eee;
   border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
   display: inline-block;
   font-size: .85em;
   line-height: 1;
@@ -94,25 +70,23 @@ kbd {
 }
 
 .article-post {
-  h2 {
-    &:not(:first-of-type) {
-      margin-top: 5rem;
-    }
+  h2:not(:first-of-type) {
+    margin-top: 5rem;
   }
 
   del {
-    color: $darkgray_999;
-    text-decoration-color: $indianred_f05f70;
+    color: #999;
+    text-decoration-color: #f05f70;
 
     a {
-      border-bottom: 1px solid $gainsboro_ddd;
       box-shadow: none;
+      border-bottom: 1px solid #ddd;
       text-decoration: inherit;
     }
   }
 
   .box-highlight {
-    box-shadow: 1px 2px 15px $mediumslateblue_675bff;
+    box-shadow: 1px 2px 15px #675bff;
   }
 
   figcaption {
@@ -120,74 +94,52 @@ kbd {
   }
 
   a {
-    >code {
-      background-color: $whitesmoke_f7f7f9;
-      box-shadow: inset 0 -2px 0 $gold_ffe51f, 0 2px 0 #ffe51f;
-      color: $indianred_bd4147;
-      padding: .2rem .4rem;
+    > code {
+      padding: 0.2rem 0.4rem;
+      color: #bd4147;
+      background-color: #f7f7f9;
+      box-shadow: inset 0 -2px 0 #ffe51f, 0 2px 0 #ffe51f;
     }
 
-    &.citation {
-      background-color: $gold_ffe51f;
+    &.citation, &.footnote, &.reversefootnote {
       box-shadow: none;
-    }
-
-    &.footnote {
-      background-color: $gold_ffe51f;
-      box-shadow: none;
-    }
-
-    &.reversefootnote {
-      background-color: $gold_ffe51f;
-      box-shadow: none;
+      background-color: #ffe51f;
     }
   }
 }
 
 .card {
-  .row {
-    height: 100%;
-  }
-
-  >a {
+  .row, > a {
     height: 100%;
   }
 }
 
 .container {
-  max-width: 100%;
   width: 96%;
+  max-width: 100%;
 }
 
-.inline-fix {
-  +* {
-    display: inline;
+.inline-fix + * {
+  display: inline;
 
-    +.badge {
-      vertical-align: text-top;
-    }
+  + .badge {
+    vertical-align: text-top;
   }
 }
 
 .listfeaturedtag {
-  .card {
-    .thumbnail {
-      img {
-        height: 258px;
-        width: 500px;
-      }
-    }
+  .card .thumbnail img {
+    width: 500px;
+    height: 258px;
   }
 
   .card-list {
     width: 100%;
 
-    .thumbnail {
-      img {
-        height: 150px;
-        object-fit: cover;
-        width: 500px;
-      }
+    .thumbnail img {
+      width: 500px;
+      height: 150px;
+      object-fit: cover;
     }
 
     .card-title {
@@ -201,19 +153,15 @@ kbd {
 }
 
 .mono {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .thumbnail {
-  &.fit-left {
-    img {
-      object-position: left;
-    }
+  &.fit-left img {
+    object-position: left;
   }
 
-  &.fit-right {
-    img {
-      object-position: right;
-    }
+  &.fit-right img {
+    object-position: right;
   }
 }

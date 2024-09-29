@@ -1,0 +1,20 @@
+amp-accordion {
+  margin-bottom: 1.5rem;
+
+  > section {
+    &[expanded] {
+      border: 1px solid #e3edf3;
+    }
+
+    > * {
+      padding: 0.25rem 0.75rem;
+    }
+  }
+}
+
+.i-amphtml-accordion-header::before {
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.75rem;
+}

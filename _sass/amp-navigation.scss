@@ -1,14 +1,9 @@
-$gainsboro_ddd: #dddddd;
-$gray_888: #888888;
-$lightgray_ccc: #cccccc;
-$whitesmoke_eee: #eeeeee;
-
 .mediumnavigation {
   .form-control {
-    border: 1px solid rgba(0, 0, 0, .04);
+    font-size: 0.8rem;
     border-radius: 30px;
-    font-size: .8rem;
     overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
   }
 
   .form-inline {
@@ -20,12 +15,7 @@ $whitesmoke_eee: #eeeeee;
       border-radius: 30px;
       cursor: pointer;
 
-      &:active {
-        background: transparent;
-        color: green;
-      }
-
-      &:hover {
+      &:active, &:hover {
         background: transparent;
         color: green;
       }
@@ -35,65 +25,46 @@ $whitesmoke_eee: #eeeeee;
   .navbar-brand {
     font-weight: 500;
     padding: 0;
-
-    img {
-      margin-right: 7px;
-      max-width: none;
-      vertical-align: text-bottom;
-    }
-  }
-
-  .nav-item {
-    font-size: .9rem;
-  }
-
-  .search-icon {
-    cursor: pointer;
-    display: inline-block;
-    margin-left: -40px;
-    margin-top: 3px;
   }
 }
 
 .dropdown-item {
   display: block;
-  padding: 7px 1.5rem;
   width: 100%;
+  padding: 7px 1.5rem;
+}
+
+.dropdown-menu, .mediumnavigation .nav-item {
+  font-size: 0.9rem;
 }
 
 .dropdown-menu {
   display: none;
-  font-size: .9rem;
   overflow: auto;
   z-index: 1;
 }
 
-.dropdown {
-  &:hover {
-    .dropdown-menu {
-      display: block;
-    }
-  }
-
-  &:focus-within {
-    .dropdown-menu {
-      display: block;
-    }
-  }
+.dropdown:hover .dropdown-menu, .dropdown-toggle:focus ~ .dropdown-menu, .dropdown:focus-within .dropdown-menu {
+  display: block;
 }
 
-.dropdown-toggle {
-  &:focus {
-    ~ {
-      .dropdown-menu {
-        display: block;
-      }
-    }
+.mediumnavigation {
+  .search-icon {
+    margin-left: -40px;
+    display: inline-block;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+
+  .navbar-brand img {
+    margin-right: 7px;
+    vertical-align: text-bottom;
+    max-width: none;
   }
 }
 
 .navbar-collapse {
-  border-top: 1px solid $gainsboro_ddd;
+  border-top: 1px solid #ddd;
 }
 
 .navbar-btngroup {
@@ -121,17 +92,7 @@ $whitesmoke_eee: #eeeeee;
   z-index: 1030;
   overflow: hidden;
 
-  &:focus {
-    overflow-x: visible;
-    overflow-y: visible;
-  }
-
-  &:hover {
-    overflow-x: visible;
-    overflow-y: visible;
-  }
-
-  &:focus-within {
+  &:focus, &:hover, &:focus-within {
     overflow-x: visible;
     overflow-y: visible;
   }
@@ -140,21 +101,21 @@ $whitesmoke_eee: #eeeeee;
 .scrollbar-thin {
   scrollbar-width: thin;
 
-  &:-webkit-scrollbar {
+  &::-webkit-scrollbar {
     width: 6px;
   }
 
-  &:-webkit-scrollbar-track {
-    background: $whitesmoke_eee;
+  &::-webkit-scrollbar-track {
+    background: #eee;
     border-radius: 0 3px 3px 0;
   }
 
-  &:-webkit-scrollbar-thumb {
-    background: $lightgray_ccc;
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
     border-radius: 3px;
 
     &:hover {
-      background: $gray_888;
+      background: #888;
     }
   }
 }

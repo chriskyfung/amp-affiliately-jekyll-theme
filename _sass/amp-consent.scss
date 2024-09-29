@@ -1,0 +1,146 @@
+:root {
+  --space-2:1rem;
+
+  /* 16px */
+  --space-3:1.5rem;
+
+  /* 24px */
+}
+
+#consent-ui {
+  background: #fff;
+  font-size: .9rem;
+  transition: right 0.3s ease;
+
+  .container {
+    background: #fff;
+    font-size: .9rem;
+    transition: right 0.3s ease;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    color: #675bff;
+    font-size: 1.6rem;
+    column-gap: .9rem;
+  }
+
+  .description {
+    margin: .6rem auto .9rem;
+
+    p {
+      color: #333;
+    }
+  }
+
+  a {
+    color: #675bff;
+
+    &:hover {
+      color: #483aff;
+      text-decoration: underline;
+    }
+  }
+
+  .buttons {
+    max-width: 100%;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .button {
+    background-color: #fff;
+    color: #483aff;
+    padding: 8px 16px;
+    border: 2px solid #675bff;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: max(140px, calc(100% / 2 - 10px));
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #483aff;
+      color: #fff;
+    }
+
+    &.fill {
+      border: none;
+      background: #675bff;
+      color: #fff;
+
+      &:hover {
+        background-color: #483aff;
+      }
+    }
+  }
+}
+
+/* Consent Banner */
+
+#cookie-consent-banner {
+  padding: .9rem 1.5rem .1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  column-gap: .9rem;
+
+  header {
+    max-width: 768px;
+    min-width: min(375px, 100%);
+    width: calc(100% - 320px);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    column-gap: .5rem;
+  }
+}
+
+/* Cookie Preference Modal */
+
+#cookie-preference-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 345px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem 1.75rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#consent-choices {
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+.consentLabel input {
+  margin: .5rem;
+}
+
+/* Consent Icon */
+
+#post-consent-ui {
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  z-index: 99;
+
+  button {
+    border-radius: 50%;
+    font-size: 1.66rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 3px solid #483aff;
+  }
+}

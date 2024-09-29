@@ -1,335 +1,182 @@
-$black_0f140f: #0f140f;
-$black_222222: #222222;
-$cornflowerblue_0086d2: #0086d2;
-$darkslategray_333: #333333;
-$darkslategray_333333: #333333;
-$darkslategray_444444: #444444;
-$deeppink_ff0086: #ff0086;
-$dodgerblue_0086f7: #0086f7;
-$gray_888888: #888888;
-$green_008800: #008800;
-$orangered_fb660a: #fb660a;
-$red_ff0007: #ff0007;
-$wheat_cdcaa9: #cdcaa9;
-$white_fff: #ffffff;
-$white_ffffff: #ffffff;
-
 .highlight {
   pre {
-    background-color: $darkslategray_333;
-    color: $white_fff;
+    background-color: #333;
+    color: #fff;
     white-space: pre-wrap;
   }
 
   .hll {
-    background-color: $darkslategray_333333;
+    background-color: #333333;
   }
 
   .c {
-    background-color: $black_0f140f;
-    color: $green_008800;
+    color: #008800;
     font-style: italic;
+    background-color: #0f140f;
   }
 
-  .err {
-    color: $white_ffffff;
-  }
-
-  .g {
-    color: $white_ffffff;
+  .err, .g {
+    color: #ffffff;
   }
 
   .k {
-    color: $orangered_fb660a;
+    color: #fb660a;
     font-weight: bold;
   }
 
-  .l {
-    color: $white_ffffff;
-  }
-
-  .n {
-    color: $white_ffffff;
-  }
-
-  .o {
-    color: $white_ffffff;
-  }
-
-  .x {
-    color: $white_ffffff;
-  }
-
-  .p {
-    color: $white_ffffff;
+  .l, .n, .o, .x, .p {
+    color: #ffffff;
   }
 
   .cm {
-    background-color: $black_0f140f;
-    color: $green_008800;
+    color: #008800;
     font-style: italic;
+    background-color: #0f140f;
   }
 
   .cp {
-    background-color: $black_0f140f;
-    color: $red_ff0007;
-    font-style: italic;
+    color: #ff0007;
     font-weight: bold;
-  }
-
-  .c1 {
-    background-color: $black_0f140f;
-    color: $green_008800;
     font-style: italic;
+    background-color: #0f140f;
   }
 
-  .cs {
-    background-color: $black_0f140f;
-    color: $green_008800;
+  .c1, .cs {
+    color: #008800;
     font-style: italic;
+    background-color: #0f140f;
   }
 
-  .gd {
-    color: $white_ffffff;
-  }
-
-  .ge {
-    color: $white_ffffff;
-  }
-
-  .gr {
-    color: $white_ffffff;
+  .gd, .ge, .gr {
+    color: #ffffff;
   }
 
   .gh {
-    color: $white_ffffff;
+    color: #ffffff;
     font-weight: bold;
   }
 
   .gi {
-    color: $white_ffffff;
+    color: #ffffff;
   }
 
   .go {
-    background-color: $black_222222;
-    color: $darkslategray_444444;
+    color: #444444;
+    background-color: #222222;
   }
 
-  .gp {
-    color: $white_ffffff;
-  }
-
-  .gs {
-    color: $white_ffffff;
+  .gp, .gs {
+    color: #ffffff;
   }
 
   .gu {
-    color: $white_ffffff;
+    color: #ffffff;
     font-weight: bold;
   }
 
   .gt {
-    color: $white_ffffff;
+    color: #ffffff;
   }
 
-  .kc {
-    color: $orangered_fb660a;
-    font-weight: bold;
-  }
-
-  .kd {
-    color: $orangered_fb660a;
-    font-weight: bold;
-  }
-
-  .kn {
-    color: $orangered_fb660a;
+  .kc, .kd, .kn {
+    color: #fb660a;
     font-weight: bold;
   }
 
   .kp {
-    color: $orangered_fb660a;
+    color: #fb660a;
   }
 
   .kr {
-    color: $orangered_fb660a;
+    color: #fb660a;
     font-weight: bold;
   }
 
   .kt {
-    color: $wheat_cdcaa9;
+    color: #cdcaa9;
     font-weight: bold;
   }
 
   .ld {
-    color: $white_ffffff;
+    color: #ffffff;
   }
 
   .m {
-    color: $dodgerblue_0086f7;
+    color: #0086f7;
     font-weight: bold;
   }
 
   .s {
-    color: $cornflowerblue_0086d2;
+    color: #0086d2;
   }
 
   .na {
-    color: $deeppink_ff0086;
+    color: #ff0086;
     font-weight: bold;
   }
 
-  .nb {
-    color: $white_ffffff;
-  }
-
-  .nc {
-    color: $white_ffffff;
+  .nb, .nc {
+    color: #ffffff;
   }
 
   .no {
-    color: $cornflowerblue_0086d2;
+    color: #0086d2;
   }
 
-  .nd {
-    color: $white_ffffff;
-  }
-
-  .ni {
-    color: $white_ffffff;
-  }
-
-  .ne {
-    color: $white_ffffff;
+  .nd, .ni, .ne {
+    color: #ffffff;
   }
 
   .nf {
-    color: $deeppink_ff0086;
+    color: #ff0086;
     font-weight: bold;
   }
 
-  .nl {
-    color: $white_ffffff;
-  }
-
-  .nn {
-    color: $white_ffffff;
-  }
-
-  .nx {
-    color: $white_ffffff;
-  }
-
-  .py {
-    color: $white_ffffff;
+  .nl, .nn, .nx, .py {
+    color: #ffffff;
   }
 
   .nt {
-    color: $orangered_fb660a;
+    color: #fb660a;
     font-weight: bold;
   }
 
   .nv {
-    color: $orangered_fb660a;
+    color: #fb660a;
   }
 
   .ow {
-    color: $white_ffffff;
+    color: #ffffff;
   }
 
   .w {
-    color: $gray_888888;
+    color: #888888;
   }
 
-  .mf {
-    color: $dodgerblue_0086f7;
+  .mf, .mh, .mi, .mo {
+    color: #0086f7;
     font-weight: bold;
   }
 
-  .mh {
-    color: $dodgerblue_0086f7;
-    font-weight: bold;
-  }
-
-  .mi {
-    color: $dodgerblue_0086f7;
-    font-weight: bold;
-  }
-
-  .mo {
-    color: $dodgerblue_0086f7;
-    font-weight: bold;
-  }
-
-  .sb {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .sc {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .sd {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .s2 {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .se {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .sh {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .si {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .sx {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .sr {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .s1 {
-    color: $cornflowerblue_0086d2;
-  }
-
-  .ss {
-    color: $cornflowerblue_0086d2;
+  .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+    color: #0086d2;
   }
 
   .bp {
-    color: $white_ffffff;
+    color: #ffffff;
   }
 
-  .vc {
-    color: $orangered_fb660a;
-  }
-
-  .vg {
-    color: $orangered_fb660a;
-  }
-
-  .vi {
-    color: $orangered_fb660a;
+  .vc, .vg, .vi {
+    color: #fb660a;
   }
 
   .il {
-    color: $dodgerblue_0086f7;
+    color: #0086f7;
     font-weight: bold;
   }
 }
 
-.rouge-table {
-  pre {
-    border: none;
-    margin: 0;
-  }
+.rouge-table pre {
+  border: none;
+  margin: 0;
 }

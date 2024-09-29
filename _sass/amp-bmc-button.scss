@@ -1,54 +1,39 @@
-$coral_ff813f: #ff813f;
-$white_fff: #ffffff;
-
 .bmc-button {
   img {
-    border: none;
-    box-shadow: none;
     height: 34px;
-    margin-bottom: 1px;
-    vertical-align: middle;
     width: 35px;
+    margin-bottom: 1px;
+    box-shadow: none;
+    border: none;
+    vertical-align: middle;
   }
+
   line-height: 35px;
   height: 51px;
   display: inline-flex;
-  background-color: $coral_ff813f;
+  background-color: #ff813f;
   border-radius: 5px;
   border: 1px solid transparent;
   padding: 7px 15px 7px 10px;
   font-size: 28px;
-  letter-spacing: .6px;
-          box-shadow: 0 1px 2px hsla(0deg, 0%, 75%, .5);
+  letter-spacing: 0.6px;
+  box-shadow: 0 1px 2px hsla(0, 0%, 75%, 0.5);
   margin: 0 auto;
   font-family: Cookie, cursive;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-decoration: none;
-  color: $white_fff;
-  -webkit-box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
+  color: #fff;
+  -webkit-box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5);
 
-  &:active {
-    -webkit-box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
-            box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
-    color: $white_fff;
-    opacity: .85;
+  &:active, &:focus, &:hover {
     text-decoration: none;
+    color: #fff;
+    -webkit-box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5);
   }
 
-  &:focus {
-    -webkit-box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
-            box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
-    color: $white_fff;
-    opacity: .85;
-    text-decoration: none;
-  }
-
-  &:hover {
-    -webkit-box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
-            box-shadow: 0 1px 2px 2px hsla(0deg, 0%, 75%, .5);
-    color: $white_fff;
-    opacity: .85;
-    text-decoration: none;
+  &:active, &:focus, &:hover {
+    box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5);
+    opacity: 0.85;
   }
 }

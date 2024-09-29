@@ -12,17 +12,11 @@
     }
   }
 
-  * {
-    &:hover {
-      >.anchor-link {
-        visibility: visible;
-      }
-    }
+  *:hover > .anchor-link {
+    visibility: visible;
   }
 }
 
-.anchor-link {
-  &:focus {
-    visibility: visible;
-  }
+.anchor-link:focus {
+  visibility: visible;
 }

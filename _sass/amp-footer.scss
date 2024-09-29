@@ -1,19 +1,9 @@
-$black_111: #111111;
-$black_171e27: #171e27;
-$darkgray_999: #999999;
-$darkslategray_3c3838: #3c3838;
-$lavender_e9e4ff: #e9e4ff;
-$white_fff: #ffffff;
-$whitesmoke_eee: #eeeeee;
-$yellow_fff100: #fff100;
-
 .beforefooter {
-  background: linear-gradient(rgba(255, 241, 0, .8), rgba(255, 241, 0, .8)),
-                url("https://chriskyfung.github.io/images/header-bg.jpg");
+  background: linear-gradient(rgba(255, 241, 0, 0.8), rgba(255, 241, 0, 0.8)), url('https://chriskyfung.github.io/images/header-bg.jpg');
   background-size: contain;
   background-position-x: center;
   background-blend-mode: overlay;
-  color: $black_111;
+  color: #111;
   max-width: 100%;
   margin: 50px auto -50px;
   padding: 50px 0;
@@ -26,16 +16,16 @@ $yellow_fff100: #fff100;
 
 @supports (background-blend-mode: overlay) {
   .beforefooter {
+    background-color: #fff100;
+    background-image: url('https://chriskyfung.github.io/images/header-bg.jpg');
     background-blend-mode: overlay;
-    background-color: $yellow_fff100;
-    background-image: url("https://chriskyfung.github.io/images/header-bg.jpg");
   }
 }
 
 .footer {
-  background-color: $black_171e27;
-  border-top: 1px solid rgba(0, 0, 0, .05);
-  color: $darkgray_999;
+  background-color: #171e27;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: #999;
   margin-top: 50px;
   margin-bottom: 0;
   padding: 30px 0;
@@ -45,30 +35,28 @@ $yellow_fff100: #fff100;
     color: inherit;
 
     &:hover {
-      color: $white_fff;
+      color: #fff;
       text-decoration: none;
     }
   }
 
   amp-ad {
-    margin: auto;
     max-width: 1140px;
-  }
-
-  .textwidget {
-    a {
-      border-bottom: 1px dashed;
-    }
+    margin: auto;
   }
 }
 
 .footer-bar {
   padding-top: 1.5rem;
-  font-size: .9em;
+  font-size: 0.9em;
 
   a {
-    color: $whitesmoke_eee;
+    color: #eee;
   }
+}
+
+.footer .textwidget a {
+  border-bottom: 1px dashed;
 }
 
 .footer-widget {
@@ -77,11 +65,11 @@ $yellow_fff100: #fff100;
   margin-bottom: 1rem;
 
   .title {
-    color: $white_fff;
     font-size: 18px;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 1.5rem;
   }
 
   ul {
@@ -93,16 +81,14 @@ $yellow_fff100: #fff100;
     margin: 12px 0;
   }
 
-  .recent-posts {
-    img {
-      float: left;
-      margin-right: 10px;
-    }
+  .recent-posts img {
+    float: left;
+    margin-right: 10px;
   }
 }
 
 .footer-widget-blob {
-  background: $lavender_e9e4ff;
+  background: #e9e4ff;
   border-radius: 60% 70% 500% 70%;
 }
 
@@ -118,17 +104,17 @@ $yellow_fff100: #fff100;
   }
 
   .fab {
-    background: $white_fff;
-    border-radius: 3px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
-    color: $darkslategray_3c3838;
-    display: inline-block;
-    font-size: 18px;
+    width: 40px;
     height: 40px;
     line-height: 40px;
-    margin-left: 5px;
-    margin-top: 10px;
     text-align: center;
-    width: 40px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    margin-left: 5px;
+    color: #3c3838;
+    margin-top: 10px;
   }
 }
