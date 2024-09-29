@@ -3,7 +3,7 @@
   "description": "AMP Affiliately is an AMP-ready Jekyll theme for your blogs and websites.",
   "version": "2.9.1",
   "scripts": {
-    "convert": "npx gulp convert",
+    "convert:css2scss": "bash ./css_to_scss.sh",
     "jekyll": "bundle exec jekyll serve",
     "jekyll:trace": "bundle exec jekyll serve --trace",
     "build": "bundle exec jekyll build && gulp build",
