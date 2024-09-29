@@ -13,9 +13,6 @@ const ampOptimizer = AmpOptimizer.create();
 import gulpAmpValidator from 'gulp-amphtml-validator';
 import amphtmlValidator from 'amphtml-validator';
 
-// TODO: Drop `@gecka/styleflux` from gulp pipeline in next major release
-import cssConverter from '@gecka/styleflux'; // Deprecated
-
 function build(cb) {
   return src('./_site/**/*.html')
     .pipe(changed('./_site/')) // generate ./cache/-default.json
@@ -74,24 +71,6 @@ function validate() {
     );
 }
 
-function css2scss() {
-  return src(['./_includes/css/*.css', '!**/*.min.css'])
-    .pipe(changed('./_sass/'))
-    .pipe(
-      through2.obj(async (file, _, cb) => {
-        if (file.isBuffer()) {
-          const scssify = await cssConverter.cssToScss( // Deprecated
-            file.contents.toString()
-          );
-          file.contents = Buffer.from(scssify);
-        }
-        cb(null, file);
-      })
-    )
-    .pipe(ext_replace('.scss'))
-    .pipe(dest('./_sass/'));
-}
-
 function minifyCSS() {
   return src(['./_includes/css/*.css', '!**/*.min.css'])
     .pipe(changed('./_includes/css/'))
@@ -101,7 +80,7 @@ function minifyCSS() {
 }
 
 export default function() {
-  watch(['./_includes/css/*.css', '!**/*.min.css'], parallel(css2scss, minifyCSS));
+  watch(['./_includes/css/*.css', '!**/*.min.css'], minifyCSS);
 }
 
-export { build, test, css2scss, minifyCSS, validate };
+export { build, test, minifyCSS, validate };

@@ -40,7 +40,6 @@
   "type": "module",
   "devDependencies": {
     "@ampproject/toolbox-optimizer": "^2.9.0",
-    "@gecka/styleflux": "^1.2.0-gecka2",
     "amphtml-validator": "^1.0.38",
     "gulp": "^5.0.0",
     "gulp-amphtml-validator": "^1.0.8",
@@ -55,9 +54,6 @@
     "@ampproject/toolbox-optimizer": {
       "postcss": "^8.4.31",
       "terser": ">=5.14.2"
-    },
-    "@gecka/styleflux": {
-      "postcss": ">=7.0.36 <8.0.0"
     },
     "gulp-minify-inline": {
       "cheerio": "^1.0.0-rc.3",
