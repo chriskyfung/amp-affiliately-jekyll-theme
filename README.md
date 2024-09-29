@@ -262,7 +262,11 @@ npm run build
 
 ## Deploying to GitHub Pages with GitHub Actions 🚀
 
-This theme includes Jekyll plugins that are not in the whitelist of Github Pages. If you are going to deploy it to your Github Pages, you need to deploy it via Github Action. The Action workflow is configured in the `/.github/workflows/deploy-jekyll.yml`, which uses [helaili/jekyll-action@v2](https://github.com/helaili/jekyll-action) to build the Jekyll site, run AMP Optimizer and HTML minifier using Gulp, and deploy the optimized build to your `gh-pages` branch.
+This theme includes Jekyll plugins that are not in the whitelist of Github Pages. Therefore, to deploy it to your Github Pages, you need to use a custom Github Actions workflow to publish your site. The Action workflow is configured in the `/.github/workflows/jekyll-build.yml`. The workflow is triggered on pushes to the `master` branch and leverages GitHub Actions to:
+
+1. Build the Jekyll Site: Installs Ruby and Jekyll to build the site.
+2. Optimize AMP and Minify HTML: Runs AMP Optimizer and HTML minifier with gulp.js.
+3. Deploy to GitHub Pages: Publishs the built site to GitHub Pages.
 
 * * *
 
