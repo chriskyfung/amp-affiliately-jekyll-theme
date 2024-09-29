@@ -37,17 +37,18 @@
     "node": ">=18.12.1",
     "npm": ">=9.1.2"
   },
+  "type": "module",
   "devDependencies": {
     "@ampproject/toolbox-optimizer": "^2.9.0",
     "@gecka/styleflux": "^1.2.0-gecka2",
-    "amphtml-validator": "^1.0.35",
-    "gulp": "^4.0.2",
-    "gulp-amphtml-validator": "^1.0.6",
+    "amphtml-validator": "^1.0.38",
+    "gulp": "^5.0.0",
+    "gulp-amphtml-validator": "^1.0.8",
+    "gulp-changed": "^5.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
-    "gulp-htmlmin": "^5.0.1",
+    "gulp-html-minifier-terser": "^7.1.0",
     "gulp-minify-inline": "^1.1.0",
-    "gulp-process-if-modified": "^1.0.4",
     "through2": "^4.0.2"
   },
   "overrides": {
@@ -57,13 +58,6 @@
     },
     "@gecka/styleflux": {
       "postcss": ">=7.0.36 <8.0.0"
-    },
-    "gulp": {
-      "glob-watcher": "^6.0.0",
-      "minimatch": "^3.1.2",
-      "semver": "^5.7.2",
-      "set-value": ">=4.1.0",
-      "vinyl-fs": "^4.0.0"
     },
     "gulp-minify-inline": {
       "cheerio": "^1.0.0-rc.3",

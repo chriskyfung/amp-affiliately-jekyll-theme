@@ -1,24 +1,24 @@
-const {src, dest, watch, series, parallel} = require('gulp');
-const csso = require('gulp-csso');
-const ext_replace = require('gulp-ext-replace');
-const htmlmin = require('gulp-htmlmin');
-// TODO: Drop `gulp-minify-inline` from gulp pipline in next major release
-// const minifyInline = require('gulp-minify-inline');
-const processIfModified = require('gulp-process-if-modified');
+import { src, dest, watch, series, parallel } from 'gulp';
+import csso from 'gulp-csso';
+import ext_replace from 'gulp-ext-replace';
+import htmlmin from 'gulp-html-minifier-terser';
+import changed from 'gulp-changed';
+// TODO: Drop `gulp-minify-inline` from gulp pipeline in next major release
+// import minifyInline from 'gulp-minify-inline';
 
-const through2 = require('through2');
+import through2 from 'through2';
 
-const AmpOptimizer = require('@ampproject/toolbox-optimizer');
+import AmpOptimizer from '@ampproject/toolbox-optimizer';
 const ampOptimizer = AmpOptimizer.create();
-const gulpAmpValidator = require('gulp-amphtml-validator');
-const amphtmlValidator = require('amphtml-validator');
+import gulpAmpValidator from 'gulp-amphtml-validator';
+import amphtmlValidator from 'amphtml-validator';
 
-// TODO: Drop `@gecka/styleflux` from gulp pipline in next major release
-const cssConverter = require('@gecka/styleflux');   // Deprecated
+// TODO: Drop `@gecka/styleflux` from gulp pipeline in next major release
+import cssConverter from '@gecka/styleflux'; // Deprecated
 
 function build(cb) {
   return src('./_site/**/*.html')
-    .pipe(processIfModified()) // generate ./cache/-default.json
+    .pipe(changed('./_site/')) // generate ./cache/-default.json
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -33,21 +33,21 @@ function build(cb) {
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
-    // TODO: Drop `gulp-minify-inline` from gulp pipline in next major release
+    // TODO: Drop `gulp-minify-inline` from gulp pipeline in next major release
     // .pipe(minifyInline())
     .pipe(dest('./_site/'));
 }
 
 function test() {
   return src('./_site/**/*.html')
-      // Validate the input and attach the validation result to the "amp" property
-      // of the file object.
-      .pipe(gulpAmpValidator.validate())
-      // Print the validation results to the console.
-      .pipe(gulpAmpValidator.format())
-      // Exit the process with error code (1) if an AMP validation error
-      // occurred.
-      .pipe(gulpAmpValidator.failAfterWarningOrError());
+    // Validate the input and attach the validation result to the "amp" property
+    // of the file object.
+    .pipe(gulpAmpValidator.validate())
+    // Print the validation results to the console.
+    .pipe(gulpAmpValidator.format())
+    // Exit the process with error code (1) if an AMP validation error
+    // occurred.
+    .pipe(gulpAmpValidator.failAfterWarningOrError());
 }
 
 function validate() {
@@ -59,15 +59,15 @@ function validate() {
           const result = validator.validateString(file.contents.toString());
           if (result.status !== 'PASS') console.error(`\n${result.status}: ${file.relative}`);
           // (result.status === 'PASS' ? console.log : console.error)(result.status);
-          for (var ii = 0; ii < result.errors.length; ii++) {
-            var error = result.errors[ii];
-            var msg =
+          for (let ii = 0; ii < result.errors.length; ii++) {
+            const error = result.errors[ii];
+            let msg =
               'line ' + error.line + ', col ' + error.col + ': ' + error.message;
             if (error.specUrl !== null) {
               msg += ' (see ' + error.specUrl + ')';
             }
             (error.severity === 'ERROR' ? console.error : console.warn)(msg);
-          }     
+          }
         }
         cb(null, file);
       })
@@ -76,11 +76,11 @@ function validate() {
 
 function css2scss() {
   return src(['./_includes/css/*.css', '!**/*.min.css'])
-    .pipe(processIfModified())
+    .pipe(changed('./_sass/'))
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
-          const scssify = await cssConverter.cssToScss(   // Deprecated
+          const scssify = await cssConverter.cssToScss( // Deprecated
             file.contents.toString()
           );
           file.contents = Buffer.from(scssify);
@@ -94,19 +94,14 @@ function css2scss() {
 
 function minifyCSS() {
   return src(['./_includes/css/*.css', '!**/*.min.css'])
-    .pipe(processIfModified())
+    .pipe(changed('./_includes/css/'))
     .pipe(csso())
     .pipe(ext_replace('.min.css'))
     .pipe(dest('./_includes/css/'));
 }
 
-exports.default = function() {
+export default function() {
   watch(['./_includes/css/*.css', '!**/*.min.css'], parallel(css2scss, minifyCSS));
-};
+}
 
-exports.build = build;
-exports.test = test;
-exports.convert = parallel(css2scss, minifyCSS);
-exports.css2scss = css2scss;
-exports.minifyCSS = minifyCSS;
-exports.validate = validate;
+export { build, test, css2scss, minifyCSS, validate };
