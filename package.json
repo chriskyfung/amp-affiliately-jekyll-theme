@@ -47,16 +47,11 @@
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-html-minifier-terser": "^7.1.0",
-    "gulp-minify-inline": "^1.1.0",
     "through2": "^4.0.2"
   },
   "overrides": {
     "@ampproject/toolbox-optimizer": {
       "postcss": "^8.4.31",
-      "terser": ">=5.14.2"
-    },
-    "gulp-minify-inline": {
-      "cheerio": "^1.0.0-rc.3",
       "terser": ">=5.14.2"
     }
   },

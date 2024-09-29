@@ -1,17 +1,15 @@
 import { src, dest, watch, series, parallel } from 'gulp';
+import changed from 'gulp-changed';
 import csso from 'gulp-csso';
 import ext_replace from 'gulp-ext-replace';
 import htmlmin from 'gulp-html-minifier-terser';
-import changed from 'gulp-changed';
-// TODO: Drop `gulp-minify-inline` from gulp pipeline in next major release
-// import minifyInline from 'gulp-minify-inline';
+import gulpAmpValidator from 'gulp-amphtml-validator';
 
 import through2 from 'through2';
-
-import AmpOptimizer from '@ampproject/toolbox-optimizer';
-const ampOptimizer = AmpOptimizer.create();
-import gulpAmpValidator from 'gulp-amphtml-validator';
 import amphtmlValidator from 'amphtml-validator';
+import AmpOptimizer from '@ampproject/toolbox-optimizer';
+
+const ampOptimizer = AmpOptimizer.create();
 
 function build(cb) {
   return src('./_site/**/*.html')
@@ -30,8 +28,6 @@ function build(cb) {
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
-    // TODO: Drop `gulp-minify-inline` from gulp pipeline in next major release
-    // .pipe(minifyInline())
     .pipe(dest('./_site/'));
 }
 
