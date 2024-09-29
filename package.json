@@ -45,12 +45,10 @@
     "gulp-amphtml-validator": "^1.0.6",
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
-    "gulp-format-md": "^2.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-minify-inline": "^1.1.0",
     "gulp-process-if-modified": "^1.0.4",
-    "through2": "^4.0.2",
-    "trim-newlines": ">=4.0.2"
+    "through2": "^4.0.2"
   },
   "overrides": {
     "@ampproject/toolbox-optimizer": {
