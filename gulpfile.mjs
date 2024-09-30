@@ -13,7 +13,6 @@ const ampOptimizer = AmpOptimizer.create();
 
 function build(cb) {
   return src('./_site/**/*.html')
-    .pipe(changed('./_site/')) // generate ./cache/-default.json
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
