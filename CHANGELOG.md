@@ -1,5 +1,20 @@
 # AMP Affiliately Jekyll Theme Changelog
 
+## v3.1.0 (2024-11-05)
+
+### ✨ Features
+
+- Footer Column Customization:
+
+  - Introduced a new feature to customize the second and third footer columns (col1 and col2) through the _config.yml file.
+  - Allows setting column titles and defining link lists for improved navigation and organization.
+
+### 📝 Documentation
+
+- Created a new documentation page, "Footer Configuration," providing detailed guidance on customizing footer columns and options.
+- Updated the "Config Guide" page to include the latest information about footer options, ensuring comprehensive user instructions.
+
+
 ## v3.0.0 (2024-09-29)
 
 ### 🐛 Fixes
