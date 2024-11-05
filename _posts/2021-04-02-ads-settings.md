@@ -3,7 +3,7 @@ layout: post
 title: Ads Settings
 date: 2021-04-02 11:00:00 +0800
 author: chris
-category: [feature, doc]
+category: [doc]
 tags: [Adsense, _config, styles, AMP]
 permalink: /ads-settings/
 image:

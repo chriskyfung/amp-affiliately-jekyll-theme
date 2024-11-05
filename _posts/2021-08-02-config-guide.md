@@ -244,46 +244,11 @@ social:
 
 ### Footer Options
 
-|        Attribute | Property  | Description                                                                                                                                      |
-| ---------------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-|      `copyright` |           | Your custom setting of copyright notice:                                                                                                         |
-|                  | `prepend` | <span>v2.0</span>{:.badge.badge-success}<br> The text prepend to the year.<br> _Default:_ `Copyright © `{:.blue}.                                |
-|                  | `owner`   | The name of the copyright holder.<br> _Default:_ _`site.name`_.                                                                                  |
-|                  | `link`    | The URL to go when clicking on the copyright notice.<br> _Default:_ `/`.                                                                         |
-|                  | `append`  | <span>v2.0</span>{:.badge.badge-success}<br> The text at the end of the copyright notice.<br> _Default:_ `. All rights reserved.`{:.blue}.       |
-| `privacy_policy` | `url`     | <span>v2.8.1</span>{:.badge.badge-success}<br> The URL to go when clicking on the privacy policy link.<br> _Default:_ `/privacy-policy`{:.blue}. |
+For detailed instructions on how to customize your site's footer, visit our [Footer Configuration] page. This guide explains how to personalize the second and third footer columns by setting titles and link lists in the `_config.yml` file. It also provides information on configuring other footer options like copyright notices and privacy policy links.
 
-**Default format:**
+By following this guide, you can significantly enhance your site's navigation and usability, ensuring that important information is easily accessible to your visitors. Improving your site's footer not only boosts the overall user experience but also contributes to a more professional and polished appearance. Check out the [Footer Configuration] page to make the most of these features.
 
-```html
-{% raw %}
-{{ prepend }}{{ CURRENT YEAR }} <a href="{{ link }}">{{ owner }}<a>{{ append }}
-{% endraw %}
-```
-
-> Copyright © 2021 [Chris KY FUNG's Blog](https://chriskyfung.github.io). All rights reserved.
-
-**Example 1:**
-
-```yaml
-copyright:
-   prepend: "© 2020-"
-   owner: "Chris KY FUNG"
-   link: https://github.com/chriskyfung/
-```
-
-> © 2020-2021 [Chris KY FUNG](https://github.com/chriskyfung/). All rights reserved.
-
-**Example 2:**
-
-```yaml
-copyright:
-   prepend: "GitHub ©"
-   owner: ""
-   append: ""
-```
-
-> Github © 2021
+[Footer Configuration]: ../footer-configuration/
 
 * * *
 
