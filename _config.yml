@@ -13,7 +13,7 @@ timezone: 'Asia/Hong_Kong'
 # Set <USERNAME>/<PROJECT> to display the button to the project
 repository: chriskyfung/amp-affiliately-jekyll-theme
 
-# Navigation features
+# Navigation Features
 nav:
   buttons:
     gh_sponsors: true # Show GitHub Sponsors button
@@ -32,6 +32,33 @@ nav:
     menu: true
     title:
       limit: 40
+
+# Footer Features
+footer:
+  col1:
+    title: Features
+    items: 
+      - name: Responsive Design
+        url: responsive-web-design/
+      - name: Styles
+        url: style-guide/
+      - name: Media
+        url: media/
+      - name: Code Block
+        url: code/
+      - name: Post-Processing
+        url: post-processing/
+  col2:
+    title: Docs
+    items: 
+      - name: Config Guide
+        url: config-guide/
+      - name: Front Matter Guide
+        url: front-matter-guide/
+      - name: Plugins and Extensions
+        url: plugins/
+      - name: Ads Settings
+        url: ads-settings/
 
 # List Sorting
 sort_categories: false
