@@ -168,7 +168,6 @@ css:
 
 ```yaml
 amp:
-  addthis: true  # layout level
   iframe: true   # layout level
   script: true   # layout level
   gist: true     # page level
