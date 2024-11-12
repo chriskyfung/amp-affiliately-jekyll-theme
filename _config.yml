@@ -13,7 +13,7 @@ timezone: 'Asia/Hong_Kong'
 # Set <USERNAME>/<PROJECT> to display the button to the project
 repository: chriskyfung/amp-affiliately-jekyll-theme
 
-# Navigation features
+# Navigation Features
 nav:
   buttons:
     gh_sponsors: true # Show GitHub Sponsors button
@@ -33,6 +33,33 @@ nav:
     title:
       limit: 40
 
+# Footer Features
+footer:
+  col1:
+    title: Features
+    items: 
+      - name: Responsive Design
+        url: responsive-web-design/
+      - name: Styles
+        url: style-guide/
+      - name: Media
+        url: media/
+      - name: Code Block
+        url: code/
+      - name: Post-Processing
+        url: post-processing/
+  col2:
+    title: Docs
+    items: 
+      - name: Config Guide
+        url: config-guide/
+      - name: Front Matter Guide
+        url: front-matter-guide/
+      - name: Plugins and Extensions
+        url: plugins/
+      - name: Ads Settings
+        url: ads-settings/
+
 # List Sorting
 sort_categories: false
 sort_tags: false
@@ -45,11 +72,6 @@ anchor_link: true
 sidebar:
   featured: true
   recent_posts: true
-
-# # AddThis Inline Share Buttons
-# addthis: 
-#   pid: ra-5d01c83d522ad580 # Addthis profile id
-#   wid: 7kfz # Addthis widget id
 
 # Disqus Comments
 amp_disqus: 
@@ -83,7 +105,7 @@ social:
 # Buy Me a Coffee
 buymeacoffee: chriskyfung
 
-# Copyright Start Year
+# Copyright
 copyright: 
   prefix: 
   ownership: Chris KY FUNG

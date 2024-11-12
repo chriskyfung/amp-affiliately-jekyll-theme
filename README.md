@@ -33,8 +33,6 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 - [Include `<amp-img>` with `<figure>` and `<figcaption>` wrapper](#-images)
 - Support WebP Image Format
 - Lightbox (AMP)
-- ~~Social Sharing via AddThis (AMP)~~
-  📌**Note**: *All AddThis Services have terminated as of May 31, 2023*
 - [Include YouTube (AMP) with GA video tracking](#-youtube-videos)
 - [Disqus Comments in AMP](#disqus-comments-in-amp-)
 - [Site Search via Google Custom Search Engine](#enabling-third-party-components-)

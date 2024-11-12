@@ -1,5 +1,20 @@
 # AMP Affiliately Jekyll Theme Changelog
 
+## v3.1.0 (2024-11-05)
+
+### ✨ Features
+
+- Footer Column Customization:
+
+  - Introduced a new feature to customize the second and third footer columns (col1 and col2) through the _config.yml file.
+  - Allows setting column titles and defining link lists for improved navigation and organization.
+
+### 📝 Documentation
+
+- Created a new documentation page, "Footer Configuration," providing detailed guidance on customizing footer columns and options.
+- Updated the "Config Guide" page to include the latest information about footer options, ensuring comprehensive user instructions.
+
+
 ## v3.0.0 (2024-09-29)
 
 ### 🐛 Fixes
@@ -19,6 +34,8 @@
 - Removed deprecated `gulp-minify-inline` task from `gulpfile.mjs`
 - Removed deprecated `css2scss` task and `@gecka/styleflux` from the gulp pipeline.
 - Removed overrides for `gulp` dependencies: `glob-watcher`, `minimatch`, `semver`, `set-value`, and `vinyl-fs`.
+- Removed AddThis share buttons and related configurations from `_includes/blocks/share-buttons.html`, `_layouts/default.html`, `_layouts/post-left-sidebar.html`, and `_layouts/post.html`.
+- Removed `addthis_inline_share_toolbox` styles from `_sass/old_files/main.scss`.
 
 ### 💚 CI/CD
 
@@ -40,6 +57,7 @@
 - Updated the status badge for CodeQL action.
 - Updated the status badge for Jekyll build workflow.
 - Updated README to document the new Jekyll build workflow. Included details on the new workflow steps and configuration.
+- Updated README.md and Front Matter Guide to reflect the removal of discontinued AMP AddThis components and services.
 
 ## v2.9.1 (2024-03-12)
 
