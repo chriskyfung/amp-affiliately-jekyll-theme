@@ -2,7 +2,7 @@
 layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
-last_modified_at: 2024-01-16 09:30 +0800
+last_modified_at: 2024-011-14 18:02 +0800
 category: [doc]
 tags: [_config]
 permalink: /config-guide/
@@ -166,6 +166,18 @@ Use the following options to configure the menu items that will be shown on the 
 |           | `max_title_length` | <span>v2.0</span>{:.badge.badge-success}<br> The maximun number of characters to display _`site.title`_ in the navigation bar.<br> _Default_: `40`{:.blue}. |
 |           | `items`            | <span>v1.7.2</span>{:.badge.badge-success}<br> An array of simple menu items that consists of the `name` and `url` key-value pairs.                         |
 |           | `menu`             | <span>v1.7.2</span>{:.badge.badge-success}<br> Set `true`{:.green} to include menu items from `local-menu.html`.<br> _Default:_ `false`.                    |
+
+For example,
+
+```yml
+nav:
+  local:
+    items:
+      - name: Page 1
+         url: /page-1.html
+      - name: Page 2
+         url: page-2.html
+```
 
 * * *
 
