@@ -268,38 +268,6 @@
       <!-- End Footer -->
     </div><!-- /.site-content -->
 
-    {%- if site.google_analytics -%}
-    <!-- Configure analytics to use gtag -->
-    <amp-analytics type="gtag" data-credentials="include"
-      {%- if site.consent == true %}
-        data-block-on-consent-purposes="analytics"
-      {% endif -%}
-      style="width:1px;height:1px;">
-      <script type="application/json">
-        {
-          "vars": {
-            "gtag_id": "{{ site.google_analytics }}",
-            "config": {
-              "{{ site.google_analytics }}": { "groups": "default" }
-            }
-          },
-          "triggers": {
-            "trackAnchorClicks": {
-              "selector": "a:not([href^='{{ site.url }}'])",
-              "on": "click",
-              "request": "event",
-              "vars": {
-                "event_category": "External Link",
-                "event_name": "${eventLabel}",
-                "event_label": "{{ page.url }}",
-                "method": "Google"
-              }
-            }
-          }
-        }
-      </script>
-    </amp-analytics>
-    {%- endif -%}
     {%- if site.ga4 -%}
     <amp-analytics type="gtag" data-credentials="include">
       <script type="application/json">

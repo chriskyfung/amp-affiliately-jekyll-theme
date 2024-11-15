@@ -18,59 +18,6 @@
 {% capture label %}youtu.be/{{ include.id }}{% endcapture %}
 {%- endif -%}
 
-{%- if site.google_analytics -%}
-{{ include.indent }}<amp-analytics type="gtag" data-credentials="include"
-    {%- if site.consent == true %}
-      data-block-on-consent-purposes="analytics"
-    {% endif -%}
-  >
-  <script type="application/json">
-    {
-      "vars" : {
-        "gtag_id": "{{ site.google_analytics }}",
-        "config" : {
-          "{{ site.google_analytics }}": { "groups": "default" }
-        }
-      },
-      "triggers": {
-        "videoPlay": {
-          "on": "video-play",
-          "request": "event",
-          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-          "vars": {
-            "event_category": "AMP YouTube player (client-side)",
-            "event_name": "Video Started",
-            "event_label": "{{ label }}",
-            "method": "Google"
-          }
-        },
-        "videoPause": {
-          "on": "video-pause",
-          "request": "event",
-          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-          "vars": {
-            "event_category": "AMP YouTube player (client-side)",
-            "event_name": "Video Paused",
-            "event_label": "{{ label }}",
-            "method": "Google"
-          }
-        },
-        "videoEnded": {
-          "on": "video-ended",
-          "request": "event",
-          "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-          "vars": {
-            "event_name": "Video Ended",
-            "event_category": "AMP YouTube player (client-side)",
-            "event_label": "{{ label }}",
-            "method": "Google"
-          }
-        }
-      }
-    }
-  </script>
-  {{ include.indent }}</amp-analytics>
-{%- endif -%}
 {%- if site.ga4 -%}
 {{ include.indent }}<amp-analytics type="gtag" data-credentials="include"
     {%- if site.consent == true %}
