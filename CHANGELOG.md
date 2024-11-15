@@ -1,5 +1,7 @@
 # AMP Affiliately Jekyll Theme Changelog
 
+<!-- markdownlint-disable MD024 -->
+
 ## v3.1.0 (2024-11-05)
 
 ### ✨ Features
@@ -14,6 +16,23 @@
 - Created a new documentation page, "Footer Configuration," providing detailed guidance on customizing footer columns and options.
 - Updated the "Config Guide" page to include the latest information about footer options, ensuring comprehensive user instructions.
 
+## v3.0.1 (2024-11-15)
+
+### ♻️ Refactors
+
+- Refactored conditional check for `site.ga4` in `postproc-content.html`.
+- Updated example configuration files to use GA4 Measurement ID.
+
+### 🗑️ Removed/Deprecated
+
+- Removed AddThis share buttons and related configurations from `_includes/blocks/share-buttons.html`, `_layouts/default.html`, `_layouts/post-left-sidebar.html`, and `_layouts/post.html`.
+- Removed `addthis_inline_share_toolbox` styles from `_sass/old_files/main.scss`.
+- Removed outdated Google Analytics configurations in `youtube.html` and `default.html`.
+
+### 📝 Documentation
+
+- Updated README and Front Matter Guide to reflect the removal of discontinued AMP AddThis components and services.
+- Updated README and Config Guide to remove deprecated Google Analytics and highlight Google Analytics 4 (GA4).
 
 ## v3.0.0 (2024-09-29)
 
@@ -34,8 +53,6 @@
 - Removed deprecated `gulp-minify-inline` task from `gulpfile.mjs`
 - Removed deprecated `css2scss` task and `@gecka/styleflux` from the gulp pipeline.
 - Removed overrides for `gulp` dependencies: `glob-watcher`, `minimatch`, `semver`, `set-value`, and `vinyl-fs`.
-- Removed AddThis share buttons and related configurations from `_includes/blocks/share-buttons.html`, `_layouts/default.html`, `_layouts/post-left-sidebar.html`, and `_layouts/post.html`.
-- Removed `addthis_inline_share_toolbox` styles from `_sass/old_files/main.scss`.
 
 ### 💚 CI/CD
 
@@ -57,7 +74,6 @@
 - Updated the status badge for CodeQL action.
 - Updated the status badge for Jekyll build workflow.
 - Updated README to document the new Jekyll build workflow. Included details on the new workflow steps and configuration.
-- Updated README.md and Front Matter Guide to reflect the removal of discontinued AMP AddThis components and services.
 
 ## v2.9.1 (2024-03-12)
 
