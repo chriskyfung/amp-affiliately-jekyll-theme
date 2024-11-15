@@ -282,19 +282,17 @@
           "trackAnchorClicks": {
             "on": "click",
             "selector": "a:not([href^='{{ site.url }}'])",
-            "request": "ga4Event",
             "vars": {
-              "ga4_event_name": "outgoing_click"
-            },
-            "extraUrlParams": {
-              "event__str_outgoing_url": "${eventLabel}"
+              "event_name": "outgoing_click",
+              "method": "Google",
+              "link_url": "${eventLabel}",
+              "outbound": true
             }
           }
         }
       }
       </script>
     </amp-analytics>
-    
     {%- endif -%}
 
     <amp-image-lightbox id="lightbox1" layout="nodisplay" data-close-button-aria-label="Close" hidden="hidden"></amp-image-lightbox>
