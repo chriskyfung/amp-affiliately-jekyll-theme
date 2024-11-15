@@ -4,8 +4,8 @@
   "version": "3.0.0",
   "scripts": {
     "convert:css2scss": "bash ./css_to_scss.sh",
-    "jekyll": "bundle exec jekyll serve",
-    "jekyll:trace": "bundle exec jekyll serve --trace",
+    "jekyll": "bundle exec jekyll serve --livereload",
+    "jekyll:trace": "bundle exec jekyll serve --trace --livereload",
     "build": "bundle exec jekyll build && gulp build",
     "test": "npx gulp validate",
     "watch": "npx gulp"
