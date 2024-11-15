@@ -2,7 +2,14 @@
 
 <!-- markdownlint-disable MD024 -->
 
-## v3.1.0 (2024-11-05)
+## v3.1.0 (2024-11-15)
+
+### 🐛 Fixes
+
+- Fixed GA4 `outgoing_click` event tracking variables in `default.html`[#78](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/78):
+
+  - Removed outdated `ga4Event` request.
+  - Updated variables to use `event_name`, `method`, `link_url`, and `outbound`.
 
 ### ✨ Features
 
@@ -11,28 +18,27 @@
   - Introduced a new feature to customize the second and third footer columns (col1 and col2) through the _config.yml file.
   - Allows setting column titles and defining link lists for improved navigation and organization.
 
-### 📝 Documentation
-
-- Created a new documentation page, "Footer Configuration," providing detailed guidance on customizing footer columns and options.
-- Updated the "Config Guide" page to include the latest information about footer options, ensuring comprehensive user instructions.
-
-## v3.0.1 (2024-11-15)
-
-### ♻️ Refactors
-
-- Refactored conditional check for `site.ga4` in `postproc-content.html`.
-- Updated example configuration files to use GA4 Measurement ID.
-
 ### 🗑️ Removed/Deprecated
 
 - Removed AddThis share buttons and related configurations from `_includes/blocks/share-buttons.html`, `_layouts/default.html`, `_layouts/post-left-sidebar.html`, and `_layouts/post.html`.
 - Removed `addthis_inline_share_toolbox` styles from `_sass/old_files/main.scss`.
 - Removed outdated Google Analytics configurations in `youtube.html` and `default.html`.
 
+### ♻️ Refactors
+
+- Refactored conditional check for `site.ga4` in `postproc-content.html`.
+- Updated example configuration files to use GA4 Measurement ID.
+
 ### 📝 Documentation
 
+- Created a new documentation page, "Footer Configuration," providing detailed guidance on customizing footer columns and options.
+- Updated the "Config Guide" page to include the latest information about footer options, ensuring comprehensive user instructions.
 - Updated README and Front Matter Guide to reflect the removal of discontinued AMP AddThis components and services.
 - Updated README and Config Guide to remove deprecated Google Analytics and highlight Google Analytics 4 (GA4).
+- Added detailed instructions for outbound link tracking with Google Analytics 4 (GA4).
+- Updated the section on modifying external links to open in a new tab.
+- Improved structure and clarity of the post-processing documentation.
+- Expanded explanations and examples to provide better guidance for users.
 
 ## v3.0.0 (2024-09-29)
 
