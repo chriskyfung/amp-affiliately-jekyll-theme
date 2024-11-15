@@ -199,13 +199,15 @@ nav:
 | `anchor_link` | Set `true`{:.green} to attach an anchor link to H2-H4 elements inside posts' content similar to [AnchorJS] ([View Demo]).<br> _Default:_ `false`. |
 
 [AnchorJS]: https://www.bryanbraun.com/anchorjs/
-[View Demo]: {% post_url 2021-08-15-postprocessing %}#add-anchor-link-for-h2-h3-and-h4-headings
+[View Demo]: {% post_url 2021-08-15-postprocessing %}#add-anchor-link-to-h2-h3-and-h4-headings-v20
 
 #### <i class="fas fa-door-open fa-fw"></i> Modify External Links To Open In New Tab
 
 |      Attribute | Description                                                                                                                                                                                                                 |
 | -------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target_blank` | Set `true`{:.green} to insert `rel="noopener noreferrer"` and `target="_blank"` to each `<a>` element that links to an outbound URL <i class="fas fa-external-link-alt"></i> inside posts' content.<br> _Default:_ `false`. |
+| `target_blank` | Set `true`{:.green} to insert `rel="noopener noreferrer"` and `target="_blank"` to each `<a>` element that links to an [outbound URL] <i class="fas fa-external-link-alt"></i> inside posts' content.<br> _Default:_ `false`. |
+
+[outbound URL]: {% post_url 2021-08-15-postprocessing %}#set-external-links-to-open-in-a-new-tab-v20
 
 * * *
 
@@ -327,7 +329,9 @@ defaults:
 
 [Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "\[GA4\] Measurement ID - Analytics Help"
 
-- When `ga4` is configured, an attribute called `data-vars-event-label` will be added to every `<a>` tag that links to an external URL by the post-processing of posts' content.
+- When `ga4` is configured, an attribute called `data-vars-event-label` will be added to every `<a>` tag that links to an external URL by the [link modifier] under the post-processing of posts' content.
+
+[link modifier]: {% post_url 2021-08-15-postprocessing %}#outbound-link-tracking-with-google-analytics-4-ga4-for-amp--v31
 
 ##### <i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)
 
