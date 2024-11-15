@@ -39,5 +39,10 @@
     "--glob=remotes/origin/[^g][^h]*[^s]",
     "--glob=stash",
     "--glob=tags/*"
-  ]
+  ],
+  "markdownlint.config": {
+    "MD046": {
+      "style": "fenced"
+    }
+  }
 }
