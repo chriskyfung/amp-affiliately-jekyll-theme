@@ -91,10 +91,10 @@ Read the procedures in the [Config Guide](https://chriskyfung.github.io/amp-affi
 
 - Read **Google Services** in the [Config Guide](https://chriskyfung.github.io//amp-affiliately-jekyll-theme/config-guide/#-google-services) ↗. For the following:
 
-  - Google Analytics
+  - Google Analytics 4
   - Google Adsense
-  - Google Custom Search Engine
   - Google Tag Manager
+  - Google Custom Search Engine
 
 #### Disqus Comments in AMP 💬
 

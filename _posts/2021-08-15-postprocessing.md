@@ -82,7 +82,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Link Modifier
 
-To enable outbound link tracking with Google Analytics in AMP, you need to insert a `data-vars-event-label` attribute to external links.
+To enable outbound link tracking with Google Analytics 4 for AMP, you need to insert a `data-vars-event-label` attribute to external links.
 
 Starting from <span class="badge badge-success">v2.0</span>, this theme replace the non-whitelist `jekyll-target-blank.rb` plugin with pure Liquid templating language to modify the links.
 

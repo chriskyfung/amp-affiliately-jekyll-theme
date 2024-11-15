@@ -323,13 +323,11 @@ defaults:
 
 |          Attribute | Description                                                                                                             |
 | -----------------: | ----------------------------------------------------------------------------------------------------------------------- |
-| `google_analytics` | <span>Deprecated</span>{:.badge.badge-default}<br> Your (`UA-`) Tracking ID. 💡 [Find your Google Analytics ID]           |
 |              `ga4` | <span>v2.6.1</span>{:.badge.badge-success}<br> Your (`G-`{:plaintext} ) Measurement ID 💡. [Find your GA4 Measurement ID] |
 
-[Find your Google Analytics ID]: https://support.google.com/analytics/answer/1008080#trackingID "Set up the Analytics global site tag - Analytics Help"
 [Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "\[GA4\] Measurement ID - Analytics Help"
 
-- When `google_analytics` is configured, an attribute called `data-vars-event-label` will be added to every `<a>` tag that links to an external URL by the post-processing of posts' content.
+- When `ga4` is configured, an attribute called `data-vars-event-label` will be added to every `<a>` tag that links to an external URL by the post-processing of posts' content.
 
 ##### <i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)
 
