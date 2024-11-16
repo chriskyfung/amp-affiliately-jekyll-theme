@@ -12,7 +12,8 @@
     "baseUri": "/amp-affiliately-jekyll-theme",
     "proxyUri": "http://127.0.0.1:5500/_site"
   },
-  "frontMatter.framework.startCommand": "bundle exec jekyll serve",
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.framework.startCommand": "bundle exec jekyll serve --trace --livereload",
   "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/",
   "git-graph.customBranchGlobPatterns": [
     {
