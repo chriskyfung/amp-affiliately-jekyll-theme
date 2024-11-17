@@ -1,22 +1,23 @@
 {%- if include.playlist -%}
-{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-listType="playlist" data-param-list="{{ include.playlist }}" data-param-rel="0">
-  <div fallback>
-    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
-  </div>
-  {{ include.indent }}</amp-youtube>
+  {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id | append: '&list=' | append: include.playlist -%}
+  {%- assign attrs_for_playlist = ' data-param-listType="playlist" data-param-list="' | append: include.playlist | append: '"' -%}
 {%- else -%}
-{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-rel="0">
-  <div fallback>
-    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
-  </div>
-  {{ include.indent }}</amp-youtube>
+  {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id -%}
 {%- endif -%}
 
 {%- if include.title -%}
-{% capture label %}{{ include.title | escape_once }} | youtu.be/{{ include.id }}{% endcapture %}
-{%- else -%}
-{% capture label %}youtu.be/{{ include.id }}{% endcapture %}
+  {%- assign attr_title = ' title="' | append: include.title | append: '"' -%}
+  {%- capture video_label -%}{{ include.title | escape_once }}{%- endcapture -%}
+  {%- else -%}
+  {%- assign attr_title = '' -%}
+  {%- capture video_label -%}youtu.be/{{ include.id }}{%- endcapture -%}
 {%- endif -%}
+
+{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}" data-param-rel="0"{{ attrs_for_playlist }}{{attr_title}}>
+  <div fallback>
+    <p>This browser does not support the YouTube video player. <a href="{{- video_url -}}" rel="noopener" target="_blank">Watch on YouTube</a></p>
+  </div>
+{{ include.indent }}</amp-youtube>
 
 {%- if site.ga4 -%}
 {{ include.indent }}<amp-analytics type="gtag" data-credentials="include"
@@ -44,8 +45,8 @@
           "video_duration": "${duration}",
           "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
           "video_provider": "youtube",
-          "video_title": "{{ label }}",
-          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
+          "video_title": "{{ video_label }}",
+          "video_url": "{{ video_url }}"
         }
       },
       "videoPause": {
@@ -59,8 +60,8 @@
           "video_duration": "${duration}",
           "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
           "video_provider": "youtube",
-          "video_title": "{{ label }}",
-          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
+          "video_title": "{{ video_label }}",
+          "video_url": "{{ video_url }}"
         }
       },
       "VideoPercentagePlayed": {
@@ -74,8 +75,8 @@
           "video_duration": "${duration}",
           "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
           "video_provider": "youtube",
-          "video_title": "{{ label }}",
-          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
+          "video_title": "{{ video_label }}",
+          "video_url": "{{ video_url }}"
         },
         "videoSpec": {
           "percentages": [10, 25, 50, 75]
@@ -92,8 +93,8 @@
           "video_duration": "${duration}",
           "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
           "video_provider": "youtube",
-          "video_title": "{{ label }}",
-          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
+          "video_title": "{{ video_label }}",
+          "video_url": "{{ video_url }}"
         }
       }
     }
