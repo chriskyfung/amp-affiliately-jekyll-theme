@@ -1,76 +1,20 @@
 {%- if include.playlist -%}
-{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-listType="playlist" data-param-list="{{ include.playlist }}" data-param-rel="0">
-  <div fallback>
-    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
-  </div>
-  {{ include.indent }}</amp-youtube>
+  {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id | append: '&list=' | append: include.playlist -%}
+  {%- assign attrs_for_playlist = ' data-param-listType="playlist" data-param-list="' | append: include.playlist | append: '"' -%}
 {%- else -%}
-{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{ include.id }}" data-param-rel="0">
-  <div fallback>
-    <p>This browser does not support the YouTube video player. <a href="https://youtu.be/{{ include.id }}" rel="noopener" target="_blank">Watch on YouTube</a></p>
-  </div>
-  {{ include.indent }}</amp-youtube>
+  {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id -%}
 {%- endif -%}
 
 {%- if include.title -%}
-{% capture label %}{{ include.title | escape_once }} | youtu.be/{{ include.id }}{% endcapture %}
-{%- else -%}
-{% capture label %}youtu.be/{{ include.id }}{% endcapture %}
+  {%- assign attr_title = ' title="' | append: include.title | append: '"' -%}
+  {%- capture video_label -%}{{ include.title | escape_once }}{%- endcapture -%}
+  {%- else -%}
+  {%- assign attr_title = '' -%}
+  {%- capture video_label -%}youtu.be/{{ include.id }}{%- endcapture -%}
 {%- endif -%}
 
-{%- if site.ga4 -%}
-{{ include.indent }}<amp-analytics type="gtag" data-credentials="include"
-    {%- if site.consent == true %}
-      data-block-on-consent-purposes="analytics"
-    {% endif -%}
-  >
-  <script type="application/json">
-  {
-    "vars": {
-      "gtag_id": "{{ site.ga4 }}",
-      "config": {
-        "{{ site.ga4 }}": { "groups": "default" }
-      }
-  },
-    "triggers": {
-      "videoPlay": {
-        "on": "video-play",
-        "request": "ga4Event",
-        "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-        "vars": {
-          "ga4_event_name": "video_played"
-        },
-        "extraUrlParams": {
-          "event__str_video_title": "{{ label }}",
-          "event__num_video_duration": "${duration}"
-        }
-      },
-      "videoPause": {
-        "on": "video-pause",
-        "request": "ga4Event",
-        "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-        "vars": {
-          "ga4_event_name": "video_paused"
-        },
-        "extraUrlParams": {
-          "event__str_video_title": "{{ label }}",
-          "event__num_video_duration": "${duration}"
-        }
-      },
-      "videoEnded": {
-        "on": "video-ended",
-        "request": "ga4Event",
-        "selector": "amp-youtube[data-videoid='{{ include.id }}']",
-        "vars": {
-          "ga4_event_name": "video_ended"
-        },
-        "extraUrlParams": {
-          "event__str_video_title": "{{ label }}",
-          "event__num_video_duration": "${duration}"
-        }
-      }
-    }
-  }
-  </script>
-{{ include.indent }}</amp-analytics> 
-{%- endif -%}
+{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{attr_title}} data-param-rel="0">
+  <div fallback>
+    <p>This browser does not support the YouTube video player. <a href="{{- video_url -}}" rel="noopener" target="_blank">Watch on YouTube</a></p>
+  </div>
+{{ include.indent }}</amp-youtube>
