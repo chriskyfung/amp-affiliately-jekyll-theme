@@ -13,7 +13,7 @@
   {%- capture video_label -%}youtu.be/{{ include.id }}{%- endcapture -%}
 {%- endif -%}
 
-{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}" data-param-rel="0"{{ attrs_for_playlist }}{{attr_title}}>
+{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{attr_title}} data-param-rel="0">
   <div fallback>
     <p>This browser does not support the YouTube video player. <a href="{{- video_url -}}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
