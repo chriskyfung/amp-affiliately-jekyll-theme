@@ -63,6 +63,24 @@
           "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
         }
       },
+      "VideoPercentagePlayed": {
+        "on": "video-percentage-played",
+        "request": "event",
+        "selector": "amp-youtube[data-videoid='{{ include.id }}']",
+        "vars": {
+          "event_name": "video_progress",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ label }}",
+          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
+        },
+        "videoSpec": {
+          "percentages": [10, 25, 50, 75]
+        }
+      },
       "videoEnded": {
         "on": "video-ended",
         "request": "event",
