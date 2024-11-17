@@ -9,6 +9,7 @@
       }
     },
     "triggers": {
+      {{ include.youtube_video_events -}}
       "trackAnchorClicks": {
         "on": "click",
         "selector": "a:not([href^='{{ site.url }}'])",

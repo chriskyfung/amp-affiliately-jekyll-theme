@@ -2,4 +2,44 @@
 
 {%- unless site.ga4 and page.amp.youtube -%}
   {%- include blocks/ga4-config.html -%}
+{%- else -%}  
+  {%- assign segments = include.content | split: '<amp-youtube ' -%}
+  {%- assign processed_head = segments[0] -%}
+  {%- for segment in segments offset:1 -%}
+    {%- assign chunks = segment | split: '</amp-youtube>' -%}
+    {%- assign amp_youtube_component = chunks[0] -%}
+    {%- assign html_fragements = amp_youtube_component | split: '>' -%}
+    {%- assign opening_tag = html_fragements[0] -%}
+    {%- assign video_data = video_data | append: '","' | append: opening_tag -%}
+  {%- endfor -%}
+
+  {%- capture ga4_trigger_config_for_amp_youtube -%}
+    {%- assign array_data = video_data | split: '","' -%}
+    {%- for attr_str in array_data offset: 1 -%}
+      {%- assign video_id = nil -%}
+      {%- assign video_list = nil -%}
+      {%- assign video_title = nil -%}
+      {%- assign video_url = nil -%}
+
+      {%- assign attrs = attr_str | append: ' ' | split: '" ' -%}
+      {%- for attr in attrs -%}
+        {%- assign name_value = attr | split: '="' -%}
+        {%- case name_value[0] -%}
+          {%- when 'data-videoid' -%}
+            {%- assign video_id = name_value[1] -%}
+          {%- when 'data-param-list' -%}
+            {%- assign video_list = name_value[1] -%}
+          {%- when 'title' -%}
+            {%- assign video_title = name_value[1] -%}
+        {%- endcase -%}
+      {%- endfor -%}
+
+      {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: video_id -%}
+      {%- if video_list -%}
+        {%- assign video_url = video_url | append: '&list=' | append: video_list -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {% include blocks/ga4-config.html youtube_video_events=ga4_trigger_config_for_amp_youtube %}
 {%- endunless -%}
