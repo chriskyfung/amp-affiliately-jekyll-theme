@@ -38,6 +38,70 @@
       {%- if video_list -%}
         {%- assign video_url = video_url | append: '&list=' | append: video_list -%}
       {%- endif -%}
+
+      "videoPlay_{{ video_id }}": {
+        "on": "video-play",
+        "request": "event",
+        "selector": "amp-youtube[data-videoid='{{ video_id }}']",
+        "vars": {
+          "event_name": "video_start",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ video_title }}",
+          "video_url": "{{ video_url }}"
+        }
+      },
+      "videoPause_{{ video_id }}": {
+        "on": "video-pause",
+        "request": "event",
+        "selector": "amp-youtube[data-videoid='{{ video_id }}']",
+        "vars": {
+          "event_name": "video_paused",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ video_title }}",
+          "video_url": "{{ video_url }}"
+        }
+      },
+      "VideoPercentagePlayed_{{ video_id }}": {
+        "on": "video-percentage-played",
+        "request": "event",
+        "selector": "amp-youtube[data-videoid='{{ video_id }}']",
+        "vars": {
+          "event_name": "video_progress",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ video_title }}",
+          "video_url": "{{ video_url }}"
+        },
+        "videoSpec": {
+          "percentages": [10, 25, 50, 75]
+        }
+      },
+      "videoEnded_{{ video_id }}": {
+        "on": "video-ended",
+        "request": "event",
+        "selector": "amp-youtube[data-videoid='{{ video_id }}']",
+        "vars": {
+          "event_name": "video_complete",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ video_title }}",
+          "video_url": "{{ video_url }}"
+        }
+      },
     {%- endfor -%}
   {%- endcapture -%}
 
