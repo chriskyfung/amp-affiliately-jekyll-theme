@@ -31,42 +31,51 @@
       "config": {
         "{{ site.ga4 }}": { "groups": "default" }
       }
-  },
+    },
     "triggers": {
       "videoPlay": {
         "on": "video-play",
-        "request": "ga4Event",
+        "request": "event",
         "selector": "amp-youtube[data-videoid='{{ include.id }}']",
         "vars": {
-          "ga4_event_name": "video_played"
-        },
-        "extraUrlParams": {
-          "event__str_video_title": "{{ label }}",
-          "event__num_video_duration": "${duration}"
+          "event_name": "video_start",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ label }}",
+          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
         }
       },
       "videoPause": {
         "on": "video-pause",
-        "request": "ga4Event",
+        "request": "event",
         "selector": "amp-youtube[data-videoid='{{ include.id }}']",
         "vars": {
-          "ga4_event_name": "video_paused"
-        },
-        "extraUrlParams": {
-          "event__str_video_title": "{{ label }}",
-          "event__num_video_duration": "${duration}"
+          "event_name": "video_paused",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ label }}",
+          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
         }
       },
       "videoEnded": {
         "on": "video-ended",
-        "request": "ga4Event",
+        "request": "event",
         "selector": "amp-youtube[data-videoid='{{ include.id }}']",
         "vars": {
-          "ga4_event_name": "video_ended"
-        },
-        "extraUrlParams": {
-          "event__str_video_title": "{{ label }}",
-          "event__num_video_duration": "${duration}"
+          "event_name": "video_complete",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration} , divide, false),100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "{{ label }}",
+          "video_url": "https://www.youtube.com/watch?v={{ include.id }}"
         }
       }
     }
