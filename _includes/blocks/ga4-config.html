@@ -1,0 +1,26 @@
+{%- if site.ga4 -%}
+<amp-analytics type="gtag" data-credentials="include">
+  <script type="application/json">
+  {
+    "vars": {
+      "gtag_id": "{{ site.ga4 }}",
+      "config": {
+        "{{ site.ga4 }}": { "groups": "default" }
+      }
+    },
+    "triggers": {
+      "trackAnchorClicks": {
+        "on": "click",
+        "selector": "a:not([href^='{{ site.url }}'])",
+        "vars": {
+          "event_name": "outgoing_click",
+          "method": "Google",
+          "link_url": "${eventLabel}",
+          "outbound": true
+        }
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+{%- endif -%}
