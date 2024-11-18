@@ -2,43 +2,97 @@
 
 <!-- markdownlint-disable MD024 -->
 
-## v3.1.0 (2024-11-15)
+## v3.1.0 (2024-11-18)
 
 ### 🐛 Fixes
 
-- Fixed GA4 `outgoing_click` event tracking variables in `default.html`[#78](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/78):
-
+- Fixed GA4 `outgoing_click` event tracking variables in `default.html` [#78](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/78):
   - Removed outdated `ga4Event` request.
   - Updated variables to use `event_name`, `method`, `link_url`, and `outbound`.
+- Resolved last modified date format in config guide.
+- Corrected GA4 event tracking configuration for YouTube videos [#77](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues/77):
+  - Changed `request` type from `ga4Event` to `event` for video play, pause, and end triggers.
+  - Updated event variables for improved tracking accuracy:
+    - `event_name` set to `video_start`, `video_paused`, and `video_complete` respectively.
+    - Added `method`, `video_current_time`, `video_duration`, `video_percent`, `video_provider`, `video_title`, and `video_url` to event variables.
 
 ### ✨ Features
 
 - Footer Column Customization:
-
   - Introduced a new feature to customize the second and third footer columns (col1 and col2) through the _config.yml file.
   - Allows setting column titles and defining link lists for improved navigation and organization.
+- Added video percentage played tracking for GA4:
+  - Introduced a new event trigger `VideoPercentagePlayed` for tracking video progress at specific intervals:
+    - Triggers on `video-percentage-played`.
+    - Tracks `video_current_time`, `video_duration`, `video_percent`, `video_provider`, `video_title`, and `video_url`.
+    - Records progress at 10%, 25%, 50%, and 75% intervals.
 
 ### 🗑️ Removed/Deprecated
 
 - Removed AddThis share buttons and related configurations from `_includes/blocks/share-buttons.html`, `_layouts/default.html`, `_layouts/post-left-sidebar.html`, and `_layouts/post.html`.
 - Removed `addthis_inline_share_toolbox` styles from `_sass/old_files/main.scss`.
 - Removed outdated Google Analytics configurations in `youtube.html` and `default.html`.
+- Removed `dedsec727.jekyll-run` from `.vscode/extensions.json`.
 
 ### ♻️ Refactors
 
 - Refactored conditional check for `site.ga4` in `postproc-content.html`.
 - Updated example configuration files to use GA4 Measurement ID.
+- Reorganized useful links in sidebar to include only relevant and up-to-date links.
+- Added 'About Me' and 'My Projects' links to the useful links sidebar.
+- Updated post categories for better content organization:
+  - Removed 'doc' category from '2017-11-27-media.md' and '2017-11-28-code.md'.
+  - Changed 'ads-settings.md' category from '[feature, doc]' to '[doc]'.
+- Improved YouTube embed attribute organization:
+  - Initialized `video_url` at the beginning for consistent URL handling.
+  - Optimized playlist URL assignment.
+  - Refined title handling and added `data-vars` attributes.
+  - Added unique IDs to `amp-youtube` elements for better tracking.
+- Removed inline GA4 tracking script from YouTube embed:
+  - Deleted the `amp-analytics` configuration for GA4 tracking, including all triggers and event configurations.
+- Centralized GA4 configuration to a new include file `_includes/blocks/ga4-config.html`:
+  - Defined `gtag_id`, `config`, and `trackAnchorClicks` trigger within the new include file.
+  - Ensured the layout file now includes the GA4 configuration via the new include file for better maintainability and modularity.
+- Modularized site content processing:
+  - Created a new include file `_includes/blocks/site_content_postproc.html`.
+  - Included `{{ include.content }}` to render the main content.
+  - Added conditional inclusion of GA4 configuration.
+  - Replaced direct content inclusion with the new include for better modularity and maintainability.
+- Dynamically included YouTube video events in GA4 configuration:
+  - Added logic to dynamically generate GA4 trigger configuration for `amp-youtube` components based on video attributes.
+  - Constructed video URLs and conditionally included GA4 configuration with dynamically generated YouTube video event triggers.
+- Optimized GA4 tracking for multiple YouTube videos:
+  - Added dynamic selectors for `amp-youtube` components and configured GA4 triggers.
+  - Simplified logic to extract `data-videoid` attributes and generate selectors.
+  - Generated a consolidated list of selectors for efficient event tracking.
 
 ### 📝 Documentation
 
 - Created a new documentation page, "Footer Configuration," providing detailed guidance on customizing footer columns and options.
-- Updated the "Config Guide" page to include the latest information about footer options, ensuring comprehensive user instructions.
+- Updated the "Config Guide" page to include the latest information about footer options.
 - Updated README and Front Matter Guide to reflect the removal of discontinued AMP AddThis components and services.
-- Updated README and Config Guide to remove deprecated Google Analytics and highlight Google Analytics 4 (GA4).
-- Added detailed instructions for outbound link tracking with Google Analytics 4 (GA4).
+- Updated README and Config Guide to highlight Google Analytics 4 (GA4).
+- Added detailed instructions for outbound link tracking with GA4.
 - Updated the section on modifying external links to open in a new tab.
-- Improved structure and clarity of the post-processing documentation.
+- Improved structure and clarity of post-processing documentation.
 - Expanded explanations and examples to provide better guidance for users.
+- Updated media post with correct AMP validation error format.
+- Improved guide for embedding audio.
+- Added example config for local navigation menu items.
+- Enhanced link tracking and external link behavior sections in the config guide.
+- Added Code of Conduct for community behavior standards.
+
+### 🛠️ Chores
+
+- Updated Jekyll scripts for live reload:
+  - Added `--livereload` flag to `jekyll` script.
+  - Added `--livereload` flag to `jekyll:trace` script.
+- Configured MD046 rule for markdownlint:
+  - Configured the rule to use the fenced style for code blocks in VS Code settings.
+  - Ensured consistent and readable markdown documentation.
+- Updated frontMatter extension settings in VS Code:
+  - Set `jekyll` as the framework for proper functionality.
+  - Enhanced start command for better debugging and live reloading by adding `--trace --livereload`.
 
 ## v3.0.0 (2024-09-29)
 
@@ -56,7 +110,7 @@
 ### 🗑️ Removed/Deprecated
 
 - Uninstalled `trim-newlines` and `gulp-format-md` from dev dependencies.
-- Removed deprecated `gulp-minify-inline` task from `gulpfile.mjs`
+- Removed deprecated `gulp-minify-inline` task from `gulpfile.mjs`.
 - Removed deprecated `css2scss` task and `@gecka/styleflux` from the gulp pipeline.
 - Removed overrides for `gulp` dependencies: `glob-watcher`, `minimatch`, `semver`, `set-value`, and `vinyl-fs`.
 
