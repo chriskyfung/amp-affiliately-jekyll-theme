@@ -19,6 +19,69 @@
           "link_url": "${eventLabel}",
           "outbound": true
         }
+      },
+      "videoPlay": {
+        "on": "video-play",
+        "request": "event",
+        "selector": [{{ include.yt_selectors }}],
+        "vars": {
+          "event_name": "video_start",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "${videoTitle}",
+          "video_url": "${videoUrl}"
+        }
+      },
+      "videoPause": {
+        "on": "video-pause",
+        "request": "event",
+        "selector": [{{ include.yt_selectors }}],
+        "vars": {
+          "event_name": "video_paused",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "${videoTitle}",
+          "video_url": "${videoUrl}"
+        }
+      },
+      "VideoPercentagePlayed": {
+        "on": "video-percentage-played",
+        "request": "event",
+        "selector": [{{ include.yt_selectors }}],
+        "vars": {
+          "event_name": "video_progress",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "${videoTitle}",
+          "video_url": "${videoUrl}"
+        },
+        "videoSpec": {
+          "percentages": [10, 25, 50, 75]
+        }
+      },
+      "videoEnded": {
+        "on": "video-ended",
+        "request": "event",
+        "selector": [{{ include.yt_selectors }}],
+        "vars": {
+          "event_name": "video_complete",
+          "method": "Google",
+          "video_current_time": "${currentTime}",
+          "video_duration": "${duration}",
+          "video_percent": "$CALC($CALC(${currentTime}, ${duration}, divide, false), 100, multiply, true)",
+          "video_provider": "youtube",
+          "video_title": "${videoTitle}",
+          "video_url": "${videoUrl}"
+        }
       }
     }
   }
