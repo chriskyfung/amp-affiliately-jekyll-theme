@@ -383,11 +383,7 @@ The <u>u element</u> example</p>
 
 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-<amp-youtube width="480"
-  height="270"
-  layout="responsive"
-  data-videoid="lBTCB7yLs8Y">
-</amp-youtube>
+{% include youtube.html id="lBTCB7yLs8Y" title="Intro to AMP (Accelerated Mobile Pages)" %}
 
 ### Callout
 
