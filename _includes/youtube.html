@@ -1,19 +1,20 @@
+{%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id -%}
 {%- if include.playlist -%}
-  {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id | append: '&list=' | append: include.playlist -%}
+  {%- assign video_url = video_url | append: '&list=' | append: include.playlist -%}
   {%- assign attrs_for_playlist = ' data-param-listType="playlist" data-param-list="' | append: include.playlist | append: '"' -%}
-{%- else -%}
-  {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id -%}
 {%- endif -%}
 
 {%- if include.title -%}
-  {%- assign attr_title = ' title="' | append: include.title | append: '"' -%}
-  {%- capture video_label -%}{{ include.title | escape_once }}{%- endcapture -%}
-  {%- else -%}
-  {%- assign attr_title = '' -%}
-  {%- capture video_label -%}youtu.be/{{ include.id }}{%- endcapture -%}
+  {%- assign video_label = include.title | escape_once -%}
+  {%- assign attr_title = ' title="' | append: video_label | append: '"' -%}
+{%- else -%}
+  {%- assign video_label = 'youtu.be/' | append: include.id -%}
 {%- endif -%}
 
-{{ include.indent }}<amp-youtube width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{attr_title}} data-param-rel="0">
+{%- assign data_vars = ' data-vars-video-title="' | append: video_label | append: '"' -%}
+{%- assign data_vars = data_vars | append: ' data-vars-video-url="' | append: video_url | append: '"' -%}
+  
+{{ include.indent }}<amp-youtube id="yt-{{- include.id -}}" width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{ attr_title }}{{ data_vars }} data-param-rel="0">
   <div fallback>
     <p>This browser does not support the YouTube video player. <a href="{{- video_url -}}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
