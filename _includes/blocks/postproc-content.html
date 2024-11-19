@@ -47,34 +47,22 @@ Modify every link with an external URL with the followings:
 {%- endunless -%}
 
 {%- if site.anchor_link == true -%}
-  {%- assign splited_by_h2 = resulted_html | split: '<h2 id=' -%}
-  {%- assign modified_content_2 = splited_by_h2 | first -%}
-  {% for splited_h2_part in splited_by_h2 offset:1 %}
-    {%- assign h2_splits = splited_h2_part | split: '</h2>' -%}
-    {%- assign h2_tag = h2_splits | first | split: '>' -%}
-    {%- assign h2_id = h2_tag | first | replace: '"', '' -%}
-    {% assign modified_content_2 = modified_content_2 | append: '<h2 id=' | append: h2_splits.first | append: '<a class="anchor-link" href="#' | append: h2_id | append: '"><i class="fas fa-link"></i></a></h2>' |  append: h2_splits[1] -%}
-  {% endfor %}
-
-  {%- assign splited_by_h3 = modified_content_2 | split: '<h3 id=' -%}
-  {%- assign modified_content_3 = splited_by_h3 | first -%}
-  {% for splited_h3_part in splited_by_h3 offset:1 %}
-    {%- assign h3_splits = splited_h3_part | split: '</h3>' -%}
-    {%- assign h3_tag = h3_splits | first | split: '>' -%}
-    {%- assign h3_id = h3_tag | first | replace: '"', '' -%}
-    {% assign modified_content_3 = modified_content_3 | append: '<h3 id=' | append: h3_splits[0] | append: '<a class="anchor-link" href="#' | append: h3_id | append: '"><i class="fas fa-link"></i></a></h3>' |  append: h3_splits[1] -%}
-  {% endfor %}
-
-  {%- assign splited_by_h4 = modified_content_3 | split: '<h4 id=' -%}
-  {%- assign modified_content_4 = splited_by_h4 | first -%}
-  {% for splited_h4_part in splited_by_h4 offset:1 %}
-    {%- assign h4_splits = splited_h4_part | split: '</h4>' -%}
-    {%- assign h4_tag = h4_splits | first | split: '>' -%}
-    {%- assign h4_id = h4_tag | first | replace: '"', '' -%}
-    {% assign modified_content_4 = modified_content_4 | append: '<h4 id=' | append: h4_splits[0] | append: '<a class="anchor-link" href="#' | append: h4_id | append: '"><i class="fas fa-link"></i></a></h4>' |  append: h4_splits[1] -%}
-  {% endfor %}
-{%- else -%}
-  {%- assign modified_content_4 = modified_content_1 -%}
+  {%- assign tag_names = 'h2, h3, h4' | replace: ' ' | split: ',' -%}
+  {%- for tag_name in tag_names -%}
+    {%- assign open_tag_with_id = '<' | append: tag_name | append: ' id=' -%}
+    {%- assign close_tag = '</' | append: tag_name | append: '>' -%}
+    
+    {%- assign html_segments = resulted_html | split: open_tag_with_id -%}
+    {%- assign resulted_html = html_segments[0] -%}
+    {%- for html_segment in html_segments offset:1 -%}
+      {%- assign html_subsegments = html_segment | split: close_tag -%}
+      {%- assign tag_fragements = html_subsegments[0] | split: '>' -%}
+      {%- assign tag_id = tag_fragements[0] | replace: '"', '' -%}
+      {%- assign anchor_link = '<a class="anchor-link" href="#' | append: tag_id | append: '"><i class="fas fa-link"></i></a>' -%}
+      {%- assign modified_element = open_tag_with_id | append: html_subsegments[0] | append: anchor_link | append: close_tag -%}
+      {% assign resulted_html = resulted_html | append: modified_element |  append: html_subsegments[1] -%}
+    {%- endfor -%}
+  {%- endfor -%}
 {%- endif -%}
 
-{{ modified_content_4 }}
+{{ resulted_html }}
