@@ -3,41 +3,51 @@ Modify every link with an external URL with the followings:
 - If `site.ga4` is configured, add the attribute `data-vars-event-label` to the anchor tag for using Google Analytics 4 for AMP to track outbound link events
 - If `site.target_blank` is configured, add rel="noopener noreferrer" and target="_blank" to the anchor tag
 {%- endcomment -%}
-{%- if site.ga4 or site.target_blank == true -%}
-  {%- assign splited_by_a = page.content | split: '<a ' -%}
-  {%- assign modified_content_1 = splited_by_a | first -%}
-  {% for splited_a_part in splited_by_a offset:1 %}
-    {%- assign a_splits = splited_a_part | split: '</a>' -%}
-    {%- assign a_tag = a_splits | first | split: '>' -%}
-    {%- assign a_attrs = a_tag | first -%}
-    {%- if a_attrs contains 'href="http://' or a_attrs contains 'href="https://' -%}
-      {%- unless a_attrs contains ' target="' or a_attrs contains ' class="' or a_attrs contains ' rel="' -%}
-        {%- assign a_href = a_attrs | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
-        {%- assign a_inner = a_tag | slice: 1, a_tag.size | join: '>' -%}
-        {% assign a_tag_lastchar = a_splits | first | slice: -1, 1 %}
-        {%- if a_tag_lastchar == '>' -%}
-        {%- assign a_inner = a_inner | append: '>' -%}
+
+{%- unless site.ga4 or site.target_blank == true -%}
+  {%- assign resulted_html = page.content -%}
+
+{%- else -%}
+  {%- assign html_segments = page.content | split: '<a ' -%}
+  {%- assign resulted_html = html_segments[0] -%}
+  
+  {%- for html_segment in html_segments offset:1 -%}
+    {%- assign html_subsegments = html_segment | split: '</a>' -%}
+    {%- assign tag_fragements = html_subsegments[0] | split: '>' -%}
+    {%- assign opening_tag = tag_fragements[0] -%}
+    
+    {%- unless opening_tag contains 'href="http://' or opening_tag contains 'href="https://' -%}
+      {%- assign resulted_html = resulted_html | append: '<a ' | append: html_segment -%}
+      
+    {%- else -%}
+      {%- if opening_tag contains ' target="' or opening_tag contains ' class="' or opening_tag contains ' rel="' -%}
+        {%- assign resulted_html = resulted_html | append: '<a ' | append: html_segment -%}
+      {%- else -%}
+        {%- assign link_url = opening_tag | prepend: ' ' | split: 'href="' | slice: 1 | join: '' | split: '"' | first -%}
+        
+        {%- assign a_innerHtml = tag_fragements | slice: 1, tag_fragements.size | join: '>' -%}
+        {%- assign lastchar = html_subsegments[0] | slice: -1, 1 -%}
+        {%- if lastchar == '>' -%}
+          {%- assign a_innerHtml = a_innerHtml | append: '>' -%}
         {%- endif -%}
+
         {%- if site.ga4 -%}
-          {%- assign event_label = 'data-vars-event-label="' | append: a_href | append: '" ' -%}
+          {%- assign ga4_data_vars = 'data-vars-event-label="' | append: link_url | append: '" ' -%}
         {%- endif -%}
+
         {%- if site.target_blank == true -%}
           {%- assign rel_target = ' rel="noopener noreferrer" target="_blank"' -%}
         {%- endif -%}
-        {%- assign modified_content_1 = modified_content_1 | append: '<a ' | append: event_label | append: a_attrs | append: rel_target | append: ' >' | append: a_inner | append: '</a>' | append: a_splits[1] -%}
-      {%- else -%}
-        {%- assign modified_content_1 = modified_content_1 | append: '<a ' | append: splited_a_part -%}
-      {%- endunless -%}    
-    {%- else -%}
-      {%- assign modified_content_1 = modified_content_1 | append: '<a ' | append: splited_a_part -%}
-    {%- endif -%}
-  {% endfor %}
-{%- else -%}
-  {%- assign modified_content_1 = page.content -%}
-{%- endif -%}
+        {%- assign modified_anchor = '<a ' | append: ga4_data_vars | append: opening_tag | append: rel_target | append: ' >' | append: a_innerHtml | append: '</a>' -%}
+        {%- assign resulted_html = resulted_html | append: modified_anchor | append: html_subsegments[1] -%}
+      {%- endif -%}
+
+    {%- endunless -%}    
+  {%- endfor -%}
+{%- endunless -%}
 
 {%- if site.anchor_link == true -%}
-  {%- assign splited_by_h2 = modified_content_1 | split: '<h2 id=' -%}
+  {%- assign splited_by_h2 = resulted_html | split: '<h2 id=' -%}
   {%- assign modified_content_2 = splited_by_h2 | first -%}
   {% for splited_h2_part in splited_by_h2 offset:1 %}
     {%- assign h2_splits = splited_h2_part | split: '</h2>' -%}
