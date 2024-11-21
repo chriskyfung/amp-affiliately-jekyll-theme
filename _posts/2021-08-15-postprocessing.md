@@ -153,13 +153,3 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <section class="card card-block">
 {{ links | markdownify }}
 </section>
-
-## Outbound Link Tracking with Google Analytics 4 (GA4) for AMP  <span>v3.1</span>{:.badge.badge-success}
-
-This theme facilitates the tracking of outbound clicks using GA4 for AMP. It sends a GA4 event called `outgoing_click`, passing the outbound URL as the `link_url` parameter. This functionality is achieved through the insertion of a `data-vars-event-label` attribute into every external link within your content.
-
-When a user clicks on an outbound link (i.e., a link that directs them away from your site), GA4 captures this event, enabling you to analyze external link interactions. This feature is particularly useful for understanding user behavior, such as which external links are most engaging or which partnerships drive the most traffic.
-
-Ensure you have set up your GA4 property and obtained the Measurement ID (`G-XXXXXXX`). This ID should be configured in your site's settings as described in the [Config Guide]({% post_url 2021-08-02-config-guide %}#-google-analytics).
-
-The theme automatically inserts the `data-vars-event-label` attribute to external links if GA4 is configured. The GA4 event named `outgoing_click` is fired whenever an external link is clicked. The URL of the clicked link is passed as the `link_url` parameter in the event data.
