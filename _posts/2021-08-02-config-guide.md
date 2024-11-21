@@ -2,7 +2,7 @@
 layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
-last_modified_at: 2024-11-14 18:02 +0800
+last_modified_at: 2024-11-21 20:24 +0800
 category: [doc]
 tags: [_config]
 permalink: /config-guide/
@@ -323,15 +323,17 @@ defaults:
 
 ##### <i class="far fa-chart-bar fa-fw"></i> Google Analytics
 
+Google Analytics 4 (GA4) provides robust tracking capabilities to help you understand user interactions on your site. The following attributes and configurations are essential for effectively implementing GA4 with AMP:
+
 |          Attribute | Description                                                                                                             |
 | -----------------: | ----------------------------------------------------------------------------------------------------------------------- |
 |              `ga4` | <span>v2.6.1</span>{:.badge.badge-success}<br> Your (`G-`{:plaintext} ) Measurement ID 💡. [Find your GA4 Measurement ID] |
 
-[Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "\[GA4\] Measurement ID - Analytics Help"
+[Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "GA4 Measurement ID - Analytics Help"
 
-- When `ga4` is configured, an attribute called `data-vars-event-label` will be added to every `<a>` tag that links to an external URL by the [link modifier] under the post-processing of posts' content.
+For more information about the use of GA4 in this theme, please refer to our [Google Analytics 4 for AMP Features] page.
 
-[link modifier]: {% post_url 2021-08-15-postprocessing %}#outbound-link-tracking-with-google-analytics-4-ga4-for-amp--v31
+[Google Analytics 4 for AMP Features]: {% post_url 2024-11-21-google-analytics-4 %}
 
 ##### <i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)
 
