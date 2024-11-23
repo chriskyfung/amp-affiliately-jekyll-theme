@@ -1,3 +1,16 @@
+{%- comment -%}
+  File: site_content_postproc.html
+  Description: This template processes AMP YouTube components for Google Analytics 4 (GA4) configuration.
+               It checks if both GA4 and AMP YouTube are enabled on the site.
+               If not, it includes the default GA4 configuration.
+               Otherwise, it parses the content to extract YouTube video IDs from <amp-youtube> tags,
+               constructs CSS selectors for these components, and includes a GA4 configuration
+               with these selectors to track YouTube video interactions.
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2024-11-18
+{%- endcomment -%}
+
+
 {%- unless site.ga4 and page.amp.youtube -%}
   {%- include blocks/ga4-config.html -%}
 {%- else -%}  
