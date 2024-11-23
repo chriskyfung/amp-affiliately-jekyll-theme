@@ -1,3 +1,34 @@
+{%- comment -%}
+  File: local-menu.html (tag-dropdown.html)
+  Description: This file contains the HTML structure for a tag dropdown menu with a filter functionality.
+               The dropdown displays a list of tags, which can be filtered using a text input. The
+               filtering is powered by AMP state management. The dropdown is only displayed if there
+               are more than 10 tags.
+
+  Features:
+  - Dropdown Menu: Displays a list of tags in a dropdown format, allowing users to navigate to tag-specific pages.
+  - Tag Filtering: Includes a filter input that dynamically updates the list of tags based on user input.
+  - AMP Integration: Utilizes AMP's state management to handle dropdown expansion and tag filtering without full page reloads.
+  - Accessibility: Ensures accessibility with ARIA attributes and keyboard navigation support.
+
+  Key Components:
+  - `tag-dropdown`: The main container for the dropdown menu.
+  - `tags-submenu`: The submenu that contains the list of tags.
+  - `tagfilterState`: AMP state used to manage the filter input value.
+  - Liquid Logic: Uses Liquid to sort and display tags dynamically based on the site's tag collection.
+
+  Usage:
+  - Include this file in pages where a tag navigation feature is required.
+  - Ensure that the site has a collection of tags available for rendering.
+
+  Notes:
+  - The dropdown is only displayed if the site has more than 10 tags.
+  - The filter input is styled for consistency with the site's design theme.
+
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2021-10-10
+{%- endcomment -%}
+
 <li id="tag-dropdown" class="nav-item dropdown" role="none">
   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-controls="tags-submenu" aria-haspopup="true" aria-expanded="false"
   [aria-expanded]="tagsDropdownExpanded ? 'true' : 'false'" tabindex="0"
