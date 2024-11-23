@@ -9,15 +9,8 @@ image:
    path: /assets/images/analytics-3201151.svg
 css:
   badge: true
-  syntax: true
-  custom: >-
-    table { font-size: .95rem; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; }
-    .box { border: 1px solid #e3edf3; padding: 1rem; }
-    .plaintext { color: mediumseagreen; }
 featured: true
-excerpt: The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.
+excerpt: Integrate GA4 with AMP in Jekyll for real-time analytics. Track user interactions, page views, and video engagement seamlessly with enhanced insights.
 ---
 
 {% include toc.md %}
@@ -40,7 +33,6 @@ By following these steps, you'll be able to start tracking user interactions on 
 **Important**: Please be aware that the current GA4 configuration for AMP does not support the automatic capture of [GA4 Enhanced Measurement events][GA4 Enhanced measurement events].
 
 [GA4 Enhanced measurement events]: https://support.google.com/analytics/answer/9216061?sjid=7071883456625746694-AP
-
 
 ### 👀 Page View Tracking
 
