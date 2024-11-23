@@ -1,3 +1,18 @@
+{% comment %}
+  File: ga4-config.html
+  Description: This file contains AMP analytics configuration for tracking user interactions
+               with YouTube videos and outbound link clicks using Google Analytics 4 (GA4).
+               It includes event triggers for video play, pause, progress, and completion,
+               as well as tracking for anchor clicks leading to external sites.
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2024-11-18
+  Notes:
+    - Verify that the 'site.ga4' variable is properly configured in your _config.yml file 
+      to activate [Google Analytics](https://analytics.google.com/) tracking.
+    - The 'include.yt_selectors' serve as placeholders for CSS selectors targeting
+      <amp-youtube> tags and should be provided by site_content_postproc.html.
+{% endcomment %}
+
 {%- if site.ga4 -%}
 <amp-analytics type="gtag" data-credentials="include">
   <script type="application/json">
@@ -9,7 +24,6 @@
       }
     },
     "triggers": {
-      {{ include.youtube_video_events -}}
       "trackAnchorClicks": {
         "on": "click",
         "selector": "a:not([href^='{{ site.url }}'])",

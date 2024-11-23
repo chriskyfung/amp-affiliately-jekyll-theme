@@ -1,8 +1,15 @@
 {%- comment -%}
-Modify every link with an external URL with the followings:
-- If `site.ga4` is configured, add the attribute `data-vars-event-label` to the anchor tag for using Google Analytics 4 for AMP to track outbound link events
-- If `site.target_blank` is configured, add rel="noopener noreferrer" and target="_blank" to the anchor tag
+  File: postproc-content.html
+  Description: This Jekyll template processes HTML content to modify anchor tags with external URLs. 
+               It adds specific attributes based on site configurations:
+               - If `site.ga4` is enabled, it appends `data-vars-event-label` for Google Analytics 4 tracking.
+               - If `site.target_blank` is enabled, it adds `rel="noopener noreferrer"` and
+                 `target="_blank"` for security and usability.
+               - Additionally, it can append anchor links to headers if `site.anchor_link` is enabled.
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2024-11-19
 {%- endcomment -%}
+
 
 {%- unless site.ga4 or site.target_blank == true -%}
   {%- assign resulted_html = page.content -%}
