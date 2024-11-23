@@ -2,15 +2,24 @@
   File: ga4-config.html
   Description: This file contains AMP analytics configuration for tracking user interactions
                with YouTube videos and outbound link clicks using Google Analytics 4 (GA4).
-               It includes event triggers for video play, pause, progress, and completion,
-               as well as tracking for anchor clicks leading to external sites.
+               It includes event triggers for video play, pause, progress, and completion, as
+               well as tracking for anchor clicks leading to external sites.
   Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
-  Date: 2024-11-18
+  Date: 2024-11-23
   Notes:
-    - Verify that the 'site.ga4' variable is properly configured in your _config.yml file 
-      to activate [Google Analytics](https://analytics.google.com/) tracking.
-    - The 'include.yt_selectors' serve as placeholders for CSS selectors targeting
-      <amp-youtube> tags and should be provided by site_content_postproc.html.
+    - This configuration leverages AMP's `<amp-analytics>` component integrated with Google Tag
+      (gtag) for enhanced tracking capabilities.
+    - To enable [Google Analytics](https://analytics.google.com/) tracking, ensure that the
+      `site.ga4` variable is correctly configured in your `_config.yml` file.
+    - The `trackAnchorClicks` trigger is designed to capture clicks on outbound links, specifically
+      excluding those that begin with the site's base URL.
+    - Pass `include.yt_selectors` as a parameter from the `site_content_postproc.html` template to
+      serve as placeholders for CSS selectors targeting `<amp-youtube>` tags. This allows for
+      conditional inclusion of YouTube tracking based on whether the `yt_selectors` parameter is
+      provided.
+    - The configuration provides comprehensive tracking for video events, including actions such
+      as play, pause, and completion, as well as progress milestones at 10%, 25%, 50%, 75%, and
+      100%.
 {% endcomment %}
 
 {%- if site.ga4 -%}
@@ -32,7 +41,7 @@
           "method": "Google",
           "link_url": "${eventLabel}",
           "outbound": true
-        }{%- if page.amp.youtube %}
+        }{%- if include.yt_selectors %}
       },
       "videoPlay": {
         "on": "video-play",
