@@ -1,3 +1,33 @@
+{%- comment -%}
+  File: youtube.html
+  Description: This file contains the Jekyll template code for embedding YouTube videos using
+               the AMP (Accelerated Mobile Pages) framework. 
+               It dynamically constructs the YouTube video URL and embeds the video using
+               the <amp-youtube> component.
+               
+  Features:
+  - Supports embedding individual YouTube videos and playlists.
+  - Includes video title and URL as data attributes for analytics or tracking purposes.
+  - Provides a fallback message for browsers that do not support the AMP YouTube player.
+  
+  Usage:
+  - Include this template in your Jekyll site project where you need to embed a YouTube video.
+  - Pass the following parameters:
+    - `include.id`: The unique identifier for the YouTube video.
+    - `include.playlist` (optional): The playlist ID if embedding a playlist.
+    - `include.title` (optional): The title of the video for accessibility and tracking.
+    - `include.indent`: Indentation for the generated HTML, useful for maintaining code readability.
+  
+  Notes:
+  - Ensure that the AMP framework is properly integrated into your project to utilize 
+    the <amp-youtube> component.
+  - The `data-param-rel="0"` attribute is used to prevent related videos from showing after 
+    the video ends.
+  
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2024-11-18
+{%- endcomment -%}
+
 {%- assign video_url = 'https://www.youtube.com/watch?v=' | append: include.id -%}
 {%- if include.playlist -%}
   {%- assign video_url = video_url | append: '&list=' | append: include.playlist -%}
