@@ -1,3 +1,30 @@
+{%- comment -%}
+  File: global-dropdown.html (dropdown-menu.html)
+  Description: This file contains the Jekyll template code for generating a dynamic dropdown menu
+               for a navigation bar. The dropdown is titled "Blog" and includes links to "All Stories", 
+               "Categories", and "Tags". The menu utilizes AMP (Accelerated Mobile Pages) for state 
+               management to toggle the dropdown's expanded state and focus, enhancing user interaction 
+               and accessibility. The dropdown is designed to be responsive and accessible, ensuring 
+               compatibility across various devices and screen sizes.
+
+  Usage: Include this file in your Jekyll project where a navigation bar with a dropdown menu is required.
+         Ensure AMP is properly configured in your project to enable the interactive features.
+
+  Dependencies: 
+    - AMP framework for state management
+    - Font Awesome for icons
+
+    Notes: 
+    - The dropdown menu is styled with custom CSS classes such as 'nav-item', 'dropdown-toggle', 
+      and 'scrollbar-thin'. Adjust these styles in your CSS files as needed.
+    - The menu items link to specific sections of the website: '/blog/', '/category/', and '/tag/'.
+      Update these links according to your site's structure.
+
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2021-10-10
+{%- endcomment -%}
+
+
 {%- assign dropdown_text = "Blog" -%}
 {%- assign dropdown_id = dropdown_text | slugify -%}
 {%- assign dropdown_id_tokens = dropdown_id | split: "-" -%}

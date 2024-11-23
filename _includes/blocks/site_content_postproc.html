@@ -7,13 +7,12 @@
                constructs CSS selectors for these components, and includes a GA4 configuration
                with these selectors to track YouTube video interactions.
   Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
-  Date: 2024-11-18
+  Date: 2024-11-23
 {%- endcomment -%}
 
+{%- assign amp_youtube_selectors = nil -%}
 
-{%- unless site.ga4 and page.amp.youtube -%}
-  {%- include blocks/ga4-config.html -%}
-{%- else -%}  
+{%- if site.ga4 and page.amp.youtube -%}
   {%- assign segments = include.content | split: '<amp-youtube ' -%}
   {%- assign processed_head = segments[0] -%}
   {%- for segment in segments offset:1 -%}
@@ -44,6 +43,7 @@
   {%- endfor -%}
 
   {%- assign amp_youtube_selectors = selectors | strip | replace: ' "' , ', "' -%}    
-  {% include blocks/ga4-config.html yt_selectors=amp_youtube_selectors %}
-
-{%- endunless -%}
+  
+{%- endif -%}
+  
+{% include blocks/ga4-config.html yt_selectors=amp_youtube_selectors %}

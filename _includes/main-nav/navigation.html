@@ -1,3 +1,17 @@
+{%- comment -%}
+  File: navigation.html
+  Description: This file defines the structure and content of the navigation bar for the website.
+               It includes:
+               - A global navigation menu with optional home link positioning.
+               - Conditional rendering of local navigation items based on site configuration.
+               - Integration of additional menus and buttons such as GitHub links and search functionality.
+               - Support for invitation codes and sponsorship links if configured in the site settings.
+  Usage: This file is included in the main layout to provide consistent navigation across the site.
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2023-03-04
+{%- endcomment -%}
+
+
 <ul class="navbar-nav ml-auto scrollbar-thin" role="menubar">
 
   {%- assign home_position = site.nav.global.home.location | default: "menu-start" -%}

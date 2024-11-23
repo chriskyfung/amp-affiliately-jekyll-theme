@@ -1,3 +1,35 @@
+{%- comment -%}
+  File: granular-user-consent.html
+  Description: This file implements a cookie consent management system using AMP components. 
+               It initializes the consent state, retrieves stored consent states from local storage, 
+               and manages user interactions for consent preferences. The consent system is designed 
+               to comply with privacy regulations by allowing users to accept or decline cookies 
+               categorized as essential, functional, analytics, and advertising.
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2024-03-12
+
+  Key Components:
+  - <amp-state>: Initializes the consent state with default values for different cookie categories.
+  - <amp-script>: Retrieves and processes stored consent states from local storage.
+  - <amp-consent>: Manages the consent UI, including the consent banner and preference modal.
+  - Consent UI: Provides buttons for users to accept all cookies or customize their preferences.
+  - Preference Modal: Allows users to toggle consent for functional, analytics, and advertising cookies.
+
+  Usage:
+  - The consent system is activated based on the environment (production or development mode).
+  - The consent UI is displayed as an overlay, and users can interact with it to set their preferences.
+  - The system updates the consent state based on user interactions and navigates to appropriate URLs 
+    to reflect consent actions.
+
+  References:
+  - AMP Documentation: https://amp.dev/documentation/examples/components/amp-script/#local-storage
+  - Privacy Policy: Linked dynamically based on site configuration.
+
+  Note: Ensure that the site configuration (e.g., `site.url`, `site.privacy-policy.url`) is correctly set 
+        in the Jekyll environment to enable proper functioning of the consent system.
+{%- endcomment -%}
+
+
 <!-- Initialize state -->
 <amp-state id="consentState">
   <script type="application/json">
