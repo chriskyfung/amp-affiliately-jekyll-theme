@@ -89,7 +89,7 @@ The events capture comprehensive video details such as:
 
 For accurate data capture and enhanced video engagement tracking, we recommend using our `youtube.html` template to [embed YouTube videos] on your pages. This ensures that `<amp-youtube>` components include data variables with properly formatted values derived from the `id` and `title` parameters provided by the `include` tag.
 
-[embed YouTube videos]: {% post_url 2017-11-27-media %}/#video
+[embed YouTube videos]: {% post_url 2024-11-23-amp-youtube %}
 
 ### Debugging AMP Analytics
 
