@@ -63,6 +63,29 @@
           "title": "Tags",
           "name": "tags",
           "type": "tags"
+        },
+        {
+          "title": "Sidebar",
+          "name": "sidebar",
+          "type": "choice",
+          "choices": [
+            "left",
+            "right",
+            "none"
+          ],
+          "hidden": true
+        },
+        {
+          "title": "Pin as Featured",
+          "name": "featured",
+          "type": "boolean",
+          "hidden": true
+        },
+        {
+          "title": "Exclude from sitemap",
+          "name": "sitemap",
+          "type": "boolean",
+          "hidden": true
         }
       ]
     }
