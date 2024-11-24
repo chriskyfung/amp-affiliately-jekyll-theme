@@ -96,11 +96,6 @@
           ]
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "boolean"
-        },
-        {
           "title": "Category",
           "name": "category",
           "type": "categories"
