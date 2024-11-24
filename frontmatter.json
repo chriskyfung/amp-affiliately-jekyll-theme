@@ -65,6 +65,40 @@
           "type": "tags"
         },
         {
+          "title": "Include AMP components",
+          "name": "amp",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Gist",
+              "name": "gist",
+              "type": "boolean"
+            },
+            {
+              "title": "iFrame",
+              "name": "iframe",
+              "type": "boolean"
+            },
+            {
+              "title": "Script",
+              "name": "script",
+              "type": "boolean"
+            },
+            {
+              "title": "YouTube",
+              "name": "youtube",
+              "type": "boolean"
+            }
+          ],
+          "hidden": true
+        },
+        {
+          "title": "Custum HTML header",
+          "name": "custom_header",
+          "type": "string",
+          "hidden": true
+        },
+        {
           "title": "Sidebar",
           "name": "sidebar",
           "type": "choice",
