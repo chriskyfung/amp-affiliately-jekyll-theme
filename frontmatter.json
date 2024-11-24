@@ -99,6 +99,29 @@
           "hidden": true
         },
         {
+          "title": "CSS",
+          "type": "fields",
+          "name": "css",
+          "fields": [
+            {
+              "title": "Badge",
+              "name": "badge",
+              "type": "boolean"
+            },
+            {
+              "title": "Code block",
+              "name": "syntax",
+              "type": "boolean"
+            },
+            {
+              "title": "Custom CSS",
+              "name": "custom",
+              "type": "string"
+            }
+          ],
+          "hidden": true
+        },
+        {
           "title": "Sidebar",
           "name": "sidebar",
           "type": "choice",
