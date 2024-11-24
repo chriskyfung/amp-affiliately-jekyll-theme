@@ -46,5 +46,16 @@
       ]
     }
   ],
-  "frontMatter.taxonomy.modifiedField": "last_modified_at"
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.preview.host": "http://localhost:4000",
+  "frontMatter.site.baseURL": "https://chriskyfung.github.io/",
+  "frontMatter.website.host": "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/_posts",
+      "previewPath": "{{fm.permalink}}"
+    }
+  ]
 }
