@@ -1,5 +1,11 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.placeholders": [
+    {
+      "id": "permalink",
+      "value": "{{fm.permalink}}"
+    }
+  ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
@@ -43,6 +49,12 @@
           "type": "datetime",
           "dateFormat": "YYYY-MM-DD HH:MM +0800",
           "isModifiedDate": true
+        },
+        {
+          "title": "Permalink",
+          "name": "permalink",
+          "type": "string",
+          "default": "/{{slug}}/"
         },
         {
           "title": "Featured Image",
