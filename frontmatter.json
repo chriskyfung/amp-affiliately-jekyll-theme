@@ -57,6 +57,11 @@
           "default": "/{{slug}}/"
         },
         {
+          "title": "Redirect from",
+          "name": "redirect_from",
+          "type": "list"
+        },
+        {
           "title": "Featured Image",
           "name": "image",
           "type": "fields",
