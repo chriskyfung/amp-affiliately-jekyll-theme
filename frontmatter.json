@@ -45,9 +45,55 @@
           "isModifiedDate": true
         },
         {
-          "title": "Article preview",
-          "name": "preview",
-          "type": "image"
+          "title": "Featured Image",
+          "name": "image",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Path",
+              "name": "path",
+              "type": "image",
+              "isPreviewImage": true,
+              "default": "/assets/images/write-2160925.svg"
+            },
+            {
+              "title": "Width",
+              "name": "width",
+              "default": "730",
+              "type": "number"
+            },
+            {
+              "title": "Height",
+              "name": "height",
+              "default": "431",
+              "type": "number"
+            },
+            {
+              "title": "Class",
+              "name": "class",
+              "type": "choice",
+              "choices": [
+                "shadow-none"
+              ],
+              "hidden": true
+            },
+            {
+              "title": "Thumbnail alignment",
+              "name": "fit",
+              "type": "choice",
+              "choices": [
+                "left",
+                "right"
+              ],
+              "hidden": true
+            },
+            {
+              "title": "Hide image",
+              "name": "hide",
+              "type": "boolean",
+              "hidden": true
+            }
+          ]
         },
         {
           "title": "Is in draft",
