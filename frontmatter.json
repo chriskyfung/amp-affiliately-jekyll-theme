@@ -54,12 +54,14 @@
           "title": "Permalink",
           "name": "permalink",
           "type": "string",
-          "default": "/{{slug}}/"
+          "default": "/{{slug}}/",
+          "required": true
         },
         {
           "title": "Redirect from",
           "name": "redirect_from",
-          "type": "list"
+          "type": "list",
+          "hidden": true
         },
         {
           "title": "Featured Image",
