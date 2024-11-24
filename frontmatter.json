@@ -5,6 +5,17 @@
       "name": "default",
       "fields": [
         {
+          "title": "Layout",
+          "name": "layout",
+          "type": "choice",
+          "choices": [
+            "archive",
+            "page",
+            "post"
+          ],
+          "default": "post"
+        },
+        {
           "title": "Title",
           "name": "title",
           "type": "string"
