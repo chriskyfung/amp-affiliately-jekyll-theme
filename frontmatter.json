@@ -3,6 +3,7 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
+      "pageBundle": false,
       "fields": [
         {
           "title": "Layout",
@@ -13,22 +14,35 @@
             "page",
             "post"
           ],
-          "default": "post"
+          "default": "post",
+          "required": true
         },
         {
           "title": "Title",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "required": true
         },
         {
-          "title": "Description",
-          "name": "description",
+          "title": "Excerpt",
+          "name": "excerpt",
           "type": "string"
         },
         {
           "title": "Publishing date",
           "name": "date",
-          "type": "datetime"
+          "type": "datetime",
+          "dateFormat": "YYYY-MM-DD HH:MM +0800",
+          "default": "{{now}}",
+          "isPublishDate": true,
+          "required": true
+        },
+        {
+          "title": "Last modified date",
+          "name": "last_modified_at",
+          "type": "datetime",
+          "dateFormat": "YYYY-MM-DD HH:MM +0800",
+          "isModifiedDate": true
         },
         {
           "title": "Article preview",
@@ -41,18 +55,14 @@
           "type": "boolean"
         },
         {
-          "title": "Tags",
-          "name": "tags",
-          "type": "tags"
-        },
-        {
-          "title": "Categories",
-          "name": "categories",
+          "title": "Category",
+          "name": "category",
           "type": "categories"
         },
         {
-          "name": "last_modified_at",
-          "type": "datetime"
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
         }
       ]
     }
