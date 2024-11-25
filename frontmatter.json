@@ -208,8 +208,9 @@
     }
   ],
   "frontMatter.framework.id": "jekyll",
+  "frontMatter.framework.startCommand": "bundle exec jekyll serve --trace --livereload",
   "frontMatter.content.publicFolder": "assets",
-  "frontMatter.preview.host": "http://localhost:4000",
+  "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/",
   "frontMatter.site.baseURL": "https://chriskyfung.github.io/",
   "frontMatter.website.host": "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/",
   "frontMatter.taxonomy.slugTemplate": "{{seoTitle}}",
