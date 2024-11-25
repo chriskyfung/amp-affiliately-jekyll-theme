@@ -1,33 +1,123 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.content.placeholders": [
+    {
+      "id": "permalink",
+      "value": "{{fm.permalink}}"
+    }
+  ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
+      "pageBundle": false,
       "fields": [
+        {
+          "title": "Layout",
+          "name": "layout",
+          "type": "choice",
+          "choices": [
+            "archive",
+            "page",
+            "post"
+          ],
+          "default": "post",
+          "required": true
+        },
         {
           "title": "Title",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "required": true
         },
         {
-          "title": "Description",
-          "name": "description",
+          "title": "Excerpt",
+          "name": "excerpt",
           "type": "string"
         },
         {
           "title": "Publishing date",
           "name": "date",
-          "type": "datetime"
+          "type": "datetime",
+          "dateFormat": "YYYY-MM-DD HH:MM +0800",
+          "default": "{{now}}",
+          "isPublishDate": true,
+          "required": true
         },
         {
-          "title": "Article preview",
-          "name": "preview",
-          "type": "image"
+          "title": "Last modified date",
+          "name": "last_modified_at",
+          "type": "datetime",
+          "dateFormat": "YYYY-MM-DD HH:MM +0800",
+          "isModifiedDate": true
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "boolean"
+          "title": "Permalink",
+          "name": "permalink",
+          "type": "string",
+          "default": "/{{slug}}/",
+          "required": true
+        },
+        {
+          "title": "Redirect from",
+          "name": "redirect_from",
+          "type": "list",
+          "hidden": true
+        },
+        {
+          "title": "Featured Image",
+          "name": "image",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Path",
+              "name": "path",
+              "type": "image",
+              "isPreviewImage": true,
+              "default": "/assets/images/write-2160925.svg"
+            },
+            {
+              "title": "Width",
+              "name": "width",
+              "default": "730",
+              "type": "number"
+            },
+            {
+              "title": "Height",
+              "name": "height",
+              "default": "431",
+              "type": "number"
+            },
+            {
+              "title": "Class",
+              "name": "class",
+              "type": "choice",
+              "choices": [
+                "shadow-none"
+              ],
+              "hidden": true
+            },
+            {
+              "title": "Thumbnail alignment",
+              "name": "fit",
+              "type": "choice",
+              "choices": [
+                "left",
+                "right"
+              ],
+              "hidden": true
+            },
+            {
+              "title": "Hide image",
+              "name": "hide",
+              "type": "boolean",
+              "hidden": true
+            }
+          ]
+        },
+        {
+          "title": "Category",
+          "name": "category",
+          "type": "categories"
         },
         {
           "title": "Tags",
@@ -35,16 +125,103 @@
           "type": "tags"
         },
         {
-          "title": "Categories",
-          "name": "categories",
-          "type": "categories"
+          "title": "Include AMP components",
+          "name": "amp",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Gist",
+              "name": "gist",
+              "type": "boolean"
+            },
+            {
+              "title": "iFrame",
+              "name": "iframe",
+              "type": "boolean"
+            },
+            {
+              "title": "Script",
+              "name": "script",
+              "type": "boolean"
+            },
+            {
+              "title": "YouTube",
+              "name": "youtube",
+              "type": "boolean"
+            }
+          ],
+          "hidden": true
         },
         {
-          "name": "last_modified_at",
-          "type": "datetime"
+          "title": "Custum HTML header",
+          "name": "custom_header",
+          "type": "string",
+          "hidden": true
+        },
+        {
+          "title": "CSS",
+          "type": "fields",
+          "name": "css",
+          "fields": [
+            {
+              "title": "Badge",
+              "name": "badge",
+              "type": "boolean"
+            },
+            {
+              "title": "Code block",
+              "name": "syntax",
+              "type": "boolean"
+            },
+            {
+              "title": "Custom CSS",
+              "name": "custom",
+              "type": "string"
+            }
+          ],
+          "hidden": true
+        },
+        {
+          "title": "Sidebar",
+          "name": "sidebar",
+          "type": "choice",
+          "choices": [
+            "left",
+            "right",
+            "none"
+          ],
+          "hidden": true
+        },
+        {
+          "title": "Pin as Featured",
+          "name": "featured",
+          "type": "boolean",
+          "hidden": true
+        },
+        {
+          "title": "Exclude from sitemap",
+          "name": "sitemap",
+          "type": "boolean",
+          "hidden": true
         }
       ]
     }
   ],
-  "frontMatter.taxonomy.modifiedField": "last_modified_at"
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.framework.startCommand": "bundle exec jekyll serve --trace --livereload",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/",
+  "frontMatter.site.baseURL": "https://chriskyfung.github.io/",
+  "frontMatter.website.host": "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/",
+  "frontMatter.taxonomy.slugTemplate": "{{seoTitle}}",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/_posts",
+      "previewPath": ""
+    }
+  ],
+  "frontMatter.extensibility.scripts": [
+    "[[workspace]]/.frontmatter/ui/external.js"
+  ]
 }
