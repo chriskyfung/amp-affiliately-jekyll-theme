@@ -1,0 +1,18 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Enable Processing Block HTML Tags with kramdown",
+  "description": "Use the kramdown options syntax to enable the kramdown parser to process the content of the selected HTML blocks as kramdown",
+  "body": [
+    "{::options parse_block_html=\"true\" /}",
+    "[[&selection]]",
+    "{::options parse_block_html=\"false\" /}"
+  ],
+  "fields": [
+    {
+      "name": "selection",
+      "title": "HTML",
+      "type": "string",
+      "default": "FM_SELECTED_TEXT"
+    }
+  ]
+}
