@@ -184,6 +184,11 @@
           ]
         },
         {
+          "title": "Allow comments",
+          "name": "comments",
+          "type": "boolean"
+        },
+        {
           "title": "Sidebar",
           "name": "sidebar",
           "type": "choice",
@@ -197,6 +202,12 @@
           "title": "Pin as Featured",
           "name": "featured",
           "type": "boolean"
+        },
+        {
+          "title": "Redirect to",
+          "name": "redirect_to",
+          "type": "string",
+          "single": true
         },
         {
           "title": "Sitemap",
