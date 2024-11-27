@@ -30,6 +30,11 @@
           "required": true
         },
         {
+          "title": "Author",
+          "name": "author",
+          "type": "string"
+        },
+        {
           "title": "Excerpt",
           "name": "excerpt",
           "type": "string"
