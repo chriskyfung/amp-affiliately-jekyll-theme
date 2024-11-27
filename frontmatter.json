@@ -219,6 +219,7 @@
   "frontMatter.site.baseURL": "https://chriskyfung.github.io/",
   "frontMatter.website.host": "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/",
   "frontMatter.taxonomy.slugTemplate": "{{seoTitle}}",
+  "frontMatter.taxonomy.seoDescriptionField": "excerpt",
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
