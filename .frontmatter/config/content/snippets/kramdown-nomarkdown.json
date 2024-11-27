@@ -1,0 +1,18 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Escape kramdown Processing for Selected Text",
+  "description": "Use the kramdown nomarkdown syntax to mark the selected text as raw text and prevent kramdown from parsing it",
+  "body": [
+    "{::nomarkdown}",
+    "[[&selection]]",
+    "{:/nomarkdown}"
+  ],
+  "fields": [
+    {
+      "name": "selection",
+      "title": "Selected Text",
+      "type": "string",
+      "default": "FM_SELECTED_TEXT"
+    }
+  ]
+}

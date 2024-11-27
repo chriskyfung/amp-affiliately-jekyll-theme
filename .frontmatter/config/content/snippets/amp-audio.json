@@ -1,0 +1,19 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Embed an audio file with AMP",
+  "description": "Use the amp-audio component to embed an audio file from a URL",
+  "body": [
+    "<amp-audio width=\"auto\" height=\"50\" src=\"[[sourceURL]]\">",
+    "  <div fallback>Your browser doesn’t support HTML5 audio</div>",
+    "</amp-audio>"
+  ],
+  "fields": [
+    {
+      "name": "sourceURL",
+      "title": "source URL",
+      "type": "string",
+      "single": true,
+      "default": ""
+    }
+  ]
+}

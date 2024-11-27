@@ -1,0 +1,22 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Embed a YouTube video with AMP",
+  "description": "Use the youtube.html template to embed a YouTube video on your AMP page by providing the video ID",
+  "body": "{% include youtube.html id=\"[[vid]]\" title=\"[[title]]\" %}",
+  "fields": [
+    {
+      "name": "vid",
+      "title": "video ID",
+      "type": "string",
+      "single": true,
+      "default": ""
+    },
+    {
+      "name": "title",
+      "title": "title",
+      "type": "string",
+      "single": true,
+      "default": ""
+    }
+  ]
+}

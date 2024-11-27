@@ -1,0 +1,26 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Create a abbreviation with Markdown",
+  "description": "Use the kramdown abbreviation syntax to define an abbreviation and its full phrase in your markdown document",
+  "openingTags": "{{",
+  "closingTags": "}}",
+  "body": [
+    "[*{{name}}]: {{phrase}}"
+  ],
+  "fields": [
+    {
+      "name": "name",
+      "title": "Footnote Name",
+      "type": "string",
+      "single": true,
+      "default": ""
+    },
+    {
+      "name": "phrase",
+      "title": "Full Phrase",
+      "type": "string",
+      "single": true,
+      "default": ""
+    }
+  ]
+}

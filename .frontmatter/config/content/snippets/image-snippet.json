@@ -1,0 +1,43 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Include Picture",
+  "description": "Use the picture.html template to insert an image with alternative text and a caption for accessibility and SEO purposes",
+  "body": "{% include picture.html img=\"[[&mediaUrl]]\" width=\"[[mediaWidth]]\" height=\"[[mediaHeight]]\" alt=\"[[alt]]\" caption=\"[[&caption]]\" [[&attributes]] [[&layout]][[&lightbox]]source=\"raw\" %}",
+  "isMediaSnippet": true,
+  "fields": [
+    {
+      "name": "attributes",
+      "title": "class=\"MyClass\" link=\"/page-URL\"",
+      "type": "string",
+      "single": true,
+      "default": ""
+    },
+    {
+      "name": "layout",
+      "title": "Layout",
+      "type": "choice",
+      "choices": [
+        "",
+        "layout=\"fill\" ",
+        "layout=\"fixed\" ",
+        "layout=\"fixed-height\" ",
+        "layout=\"flex-item\" ",
+        "layout=\"intrinsic\" ",
+        "layout=\"nodisplay\" ",
+        "layout=\"responsive\" "
+      ],
+      "default": ""
+    },
+    {
+      "name": "lightbox",
+      "title": "Lightbox",
+      "type": "choice",
+      "choices": [
+        "",
+        "lightbox=true ",
+        "lightbox=false "
+      ],
+      "default": ""
+    }
+  ]
+}
