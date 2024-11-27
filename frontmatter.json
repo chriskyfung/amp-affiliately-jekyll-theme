@@ -10,6 +10,7 @@
     {
       "name": "default",
       "pageBundle": false,
+      "clearEmpty": true,
       "fields": [
         {
           "title": "Layout",
