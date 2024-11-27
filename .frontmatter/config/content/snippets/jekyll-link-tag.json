@@ -1,0 +1,31 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Get Permalink for a File",
+  "description": "Use the Jekyll link tag to insert the correct permalink URL for a file path you specify. For example: {% link /assets/files/doc.pdf %}",
+  "body": "[{{linkid}}]: {% link {{&relative_path}} {{title}} %}}",
+  "openingTags": "{{",
+  "closingTags": "}}",
+  "fields": [
+    {
+      "name": "linkid",
+      "title": "link ID",
+      "type": "string",
+      "single": true,
+      "default": ""
+    },
+    {
+      "name": "relative_path",
+      "title": "relative path from the root directory to a file. Example: /assets/files/doc.pdf",
+      "type": "string",
+      "single": true,
+      "default": ""
+    },
+    {
+      "name": "title",
+      "title": "title in single or double quotes (Optional)",
+      "type": "string",
+      "single": true,
+      "default": ""
+    }
+  ]
+}

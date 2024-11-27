@@ -1,0 +1,7 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Table of Contents (TOC)",
+  "description": "Use the include.md template to insert a table of contents that links to the headings in your markdown content",
+  "body": "{% include toc.md %}",
+  "fields": []
+}

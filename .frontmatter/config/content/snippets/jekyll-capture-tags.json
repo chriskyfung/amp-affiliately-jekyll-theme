@@ -1,0 +1,25 @@
+{
+  "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
+  "title": "Storing Text in a Variable",
+  "description": "Use Jekyll capture tags to save text in variables and access them in your content or layout",
+  "body": [
+    "{% capture [[var]] %}",
+    "[[&selection]]",
+    "{% endcapture %}"
+  ],
+  "fields": [
+    {
+      "name": "var",
+      "title": "variable name",
+      "type": "string",
+      "single": true,
+      "default": "myVar"
+    },
+    {
+      "name": "selection",
+      "title": "Selected Text",
+      "type": "string",
+      "default": "FM_SELECTED_TEXT"
+    }
+  ]
+}
