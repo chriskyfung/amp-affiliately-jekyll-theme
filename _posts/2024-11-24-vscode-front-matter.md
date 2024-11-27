@@ -3,7 +3,7 @@ layout: post
 title: Using Front Matter CMS
 excerpt: Effortlessly manage your Jekyll site with Front Matter CMS. Streamline content creation and editing with a user-friendly interface and real-time previews.
 date: 2024-11-25 13:11 +0800
-last_modified_at: null
+last_modified_at: 2024-11-27 21:11 +0800
 permalink: /front-matter-cms/
 image:
   path: /assets/images/map-3314277.svg
