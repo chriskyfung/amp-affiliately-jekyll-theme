@@ -25,7 +25,7 @@ featured: true
 
 ## 1. Introduction
 
-**[Front Matter CMS]** is a dynamic and powerful Content Management System seamlessly integrated with **Visual Studio Code** (often abbreviated as **VS Code**). Specifically designed to work with static site generators like Jekyll, Front Matter CMS offers a user-friendly interface that simplifies the process of creating, editing, and managing posts, pages, and other content types. This makes it accessible even for users with limited technical expertise.
+**[Front Matter CMS][Front Matter CMS]** is a dynamic and powerful Content Management System seamlessly integrated with **Visual Studio Code** (often abbreviated as **VS Code**). Specifically designed to work with static site generators like Jekyll, Front Matter CMS offers a user-friendly interface that simplifies the process of creating, editing, and managing posts, pages, and other content types. This makes it accessible even for users with limited technical expertise.
 
 By leveraging the combined capabilities of Front Matter CMS and VS Code with your Jekyll site, you can significantly streamline your content management processes, making it easier to maintain and update your site. Some of the key benefits of using Front Matter CMS include:
 
@@ -35,7 +35,7 @@ By leveraging the combined capabilities of Front Matter CMS and VS Code with you
 
 This documentation serves as a comprehensive guide on using Front Matter CMS in conjunction with VS Code to manage the content of your Jekyll site that uses our custom theme. Follow the steps below to set up and configure Front Matter CMS with your Jekyll site, and start managing your content more efficiently and effectively.
 
-[Front Matter]: https://frontmatter.codes/
+[Front Matter CMS]: https://frontmatter.codes/
 
 ## 2. Getting Started
 
