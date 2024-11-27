@@ -53,6 +53,9 @@ This section will guide you through the initial setup of Front Matter CMS with y
      - Download the [`external.js`](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/.frontmatter/ui/external.js) file from our GitHub repository.
      - Place the `external.js` file in the `.frontmatter/ui/` directory within your project folder. Create this directory if it doesn't already exist.
 
+   - **Retrieve Snippets Configuration Files**:
+     - Download the snippet configuration files from the [GitHub snippets directory](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/tree/master/.frontmatter/config/content/snippets) and place them in the `.frontmatter/config/content/snippets/` directory.
+
 3. **Install VS Code Front Matter Extension**
    - Open the **Extensions** view in VS Code by clicking on the square icon in the sidebar or pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
    - Search for **`Front Matter`** in the Extensions Marketplace.
@@ -271,6 +274,111 @@ Front Matter CMS allows you to see a real-time preview of the content you are ed
 5. The preview pane will automatically update to reflect your changes, providing a live view of how your content will look on your site.
 
 By following these steps, you can efficiently preview your content and make adjustments in real-time, ensuring your edits are accurately reflected on your site.
+
+### Using Snippets
+
+Front Matter CMS provides a convenient way to manage and create content with customizable snippets. Here’s a brief guide on how to use the various snippets available:
+
+#### AMP Snippets
+
+**AMP Gist Snippets**:
+
+- **Usage:** Embed a gist or single file from a gist using the `amp-gist` component.
+
+**AMP Audio Snippets**:
+
+- **Usage:** Embed an audio element on an AMP page using the `amp-audio` component.
+
+#### Image and Video Snippets
+
+**Image Snippet**:
+
+- **Usage:** Insert an image using the `picture.html` template with attributes for alt text and figure caption.
+
+**YouTube Snippets**:
+
+- **Usage:** Embed a YouTube video or playlist using the `youtube.html` template.
+
+#### Content Management Snippets
+
+**Table of Contents (TOC) Snippet**:
+
+- **Usage:** Insert a TOC using the `toc.md` template.
+
+**Excerpt Separator Snippet**:
+
+- **Usage:** Insert `<!--more-->` to define a custom excerpt in markdown content.
+
+#### Kramdown Snippets
+
+**Inline Attribute Snippet**:
+
+- **Usage:** Add HTML attributes to any element using kramdown inline attribute list syntax.
+- **Snippet:** Specify the attributes within the snippet.
+
+**Comment Snippet**:
+
+- **Usage:** Insert kramdown comments to exclude text from output while keeping it in the source.
+
+**NoMarkdown Snippet**:
+
+- **Usage:** Escape kramdown processing for selected text.
+
+**Footnote Snippet**:
+
+- **Usage:** Create a footnote and link it to a reference number using kramdown footnote syntax.
+
+**Abbreviation Snippet**:
+
+- **Usage:** Create an abbreviation using kramdown abbreviation syntax.
+
+**Math Block Snippet**:
+
+- **Usage:** Convert text with LaTeX mathematics into a math block using kramdown syntax.
+
+**End-of-Block Snippet**:
+
+- **Usage:** Insert an EOB marker to end a kramdown block element.
+
+**Parse Block HTML Snippet**:
+
+- **Usage:** Enable kramdown processing in block HTML tags.
+
+#### Jekyll Snippets
+
+**Link Snippet**:
+
+- **Usage:** Generate the correct permalink URL of a file using the Jekyll `link` tag.
+
+**Post URL Snippet**:
+
+- **Usage:** Generate the correct permalink URL of a post using the Jekyll `post_url` tag.
+
+**Highlight Snippet**:
+
+- **Usage:** Apply the Jekyll `highlight` tag to format selected content as a code block.
+
+**Raw Snippet**:
+
+- **Usage:** Escape Liquid filters using the Jekyll `raw` tag.
+
+**Capture Snippet**:
+
+- **Usage:** Create a variable from selected content using Jekyll `capture` tags.
+
+**Cite Snippet**:
+
+- **Usage:** Insert citations with Jekyll-Scholar cite tag.
+
+**Bibliography Snippet**:
+
+- **Usage:** Insert a bibliography using the Jekyll-Scholar plugin.
+
+**Callout Snippet**:
+
+- **Usage:** Insert a callout using the Jekyll capture tag.
+
+By using these snippets, you can streamline your content creation process, making it more efficient and structured.
 
 ### Managing Taxonomies
 
