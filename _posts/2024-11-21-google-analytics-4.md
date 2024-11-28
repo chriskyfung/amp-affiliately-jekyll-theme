@@ -2,11 +2,16 @@
 layout: post
 title: Google Analytics 4 for AMP Features
 date: 2024-11-21 11:22 +0800
-category: [feature]
-tags: [analytics]
+last_modified_at: 2024-11-28 21:11 +0800
+category:
+  - feature
+tags:
+  - analytics
 permalink: /google-analytics-4/
-image: 
-   path: /assets/images/analytics-3201151.svg
+image:
+  path: /assets/images/analytics-3201151.svg
+  width: "730"
+  height: "431"
 css:
   badge: true
 featured: true
@@ -17,7 +22,7 @@ excerpt: Integrate GA4 with AMP in Jekyll for real-time analytics. Track user in
 
 ## Introduction
 
-Google Analytics 4 (GA4) is the latest version of Google's analytics platform, offering enhanced tracking and insights capabilities. One of the standout strengths of this AMP-based Jekyll theme is its seamless integration with GA4, enabling you to monitor user interactions and optimize your content based on real-time data. This powerful feature ensures you have access to comprehensive analytics without sacrificing the performance benefits of AMP.
+**Google Analytics 4 (GA4)** is the latest version of Google's analytics platform, offering enhanced tracking and insights capabilities. One of the standout strengths of this AMP-based Jekyll theme is its seamless integration with GA4, enabling you to monitor user interactions and optimize your content based on real-time data. This powerful feature ensures you have access to comprehensive analytics without sacrificing the performance benefits of AMP.
 
 ## 🔧 Setting Up GA4 for AMP
 
@@ -27,6 +32,23 @@ To set up GA4 with your AMP pages, follow these steps:
 2. **Configure Your Site's Settings**: Add the GA4 Measurement ID to your site's settings as described in the [Config Guide]({% post_url 2021-08-02-config-guide %}#-google-analytics).
 
 By following these steps, you'll be able to start tracking user interactions on your AMP pages with GA4.
+
+## 🌟 Registering Custom Parameter in GA4
+
+### 🌐 Cache vs. Non-Cache Analysis
+
+To gain a deeper understanding of how users interact with AMP pages served from the cache versus your own domain, you need to register the custom parameter `ampHost` in your Google Analytics 4 (GA4) property. Follow these steps to set it up:
+
+1. Go to your GA4 property in the Google Analytics dashboard.
+2. Navigate to the "Admin" section.
+3. Under the "Property" column, click on "Custom Definitions".
+4. Click on "Create Custom Dimension".
+5. Enter `ampHost` as the name and select the appropriate scope (e.g., Event).
+6. Save the custom dimension.
+
+By following these steps, you will have successfully registered the custom parameter `ampHost` in your GA4 property, enabling you to track where your AMP page is served.
+
+For more detailed instructions, you can refer to the [Google Analytics 4 documentation](https://support.google.com/analytics/answer/13707678?hl=en) and this [Stack Overflow page](https://stackoverflow.com/questions/76622349/how-is-the-configuration-of-google-analytics-4-with-amp).
 
 ## ✨ Supported Features
 
