@@ -5,7 +5,7 @@
                It includes event triggers for video play, pause, progress, and completion, as
                well as tracking for anchor clicks leading to external sites.
   Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
-  Date: 2024-11-23
+  Date: 2024-11-28
   Notes:
     - This configuration leverages AMP's `<amp-analytics>` component integrated with Google Tag
       (gtag) for enhanced tracking capabilities.
@@ -30,7 +30,9 @@
       "gtag_id": "{{ site.ga4 }}",
       "config": {
         "{{ site.ga4 }}": { "groups": "default" }
-      }
+      },{%- if jekyll.environment == 'development' %}
+      "debug_mode": true,{% endif %}
+      "ampHost": "${ampdocHost}"
     },
     "triggers": {
       "trackAnchorClicks": {
