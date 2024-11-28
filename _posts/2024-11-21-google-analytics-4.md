@@ -33,7 +33,7 @@ To set up GA4 with your AMP pages, follow these steps:
 
 By following these steps, you'll be able to start tracking user interactions on your AMP pages with GA4.
 
-## 🌟 Registering Custom Parameter in GA4
+## ⚙️ Advanced Configuration in GA4 <span>v3.2</span>{:.badge.badge-success}
 
 ### 🌐 Cache vs. Non-Cache Analysis
 
@@ -49,6 +49,21 @@ To gain a deeper understanding of how users interact with AMP pages served from 
 By following these steps, you will have successfully registered the custom parameter `ampHost` in your GA4 property, enabling you to track where your AMP page is served.
 
 For more detailed instructions, you can refer to the [Google Analytics 4 documentation](https://support.google.com/analytics/answer/13707678?hl=en) and this [Stack Overflow page](https://stackoverflow.com/questions/76622349/how-is-the-configuration-of-google-analytics-4-with-amp).
+
+### 🚧 Filtering Out Developer Traffic
+
+To ensure the accuracy of your analytics data, it's important to filter out activity from developers who use debug mode. This prevents their activity from appearing in your reports, allowing you to focus on real user interactions. Follow these steps to set up a filter for developer traffic in GA4:
+
+1. Go to your GA4 property in the Google Analytics dashboard.
+2. Navigate to the "Admin" section.
+3. Under "Property", click "Data Filters".
+4. Click "Create Filter".
+5. Choose "Developer Traffic", select "Exclude", and choose the filter state: Testing, Active, or Inactive.
+6. Click "Create" to save the filter.
+
+When you activate the data filter, Google Analytics will filter out any data collected from users when debug mode is enabled. This allows you to test in your property without disrupting the data in your reports.
+
+For more details, refer to the [Google Analytics 4 documentation](https://support.google.com/analytics/answer/13296662?hl=en).
 
 ## ✨ Supported Features
 
