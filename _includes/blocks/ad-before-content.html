@@ -3,6 +3,7 @@
 <amp-ad width="100vw" height="200"
     {%- if site.consent == true %}
       data-block-on-consent-purposes="advertising"
+      data-npa-on-unknown-consent=true
     {% endif -%}
     type="adsense"
     data-ad-client="{{ site.adsense.client_id }}"
