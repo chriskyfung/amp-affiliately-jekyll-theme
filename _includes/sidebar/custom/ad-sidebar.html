@@ -10,13 +10,13 @@
     data-ad-client="{{ site.adsense.client_id }}"
     data-ad-slot="{{ site.adsense.ad_slot.sidebar }}"
     data-auto-format="rspv"
-    {%- unless jekyll.environment == 'production' -%}
-    data-adtest="on"
-    {%- endunless -%}
+    {%- if jekyll.environment != 'production' -%}
+      data-adtest="on"
+    {%- endif -%}
     data-full-width>
     <div overflow></div>
     <div placeholder>Loading ...</div>
     <div fallback>No ad for you</div>
   </amp-ad>
   {%- endif -%}
-</div>
+</div>  

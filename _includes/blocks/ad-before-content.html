@@ -8,9 +8,9 @@
     data-ad-client="{{ site.adsense.client_id }}"
     data-ad-slot="{{ site.adsense.ad_slot.before_content }}"
     data-auto-format="rspv"
-    {%- unless jekyll.environment == 'production' -%}
-    data-adtest="on"
-    {%- endunless -%}
+    {%- if jekyll.environment != 'production' -%}
+      data-adtest="on"
+    {%- endif -%}
     data-full-width
     noloading>
   <div overflow=""></div>
