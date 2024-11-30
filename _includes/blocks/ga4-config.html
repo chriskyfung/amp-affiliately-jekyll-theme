@@ -47,7 +47,8 @@
           "method": "Google",
           "link_url": "${eventLabel}",
           "outbound": true
-        }{%- if include.yt_selectors %}
+        }
+      {%- if include.yt_selectors %}
       },
       "videoPlay": {
         "on": "video-play",
@@ -110,7 +111,8 @@
           "video_provider": "youtube",
           "video_title": "${videoTitle}",
           "video_url": "${videoUrl}"
-        }{% endif %}
+        }
+      {%- endif %}
       }
     }
   }
