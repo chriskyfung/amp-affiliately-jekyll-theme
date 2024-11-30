@@ -122,6 +122,7 @@
     <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}"
       {%- if site.consent == true %}
         data-block-on-consent-purposes="advertising"
+        data-npa-on-unknown-consent=true
       {% endif -%}
       {%- if jekyll.environment != 'production' -%}
         data-adtest="on"

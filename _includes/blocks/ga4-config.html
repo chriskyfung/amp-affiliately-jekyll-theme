@@ -29,9 +29,13 @@
     "vars": {
       "gtag_id": "{{ site.ga4 }}",
       "config": {
-        "{{ site.ga4 }}": { "groups": "default" }
-      },{%- if jekyll.environment != 'production' %}
-      "debug_mode": true,{% endif %}
+        "{{ site.ga4 }}": {
+          {%- if jekyll.environment != 'production' %}
+          "debug_mode": true,
+          {%- endif %}
+          "groups": "default"
+        }
+      },
       "ampHost": "${ampdocHost}"
     },
     "triggers": {
@@ -43,7 +47,8 @@
           "method": "Google",
           "link_url": "${eventLabel}",
           "outbound": true
-        }{%- if include.yt_selectors %}
+        }
+      {%- if include.yt_selectors %}
       },
       "videoPlay": {
         "on": "video-play",
@@ -106,7 +111,8 @@
           "video_provider": "youtube",
           "video_title": "${videoTitle}",
           "video_url": "${videoUrl}"
-        }{% endif %}
+        }
+      {%- endif %}
       }
     }
   }
