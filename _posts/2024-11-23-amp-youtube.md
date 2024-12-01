@@ -2,22 +2,21 @@
 layout: post
 title: Using AMP YouTube Components
 date: 2024-11-23 21:30 +0800
-category: [feature]
-tags: [youtube]
+last_modified_at: 2024-12-01 11:12 +0800
+category:
+  - feature
+tags:
+  - youtube
 permalink: /using-amp-youtube/
-image: 
-   path: /assets/images/youtube-6949586.svg
+image:
+  path: /assets/images/youtube-6949586.svg
+  width: "730"
+  height: "431"
 amp:
   youtube: true
 css:
   badge: true
   syntax: true
-  custom: >-
-    table { font-size: .95rem; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; }
-    .box { border: 1px solid #e3edf3; padding: 1rem; }
-    .plaintext { color: mediumseagreen; }
 excerpt: The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.
 ---
 
@@ -28,8 +27,14 @@ This Jekyll theme integrates AMP (Accelerated Mobile Pages) components to enhanc
 ## Features
 
 - **Responsive Video Embedding**: The `<amp-youtube>` component automatically adjusts to different screen sizes, ensuring that videos are displayed optimally on all devices.
+- **Focused User Experience**: We've set the [`rel=0`][rel=0] parameter to the YouTube Player ensures that related videos shown after the video ends will come from the same channel, maintaining a focused user experience.
+- **Enhanced Tracking**: <span>v3.1</span>{:.badge.badge-success} With Google Analytics 4 (GA4) integration, you can track user interactions with your YouTube videos, including play, pause, and completion events. For more details, see the [Analytics Integration](#analytics-integration) section.
 - **Playlist Support**: You can embed individual YouTube videos or entire playlists, providing flexibility in content presentation.
-- **Enhanced Tracking**: The theme includes configuration for [Google Analytics 4 (GA4)][GA4] to track user interactions with YouTube videos, such as play, pause, and completion events.
+- **Privacy-Enhanced Mode**: <span>v3.2</span>{:.badge.badge-success} We've added the [`omit`][omit attribute] attribute to the `<amp-youtube>` component to improve user privacy. This attribute prevents tracking when videos are embedded, offering a more privacy-focused experience.
+- **Fallback Support**: For browsers that do not support the AMP YouTube player, a fallback message is provided, allowing users to watch the video directly on YouTube.
+
+[omit attribute]: https://amp.dev/documentation/components/amp-youtube#credentials-(optional)
+[rel=0]: https://developers.google.com/youtube/player_parameters#rel
 
 ## Usage
 
@@ -88,7 +93,9 @@ To embed a YouTube video, use the `youtube.html` template in your project. You c
 
 ## Analytics Integration
 
-The theme supports [Google Analytics 4 (GA4) for tracking video interactions]. The `site_content_postproc.html` template processes AMP YouTube components to configure GA4 tracking. It extracts video IDs from `<amp-youtube>` tags and constructs CSS selectors for these components, enabling detailed analytics on video interactions.
+The theme supports [Google Analytics 4 (GA4) for tracking video interactions][GA4 video tracking]. The `site_content_postproc.html` template processes AMP YouTube components to configure GA4 tracking. It extracts video IDs from `<amp-youtube>` tags and constructs CSS selectors for these components, enabling detailed analytics on video interactions.
+
+[GA4 video tracking]: {% post_url 2024-11-21-google-analytics-4 %}#%EF%B8%8F-video-engagement
 
 ### Tracked Events
 
@@ -97,16 +104,4 @@ The theme supports [Google Analytics 4 (GA4) for tracking video interactions]. T
 - **Video Progress**: Tracks progress milestones at 10%, 25%, 50%, 75%, and 100%.
 - **Video Completion**: Triggered when a video finishes playing.
 
-## Fallback Support
-
-For browsers that do not support the AMP YouTube player, a fallback message is provided, allowing users to watch the video directly on YouTube.
-
-## Integration Notes
-
-- Ensure that the AMP framework is properly integrated into your project to utilize the `<amp-youtube>` component.
-- The `data-param-rel="0"` attribute is used to prevent related videos from showing after the video ends, maintaining a focused user experience.
-
 By leveraging the AMP YouTube component, this theme provides a robust solution for embedding videos that are fast, responsive, and analytics-ready, enhancing both performance and user engagement.
-
-[GA4]: {% post_url 2024-11-21-google-analytics-4 %}
-[GA4 video tracking]: {% post_url 2024-11-21-google-analytics-4 %}#%EF%B8%8F-video-engagement
