@@ -44,7 +44,7 @@
 {%- assign data_vars = ' data-vars-video-title="' | append: video_label | append: '"' -%}
 {%- assign data_vars = data_vars | append: ' data-vars-video-url="' | append: video_url | append: '"' -%}
   
-{{ include.indent }}<amp-youtube id="yt-{{- include.id -}}" width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{ attr_title }}{{ data_vars }} data-param-rel="0">
+{{ include.indent }}<amp-youtube id="yt-{{- include.id -}}" width="480" height="270" layout="responsive" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{ attr_title }}{{ data_vars }} data-param-rel="0" omit>
   <div fallback>
     <p>This browser does not support the YouTube video player. <a href="{{- video_url -}}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
