@@ -29,7 +29,7 @@
     {%- if layout.amp.iframe or page.amp.iframe or true -%}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {%- endif -%}
-    {%- if site.consent == true or layout.amp.script or page.amp.script -%}
+    {%- if site.consent == true and site.sirdata == nil or layout.amp.script or page.amp.script -%}
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
     {%- endif -%}
     {%- if page.amp.youtube -%}
@@ -62,7 +62,7 @@
       {%- endif -%}
     {%- endif -%}
 
-    {%- if jekyll.environment == 'production' and site.amp_optimizer != true and site.script_hash.consent_gsc -%}
+    {%- if jekyll.environment == 'production' and site.amp_optimizer != true and site.script_hash.consent_gsc and site.sirdata == nil -%}
     <meta name="amp-script-src" content="{{ site.script_hash.consent_gsc }}">
     {%- endif -%}
     {%- if page.custom_head -%}
@@ -128,7 +128,7 @@
     {%- endif -%}
     {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
     <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}"
-      {%- if site.consent == true %}
+      {%- if site.consent == true and site.sirdata == nil %}
         data-block-on-consent-purposes="advertising"
         data-npa-on-unknown-consent=true
       {% endif -%}

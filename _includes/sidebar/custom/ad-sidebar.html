@@ -3,7 +3,7 @@
   {%- if site.adsense -%}
   <!-- github_resp_sidebar -->
   <amp-ad width="100vw" height="292"
-    {%- if site.consent == true %}
+    {%- if site.consent == true and site.sirdata == nil %}
       data-block-on-consent-purposes="advertising"
       data-npa-on-unknown-consent=true
     {% endif -%}
