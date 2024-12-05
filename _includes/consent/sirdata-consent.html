@@ -1,6 +1,7 @@
 <amp-consent id="consent" layout="nodisplay" type="sirdata">
   <script type="application/json">
       {
+          "consentRequired": true,
           "postPromptUI": "promptConsentUI",
           "clientConfig": {"type": "TCF_V2", "info": {"pa": {{ site.sirdata.partner_id }}, "c": "{{- site.sirdata.config_id -}}"}}
       }
