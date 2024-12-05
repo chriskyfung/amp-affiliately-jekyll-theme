@@ -10,6 +10,10 @@
     {%- if site.consent == true -%}
     <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
     {%- endif -%}
+    {%- if site.consent == true and site.sirdata.partner_id and site.sirdata.config_id -%}
+    <meta name="amp-consent-blocking" content="amp-analytics,amp-ad,amp-auto-ads">
+    {%- endif -%}
+
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
     <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
@@ -110,7 +114,11 @@
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
     {%- if site.consent == true -%}
-    {% include consent/granular-user-consent.html %}
+      {%- if site.sirdata.partner_id and site.sirdata.config_id -%}
+        {% include consent/sirdata-consent.html %}
+      {%- else -%}
+        {% include consent/granular-user-consent.html %}
+      {%- endif -%}
     {%- endif -%}
     
     {%- if site.gtm -%}

@@ -1,0 +1,14 @@
+<amp-consent id="consent" layout="nodisplay" type="sirdata">
+  <script type="application/json">
+      {
+          "postPromptUI": "promptConsentUI",
+          "clientConfig": {"type": "TCF_V2", "info": {"pa": {{ site.sirdata.partner_id }}, "c": "{{- site.sirdata.config_id -}}"}}
+      }
+  </script>
+</amp-consent>
+
+<div id="post-consent-ui">
+  <button id="promptConsentUI" class="btn btn-primary" on="tap:consent.prompt(consent=sirdata)"><i
+      class="fas fa-cookie-bite"></i>
+  </button>
+</div>
