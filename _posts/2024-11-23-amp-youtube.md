@@ -2,7 +2,7 @@
 layout: post
 title: Using AMP YouTube Components
 date: 2024-11-23 21:30 +0800
-last_modified_at: 2024-12-01 11:12 +0800
+last_modified_at: 2024-12-05 10:12 +0800
 category:
   - feature
 tags:
@@ -30,10 +30,10 @@ This Jekyll theme integrates AMP (Accelerated Mobile Pages) components to enhanc
 - **Focused User Experience**: We've set the [`rel=0`][rel=0] parameter to the YouTube Player ensures that related videos shown after the video ends will come from the same channel, maintaining a focused user experience.
 - **Enhanced Tracking**: <span>v3.1</span>{:.badge.badge-success} With Google Analytics 4 (GA4) integration, you can track user interactions with your YouTube videos, including play, pause, and completion events. For more details, see the [Analytics Integration](#analytics-integration) section.
 - **Playlist Support**: You can embed individual YouTube videos or entire playlists, providing flexibility in content presentation.
-- **Privacy-Enhanced Mode**: <span>v3.2</span>{:.badge.badge-success} We've added the [`omit`][omit attribute] attribute to the `<amp-youtube>` component to improve user privacy. This attribute prevents tracking when videos are embedded, offering a more privacy-focused experience.
+- **Privacy-Enhanced Mode**: <span>v3.2</span>{:.badge.badge-success} We've added the [`credentials="omit"`][credentials=omit] attribute to the `<amp-youtube>` component to improve user privacy. This attribute prevents tracking when videos are embedded, offering a more privacy-focused experience.
 - **Fallback Support**: For browsers that do not support the AMP YouTube player, a fallback message is provided, allowing users to watch the video directly on YouTube.
 
-[omit attribute]: https://amp.dev/documentation/components/amp-youtube#credentials-(optional)
+[credentials=omit]: https://amp.dev/documentation/components/amp-youtube#credentials-(optional)
 [rel=0]: https://developers.google.com/youtube/player_parameters#rel
 
 ## Usage
