@@ -2,6 +2,68 @@
 
 <!-- markdownlint-disable MD024 -->
 
+## v3.2.0 (2024-12-06)
+
+### 🐛 Fixes
+
+- Improved link modification logic for outbound links in `postproc-content.html`.
+- Corrected filename typo for `jekyll-highlight-tags.json`.
+- Fixed GA4 configuration logic in `ga4-config.html`.
+- Corrected conditional logic for GA4 video tracking.
+- Resolved AMP validation error for `<amp-youtube>` component by using the correct `credentials="omit"` attribute.
+- Skipped redirect pages during AMP validation.
+- Corrected image registration logic in `external.js`.
+
+### ✨ Features
+
+- Streamlined anchor link addition for headings (`h2`, `h3`, `h4`).
+- Added custom parameter `ampHost` to GA4 for AMP pages.
+- Enabled GA4 debug mode in development environments.
+- Added non-personalized ads fallback for unknown consent status.
+
+### 📖 Documentation
+
+- Added new post `2024-11-21-google-analytics-4.md` for GA4 features in AMP:
+  - Setup instructions, supported features, event tracking, and debugging AMP analytics.
+- Enhanced comments in GA4 and post-processing templates:
+  - Updated `_includes/blocks/ga4-config.html`, `_includes/blocks/postproc-content.html`, and `_includes/blocks/site_content_postproc.html`.
+- Added comprehensive comments to `granular-user-consent.html`.
+- Enhanced comments in navigation components:
+  - Updated `_includes/main-nav/navigation.html`, `_includes/youtube.html`, `_includes/main-nav/local-menu.html`, and `_includes/main-nav/global-dropdown.html`.
+- Added new post `_posts/2024-11-23-amp-youtube.md`.
+- Updated posts for media embedding instructions.
+- Advanced configuration and developer traffic filtering for GA4.
+- Snippet usage instructions and setup guide for Front Matter CMS.
+
+### ♻️ Refactors
+
+- Enhanced readability and maintainability of post-processing content.
+- Optimized HTML layout for production environment.
+- Streamlined ad rendering for non-production environments.
+- Enabled GA4 debug mode for non-production environments.
+- Updated GA4 configuration for YouTube and outbound link tracking.
+- Removed unused Google Tag Manager (GTM) IDs from configuration files.
+
+### 🛠️ Chores
+
+- Updated Jekyll scripts for live reload.
+- Bumped dependencies:
+  - Updated gems: `liquid`, `webrick`, `addressable`, `public_suffix`, `faraday`, `faraday-net_http`, `json`, `logger`, `net-http`, `uri`, `concurrent-ruby`, `i18n`, `jekyll-github-metadata`, `octokit`, `kramdown`, `listen`, `rb-inotify`, `tzinfo`, and `tzinfo-data`.
+- Updated media post, references, and YouTube embedding instructions.
+- Updated `frontmatter.json` for enhanced configuration and content management:
+  - Added `layout`, `author`, SEO description fields, hidden fields for advanced content management, AMP components, custom HTML header, enhanced featured image field, and removed the `draft` field.
+  - Added permalink placeholder, slug template for accurate preview URLs, `redirect_from` field, and external script for custom card image.
+  - Enhanced descriptions and visibility of fields.
+  - Added `clearEmpty` property for content types.
+  - Added comments and `redirect_to` fields for better content management.
+  - Improved image rendering logic in `external.js`.
+- Added detailed snippets for AMP multimedia, Jekyll, and kramdown syntax.
+- Enhanced snippet usage instructions and setup guide.
+- Updated image assets and metadata references for better organization and consistency.
+- Updated `package.json` build scripts.
+- Added and removed VSCode extensions.
+- Enhanced Git Graph settings in VSCode for better branch management and visibility.
+
 ## v3.1.0 (2024-11-18)
 
 ### 🐛 Fixes
