@@ -25,6 +25,10 @@
       "glob": "remotes/origin/[^g][^h]*[^s]"
     },
     {
+      "name": "Branches",
+      "glob": "*/*"
+    },
+    {
       "name": "Stashes",
       "glob": "stash"
     },
@@ -36,8 +40,7 @@
   "git-graph.repository.onLoad.showSpecificBranches": [
     "master",
     "remotes/origin/master",
-    "--glob=heads/[^g][^h]*[^s]",
-    "--glob=remotes/origin/[^g][^h]*[^s]",
+    "--glob=*/*",
     "--glob=stash",
     "--glob=tags/*"
   ],
