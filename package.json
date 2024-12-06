@@ -6,7 +6,8 @@
     "convert:css2scss": "bash ./css_to_scss.sh",
     "jekyll": "bundle exec jekyll serve --livereload",
     "jekyll:trace": "bundle exec jekyll serve --trace --livereload",
-    "build": "bundle exec jekyll build && gulp build",
+    "build": "bundle exec jekyll build && npx gulp build",
+    "build:prod": "npx cross-env JEKYLL_ENV=production bundle exec jekyll build && npx gulp build",
     "test": "npx gulp validate",
     "watch": "npx gulp"
   },
