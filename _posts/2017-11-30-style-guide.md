@@ -47,7 +47,7 @@ excerpt: The demos for HTML styling and Markdown output as it appears in the bro
 
 <h3>Image</h3>
 
-{% include picture.html source="assets" img="shiva.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
+{% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
 
 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 
@@ -394,7 +394,7 @@ Example:
 {% capture callout1 %}
   _PUT YOUR MARKDOWN CONTENT HERE..._
 
-  {% include picture.html source="assets" img="shiva.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
+  {% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
 
   - item 1
   - item 2
