@@ -48,18 +48,21 @@ function validate() {
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
           const validator = await amphtmlValidator.getInstance();
-          const result = validator.validateString(file.contents.toString());
-          if (result.status !== 'PASS') console.error(`\n${result.status}: ${file.relative}`);
-          // (result.status === 'PASS' ? console.log : console.error)(result.status);
-          for (let ii = 0; ii < result.errors.length; ii++) {
-            const error = result.errors[ii];
-            let msg =
-              'line ' + error.line + ', col ' + error.col + ': ' + error.message;
-            if (error.specUrl !== null) {
-              msg += ' (see ' + error.specUrl + ')';
+          const contents_in_string = `${file.contents.toString()}`;
+          if (contents_in_string.indexOf('<title>Redirecting&hellip;</title>') === -1) {
+            const result = validator.validateString(contents_in_string);
+            if (result.status !== 'PASS') console.error(`\n${result.status}: ${file.relative}`);
+            // (result.status === 'PASS' ? console.log : console.error)(result.status);
+            for (let ii = 0; ii < result.errors.length; ii++) {
+              const error = result.errors[ii];
+              let msg =
+                'line ' + error.line + ', col ' + error.col + ': ' + error.message;
+              if (error.specUrl !== null) {
+                msg += ' (see ' + error.specUrl + ')';
+              }
+              (error.severity === 'ERROR' ? console.error : console.warn)(msg);
             }
-            (error.severity === 'ERROR' ? console.error : console.warn)(msg);
-          }
+          };
         }
         cb(null, file);
       })
@@ -74,7 +77,7 @@ function minifyCSS() {
     .pipe(dest('./_includes/css/'));
 }
 
-export default function() {
+export default function () {
   watch(['./_includes/css/*.css', '!**/*.min.css'], minifyCSS);
 }
 
