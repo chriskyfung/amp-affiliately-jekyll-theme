@@ -3,7 +3,18 @@
       {
           "consentRequired": true,
           "postPromptUI": "promptConsentUI",
-          "clientConfig": {"type": "TCF_V2", "info": {"pa": {{ site.sirdata.partner_id }}, "c": "{{- site.sirdata.config_id -}}"}}
+          "clientConfig": {
+            "type": "TCF_V2",
+            "info": {
+              "pa": {{ site.sirdata.partner_id }},
+              "c": "{{- site.sirdata.config_id -}}"
+            },
+            "cmp": {
+              "theme": {
+                "noConsentButton": "refuse"
+              }
+            }
+          }
       }
   </script>
 </amp-consent>
