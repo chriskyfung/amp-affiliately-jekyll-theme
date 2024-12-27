@@ -11,7 +11,7 @@
 layout: post
 title:  "Is Intelligence Enough"
 author: sal
-category: sample
+categories: [sample]
 image: 
     path: /assets/images/5.jpg
     height: 383

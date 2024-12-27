@@ -3,7 +3,7 @@ layout: post
 title: Post-Processing
 date: 2021-08-15 23:15 +0800
 last_modified_at: 2021-08-22 09:41 +0800
-category: [feature]
+categories: [feature]
 tags: [styles, demo]
 permalink: /post-processing/
 image: 

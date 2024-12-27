@@ -11,7 +11,7 @@
 layout: post-left-sidebar
 title:  "Red Riding Hood"
 author: sal
-category: sample
+categories: [sample]
 tag: [left sidebar]
 image: 
     path: /assets/images/3.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: Footer Configuration
 date: 2024-11-05 16:01 +0800
-category: [doc]
+categories: [doc]
 tags: [_config]
 permalink: /footer-configuration/
 image: 

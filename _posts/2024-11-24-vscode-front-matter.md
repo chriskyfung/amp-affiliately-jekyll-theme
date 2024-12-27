@@ -9,7 +9,7 @@ image:
   path: /assets/images/map-3314277.svg
   width: "730"
   height: "431"
-category:
+categories:
   - doc
 tags:
   - CMS

@@ -10,7 +10,7 @@
 
 layout: post
 title:  "We all wait for summer"
-category: sample
+categories: [sample]
 image: 
     path: /assets/images/1.jpg
     height: 383

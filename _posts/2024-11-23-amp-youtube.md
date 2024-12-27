@@ -3,7 +3,7 @@ layout: post
 title: Using AMP YouTube Components
 date: 2024-11-23 21:30 +0800
 last_modified_at: 2024-12-05 10:12 +0800
-category:
+categories:
   - feature
 tags:
   - youtube
