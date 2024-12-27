@@ -3,7 +3,7 @@ layout: post
 title: Front Matter Guide
 date: 2021-07-31 12:05 +0800
 last_modified_at: 2022-02-10 22:02 +0800
-category: [doc]
+categories: [doc]
 tags: [front matter, styles, AMP]
 permalink: /front-matter-guide/
 slug: " "
@@ -38,7 +38,7 @@ slug: index.html
 title: My first blog post
 date: 2020-01-31 07:30 +0000
 last_modified_at: 2024-01-16 12:01 +0800
-category: [category1, category2]
+categories: [category1, category2]
 tags: [tag1, tag2, tag3]
 excerpt: This is the first blog post for my Jekyll site.
 ---

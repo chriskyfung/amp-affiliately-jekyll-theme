@@ -2,7 +2,7 @@
 layout: post
 title: Responsive Web Design
 date: 2021-07-20 10:47 +0800
-category: [feature]
+categories: [feature]
 tags: [demo]
 permalink: /responsive-web-design/
 redirect_from: [/device-look/]

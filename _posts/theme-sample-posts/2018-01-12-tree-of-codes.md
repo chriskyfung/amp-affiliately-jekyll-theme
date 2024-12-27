@@ -11,7 +11,7 @@
 layout: post
 title:  "Tree of Codes"
 author: sal
-category: sample
+categories: [sample]
 image:
     path: /assets/images/2.jpg
     height: 383

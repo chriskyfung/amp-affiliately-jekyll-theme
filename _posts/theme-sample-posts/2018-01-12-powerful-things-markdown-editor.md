@@ -11,7 +11,7 @@
 layout: post
 title:  "Powerful things you can do with the Markdown editor"
 author: sal
-category: sample
+categories: [sample]
 tags: [markdown, youtube]
 image: 
     path: /assets/images/4.jpg
