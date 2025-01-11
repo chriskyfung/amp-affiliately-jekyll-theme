@@ -29,6 +29,7 @@
         in the Jekyll environment to enable proper functioning of the consent system.
 {%- endcomment -%}
 
+{%- if jekyll.environment != 'development' or site.consent_preview != false -%}
 
 <!-- Initialize state -->
 <amp-state id="consentState">
@@ -170,6 +171,8 @@
   </div>
 
 </amp-consent>
+
+{%- endif -%}
 
 <div id="post-consent-ui">
   <button class="btn btn-primary" on="tap:AMP.setState({}),site-consent.prompt"><i
