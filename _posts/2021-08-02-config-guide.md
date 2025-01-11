@@ -203,8 +203,8 @@ nav:
 
 #### <i class="fas fa-door-open fa-fw"></i> Modify External Links To Open In New Tab
 
-|      Attribute | Description                                                                                                                                                                                                                 |
-| -------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      Attribute | Description                                                                                                                                                                                                                   |
+| -------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target_blank` | Set `true`{:.green} to insert `rel="noopener noreferrer"` and `target="_blank"` to each `<a>` element that links to an [outbound URL] <i class="fas fa-external-link-alt"></i> inside posts' content.<br> _Default:_ `false`. |
 
 [outbound URL]: {% post_url 2021-08-15-postprocessing %}#set-external-links-to-open-in-a-new-tab-v20
@@ -268,16 +268,17 @@ By following this guide, you can significantly enhance your site's navigation an
 
 ### Cookie Consent <span>v2.9</span>{:.badge.badge-success}
 
-|          Attribute | Description                                                                                                   |
-| -----------------: | ------------------------------------------------------------------------------------------------------------- |
-|          `consent` | Set `true`{:.green} to enable the cookie consent UI.<br> _Default:_ `false`.                                  |
-| `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}. |
+|          Attribute | Description                                                                                                                                      |
+| -----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+|          `consent` | Set `true`{:.green} to enable the cookie consent UI.<br> _Default:_ `false`.                                                                     |
+|  `consent_preview` | <span>v3.3</span>{:.badge.badge-success}<br>Set `false` to disable the cookie consent in development enviroment.<br> _Default:_ `true`{:.green}. |
+| `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}.                                    |
 
 |       Attribute | Property      | Description                                                                                                                                         |
 | --------------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `amp_optimizer` |               | <span>v2.9.1</span>{:.badge.badge-success}<br> Set `true`{:.green} if you run AMP Optimizer after building the Jekyll site.<br> _Default_: `false`. |
 |   `script_hash` |               | <span>v2.9.1</span>{:.badge.badge-success}                                                                                                          |
-|                 | `consent_gsc` | The hash for the `get_stored_consentStates` script.<br> 💡 [Calculating the script hash].                                                             |
+|                 | `consent_gsc` | The hash for the `get_stored_consentStates` script.<br> 💡 [Calculating the script hash].                                                          |
 
 [Calculating the script hash]: https://amp.dev/documentation/components/amp-script#calculating-the-script-hash "Documentation: <amp-script> - amp.dev"
 
@@ -325,9 +326,9 @@ defaults:
 
 Google Analytics 4 (GA4) provides robust tracking capabilities to help you understand user interactions on your site. The following attributes and configurations are essential for effectively implementing GA4 with AMP:
 
-|          Attribute | Description                                                                                                             |
-| -----------------: | ----------------------------------------------------------------------------------------------------------------------- |
-|              `ga4` | <span>v2.6.1</span>{:.badge.badge-success}<br> Your (`G-`{:plaintext} ) Measurement ID 💡. [Find your GA4 Measurement ID] |
+| Attribute | Description                                                                                                                |
+| --------: | -------------------------------------------------------------------------------------------------------------------------- |
+|     `ga4` | <span>v2.6.1</span>{:.badge.badge-success}<br> Your (`G-`{:plaintext} ) Measurement ID 💡. [Find your GA4 Measurement ID] |
 
 [Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "GA4 Measurement ID - Analytics Help"
 
@@ -337,9 +338,9 @@ For more information about the use of GA4 in this theme, please refer to our [Go
 
 ##### <i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)
 
-| Attribute | Description                                      |
-| -------: | ------------------------------------------------ |
-| `cse_id`  | Your Search Engine ID 💡 [Find your Google CSE ID] |
+| Attribute | Description                                         |
+| --------: | --------------------------------------------------- |
+|  `cse_id` | Your Search Engine ID 💡 [Find your Google CSE ID] |
 
 [Find your Google CSE ID]: https://support.google.com/programmable-search/answer/12499034 "Search engine ID - Programmable Search Engine Help"
 
