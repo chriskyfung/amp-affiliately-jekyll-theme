@@ -268,10 +268,11 @@ By following this guide, you can significantly enhance your site's navigation an
 
 ### Cookie Consent <span>v2.9</span>{:.badge.badge-success}
 
-|          Attribute | Description                                                                                                   |
-| -----------------: | ------------------------------------------------------------------------------------------------------------- |
-|          `consent` | Set `true`{:.green} to enable the cookie consent UI.<br> _Default:_ `false`.                                  |
-| `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}. |
+|          Attribute | Description                                                                                                                                      |
+| -----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+|          `consent` | Set `true`{:.green} to enable the cookie consent UI.<br> _Default:_ `false`.                                                                     |
+|  `consent_preview` | <span>v3.3</span>{:.badge.badge-success}<br>Set `false` to disable the cookie consent in development enviroment.<br> _Default:_ `true`{:.green}. |
+| `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}.                                    |
 
 |       Attribute | Property      | Description                                                                                                                                         |
 | --------------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
