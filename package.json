@@ -3,13 +3,18 @@
   "description": "AMP Affiliately is an AMP-ready Jekyll theme for your blogs and websites.",
   "version": "3.2.0",
   "scripts": {
-    "convert:css2scss": "bash ./css_to_scss.sh",
+    "install": "bundle install",
+    "start": "npm run jekyll",
     "jekyll": "bundle exec jekyll serve --livereload",
     "jekyll:trace": "bundle exec jekyll serve --trace --livereload",
-    "build": "bundle exec jekyll build && npx gulp build",
-    "build:prod": "npx cross-env JEKYLL_ENV=production bundle exec jekyll build && npx gulp build",
+    "build": "npm run build:jekyll && npm run build:gulp",
+    "build:prod": "npx cross-env JEKYLL_ENV=production npm run build:jekyll && npm run build:gulp",
+    "build:jekyll": "bundle exec jekyll build",
+    "build:gulp": "npx gulp build",
     "test": "npx gulp validate",
-    "watch": "npx gulp"
+    "watch": "npx gulp",
+    "convert": "npm run convert:css2scss",
+    "convert:css2scss": "bash ./css_to_scss.sh"
   },
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
   "repository": {
