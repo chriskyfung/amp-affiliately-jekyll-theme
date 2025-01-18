@@ -44,6 +44,7 @@
     "--glob=stash",
     "--glob=tags/*"
   ],
+  "html.validate.styles": false,
   "markdownlint.config": {
     "MD046": {
       "style": "fenced"
