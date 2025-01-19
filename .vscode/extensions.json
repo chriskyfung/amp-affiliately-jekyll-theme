@@ -2,7 +2,6 @@
   "recommendations": [
     "ginfuru.vscode-jekyll-snippets",
     "eliostruyf.vscode-front-matter",
-    "amphtml.amphtml-validator",
     "catherinekorres.amp-snippets",
     "mervin.markdown-formatter",
     "rohgarg.jekyll-post",
@@ -14,6 +13,7 @@
     "mathiassoeholm.markdown-link-updater",
     "redhat.vscode-yaml",
     "josee9988.minifyall",
-    "janne252.fontawesome-autocomplete"
+    "janne252.fontawesome-autocomplete",
+    "takumii.markdowntable"
   ]
 }
