@@ -15,7 +15,8 @@ categories: [sample]
 tags: [markdown, youtube]
 image: 
     path: /assets/images/4.jpg
-    height: 383
+    width: "730"
+    height: "383"
 amp:
    youtube: true
 ---

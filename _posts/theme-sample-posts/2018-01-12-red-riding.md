@@ -15,7 +15,8 @@ categories: [sample]
 tag: [left sidebar]
 image: 
     path: /assets/images/3.jpg
-    height: 383
+    width: "730"
+    height: "383"
 custom_head: >-
   <meta name="robots" content="noindex, nofollow">
 sitemap: false

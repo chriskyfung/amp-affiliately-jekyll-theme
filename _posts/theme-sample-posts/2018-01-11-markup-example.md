@@ -15,7 +15,8 @@ categories: [sample]
 tags: [markdown]
 image: 
     path: /assets/images/6.jpg
-    height: 383
+    width: "730"
+    height: "383"
 css:
   syntax: true
 ---

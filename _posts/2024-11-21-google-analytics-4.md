@@ -10,8 +10,8 @@ tags:
 permalink: /google-analytics-4/
 image:
   path: /assets/images/analytics-3201151.svg
-  width: "730"
-  height: "431"
+  width: "1920"
+  height: "1080"
 css:
   badge: true
 featured: true

@@ -10,8 +10,8 @@ tags:
 permalink: /using-amp-youtube/
 image:
   path: /assets/images/youtube-6949586.svg
-  width: "730"
-  height: "431"
+  width: "1920"
+  height: "1080"
 amp:
   youtube: true
 css:
