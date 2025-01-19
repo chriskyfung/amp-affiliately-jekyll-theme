@@ -50,6 +50,7 @@
       "style": "fenced"
     }
   },
+  "liquid.engine": "jekyll",
   "liveSassCompile.settings.formats": [
     {
         "format": "expanded",
