@@ -1,0 +1,20 @@
+$schema: https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json
+config:
+  default: true
+  MD013: false
+  MD033: false
+  MD034: false
+  MD046:
+    style: fenced
+  MD049:
+    style: underscore
+gitignore: true
+ignores:
+  - node_modules/
+  - .custom-rules/
+  - .git/
+  - .vscode/
+  - .github/
+  - .husky/
+  - .vscode
+  
