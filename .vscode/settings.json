@@ -49,5 +49,17 @@
     "MD046": {
       "style": "fenced"
     }
-  }
+  },
+  "liveSassCompile.settings.formats": [
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/_includes/css"
+    },
+    {
+        "extensionName": ".min.css",
+        "format": "compressed",
+        "savePath": "/_includes/css"
+    }
+  ]
 }
