@@ -380,6 +380,27 @@ span.post-name a, span.post-read-more a:hover {
   box-shadow: inset 0 -30px 0 #ffe51f, 0 2px 0 #ffe51f;
   text-decoration: none;
 }
+.article-post h1 {
+  font-size: 2.5rem;
+}
+.article-post h2 {
+  font-size: 2rem;
+}
+.article-post h3 {
+  font-size: 1.6875rem;
+}
+.article-post h4 {
+  font-size: 1.375rem;
+}
+.article-post h5 {
+  font-size: 1.1875rem;
+}
+.article-post h6 {
+  font-size: 1.0625rem;
+}
+.article-post img.shadow {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
 
 blockquote {
   border-left: 4px solid #6FD350;
@@ -659,28 +680,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.4;
   margin: 1.5rem 0;
-}
-
-.article-post h1 {
-  font-size: 2.5rem;
-}
-.article-post h2 {
-  font-size: 2rem;
-}
-.article-post h3 {
-  font-size: 1.6875rem;
-}
-.article-post h4 {
-  font-size: 1.375rem;
-}
-.article-post h5 {
-  font-size: 1.1875rem;
-}
-.article-post h6 {
-  font-size: 1.0625rem;
-}
-.article-post img.shadow {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 img {

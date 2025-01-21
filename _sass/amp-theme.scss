@@ -423,6 +423,36 @@ span {
       text-decoration: none;
     }
   }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.6875rem;
+  }
+  
+  h4 {
+    font-size: 1.375rem;
+  }
+  
+  h5 {
+    font-size: 1.1875rem;
+  }
+  
+  h6 {
+    font-size: 1.0625rem;
+  }
+
+  img.shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
 }
 
 blockquote {
@@ -729,38 +759,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.4;
   margin: 1.5rem 0;
-}
-
-.article-post {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.6875rem;
-  }
-  
-  h4 {
-    font-size: 1.375rem;
-  }
-  
-  h5 {
-    font-size: 1.1875rem;
-  }
-  
-  h6 {
-    font-size: 1.0625rem;
-  }
-  
-  img.shadow {
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  }
 }
 
 img {
