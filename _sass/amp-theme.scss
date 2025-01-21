@@ -410,8 +410,8 @@ span {
 
 .article-post {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.0625rem;
+  line-height: 1.6;
 
   a {
     color: inherit;
@@ -728,16 +728,34 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
   font-weight: 500;
   line-height: 1.4;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin: 1.5rem 0;
 }
 
 .article-post {
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  h1 {
+    font-size: 2.5rem;
   }
 
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.6875rem;
+  }
+  
+  h4 {
+    font-size: 1.375rem;
+  }
+  
+  h5 {
+    font-size: 1.1875rem;
+  }
+  
+  h6 {
+    font-size: 1.0625rem;
+  }
+  
   img.shadow {
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
