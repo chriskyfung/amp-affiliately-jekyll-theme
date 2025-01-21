@@ -6,3 +6,23 @@
     left: 0;
   }
 }
+
+#toc {
+  font-weight: bold;
+}
+
+#markdown-toc {  
+  ul {
+    margin: 0;
+  }
+
+  li {
+    margin-left: -.5em;
+    font-size: .9375rem;
+  }
+
+  li::marker {
+    color: #483aff;
+    font-size: .875rem;
+  }
+}
