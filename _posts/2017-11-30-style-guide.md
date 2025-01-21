@@ -2,17 +2,27 @@
 layout: post
 title: Styles
 date: 2017-11-30 04:00:00
-last_modified_at: 2021-08-02 11:14 +0800
+last_modified_at: 2025-01-21 15:01 +0800
 author: Peter
-categories: [feature]
-tags: [markdown, styles, demo]
+categories:
+  - feature
+tags:
+  - markdown
+  - styles
+  - demo
 permalink: /style-guide/
-redirect_from: [/2017/11/30/style-guide]
+redirect_from:
+  - /2017/11/30/style-guide
 amp:
   youtube: true
 css:
   syntax: true
 excerpt: The demos for HTML styling and Markdown output as it appears in the browser.
+image:
+  path: /assets/images/write-2160925.svg
+  width: "730"
+  height: "411"
+  hide: true
 ---
 
 <p>This shows how you can use html styling to achieve your hopes.</p>
@@ -21,17 +31,25 @@ excerpt: The demos for HTML styling and Markdown output as it appears in the bro
 
 <hr />
 
-<h1 id="heading1">Heading 1</h1>
-
 <h2 id="heading2">Heading 2</h2>
+
+font-size: 2rem `/* default 32 px */`
 
 <h3 id="heading3">Heading 3</h3>
 
+font-size: 1.6875rem `/* default 27 px */`
+
 <h4 id="heading4">Heading 4</h4>
+
+font-size: 1.375rem `/* default 22 px */`
 
 <h5 id="heading5">Heading 5</h5>
 
+font-size: 1.1875rem `/* default 19 px */`
+
 <h6 id="heading6">Heading 6</h6>
+
+font-size: 1.0625rem `/* default 17 px */`
 
 <hr />
 
@@ -392,23 +410,23 @@ A shortcode for creating a colored box, e.g. tips/memo.
 Example:
 
 {% capture callout1 %}
-  _PUT YOUR MARKDOWN CONTENT HERE..._
+_PUT YOUR MARKDOWN CONTENT HERE..._
 
-  {% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
+{% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
 
-  - item 1
-  - item 2
-  - item 3
+- item 1
+- item 2
+- item 3
 
-  1. first
-  2. second
-  3. thrid
+1. first
+2. second
+3. thrid
 
-  > blockquote
+> blockquote
 
-  ```js
-  Code block
-  ```
+```js
+Code block
+```
 {% endcapture %}
 
 {% include callout.html content=callout1 %}
