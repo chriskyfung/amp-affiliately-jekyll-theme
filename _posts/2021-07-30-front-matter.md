@@ -2,22 +2,25 @@
 layout: post
 title: Front Matter Guide
 date: 2021-07-31 12:05 +0800
-last_modified_at: 2022-02-10 22:02 +0800
-categories: [doc]
-tags: [front matter, styles, AMP]
+last_modified_at: 2025-01-22 17:01 +0800
+categories:
+  - doc
+tags:
+  - front matter
+  - styles
+  - AMP
 permalink: /front-matter-guide/
 slug: " "
-redirect_from: [/front-matter/]
-image: 
-   path: /assets/images/frontend-4342425_730.png
+redirect_from:
+  - /front-matter/
+image:
+  path: /assets/images/frontend-4342425_730.png
+  width: "1280"
+  height: "721"
 css:
   badge: true
   syntax: true
-  custom: >-
-    table { font-size: .95rem; margin-bottom: 1.5rem }
-    tr:nth-child(odd) { backgroud-color: #e3edf3 }
-    td { padding: .5em }
-    .plaintext { color: mediumseagreen; }
+  custom: "table { font-size: .95rem; margin-bottom: 1.5rem } tr:nth-child(odd) { backgroud-color: #e3edf3 } td { padding: .5em } .plaintext { color: mediumseagreen; } .quote-deprecated { border-color: #999999; }"
 excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
 featured: true
 ---
@@ -219,54 +222,36 @@ sidebar: left
 
 ### Options for Resources Widget
 
-#### Display GitHub Metadata for Project Repo
-
-When you use this theme for the website of a Github project repository, it is available to show buttons that link to the repository and a release file in the sidebar.
+When using this theme for a GitHub project repository website, you can display buttons in the sidebar that link to the repository and a release file.
 
 Follow our [Config Guide]({% post_url 2021-08-02-config-guide %}) to set up your `_config.yml` file.
 
-If a release exists in the repository, an additional button that links to the webpage of the latest release will be shown in the widget.
+#### Display GitHub Metadata for Project Repo
 
-**Note**: Authentication is required to get your repository data to show the release button. Please follow the docs of [jekyll
-/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) to set up your personal access token.
+If a release exists in the repository, an additional button linking to the latest release webpage will be shown in the widget.
 
-##### <span class="badge badge-default">v1.2</span> <sup>(Deprecated)</sup>
+**NOTE**: Authentication is required to fetch your repository data to display the release button. Please follow the [jekyll/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) documentation to set up your personal access token.
 
-Add the following front matter to every page that you want to show the **Resources** Widget.
-
-```yaml
-download: true
-```
-
-You can replace the second button and point it to a downloadable file by configuring it like this:
-
-```yaml
-download:
-  url: //.../filename.zip
-```
-
-##### <span class="badge badge-success">v2.0</span>
-
-You can globally configure the widget by using the attribute `resources_widget` in the `_config.yml` file. It is not necessary to add `download: true` to the front matter of individual pages for enabling the widget.
-
-Any file download buttons will display separately, and the button that links to the webpage of the latest release will no longer be overridden.
+> <span class="badge badge-success">v2.0</span>  \
+> You can globally configure the widget using the `resources_widget` attribute in the `_config.yml` file. It is not necessary to set the front matter of individual pages to enable the widget.
+>
+> Buttons for file downloads will display separately, and the "View on GitHub <i class="fab fa-github"></i>" button linking to the latest release webpage will no longer be overridden.
 
 #### Display Download Buttons
 
-##### <span class="badge badge-default">v1.2</span> <sup>(Deprecated)</sup>
+> <span class="badge badge-default">v1.2</span> (Deprecated)  \
+> A Download button appears on a page when you declare the URL of a download file in the front matter like this:
+>
+> ```yaml
+> download:
+>   url: //.../filename.zip
+> ```
+>
+> This button will replace the button linking to the latest release if GitHub metadata is also present in the widget.
+{:.quote-deprecated}
 
-A Download button shows on a page when you declare the URL of a download file in the front matter like this:
-
-```yaml
-download:
-  url: //.../filename.zip
-```
-
-This button will substitute the button for linking to the latest release if GitHub metadata is also presented in the widget.
-
-##### <span class="badge badge-success">v2.0</span>
-
-The new version has been redesigned to support creating a list of buttons for multiple files on-page. You need to itemize the `name` and `url` of each file in the front matter, for example:
+<span class="badge badge-success">v2.0</span>  \
+The new version supports creating a list of buttons for multiple files on a page. You need to itemize the `name` and `url` of each file in the front matter, for example:
 
 ```yaml
 download:
@@ -291,6 +276,10 @@ download:
 
 💡 Learn more from the [basic usage][jekyll-seo-tag-usage] and [advanced usage][jekyll-seo-tag-advanced-usage] in the Jekyll SEO Tag documentation.
 
+[google-developers-canonical-url]: https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls "Google Developers"
+[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+[jekyll-seo-tag-advanced-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md
+
 * * *
 
 ## Set URL Redirects
@@ -304,11 +293,11 @@ download:
 
 ## Exclude from Sitemap
 
-> If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page or post.
->
-> ```yaml
-  sitemap: false
-  ```
+If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page or post.
+
+```yaml
+sitemap: false
+```
 
 💡 Learn more from the [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap#exclusions) documentation.
 
@@ -318,7 +307,3 @@ download:
 
 - [Front Matter Defaults \| Jekyllrb](https://jekyllrb.com/docs/configuration/front-matter-defaults/ "Official Jekyll Documentation")
 - [README.md - amp-affiliately-jekyll-theme](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/README.md "GitHub")
-
-[google-developers-canonical-url]: https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls "Google Developers"
-[jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-[jekyll-seo-tag-advanced-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md

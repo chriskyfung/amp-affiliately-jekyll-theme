@@ -2,12 +2,17 @@
 layout: post
 title: Post-Processing
 date: 2021-08-15 23:15 +0800
-last_modified_at: 2021-08-22 09:41 +0800
-categories: [feature]
-tags: [styles, demo]
+last_modified_at: 2025-01-22 17:01 +0800
+categories:
+  - feature
+tags:
+  - styles
+  - demo
 permalink: /post-processing/
-image: 
-   path: /assets/images/processing_o128.png
+image:
+  path: /assets/images/processing_o128.png
+  width: "730"
+  height: "411"
 css:
   badge: true
   syntax: true
@@ -27,43 +32,17 @@ excerpt: The demo and test page of the Anchor Links for headings and the Link Mo
 
 This theme enables to attach an anchor link to **H2**-**H4** elements inside posts’ content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/) with no dependencies. See the [Config Guide]({% post_url 2021-08-02-config-guide %}#-add-anchor-link-for-h2-h3-and-h4-headings) if you perfer to disable this feature in your site.
 
+**Examples**:
+
 {% capture headings %}
 
 ## H2 Heading
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 ### H3 Heading
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 #### H4 Heading
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 ##### H5 Heading (_no anchor_)
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ###### H6 Heading (_no anchor_)
 
@@ -75,8 +54,6 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 {% endcapture %}
-
-### Examples
 
 <section class="card card-block">
 {{ headings | markdownify }}
@@ -92,13 +69,15 @@ When enabled, the theme adds `target="_blank"` and `rel="noopener noreferrer"` t
 
 By configuring your external links to open in a new tab, you can improve user experience by maintaining the context of your site while allowing users to explore additional resources.
 
+**Examples**:
+
 {% capture links %}
 
-#### regular text link
+### regular text link
 
 [external link](https://github.com/chriskyfung/amp-affiliately-jekyll-theme)
 
-#### **bold**
+### **bold**
 
 [**external link**](https://github.com/chriskyfung/amp-affiliately-jekyll-theme)
 
@@ -109,7 +88,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-#### `code`
+### `code`
 
 [`external link`](https://github.com/chriskyfung/amp-affiliately-jekyll-theme)
 
@@ -120,7 +99,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-#### _italic_
+### _italic_
 
 [_external link_](https://github.com/chriskyfung/amp-affiliately-jekyll-theme)
 
@@ -131,7 +110,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-#### _**bold and italic**_
+### _**bold and italic**_
 
 [_**external link**_](https://github.com/chriskyfung/amp-affiliately-jekyll-theme)
 
@@ -142,13 +121,11 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-#### Image in AMP
+### Image in AMP
 
 {% include picture.html source="assets" img="favicon_96x96.png" width="96" height="96" link="https://github.com/chriskyfung/amp-affiliately-jekyll-theme" %}
 
 {% endcapture %}
-
-### Examples
 
 <section class="card card-block">
 {{ links | markdownify }}

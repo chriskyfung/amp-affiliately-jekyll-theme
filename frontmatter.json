@@ -91,7 +91,7 @@
             {
               "title": "Height",
               "name": "height",
-              "default": "431",
+              "default": "411",
               "type": "number"
             },
             {

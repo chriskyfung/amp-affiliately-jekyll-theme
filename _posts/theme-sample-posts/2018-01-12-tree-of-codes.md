@@ -14,7 +14,8 @@ author: sal
 categories: [sample]
 image:
     path: /assets/images/2.jpg
-    height: 383
+    width: "730"
+    height: "383"
 custom_head: >-
   <meta name="robots" content="noindex, nofollow">
 sitemap: false

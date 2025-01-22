@@ -7,8 +7,8 @@ last_modified_at: 2024-11-27 21:11 +0800
 permalink: /front-matter-cms/
 image:
   path: /assets/images/map-3314277.svg
-  width: "730"
-  height: "431"
+  width: "1920"
+  height: "1080"
 categories:
   - doc
 tags:

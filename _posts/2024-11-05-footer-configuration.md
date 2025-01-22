@@ -2,11 +2,15 @@
 layout: post
 title: Footer Configuration
 date: 2024-11-05 16:01 +0800
-categories: [doc]
-tags: [_config]
+categories:
+  - doc
+tags:
+  - _config
 permalink: /footer-configuration/
-image: 
-   path: /assets/images/footer-331115.svg
+image:
+  path: /assets/images/footer-331115.svg
+  width: "1920"
+  height: "1080"
 css:
   badge: true
   syntax: true
@@ -81,7 +85,7 @@ In addition to configuring the footer columns, the following bottom bar settings
 |   Attribute | Property  | Description                                                                                                                                |
 | ----------: | --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `copyright` |           | Your custom setting of copyright notice:                                                                                                   |
-|             | `prepend` | <span>v2.0</span>{:.badge.badge-success}<br> The text prepend to the year.<br> _Default:_ `Copyright © `{:.blue}.                          |
+|             | `prepend` | <span>v2.0</span>{:.badge.badge-success}<br> The text prepend to the year.<br> _Default:_ `Copyright ©`{:.blue}.                          |
 |             | `owner`   | The name of the copyright holder.<br> _Default:_ _`site.name`_.                                                                            |
 |             | `link`    | The URL to go when clicking on the copyright notice.<br> _Default:_ `/`.                                                                   |
 |             | `append`  | <span>v2.0</span>{:.badge.badge-success}<br> The text at the end of the copyright notice.<br> _Default:_ `. All rights reserved.`{:.blue}. |
