@@ -93,9 +93,7 @@ To embed a YouTube video, use the `youtube.html` template in your project. You c
 
 ## Analytics Integration
 
-The theme supports [Google Analytics 4 (GA4) for tracking video interactions][GA4 video tracking]. The `site_content_postproc.html` template processes AMP YouTube components to configure GA4 tracking. It extracts video IDs from `<amp-youtube>` tags and constructs CSS selectors for these components, enabling detailed analytics on video interactions.
-
-[GA4 video tracking]: {% post_url 2024-11-21-google-analytics-4 %}#%EF%B8%8F-video-engagement
+The theme supports [Google Analytics 4 (GA4) for tracking video interactions]({% post_url 2024-11-21-google-analytics-4 %}#%EF%B8%8F-video-engagement). The `site_content_postproc.html` template processes AMP YouTube components to configure GA4 tracking. It extracts video IDs from `<amp-youtube>` tags and constructs CSS selectors for these components, enabling detailed analytics on video interactions.
 
 ### Tracked Events
 

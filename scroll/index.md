@@ -30,44 +30,32 @@ css:
       }
 ---
 
-<!-- Home Jumbotron
-    ================================================== -->
+<!-- Home Jumbotron -->
   <section class="intro full-width">
       <div class="wrapintro">
           <h1>AMP Affiliately Theme</h1>
-          <h2 class="lead">An AMP-ready Jekyll blog theme</h2>    
+          <h2 class="lead">An AMP-ready Jekyll blog theme</h2>
           <a class="btn" href="https://github.com/chriskyfung/amp-affiliately-jekyll-theme/" rel="noopener noreferrer" target="_blank">View on GitHub <i class='fab fa-github'></i></a>
       </div>
   </section>
 
-<!-- Featured
-  ================================================== -->
+<!-- Featured -->
   <section class="featured-posts">
-    
     <div class="section-title">
       <h2><span>Featured</span></h2>
     </div>
-    
     <div class="row listfeaturedtag">
-      
       {% for post in site.posts %}
-
         {% if post.featured == true %}
-
             {% include blocks/featured-box.html %}
-
         {% endif %}
-
       {% endfor %}
-      
     </div>
-    
   </section>
-  
-  <!-- Posts Index
-    ================================================== -->
-    {% if paginator.previous_page %}
-    {% if paginator.previous_page > 0 %}
-    <div id="jumptopageof"></div>
-    {% endif %}
-    {% endif %}
+
+<!-- Posts Index -->
+  {% if paginator.previous_page %}
+  {% if paginator.previous_page > 0 %}
+  <div id="jumptopageof"></div>
+  {% endif %}
+  {% endif %}

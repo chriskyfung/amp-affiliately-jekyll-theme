@@ -2,7 +2,7 @@
 layout: post
 title: Styles
 date: 2017-11-30 04:00:00
-last_modified_at: 2025-01-21 15:01 +0800
+last_modified_at: 2025-01-22 17:01 +0800
 author: Peter
 categories:
   - feature
@@ -412,21 +412,21 @@ Example:
 {% capture callout1 %}
 _PUT YOUR MARKDOWN CONTENT HERE..._
 
-{% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
+> blockquote
 
-- item 1
-- item 2
-- item 3
+{% include picture.html source="assets" img="tree.jpg" width="328" height="200" layout="fixed" alt="picture in callout element" caption="image caption" %}
+
+```js
+Code block
+```
 
 1. first
 2. second
 3. thrid
 
-> blockquote
-
-```js
-Code block
-```
+- item 1
+- item 2
+- item 3
 {% endcapture %}
 
 {% include callout.html content=callout1 %}

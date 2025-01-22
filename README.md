@@ -11,7 +11,7 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 
 ### 🌐 [Demo Site](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/) ↗
 
-- 💻 📱 [Preview the look of the responsive design for smartphone, tablet, and laptop ](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/device-look/) ↗
+- 💻 📱 [Preview the look of the responsive design for smartphone, tablet, and laptop](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/device-look/) ↗
 - 📷🔉 [Preview media blocks (for images, videos and audio) in AMP](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/) ↗
 - 🖥️⌨ [Preview code blocks and snippet highlighting](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/) ↗
 - 📝⌨ [Preview available Markdown styles](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide) ↗
@@ -203,7 +203,7 @@ css:
 
 [DEMOS - Code Block](https://chriskyfung.github.io/amp-affiliately-jekyll-theme//code) ↗
 
-### 📌 Callout <sub>*beta*</sub>
+### 📌 Callout <sub>_beta_</sub>
 
 A shortcode for creating a colored box, e.g. tips/memo.
 
