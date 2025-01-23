@@ -70,7 +70,11 @@
       {% include css/amp-theme.min.css %}
       {% include css/amp-navigation.min.css %}
     {%- if site.consent == true -%}
-      {% include css/amp-consent.min.css %}
+      {%- if site.iubenda.remote_consent_url and site.iubenda.tp_btn_style -%}
+        {% include css/amp-iubenda-consent.min.css %}
+      {%- else -%}
+        {% include css/amp-consent.min.css %}
+      {%- endif -%}
     {%- endif -%}
     {%- if site.invitation_codes != false -%}
       {% include css/amp-invitation-codes.min.css %}
@@ -110,7 +114,11 @@
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
     {%- if site.consent == true -%}
-    {% include consent/granular-user-consent.html %}
+      {%- if site.iubenda.remote_consent_url -%}
+        {% include consent/iubenda-amp-consent.html %}
+      {%- else -%}
+        {% include consent/granular-user-consent.html %}
+      {%- endif -%}
     {%- endif -%}
     
     {%- if site.gtm -%}
