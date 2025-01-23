@@ -14,7 +14,6 @@ image:
   height: "1080"
 css:
   badge: true
-featured: true
 excerpt: Integrate GA4 with AMP in Jekyll for real-time analytics. Track user interactions, page views, and video engagement seamlessly with enhanced insights.
 ---
 
