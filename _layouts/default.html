@@ -129,8 +129,12 @@
     {%- if site.adsense.client_id and site.adsense.auto_ads != false -%}
     <amp-auto-ads type="adsense" data-ad-client="{{ site.adsense.client_id }}"
       {%- if site.consent == true %}
-        data-block-on-consent-purposes="advertising"
-        data-npa-on-unknown-consent=true
+        {%- if site.iubenda.remote_consent_url -%}
+          data-block-on-consent-purposes="1,3,4"
+        {%- else -%}
+          data-block-on-consent-purposes="advertising"
+          data-npa-on-unknown-consent=true
+        {%- endif -%}
       {% endif -%}
       {%- if jekyll.environment != 'production' -%}
         data-adtest="on"
