@@ -18,7 +18,6 @@ tags:
   - plugin
 css:
   syntax: true
-featured: true
 ---
 
 {% include toc.md %}

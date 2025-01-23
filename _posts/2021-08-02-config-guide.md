@@ -2,11 +2,13 @@
 layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
-last_modified_at: 2024-11-21 20:24 +0800
-categories: [doc]
-tags: [_config]
+last_modified_at: 2025-01-23 21:01 +0800
+categories:
+   - doc
+tags:
+   - _config
 permalink: /config-guide/
-image: 
+image:
    path: /assets/images/settings-3311592.svg
 css:
   badge: true
@@ -266,21 +268,42 @@ By following this guide, you can significantly enhance your site's navigation an
 
 * * *
 
-### Cookie Consent <span>v2.9</span>{:.badge.badge-success}
+### Cookie Consent
 
-|          Attribute | Description                                                                                                                                      |
-| -----------------: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-|          `consent` | Set `true`{:.green} to enable the cookie consent UI.<br> _Default:_ `false`.                                                                     |
-|  `consent_preview` | <span>v3.3</span>{:.badge.badge-success}<br>Set `false` to disable the cookie consent in development enviroment.<br> _Default:_ `true`{:.green}. |
-| `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}.                                    |
+Our Jekyll theme offers two cookie consent settings: Simple Granular User Consent and Iubenda Cookie Solution. Here are the essential settings:
 
-|       Attribute | Property      | Description                                                                                                                                         |
-| --------------: | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `amp_optimizer` |               | <span>v2.9.1</span>{:.badge.badge-success}<br> Set `true`{:.green} if you run AMP Optimizer after building the Jekyll site.<br> _Default_: `false`. |
-|   `script_hash` |               | <span>v2.9.1</span>{:.badge.badge-success}                                                                                                          |
-|                 | `consent_gsc` | The hash for the `get_stored_consentStates` script.<br> 💡 [Calculating the script hash].                                                          |
+|         Attribute | Description                                                                                                                                           |
+| ----------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+|         `consent` | <span>v2.9</span>{:.badge.badge-success}<br> Set to `true`{:.green} to enable the cookie consent user interface.<br> _Default:_ `false`.              |
+| `consent_preview` | <span>v3.3</span>{:.badge.badge-success}<br> Set to `false` to disable cookie consent in the development environment.<br> _Default:_ `true`{:.green}. |
+
+#### Simple Granular User Consent <span>v2.9</span>{:.badge.badge-success}
+
+A customizable consent UI developed using `amp-consent` and `amp-script` components. It enables granular consent control by categorizing cookies into essential, functional, analytics, and advertising. The UI features a preference modal, allowing users to efficiently manage their consent options per purpose.
+
+|          Attribute | Property      | Description                                                                                                                                                   |
+| -----------------: | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consent_dev_mode` |               | <span>v2.9</span>{:.badge.badge-success}<br> Set to `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}. |
+|    `amp_optimizer` |               | <span>v2.9.1</span>{:.badge.badge-success}<br> Set to `true`{:.green} if you use AMP Optimizer post Jekyll site build.<br> _Default:_ `false`.                |
+|      `script_hash` |               | <span>v2.9.1</span>{:.badge.badge-success}                                                                                                                    |
+|                    | `consent_gsc` | The hash value for the `get_stored_consentStates` script.<br> 💡 [Calculating the script hash].                                                              |
 
 [Calculating the script hash]: https://amp.dev/documentation/components/amp-script#calculating-the-script-hash "Documentation: <amp-script> - amp.dev"
+
+**Note:** This implementation represents a basic privacy practice and does not fulfill GDPR compliance requirements.
+
+#### Iubenda Cookie Consent <span>v3.3</span>{:.badge.badge-success} {#iubenda-cookie-consent}
+
+Integrates the Google-certified Consent Management Platform (CMP), crucial for GDPR and privacy compliance. Supports the Transparency and Consent Framework (TCF) and Accelerated Mobile Pages (AMP), offering customizable consent options and an optimized user interface. By incorporating this solution, you ensure industry-standard compliance and enhance user trust, vital for modern websites.
+
+For more information, refer to our detailed guide on [Introducing iubenda AMP Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}).
+
+| Attribute | Property             | Description                                                                                                                                                                                           |
+| --------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `iubentu` |                      |                                                                                                                                                                                                       |
+|           | `remote_consent_url` | Specify the URL for the remote AMP consent banner to be loaded.                                                                                                                                       |
+|           | `tp_btn_style`       | Set to `true`{:.green} to enable the Iubenda icon and style for the floating consent button.<br> _Default:_ `false`.                                                                                  |
+|           | `tp_btn_position`    | Define the position of the Iubenda style consent button.<br> _Default:_ `bottom-left`.<br> Other options:`top-left`, `top-right`, and `bottom-right`<br> (effective only if `tp_btn_style` is `true`) |
 
 * * *
 

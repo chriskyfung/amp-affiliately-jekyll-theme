@@ -1,0 +1,51 @@
+{%- comment -%}
+  File: iubenda-amp-consent.html
+  Description: This file integrates the Iubenda consent management system using AMP components. 
+               It initializes the consent state and manages user interactions for consent preferences. 
+               The consent system is designed to comply with privacy regulations by allowing users 
+               to accept or decline cookies.
+
+  Author: Chris K.Y. FUNG (https://chriskyfung.github.io/)
+  Date: 2025-01-23
+
+  Key Components:
+  - <amp-consent>: Manages the consent UI, including the consent banner and preference modal.
+  - Consent UI: Provides buttons for users to accept all cookies or customize their preferences.
+  - Post-Consent UI: Displays a button for users to re-open the consent modal.
+
+  Usage:
+  - The consent system is activated based on the environment (production or development mode).
+  - The consent UI is displayed as an overlay, and users can interact with it to set their preferences.
+  - The system updates the consent state based on user interactions.
+
+  References:
+  - AMP Documentation: https://amp.dev/documentation/components/amp-consent/
+  - Iubenda Documentation: https://www.iubenda.com/en/help/amp-integration
+
+  Note: Ensure that the site configuration (e.g., `site.iubenda.remote_consent_url`, `site.iubenda.tp_btn_style`) 
+        is correctly set in the Jekyll environment to enable proper functioning of the consent system.
+{%- endcomment -%}
+
+{%- if jekyll.environment != 'development' or site.consent_preview != false -%}
+
+<amp-consent id="iubenda" layout="nodisplay" type="iubenda">
+  <script type="application/json">
+      {
+          "promptUISrc": "{{ site.iubenda.remote_consent_url }}",
+          "postPromptUI": "post-consent-ui"
+      }
+  </script>
+</amp-consent>
+
+{%- endif -%}
+
+{%- if site.iubenda.tp_btn_style -%}
+  <div id="post-consent-ui">
+    <button class="iubenda-tp-btn iubenda-tp-btn--{{ site.iubenda.tp_btn_position | default: 'bottom-left' }}" on="tap:iubenda.prompt()"></button>
+  </div>
+{%- else -%}
+  <div id="post-consent-ui">
+  <button class="btn btn-primary" on="tap:iubenda.prompt()"><i
+    class="fas fa-cookie-bite"></i></button>
+  </div>
+{%- endif -%}
