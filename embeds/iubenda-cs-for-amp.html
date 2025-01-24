@@ -1,0 +1,40 @@
+---
+layout: blank
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex">
+  <title>AMP Cookie Consent</title>
+</head>
+
+<body class="iubenda-cookie-solution">
+  <span class="iubenda-cs-preferences-link"></span>
+  <script type="text/javascript">
+    var _iub = _iub || [];
+    // Your own Privacy Controls and Cookie Solution configuration
+    _iub.csConfiguration = {
+      lang: 'en',
+      siteId: {{ site.iubenda.siteId }}, // Your own site ID
+      cookiePolicyId: {{ site.iubenda.cookiePolicyId }}, // Your own cookie policy ID
+      enableTcf: true,
+      askConsentIfCMPNotFound: true,
+      googleAdditionalConsentMode: true,
+      googleAdsPreferenceManagement: true,
+      floatingPreferencesButtonDisplay: false,
+      banner: {
+        acceptButtonDisplay: true, // Recommended
+        customizeButtonDisplay: true, // Recommended
+        rejectButtonDisplay: true // Advisable
+      }
+    };
+  </script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+</body>
+
+</html>

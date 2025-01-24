@@ -72,7 +72,7 @@ A: You can personalize the consent banner by:
 - Logging into your iubenda account and customizing the cookie notice via the [iubenda dashboard](https://www.iubenda.com/en/help/3831-customize-cookie-banner).
 - Configuring the settings in the remote consent UI's HTML file as outlined in [iubenda's instructions](https://www.iubenda.com/en/help/22135-cookie-solution-amp-wordpress#websites-not-powered-by-wordpress) and [advanced guide](https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide).
 
-For more detailed customization options, please refer to the iubenda documentation.
+For more detailed customization options, please refer to the [iubenda documentation](https://www.iubenda.com/en/help/3182-cookie-consent-amp-pages).
 
 {% endcapture %}
 

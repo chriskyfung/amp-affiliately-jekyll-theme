@@ -277,7 +277,7 @@ Our Jekyll theme offers two cookie consent settings: Simple Granular User Consen
 |         `consent` | <span>v2.9</span>{:.badge.badge-success}<br> Set to `true`{:.green} to enable the cookie consent user interface.<br> _Default:_ `false`.              |
 | `consent_preview` | <span>v3.3</span>{:.badge.badge-success}<br> Set to `false` to disable cookie consent in the development environment.<br> _Default:_ `true`{:.green}. |
 
-#### Simple Granular User Consent <span>v2.9</span>{:.badge.badge-success}
+#### Built-In Granular User Consent <span>v2.9</span>{:.badge.badge-success}
 
 A customizable consent UI developed using `amp-consent` and `amp-script` components. It enables granular consent control by categorizing cookies into essential, functional, analytics, and advertising. The UI features a preference modal, allowing users to efficiently manage their consent options per purpose.
 
@@ -300,7 +300,9 @@ For more information, refer to our detailed guide on [Introducing iubenda AMP Co
 
 | Attribute | Property             | Description                                                                                                                                                                                           |
 | --------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `iubentu` |                      |                                                                                                                                                                                                       |
+| `iubenda` |                      |                                                                                                                                                                                                       |
+|           | `siteId`             | Your site’s unique ID code, used to share preferences among the same website/app.                                                                                                                     |
+|           | `cookiePolicyId`     | Your cookie policy’s unique ID code, used to manage and customize the cookie banner/consent banner.                                                                                                   |
 |           | `remote_consent_url` | Specify the URL for the remote AMP consent banner to be loaded.                                                                                                                                       |
 |           | `tp_btn_style`       | Set to `true`{:.green} to enable the Iubenda icon and style for the floating consent button.<br> _Default:_ `false`.                                                                                  |
 |           | `tp_btn_position`    | Define the position of the Iubenda style consent button.<br> _Default:_ `bottom-left`.<br> Other options:`top-left`, `top-right`, and `bottom-right`<br> (effective only if `tp_btn_style` is `true`) |

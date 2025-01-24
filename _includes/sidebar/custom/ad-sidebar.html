@@ -1,16 +1,22 @@
 <div class="sidebar-section">
   <h3><span>Ads</span></h3>
   {%- if site.adsense -%}
+    {%- if site.consent == true -%}
+      {%- if site.iubenda.remote_consent_url -%}
+        {%- assign consent_type = "iubenda" -%}
+      {%- else -%}
+        {%- assign consent_type = "built-in" -%}
+      {%- endif -%}
+    {%- endif -%}
   <!-- github_resp_sidebar -->
   <amp-ad width="100vw" height="292"
-    {%- if site.consent == true %}
-      {%- if site.iubenda.remote_consent_url -%}
-        data-block-on-consent-purposes="1,3,4"
-      {%- else -%}
+    {%- case consent_type %}
+      {%- when "built-in" -%}
         data-block-on-consent-purposes="advertising"
         data-npa-on-unknown-consent=true
-      {%- endif -%}
-    {% endif -%}
+      {%- when "iubenda" -%}
+        data-block-on-consent-purposes="1,3,4"
+    {% endcase -%}
     type="adsense"
     data-ad-client="{{ site.adsense.client_id }}"
     data-ad-slot="{{ site.adsense.ad_slot.sidebar }}"
