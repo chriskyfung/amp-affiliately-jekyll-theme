@@ -1,4 +1,4 @@
-import { src, dest, watch, series, parallel } from 'gulp';
+import { src, dest, watch } from 'gulp';
 import changed from 'gulp-changed';
 import csso from 'gulp-csso';
 import ext_replace from 'gulp-ext-replace';
@@ -11,8 +11,11 @@ import AmpOptimizer from '@ampproject/toolbox-optimizer';
 
 const ampOptimizer = AmpOptimizer.create();
 
+const buildFilesGlob = ['./_site/**/*.html', '!./_site/embeds/**'];
+const cssFilesGlob = ['./_includes/css/*.css', '!**/*.min.css'];
+
 function build(cb) {
-  return src('./_site/**/*.html')
+  return src(buildFilesGlob)
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -31,7 +34,7 @@ function build(cb) {
 }
 
 function test() {
-  return src('./_site/**/*.html')
+  return src(buildFilesGlob)
     // Validate the input and attach the validation result to the "amp" property
     // of the file object.
     .pipe(gulpAmpValidator.validate())
@@ -43,7 +46,7 @@ function test() {
 }
 
 function validate() {
-  return src('./_site/**/*.html')
+  return src(buildFilesGlob)
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
@@ -70,7 +73,7 @@ function validate() {
 }
 
 function minifyCSS() {
-  return src(['./_includes/css/*.css', '!**/*.min.css'])
+  return src(cssFilesGlob)
     .pipe(changed('./_includes/css/'))
     .pipe(csso())
     .pipe(ext_replace('.min.css'))
@@ -78,7 +81,7 @@ function minifyCSS() {
 }
 
 export default function () {
-  watch(['./_includes/css/*.css', '!**/*.min.css'], minifyCSS);
+  watch(cssFilesGlob, minifyCSS);
 }
 
 export { build, test, minifyCSS, validate };

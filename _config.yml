@@ -138,6 +138,8 @@ amp_optimizer: true
 # script_hash:
 #   consent_gsc: sha384-n2-YMnb2FkeDk-Ca2pVnoYSR2FqNKqKgTwfK_UI0EAeVRCAHgCDjsecHJpVMv3Sl
 iubenda:
+  siteId: 3904687 # Your own site ID
+  cookiePolicyId: 30443530 # Your own cookie policy ID
   remote_consent_url: https://chriskyfung.gitlab.io/iubenda-amp-consent/
   tp_btn_style: false
   tp_btn_position: 'bottom-left'
