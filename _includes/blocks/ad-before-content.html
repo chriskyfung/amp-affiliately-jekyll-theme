@@ -1,14 +1,20 @@
 {{- if site.adsense.client_id and site.adsense.ad_slot.before_content -}}
+  {%- if site.consent == true -%}
+    {%- if site.iubenda.remote_consent_url -%}
+      {%- assign consent_type = "iubenda" -%}
+    {%- else -%}
+      {%- assign consent_type = "built-in" -%}
+    {%- endif -%}
+  {%- endif -%}
 <!-- github_resp_before_content -->
 <amp-ad width="100vw" height="200"
-    {%- if site.consent == true %}
-      {%- if site.iubenda.remote_consent_url -%}
-        data-block-on-consent-purposes="1,3,4"
-      {%- else -%}
+    {%- case consent_type %}
+      {%- when "built-in" -%}
         data-block-on-consent-purposes="advertising"
         data-npa-on-unknown-consent=true
-      {%- endif -%}
-    {% endif -%}
+      {%- when "iubenda" -%}
+        data-block-on-consent-purposes="1,3,4"
+    {% endcase -%}
     type="adsense"
     data-ad-client="{{ site.adsense.client_id }}"
     data-ad-slot="{{ site.adsense.ad_slot.before_content }}"
