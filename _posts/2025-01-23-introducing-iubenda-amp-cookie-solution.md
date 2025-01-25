@@ -21,7 +21,7 @@ css:
     .faq-section h3 { font-size: 1em; font-weight: bold; margin-bottom: 0; }
 ---
 
-We're excited to introduce a new consent banner option with the [iubenda AMP Cookie Solution](https://www.iubenda.com/en/help/22135-cookie-solution-amp-wordpress) in version `3.3.0`{:.badge.badge-success} of our Jekyll theme. This update integrates the iubenda AMP Cookie Solution, delivering a seamless and compliant user consent experience. As a Google-certified CMP, it offers a reliable alternative to our self-developed consent interface, ensuring full compliance and reliability.
+We're excited to introduce a new consent banner option with the [iubenda Privacy Controls and Cookie Solution](https://iubenda.refr.cc/default/u/fumikr?s=sp&t=cp) in version `3.3.0`{:.badge.badge-success} of our Jekyll theme. This update integrates the [iubenda cookie consent on AMP pages](https://www.iubenda.com/en/help/22135-cookie-solution-amp-wordpress), delivering a seamless and compliant user consent experience. As a Google-certified CMP, it offers a reliable alternative to our self-developed consent interface, ensuring full compliance and reliability.
 
 ## Key Benefits
 
@@ -60,9 +60,11 @@ We're excited to introduce a new consent banner option with the [iubenda AMP Coo
 
 A: The iubenda AMP Cookie Solution is essential for ensuring GDPR compliance. As a Google-certified CMP, it meets the requirements for using Google Analytics and Google AdSense.
 
-Moreover, iubenda offers a free-tier option, making it accessible for websites of all sizes. The solution supports the Transparency and Consent Framework (TCF) on AMP, ensuring fast-loading mobile pages and a user-friendly consent banner.
+Moreover, [iubenda] offers a free-tier option, making it accessible for websites of all sizes. The solution supports the Transparency and Consent Framework (TCF) on AMP, ensuring fast-loading mobile pages and a user-friendly consent banner.
 
 By adopting the iubenda AMP Cookie Solution, you can ensure GDPR compliance and other privacy regulations while accessing cost-effective implementation and comprehensive support for TCF and AMP. This robust and flexible solution simplifies consent management, helping you maintain user trust and regulatory compliance effortlessly.
+
+[iubenda]: https://iubenda.refr.cc/default/u/fumikr?s=sp&t=cp
 
 ### Q: How do I customize the consent banner?
 

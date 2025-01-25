@@ -15,7 +15,7 @@
 
 - **Consent Management**:
   - Add `consent_preview` option to control consent display in non-development environments ([5fbf00c], [d16c447])
-  - Add Iubenda consent management system to AMP theme ([4c47dc9])
+  - Add [Iubenda consent management system] to AMP theme ([4c47dc9])
   - Enhance consent management by conditionally including Iubenda styles and templates ([ef8f253], [5728fb6])
   - Add site and cookie policy IDs to configuration and create AMP cookie consent embed ([ddd1770])
   - Update consent handling for ad components based on remote consent URL ([3bad18a])
@@ -30,6 +30,8 @@
   - Add AMP embed for Disqus comments with dynamic configuration ([882983c])
   - Update Disqus embed script source to use dynamic shortname ([e0fef5a])
   - Add custom styles for Disqus comments section ([bb86cd4])
+
+[Iubenda consent management system]: https://iubenda.refr.cc/default/u/fumikr?s=sp&t=cp
 
 ### 📖 Documentation
 
