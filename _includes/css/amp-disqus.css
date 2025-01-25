@@ -1,0 +1,11 @@
+.disqus > amp-iframe::before {
+  content: '\f086'; /* Font Awesome Unicode for the comment icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Font Awesome Free Solid */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem; /* 20px */
+  color: #a7a7a7;
+}

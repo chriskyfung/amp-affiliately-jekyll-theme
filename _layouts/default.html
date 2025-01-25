@@ -113,6 +113,9 @@
     {%- if page.css.custom -%}
       {{ page.css.custom }}
     {%- endif -%}
+    {%- if site.amp_disqus -%}
+      {% include css/amp-disqus.min.css %}
+    {%- endif -%}
     </style>
   </head>
 
