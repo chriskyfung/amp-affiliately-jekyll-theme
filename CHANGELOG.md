@@ -2,6 +2,66 @@
 
 <!-- markdownlint-disable MD024 -->
 
+## v3.3.0 (2025-01-25)
+
+### 🐛 Fixes
+
+- **Styles**:
+  - Rename CSS and SCSS files from 'amp-ad-styles' to 'amp-ad' for consistency ([fe298d1])
+  - Update `amp-ad` and `amp-iframe` styles for non-built state of ads units and Disqus embed ([52c6ace])
+- **Frontmatter**: Update keys for consistency in category naming ([90c9ba4], [4288466])
+
+### ✨ Features
+
+- **Consent Management**:
+  - Add `consent_preview` option to control consent display in non-development environments ([5fbf00c], [d16c447])
+  - Add Iubenda consent management system to AMP theme ([4c47dc9])
+  - Enhance consent management by conditionally including Iubenda styles and templates ([ef8f253], [5728fb6])
+  - Add site and cookie policy IDs to configuration and create AMP cookie consent embed ([ddd1770])
+  - Update consent handling for ad components based on remote consent URL ([3bad18a])
+  - Update Disqus consent handling for Iubenda cookie solution ([ec79a0f], [74fc757])
+- **404 Page**: Add custom 404 error page with styling ([e23da6c])
+- **SCSS**:
+  - Update typography and line heights for article posts ([bdbfda2])
+  - Refine article post styles and improve typography ([3f91e35])
+  - Enhance table of contents styling ([f1884ac])
+  - Update default background color for callout component ([7b13a53])
+- **Disqus**:
+  - Add AMP embed for Disqus comments with dynamic configuration ([882983c])
+  - Update Disqus embed script source to use dynamic shortname ([e0fef5a])
+  - Add custom styles for Disqus comments section ([bb86cd4])
+
+### 📖 Documentation
+
+- **Config**: Adds cookie consent preview attribute to documentation ([9eadeca])
+- **Consent**:
+  - Add blog post introducing Iubenda AMP Cookie Solution in version 3.3.0 ([1a84001])
+  - Update config guide and introduction for Iubenda AMP Cookie Solution ([79d46d4])
+  - Update link to Iubenda documentation for cookie consent customization ([fecbb2f])
+
+### ⬆️ Dependencies
+
+- **Gemfile**:
+  - Optimize tzinfo gem declarations and enhance comments ([d224eac])
+  - Update platform-specific gem declarations for Windows compatibility ([c6e655c])
+  - Update Ruby version from 3.1.2 to 3.3.6 and gem dependencies ([157ebc3])
+  - Add support for x64-mingw-ucrt platform in sass-embedded ([de197be])
+
+### 💚 CI/CD
+
+- **Workflow**: Update Ruby version to 3.3.6 in Jekyll build configuration ([c03fb53], [157ebc3])
+
+### 🛠️ Chores
+
+- **VS Code**:
+  - Disable HTML style validation in settings ([cbb25bf])
+  - Remove AMP HTML validator extension and add Markdown Table extension ([81352f7])
+  - Add VS Code extensions for enhanced Jekyll development ([9ff10d3])
+- **Liquid**: Add liquid engine configuration for Jekyll ([af70678])
+- **Markdownlint**:
+  - Add markdownlint configuration file and update VSCode settings ([a3ab171])
+  - Fix markdownlint warnings in multiple files ([8bd8743])
+
 ## v3.2.0 (2024-12-06)
 
 ### 🐛 Fixes
