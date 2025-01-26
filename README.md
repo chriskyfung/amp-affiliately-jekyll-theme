@@ -41,6 +41,24 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 - Monetize via [Google Adsense](#enabling-third-party-components-) and Buy Me A Coffee
 - [Support deploying to Github Pages via Github Action](#deploying-to-github-pages-with-github-actions-)
 
+### ✨ New Features in v3.x.x
+
+- Support for [iubenda Privacy Controls and Cookie Solution on AMP pages](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/introducing-iubenda-amp-cookie-solution/) 🍪
+- Enhanced [Google Analytics 4 (GA4) integration with advanced video tracking](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/#%EF%B8%8F-video-engagement) 📊
+- Customizable footer columns through `_config.yml` configuration 📝
+- Custom 404 error page 🎨
+- Improved typography and styling 💄:
+  - Refined article post styles
+  - Enhanced table of contents styling
+  - Updated callout component styling
+- Modernized build system 🔨:
+  - ES module support in Gulp configuration
+  - Improved SCSS handling with `css_to_scss.sh` script
+- Better development experience 👨💻:
+  - Added live reload support for Jekyll
+  - Enhanced VS Code integration with Front Matter CMS
+  - Improved markdown linting and documentation
+
 ### ✨ New Features in `v2.x.x`
 
 - Support building Jekyll with ⚡ AMP Optimizer using Gulp 🥤
