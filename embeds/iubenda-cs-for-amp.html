@@ -32,6 +32,9 @@ layout: blank
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('set', 'page_location', window.parent.location.href || window.location.href);
+    gtag('set', 'page_referrer', window.parent.document.referrer || document.referrer);
+    gtag('set', 'page_title', window.parent.document.title || document.title);
     gtag('config', '{{ site.ga4 }}', {
       'send_page_view': false
     });
