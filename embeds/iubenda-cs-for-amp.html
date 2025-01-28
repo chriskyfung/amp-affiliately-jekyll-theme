@@ -30,7 +30,10 @@ layout: blank
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4 }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
+    gtag('set', 'linker', {
+      'domains': ['{{ site.url }}']
+    });
     gtag('js', new Date());
     gtag('set', 'page_location', window.parent.location.href || window.location.href);
     gtag('set', 'page_referrer', window.parent.document.referrer || document.referrer);

@@ -28,6 +28,9 @@
   {
     "vars": {
       "gtag_id": "{{ site.ga4 }}",
+      "linker": {
+        "domains": ["{{ site.url }}"]
+      },
       "config": {
         "{{ site.ga4 }}": {
           {%- if jekyll.environment != 'production' %}
