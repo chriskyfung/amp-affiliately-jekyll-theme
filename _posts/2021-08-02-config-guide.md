@@ -231,16 +231,6 @@ nav:
 
 You can configure the links for social buttons by the following attributes.
 
-#### <span>v1.4</span>{:.badge.badge-default} <sup>Deprecated</sup>
-
-```yaml
-# Soical Buttons
-facebook_id: your_facebook_username
-pinterest_id: your_pinterest_username
-github_id : your_github_username
-medium_id: your_medium_username
-```
-
 #### <span>v2.7</span>{:.badge.badge-success}
 
 The social button will only show if the corresponding attribute is configured.
