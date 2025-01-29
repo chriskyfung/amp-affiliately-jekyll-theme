@@ -2,6 +2,37 @@
 
 <!-- markdownlint-disable MD024 -->
 
+## v3.3.1 (2025-01-29)
+
+### 🐛 Fixes
+
+- **Iubenda**:
+  - Add TCF purposes configuration for consent management ([e650cf1])
+  - Implement Google Consent Mode V2 for AMP Cookie Consent ([c4f6636])
+  - Configure gtag to pass the page location, referrer, and title from the parent window of the iframe for accurate Google Consent Signal. ([7c27dbb])
+- **Built-in Granular Consent**:
+  - Correct typo in functionality label ([2575b8f])
+  - Fix spacing in `consent_type` switch statements ([d7bb472])
+
+### ✨ Features
+
+- **Built-in Granular Consent**:
+  - Enhance consent with dynamic domain and state handling ([eb2d882])
+- **GA4**:
+  - Add linker configuration for cross-domain tracking ([aa6ea02])
+
+### 📖 Documentation
+
+- **README**:
+  - Update README with new features in v3.x.x, including Iubenda support, GA4 integration, customizable footer, and improved development experience ([f4a791d])
+- **Config Guide**:
+  - Add deprecation notices to consent attributes ([342784d])
+
+### 🛠️ Chores
+
+- **_config.yml**:
+  - Remove unused `amp_optimizer` and commented-out consent settings ([d0e83c8])
+
 ## v3.3.0 (2025-01-25)
 
 ### 🐛 Fixes
