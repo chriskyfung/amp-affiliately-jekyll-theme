@@ -35,6 +35,7 @@
 <amp-state id="consentState">
   <script type="application/json">
     {
+      "domain": "{{ site.url | replace: 'localhost', '127.0.0.1' }}",
       "essential": false,
       "functional": false,
       "analytics": false,
@@ -51,14 +52,20 @@
 <amp-script script="get-stored-consentStates" nodom data-ampdevmode></amp-script>
 {%- endif -%}
 <script id="get-stored-consentStates" type="text/plain" target="amp-script">
-  const str = atob(localStorage.getItem('amp-store:{{ site.url }}'));
-  const json = JSON.parse(str);
-  const v = json.vv['amp-consent:site-consent']?.v;
-  if (v.s === 1) {
-    let jsonObject = Object.fromEntries(Object.entries(v.pc).map(([key, value]) => [key, value === 1]));
-    jsonObject.disallows = Object.keys(jsonObject).sort().filter(key => key != 'essential' && jsonObject[key] === false).join(',');
-    AMP.setState({"consentState": jsonObject})
+  async function getDomainFromConsentState() {
+    return await AMP.getState('consentState.domain');
   }
+  getDomainFromConsentState().then( domain => {
+    const str = atob(localStorage.getItem('amp-store:' + domain ));
+    const json = JSON.parse(str);
+    const v = json.vv['amp-consent:site-consent']?.v;
+    if (v.s === 1) {
+      let jsonObject = Object.fromEntries(Object.entries(v.pc).map(([key, value]) => [key, value === 1]));
+      jsonObject.domain = domain;
+      jsonObject.disallows = Object.keys(jsonObject).sort().filter(key => key != 'essential' && jsonObject[key] === false).join(',');
+      AMP.setState({"consentState": jsonObject})
+    }
+  });
 </script>
 
 <amp-consent layout="nodisplay" id="site-consent">
