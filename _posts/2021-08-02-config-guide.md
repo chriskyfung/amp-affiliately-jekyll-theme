@@ -281,12 +281,11 @@ Our Jekyll theme offers two cookie consent settings: Simple Granular User Consen
 
 A customizable consent UI developed using `amp-consent` and `amp-script` components. It enables granular consent control by categorizing cookies into essential, functional, analytics, and advertising. The UI features a preference modal, allowing users to efficiently manage their consent options per purpose.
 
-|          Attribute | Property      | Description                                                                                                                                                   |
-| -----------------: | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `consent_dev_mode` |               | <span>v2.9</span>{:.badge.badge-success}<br> Set to `false` to remove the `data-ampdevmode` attribute from the custom script.<br> _Default:_ `true`{:.green}. |
-|    `amp_optimizer` |               | <span>v2.9.1</span>{:.badge.badge-success}<br> Set to `true`{:.green} if you use AMP Optimizer post Jekyll site build.<br> _Default:_ `false`.                |
-|      `script_hash` |               | <span>v2.9.1</span>{:.badge.badge-success}                                                                                                                    |
-|                    | `consent_gsc` | The hash value for the `get_stored_consentStates` script.<br> 💡 [Calculating the script hash].                                                              |
+|          Attribute | Property           | Description                                                                                                                                                               |
+| -----------------: | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consent_dev_mode` |                    | _Default:_ `true`{:.green}.<br> Set to `false` to remove the `data-ampdevmode` attribute from the custom script.                                                          |
+|    `amp_optimizer` |                    | **Deprecated from v3.3.1**{:.badge.badge-default}<br> _Default:_ `false`.<br> Set to `true`{:.green} if you use AMP Optimizer post Jekyll site build.                     |
+|      `script_hash` | <br> `consent_gsc` | **Deprecated from v3.3.1**{:.badge.badge-default}<br> The script hash of the custom JavaScript `#get_stored_consentStates`.<br> Read more: [Calculating the script hash]. |
 
 [Calculating the script hash]: https://amp.dev/documentation/components/amp-script#calculating-the-script-hash "Documentation: <amp-script> - amp.dev"
 

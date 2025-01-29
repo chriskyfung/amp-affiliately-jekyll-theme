@@ -133,10 +133,6 @@ copyright:
 # Cookie Consent Notice
 consent: true
 consent_preview: false
-amp_optimizer: true
-# consent_dev_mode: false
-# script_hash:
-#   consent_gsc: sha384-n2-YMnb2FkeDk-Ca2pVnoYSR2FqNKqKgTwfK_UI0EAeVRCAHgCDjsecHJpVMv3Sl
 iubenda:
   siteId: 3904687 # Your own site ID
   cookiePolicyId: 30443530 # Your own cookie policy ID

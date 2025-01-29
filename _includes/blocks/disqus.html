@@ -9,9 +9,9 @@
 <div class="disqus">
   <amp-iframe width=600 height={{ site.amp_disqus.height | default: 140 }} layout="responsive"
   {%- case consent_type %}
-    {%- when "built-in" -%}
+    {% when "built-in" -%}
       data-block-on-consent-purposes="functional"
-    {%- when "iubenda" -%}
+    {% when "iubenda" -%}
       data-block-on-consent-purposes="1,3"
   {% endcase -%}  
     sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable
