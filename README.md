@@ -41,7 +41,7 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 - Monetize via [Google Adsense](#enabling-third-party-components-) and Buy Me A Coffee
 - [Support deploying to Github Pages via Github Action](#deploying-to-github-pages-with-github-actions-)
 
-### ✨ New Features in v3.x.x
+### ✨ New Features in `v3.x.x`
 
 - Support for [iubenda Privacy Controls and Cookie Solution on AMP pages](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/introducing-iubenda-amp-cookie-solution/) 🍪
 - Enhanced [Google Analytics 4 (GA4) integration with advanced video tracking](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/#%EF%B8%8F-video-engagement) 📊
