@@ -4,10 +4,9 @@ title: Granular User Consent Updates for v3.3.1
 date: 2025-01-31 09:01 +0800
 permalink: /built-in-granular-user-consentamp-consent/
 image:
-  width: "360"
-  height: "213"
-  path: /assets/images/built-in-granular-cookie-consent-banner_cover.png
-  hide: true
+  width: "1920"
+  height: "1080"
+  path: /assets/images/cookie-6116766-purple.svg
 excerpt: Upgrade your AMP Jekyll Theme with version 3.3.1! Enjoy simplified granular user consent, faster loading times, and seamless performance across all devices. 🚀
 categories:
   - feature

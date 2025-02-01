@@ -134,11 +134,11 @@ The `purposes` object in the consent preferences contains keys that represent va
 
 **Purpose IDs Mapping:**
 
-1. **Necessary (ID `1`)**
-2. **Functionality (ID `2`)**
-3. **Experience (ID `3`)**
-4. **Measurement (ID `4`)**
-5. **Marketing (ID `5`)**
+1. Necessary (ID `1`)
+2. Functionality (ID `2`)
+3. Experience (ID `3`)
+4. Measurement (ID `4`)
+5. Marketing (ID `5`)
 
 Understanding these purposes helps you respect user choices and adjust your site's features accordingly. For more details, refer to the [iubenda Advanced Guide](https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide#per-category-consent).
 

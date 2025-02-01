@@ -281,11 +281,13 @@ A customizable consent UI developed using `amp-consent` and `amp-script` compone
 
 **Note:** This implementation represents a basic privacy practice and does not fulfill GDPR compliance requirements.
 
+For more details, check out the [Granular User Consent Updates for v3.3.1]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %}) page.
+
 #### Iubenda Cookie Consent <span>v3.3</span>{:.badge.badge-success} {#iubenda-cookie-consent}
 
 Integrates the Google-certified Consent Management Platform (CMP), crucial for GDPR and privacy compliance. Supports the Transparency and Consent Framework (TCF) and Accelerated Mobile Pages (AMP), offering customizable consent options and an optimized user interface. By incorporating this solution, you ensure industry-standard compliance and enhance user trust, vital for modern websites.
 
-For more information, refer to our detailed guide on [Introducing iubenda AMP Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}).
+For more information, visit the [Introducing iubenda AMP Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}) page.
 
 | Attribute | Property             | Description                                                                                                                                                                                           |
 | --------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
