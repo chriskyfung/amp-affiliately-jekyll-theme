@@ -120,3 +120,7 @@ Embrace our feature-rich, easy-to-use, and fully customizable solution that empo
 - [Documentation: \<amp-consent\> - amp.dev](https://amp.dev/documentation/components/websites/amp-consent)
 - [Example: Client Side User Consent Flow - amp.dev](https://amp.dev/documentation/examples/user-consent/client_side_user_consent_flow/)
 - [Example: Granular User Consent - amp.dev](https://amp.dev/documentation/examples/user-consent/granular_user_consent/)
+
+## See Also
+
+- [Introducing iubenda AMP Cookie Solution for v3.3.0]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %})

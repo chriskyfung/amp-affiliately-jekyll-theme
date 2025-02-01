@@ -11,6 +11,7 @@ categories:
   - feature
 tags:
   - AMP
+  - iubenda
   - Cookie Consent
 css:
   badge: true
@@ -85,3 +86,8 @@ For more detailed customization options, please refer to the [iubenda documentat
 ## Support
 
 For any issues or questions, please report bugs and issues on [our GitHub repository](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/issues). We appreciate your contributions and feedback!
+
+## See Also
+
+- [Granular User Consent Updates for v3.3.1]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %})
+- [Verifying iubenda Cookie Solution on AMP Pages]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %})
