@@ -43,8 +43,23 @@
 
 {%- assign data_vars = ' data-vars-video-title="' | append: video_label | append: '"' -%}
 {%- assign data_vars = data_vars | append: ' data-vars-video-url="' | append: video_url | append: '"' -%}
-  
-{{ include.indent }}<amp-youtube id="yt-{{- include.id -}}" width="480" height="270" layout="responsive" credentials="omit" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{ attr_title }}{{ data_vars }} data-param-rel="0">
+
+{%- if site.consent == true -%}
+  {%- if site.iubenda.remote_consent_url -%}
+    {%- assign consent_type = "iubenda" -%}
+  {%- else -%}
+    {%- assign consent_type = "built-in" -%}
+  {%- endif -%}
+{%- endif -%}
+
+{{ include.indent }}<amp-youtube id="yt-{{- include.id -}}" width="480" height="270" layout="responsive"
+  {% case consent_type -%}
+    {% when "built-in" -%}
+      data-block-on-consent-purposes="functional"
+    {% when "iubenda" -%}
+      data-block-on-consent-purposes="1,3"
+  {% endcase -%}  
+  credentials="omit" data-videoid="{{- include.id -}}"{{ attrs_for_playlist }}{{ attr_title }}{{ data_vars }} data-param-rel="0">
   <div fallback>
     <p>This browser does not support the YouTube video player. <a href="{{- video_url -}}" rel="noopener" target="_blank">Watch on YouTube</a></p>
   </div>
