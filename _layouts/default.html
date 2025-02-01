@@ -123,12 +123,14 @@
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
     <!-- Consent UI -->
+  {%- if page.consent_ui != false -%}
     {%- case consent_type -%}
       {%- when "built-in" -%}
         {% include consent/granular-user-consent.html %}
       {%- when "iubenda" -%}
         {% include consent/iubenda-amp-consent.html %}
     {%- endcase -%}
+  {%- endif -%}
     
     {%- if site.gtm -%}
     <!-- Google Tag Manager -->
