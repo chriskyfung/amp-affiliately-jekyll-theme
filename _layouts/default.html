@@ -11,8 +11,10 @@
     <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
       {%- if site.iubenda.remote_consent_url -%}
         {%- assign consent_type = "iubenda" -%}
+        {%- assign consent_instance_id = "iubenda" -%}
       {%- else -%}
         {%- assign consent_type = "built-in" -%}
+        {%- assign consent_instance_id = "site-consent" -%}
       {%- endif -%}
     {%- endif -%}
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -123,14 +125,23 @@
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
     <!-- Consent UI -->
-  {%- if page.consent_ui != false -%}
-    {%- case consent_type -%}
-      {%- when "built-in" -%}
-        {% include consent/granular-user-consent.html %}
-      {%- when "iubenda" -%}
-        {% include consent/iubenda-amp-consent.html %}
-    {%- endcase -%}
-  {%- endif -%}
+    {%- if page.consent_ui == false -%}
+      <amp-consent layout="nodisplay" id="site-consent" style="display:none;">
+        <script type="application/json">
+          {
+            "consentInstanceId": "{{ consent_instance_id }}",
+            "consentRequired": true
+          }
+        </script>
+      </amp-consent>
+    {%- else -%}
+      {%- case consent_type -%}
+        {%- when "built-in" -%}
+          {% include consent/granular-user-consent.html %}
+        {%- when "iubenda" -%}
+          {% include consent/iubenda-amp-consent.html %}
+      {%- endcase -%}
+    {%- endif -%}
     
     {%- if site.gtm -%}
     <!-- Google Tag Manager -->
