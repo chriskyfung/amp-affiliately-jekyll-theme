@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Front Matter Guide
-date: 2021-07-31 12:05 +0800
-last_modified_at: 2025-01-22 17:01 +0800
+date: 2025-02-01 10:02 +0800
+last_modified_at: 2025-02-01 10:02 +0800
 categories:
   - doc
 tags:
@@ -10,7 +10,6 @@ tags:
   - styles
   - AMP
 permalink: /front-matter-guide/
-slug: " "
 redirect_from:
   - /front-matter/
 image:
@@ -20,9 +19,13 @@ image:
 css:
   badge: true
   syntax: true
-  custom: "table { font-size: .95rem; margin-bottom: 1.5rem } tr:nth-child(odd) { backgroud-color: #e3edf3 } td { padding: .5em } .plaintext { color: mediumseagreen; } .quote-deprecated { border-color: #999999; }"
+  custom: |-
+    table { font-size: .95rem; margin-bottom: 1.5rem }
+    tr:nth-child(odd) { backgroud-color: #e3edf3 }
+    td { padding: .5em }
+    .plaintext { color: mediumseagreen; }
+    .quote-deprecated { border-color: #999999; }
 excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
-featured: true
 ---
 
 {% include toc.md %}
@@ -300,6 +303,30 @@ sitemap: false
 ```
 
 💡 Learn more from the [Jekyll Sitemap Generator Plugin](https://github.com/jekyll/jekyll-sitemap#exclusions) documentation.
+
+* * *
+
+## Hide Consent UI on Specific Pages
+
+The `consent_ui` front matter variable allows you to control the visibility of the AMP consent UI on a per-page basis. By setting this variable to `false`, you can hide the consent UI on specific pages where it is not necessary or desired, such as cookie policy pages or other informational pages.
+
+To hide the AMP consent UI on a specific page, add the `consent_ui` variable to the front matter of your Markdown files.
+
+**Example**:
+
+Here's an example of a Markdown file with the consent_ui variable:
+
+```yaml
+---
+title: "Cookie Policy"
+consent_ui: false
+---
+
+This page outlines the cookie policy for our website...
+
+```
+
+By following these steps, you can easily control the visibility of the AMP consent UI on a per-page basis within your Jekyll theme.
 
 * * *
 
