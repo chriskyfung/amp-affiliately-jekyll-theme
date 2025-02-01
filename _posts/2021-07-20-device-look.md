@@ -2,15 +2,20 @@
 layout: post
 title: Responsive Web Design
 date: 2021-07-20 10:47 +0800
-categories: [feature]
-tags: [demo]
+categories:
+  - feature
+tags:
+  - demo
 permalink: /responsive-web-design/
-redirect_from: [/device-look/]
-image: 
-   path: /assets/images/responsive-1622825_730.png
+redirect_from:
+  - /device-look/
+image:
+  path: /assets/images/responsive-1622825_730.png
+  width: "730"
+  height: "411"
 excerpt: Preview the look for different devices (smartphone 📱, tablet 💻 and laptop 🖥️)
 css:
-   custom: >-
+   custom: |-
       .device-wrapper {
         margin: 24px auto;
         --scale: .45;
@@ -147,9 +152,6 @@ css:
         overflow: hidden;
         border: none;
       }
-
-featured: true
-download: true
 ---
 
 Preview the look of the responsive design for different devices (smartphone <i class="fas fa-mobile-alt"></i> , tablet <i class="fas fa-tablet-alt"></i> and laptop <i class="fas fa-laptop"></i>) &ndash; _**Remark**: This page does not support for Internet Explorer (IE)_

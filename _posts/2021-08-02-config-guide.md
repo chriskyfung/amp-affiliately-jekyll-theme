@@ -13,7 +13,7 @@ image:
 css:
   badge: true
   syntax: true
-  custom: >-
+  custom: |- 
     table { font-size: .95rem; margin-bottom: 1.5rem; }
     tr:nth-child(odd) { backgroud-color: #e3edf3; }
     th, td { padding: .5em; vertical-align: top; }

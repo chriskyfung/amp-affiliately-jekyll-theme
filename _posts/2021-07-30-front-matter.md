@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Front Matter Guide
-date: 2025-02-01 10:02 +0800
+date: 2021-07-31 12:05 +0800
 last_modified_at: 2025-02-01 10:02 +0800
 categories:
   - doc
@@ -26,6 +26,7 @@ css:
     .plaintext { color: mediumseagreen; }
     .quote-deprecated { border-color: #999999; }
 excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
+featured: true
 ---
 
 {% include toc.md %}

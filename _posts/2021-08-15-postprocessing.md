@@ -22,7 +22,6 @@ css:
     th, td { padding: .5em; }
     .box { border: 1px solid #e3edf3; padding: 1rem; }
     .plaintext { color: mediumseagreen; }
-featured: true
 excerpt: The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.
 ---
 
