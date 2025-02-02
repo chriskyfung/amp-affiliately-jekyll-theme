@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Verifying iubenda Cookie Solution on AMP Pages
-date: 2025-02-01 21:02 +0800
+date: 2025-02-02 18:31 +0800
+last_modified_at: 2025-02-02 18:31 +0800
 permalink: /verifying-iubenda-cookie-solution-amp/
 excerpt: Learn how to verify the iubenda Cookie Solution on AMP pages for compliance and user experience with this step-by-step guide.
 categories:
@@ -10,6 +11,7 @@ tags:
   - AMP
   - iubenda
   - Cookie Consent
+  - TCF
 image:
   path: /assets/images/cookie-magnify-5118694.svg
   width: "730"
@@ -18,7 +20,7 @@ css:
   syntax: true
 ---
 
-Ensuring that the **iubenda Cookie Solution** functions correctly is crucial for maintaining compliance with privacy regulations and offering a seamless user experience on your website. By invoking the Cookie Solution's API methods directly from the iframe, you can verify its behavior and ensure that user consent is being handled correctly. This guide walks you through the process step by step.
+Ensuring that the **iubenda Cookie Solution** functions correctly is crucial for maintaining compliance with privacy regulations and offering a seamless user experience on your website. By calling the browser and iubenda Cookie Solution's API methods, you can verify its behavior and ensure that user consent is being handled correctly. This guide will talk you through the process step by step.
 
 ## Step-by-Step Guide
 
@@ -26,12 +28,12 @@ Ensuring that the **iubenda Cookie Solution** functions correctly is crucial for
 
 To start, you need to display the iubenda Cookie Solution iframe on your website:
 
-- **Use Incognito Mode:** Open a new incognito or private browsing window in your browser. This ensures that no previous cookies or consents interfere with your testing.
+- **Use Incognito Mode:** Open a new incognito or private browsing window in your browser to ensure that no previous cookies or consents interfere with your testing.
 - **Click the Floating Consent Button:** If your site includes a floating consent button, click it to manually display the Cookie Solution iframe.
 
 ### 2. Open Browser Developer Tools
 
-Access your browser's Developer Tools to inspect elements and execute JavaScript commands:
+Open your browser's Developer Tools to inspect elements and run JavaScript commands:
 
 - **Google Chrome:** Right-click anywhere on the page and select **Inspect**, or press `Ctrl+Shift+I` (`Cmd+Option+I` on macOS).
 - **Mozilla Firefox:** Right-click and choose **Inspect Element**, or press `Ctrl+Shift+I`.
@@ -42,89 +44,171 @@ Access your browser's Developer Tools to inspect elements and execute JavaScript
 Within the Developer Tools:
 
 - Navigate to the **Elements** or **Inspector** tab.
-- Expand the DOM tree to locate the `<iframe>` element containing the iubenda Cookie Solution.
-- **Tip:** The iframe pointing to iubenda resources can often be identified by the CSS selector `#iubenda > iframe`.
+- Expand the DOM tree to locate the `<iframe>` element that contains the iubenda Cookie Solution.
+- **Tip:** You can identify the iframe with the CSS selector `#iubenda > iframe`.
 
 ### 4. Invoke API Methods from the Console
 
 With the iframe identified:
 
 - Switch to the **Console** tab in Developer Tools.
-- Ensure that the console is executing within the context of the iframe. Some browsers provide a context selection dropdown. If not, you may need to adjust your commands to target the iframe appropriately.
+- Make sure the console is executing within the context of the iframe. Some browsers provide a context selection dropdown. If not, you may need to adjust your commands to target the iframe appropriately.
 
-## Useful API Methods
+## Useful API Methods and Properties
 
-The iubenda Cookie Solution API offers several methods to help you verify consent status and user preferences. Below are some key methods you can utilize:
+The browser and iubenda Cookie Solution APIs offer several methods to help you verify consent status and user preferences. Here are some key methods and properties you can utilize:
 
-### **`isConsentGiven()`**
+### Using `window.name` Property
 
-Checks whether the user has given consent.
-
-**Usage:**
-
-```js
-_iub.cs.api.isConsentGiven();
-// Returns: true if consent is given, false otherwise
-```
-
-### **`getPreferences()`**
-
-Retrieves detailed information about the user's consent preferences.
+When `<amp-consent>` creates the iframe to embed the CMP's prompt, it passes stored consent information from the main AMP page to the iframe. You can access this data using the `window.name` property inside the iframe.
 
 **Usage:**
 
-```js
-_iub.cs.api.getPreferences();
-// Returns: An object containing consent details
+```javascript
+const info = JSON.parse(window.name);
 ```
 
 **Sample Output:**
 
 ```json
 {
-  "id": "abcd1234",
-  "timestamp": "2023-10-15T10:30:25.123Z",
-  "purposes": {
-    "1": true,
-    "3": false,
-    "4": true
-  },
-  "tcfv2": "...",
-  "gac": "1~xx....",
-  "ccpa": "1YY-",
-  "gppString": "...",
-  "uspr": {
-    "s": true,
-    "sh": true,
-    "adv": true
-  }
+    "clientConfig": null,
+    "consentState": "rejected",
+    "consentStateValue": "rejected",
+    "consentMetadata": {
+        "additionalConsent": "1~XX...",
+        "gdprApplies": true
+    },
+    "consentString": "...",
+    "promptTrigger": "action",
+    "isDirty": false,
+    "purposeConsents": {
+        "1": 1,
+        "3": 1,
+        "4": 1
+    }
 }
 ```
 
-- **`id`**: A unique identifier for the consent instance.
-- **`timestamp`**: The date and time when the consent was recorded.
-- **`purposes`**: An object indicating consent (true/false) for each purpose by its ID.
+With `window.name`, you can interpret how the CMP inside the iframe will react according to this initial state.
 
-### **`isGoogleNonPersonalizedAds()`**
+For more details, refer to the [AMP Consent Integration Guide](https://github.com/ampproject/amphtml/blob/main/extensions/amp-consent/integrating-consent.md#client-information-passed-to-iframe).
 
-Determines whether Google should serve non-personalized ads based on the user's consent.
+### Using `_iub.cs.api` Methods
 
-**Usage:**
+- #### **`isConsentGiven()`**
+
+  Checks whether the user has given consent.
+  
+  **Usage:**
+  
+  ```js
+  _iub.cs.api.isConsentGiven();
+  // Returns: true if consent is given, false otherwise
+  ```
+
+- #### **`getPreferences()`**
+  
+  Retrieves detailed information about the user's consent preferences.
+  
+  **Usage:**
+  
+  ```js
+  _iub.cs.api.getPreferences();
+  // Returns: An object containing consent details
+  ```
+  
+  **Sample Output:**
+  
+  ```json
+  {
+    "id": "abcd1234",
+    "timestamp": "2023-10-15T10:30:25.123Z",
+    "purposes": {
+      "1": true,
+      "3": false,
+      "4": true
+    },
+    "tcfv2": "...",
+    "gac": "1~xx....",
+    "ccpa": "1YY-",
+    "gppString": "...",
+    "uspr": {
+      "s": true,
+      "sh": true,
+      "adv": true
+    }
+  }
+  ```
+  
+  - **`id`**: A unique identifier for the consent instance.
+  - **`timestamp`**: The date and time when the consent was recorded.
+  - **`purposes`**: An object indicating consent (true/false) for each purpose by its ID.
+  
+- #### **`isGoogleNonPersonalizedAds()`**
+  
+  Determines whether Google should serve non-personalized ads based on the user's consent.
+  
+  **Usage:**
+  
+  ```js
+  _iub.cs.api.isGoogleNonPersonalizedAds();
+  // Returns: true if only non-personalized ads should be served, false otherwise
+  ```
+  
+- #### **`printErrors()`**
+  
+  Prints any errors related to the iubenda Privacy Controls and Cookie Solution in the browser console.
+  
+  **Usage:**
+  
+  ```js
+  _iub.cs.api.printErrors();
+  ```
+
+### Using `__tcfapi` Function
+
+The `__tcfapi` function is a crucial tool that allows websites to interact with the Transparency and Consent Framework (TCF) and manage user consent according to the General Data Protection Regulation (GDPR) requirements.
+
+This function enables you to execute various commands related to user consent and transparency. For more detailed specifications, refer to the [IAB Tech Lab - CMP API v2 Documentation](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md). For more insights on how iubenda CMP implements TCF, refer to the [Complete Guide to iubenda CMP and IAB TCF 2.2](https://www.iubenda.com/en/help/7440-the-complete-guide-to-iubenda-cmp-and-iab-tcf-2-2#collect-consent-to-ad-personalization).
+
+**Example Usage:**
+
+To access the `TCData` object, use the `__tcfapi` function with the `getTCData` command as shown below:
 
 ```js
-_iub.cs.api.isGoogleNonPersonalizedAds();
-// Returns: true if only non-personalized ads should be served, false otherwise
+__tcfapi('getTCData', 2, function(result, success) {
+    console.log(result);
+});
 ```
 
-### **`printErrors()`**
+**Sample Output:**
 
-Prints any errors related to the iubenda Privacy Controls and Cookie Solution in the browser console.
+When you call the `getTCData` command, you might receive a response like this:
 
-**Usage:**
-
-```js
-_iub.cs.api.printErrors();
+```json
+{
+  "addtlConsent": "1~XX...",
+  "cmpId": 123,
+  "cmpStatus": "loaded",
+  "cmpVersion": 123,
+  "eventStatus": "cmpuishown",
+  "gdprApplies": true,
+  "isServiceSpecific": true,
+  "listenerId": null,
+  "publisher": {...},
+  "publisherCC": "AA",
+  "purpose": {...},
+  "purposeOneTreatment": false,
+  "specialFeatureOptins": {...},
+  "tcString": "...",
+  "tcfPolicyVersion": 5,
+  "useNonStandardStacks": false,
+  "vendor": {...}
+}
 ```
+
+By using the `__tcfapi` function, you can effectively verify user consent within your website, ensuring compliance with GDPR and other privacy regulations.
 
 ## Additional Insights
 
@@ -146,7 +230,7 @@ Understanding these purposes helps you respect user choices and adjust your site
 
 - **Clear Cookies:** Before each test, clear your browser's cookies or use incognito mode to reset the consent status.
 - **Check for Errors:** Use `printErrors()` to display any errors in the console and monitor for JavaScript issues that might affect API method calls.
-- **Verify Across Devices:** Test on different browsers and devices to ensure consistent behavior and compatibility.
+- **Verify Across Devices:** Test on various browsers and devices to ensure consistent behavior and compatibility.
 
 ## References
 
@@ -159,7 +243,7 @@ Understanding these purposes helps you respect user choices and adjust your site
 - **CodePen Example**
   [iubenda API Methods in Action](https://codepen.io/iubenda/pen/WNGmeyv?editors=1000)
 
-By thoroughly verifying the iubenda Cookie Solution using its API methods, you're taking proactive steps toward compliance and demonstrating a commitment to user privacy. Continually refining your implementation will help provide the best experience possible for your users.
+By thoroughly verifying the iubenda Cookie Solution using this tools, you're taking proactive steps toward compliance and demonstrating a commitment to user privacy. Continuously refining your implementation will help provide the best experience possible for your users.
 
 ## See Also
 
