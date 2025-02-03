@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Verifying iubenda Cookie Solution on AMP Pages
-date: 2025-02-02 18:31 +0800
-last_modified_at: 2025-02-02 18:31 +0800
+date: 2025-02-02 20:31 +0800
+last_modified_at: 2025-02-02 20:31 +0800
 permalink: /verifying-iubenda-cookie-solution-amp/
 excerpt: Learn how to verify the iubenda Cookie Solution on AMP pages for compliance and user experience with this step-by-step guide.
 categories:
@@ -20,7 +20,9 @@ css:
   syntax: true
 ---
 
-Ensuring that the **iubenda Cookie Solution** functions correctly is crucial for maintaining compliance with privacy regulations and offering a seamless user experience on your website. By calling the browser and iubenda Cookie Solution's API methods, you can verify its behavior and ensure that user consent is being handled correctly. This guide will talk you through the process step by step.
+Ensuring that the **[iubenda Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %})** functions correctly is crucial for maintaining compliance with privacy regulations and offering a seamless user experience on your website. By calling the browser and iubenda Cookie Solution's API methods, you can verify its behavior and ensure that user consent is being handled correctly. This guide will talk you through the process step by step.
+
+{% include toc.md %}
 
 ## Step-by-Step Guide
 
@@ -35,9 +37,9 @@ To start, you need to display the iubenda Cookie Solution iframe on your website
 
 Open your browser's Developer Tools to inspect elements and run JavaScript commands:
 
-- **Google Chrome:** Right-click anywhere on the page and select **Inspect**, or press `Ctrl+Shift+I` (`Cmd+Option+I` on macOS).
-- **Mozilla Firefox:** Right-click and choose **Inspect Element**, or press `Ctrl+Shift+I`.
-- **Microsoft Edge:** Right-click and select **Inspect**, or press `F12`.
+- **Google Chrome:** Right-click anywhere on the page and select **Inspect**, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
+- **Mozilla Firefox:** Right-click and choose **Inspect Element**, or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>.
+- **Microsoft Edge:** Right-click and select **Inspect**, or press <kbd>F12</kbd>.
 
 ### 3. Inspect the iframe Element
 
@@ -226,7 +228,7 @@ The `purposes` object in the consent preferences contains keys that represent va
 
 Understanding these purposes helps you respect user choices and adjust your site's features accordingly. For more details, refer to the [iubenda Advanced Guide](https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide#per-category-consent).
 
-## Testing and Debugging Tips
+### Testing and Debugging Tips
 
 - **Clear Cookies:** Before each test, clear your browser's cookies or use incognito mode to reset the consent status.
 - **Check for Errors:** Use `printErrors()` to display any errors in the console and monitor for JavaScript issues that might affect API method calls.
