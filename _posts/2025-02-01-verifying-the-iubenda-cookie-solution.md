@@ -2,7 +2,7 @@
 layout: post
 title: Verifying iubenda Cookie Solution on AMP Pages
 date: 2025-02-02 20:31 +0800
-last_modified_at: 2025-02-02 20:31 +0800
+last_modified_at: 2025-02-04 17:00 +0800
 permalink: /verifying-iubenda-cookie-solution-amp/
 excerpt: Learn how to verify the iubenda Cookie Solution on AMP pages for compliance and user experience with this step-by-step guide.
 categories:
@@ -67,7 +67,7 @@ When `<amp-consent>` creates the iframe to embed the CMP's prompt, it passes sto
 **Usage:**
 
 ```javascript
-const info = JSON.parse(window.name);
+info = JSON.parse(window.name);
 ```
 
 **Sample Output:**
@@ -98,7 +98,7 @@ For more details, refer to the [AMP Consent Integration Guide](https://github.co
 
 ### Using `_iub.cs.api` Methods
 
-- #### **`isConsentGiven()`**
+- #### `isConsentGiven()`
 
   Checks whether the user has given consent.
   
@@ -109,7 +109,7 @@ For more details, refer to the [AMP Consent Integration Guide](https://github.co
   // Returns: true if consent is given, false otherwise
   ```
 
-- #### **`getPreferences()`**
+- #### `getPreferences()`
   
   Retrieves detailed information about the user's consent preferences.
   
@@ -147,7 +147,7 @@ For more details, refer to the [AMP Consent Integration Guide](https://github.co
   - **`timestamp`**: The date and time when the consent was recorded.
   - **`purposes`**: An object indicating consent (true/false) for each purpose by its ID.
   
-- #### **`isGoogleNonPersonalizedAds()`**
+- #### `isGoogleNonPersonalizedAds()`
   
   Determines whether Google should serve non-personalized ads based on the user's consent.
   
@@ -158,7 +158,7 @@ For more details, refer to the [AMP Consent Integration Guide](https://github.co
   // Returns: true if only non-personalized ads should be served, false otherwise
   ```
   
-- #### **`printErrors()`**
+- #### `printErrors()`
   
   Prints any errors related to the iubenda Privacy Controls and Cookie Solution in the browser console.
   
