@@ -13,6 +13,10 @@ layout: blank
   <title>AMP Cookie Consent</title>
 
   <script>
+    // Enable consent mode TCF integration
+    window['gtag_enable_tcf_support'] = true;
+  </script>
+  <script>
     // Define dataLayer and the gtag function.
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
