@@ -13,6 +13,10 @@ layout: blank
   <title>AMP Cookie Consent</title>
 
   <script>
+    // Check if the user has opted out of the cookie consent banner
+    const searchParams = new URLSearchParams(window.location.search);
+    const requiresOptInConsent = searchParams.get("optout") !== '1';
+
     // Enable consent mode TCF integration
     window['gtag_enable_tcf_support'] = true;
   </script>
@@ -29,6 +33,16 @@ layout: blank
       'ad_personalization': 'denied',
       'analytics_storage': 'denied'
     });
+
+    //behavior specific for end-users in the US, AU, HK, SG
+    gtag('consent', 'default', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted',
+      'region': ['US', 'AU', 'HK', 'SG']
+    });
+
   </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4 }}"></script>
@@ -78,7 +92,8 @@ layout: blank
       banner: {
         acceptButtonDisplay: true, // Recommended
         customizeButtonDisplay: true, // Recommended
-        rejectButtonDisplay: true // Advisable
+        rejectButtonDisplay: requiresOptInConsent, // Advisable
+        showPurposesToggles: requiresOptInConsent // Advisable
       }
     };
   </script>
