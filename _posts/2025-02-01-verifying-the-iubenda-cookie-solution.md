@@ -212,6 +212,8 @@ When you call the `getTCData` command, you might receive a response like this:
 
 By using the `__tcfapi` function, you can effectively verify user consent within your website, ensuring compliance with GDPR and other privacy regulations.
 
+For additional information, refer to the [Transparency and Consent (TC) String with Global Vendor List Format](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md?form=MG0AV3).
+
 ## Additional Insights
 
 ### Understanding Consent Purposes
