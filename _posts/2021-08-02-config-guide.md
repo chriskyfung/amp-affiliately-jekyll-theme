@@ -298,6 +298,18 @@ For more information, visit the [Introducing iubenda AMP Cookie Solution]({% pos
 |           | `tp_btn_style`       | Set to `true`{:.green} to enable the Iubenda icon and style for the floating consent button.<br> _Default:_ `false`.                                                                                  |
 |           | `tp_btn_position`    | Define the position of the Iubenda style consent button.<br> _Default:_ `bottom-left`.<br> Other options:`top-left`, `top-right`, and `bottom-right`<br> (effective only if `tp_btn_style` is `true`) |
 
+<span>v3.3.2</span>{:.badge.badge-success}  \
+To implement geo-targeted cookie consent with Iubenda and `<amp-geo>`, you can add the following settings to the `_config.yml` file.`
+
+```yaml
+# amp-geo settings
+amp_geo:
+  enabled: true
+  consent_override: true
+```
+
+**Related:** [Set Up Free Geo-Targeted Cookie Consent on AMP Pages with Iubenda and amp-geo]({% post_url 2025-02-10-setup-free-geo-targeted-cookie-consent-amp-iubenda %})
+
 * * *
 
 ### SEO Configuration
