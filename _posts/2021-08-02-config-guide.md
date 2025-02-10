@@ -254,7 +254,7 @@ For detailed instructions on how to customize your site's footer, visit our [Foo
 
 By following this guide, you can significantly enhance your site's navigation and usability, ensuring that important information is easily accessible to your visitors. Improving your site's footer not only boosts the overall user experience but also contributes to a more professional and polished appearance. Check out the [Footer Configuration] page to make the most of these features.
 
-[Footer Configuration]: ../footer-configuration/
+[Footer Configuration]: {% post_url 2024-11-05-footer-configuration %}
 
 * * *
 
