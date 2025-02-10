@@ -140,6 +140,11 @@ iubenda:
   tp_btn_style: false
   tp_btn_position: 'bottom-left'
 
+# amp-geo settings
+amp_geo:
+  enabled: true
+  consent_override: true
+
 # Build settings
 plugins: 
   - jekyll-archives
