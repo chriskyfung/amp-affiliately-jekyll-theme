@@ -33,6 +33,13 @@
       {
           "promptUISrc": "{{ site.iubenda.remote_consent_url }}",
           "postPromptUI": "post-consent-ui"
+          {%- if site.amp_geo.enabled and site.amp_geo.consent_override -%} ,
+          "geoOverride": {
+            "optout": {
+              "promptUISrc": "{{ site.iubenda.remote_consent_url }}?optout=1"
+            }
+          }
+          {%- endif %}
       }
   </script>
 </amp-consent>

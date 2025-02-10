@@ -91,3 +91,4 @@ For any issues or questions, please report bugs and issues on [our GitHub reposi
 
 - [Granular User Consent Updates for v3.3.1]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %})
 - [Verifying iubenda Cookie Solution on AMP Pages]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %})
+- [Set Up Free Geo-Targeted Cookie Consent on AMP Pages with Iubenda and amp-geo]({% post_url 2025-02-10-setup-free-geo-targeted-cookie-consent-amp-iubenda %})

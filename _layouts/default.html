@@ -7,11 +7,13 @@
     {% seo %}
     <link as="script" href="https://cdn.ampproject.org/v0.js" rel="preload">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    {%- if site.amp_geo.enabled -%}
+    <script async custom-element="amp-geo" src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"></script>
+    {%- endif -%}
     {%- if site.consent == true -%}
     <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
       {%- if site.iubenda.remote_consent_url -%}
         {%- assign consent_type = "iubenda" -%}
-        {%- assign consent_instance_id = "iubenda" -%}
       {%- else -%}
         {%- assign consent_type = "built-in" -%}
         {%- assign consent_instance_id = "site-consent" -%}
@@ -124,6 +126,21 @@
   {%- capture layout -%}{% if page.layout %}layout-{{ page.layout }}{% endif %}{%- endcapture -%}
 
   <body class="{{ layout }}" data-amp-auto-lightbox-disable>
+    {%- if site.amp_geo.enabled -%}
+      <amp-geo layout="nodisplay">
+        <script type="application/json">
+          {
+            "AmpBind": true
+            {%- if site.amp_geo.consent_override -%} ,
+            "ISOCountryGroups": {
+              "optout": ["us", "au", "hk", "sg"]
+            }
+            {%- endif %}
+          }
+        </script>
+      </amp-geo>
+    {%- endif -%}
+      
     <!-- Consent UI -->
     {%- if page.consent_ui == false -%}
       <amp-consent layout="nodisplay" id="site-consent" style="display:none;">

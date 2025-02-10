@@ -212,6 +212,8 @@ When you call the `getTCData` command, you might receive a response like this:
 
 By using the `__tcfapi` function, you can effectively verify user consent within your website, ensuring compliance with GDPR and other privacy regulations.
 
+For additional information, refer to the [Transparency and Consent (TC) String with Global Vendor List Format](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md?form=MG0AV3).
+
 ## Additional Insights
 
 ### Understanding Consent Purposes
@@ -250,3 +252,4 @@ By thoroughly verifying the iubenda Cookie Solution using this tools, you're tak
 ## See Also
 
 - [Introducing iubenda AMP Cookie Solution for v3.3.0]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %})
+- [Set Up Free Geo-Targeted Cookie Consent on AMP Pages with Iubenda and amp-geo]({% post_url 2025-02-10-setup-free-geo-targeted-cookie-consent-amp-iubenda %})

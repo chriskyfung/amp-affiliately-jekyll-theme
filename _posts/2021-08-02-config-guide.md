@@ -254,7 +254,7 @@ For detailed instructions on how to customize your site's footer, visit our [Foo
 
 By following this guide, you can significantly enhance your site's navigation and usability, ensuring that important information is easily accessible to your visitors. Improving your site's footer not only boosts the overall user experience but also contributes to a more professional and polished appearance. Check out the [Footer Configuration] page to make the most of these features.
 
-[Footer Configuration]: ../footer-configuration/
+[Footer Configuration]: {% post_url 2024-11-05-footer-configuration %}
 
 * * *
 
@@ -297,6 +297,18 @@ For more information, visit the [Introducing iubenda AMP Cookie Solution]({% pos
 |           | `remote_consent_url` | Specify the URL for the remote AMP consent banner to be loaded.                                                                                                                                       |
 |           | `tp_btn_style`       | Set to `true`{:.green} to enable the Iubenda icon and style for the floating consent button.<br> _Default:_ `false`.                                                                                  |
 |           | `tp_btn_position`    | Define the position of the Iubenda style consent button.<br> _Default:_ `bottom-left`.<br> Other options:`top-left`, `top-right`, and `bottom-right`<br> (effective only if `tp_btn_style` is `true`) |
+
+<span>v3.3.2</span>{:.badge.badge-success}  \
+To implement geo-targeted cookie consent with Iubenda and `<amp-geo>`, you can add the following settings to the `_config.yml` file.`
+
+```yaml
+# amp-geo settings
+amp_geo:
+  enabled: true
+  consent_override: true
+```
+
+**Related:** [Set Up Free Geo-Targeted Cookie Consent on AMP Pages with Iubenda and amp-geo]({% post_url 2025-02-10-setup-free-geo-targeted-cookie-consent-amp-iubenda %})
 
 * * *
 
