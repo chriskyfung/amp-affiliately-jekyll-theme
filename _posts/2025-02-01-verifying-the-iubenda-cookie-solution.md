@@ -252,3 +252,4 @@ By thoroughly verifying the iubenda Cookie Solution using this tools, you're tak
 ## See Also
 
 - [Introducing iubenda AMP Cookie Solution for v3.3.0]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %})
+- [Set Up Free Geo-Targeted Cookie Consent on AMP Pages with Iubenda and amp-geo]({% post_url 2025-02-10-setup-free-geo-targeted-cookie-consent-amp-iubenda %})
