@@ -2,7 +2,7 @@
 layout: post
 title: Verifying iubenda Cookie Solution on AMP Pages
 date: 2025-02-02 20:31 +0800
-last_modified_at: 2025-02-04 17:00 +0800
+last_modified_at: 2025-02-19 17:02 +0800
 permalink: /verifying-iubenda-cookie-solution-amp/
 excerpt: Learn how to verify the iubenda Cookie Solution on AMP pages for compliance and user experience with this step-by-step guide.
 categories:
@@ -176,17 +176,17 @@ This function enables you to execute various commands related to user consent an
 
 **Example Usage:**
 
-To access the `TCData` object, use the `__tcfapi` function with the `getTCData` command as shown below:
+To access the `TCData` object, use the `__tcfapi` function with the `addEventListener` command as shown below:
 
 ```js
-__tcfapi('getTCData', 2, function(result, success) {
-    console.log(result);
+__tcfapi('addEventListener', 2, (tcData, success) => {
+    success && console.log(tcData);
 });
 ```
 
 **Sample Output:**
 
-When you call the `getTCData` command, you might receive a response like this:
+When you call the `addEventListener` command, you might receive a response like this:
 
 ```json
 {
