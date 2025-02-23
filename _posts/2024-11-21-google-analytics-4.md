@@ -23,6 +23,8 @@ excerpt: Integrate GA4 with AMP in Jekyll for real-time analytics. Track user in
 
 **Google Analytics 4 (GA4)** is the latest version of Google's analytics platform, offering enhanced tracking and insights capabilities. One of the standout strengths of this AMP-based Jekyll theme is its seamless integration with GA4, enabling you to monitor user interactions and optimize your content based on real-time data. This powerful feature ensures you have access to comprehensive analytics without sacrificing the performance benefits of AMP.
 
+---
+
 ## 🔧 Setting Up GA4 for AMP
 
 To set up GA4 with your AMP pages, follow these steps:
@@ -31,6 +33,8 @@ To set up GA4 with your AMP pages, follow these steps:
 2. **Configure Your Site's Settings**: Add the GA4 Measurement ID to your site's settings as described in the [Config Guide]({% post_url 2021-08-02-config-guide %}#-google-analytics).
 
 By following these steps, you'll be able to start tracking user interactions on your AMP pages with GA4.
+
+---
 
 ## ⚙️ Advanced Configuration in GA4 <span>v3.2</span>{:.badge.badge-success}
 
@@ -64,6 +68,8 @@ When you activate the data filter, Google Analytics will filter out any data col
 
 For more details, refer to the [Google Analytics 4 documentation](https://support.google.com/analytics/answer/13296662?hl=en).
 
+---
+
 ## ✨ Supported Features
 
 **Important**: Please be aware that the current GA4 configuration for AMP does not support the automatic capture of [GA4 Enhanced Measurement events][GA4 Enhanced measurement events].
@@ -93,6 +99,8 @@ When GA4 is configured, a click event named `outgoing_click` is sent whenever a 
 **Note**: This theme does not support the `link_classes`, `link_domain`, and `link_id` parameters available in GA4 for non-AMP pages. To overcome the limitations of GA4 for AMP, our theme implements a workaround for the `link_url` parameter.
 
 During the site build process, this theme automatically updates each external link within your post content by adding a `data-vars-event-label` attribute and copying the URL from the `href` attribute. This modification creates a data variable for the `<amp-analytics>` component, allowing it to capture and pass the URL of the clicked link as the `link_url` parameter.
+
+---
 
 #### ⏯️ Video Engagement
 
@@ -127,13 +135,21 @@ For accurate data capture and enhanced video engagement tracking, we recommend u
 
 [embed YouTube videos]: {% post_url 2024-11-23-amp-youtube %}
 
+---
+
 ### Debugging AMP Analytics
 
 Use Google's debugging tools to troubleshoot and resolve issues with your AMP analytics setup.
+
+---
 
 ## References
 
 For more detailed instructions and information, refer to these reliable sources:
 
-- [Tag setup for AMP  \|  gtag.js  \|  Google for Developers](https://developers.google.com/tag-platform/gtagjs/amp?technology=gtagjs)
+- [Tag setup for AMP - gtag.js \| Google for Developers](https://developers.google.com/tag-platform/gtagjs/amp?technology=gtagjs)
 - [Documentation: \<amp-analytics\> - amp.dev](https://amp.dev/documentation/components/amp-analytics)
+
+## Additional Reading
+
+- [GA4 (Google Analytics 4) GDPR Compliance Checklist - 2024](https://www.optimizesmart.com/checklist-to-become-gdpr-compliant-with-google-analytics/)

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: scroll
-pagination: 
+title: Device Preview
+pagination:
   enabled: true
 css:
-   custom: >-
+  custom: |-
       /* width */
       ::-webkit-scrollbar {
         width: 6px;
@@ -28,6 +28,7 @@ css:
       * {
         scrollbar-width: thin;
       }
+permalink: /device-preview/
 ---
 
 <!-- Home Jumbotron -->

@@ -2,15 +2,23 @@
 layout: post
 title: Ads Settings
 date: 2021-04-02 11:00:00 +0800
+last_modified_at: 2025-02-13 12:02 +0800
 author: chris
-categories: [doc]
-tags: [Adsense, _config, styles, AMP]
+categories:
+  - doc
+tags:
+  - Adsense
+  - _config
+  - styles
+  - AMP
 permalink: /ads-settings/
 image:
   path: /assets/images/web-5771064_730.jpg
+  width: "730"
+  height: "411"
 css:
   syntax: true
-  custom: >-
+  custom: |-
     table {
       border: 1px solid #ddd;
       width: 100%
@@ -22,7 +30,7 @@ css:
     td {
       padding: 5px;
     }
-excerpt: "Ads Styles and Configuration"
+excerpt: Ads Styles and Configuration
 ---
 
 {% include toc.md %}
@@ -46,6 +54,8 @@ The theme will include the following two AMP components to the HTML head:
   src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 ```
 
+---
+
 ## Disable Auto Ads
 
 You can disable and exclude the **Auto Ads** component by configuring `auto_ads: false` as below.
@@ -56,6 +66,8 @@ adsense:
   client_id: 'ca-pub-xxxxxxxxxxxxxxxx' # Google Adsense client ID
   auto_ads: false
 ```
+
+---
 
 ## Manually Insert Ad Units
 
@@ -81,6 +93,8 @@ adsense:
 | -------------- | ----- | ------ | --------------- |
 | before content | 100%  | 200px  | width: 730px    |
 | sidebar        | 100%  | 250px  | width: 300px    |
+
+---
 
 ## Ad Background
 
@@ -111,4 +125,24 @@ If you still worry about violating the Adsense Policy, you can exclude the CSS s
 adstyle: false
 ```
 
-<br>
+---
+
+## Learn More
+
+- [About Accelerated Mobile Pages (AMP) - Google AdSense Help](https://support.google.com/adsense/answer/9187239?hl=en)
+- [Set up Auto ads on your AMP site - Google AdSense Help](https://support.google.com/adsense/answer/9261309?hl=en)
+- [Create an AMP-compatible display ad unit - Google AdSense Help](https://support.google.com/adsense/answer/9274230?hl=en)
+- [Show anchor ads on your AMP site - Google AdSense Help](https://support.google.com/adsense/answer/11418825?hl=en)
+
+---
+
+## Additional Reading
+
+- [Google consent management requirements for serving ads in the EEA, the UK, and Switzerland (for publishers) - Google AdSense Help](https://support.google.com/adsense/answer/13554116?hl=en)
+- [Publisher integration with the IAB Europe TCF - Google AdSense Help](https://support.google.com/adsense/answer/9804260?hl=en)
+- [Google’s Additional Consent technical specification - Google AdSense Help](https://support.google.com/adsense/answer/9681920?hl=en)
+- [Troubleshooting IAB EU TCF v2.2 implementation - Google AdSense Help](https://support.google.com/adsense/answer/9999955?hl=en)
+- [Limited ads - Google AdSense Help](https://support.google.com/adsense/answer/14210870?hl=en)
+- [Tag an ad request for EEA, the UK, and Switzerland users for restricted data processing - Google AdSense Help](https://support.google.com/adsense/answer/9009582?hl=en)
+- [Ads personalization settings in Google’s publisher ad tags - Google AdSense Help](https://support.google.com/adsense/answer/7670312?hl=en&sjid=9046462003459522894-NC)
+- [Restricted data processing settings in Google’s publisher ad tags - Google AdSense Help](https://support.google.com/adsense/answer/9598414?hl=en&sjid=9046462003459522894-NC)

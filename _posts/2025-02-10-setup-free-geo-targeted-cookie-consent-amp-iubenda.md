@@ -166,3 +166,8 @@ If you have any insights on how to compel `<amp-consent>` to display banners or 
 
 - [AMP Consent Documentation](https://amp.dev/documentation/components/websites/amp-consent#geooverride)
 - [Geolocation-Based Consent Flow Examples](https://amp.dev/documentation/examples/user-consent/geolocation-based_consent_flow)
+- [Cookie Laws, Regulations & Requirements Around the World Q3, 2024 - Securiti](https://securiti.ai/cookie-laws-and-regulations/)
+- [GDPR Cookie Consent Cheatsheet - iubenda help](https://www.iubenda.com/en/help/23672-gdpr-cookie-consent-cheatsheet)
+- [US privacy legislations overview - iubenda help](https://www.iubenda.com/en/help/65132-us-privacy-legislations-overview)
+- [Limits of the Free Plan - iubenda help](https://www.iubenda.com/en/help/379-basic-license-limits)
+- [Pricing FAQs - iubenda help](https://www.iubenda.com/en/help/6633-pricing-faqs)
