@@ -167,7 +167,7 @@ Preview the look of the responsive design for different devices (smartphone <i c
           layout="responsive"
           sandbox="allow-scripts"
           frameborder="0"
-          src="/amp-affiliately-jekyll-theme/scroll/"
+          src="/amp-affiliately-jekyll-theme/device-preview/"
         >
         </amp-iframe>
       </div>
@@ -184,7 +184,7 @@ Preview the look of the responsive design for different devices (smartphone <i c
           layout="responsive"
           sandbox="allow-scripts"
           frameborder="0"
-          src="/amp-affiliately-jekyll-theme/scroll/"
+          src="/amp-affiliately-jekyll-theme/device-preview/"
         >
         </amp-iframe>
       </div>
@@ -201,7 +201,7 @@ Preview the look of the responsive design for different devices (smartphone <i c
           layout="responsive"
           sandbox="allow-scripts"
           frameborder="0"
-          src="/amp-affiliately-jekyll-theme/scroll/"
+          src="/amp-affiliately-jekyll-theme/device-preview/"
         >
         </amp-iframe>
       </div>
