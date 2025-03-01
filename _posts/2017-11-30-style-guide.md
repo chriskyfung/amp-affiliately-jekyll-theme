@@ -2,7 +2,7 @@
 layout: post
 title: Styles
 date: 2017-11-30 04:00:00
-last_modified_at: 2025-01-22 17:01 +0800
+last_modified_at: 2025-03-01 15:03 +0800
 author: Peter
 categories:
   - feature
@@ -17,251 +17,66 @@ amp:
   youtube: true
 css:
   syntax: true
-excerpt: The demos for HTML styling and Markdown output as it appears in the browser.
+  custom: |-
+    table { margin: auto auto 1.5rem auto; }
+    th, td { padding: 0 15px; }
+excerpt: A comprehensive style guide showcasing Markdown and HTML elements, typography, and component styling in this Jekyll theme.
 image:
   path: /assets/images/write-2160925.svg
   width: "730"
   height: "411"
-  hide: true
 ---
 
-<p>This shows how you can use html styling to achieve your hopes.</p>
+Welcome to the style guide! This page demonstrates all the text styles and Markdown formatting capabilities [^1] available in this theme. You'll find examples of typography, components, and HTML elements styled with Kramdown [^2], making it easy to format your content.
 
-<p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
+[^1]: [Kramdown Cheat Sheet \| Alberto's repos](https://aoterodelaroza.github.io/devnotes/kramdown-cheatsheet/)
+[^2]: [Markdown Kramdown Tips & Tricks \| GitLab](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/)
 
-<hr />
+{% include toc.md %}
 
-<h2 id="heading2">Heading 2</h2>
+---
 
-font-size: 2rem `/* default 32 px */`
+## Heading 2
 
-<h3 id="heading3">Heading 3</h3>
+### Heading 3
 
-font-size: 1.6875rem `/* default 27 px */`
+#### Heading 4
 
-<h4 id="heading4">Heading 4</h4>
+##### Heading 5
 
-font-size: 1.375rem `/* default 22 px */`
+###### Heading 6
 
-<h5 id="heading5">Heading 5</h5>
+Lorem ipsum dolor sit amet, [test link](#) adipiscing elit. **This is strong.** Nullam dignissim convallis est. Quisque aliquam. _This is emphasized._ Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>The New York Times</cite> (That’s a citation). Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
-font-size: 1.1875rem `/* default 19 px */`
+The table below shows the font size of heading and paragraph elements.
 
-<h6 id="heading6">Heading 6</h6>
+| Element | Font Size | Computed Size |
+| :-----: | :-------: | :-----------: |
+|   h1    |  2.5rem   |     40px      |
+|   h2    |   2rem    |     32px      |
+|   h3    |  1.5rem   |     24px      |
+|   h4    |  1.25rem  |     20px      |
+|   h5    | 1.125rem  |     18px      |
+|   h6    |   1rem    |     16px      |
+|    p    | 1.0625rem |     17px      |
 
-font-size: 1.0625rem `/* default 17 px */`
+<abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <code>COPY <var>filename</var></code>. ~~Dinner’s at 5:00.~~ <ins>Let’s make that 7.</ins>
 
-<hr />
+---
 
-<p>Lorem ipsum dolor sit amet, <a title="test link" href="#">test link</a> adipiscing elit. <strong>This is strong.</strong> Nullam dignissim convallis est. Quisque aliquam. <em>This is emphasized.</em> Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>The New York Times</cite> (That’s a citation). Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+## Blockquotes
 
-<p><abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <code>COPY <var>filename</var></code>. <del>Dinner’s at 5:00.</del> <ins>Let’s make that 7.</ins></p>
+Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.
 
-<hr />
+> Good afternoon, gentlemen. I am a HAL 9000 computer. I became operational at the H.A.L. plant in Urbana, Illinois on the 12th of January 1992. My instructor was Mr. Langley, and he taught me to sing a song. If you’d like to hear it I can sing it for you. <cite>— [HAL 9000](http://en.wikipedia.org/wiki/HAL_9000)</cite>
 
-<h2>Media</h2>
+And here’s a bit of trailing text.
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+---
 
-<h3>Image</h3>
+## List Types
 
-{% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="" class="mb3" %}
-
-<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-<hr/>
-
-<h3>Buttons</h3>
-
-<main class="flex flex-wrap justify-around align-item items-center">
-<div class="flex flex-column mb2 items-center">
-<h4>Primary</h4>
-<button class="ampstart-btn">
-SUBMIT
-</button>
-</div>
-<div class="flex flex-column mb2 items-center">
-<h4>Primary Disabled</h4>
-<button class="ampstart-btn" disabled>
-SUBMIT
-</button>
-</div>
-</main>
-
-<main class="flex flex-wrap justify-around align-item items-center">
-<div class="flex flex-column mb2 items-center">
-<h4>Secondary</h4>
-<button class="ampstart-btn ampstart-btn-secondary">
-SUBMIT
-</button>
-</div>
-<div class="flex flex-column mb2 items-center">
-<h4>Secondary Disabled</h4>
-<button class="ampstart-btn ampstart-btn-secondary" disabled>
-SUBMIT
-</button>
-</div>
-</main>
-
-<hr />
-
-<h3>Form</h3>
-
-<main class="flex flex-wrap justify-around align-item items-center" markdown="0">
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">On</label>
-  <div class="ampstart-input ampstart-input-chk inline-block relative m0 p0 mb3 ">
-    <input type="checkbox" value="1" name="cb" id="cb1" class="p0 m0 relative" checked="">
-    <label for="cb1" class="" aria-hidden="true">Chkbox 1</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Off</label>
-  <div class="ampstart-input ampstart-input-chk inline-block relative m0 p0 mb3 ">
-    <input type="checkbox" value="2" name="cb" id="cb2" class="p0 m0 relative">
-    <label for="cb2" class="" aria-hidden="true">Chkbox 2</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Disabled</label>
-  <div class="ampstart-input ampstart-input-chk inline-block relative m0 p0 mb3 ">
-    <input type="checkbox" value="3" name="cb" id="cb3" class="p0 m0 relative" disabled="">
-    <label for="cb3" class="" aria-hidden="true">Chkbox 3</label>
-  </div>
-</div>
-</main>
-
-<main class="flex flex-wrap justify-around align-item items-center" markdown="0">
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">On</label>
-  <div class="ampstart-input ampstart-input-radio inline-block relative m0 p0 mb3 ">
-    <input type="radio" value="1" name="rb" id="rb1" class="relative" checked="">
-    <label for="rb1" class="" aria-hidden="true">Radio 1</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Off</label>
-  <div class="ampstart-input ampstart-input-radio inline-block relative m0 p0 mb3 ">
-    <input type="radio" value="2" name="rb" id="rb2" class="relative">
-    <label for="rb2" class="" aria-hidden="true">Radio 2</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Disabled</label>
-  <div class="ampstart-input ampstart-input-radio inline-block relative m0 p0 mb3 ">
-    <input type="radio" value="3" name="rb" id="rb3" class="relative" disabled="">
-    <label for="rb3" class="" aria-hidden="true">Radio 3</label>
-  </div>
-</div>
-</main>
-
-<main class="flex flex-wrap justify-around align-item items-center" markdown="0">
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Textbox</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <input type="text" value="" name="name1" id="ip1" class="block border-none p0 m0 user-valid valid" placeholder="Enter your Name">
-    <label for="ip1" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Enter your Name</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Textbox Filled</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <input type="text" value="John Smith" name="name1" id="ip1" class="block border-none p0 m0 user-valid valid" placeholder="Enter your Name">
-    <label for="ip1" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Enter your Name</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Disabled Textbox</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <input type="text" value="" name="name1" id="ip1" class="block border-none p0 m0" placeholder="This input is Disabled" disabled="">
-    <label for="ip1" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">This input is Disabled</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Date Input</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <input type="date" value="2020-10-10" name="name4" id="ip4" class="block border-none p0 m0" placeholder="Date of Expiry">
-    <label for="ip4" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Date of Expiry</label>
-  </div>
-</div>
-</main>
-
-<main class="flex flex-wrap justify-around align-item items-center" markdown="0">
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Range Input</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <input type="range" value="" name="name11" id="ip11" class="block border-none p0 m0" placeholder="Select a range">
-    <label for="ip11" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Select a range</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Disabled Range Input</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <input type="range" value="" name="name11" id="ip11a" class="block border-none p0 m0" placeholder="Select a range" disabled="">
-    <label for="ip11a" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Select a range</label>
-    </div>
-</div>
-</main>
-
-<main class="flex flex-wrap justify-around align-item items-center" markdown="0">
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Textarea</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <textarea name="name13" id="ip13" class="block border-none  p0 m0" rows="5"></textarea>
-    <label for="ip13" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Write your story</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Disabled Textarea</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <textarea name="name13" id="ip13a" class="block border-none  p0 m0" rows="5" disabled=""></textarea>
-    <label for="ip13a" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">This input is disabled</label>
-  </div>
-</div>
-</main>
-
-<main class="flex flex-wrap justify-around align-item items-center" markdown="0">
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Select</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <select name="name12" id="ip12" class="block border-none p0 m0 user-valid valid">
-        <option value="">Apple</option>
-        <option value="">Orange</option>
-        <option value="">Lemon</option>
-        <option value="">Grape</option>
-    </select>
-    <label for="ip12" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Select a fruit</label>
-  </div>
-</div>
-
-<div class="flex flex-column items-center">
-  <label class="www-example-label bold mb3">Disabled Select</label>
-  <div class="ampstart-input inline-block relative m0 p0 mb3 ">
-    <select name="name12" id="ip12a" class="block border-none  p0 m0" disabled="">
-        <option value="">Apple</option>
-        <option value="">Orange</option>
-        <option value="">Lemon</option>
-        <option value="">Grape</option>
-    </select>
-    <label for="ip12a" class="absolute top-0 right-0 bottom-0 left-0" aria-hidden="true">Select a fruit</label>
-  </div>
-</div>
-</main>
-
-<hr/>
-
-<h2>List Types</h2>
-
-<h3>Definition List</h3>
+### Definition List
 
 Definition List Title
 : This is a definition list division.
@@ -269,48 +84,72 @@ Definition List Title
 Definition
 : An exact statement or description of the nature, scope, or meaning of something: **our definition of what constitutes poetry.**
 
-<h3>Ordered List</h3>
+### Ordered List
 
-<ol>
-<li>List Item 1  </li>
-<li>List Item 2 <br>
-<ol><li>Nested list item A</li>
-<li>Nested list item B</li></ol></li>
-<li>List Item 3</li>
-</ol>
+1. List Item 1
+2. List Item 2
+   1. Nested list item A
+   2. Nested list item B
+3. List Item 3
 
-<h3>Unordered List</h3>
+### Unordered List
 
-<ul>
-<li>List Item 1</li>
-<li>List Item 2
-<ul><li>Nested list item A</li>
-<li>Nested list item B</li></ul></li>
-<li>List Item 3</li>
-</ul>
+- List Item 1
+- List Item 2
+  - Nested list item A
+  - Nested list item B
+- List Item 3
 
-<hr />
+---
 
-<h2>Preformatted Text</h2>
+## Text-Level Semantics
 
-<p>Typographically, preformatted text is not the same thing as code. Sometimes, a faithful execution of the text requires preformatted text that may not have anything to do with code. Most browsers use Courier and that’s a good default — with one slight adjustment, Courier 10 Pitch over regular Courier for Linux users.</p>
+The [a element](#) example  
+The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples  
+The **b element** example  
+The <cite>cite element</cite> example  
+The `code element` example  
+The ~~del element~~ example  
+The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples  
+The _em element* example  
+The <i>i element</i> example  
+The **ins element** example  
+The <kbd>kbd element</kbd> example  
+The <mark>mark element</mark> example  
+The <q>q element <q>inside</q> a q element</q> example  
+The <s>s element</s> example  
+The <samp>samp element</samp> example  
+The <small>small element</small> example  
+The <span>span element</span> example  
+The **strong element** example  
+The <sub>sub element</sub> example  
+The <sup>sup element</sup> example  
+The <var>var element</var> example  
+The <u>u element</u> example
 
-<h3 id="code">Code</h3>
+---
 
-<p>Code can be presented inline, like <code>&lt;?php bloginfo('stylesheet_url'); ?&gt;</code>, or within a <code>&lt;pre&gt;</code> block. Because we have more specific typographic needs for code, we’ll specify Consolas and Monaco ahead of the browser-defined monospace font.</p>
+## Preformatted Text
 
-<p>Code blocks can also be inserted with the highlight tag as below:</p>
-<pre>
-    {% raw %}
-    {% highlight language-x %}
-    # some code
-    {% endhighlight %}
-    {% endraw %}
-</pre>
+Typographically, preformatted text is not the same thing as code. Sometimes, a faithful execution of the text requires preformatted text that may not have anything to do with code. Most browsers use Courier and that’s a good default — with one slight adjustment, Courier 10 Pitch over regular Courier for Linux users.
 
-<p>More information about code highlighting in jekyll can be found  <a href="https://jekyllrb.com/docs/templates/#code-snippet-highlighting">in Jekyll documentation</a>.</p>
+### Code
 
-<p>These area a couple of examples showing the resulting highlighted code:</p>
+Code can be presented inline, like `<?php bloginfo('stylesheet_url'); ?>`, or within a `<pre>` block. Because we have more specific typographic needs for code, we’ll specify Consolas and Monaco ahead of the browser-defined monospace font.
+
+Code blocks can also be inserted with the highlight tag as below:
+
+```liquid
+{% raw %}
+{% highlight language-x %}
+# some code
+{% endhighlight %}
+{% endraw %}
+```
+
+More information about code highlighting in jekyll can be found [in Jekyll documentation](https://jekyllrb.com/docs/templates/#code-snippet-highlighting).
+
+These area a couple of examples showing the resulting highlighted code:
 
 ```css
 /* css code sample */
@@ -356,53 +195,6 @@ import Foundation
 }
 ```
 
-<hr />
-
-<h2 id="blockquotes">Blockquotes</h2>
-
-<p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
-
-<blockquote>
-  <p>Good afternoon, gentlemen. I am a HAL 9000 computer. I became operational at the H.A.L. plant in Urbana, Illinois on the 12th of January 1992. My instructor was Mr. Langley, and he taught me to sing a song. If you’d like to hear it I can sing it for you. <cite>— <a href="http://en.wikipedia.org/wiki/HAL_9000">HAL 9000</a></cite></p>
-</blockquote>
-
-<p>And here’s a bit of trailing text.</p>
-
-<hr />
-
-<h2 id="textlevelsemantics">Text-level semantics</h2>
-
-<p>The <a href="#">a element</a> example <br>
-The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples <br>
-The <b>b element</b> example <br>
-The <cite>cite element</cite> example <br>
-The <code>code element</code> example <br>
-The <del>del element</del> example <br>
-The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples <br>
-The <em>em element</em> example <br>
-The <i>i element</i> example <br>
-The <ins>ins element</ins> example <br>
-The <kbd>kbd element</kbd> example <br>
-The <mark>mark element</mark> example <br>
-The <q>q element <q>inside</q> a q element</q> example <br>
-The <s>s element</s> example <br>
-The <samp>samp element</samp> example <br>
-The <small>small element</small> example <br>
-The <span>span element</span> example <br>
-The <strong>strong element</strong> example <br>
-The <sub>sub element</sub> example <br>
-The <sup>sup element</sup> example <br>
-The <var>var element</var> example <br>
-The <u>u element</u> example</p>
-
-<hr />
-
-<h3 id="video">Video</h3>
-
-<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-{% include youtube.html id="lBTCB7yLs8Y" title="Intro to AMP (Accelerated Mobile Pages)" %}
-
 ### Callout
 
 A shortcode for creating a colored box, e.g. tips/memo.
@@ -431,9 +223,22 @@ Code block
 
 {% include callout.html content=callout1 %}
 
-* * *
+---
 
-## Learn More
+## Media
 
-- [Kramdown Cheat Sheet \| Alberto’s repos](https://aoterodelaroza.github.io/devnotes/kramdown-cheatsheet/)
-- [Markdown Kramdown Tips & Tricks \| GitLab](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/)
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+
+### Image
+
+{% include picture.html source="assets" img="tree.jpg" width="656" height="400" layout="responsive" alt="tree" caption="" class="mb3" %}
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+### Video
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+{% include youtube.html id="lBTCB7yLs8Y" title="Intro to AMP (Accelerated Mobile Pages)" %}
+
+---

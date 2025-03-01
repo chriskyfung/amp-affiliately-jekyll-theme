@@ -1,12 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="91.44mm" height="91.44mm" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 9144 9144" xmlns="http://www.w3.org/2000/svg">
- <defs>
-  <style type="text/css">.fil1 {fill:white;fill-rule:nonzero} .fil0 {fill:url(#a)}</style>
-  <linearGradient id="a" x1="10043" x2="-898.9" y1="6303" y2="2841" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#48CFAE" offset="0"/>
-   <stop stop-color="#4FC0E8" offset="1"/>
-  </linearGradient>
- </defs>
- <polygon class="fil0" points="0 0 9144 0 9144 9144 0 9144"/>
- <path class="fil1" d="m5274 3284h819v-314h-819v314zm343 2363h134l252-353h-639l253 353zm162-2171v1627h314v-1627h-314zm-191 1627v-1627h-314v1627h314zm-2431-1769c-53 0-95-43-95-95 0-53 42-96 95-96h1926v-268c0-53 42-96 95-96h1011c53 0 95 43 95 96v2324c0 23-8 44-22 61l-496 695c-17 28-47 46-82 46h-2527c-53 0-95-43-95-96 0-52 42-95 95-95h2341l-324-452h-2017c-53 0-95-43-95-96s42-96 95-96h1926v-544h-1926c-53 0-95-43-95-96s42-96 95-96h1926v-452h-1926c-53 0-95-43-95-96s42-96 95-96h1926v-452h-1926zm-606-879h4042c53 0 96 43 96 96v4042c0 53-43 96-96 96h-4042c-53 0-96-43-96-96v-4042c0-53 43-96 96-96zm3946 192h-3850v3850h3850v-3850z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="613.33301"
+   height="345.60001"
+   clip-rule="evenodd"
+   fill-rule="evenodd"
+   image-rendering="optimizeQuality"
+   shape-rendering="geometricPrecision"
+   text-rendering="geometricPrecision"
+   version="1.1"
+   viewBox="0 0 16227.769 9143.9999"
+   id="svg2"
+   sodipodi:docname="write-2160925.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.213831"
+     inkscape:cx="311.41074"
+     inkscape:cy="137.16901"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs2">
+    <style
+       type="text/css"
+       id="style1">.fil1 {fill:white;fill-rule:nonzero} .fil0 {fill:url(#a)}</style>
+    <linearGradient
+       id="a"
+       x1="10043"
+       x2="-898.90002"
+       y1="6303"
+       y2="2841"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#48CFAE"
+         offset="0"
+         id="stop1" />
+      <stop
+         stop-color="#4FC0E8"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+  </defs>
+  <polygon
+     class="fil0"
+     points="9144,9144 0,9144 0,0 9144,0 "
+     id="polygon2"
+     style="fill:url(#a);stroke-width:0.750652"
+     transform="matrix(1.7746904,0,0,1,1.4610854e-4,0)" />
+  <path
+     class="fil1"
+     d="m 8815.8844,3284 h 819 v -314 h -819 z m 343,2363 h 134 l 252,-353 h -639 z m 162,-2171 v 1627 h 314 V 3476 Z m -191,1627 V 3476 h -314 v 1627 z m -2431,-1769 c -53,0 -95,-43 -95,-95 0,-53 42,-96 95,-96 h 1926 v -268 c 0,-53 42,-96 95,-96 h 1011 c 53,0 95,43 95,96 v 2324 c 0,23 -8,44 -22,61 l -496,695 c -17,28 -47,46 -82,46 h -2527 c -53,0 -95,-43 -95,-96 0,-52 42,-95 95,-95 h 2341 l -324,-452 h -2017 c -53,0 -95,-43 -95,-96 0,-53 42,-96 95,-96 h 1926 v -544 h -1926 c -53,0 -95,-43 -95,-96 0,-53 42,-96 95,-96 h 1926 v -452 h -1926 c -53,0 -95,-43 -95,-96 0,-53 42,-96 95,-96 h 1926 v -452 z m -606,-879 h 4041.9996 c 53,0 96,43 96,96 v 4042 c 0,53 -43,96 -96,96 H 6092.8844 c -53,0 -96,-43 -96,-96 V 2551 c 0,-53 43,-96 96,-96 z m 3945.9996,192 H 6188.8844 v 3850 h 3849.9996 z"
+     id="path2" />
 </svg>
