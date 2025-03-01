@@ -257,10 +257,9 @@ SUBMIT
 </main>
 
 <hr/>
+## List Types
 
-<h2>List Types</h2>
-
-<h3>Definition List</h3>
+### Definition List
 
 Definition List Title
 : This is a definition list division.
@@ -268,48 +267,45 @@ Definition List Title
 Definition
 : An exact statement or description of the nature, scope, or meaning of something: **our definition of what constitutes poetry.**
 
-<h3>Ordered List</h3>
+### Ordered List
 
-<ol>
-<li>List Item 1  </li>
-<li>List Item 2 <br>
-<ol><li>Nested list item A</li>
-<li>Nested list item B</li></ol></li>
-<li>List Item 3</li>
-</ol>
+1. List Item 1
+2. List Item 2
+   1. Nested list item A
+   2. Nested list item B
+3. List Item 3
 
-<h3>Unordered List</h3>
+### Unordered List
 
-<ul>
-<li>List Item 1</li>
-<li>List Item 2
-<ul><li>Nested list item A</li>
-<li>Nested list item B</li></ul></li>
-<li>List Item 3</li>
-</ul>
+- List Item 1
+- List Item 2
+  - Nested list item A
+  - Nested list item B
+- List Item 3
 
-<hr />
+---
 
 <h2>Preformatted Text</h2>
 
-<p>Typographically, preformatted text is not the same thing as code. Sometimes, a faithful execution of the text requires preformatted text that may not have anything to do with code. Most browsers use Courier and that’s a good default — with one slight adjustment, Courier 10 Pitch over regular Courier for Linux users.</p>
+Typographically, preformatted text is not the same thing as code. Sometimes, a faithful execution of the text requires preformatted text that may not have anything to do with code. Most browsers use Courier and that’s a good default — with one slight adjustment, Courier 10 Pitch over regular Courier for Linux users.
 
-<h3 id="code">Code</h3>
+### Code
 
-<p>Code can be presented inline, like <code>&lt;?php bloginfo('stylesheet_url'); ?&gt;</code>, or within a <code>&lt;pre&gt;</code> block. Because we have more specific typographic needs for code, we’ll specify Consolas and Monaco ahead of the browser-defined monospace font.</p>
+Code can be presented inline, like `<?php bloginfo('stylesheet_url'); ?>`, or within a `<pre>` block. Because we have more specific typographic needs for code, we’ll specify Consolas and Monaco ahead of the browser-defined monospace font.
 
-<p>Code blocks can also be inserted with the highlight tag as below:</p>
-<pre>
-    {% raw %}
-    {% highlight language-x %}
-    # some code
-    {% endhighlight %}
-    {% endraw %}
-</pre>
+Code blocks can also be inserted with the highlight tag as below:
 
-<p>More information about code highlighting in jekyll can be found  <a href="https://jekyllrb.com/docs/templates/#code-snippet-highlighting">in Jekyll documentation</a>.</p>
+```liquid
+{% raw %}
+{% highlight language-x %}
+# some code
+{% endhighlight %}
+{% endraw %}
+```
 
-<p>These area a couple of examples showing the resulting highlighted code:</p>
+More information about code highlighting in jekyll can be found [in Jekyll documentation](https://jekyllrb.com/docs/templates/#code-snippet-highlighting).
+
+These area a couple of examples showing the resulting highlighted code:
 
 ```css
 /* css code sample */
