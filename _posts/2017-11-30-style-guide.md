@@ -56,6 +56,18 @@ The table below shows the font size of heading and paragraph elements.
 
 <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <code>COPY <var>filename</var></code>. ~~Dinner’s at 5:00.~~ <ins>Let’s make that 7.</ins>
 
+---
+
+## Blockquotes
+
+Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.
+
+> Good afternoon, gentlemen. I am a HAL 9000 computer. I became operational at the H.A.L. plant in Urbana, Illinois on the 12th of January 1992. My instructor was Mr. Langley, and he taught me to sing a song. If you’d like to hear it I can sing it for you. <cite>— [HAL 9000](http://en.wikipedia.org/wiki/HAL_9000)</cite>
+
+And here’s a bit of trailing text.
+
+---
+
 ## List Types
 
 ### Definition List
@@ -84,7 +96,34 @@ Definition
 
 ---
 
-<h2>Preformatted Text</h2>
+## Text-Level Semantics
+
+The [a element](#) example  
+The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples  
+The **b element** example  
+The <cite>cite element</cite> example  
+The `code element` example  
+The ~~del element~~ example  
+The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples  
+The _em element* example  
+The <i>i element</i> example  
+The **ins element** example  
+The <kbd>kbd element</kbd> example  
+The <mark>mark element</mark> example  
+The <q>q element <q>inside</q> a q element</q> example  
+The <s>s element</s> example  
+The <samp>samp element</samp> example  
+The <small>small element</small> example  
+The <span>span element</span> example  
+The **strong element** example  
+The <sub>sub element</sub> example  
+The <sup>sup element</sup> example  
+The <var>var element</var> example  
+The <u>u element</u> example
+
+---
+
+## Preformatted Text
 
 Typographically, preformatted text is not the same thing as code. Sometimes, a faithful execution of the text requires preformatted text that may not have anything to do with code. Most browsers use Courier and that’s a good default — with one slight adjustment, Courier 10 Pitch over regular Courier for Linux users.
 
@@ -150,46 +189,6 @@ import Foundation
 }
 ```
 
-<hr />
-
-<h2 id="blockquotes">Blockquotes</h2>
-
-<p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
-
-<blockquote>
-  <p>Good afternoon, gentlemen. I am a HAL 9000 computer. I became operational at the H.A.L. plant in Urbana, Illinois on the 12th of January 1992. My instructor was Mr. Langley, and he taught me to sing a song. If you’d like to hear it I can sing it for you. <cite>— <a href="http://en.wikipedia.org/wiki/HAL_9000">HAL 9000</a></cite></p>
-</blockquote>
-
-<p>And here’s a bit of trailing text.</p>
-
-<hr />
-
-<h2 id="textlevelsemantics">Text-level semantics</h2>
-
-<p>The <a href="#">a element</a> example <br>
-The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples <br>
-The <b>b element</b> example <br>
-The <cite>cite element</cite> example <br>
-The <code>code element</code> example <br>
-The <del>del element</del> example <br>
-The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples <br>
-The <em>em element</em> example <br>
-The <i>i element</i> example <br>
-The <ins>ins element</ins> example <br>
-The <kbd>kbd element</kbd> example <br>
-The <mark>mark element</mark> example <br>
-The <q>q element <q>inside</q> a q element</q> example <br>
-The <s>s element</s> example <br>
-The <samp>samp element</samp> example <br>
-The <small>small element</small> example <br>
-The <span>span element</span> example <br>
-The <strong>strong element</strong> example <br>
-The <sub>sub element</sub> example <br>
-The <sup>sup element</sup> example <br>
-The <var>var element</var> example <br>
-The <u>u element</u> example</p>
-
-<hr />
 ### Callout
 
 A shortcode for creating a colored box, e.g. tips/memo.
