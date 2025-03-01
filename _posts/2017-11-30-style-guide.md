@@ -25,7 +25,6 @@ image:
   path: /assets/images/write-2160925.svg
   width: "730"
   height: "411"
-  hide: true
 ---
 
 Welcome to the style guide! This page demonstrates all the text styles and Markdown formatting capabilities [^1] available in this theme. You'll find examples of typography, components, and HTML elements styled with Kramdown [^2], making it easy to format your content.
