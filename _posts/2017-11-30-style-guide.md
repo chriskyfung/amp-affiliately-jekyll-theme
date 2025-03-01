@@ -52,12 +52,12 @@ The table below shows the font size of heading and paragraph elements.
 
 | Element | Font Size | Computed Size |
 | :-----: | :-------: | :-----------: |
-|   h1    |  2.5rem   |     40px      |
-|   h2    |   2rem    |     32px      |
+|   h1    |  2.25rem  |     36px      |
+|   h2    |  1.75rem  |     28px      |
 |   h3    |  1.5rem   |     24px      |
 |   h4    |  1.25rem  |     20px      |
-|   h5    | 1.125rem  |     18px      |
-|   h6    |   1rem    |     16px      |
+|   h5    |   1.rem   |     16px      |
+|   h6    | 0.875rem  |     14px      |
 |    p    | 1.0625rem |     17px      |
 
 <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <code>COPY <var>filename</var></code>. ~~Dinner’s at 5:00.~~ <ins>Let’s make that 7.</ins>

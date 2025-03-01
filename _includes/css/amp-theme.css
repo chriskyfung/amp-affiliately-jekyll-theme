@@ -318,6 +318,7 @@ span.post-name a, span.post-read-more a:hover {
   font-display: swap;
 }
 .mainheading h1.posttitle {
+  font-size: 2.25rem;
   font-weight: 700;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
@@ -381,10 +382,10 @@ span.post-name a, span.post-read-more a:hover {
   text-decoration: none;
 }
 .article-post h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 .article-post h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 .article-post h3 {
   font-size: 1.5rem;
@@ -393,10 +394,10 @@ span.post-name a, span.post-read-more a:hover {
   font-size: 1.25rem;
 }
 .article-post h5 {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .article-post h6 {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 .article-post img.shadow {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
