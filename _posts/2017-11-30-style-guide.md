@@ -20,7 +20,7 @@ css:
   custom: |-
     table { margin: auto auto 1.5rem auto; }
     th, td { padding: 0 15px; }
-excerpt: The demos for HTML styling and Markdown output as it appears in the browser.
+excerpt: A comprehensive style guide showcasing Markdown and HTML elements, typography, and component styling in this Jekyll theme.
 image:
   path: /assets/images/write-2160925.svg
   width: "730"
@@ -28,7 +28,14 @@ image:
   hide: true
 ---
 
-This page demostrates the text styles in this theme.
+Welcome to the style guide! This page demonstrates all the text styles and Markdown formatting capabilities [^1] available in this theme. You'll find examples of typography, components, and HTML elements styled with Kramdown [^2], making it easy to format your content.
+
+[^1]: [Kramdown Cheat Sheet \| Alberto's repos](https://aoterodelaroza.github.io/devnotes/kramdown-cheatsheet/)
+[^2]: [Markdown Kramdown Tips & Tricks \| GitLab](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/)
+
+{% include toc.md %}
+
+---
 
 ## Heading 2
 
@@ -236,10 +243,3 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 {% include youtube.html id="lBTCB7yLs8Y" title="Intro to AMP (Accelerated Mobile Pages)" %}
 
 ---
-
-* * *
-
-## Learn More
-
-- [Kramdown Cheat Sheet \| Alberto’s repos](https://aoterodelaroza.github.io/devnotes/kramdown-cheatsheet/)
-- [Markdown Kramdown Tips & Tricks \| GitLab](https://about.gitlab.com/blog/2016/07/19/markdown-kramdown-tips-and-tricks/)
