@@ -2,7 +2,7 @@
 layout: post
 title: Styles
 date: 2017-11-30 04:00:00
-last_modified_at: 2025-01-22 17:01 +0800
+last_modified_at: 2025-03-01 15:03 +0800
 author: Peter
 categories:
   - feature
@@ -17,6 +17,9 @@ amp:
   youtube: true
 css:
   syntax: true
+  custom: |-
+    table { margin: auto auto 1.5rem auto; }
+    th, td { padding: 0 15px; }
 excerpt: The demos for HTML styling and Markdown output as it appears in the browser.
 image:
   path: /assets/images/write-2160925.svg
@@ -25,39 +28,35 @@ image:
   hide: true
 ---
 
-<p>This shows how you can use html styling to achieve your hopes.</p>
+This page demostrates the text styles in this theme.
 
-<p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
+## Heading 2
 
-<hr />
+### Heading 3
 
-<h2 id="heading2">Heading 2</h2>
+#### Heading 4
 
-font-size: 2rem `/* default 32 px */`
+##### Heading 5
 
-<h3 id="heading3">Heading 3</h3>
+###### Heading 6
 
-font-size: 1.6875rem `/* default 27 px */`
+Lorem ipsum dolor sit amet, [test link](#) adipiscing elit. **This is strong.** Nullam dignissim convallis est. Quisque aliquam. _This is emphasized._ Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>The New York Times</cite> (That’s a citation). Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
-<h4 id="heading4">Heading 4</h4>
+The table below shows the font size of heading and paragraph elements.
 
-font-size: 1.375rem `/* default 22 px */`
+| Element | Font Size | Computed Size |
+| :-----: | :-------: | :-----------: |
+|   h1    |  2.5rem   |     40px      |
+|   h2    |   2rem    |     32px      |
+|   h3    |  1.5rem   |     24px      |
+|   h4    |  1.25rem  |     20px      |
+|   h5    | 1.125rem  |     18px      |
+|   h6    |   1rem    |     16px      |
+|    p    | 1.0625rem |     17px      |
 
-<h5 id="heading5">Heading 5</h5>
+<abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <code>COPY <var>filename</var></code>. ~~Dinner’s at 5:00.~~ <ins>Let’s make that 7.</ins>
 
-font-size: 1.1875rem `/* default 19 px */`
-
-<h6 id="heading6">Heading 6</h6>
-
-font-size: 1.0625rem `/* default 17 px */`
-
-<hr />
-
-<p>Lorem ipsum dolor sit amet, <a title="test link" href="#">test link</a> adipiscing elit. <strong>This is strong.</strong> Nullam dignissim convallis est. Quisque aliquam. <em>This is emphasized.</em> Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>The New York Times</cite> (That’s a citation). Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
-
-<p><abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.  Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type <code>COPY <var>filename</var></code>. <del>Dinner’s at 5:00.</del> <ins>Let’s make that 7.</ins></p>
-
-<hr />
+---
 
 <h2>Media</h2>
 
