@@ -71,7 +71,7 @@ By adopting the iubenda AMP Cookie Solution, you can ensure GDPR compliance and 
 
 A: You can personalize the consent banner by:
 
-- Adjusting the style and position of the floating consent button in your `_config.yml` file, as outlined in our [config guide]({% post_url 2021-08-02-config-guide %}/#iubenda-cookie-consent).
+- Adjusting the style and position of the floating consent button in your `_config.yml` file, as outlined in our [config guide]({% post_url 2021-08-02-config-guide %}#iubenda-cookie-consent).
 - Logging into your iubenda account and customizing the cookie notice via the [iubenda dashboard](https://www.iubenda.com/en/help/3831-customize-cookie-banner).
 - Configuring the settings in the remote consent UI's HTML file as outlined in [iubenda's instructions](https://www.iubenda.com/en/help/22135-cookie-solution-amp-wordpress#websites-not-powered-by-wordpress) and [advanced guide](https://www.iubenda.com/en/help/1205-how-to-configure-your-cookie-solution-advanced-guide).
 
