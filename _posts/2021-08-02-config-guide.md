@@ -10,17 +10,19 @@ tags:
 permalink: /config-guide/
 image:
    path: /assets/images/settings-3311592.svg
+   width: "1920"
+   height: "1080"
 css:
-  badge: true
-  syntax: true
-  custom: |- 
-    table { font-size: .95rem; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; vertical-align: top; }
-    .box { border: 1px solid #e3edf3; padding: 1rem; }
-    .blue { color: #2266ff; }
-    .green { color: mediumseagreen; }
-    .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
+   badge: true
+   syntax: true
+   custom: |-
+      table { font-size: .95rem; margin-bottom: 1.5rem; }
+      tr:nth-child(odd) { backgroud-color: #e3edf3; }
+      th, td { padding: .5em; vertical-align: top; }
+      .box { border: 1px solid #e3edf3; padding: 1rem; }
+      .blue { color: #2266ff; }
+      .green { color: mediumseagreen; }
+      .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
 excerpt: The docs for the theme settings that let you control the global styling like logo, navigation, sidebar, footer, pagnitation, etc.
 featured: true
 ---
