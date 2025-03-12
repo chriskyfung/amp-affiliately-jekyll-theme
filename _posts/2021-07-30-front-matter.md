@@ -3,6 +3,7 @@ layout: post
 title: Front Matter Guide
 date: 2021-07-31 12:05 +0800
 last_modified_at: 2025-02-01 10:02 +0800
+author: chris
 categories:
   - doc
 tags:

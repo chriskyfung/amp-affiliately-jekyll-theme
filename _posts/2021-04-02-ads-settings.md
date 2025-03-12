@@ -30,7 +30,7 @@ css:
     td {
       padding: 5px;
     }
-excerpt: Ads Styles and Configuration
+excerpt: Optimize your ads with Google Adsense in AMP. Learn to configure settings and enhance user experience with effective ad placements.
 ---
 
 {% include toc.md %}

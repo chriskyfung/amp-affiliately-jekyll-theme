@@ -3,6 +3,7 @@ layout: post
 title: Verifying iubenda Cookie Solution on AMP Pages
 date: 2025-02-02 20:31 +0800
 last_modified_at: 2025-02-19 17:02 +0800
+author: chris
 permalink: /verifying-iubenda-cookie-solution-amp/
 excerpt: Learn how to verify the iubenda Cookie Solution on AMP pages for compliance and user experience with this step-by-step guide.
 categories:

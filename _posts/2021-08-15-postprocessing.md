@@ -3,6 +3,7 @@ layout: post
 title: Post-Processing
 date: 2021-08-15 23:15 +0800
 last_modified_at: 2025-01-22 17:01 +0800
+author: chris
 categories:
   - feature
 tags:
@@ -16,13 +17,13 @@ image:
 css:
   badge: true
   syntax: true
-  custom: >-
+  custom: |-
     table { font-size: .95rem; margin-bottom: 1.5rem; }
     tr:nth-child(odd) { backgroud-color: #e3edf3; }
     th, td { padding: .5em; }
     .box { border: 1px solid #e3edf3; padding: 1rem; }
     .plaintext { color: mediumseagreen; }
-excerpt: The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.
+excerpt: Learn how to enhance your blog with anchor links and external links that open in new tabs for better user experience and SEO.
 ---
 
 {% include toc.md %}
