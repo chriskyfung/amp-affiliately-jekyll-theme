@@ -2,6 +2,7 @@
 layout: post
 title: Set Up Free Geo-Targeted Cookie Consent on AMP Pages with Iubenda and amp-geo
 date: 2025-02-10 10:02 +0800
+author: chris
 permalink: /setup-free-geo-targeted-cookie-consent-amp-iubenda/
 image:
   path: /assets/images/cookie-map-4859127.svg

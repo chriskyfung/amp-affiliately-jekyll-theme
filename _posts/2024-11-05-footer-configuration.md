@@ -2,6 +2,7 @@
 layout: post
 title: Footer Configuration
 date: 2024-11-05 16:01 +0800
+author: chris
 categories:
   - doc
 tags:
@@ -14,7 +15,7 @@ image:
 css:
   badge: true
   syntax: true
-  custom: >-
+  custom: |-
     table { font-size: .95rem; margin-bottom: 1.5rem; }
     tr:nth-child(odd) { backgroud-color: #e3edf3; }
     th, td { padding: .5em; vertical-align: top; }
@@ -22,7 +23,7 @@ css:
     .blue { color: #2266ff; }
     .green { color: mediumseagreen; }
     .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
-excerpt: This documentation provides a comprehensive guide on configuring the footer columns and additional footer options in your theme, ensuring you can effectively customize your site's footer.
+excerpt: Learn how to customize your footer configuration with YAML in Front Matter CMS for enhanced usability and compliance.
 ---
 
 {% include toc.md %}

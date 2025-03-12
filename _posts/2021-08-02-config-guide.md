@@ -3,6 +3,7 @@ layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
 last_modified_at: 2025-01-23 21:01 +0800
+author: chris
 categories:
    - doc
 tags:
@@ -23,7 +24,7 @@ css:
       .blue { color: #2266ff; }
       .green { color: mediumseagreen; }
       .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
-excerpt: The docs for the theme settings that let you control the global styling like logo, navigation, sidebar, footer, pagnitation, etc.
+excerpt: Explore our comprehensive config guide to optimize your Jekyll site with the Amp Affiliately theme and enhance your site's performance.
 featured: true
 ---
 

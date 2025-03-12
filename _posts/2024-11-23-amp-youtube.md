@@ -3,6 +3,7 @@ layout: post
 title: Using AMP YouTube Components
 date: 2024-11-23 21:30 +0800
 last_modified_at: 2024-12-05 10:12 +0800
+author: chris
 categories:
   - feature
 tags:
@@ -17,7 +18,7 @@ amp:
 css:
   badge: true
   syntax: true
-excerpt: The demo and test page of the Anchor Links for headings and the Link Modifier on various Markdown styles.
+excerpt: Enhance your website's performance with AMP YouTube components for fast, responsive video embedding and improved user experience.
 ---
 
 {% include toc.md %}

@@ -2,6 +2,7 @@
 layout: post
 title: Granular User Consent Updates for v3.3.1
 date: 2025-01-31 09:01 +0800
+author: chris
 permalink: /built-in-granular-user-consentamp-consent/
 image:
   width: "1920"

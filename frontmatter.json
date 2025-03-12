@@ -70,7 +70,7 @@
           "type": "list"
         },
         {
-          "title": "Featured Image",
+          "title": "Featured image",
           "name": "image",
           "type": "fields",
           "fields": [
@@ -114,8 +114,8 @@
             {
               "title": "Hide image",
               "name": "hide",
-              "description": "Set to true to not embed the image on this post",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Set to true to not embed the image on this post"
             }
           ]
         },
@@ -133,60 +133,71 @@
           "title": "Additional AMP components",
           "name": "amp",
           "type": "fields",
+          "description": "Enable additional AMP components for this post",
           "fields": [
             {
               "title": "Gist",
               "name": "gist",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enable AMP support for GitHub Gists"
             },
             {
-              "title": "iFrame",
+              "title": "iframe",
               "name": "iframe",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enable AMP support for iframes"
             },
             {
               "title": "Script",
               "name": "script",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enable AMP support for custom scripts"
             },
             {
               "title": "YouTube",
               "name": "youtube",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enable AMP support for YouTube embeds"
             }
           ]
         },
         {
-          "title": "Custum HTML header",
+          "title": "Custom HTML header",
           "name": "custom_header",
-          "type": "string"
+          "type": "string",
+          "description": "Add custom HTML to the header of this post"
         },
         {
           "title": "CSS",
           "type": "fields",
           "name": "css",
+          "description": "Include additional CSS styles for this post",
           "fields": [
             {
               "title": "Badge",
               "name": "badge",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enable CSS for badges"
             },
             {
               "title": "Code block",
               "name": "syntax",
-              "type": "boolean"
+              "type": "boolean",
+              "description": "Enable CSS for code blocks"
             },
             {
               "title": "Custom CSS",
               "name": "custom",
-              "type": "string"
+              "type": "string",
+              "description": "Add custom CSS for this post"
             }
           ]
         },
         {
           "title": "Allow comments",
           "name": "comments",
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Enable or disable comments for this post"
         },
         {
           "title": "Sidebar",
@@ -196,18 +207,21 @@
             "left",
             "right",
             "none"
-          ]
+          ],
+          "description": "Position of the sidebar for this post"
         },
         {
-          "title": "Pin as Featured",
+          "title": "Featured",
           "name": "featured",
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Pin this post as a featured post"
         },
         {
           "title": "Redirect to",
           "name": "redirect_to",
           "type": "string",
-          "single": true
+          "single": true,
+          "description": "URL to redirect this post to"
         },
         {
           "title": "Sitemap",

@@ -2,6 +2,7 @@
 layout: post
 title: Introducing iubenda AMP Cookie Solution in Version 3.3.0
 date: 2025-01-23 17:01 +0800
+author: chris
 permalink: /introducing-iubenda-amp-cookie-solution/
 image:
   path: /assets/images/cookie-6116766.svg
@@ -20,6 +21,7 @@ css:
     .desktop-view-gallery-item { width: min(480px, 100%); }
     .mobile-view-gallery-item { width: 207px; }
     .faq-section h3 { font-size: 1em; font-weight: bold; margin-bottom: 0; }
+excerpt: Discover the new iubenda AMP Cookie Solution 3.3.0 for seamless GDPR compliance and user-friendly consent management on your AMP pages.
 ---
 
 We're excited to introduce a new consent banner option with the [iubenda Privacy Controls and Cookie Solution](https://iubenda.refr.cc/default/u/fumikr?s=sp&t=cp) in version `3.3.0`{:.badge.badge-success} of our Jekyll theme. This update integrates the [iubenda cookie consent on AMP pages](https://www.iubenda.com/en/help/22135-cookie-solution-amp-wordpress), delivering a seamless and compliant user consent experience. As a Google-certified CMP, it offers a reliable alternative to our self-developed consent interface, ensuring full compliance and reliability.

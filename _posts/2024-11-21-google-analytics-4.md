@@ -3,6 +3,7 @@ layout: post
 title: Google Analytics 4 for AMP Features
 date: 2024-11-21 11:22 +0800
 last_modified_at: 2024-11-28 21:11 +0800
+author: chris
 categories:
   - feature
 tags:

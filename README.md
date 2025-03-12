@@ -43,8 +43,8 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 
 ### ✨ New Features in `v3.x.x`
 
-- Support for [iubenda Privacy Controls and Cookie Solution on AMP pages](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/introducing-iubenda-amp-cookie-solution/) 🍪
-- Enhanced [Google Analytics 4 (GA4) integration with advanced video tracking](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/#%EF%B8%8F-video-engagement) 📊
+- Support for [iubenda Privacy Controls and Cookie Solution on AMP pages](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/introducing-iubenda-amp-cookie-solution/) ↗🍪
+- Enhanced [Google Analytics 4 (GA4) integration with advanced video tracking](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/#%EF%B8%8F-video-engagement) ↗📊
 - Customizable footer columns through `_config.yml` configuration 📝
 - Custom 404 error page 🎨
 - Improved typography and styling 💄:
@@ -56,7 +56,7 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
   - Improved SCSS handling with `css_to_scss.sh` script
 - Better development experience 👨💻:
   - Added live reload support for Jekyll
-  - Enhanced VS Code integration with Front Matter CMS
+  - Enhanced VS Code integration with [Front Matter CMS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-cms/) ↗
   - Improved markdown linting and documentation
 
 ### ✨ New Features in `v2.x.x`
@@ -116,7 +116,7 @@ Read the procedures in the [Config Guide](https://chriskyfung.github.io/amp-affi
 
 #### Disqus Comments in AMP 💬
 
-1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) ↗ (last updated on **2024-01-13**) and deploy it to another domain or subdomain.
+1. Download [this HTML file](https://gitlab.com/chriskyfung/disqus-amp/-/blob/master/public/index.html) ↗ ![GitLab Last Commit](https://img.shields.io/gitlab/last-commit/chriskyfung%2Fdisqus-amp?ref=master&path=public%2Findex.html) and deploy it to another domain or subdomain.
 2. Copy the external URL link as the value of `amp_disqus_url` in _config.yml.
 3. Use `amp_disqus_height` to configure the height of `<amp-iframe>` if needed (default is `140`).
 
