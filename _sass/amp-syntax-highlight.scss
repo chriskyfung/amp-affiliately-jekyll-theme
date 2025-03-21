@@ -2,6 +2,21 @@
   pre {
     background-color: #333;
     color: #fff;
+    // white-space: pre-wrap;
+
+    &::-webkit-scrollbar {
+      height: 10px;
+      width: 10px;
+    } 
+    
+    &::-webkit-scrollbar {
+        background-color: #555;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 5px;
+    }
   }
 
   .hll {
