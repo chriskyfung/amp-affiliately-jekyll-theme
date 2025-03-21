@@ -102,6 +102,11 @@ section.recent-posts {
   top: 17px;
 }
 
+.above-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .article-post ol, .article-post ul {
   margin-bottom: 1.5rem;
 }
@@ -277,17 +282,14 @@ section.recent-posts {
 
 div.post-date {
   display: inline-block;
+  color: #75748a;
+  margin: 7px 0;
+  font-size: small;
 }
 
 span.author-meta, span.post-name {
   display: inline-block;
 }
-
-div.post-date {
-  color: #75748a;
-  margin: 7px 0;
-}
-
 span.post-read {
   color: #75748a;
   margin: 7px 0;

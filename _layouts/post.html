@@ -52,18 +52,16 @@ amp:
     {%- endif -%}
     <!-- End Featured Image -->
 
-    <!-- Post Date -->
-    <p>
-      <small>
-        {% include blocks/post-date.html %}
-      </small>
-    </p>
-
-    {%- include blocks/share-buttons.html -%}
-
-    {%- comment -%}
-      {%- include blocks/ad-before-content.html -%}
-    {%- endcomment -%}
+    <div class="above-content">
+      <!-- Post Date -->
+      {%- include blocks/post-date.html -%}
+      
+      <!-- Code Wrap Toggle -->
+      {%- include blocks/code-wrap-toggle.html -%}
+      
+      <!-- Share Buttons -->
+      {%- include blocks/share-buttons.html -%}
+    </div>
 
     <!-- Post Content -->
     <div class="article-post">
