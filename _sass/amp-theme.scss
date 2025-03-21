@@ -6,6 +6,11 @@ body {
 
 .mainheading {
   padding: 0 0 1rem;
+
+  .above-title {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 a {

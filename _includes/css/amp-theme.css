@@ -8,6 +8,10 @@ body {
 .mainheading {
   padding: 0 0 1rem;
 }
+.mainheading .above-title {
+  display: flex;
+  justify-content: space-between;
+}
 
 a {
   color: #6fd350;

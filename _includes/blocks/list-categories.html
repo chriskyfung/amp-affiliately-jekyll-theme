@@ -1,4 +1,4 @@
-<ul class="tags">
+<ul class="categories">
   {%- if post -%}
     {%- assign this = post -%}
   {%- else -%}
@@ -10,8 +10,8 @@
     {%- assign categorylist = this.categories | sort -%}
   {%- endif -%}
   {%- for category in categorylist -%}
-  <li>
-    <small><a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a></small>
+  <li class="category">
+    <a href="{{ category | slugify | prepend: "category/" | relative_url }}/">{{ category }}</a>
   </li>
   {%- endfor -%}
 </ul>
