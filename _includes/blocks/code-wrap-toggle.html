@@ -1,6 +1,12 @@
 {%- if layout.css.syntax == true or page.css.syntax == true -%}
+<amp-state id="codewrap">
+  <script type="application/json">
+    false
+  </script>
+</amp-state>
 <div class="code-wrap-toggle-container">
-  <input type="checkbox" id="code-wrap-toggle" class="code-wrap-toggle-input" on="tap:post.toggleClass(class='code-wrap')">
+  <input type="checkbox" id="code-wrap-toggle" class="code-wrap-toggle-input"
+    on="tap:post.toggleClass(class='code-wrap'),AMP.pushState({ codewrap: !codewrap})">
   <label for="code-wrap-toggle" class="code-wrap-toggle-label">
     <span class="code-wrap-toggle-icon">
       <i class="fas fa-code"></i>
