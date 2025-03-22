@@ -1,36 +1,36 @@
-.tags {
+.categories, .tags {
   list-style: none;
   padding-left: 0;
-  margin: 0 0 1.5rem
+  margin: 0 0 1.5rem;
 }
-.tags li {
+.categories li, .tags li {
   display: inline-block;
   font-size: 0.9rem;
   margin-right: 0.2rem;
 }
-.tags li:last-child {
+.categories li:last-child, .tags li:last-child {
   margin-right: 0;
 }
-.tags li a {
+.categories li a, .tags li a {
   background: #fff100;
   color: #333;
   padding: 3px 10px;
   border-radius: 3px;
   font-weight: 500;
-  font-size: 0.93em;
+  font-size: 0.7rem;
   text-transform: capitalize;
   text-decoration: none;
-  box-shadow: 0 6px 10px 0 hsla(0, 0%, 66%, 0.1)
+  box-shadow: 0 6px 10px 0 hsla(0, 0%, 66%, 0.1);
 }
-.tags li a:hover {
+.categories li a:hover, .tags li a:hover {
   background: rgba(0, 0, 0, 0.07);
-  text-decoration: none
+  text-decoration: none;
 }
-.tags.rounded-tags li a {
+.categories.rounded-tags li a, .tags.rounded-tags li a {
   background: transparent;
   border: 1px solid;
-  border-radius: 20px
+  border-radius: 20px;
 }
-.tags.rounded-tags code a {
-  box-shadow: inherit
-}
+.categories.rounded-tags code a, .tags.rounded-tags code a {
+  box-shadow: inherit;
+}/*# sourceMappingURL=amp-tags.css.map */

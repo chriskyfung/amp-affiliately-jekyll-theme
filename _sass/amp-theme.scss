@@ -6,6 +6,11 @@ body {
 
 .mainheading {
   padding: 0 0 1rem;
+
+  .above-title {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 a {
@@ -110,6 +115,11 @@ section {
   h2:before {
     top: 17px;
   }
+}
+
+.above-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .article-post {
@@ -307,20 +317,16 @@ section {
 
 div.post-date {
   display: inline-block;
+  color: #75748a;
+  margin: 7px 0;
+  font-size: small;
 }
 
 span {
   &.author-meta, &.post-name {
     display: inline-block;
   }
-}
 
-div.post-date {
-  color: #75748a;
-  margin: 7px 0;
-}
-
-span {
   &.post-read {
     color: #75748a;
     margin: 7px 0;
