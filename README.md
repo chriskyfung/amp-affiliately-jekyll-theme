@@ -208,7 +208,7 @@ To embed a playlist, you need to set both the _playlist ID_ and the _ID of the f
 
 ### 💻 Codes
 
-This theme supports [syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) based on [Rouge](http://rouge.jneen.net/), which is the default highlighter in Jekyll 3 and above. All CSS styles for syntax highlighting are located in the `amp-syntax-highlight.css` under the `_includes/css/` directory.
+This theme supports [syntax highlighting](https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting) based on [Rouge](https://rouge-ruby.github.io/docs/), which is the default highlighter in Jekyll 3 and above. All CSS styles for syntax highlighting are located in the `amp-syntax-highlight.css` under the `_includes/css/` directory.
 
 By default, this theme excludes the CSS styles for syntax highlighting. The AMP framework limits the total CSS styles up to 75,000 bytes per AMP page. This keeps lightweight and rendering fast.
 
