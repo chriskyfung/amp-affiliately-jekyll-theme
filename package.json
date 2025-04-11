@@ -4,15 +4,16 @@
   "version": "3.4.0",
   "scripts": {
     "install": "bundle install",
-    "start": "npm run jekyll",
-    "jekyll": "bundle exec jekyll serve --livereload",
-    "jekyll:trace": "bundle exec jekyll serve --trace --livereload",
+    "start": "npm run serve",
+    "serve": "bundle exec jekyll serve --livereload",
+    "serve:trace": "bundle exec jekyll serve --trace --livereload",
     "build": "bundle exec jekyll build && npx gulp build",
     "build:prod": "npx cross-env JEKYLL_ENV=production bundle exec jekyll build && npx gulp build",
     "test": "npx gulp validate",
-    "watch": "npx gulp",
-    "convert": "npm run convert:css2scss",
-    "convert:css2scss": "bash ./css_to_scss.sh"
+    "deploy:status": "gh workflow view jekyll-build.yml",
+    "watch": "npx gulp minifyCSS",
+    "convert": "npm run css2scss",
+    "css2scss": "bash ./css_to_scss.sh"
   },
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
   "repository": {
