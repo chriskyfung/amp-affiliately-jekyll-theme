@@ -30,9 +30,9 @@
               </span>
               <span class="author-meta">
                 <span class="post-name"><a href="{{ author.web }}" rel="noopener" target="_blank">{{ author.display_name }}</a></span><br/>
-                {%- endif -%}
-                {% include blocks/post-date.html %}
               </span>
+              {%- endif -%}
+              {% include blocks/post-date.html %}
               <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
               <div class="clearfix"></div>
             </div>
@@ -40,6 +40,6 @@
         </div>
       </div>
     </div>
-  </artic>
+  </article>
 </div>
 <!-- end post -->

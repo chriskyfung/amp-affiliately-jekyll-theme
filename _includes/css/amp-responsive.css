@@ -1,4 +1,4 @@
-@media(min-width:576px) {
+@media (min-width: 576px) {
   .beforefooter {
     text-align: left;
   }
@@ -6,7 +6,6 @@
     font-size: 16.5px;
   }
   .card-columns.listfeaturedtag {
-    -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
@@ -24,16 +23,15 @@
     left: -50%;
     max-width: 500px;
     overflow-x: hidden;
-    }
+  }
   .listfeaturedtag .card-list .thumbnail img {
-      width: 291px;
+    width: 291px;
   }
   .sidebar {
     max-width: 340px;
   }
 }
-
-@media(min-width:768px) {
+@media (min-width: 768px) {
   .bmc-button {
     font-size: 28px;
   }
@@ -44,14 +42,13 @@
     text-align: left;
   }
 }
-
-@media(min-width:992px) {
+@media (min-width: 992px) {
   .intro {
     padding: 9rem 0;
   }
   .intro h2 {
     margin-top: 2rem;
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
   }
   .listfeaturedtag .card {
     height: 260px;
@@ -70,15 +67,12 @@
     right: auto;
   }
   .listfeaturedtag .wrapmeta {
-    -webkit-flex: 0 0 58.333333%;
-    -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
     margin-left: -3px;
+    height: 258px;
   }
   .listfeaturedtag .wrapthumbnail {
-    -webkit-flex: 0 0 41.666667%;
-    -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
     height: 258px;
@@ -92,7 +86,7 @@
     border: none;
   }
   .navbar-toggleable-md .navbar-nav .nav-link {
-    margin-left: .50rem;
+    margin-left: 0.5rem;
     margin-top: initial;
   }
   .navbar-nav {
@@ -103,28 +97,25 @@
     padding: 3rem;
   }
 }
-
-@media(min-width:1025px) {
-  .navbar-btngroup .btn,
-  .navbar-toggleable-md .navbar-nav .nav-link {
-    margin-left: .75rem;
+@media (min-width: 1025px) {
+  .navbar-btngroup .btn, .navbar-toggleable-md .navbar-nav .nav-link {
+    margin-left: 0.75rem;
   }
 }
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
   .container {
     width: 1140px;
-    max-width: 100%
+    max-width: 100%;
   }
-  .navbar-btngroup .btn,
-  .navbar-toggleable-md .navbar-nav .nav-link {
+  .navbar-btngroup .btn, .navbar-toggleable-md .navbar-nav .nav-link {
     margin-left: 1rem;
   }
 }
-
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
   .listfeaturedtag .card .thumbnail img {
     left: inherit;
     max-width: inherit;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-}
+}/*# sourceMappingURL=amp-responsive.css.map */
