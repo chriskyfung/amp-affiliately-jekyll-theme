@@ -125,6 +125,7 @@ kbd {
 }
 .listfeaturedtag .card-list .card-title {
   font-size: 1rem;
+  margin-top: -0.5rem;
 }
 .listfeaturedtag .card-list .wrapthumbnail {
   height: 150px;

@@ -57,7 +57,7 @@
     left: -75%;
   }
   .listfeaturedtag .card-list {
-    height: auto;
+    height: 150px;
   }
   .listfeaturedtag .card-block {
     padding-left: 0;
@@ -70,7 +70,7 @@
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
     margin-left: -3px;
-    height: 258px;
+    height: inherit;
   }
   .listfeaturedtag .wrapthumbnail {
     flex: 0 0 41.666667%;
