@@ -312,67 +312,31 @@ defaults:
 
 * * *
 
-### Options For Third-Party Components
+### Third-Party Services
 
-#### <i class="fab fa-google fa-fw"></i> Google Services
+Integrate powerful third-party services directly into your theme.
 
-##### <i class="far fa-chart-bar fa-fw"></i> Google Analytics
+#### Google Services
 
-Google Analytics 4 (GA4) provides robust tracking capabilities to help you understand user interactions on your site. The following attributes and configurations are essential for effectively implementing GA4 with AMP:
-
-| Attribute | Description                                                                                                                |
-| --------: | -------------------------------------------------------------------------------------------------------------------------- |
-|     `ga4` | <span>v2.6.1</span>{:.badge.badge-success}<br> Your (`G-`{:plaintext} ) Measurement ID 💡. [Find your GA4 Measurement ID] |
+| Service          | Attribute | Description                                                                                                                                                     |
+| :--------------- | :-------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Google Analytics | `ga4`     | Your GA4 Measurement ID (e.g., `G-XXXXXXXXXX`). This is required to enable GA4. [Find your GA4 Measurement ID]. For more details, see the [GA4 Features guide]. |
+| Google CSE       | `cse_id`  | Your Search Engine ID, required for the site search feature. [Find your Google CSE ID].                                                                         |
+| Google AdSense   | `adsense` | An object containing your AdSense configuration. See the [Ads Settings guide] for details on `client_id`, `auto_ads`, and `ad_slot`.                            |
+| Google Tag Mgr.  | `gtm`     | Your GTM AMP container ID.                                                                                                                                      |
 
 [Find your GA4 Measurement ID]: https://support.google.com/analytics/answer/12270356 "GA4 Measurement ID - Analytics Help"
-
-For more information about the use of GA4 in this theme, please refer to our [Google Analytics 4 for AMP Features] page.
-
-[Google Analytics 4 for AMP Features]: {% post_url 2024-11-21-google-analytics-4 %}
-
-##### <i class="fab fa-searchengin fa-fw"></i> Google Custom Search Engine (CSE)
-
-| Attribute | Description                                         |
-| --------: | --------------------------------------------------- |
-|  `cse_id` | Your Search Engine ID 💡 [Find your Google CSE ID] |
-
+[GA4 Features guide]: {% post_url 2024-11-21-google-analytics-4 %}
+[Ads Settings guide]: {% post_url 2021-04-02-ads-settings %}
 [Find your Google CSE ID]: https://support.google.com/programmable-search/answer/12499034 "Search engine ID - Programmable Search Engine Help"
 
-- **Note:** Essential to feature the site's search function
+#### GitHub
 
-##### <i class="fas fa-ad fa-fw"></i> Google Adsense
+| Attribute          | Description                                                                                                                                                             |
+| :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `repository`       | The name of your repository in `<Username>/<Project>` format (e.g., `chriskyfung/amp-affiliately-jekyll-theme`). This is required to enable the GitHub metadata widget. |
+| `resources_widget` | <span>v2.0</span>{:.badge.badge-success} Set `false` to hide the **Resource** widget in the sidebar, which displays repository links. _Default:_ `true`{:.green}.       |
 
-| Attribute | Property    | Description                                                                                                                |
-| --------: | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `adsense` |             |                                                                                                                            |
-|           | `client_id` | Your Google Adsense client ID, which starts with `ca-pub-`                                                                 |
-|           | `auto_ads`  | Set `false` to disable [Auto ads] in Adsense<br> _Default:_ `true`{:.green}.                                               |
-|           | `ad_slot`   | `before_content` - Slot ID of ad unit that places before content<br> `sidebar` - Slot ID of ad unit that places to sidebar |
-| `adstyle` |             | Set `false` to not apply custom styles to indicate empty Ad containers.<br> _Default:_ `true`{:.green}.                    |
-
-[Auto ads]: https://support.google.com/adsense/answer/9261805
-
-💡 Read the [Ads Settings]({% post_url 2021-04-02-ads-settings %}) documentation
-
-##### <i class="fas fa-expand fa-fw" style="transform: rotate(45deg)"></i> Google Tag Manager (GTM)
-
-| Attribute | Description               |
-| --------: | ------------------------- |
-|     `gtm` | Your GTM AMP container ID |
-
-* * *
-
-#### <i class="fab fa-github fa-fw"></i> GitHub
-
-#### <i class="fab fa-github-square fa-fw"></i> Show Github Metadata Widget in Sidebar <span>v1.2</span>{:.badge.badge-success}
-
-This theme supports rendering GitHub Metadata by using the [jekyll-github-metadata] plugin. When you associate it with a GitHUb project repo, a sidebar widget named **RESOURCES** with a button link to the GitHub repository will be shown on the page.
+When the `repository` is set, a **RESOURCES** widget will appear in the sidebar, providing links to the repository, issues, and releases. This feature uses the [jekyll-github-metadata] plugin.
 
 [jekyll-github-metadata]: https://github.com/jekyll/github-metadata
-
-You have to declare the repository name in the `_config.yml` file, like this:
-
-|          Attribute | Description                                                                                                                              |
-| -----------------: | ---------------------------------------------------------------------------------------------------------------------------------------- |
-|       `Repository` | <span>v1.2</span>{:.badge.badge-success}<br> Declare The Repository Name in the `<Username>/<Project>`.                                  |
-| `resources_widget` | <span>v2.0</span>{:.badge.badge-success}<br> Enable side-widely display **Resourece** widget in sidebar.<Br> _Default:_ `true`{:.green}. |
