@@ -105,33 +105,27 @@ Configure the core look and feel of your site.
 
 * * *
 
-### Navigation Bar Settings
+### Navigation Bar
 
-You will need to configure the navigation bar for this theme in the following hierarchy:
+Customize the navigation menu items and buttons.
 
 ```yaml
 nav:
-   buttons:
-      ... # Settings for menu buttons
-      ...
-   global:
-      ... # Settings for global/domain-Level menu items
-      ...
-   local:
-      ... # Settings for local/baseURL-level menu items
-      ...
+  buttons:
+    # ... Settings for menu buttons
+  global:
+    # ... Settings for global/domain-level menu items
+  local:
+    # ... Settings for local/site-level menu items
 ```
 
-#### Settings for Menu Buttons <span>v2.7</span>{:.badge.badge-success}
+#### Menu Buttons <span>v2.7</span>{:.badge.badge-success}
 
-Use the following option to configure the menu buttons.
+| Attribute | Property      | Description                                                                                                                                      |
+| :-------- | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buttons` | `gh_sponsors` | Set `true`{:.green} to show the **GitHub Sponsors** button in the navigation bar. Requires `social.github` to be configured. _Default:_ `false`. |
 
-| Attribute | Property      | Description                                                                                                                                                                                              |
-| --------: | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `buttons` |               |                                                                                                                                                                                                          |
-|           | `gh_sponsors` | <span>v2.7</span>{:.badge.badge-success}<br> Set `true` to show **GitHub Sponsors** button in the navigation bar, if `social.github` is also configured in in the `_config.yml`.<br> _Default:_ `false`. |
-
-**Example:**
+Example **GitHub Sponsors** buttons
 
 <div class="github-sponsors-button">
    <a class="gh-style btn btn-block" style="margin: 2px 0" aria-label="Sponsor @{{ site.social.github }}" target="_top" href="https://github.com/sponsors/{{ site.social.github }}?o=esb">
@@ -142,47 +136,43 @@ Use the following option to configure the menu buttons.
    </a>
 </div>
 
-#### Settings for Global Menu Items
+#### Global Menu Items
 
-GitHub Pages allows you to deploy your multiple project pages under the same domain with different base URLs. In case, you may want to a menu item for back to the domain-level homepage and/or some principal menu items sharing across the sites for consistency.
-The following options provide the granular control to those menu items:
+Use these settings for menu items that should appear across multiple sites on the same domain (e.g., a link back to a main portfolio page).
 
-| Attribute | Property   | Description                                                                                                                                                         |
-| --------: | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  `global` |            |                                                                                                                                                                     |
-|           | `home`     | <span>v2.0</span>{:.badge.badge-success}<br> Set `false` to disable rendering **HOME** menu item in the navigation menu.<br> _Default:_ `true`{:.green}.            |
-|           | `menu`     | <span>v2.0</span>{:.badge.badge-success}<br> Set `true`{:.green} to include menu items from `global-menu.html` for your entire site/domain.<br> _Default:_ `false`. |
-|           | `dropdown` | <span>v1.7.2</span>{:.badge.badge-success}<br> Set `false` to exclude global dropdown menus from the global menu.<br> _Default:_ `true`{:.green}.                   |
+| Attribute | Property   | Description                                                                                                                                         |
+| :-------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `global`  | `home`     | <span>v2.0</span>{:.badge.badge-success} Set `false` to disable the **HOME** menu item.  _Default:_ `true`{:.green}.                                |
+|           | `menu`     | <span>v2.0</span>{:.badge.badge-success} Set `true`{:.green} to include menu items from `_includes/main-nav/global-menu.html`.  _Default:_ `false`. |
+|           | `dropdown` | <span>v1.7.2</span>{:.badge.badge-success} Set `false` to exclude global dropdowns.  _Default:_ `true`{:.green}.                                    |
 
-When `home` is not set to `false`, the following extra settings will be available and become effective:
+<span>v2.0</span>{:.badge.badge-success} If `home` is enabled, you can further customize it:
 
-| Attribute | Property | Key        | Description                                                                                                                             |
-| --------: | :------: | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-|  `global` |  `home`  |            | <span>v2.0</span>{:.badge.badge-success}                                                                                                |
-|           |          | `location` | The location of **HOME** button in the navigation menu.<br> _Options:_ `menu-start` or `menu-end`.<br> _Default:_ `menu-start`{:.blue}. |
-|           |          | `text`     | The text to display on the home menu item.<br> _Default:_ `Home`{:.blue}.                                                               |
+| Attribute | Property | Key        | Description                                                                                                |
+| :-------- | :------- | :--------- | :--------------------------------------------------------------------------------------------------------- |
+| `global`  | `home`   | `location` | Position of the **HOME** button.  _Options:_ `menu-start` or `menu-end`.  _Default:_ `menu-start`{:.blue}. |
+|           |          | `text`     | The text for the home menu item.  _Default:_ `Home`{:.blue}.                                               |
 
-#### Settings for Local Menu Items
+#### Local Menu Items
 
-Use the following options to configure the menu items that will be shown on the webpages under the same base URL.
+These items appear only on the current site.
 
-| Attribute | Property           | Description                                                                                                                                                 |
-| --------: | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `local` |                    |                                                                                                                                                             |
-|           | `max_title_length` | <span>v2.0</span>{:.badge.badge-success}<br> The maximun number of characters to display _`site.title`_ in the navigation bar.<br> _Default_: `40`{:.blue}. |
-|           | `items`            | <span>v1.7.2</span>{:.badge.badge-success}<br> An array of simple menu items that consists of the `name` and `url` key-value pairs.                         |
-|           | `menu`             | <span>v1.7.2</span>{:.badge.badge-success}<br> Set `true`{:.green} to include menu items from `local-menu.html`.<br> _Default:_ `false`.                    |
+| Attribute | Property           | Description                                                                                                                                         |
+| :-------- | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `local`   | `max_title_length` | <span>v2.0</span>{:.badge.badge-success} The maximum character length for the site title in the navigation bar. _Default_: `40`{:.blue}.            |
+|           | `items`            | <span>v1.7.2</span>{:.badge.badge-success} An array of menu items, each with a `name` and `url`.                                                    |
+|           | `menu`             | <span>v1.7.2</span>{:.badge.badge-success} Set `true`{:.green} to include menu items from `_includes/main-nav/local-menu.html`. _Default:_ `false`. |
 
-For example,
+Example for `local.items`:
 
-```yml
+```yaml
 nav:
   local:
     items:
-      - name: Page 1
-         url: /page-1.html
-      - name: Page 2
-         url: page-2.html
+      - name: About
+        url: /about
+      - name: Contact
+        url: /contact/
 ```
 
 * * *
