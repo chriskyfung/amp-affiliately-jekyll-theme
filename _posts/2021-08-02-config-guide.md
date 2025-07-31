@@ -86,18 +86,18 @@ These are standard Jekyll configuration options.
 
 ## <i class="fas fa-paint-roller fa-fw"></i> Theme Configuration
 
-You should include the following in the `_config.yml` file to set up the theme.
+Configure the core look and feel of your site.
 
-| Attribute | Description                                                                                                                                                                       |
-| --------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `title` | Your site's title. Also, used as the text of the first menu item if _`repostory`_ is configured in the `_config.yml`                                                              |
-|     `url` | The web address of your site including the protocol, subdomain, and domain name, e.g. `https://yourdomain.com` or `https://www.yourdomain.com`                                    |
-| `baseurl` | The first route parameter after your domain name in the URL, e.g. `''` if the site is deployed to `www.yourdomain.com` and `/repo-1` if the root is `www.yourdomain.com/repo-1/`. |
-| `favicon` | The path to the [favicon](https://stackoverflow.com/questions/4888377/how-to-add-a-browser-tab-icon-favicon-for-a-website) file                                                   |
-|    `logo` | The path to the (JPG/PNG/SVG) image that will be displayed on the navigation bar. The URL will also be included to JSON-LD structured data by [Jekyll SEO Tag].                   |
-|    `name` | Your site's name used as the alt text of your logo image. Also, displayed in the copyright notice, if _`copyright.owner`_ is not configured in the `_config.yml`.                 |
+| Attribute | Description                                                                                                                                                                                              |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`   | Your site's title. This is also used as the link text for the home button in the navigation bar when the `repository` variable is set.                                                                   |
+| `url`     | The full web address of your site (e.g., `https://www.yourdomain.com`).                                                                                                                                  |
+| `baseurl` | The subpath of your site. When deploying to a GitHub Project page, this should be your repository name (e.g., `/my-repo`). If the site is at the root of a domain, leave this as an empty string (`''`). |
+| `favicon` | The path to your site's [favicon](https://en.wikipedia.org/wiki/Favicon) file.                                                                                                                           |
+| `logo`    | The path to your logo image (JPG/PNG/SVG) for the navigation bar. This is also used for [Jekyll SEO Tag] structured data.                                                                                |
+| `name`    | Your site's name, used as alt text for the logo and in the copyright notice if not otherwise specified.                                                                                                  |
 
-**Note**: Regarding to `title` and `url`, please alse read the documentation of [Jekyll Feed] and [Jekyll SEO Tag].
+**Note**: Regarding `title` and `url`, please also review the documentation for [Jekyll Feed] and [Jekyll SEO Tag].
 
 [Jekyll Feed]: https://github.com/jekyll/jekyll-feed "GitHub"
 [Jekyll SEO Tag]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
