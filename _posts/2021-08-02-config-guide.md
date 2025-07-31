@@ -210,23 +210,18 @@ These options modify post content after it's generated.
 
 * * *
 
-### Social Buttons
+### Social Buttons <span>v2.7</span>{:.badge.badge-success}
 
-You can configure the links for social buttons by the following attributes.
-
-#### <span>v2.7</span>{:.badge.badge-success}
-
-The social button will only show if the corresponding attribute is configured.
+Configure the social media links that appear in the footer and other areas. Buttons only appear if a username is provided.
 
 ```yaml
-# Soical Buttons
 social:
-   facebook: your_facebook_username
-   twitter: your_twitter_username
-   linkedin: your_linkedin_username
-   pinterest: your_pinerest_username
-   github : your_github_username
-   medium: your_medium_username
+  facebook: your_facebook_username
+  twitter: your_twitter_username
+  linkedin: your_linkedin_username
+  pinterest: your_pinterest_username
+  github: your_github_username
+  medium: your_medium_username
 ```
 
 * * *
