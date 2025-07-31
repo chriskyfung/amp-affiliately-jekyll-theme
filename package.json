@@ -47,7 +47,7 @@
   "devDependencies": {
     "@ampproject/toolbox-optimizer": "^2.10.1",
     "amphtml-validator": "^1.0.38",
-    "gulp": "^5.0.0",
+    "gulp": "^5.0.1",
     "gulp-amphtml-validator": "^1.0.8",
     "gulp-changed": "^5.0.2",
     "gulp-csso": "^4.0.1",
