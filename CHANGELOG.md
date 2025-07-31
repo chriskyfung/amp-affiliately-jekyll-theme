@@ -4,6 +4,30 @@
 
 All notable changes to the AMP Affiliately Jekyll Theme will be documented in this file.
 
+## [3.4.1] - 2025-07-31
+
+### Changed
+
+- **Dependencies**
+  - Updated core dependencies:
+    - rake (13.2.1 → 13.3.0)
+    - public_suffix (6.0.1 → 6.0.2)
+    - bigdecimal (3.1.9 → 3.2.2)
+    - ffi (1.17.1 → 1.17.2)
+    - rexml (3.4.0 → 3.4.1)
+    - rouge (4.5.1 → 4.6.0)
+    - google-protobuf (4.29.3 → 4.31.1)
+    - sass-embedded (1.83.4 → 1.89.2)
+    - jekyll-sass-converter (3.0.0 → 3.1.0)
+    - json (2.9.1 → 2.13.2)
+    - logger (1.6.5 → 1.7.0)
+    - faraday-net_http (3.4.0 → 3.4.1)
+    - faraday (2.12.2 → 2.13.4)
+
+### Added
+
+- Added `faraday-retry` gem for improved network request handling
+
 ## [3.4.0] - 2025-03-04
 
 ### Added
@@ -64,6 +88,7 @@ All notable changes to the AMP Affiliately Jekyll Theme will be documented in th
   - Add deprecation notices to consent attributes
 
 ### Chores
+
 - **_config.yml**
   - Remove unused `amp_optimizer` and commented-out consent settings
 
