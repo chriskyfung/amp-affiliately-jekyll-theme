@@ -21,9 +21,9 @@ css:
   badge: true
   syntax: true
   custom: |-
-    table { font-size: .95rem; margin-bottom: 1.5rem }
-    tr:nth-child(odd) { backgroud-color: #e3edf3 }
-    td { padding: .5em }
+    table { font-size: .95rem; margin-bottom: 1.5rem; }
+    th { background-color: #f8f9fa; font-weight: 600; }
+    th, td { padding: .5em; border-top: 1px solid #dee2e6; }
     .plaintext { color: mediumseagreen; }
     .quote-deprecated { border-color: #999999; }
 excerpt: The docs for the front matters that that let you control the post title, date, featured image, CSS styles, etc.
@@ -163,8 +163,8 @@ For example, you can format the table elements with a zebra-striped design by th
 css:
   custom: >-
     table { font-size: .95rem; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; }
+    th { background-color: #f8f9fa; font-weight: 600; }
+    th, td { padding: .5em; border-top: 1px solid #dee2e6; }
 ```
 
 {: style="margin-bottom: auto;" }

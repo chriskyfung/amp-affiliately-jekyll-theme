@@ -17,9 +17,8 @@ css:
   syntax: true
   custom: |-
     table { font-size: .95rem; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; vertical-align: top; }
-    .box { border: 1px solid #e3edf3; padding: 1rem; }
+    th { background-color: #f8f9fa; font-weight: 600; }
+    th, td { padding: .5em; border-top: 1px solid #dee2e6; }    .box { border: 1px solid #e3edf3; padding: 1rem; }
     .blue { color: #2266ff; }
     .green { color: mediumseagreen; }
     .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }

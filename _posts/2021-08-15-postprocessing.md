@@ -18,9 +18,6 @@ css:
   badge: true
   syntax: true
   custom: |-
-    table { font-size: .95rem; margin-bottom: 1.5rem; }
-    tr:nth-child(odd) { backgroud-color: #e3edf3; }
-    th, td { padding: .5em; }
     .box { border: 1px solid #e3edf3; padding: 1rem; }
     .plaintext { color: mediumseagreen; }
 excerpt: Learn how to enhance your blog with anchor links and external links that open in new tabs for better user experience and SEO.
