@@ -32,33 +32,33 @@ featured: true
 
 * * *
 
-## <i class="fas fa-puzzle-piece fa-fw"></i> Use Amp Affiliately Theme As Remote Theme
+## <i class="fas fa-puzzle-piece fa-fw"></i> Use as a Remote Theme
 
-1. Add `jekyll-remote-theme` as an array-value of the key `plugins` in your site's `_config.yml` file, like this:
+1. Add `jekyll-remote-theme` to the `plugins` array in your site's `_config.yml`:
 
-   ```yaml
-   plugins:
+    ```yaml
+    plugins:
       - jekyll-remote-theme
-   ```
+    ```
 
-2. Add `gem "jekyll-remote-theme"` to the Bundler group your **Gemfile**, like this:
+2. Add `gem "jekyll-remote-theme"` to your **Gemfile**:
 
-   ```ruby
-   group :jekyll_plugins do
+    ```ruby
+    group :jekyll_plugins do
       gem "jekyll-remote-theme"
-      gem "another-jekyll-plugin"
-   end
-   ```
+    end
+    ```
 
-3. Run `bundle install` to install the plugin before building your site locally.
+3. Run `bundle install` to install the plugin.
+4. Set the `remote_theme` in your `_config.yml`:
 
-4. Add `remote_theme: chriskyfung/amp-affiliately-jekyll-theme` to your `_config.yml` file.
+    ```yaml
+    remote_theme: chriskyfung/amp-affiliately-jekyll-theme
+    ```
 
-5. Add Theme Configuration to your `_config.yml` file.
+    You can optionally specify a branch, tag, or commit (e.g., `...jekyll-theme@v3.3.2`). If you don't, the `master` branch will be used.
 
-**Note**: You must update the `jekyll-remote-theme` plugin to `v0.4.2` or higher if you use **Jekyll 4.0+**.
-
-You may also optionally specify a branch, tag, or commit to using by appending an `@` and the Git ref (e.g., `chriskyfung/amp-affiliately-jekyll-theme@v1.2.8`). If you don't specify a Git ref, the master branch will be used.
+**Note**: You must use `jekyll-remote-theme` version `v0.4.2` or higher for Jekyll 4.0+.
 
 * * *
 
