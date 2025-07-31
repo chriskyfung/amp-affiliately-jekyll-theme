@@ -2,8 +2,7 @@
 
 This project offers an AMP-ready Jekyll theme for your blogs and websites.
 
-![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-1f425f.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/chriskyfung/amp-affiliately-jekyll-theme) [![CodeQL](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/github-code-scanning/codeql/badge.svg?branch=master)](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/github-code-scanning/codeql) [![Deploy Jekyll site to Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/jekyll-build.yml/badge.svg?branch=master)](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/jekyll-build.yml) [![Website
- Monitoring](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fchriskyfung.github.io%2Famp-affiliately-jekyll-theme%2F)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
+![Made with Jekyll](https://img.shields.io/badge/Made%20with-Jekyll-1f425f.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/chriskyfung/amp-affiliately-jekyll-theme) [![Deploy Jekyll site to Pages](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/jekyll-build.yml/badge.svg?branch=master)](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/actions/workflows/jekyll-build.yml) [![Website Monitoring](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fchriskyfung.github.io%2Famp-affiliately-jekyll-theme%2F)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/)
 
 ## 👀 Live Demo
 
@@ -11,10 +10,10 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 
 ### 🌐 [Demo Site](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/) ↗
 
-- 💻 📱 [Preview the look of the responsive design for smartphone, tablet, and laptop](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/device-look/) ↗
+- 💻 📱 [Preview the look of the responsive design for smartphone, tablet, and laptop](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/responsive-web-design/) ↗
 - 📷🔉 [Preview media blocks (for images, videos and audio) in AMP](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/) ↗
 - 🖥️⌨ [Preview code blocks and snippet highlighting](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/code/) ↗
-- 📝⌨ [Preview available Markdown styles](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/2017/11/30/style-guide) ↗
+- 📝⌨ [Preview available Markdown styles](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/style-guide/) ↗
 
 ## 🌈 Features
 
@@ -43,21 +42,12 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 
 ### ✨ New Features in `v3.x.x`
 
-- Support for [iubenda Privacy Controls and Cookie Solution on AMP pages](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/introducing-iubenda-amp-cookie-solution/) ↗🍪
-- Enhanced [Google Analytics 4 (GA4) integration with advanced video tracking](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/#%EF%B8%8F-video-engagement) ↗📊
-- Customizable footer columns through `_config.yml` configuration 📝
-- Custom 404 error page 🎨
-- Improved typography and styling 💄:
-  - Refined article post styles
-  - Enhanced table of contents styling
-  - Updated callout component styling
-- Modernized build system 🔨:
-  - ES module support in Gulp configuration
-  - Improved SCSS handling with `css_to_scss.sh` script
-- Better development experience 👨💻:
-  - Added live reload support for Jekyll
-  - Enhanced VS Code integration with [Front Matter CMS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-cms/) ↗
-  - Improved markdown linting and documentation
+- **Advanced Consent Management:** Granular, geo-targeted cookie consent support via `amp-consent` and `amp-geo`, with seamless [iubenda](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/introducing-iubenda-amp-cookie-solution/) integration. 🍪
+- **Enhanced Analytics:** Deep [Google Analytics 4 (GA4) integration](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/) with outbound link and video engagement tracking. 📊
+- **Customizable Footer:** Easily configure footer columns directly from `_config.yml`. 📝
+- **Improved UX & Styling:** A custom 404 page, refined typography, and enhanced styling for ToC and callouts. 🎨
+- **Modernized Build System:** Gulp now uses ES modules, and a new script simplifies CSS to SCSS conversion. 🔨
+- **Better Developer Experience:** Live reload for local development and deep VS Code integration with [Front Matter CMS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-cms/). 👨‍💻
 
 ### ✨ New Features in `v2.x.x`
 
@@ -158,8 +148,8 @@ Read the procedures in the [Config Guide](https://chriskyfung.github.io/amp-affi
 
 ### Sidebar Widgets 🧙‍♂️
 
-- [Enable showing **FEATURED** and **RECENT POSTS** widgets on your sidebar](https://chriskyfung.github.io//amp-affiliately-jekyll-theme/config-guide/#sidebar-options) ↗
-- [Show GitHub Metadata Widget in Sidebar (v2.0)](https://chriskyfung.github.io//amp-affiliately-jekyll-theme//config-guide/#-github) ↗
+- [Enable showing **FEATURED** and **RECENT POSTS** widgets on your sidebar](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/#sidebar-options) ↗
+- [Show GitHub Metadata Widget in Sidebar (v2.0)](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/config-guide/#-github) ↗
 
 * * *
 
@@ -200,11 +190,10 @@ To embed a single video, use the following tag to include the `youtube.html` tem
 To embed a playlist, you need to set both the _playlist ID_ and the _ID of the first video within the playlist_.
 
 ```ruby
-{% include youtube.html id="<YOUTUBE_VIDEO_UID>" \
-   playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}
+{% include youtube.html id="<YOUTUBE_VIDEO_UID>" playlist="<YOUTUBE_PLAYLIST_UID>" title="Welcome to Watch this Video" %}
 ```
 
-[DEMOS - YouTube Embeds](https://chriskyfung.github.io/amp-affiliately-jekyll-theme//media/#video) ↗
+[DEMOS - YouTube Embeds](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/media/#youtube-videos) ↗
 
 ### 💻 Codes
 
@@ -237,11 +226,7 @@ A shortcode for creating a colored box, e.g. tips/memo.
 
 ## Front Matters
 
-- [Set Featured Image for a Page/Post](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/#set-featured-image) ↗
-- [Pin Featured Posts](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#pin-featured-posts) ↗
-- [Add Custom Codes to HTML <head> Section](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#add-custom-css-to-html-head-section) ↗
-- [Add Custom CSS Styles to HTML <head> Section](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#add-custom-codes-to-html-head-section) ↗
-- [Display Download Buttons in a Post's Sidebar](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter/#display-download-buttons) ↗
+For detailed guidance on front matter variables for posts and pages, please refer to the official [**Front Matter Guide**](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/) ↗.
 
 * * *
 
