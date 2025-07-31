@@ -226,13 +226,13 @@ social:
 
 * * *
 
-### Footer Options
+### Footer
 
-For detailed instructions on how to customize your site's footer, visit our [Footer Configuration] page. This guide explains how to personalize the second and third footer columns by setting titles and link lists in the `_config.yml` file. It also provides information on configuring other footer options like copyright notices and privacy policy links.
+For detailed instructions, see the [Footer Configuration guide]({% post_url 2024-11-05-footer-configuration %}). You can customize:
 
-By following this guide, you can significantly enhance your site's navigation and usability, ensuring that important information is easily accessible to your visitors. Improving your site's footer not only boosts the overall user experience but also contributes to a more professional and polished appearance. Check out the [Footer Configuration] page to make the most of these features.
-
-[Footer Configuration]: {% post_url 2024-11-05-footer-configuration %}
+- The **second and third footer columns** with custom titles and link lists.
+- The **copyright notice**.
+- The **privacy policy link**.
 
 * * *
 
