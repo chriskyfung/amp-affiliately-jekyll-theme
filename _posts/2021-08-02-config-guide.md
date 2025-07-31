@@ -177,12 +177,12 @@ nav:
 
 * * *
 
-### List Sorting Options <span>v2.3</span>{:.badge.badge-success}
+### List Sorting <span>v2.3</span>{:.badge.badge-success}
 
-|         Attribute | Description                                                                                    |
-| ----------------: | ---------------------------------------------------------------------------------------------- |
-| `sort_categories` | Set `false` to disable sorting the items of post's categories.<br> _Default:_ `true`{:.green}. |
-|       `sort_tags` | Set `false` to disable sorting the items of post's tags.<br> _Default:_ `true`{:.green}.       |
+| Attribute         | Description                                                                                     |
+| :---------------- | :---------------------------------------------------------------------------------------------- |
+| `sort_categories` | Set `false` to disable alphabetical sorting of a post's categories. _Default:_ `true`{:.green}. |
+| `sort_tags`       | Set `false` to disable alphabetical sorting of a post's tags. _Default:_ `true`{:.green}.       |
 
 * * *
 
