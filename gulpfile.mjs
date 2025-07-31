@@ -55,7 +55,6 @@ function validate() {
           if (contents_in_string.indexOf('<title>Redirecting&hellip;</title>') === -1) {
             const result = validator.validateString(contents_in_string);
             if (result.status !== 'PASS') console.error(`\n${result.status}: ${file.relative}`);
-            // (result.status === 'PASS' ? console.log : console.error)(result.status);
             for (let ii = 0; ii < result.errors.length; ii++) {
               const error = result.errors[ii];
               let msg =

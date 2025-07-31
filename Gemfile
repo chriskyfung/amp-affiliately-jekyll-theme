@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
   gem "jekyll-github-metadata"
+  gem "faraday-retry"  # For handling retry functionality with Faraday v2.0+
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
