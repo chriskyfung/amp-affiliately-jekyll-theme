@@ -2,28 +2,28 @@
 layout: post
 title: Config Guide
 date: 2021-08-24 00:01 +0800
-last_modified_at: 2025-01-23 21:01 +0800
+last_modified_at: 2025-07-31 21:23:15 +0800
 author: chris
 categories:
-   - doc
+  - doc
 tags:
-   - _config
+  - _config
 permalink: /config-guide/
 image:
-   path: /assets/images/settings-3311592.svg
-   width: "1920"
-   height: "1080"
+  path: /assets/images/settings-3311592.svg
+  width: "1920"
+  height: "1080"
 css:
-   badge: true
-   syntax: true
-   custom: |-
-      table { font-size: .95rem; margin-bottom: 1.5rem; }
-      tr:nth-child(odd) { backgroud-color: #e3edf3; }
-      th, td { padding: .5em; vertical-align: top; }
-      .box { border: 1px solid #e3edf3; padding: 1rem; }
-      .blue { color: #2266ff; }
-      .green { color: mediumseagreen; }
-      .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
+  badge: true
+  syntax: true
+  custom: |-
+    table { font-size: .95rem; margin-bottom: 1.5rem; }
+    tr:nth-child(odd) { background-color: #e3edf3; }
+    th, td { padding: .5em; vertical-align: top; }
+    .box { border: 1px solid #e3edf3; padding: 1rem; }
+    .blue { color: #2266ff; }
+    .green { color: mediumseagreen; }
+    .github-sponsors-button { border: 0; border-radius: 6px; margin-left: 2rem; width: 114px; height: 32px; }
 excerpt: Explore our comprehensive config guide to optimize your Jekyll site with the Amp Affiliately theme and enhance your site's performance.
 featured: true
 ---
