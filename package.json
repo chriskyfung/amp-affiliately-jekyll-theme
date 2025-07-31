@@ -7,6 +7,8 @@
     "start": "npm run serve",
     "serve": "bundle exec jekyll serve --livereload",
     "serve:trace": "bundle exec jekyll serve --trace --livereload",
+    "lint": "npm run lint:markdown",
+    "lint:markdown": "npx markdownlint-cli2 ./_posts/**/*.md",
     "build": "bundle exec jekyll build && npx gulp build",
     "build:prod": "npx cross-env JEKYLL_ENV=production bundle exec jekyll build && npx gulp build",
     "test": "npm run test:amp",
