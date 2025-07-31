@@ -203,15 +203,10 @@ These options modify post content after it's generated.
 
 ### Sidebar Options
 
-#### <i class="fas fa-layer-group fa-fw"></i> Site-Wide Display Featured And Recent Posts Sidebar Widgets <span>v1.6</span>{:.badge.badge-success}
-
-| Attribute | Property       | Description                                                             |
-| --------: | -------------- | ----------------------------------------------------------------------- |
-| `sidebar` |                |                                                                         |
-|           | `featured`     | Add **FEATURED** widget to sidebar.<br> _Default:_ `true`{:.green}.     |
-|           | `recent_posts` | Add **RECENT POSTS** widget to sidebar.<br> _Default:_ `true`{:.green}. |
-
-- Set `false` to disable the widgets as you need
+| Attribute | Property       | Description                                                                     |
+| :-------- | :------------- | :------------------------------------------------------------------------------ |
+| `sidebar` | `featured`     | Set `false` to hide the **FEATURED** posts widget.  _Default:_ `true`{:.green}. |
+|           | `recent_posts` | Set `false` to hide the **RECENT POSTS** widget.  _Default:_ `true`{:.green}.   |
 
 * * *
 
