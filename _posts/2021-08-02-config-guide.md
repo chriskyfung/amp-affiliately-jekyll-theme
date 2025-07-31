@@ -283,37 +283,32 @@ amp_geo:
 
 * * *
 
-### SEO Configuration
+### SEO
 
-**AMP Affiliately Theme** uses [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) to output machine-readable metadata for search engines and social networks to index and display. The following is recommended to configure in the `_config.yml` file:
+This theme uses the [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) plugin for search engine optimization.
 
-|     Attribute | Description                                                                                              |
-| ------------: | -------------------------------------------------------------------------------------------------------- |
-|      `author` | Global author informaiton                                                                                |
-| `description` | A longer description used for the description meta tag                                                   |
-|      `locate` | The locale these tags are marked up in. Default is `en_US`. Takes priority over existing config key lang |
-|     `tagline` | A short description used as part of the title tag                                                        |
+| Attribute     | Description                                                       |
+| :------------ | :---------------------------------------------------------------- |
+| `description` | A longer site description for the meta tag.                       |
+| `author`      | Global author information.                                        |
+| `locale`      | The locale for metadata markup (e.g., `en_US`). Overrides `lang`. |
+| `tagline`     | A short description used in the title tag.                        |
 
-💡 Learn more about the usage of the SEO tag plugin from [here][jekyll-seo-tag-usage].
+💡 For advanced usage, see the [official documentation][jekyll-seo-tag-usage].
 
-**Note**: Regarding to `author` and `description`, please alse read the documentation of [Jekyll Feed] and [Jekyll SEO Tag].
-
-Moreover, it is a good idea to set a default image using [Front Matter defaults],
-provide a default [Open Graph] image (`og:image`) and [Twitter Card] image (`twitter:image`) to all of your posts and pages.
-
-[Front Matter defaults]: https://jekyllrb.com/docs/configuration/front-matter-defaults/
-[Open Graph]: https://developers.facebook.com/docs/sharing/webmasters/
-[Twitter Card]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image
-
-Here is a basic example from [Jekyll SEO Tag's Advanced usage](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#author-information):
+It is highly recommended to set a default image for social sharing cards ([Open Graph] and [Twitter Card]) using [Front Matter defaults]:
 
 ```yaml
 defaults:
   - scope:
-      path: ""
+      path: "" # all files
     values:
-      image: /assets/images/default-card.png
+      image: /assets/images/default-social-card.png
 ```
+
+[Front Matter defaults]: https://jekyllrb.com/docs/configuration/front-matter-defaults/
+[Open Graph]: https://ogp.me/
+[Twitter Card]: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image
 
 * * *
 
