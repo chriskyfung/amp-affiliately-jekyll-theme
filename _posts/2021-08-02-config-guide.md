@@ -64,21 +64,22 @@ featured: true
 
 ## <i class="fas fa-cogs fa-fw"></i> Global Configuration
 
-|       Attribute | Description                                                                                                                                     |
-| --------------: | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `permalink` | `/:year/:month/:day/:title`                                                                                                                     |
-|      `timezone` | Any entry from the [IANA Time Zone Database] is valid, e.g. America/New_York. A list of all available values can be found [here][wiki-tz-list]. |
-|      `paginate` | (_Optional_) The maximum number of posts you’d like to be displayed per-page in the generated site, e.g. `10`.                                  |
-| `paginate_path` | (_Optional_) The destination of the [pagination] pages.                                                                                         |
+These are standard Jekyll configuration options.
+
+| Attribute       | Description                                                                                                                                         |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `permalink`     | Defines the URL structure for your posts. Default: `/:year/:month/:day/:title`                                                                      |
+| `timezone`      | Sets the time zone for your site. Use a valid entry from the [IANA Time Zone Database], like `America/New_York`. See the [full list][wiki-tz-list]. |
+| `paginate`      | (_Optional_) The maximum number of posts to display per page for pagination.                                                                        |
+| `paginate_path` | (_Optional_) The URL structure for paginated pages (e.g., `/blog/page:num/`).                                                                       |
 
 [IANA Time Zone Database]: https://en.wikipedia.org/wiki/Tz_database "Wikipedia"
 [wiki-tz-list]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones "Wikipedia"
-[pagination]: https://jekyllrb.com/docs/pagination/ "Official Jekyll Documentation"
 
 **💡 Learn More:**
 
-- [Configuration Options \| Jekyllrb](https://jekyllrb.com/docs/configuration/options/ "Offical Jekyll Documentation")
-- [Default Configuration \| Jekyllrb](https://jekyllrb.com/docs/configuration/default/ "Offical Jekyll Documentation")
+- [Jekyll Configuration Options](https://jekyllrb.com/docs/configuration/options/)
+- [Jekyll Default Configuration](https://jekyllrb.com/docs/configuration/default/)
 - [Render Paginated Posts]({% post_url 2021-08-24-plugins %}#-jekyll-paginate)
 
 * * *
