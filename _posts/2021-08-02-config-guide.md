@@ -186,24 +186,18 @@ nav:
 
 * * *
 
-### Post-Processing Options <span>v2.0</span>{:.badge.badge-success}
+### Post-Processing <span>v2.0</span>{:.badge.badge-success}
 
-#### <i class="fas fa-link fa-fw"></i> Add Anchor Link For H2, H3 And H4 Headings
+These options modify post content after it's generated.
 
-|     Attribute | Description                                                                                                                                       |
-| ------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `anchor_link` | Set `true`{:.green} to attach an anchor link to H2-H4 elements inside posts' content similar to [AnchorJS] ([View Demo]).<br> _Default:_ `false`. |
+| Attribute      | Description                                                                                                                                                     |
+| :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `anchor_link`  | Set `true`{:.green} to add anchor links to H2, H3, and H4 headings within posts, similar to [AnchorJS]. See the [demo][anchor-links-demo].  _Default:_ `false`. |
+| `target_blank` | Set `true`{:.green} to add `target="_blank"` and `rel="noopener noreferrer"` to all [external links][outbound-links] in posts.  _Default:_ `false`.             |
 
 [AnchorJS]: https://www.bryanbraun.com/anchorjs/
-[View Demo]: {% post_url 2021-08-15-postprocessing %}#add-anchor-link-to-h2-h3-and-h4-headings-v20
-
-#### <i class="fas fa-door-open fa-fw"></i> Modify External Links To Open In New Tab
-
-|      Attribute | Description                                                                                                                                                                                                                   |
-| -------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target_blank` | Set `true`{:.green} to insert `rel="noopener noreferrer"` and `target="_blank"` to each `<a>` element that links to an [outbound URL] <i class="fas fa-external-link-alt"></i> inside posts' content.<br> _Default:_ `false`. |
-
-[outbound URL]: {% post_url 2021-08-15-postprocessing %}#set-external-links-to-open-in-a-new-tab-v20
+[anchor-links-demo]: {% post_url 2021-08-15-postprocessing %}#add-anchor-link-to-h2-h3-and-h4-headings-v20
+[outbound-links]: {% post_url 2021-08-15-postprocessing %}#set-external-links-to-open-in-a-new-tab-v20
 
 * * *
 
