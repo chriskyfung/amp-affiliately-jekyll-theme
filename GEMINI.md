@@ -47,6 +47,8 @@ The primary development workflow is managed through `npm` scripts defined in `pa
 - **Distributed Configuration:** The CMS configuration is split:
   - `frontmatter.json`: The main configuration file defining content types, fields, and preview settings.
   - `.frontmatter/`: This directory contains UI customizations (`ui/external.js`) and a critical library of snippets.
+  - The Front Matter CMS schema is located at https://frontmatter.codes/frontmatter.schema.json
+  - The Front Matter CMS settings documentation is at https://frontmatter.codes/docs/settings
 - **Snippets:** An extensive library of snippets exists in `.frontmatter/config/content/snippets/`. These are the **preferred way** to insert complex elements like AMP components, Jekyll includes, and kramdown syntax to ensure consistency and correctness.
 
 ### Developer Utilities
