@@ -105,6 +105,9 @@
     {%- if site.social.github and site.nav.buttons.gh_sponsors -%}
       {% include css/amp-github-sponsors-embed.min.css %}
     {%- endif -%}
+    {%- if layout.css.alert == true or page.css.alert == true -%}
+      {% include css/amp-bs4-alert.min.css %}
+    {%- endif -%}
     {%- if layout.css.badge == true or page.css.badge == true -%}
       {% include css/amp-bs4-badge.min.css %}
     {%- endif -%}

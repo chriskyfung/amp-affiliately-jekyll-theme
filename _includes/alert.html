@@ -1,0 +1,8 @@
+<div class="alert alert--{{ include.type | default: 'primary' }}" role="alert">
+  {%- if include.title and include.title != "" -%}
+    <div class="alert__title">{{ include.title }}</div>
+  {%- endif -%}
+  <div class="alert__content">
+    {{ include.content | markdownify }}
+  </div>
+</div>

@@ -1,5 +1,29 @@
-{%- assign markdown = include.content | markdownify -%}
-{%- assign bgcolor = include.color | default: '#fcf475' -%}
-<div class="callout" style="margin-bottom: 24px; padding: 16px 16px 8px; background-color: {{ bgcolor }}; box-shadow: 0 2px 4px;">
-  {{ markdown }}
+{%- assign type = include.type -%}
+{%- assign color = include.color -%}
+{%- assign title = include.title -%}
+{%- assign markdown_content = include.content | markdownify -%}
+
+{%- assign bgcolor = '' -%}
+{%- case type -%}
+  {%- when 'info' -%}
+    {%- assign bgcolor = '#e7f3fe' -%}
+  {%- when 'success' -%}
+    {%- assign bgcolor = '#e8f5e9' -%}
+  {%- when 'warning' -%}
+    {%- assign bgcolor = '#fff8e1' -%}
+  {%- when 'danger' -%}
+    {%- assign bgcolor = '#fdecea' -%}
+{%- endcase -%}
+
+{%- if bgcolor == '' and color -%}
+  {%- assign bgcolor = color -%}
+{%- elsif bgcolor == '' -%}
+  {%- assign bgcolor = '#fcf475' -%} {%- comment -%}Original default color{%- endcomment -%}
+{%- endif -%}
+
+<div class="callout" style="margin-bottom: 24px; padding: 16px 16px 8px; background-color: {{ bgcolor }}; box-shadow: 0 2px 4px rgba(0,0,0,0.12); border-radius: 4px;">
+  {%- if title -%}
+    <div class="callout-title" style="font-weight: bold; margin-bottom: 8px;">{{ title }}</div>
+  {%- endif -%}
+  {{ markdown_content }}
 </div>
