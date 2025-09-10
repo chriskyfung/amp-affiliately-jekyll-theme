@@ -1,27 +1,50 @@
 {
   "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
-  "title": "Insert Callout with Jekyll Capture",
-  "description": "Use the Jekyll capture tag to store the selected text in a variable and pass it to the callout.html template",
+  "title": "Insert Callout",
+  "description": "Creates a callout box. Captures selected text for the content.",
   "body": [
     "{% capture [[var]] %}",
     "[[&selection]]",
     "{% endcapture %}",
     "",
-    "{% include callout.html content=[[var]] %}"
+    "{% include callout.html content=[[var]] type=\"[[type]]\" title=\"[[title]]\" color=\"[[color]]\" %}"
   ],
   "fields": [
     {
       "name": "var",
-      "title": "variable name",
+      "title": "Variable Name",
       "type": "string",
       "single": true,
-      "default": "myVar"
+      "default": "myCallout"
     },
     {
       "name": "selection",
-      "title": "Selected Text",
+      "title": "Selected Text (Content)",
       "type": "string",
       "default": "FM_SELECTED_TEXT"
+    },
+    {
+      "name": "type",
+      "title": "Callout Type",
+      "type": "choice",
+      "choices": [
+        "",
+        "info",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "default": ""
+    },
+    {
+      "name": "title",
+      "title": "Optional Title",
+      "type": "string"
+    },
+    {
+      "name": "color",
+      "title": "Optional Custom Color (overridden by type)",
+      "type": "string"
     }
   ]
 }
