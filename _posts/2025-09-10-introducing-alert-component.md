@@ -113,6 +113,15 @@ This is a more complex alert. You can include:
 
 {% include alert.html type="info" title="Did You Know?" content=alert_content %}
 
+## Alert vs. Callout Component
+
+This theme also includes a simpler `callout` component. So, when should you use one over the other?
+
+- **Use the `alert` component (this one)** when you need Bootstrap-aligned styles with a wider range of contextual colors (`primary`, `secondary`, `dark`, etc.) and a design that features a colored border and an icon-ready layout.
+- **Use the `callout` component** for simpler, colored-background notifications. It's great for basic tips, warnings, or memos that don't need to align with the full Bootstrap alert system.
+
+You can see examples of the `callout` component in action in our [Style Guide]({% post_url 2017-11-30-style-guide %}#callout).
+
 ## Best Practices for Using Alerts
 
 Alerts are a great tool, but they should be used thoughtfully to be effective.
