@@ -180,6 +180,12 @@
               "description": "Enable CSS for badges"
             },
             {
+              "title": "Alert",
+              "name": "alert",
+              "type": "boolean",
+              "description": "Enable CSS for alerts"
+            },
+            {
               "title": "Code block",
               "name": "syntax",
               "type": "boolean",
