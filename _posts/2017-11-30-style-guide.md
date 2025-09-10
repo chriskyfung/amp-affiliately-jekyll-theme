@@ -2,7 +2,7 @@
 layout: post
 title: Styles
 date: 2017-11-30 04:00:00
-last_modified_at: 2025-03-01 15:03 +0800
+last_modified_at: 2025-09-10 19:58 +0800
 author: chris
 categories:
   - feature
@@ -197,31 +197,47 @@ import Foundation
 
 ### Callout
 
-A shortcode for creating a colored box, e.g. tips/memo.
+A shortcode for creating a colored box, e.g. tips/memo. The component is flexible, supporting custom colors, predefined types, an optional title, and Markdown content.
 
-Example:
+For more advanced, Bootstrap-aligned alerts with more contextual variations, see the new [Alert Component]({% post_url 2025-09-10-introducing-alert-component %}).
+
+#### Predefined Types
+
+Use the `type` parameter for standard notifications. Supported types are `info`, `success`, `warning`, and `danger`.
+
+{% include callout.html type="info" title="Info" content="This is an informational message." %}
+{% include callout.html type="success" title="Success" content="The operation was completed successfully." %}
+{% include callout.html type="warning" title="Warning" content="Please be aware of this important detail." %}
+{% include callout.html type="danger" title="Danger" content="This is a critical warning message." %}
+
+#### Custom Color and Rich Content
+
+You can combine features like a `title`, custom `color`, and rich Markdown content. The `color` attribute is ideal for when the predefined types don't fit your needs.
+
+##### **Example 1: Rich Content with a Title**
+
+This example uses the default yellow background but adds a title to complex content.
 
 {% capture callout1 %}
-_PUT YOUR MARKDOWN CONTENT HERE..._
+This callout demonstrates the ability to render various Markdown elements:
 
-> blockquote
+- Lists (like this one)
+- **Bold** and _italic_ text
+- Blockquotes
+- And even images!
 
-{% include picture.html source="assets" img="tree.jpg" width="328" height="200" layout="fixed" alt="picture in callout element" caption="image caption" %}
+> "The ability to combine Markdown elements provides great flexibility."
 
-```js
-Code block
-```
-
-1. first
-2. second
-3. thrid
-
-- item 1
-- item 2
-- item 3
+{% include picture.html source="assets" img="tree.jpg" width="328" height="200" layout="fixed" alt="picture in callout element" caption="A tree in a callout" %}
 {% endcapture %}
 
-{% include callout.html content=callout1 %}
+{% include callout.html title="Rich Content Demo" content=callout1 %}
+
+##### **Example 2: Using a Custom Color**
+
+Here, we specify a custom background color using the `color` attribute.
+
+{% include callout.html color="#f2e7fe" title="A Custom-Colored Tip" content="This callout uses a light purple background color, specified with a hex code. This is useful for branding or creating unique visual cues." %}
 
 ---
 
