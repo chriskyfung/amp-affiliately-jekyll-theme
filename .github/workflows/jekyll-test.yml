@@ -1,5 +1,6 @@
 name: Test Jekyll Build
-
+permissions:
+  contents: read
 on:
   pull_request:
 
