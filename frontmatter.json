@@ -250,6 +250,7 @@
   "frontMatter.preview.host": "http://127.0.0.1:4000/amp-affiliately-jekyll-theme/",
   "frontMatter.site.baseURL": "https://chriskyfung.github.io/",
   "frontMatter.website.host": "https://chriskyfung.github.io/amp-affiliately-jekyll-theme/",
+  "frontMatter.global.timezone": "Asia/Hong_Kong",
   "frontMatter.taxonomy.slugTemplate": "{{seoTitle}}",
   "frontMatter.taxonomy.seoDescriptionField": "excerpt",
   "frontMatter.content.pageFolders": [
