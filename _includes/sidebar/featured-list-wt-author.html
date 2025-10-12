@@ -7,15 +7,14 @@
 <div class="card card-list">
   <div class="row">
     <div class="col-md-5 wrapthumbnail">
-      <a href="{{ post.url | relative_url }}">
-        <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
-          {%- if post.image.path -%}
-          {%- include picture.html img=post.image.path ext=post.image.ext width="112" height="150" layout="intrinsic" lightbox=false -%}
-          {%- else -%}
-          {%- include picture.html img="write-2160925.svg" source="assets" width="112" height="150" layout="intrinsic" lightbox=false -%}
-          {%- endif -%}
-        </div>
-      </a>
+      <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
+        {%- assign thumb_alt = post.title | prepend: "Thumbnail for " -%}
+        {%- if post.image.path -%}
+        {%- include picture.html img=post.image.path ext=post.image.ext width="112" height="150" layout="intrinsic" alt=thumb_alt lightbox=false -%}
+        {%- else -%}
+        {%- include picture.html img="write-2160925.svg" source="assets" width="112" height="150" layout="intrinsic" alt=thumb_alt lightbox=false -%}
+        {%- endif -%}
+      </div>
     </div>
     <div class="wrapmeta">
       <div class="card-block pt-3">
@@ -24,7 +23,7 @@
           <div class="wrapfooter">
             {%- if post.author -%}
             <span class="meta-footer-thumb">
-              <amp-img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" width="40" height="40" alt="{{ author.display_name }}"></amp-img>
+              <amp-img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" width="40" height="40" alt=""></amp-img>
             </span>
             <span class="author-meta">
               <span class="post-name"><a href="{{ author.web }}" rel="noopener" target="_blank">{{ author.display_name }}</a></span><br/>

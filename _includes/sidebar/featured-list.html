@@ -7,22 +7,21 @@
 <div class="card card-list">
   <div class="row">
     <div class="col-md-5 wrapthumbnail">
-      <a href="{{ post.url | relative_url }}">
-        <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
-          {%- if post.image.path -%}
-          {%- include picture.html img=post.image.path source="raw" width="112" height="150" layout="intrinsic" lightbox=false suffix="thumb." -%}
-          {%- else -%}
-          {%- include picture.html img="write-2160925.svg" source="assets" width="112" height="150" layout="intrinsic" lightbox=false -%}
-          {%- endif -%}
-        </div>
-      </a>
+      <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
+        {%- assign thumb_alt = post.title | prepend: "Thumbnail for " -%}
+        {%- if post.image.path -%}
+        {%- include picture.html img=post.image.path source="raw" width="112" height="150" layout="intrinsic" alt=thumb_alt lightbox=false suffix="thumb." -%}
+        {%- else -%}
+        {%- include picture.html img="write-2160925.svg" source="assets" width="112" height="150" layout="intrinsic" alt=thumb_alt lightbox=false -%}
+        {%- endif -%}
+      </div>
     </div>
     <div class="wrapmeta">
       <div class="card-block pt-3">
         <h4 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | truncate: 68 }}</a></h4>
         <div class="metafooter">
           <div class="wrapfooter">
-            <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
+            <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story" aria-label="Read story: {{ post.title | escape }}"><i class="fa fa-link" aria-hidden="true"></i></a></span>
             <div class="post-meta">
               {% include blocks/post-date.html %}
               {% include blocks/list-categories.html %}
