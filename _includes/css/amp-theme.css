@@ -750,6 +750,10 @@ span.navigation:before {
   text-transform: uppercase;
 }
 
+.pagination .page-number {
+  margin: 0 1em;
+}
+
 iframe {
   max-width: 100%;
 }/*# sourceMappingURL=amp-theme.css.map */
