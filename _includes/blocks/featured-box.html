@@ -22,7 +22,7 @@
           <p class="card-text">{{ post.excerpt | strip_html | truncate:115 }}</p>
           <div class="metafooter">
             <div class="wrapfooter">
-              <span class="post-read-more"><a href="{{ post.url | relative_url }}" aria-label="Read story: {{ post.title | escape }}"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+              <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story" aria-label="Read story: {{ post.title | escape }}"><i class="fa fa-link" aria-hidden="true"></i></a></span>
               <div class="post-meta">
                 {% include blocks/list-categories.html %}
               </div>
