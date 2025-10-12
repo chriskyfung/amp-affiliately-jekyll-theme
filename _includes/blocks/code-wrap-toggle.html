@@ -6,11 +6,12 @@
 </amp-state>
 <div class="code-wrap-toggle-container">
   <input type="checkbox" id="code-wrap-toggle" class="code-wrap-toggle-input"
-    on="tap:post.toggleClass(class='code-wrap'),AMP.pushState({ codewrap: !codewrap})"
-    role="button" tabindex="0">
+    on="tap:post.toggleClass(class='code-wrap'),AMP.pushState({ codewrap: !codewrap })"
+    aria-pressed="false"
+    [aria-pressed]="codewrap ? 'true' : 'false'">
   <label for="code-wrap-toggle" class="code-wrap-toggle-label">
     <span class="code-wrap-toggle-icon">
-      <i class="fas fa-code"></i>
+      <i class="fas fa-code" aria-hidden="true"></i>
     </span>
     <span class="code-wrap-toggle-label-text"><span class="sr-only">code </span>wrap</span>
   </label>
