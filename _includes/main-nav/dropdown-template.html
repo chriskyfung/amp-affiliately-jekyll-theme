@@ -9,15 +9,15 @@
 {%- assign dropdown_expanded_var = dropdown_var | append: "DropdownExpanded" -%}
 {%- assign dropdown_expanded_focus = dropdown_id | append: "-expanded-focus" -%}
 
-<li id="{{ dropdown_id }}" class="nav-item dropdown" role="none">
-  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" 
-    aria-controls="{{ dropdown_submenu_id }}" aria-haspopup="true" aria-expanded="false"
+<li id="{{ dropdown_id }}" class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
+    aria-controls="{{ dropdown_submenu_id }}" aria-haspopup="true"
     [aria-expanded]="{{ dropdown_expanded_var }} ? 'true' : 'false'" tabindex="0"
     on="tap:AMP.setState({ {{ dropdown_expanded_var }}: !{{ dropdown_expanded_var }} }),{{ dropdown_expanded_focus }}.focus">
     {{ dropdown_text }}
   </a>
-  <div id="{{ dropdown_submenu_id }}" class="dropdown-menu scrollbar-thin" aria-labelledby="{{ dropdown_id }}">
-    <ul style="list-style: none; padding-left: 0;">
+  <div id="{{ dropdown_submenu_id }}" class="dropdown-menu scrollbar-thin" aria-labelledby="{{ dropdown_id }}" [hidden]="!{{ dropdown_expanded_var }}">
+    <ul role="menu" style="list-style: none; padding-left: 0;">
       <li>
         <a id="{{ dropdown_expanded_focus }}" class="dropdown-item" href="/item-1/">item-1</a>
       </li>
