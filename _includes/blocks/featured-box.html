@@ -7,24 +7,22 @@
   <article class="card">
     <div class="row">
       <div class="col-md-5 wrapthumbnail">
-        <a href="{{ post.url | relative_url }}" aria-hidden="true" tabindex="-1">
-          <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
-            {%- assign thumb_alt = post.title | truncate: 15, '...' | prepend: "thumbnail for " -%}
-            {%- if post.image.path -%}
-            {%- include picture.html img=post.image.path source="raw" width="208" height="258" layout="intrinsic" alt=thumb_alt lightbox=false -%}
-            {%- else -%}
-            {%- include picture.html img="write-2160925.svg" source="assets" width="208" height="258" layout="intrinsic" alt=thumb_alt lightbox=false -%}
-            {%- endif -%}
-          </div>
-        </a>
+        <div class="thumbnail{% if post.image.fit %} fit-{{post.image.fit}} {% endif %}">
+          {%- assign thumb_alt = post.title | prepend: "Thumbnail for " -%}
+          {%- if post.image.path -%}
+          {%- include picture.html img=post.image.path source="raw" width="208" height="258" layout="intrinsic" alt=thumb_alt lightbox=false -%}
+          {%- else -%}
+          {%- include picture.html img="write-2160925.svg" source="assets" width="208" height="258" layout="intrinsic" alt=thumb_alt lightbox=false -%}
+          {%- endif -%}
+        </div>
       </div>
       <div class="col-md-7 wrapmeta">
         <div class="card-block">
-          <h3 class="card-title"><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | truncate:70 }}</a></h3>
+          <h3 class="card-title"><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title | truncate: 70 }}</a></h3>
           <p class="card-text">{{ post.excerpt | strip_html | truncate:115 }}</p>
           <div class="metafooter">
             <div class="wrapfooter">
-              <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story"><i class="fa fa-link"></i></a></span>
+              <span class="post-read-more"><a href="{{ post.url | relative_url }}" aria-label="Read story: {{ post.title | escape }}"><i class="fa fa-link" aria-hidden="true"></i></a></span>
               <div class="post-meta">
                 {% include blocks/list-categories.html %}
               </div>
