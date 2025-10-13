@@ -1,19 +1,21 @@
-<h3>Follow Me on</h3>
-{%- if site.social.facebook -%}
-<a href="https://www.facebook.com/{{ site.social.facebook }}"  rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
-{%- endif -%}
-{%- if site.social.twitter -%}
-<a href="https://twitter.com/{{ site.social.twitter }}"  rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
-{%- endif -%}
-{%- if site.social.linkedin -%}
-<a href="https://www.linkedin.com/in/{{ site.social.linkedin }}/"  rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
-{%- endif -%}
-{%- if site.social.pinterest -%}
-<a href="https://www.pinterest.com/{{ site.social.pinterest }}"  rel="noopener noreferrer" target="_blank"><i class="fab fa-pinterest"></i><span class="sr-only">Pinterest</span></a>
-{%- endif -%}
-{%- if site.social.github -%}
-<a href="https://github.com/{{ site.social.github }}"  rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i><span class="sr-only">GitHub</span></a>
-{%- endif -%}
-{%- if site.social.medium -%}
-<a href="https://medium.com/@{{ site.social.medium }}"  rel="noopener noreferrer" target="_blank"><i class="fab fa-medium"></i><span class="sr-only">Medium</span></a>
-{%- endif -%}
+<section class="follow-buttons" aria-labelledby="follow-heading">
+  <h3 id="follow-heading">Follow Me on</h2>
+  {%- if site.social.facebook -%}
+  <a href="https://www.facebook.com/{{ site.social.facebook }}" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+  {%- endif -%}
+  {%- if site.social.twitter -%}
+  <a href="https://twitter.com/{{ site.social.twitter }}" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+  {%- endif -%}
+  {%- if site.social.linkedin -%}
+  <a href="https://www.linkedin.com/in/{{ site.social.linkedin }}/" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+  {%- endif -%}
+  {%- if site.social.pinterest -%}
+  <a href="https://www.pinterest.com/{{ site.social.pinterest }}" rel="noopener noreferrer" target="_blank"><i class="fab fa-pinterest" aria-hidden="true"></i><span class="sr-only">Pinterest</span></a>
+  {%- endif -%}
+  {%- if site.social.github -%}
+  <a href="https://github.com/{{ site.social.github }}" rel="noopener noreferrer" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+  {%- endif -%}
+  {%- if site.social.medium -%}
+  <a href="https://medium.com/@{{ site.social.medium }}" rel="noopener noreferrer" target="_blank"><i class="fab fa-medium" aria-hidden="true"></i><span class="sr-only">Medium</span></a>
+  {%- endif -%}
+</section>

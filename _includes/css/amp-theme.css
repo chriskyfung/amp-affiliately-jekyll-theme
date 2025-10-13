@@ -109,6 +109,7 @@ section.recent-posts {
 .above-content {
   display: flex;
   justify-content: space-between;
+  margin: 1.5rem 0;
 }
 
 .article-post ol, .article-post ul {
@@ -234,9 +235,10 @@ section.recent-posts {
   width: 100%;
   left: 0;
   right: 0;
-  bottom: -15px;
-  margin: auto;
-  padding: 0 20px;
+  bottom: 0;
+  margin: 0;
+  padding: 20px;
+  transform: translateY(30%);
 }
 
 .listrecent {
@@ -408,6 +410,9 @@ span.post-name a, span.post-read-more a:hover {
 .article-post img.shadow {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.article-post :not(h1, h2, h3, h4, h5, h6) + h1, .article-post :not(h1, h2, h3, h4, h5, h6) + h2, .article-post :not(h1, h2, h3, h4, h5, h6) + h3, .article-post :not(h1, h2, h3, h4, h5, h6) + h4, .article-post :not(h1, h2, h3, h4, h5, h6) + h5, .article-post :not(h1, h2, h3, h4, h5, h6) + h6 {
+  margin-top: 2em;
+}
 
 blockquote {
   border-left: 4px solid #6FD350;
@@ -418,6 +423,9 @@ blockquote {
 
 .article-post blockquote, .article-post p {
   margin: 0 0 1.5rem;
+}
+.article-post p:has(+ ul) {
+  margin-bottom: 0;
 }
 
 .featured-image {
@@ -748,6 +756,10 @@ span.navigation:before {
   letter-spacing: 0.5px;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.pagination .page-number {
+  margin: 0 1em;
 }
 
 iframe {

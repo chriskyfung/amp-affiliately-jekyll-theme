@@ -18,10 +18,18 @@ image:
   width: "730"
   height: "411"
 css:
+  alert: true
   syntax: true
+  custom: |-
+    .article-post .alert:first-of-type {
+      margin: 1.5rem auto 2.5em auto;
+    }
 ---
 
+{% capture notice %}
 Ensuring that the **[iubenda Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %})** functions correctly is crucial for maintaining compliance with privacy regulations and offering a seamless user experience on your website. By calling the browser and iubenda Cookie Solution's API methods, you can verify its behavior and ensure that user consent is being handled correctly. This guide will talk you through the process step by step.
+{% endcapture %}
+{% include alert.html type="info" content=notice %}
 
 {% include toc.md %}
 

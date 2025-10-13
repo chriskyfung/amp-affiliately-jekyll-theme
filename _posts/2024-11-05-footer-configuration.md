@@ -25,11 +25,9 @@ css:
 excerpt: Learn how to customize your footer configuration with YAML in Front Matter CMS for enhanced usability and compliance.
 ---
 
-{% include toc.md %}
-
-* * *
-
 Starting from version <span>v3.1.0</span>{:.badge.badge-success}, our theme's footer has been enhanced to allow customization of the second and third columns (`col1` and `col2`) directly through the `_config.yml` file. Additionally, we provide configurable options for copyright notices and privacy policy links that were available in previous versions.
+
+{% include toc.md %}
 
 ## Footer Columns Configuration
 

@@ -190,9 +190,9 @@
     <!-- Begin Menu Navigation -->
     <nav amp-fx="float-in-top" id="navbar" class="navbar navbar-toggleable-md navbar-light fixed-top mediumnavigation" aria-label="primary">
 
-      <div class="container" role="menu">
+      <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="/" role="menuitem" title="Go to Site Home">
+        <a class="navbar-brand" href="/" aria-label="Go to Site Home">
           <amp-img src="{{ site.logo | relative_url }}" alt="site logo" height="36" width="140" style="width:140px;height:36px;" noloading>
             <amp-img fallback src="{{ site.logo | relative_url }}" alt="site logo" height="36" width="140" noloading></amp-img>
           </amp-img>
@@ -201,7 +201,7 @@
         {%- assign maxLength = site.nav.local.max_title_length | default: 30 -%}
         <div class="navbar-nav">
           <div class="nav-item">
-            <a class="nav-link" href="{{ "/" | relative_url }}" role="menuitem" title="↰ Top Page" aria-label="Go to the Top Page of {{ site.title }}">{{ site.title | truncate: maxLength }} <i class="fas fa-anchor" aria-hidden="true"></i></a>
+            <a class="nav-link" href="{{ "/" | relative_url }}" title="↰ Top Page" aria-label="Go to the Top Page of {{ site.title }}">{{ site.title | truncate: maxLength }} <i class="fas fa-anchor" aria-hidden="true"></i></a>
           </div>
         </div>
         {%- endif -%}
@@ -210,9 +210,9 @@
           data-toggle="collapse" data-target="#navbarsWow" role="button" aria-controls="navbarsWow" aria-label="Toggle navigation menu" aria-expanded="false" [aria-expanded]="primaryMenuExpanded ? 'true' : 'false'" tabindex="0">
           <span class="navbar-toggler-icon"></span>
         </a>
-        <div class="collapse navbar-collapse" id="navbarsWow">
+        <nav class="collapse navbar-collapse" id="navbarsWow" aria-label="Main navigation">
           {% include main-nav/navigation.html %}
-        </div>
+        </nav>
         <!-- End Menu -->
       </div>
     </nav>
@@ -222,15 +222,16 @@
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Search for</h5> <button class="close" type="button" on="tap:amp-searchbar.close" aria-label="Close Search Modal" tabindex="-1">×</button>
+            <h5 class="modal-title">Search for</h5> <button class="close" type="button" on="tap:amp-searchbar.close" aria-label="Close Search Modal">×</button>
           </div>
           <div class="modal-body">
             <div class="search_form">
               <form method="GET" action="{{ "search" | relative_url }}" target="_top">
                 <amp-autocomplete class="searchbox" filter="substring" src="/assets/data/suggestions.json">
-                  <input class="form-control" name="q" type="search" placeholder="Search" required>
+                  <label for="search-input" class="sr-only">Search query</label>
+                  <input id="search-input" class="form-control" name="q" type="search" placeholder="Search" required>
                 </amp-autocomplete>
-                <input hidden name="sitesearch" value="chriskyfung.github.io"/>
+                <input hidden name="sitesearch" value="{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}"/>
                 <button class="btn btn-primary" type="submit">Search</button>
               </form>
             </div>
@@ -243,10 +244,10 @@
     <div class="site-content">
       <div class="container">
         <!-- Content -->
-        <div class="main-content" style="margin-top: 88px;">
+        <main class="main-content" style="margin-top: 88px;">
           {{ content }}
           {% include blocks/site_content_postproc.html content=content %}
-        </div>
+        </main>
       </div>
 
       <footer>

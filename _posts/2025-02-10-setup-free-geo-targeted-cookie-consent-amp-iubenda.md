@@ -8,9 +8,6 @@ image:
   path: /assets/images/cookie-map-4859127.svg
   width: "1920"
   height: "1080"
-css:
-  badge: true
-  syntax: true
 excerpt: Learn how to implement geo-targeted cookie consent on AMP pages for free. Optimize your site for different regions and increase ad revenue.
 categories:
   - doc
@@ -18,9 +15,17 @@ tags:
   - AMP
   - iubenda
   - Cookie Consent
+css:
+  alert: true
+  badge: true
+  syntax: true
+  custom: |-
+    .article-post .alert:first-of-type {
+      margin: 1.5rem auto 2rem auto;
+    }
 ---
 
-_Do you want to improve your website for visitors from different regions?_ Using geo-detection for cookie consent helps you show the right message and make more money from ads, all while keeping things easy and user-friendly.
+{% include alert.html type="primary" content="_Do you want to improve your website for visitors from different regions?_ Using geo-detection for cookie consent helps you show the right message and make more money from ads, all while keeping things easy and user-friendly." %}
 
 Last month, we introduced the Iubenda AMP Cookie Solution in the [release of our AMP Jekyll theme <span class="badge badge-success">v3.3.0</span>]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}). However, there's a catch: Iubenda's geo-detection feature is only available in their Advanced, Ultimate, and Tailored plans, which start at $24.99 USD.
 
@@ -109,9 +114,7 @@ The `promptUISrc` field specifies the URL for loading the external consent form 
 
 In this case, you need to override the `promptUISrc` to pass the geo group through the URL for each `geoOverride`. AMP will apply the corresponding values to override the existing `<amp-consent>` configuration.
 
-**Note:** If no geo groups are matched, the `<amp-consent>` component will fall back to using the `promptUISrc` configured outside the `geoOverride` field.
-
----
+{% include alert.html type="info" content="**Note**: If no geo groups are matched, the `<amp-consent>` component will fall back to using the `promptUISrc` configured outside the `geoOverride` field." %}
 
 ### 3. Customizing the Iubenda Cookie Solution Iframe
 
@@ -152,16 +155,12 @@ After that, modify the `_iub.csConfiguration` according to your region-specific 
 
 This script configures the Iubenda cookie solution based on the parsed consent type. The `_iub.csConfiguration` object is set up to enable GDPR, USPR, or LGPD functionality as needed. It also specifies to display the reject button and the purpose toggles for the GDPR banner.
 
----
-
 ## Limitations and Considerations
 
 - The `<amp-consent>` component does not display cookie notices and privacy widgets for users in the United States. When the Iubenda cookie solution processes an opt-out, `<amp-consent>` perceives it as unnecessary and skips showing the consent UI on AMP pages.
 - The Iubenda cookie solution does not support per-purpose consent when its GDPR functionality is disabled, potentially leading to issues with unblocking `amp-analytics`, `amp-ads`, and other components using the `data-block-on-consent-purposes` attribute.
 
 If you have any insights on how to compel `<amp-consent>` to display banners or notices for US users, please share your knowledge.
-
----
 
 ## References and Further Reading
 

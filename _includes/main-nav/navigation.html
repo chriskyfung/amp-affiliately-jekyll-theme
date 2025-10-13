@@ -12,23 +12,23 @@
 {%- endcomment -%}
 
 
-<ul class="navbar-nav ml-auto scrollbar-thin" role="menubar">
+<ul class="navbar-nav ml-auto scrollbar-thin list-unstyled">
 
   {%- assign home_position = site.nav.global.home.location | default: "menu-start" -%}
 
   {%- assign nav_item_index = 0 -%}
 
   {%- if site.nav.global.home != false and home_position == "menu-start" %}
-  <li class="nav-item" role="none">
-    <a id="nav-item-0" class="nav-link" href="/" role="menuitem">{{ site.home.text | default: "Home" }}</a>
+  <li class="nav-item">
+    <a id="nav-item-0" class="nav-link" href="/">{{ site.home.text | default: "Home" }}</a>
     {%- assign nav_item_index = nav_item_index | plus: 1 -%}
   </li>
   {%- endif -%}
 
   {%- if site.baseurl != "" and site.baseurl != "/" and site.pages.size > 1 -%}
   {%- for item in site.nav.local.items -%}
-  <li class="nav-item" role="none">
-    <a id="nav-item-{{ nav_item_index }}" class="nav-link" href="{{ item.url | relative_url }}" role="menuitem">{{ item.name }}</a>
+  <li class="nav-item">
+    <a id="nav-item-{{ nav_item_index }}" class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
     {%- assign nav_item_index = nav_item_index | plus: 1 -%}
   </li>
   {%- endfor -%}
@@ -36,18 +36,18 @@
   {% include main-nav/local-menu.html %}
   {%- endif -%}
   {%- endif -%}
-  
+
   {%- if site.nav.global.menu == true -%}
   {% include main-nav/global-menu.html %}
   {%- endif -%}
 
   {%- if site.nav.global.home != false and home_position == "menu-end" %}
   <li class="nav-item">
-    <a class="nav-link" href="/" role="menuitem">{{ site.home.text | default: "Home" }}</a>
+    <a class="nav-link" href="/">{{ site.home.text | default: "Home" }}</a>
   </li>
   {%- endif -%}
 </ul>
-<ul class="navbar-btngroup row ml-auto">
+<ul class="navbar-btngroup row ml-auto list-unstyled">
   {%- unless site.invitation_codes == false -%}
   <li class="nav-item">
     {% include main-nav/invitation-codes.html %}
@@ -56,24 +56,22 @@
 
   {%- if site.github.is_project_page -%}
   <li class="nav-item">
-    <a class="btn btn-dark" href="{{ site.github.repository_url }}" title="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github"></i></a>
+    <a class="btn btn-dark" href="{{ site.github.repository_url }}" aria-label="Open {{ site.github.repository_nwo }} on GitHub" rel="noopener noreferrer" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
   </li>
   {%- endif -%}
   {%- if site.social.github and site.nav.buttons.gh_sponsors -%}
   <li class="nav-item">
     <a class="gh-style btn btn-block" style="margin: 2px 0" aria-label="Sponsor @{{ site.social.github }}" target="_top" href="https://github.com/sponsors/{{ site.social.github }}?o=esb">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-heart icon-sponsor color-fg-sponsors">
-        <path fill-rule="evenodd" d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"></path>
-      </svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-heart icon-sponsor color-fg-sponsors"><path fill-rule="evenodd" d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"></path></svg>
       <span>Sponsor</span>
     </a>
   </li>
   {%- endif -%}
-  
+
   <li class="nav-item">
     <button type="button" on="tap:amp-searchbar" id="toggle-search" class="btn btn-primary"
-      data-toggle="modal" data-target="#searchbar" title="search" accesskey="/">
-      <i class="fas fa-search"></i>
+      data-toggle="modal" data-target="#searchbar" aria-label="Open search" accesskey="/">
+      <i class="fas fa-search" aria-hidden="true"></i>
     </button>
   </li>
 

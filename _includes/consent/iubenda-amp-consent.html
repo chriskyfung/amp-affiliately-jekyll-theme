@@ -48,11 +48,12 @@
 
 {%- if site.iubenda.tp_btn_style -%}
   <div id="post-consent-ui">
-    <button class="iubenda-tp-btn iubenda-tp-btn--{{ site.iubenda.tp_btn_position | default: 'bottom-left' }}" on="tap:iubenda.prompt()"></button>
+    <button class="iubenda-tp-btn iubenda-tp-btn--{{ site.iubenda.tp_btn_position | default: 'bottom-left' }}"
+      on="tap:iubenda.prompt()" aria-label="Manage cookie preferences"></button>
   </div>
 {%- else -%}
   <div id="post-consent-ui">
-  <button class="btn btn-primary" on="tap:iubenda.prompt()"><i
-    class="fas fa-cookie-bite"></i></button>
+    <button class="btn btn-primary" on="tap:iubenda.prompt()" aria-label="Manage cookie preferences"><i
+        class="fas fa-cookie-bite" aria-hidden="true"></i></button>
   </div>
 {%- endif -%}

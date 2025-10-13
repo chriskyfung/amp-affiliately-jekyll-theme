@@ -29,13 +29,13 @@
   Date: 2021-10-10
 {%- endcomment -%}
 
-<li id="tag-dropdown" class="nav-item dropdown" role="none">
-  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-controls="tags-submenu" aria-haspopup="true" aria-expanded="false"
-  [aria-expanded]="tagsDropdownExpanded ? 'true' : 'false'" tabindex="0"
-  on="tap:AMP.setState({tagsDropdownExpanded: !tagsDropdownExpanded}),tag-filter.focus">
-    <i class="fas fa-tags"></i> <span class="sr-only">Tags</span>
+<li id="tag-dropdown" class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-controls="tags-submenu" aria-haspopup="true"
+    [aria-expanded]="tagsDropdownExpanded ? 'true' : 'false'" tabindex="0"
+    on="tap:AMP.setState({tagsDropdownExpanded: !tagsDropdownExpanded}),tag-filter.focus">
+    <i class="fas fa-tags" aria-hidden="true"></i> <span class="sr-only">Tags</span>
   </a>
-  <div id="tags-submenu" class="dropdown-menu scrollbar-thin" aria-labelledby="{{ dropdown_id }}">
+  <div id="tags-submenu" class="dropdown-menu scrollbar-thin" aria-labelledby="tag-dropdown" [hidden]="!tagsDropdownExpanded">
     {% if site.tags.size > 10 %}
     <div class="dropdown-filter">
       <amp-state id="tagfilterState">
@@ -50,11 +50,11 @@
         <i class="fas fa-filter fa-sm" aria-hidden="true"></i>
         Tag Filter
       </small>
-        <input id="tag-filter" type="text" on="input-throttled:AMP.setState({ tagfilterState:{ value: event.value }})" placeholder="Find..." style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;">
+        <input id="tag-filter" type="text" on="input-throttled:AMP.setState({ tagfilterState:{ value: event.value }})" placeholder="Find..." aria-label="Filter tags" style="border-color: #675bff; border-radius: 3px; margin: 0 .3em;">
       </label>
     </div>
     {% endif %}
-    <ul style="list-style: none; padding-left: 0;">
+    <ul role="menu" style="list-style: none; padding-left: 0;">
       {%- assign sorted_tags = site.tags | sort -%}
       {%- for tag in sorted_tags -%}
       <li>

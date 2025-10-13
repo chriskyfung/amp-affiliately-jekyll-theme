@@ -18,6 +18,7 @@ image:
   width: "1280"
   height: "721"
 css:
+  alert: true
   badge: true
   syntax: true
   custom: |-
@@ -86,7 +87,10 @@ image:
 | `height` | (_Optional_) Specify the image height (in px). _Default:_ 411 (px).                                                                   |
 | `fit`    | (_Optional_) The horizontal alignment of the thumbnail in cards and post grid. _Options:_ `left`{:.plaintext} / `right`{:.plaintext}. |
 
-**Note**: The front matter `image` also inherits the properties from [Jekyll Feed](https://github.com/jekyll/jekyll-feed#optional-front-matter) and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output).
+{% capture featured_image_notice %}
+**NOTE:** The front matter `image` also inherits the properties from [Jekyll Feed](https://github.com/jekyll/jekyll-feed#optional-front-matter "GitHub") and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#customizing-image-output "GitHub").
+{% endcapture %}
+{% include alert.html type="info" content=featured_image_notice %}
 
 ### Hide Featured Image on A Post
 
@@ -235,7 +239,7 @@ Follow our [Config Guide]({% post_url 2021-08-02-config-guide %}) to set up your
 
 If a release exists in the repository, an additional button linking to the latest release webpage will be shown in the widget.
 
-**NOTE**: Authentication is required to fetch your repository data to display the release button. Please follow the [jekyll/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) documentation to set up your personal access token.
+{% include alert.html type="info" content="**NOTE:** Authentication is required to fetch your repository data to display the release button. Please follow the [jekyll/github-metadata](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) documentation to set up your personal access token." %}
 
 > <span class="badge badge-success">v2.0</span>  \
 > You can globally configure the widget using the `resources_widget` attribute in the `_config.yml` file. It is not necessary to set the front matter of individual pages to enable the widget.

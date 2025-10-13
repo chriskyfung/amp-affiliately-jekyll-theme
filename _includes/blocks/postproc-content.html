@@ -65,7 +65,7 @@
       {%- assign html_subsegments = html_segment | split: close_tag -%}
       {%- assign tag_fragements = html_subsegments[0] | split: '>' -%}
       {%- assign tag_id = tag_fragements[0] | replace: '"', '' -%}
-      {%- assign anchor_link = '<a class="anchor-link" href="#' | append: tag_id | append: '"><i class="fas fa-link"></i></a>' -%}
+      {%- assign anchor_link = '<a class="anchor-link" href="#' | append: tag_id | append: '" title="Link to this section" aria-label="Link to this section"><i class="fas fa-link" aria-hidden="true"></i></a>' -%}
       {%- assign modified_element = open_tag_with_id | append: html_subsegments[0] | append: anchor_link | append: close_tag -%}
       {% assign resulted_html = resulted_html | append: modified_element |  append: html_subsegments[1] -%}
     {%- endfor -%}

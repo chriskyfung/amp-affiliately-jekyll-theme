@@ -83,12 +83,12 @@
   </script>
   <div id="consent-ui">
     <div id="cookie-consent-banner" class="container">
-      <header>
-        <h2>
-          <i class="fas fa-cookie-bite"></i>
+      <header id="cookie-consent-header">
+        <h2 id="cookie-consent-title">
+          <i class="fas fa-cookie-bite" aria-hidden="true"></i>
           Cookie Consent
         </h2>
-        <div class="description">
+        <div id="cookie-consent-desc" class="description">
           <p>This website use cookies to help you have a superior and more relevant browsing experience on the website.
             <a href="{{ site.privacy-policy.url | default: '/privacy-policy'}}"> Read more...</a></p>
         </div>
@@ -134,12 +134,14 @@
       </div>
     </div>
 
-    <div id="cookie-preference-modal" hidden class="container">
-      <header>
-        <h2>
-          <i class="fas fa-cookie-bite"></i>
+    <div id="cookie-preference-modal" hidden class="container" role="dialog" aria-modal="true"
+      aria-labelledby="cookie-pref-title" aria-describedby="cookie-pref-desc">
+      <header id="cookie-pref-header">
+        <h2 id="cookie-pref-title">
+          <i class="fas fa-cookie-bite" aria-hidden="true"></i>
           Cookie Preferences
         </h2>
+        <p id="cookie-pref-desc" class="sr-only">Please select your cookie preferences below.</p>
       </header>
       <div id="consent-choices">
         <label class="consentLabel" for="consent-purpose-essential">
@@ -182,6 +184,7 @@
 {%- endif -%}
 
 <div id="post-consent-ui">
-  <button class="btn btn-primary" on="tap:AMP.setState({}),site-consent.prompt"><i
-      class="fas fa-cookie-bite"></i></button>
+  <button class="btn btn-primary" on="tap:AMP.setState({}),site-consent.prompt" aria-label="Manage cookie preferences">
+    <i class="fas fa-cookie-bite" aria-hidden="true"></i>
+  </button>
 </div>
