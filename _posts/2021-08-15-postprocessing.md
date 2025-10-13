@@ -25,6 +25,8 @@ excerpt: Learn how to enhance your blog with anchor links and external links tha
 
 {% include toc.md %}
 
+* * *
+
 ## Add Anchor Link to H2, H3 And H4 Headings <span>v2.0</span>{:.badge.badge-success}
 
 This theme enables to attach an anchor link to **H2**-**H4** elements inside posts’ content similar to [AnchorJS](https://www.bryanbraun.com/anchorjs/) with no dependencies. See the [Config Guide]({% post_url 2021-08-02-config-guide %}#-add-anchor-link-for-h2-h3-and-h4-headings) if you perfer to disable this feature in your site.

@@ -15,6 +15,7 @@ tags:
   - AMP
   - Cookie Consent
 css:
+  alert: true
   custom: |-
     .center { margin: auto auto; }
     .mobile-view-gallery-item { width: 207px; }
@@ -24,11 +25,14 @@ css:
 
 We're excited to announce the release of version 3.3.1 of our AMP Jekyll Theme, which brings a major upgrade to our built-in granular user consent feature. This update makes it easier than ever by eliminating the need to calculate the script hash of custom JavaScript for each site domain and include it in the `_config.yml` file.
 
-### Key Improvements
+{% capture notice %}
+**Simplified Configuration**
 
-- **Simplified Configuration**
-  - No more need to include the script hash in the `_config.yml` file.
-  - The universal script hash is now automatically included via the `default` layout of our theme.
+- No more need to include the script hash in the `_config.yml` file.
+- The universal script hash is now automatically included via the `default` layout of our theme.
+{:.mt-0}
+{% endcapture %}
+{% include alert.html type="info" title="Key Improvements" content=notice %}
 
 ## Benefits of the Enhanced Granular User Consent
 

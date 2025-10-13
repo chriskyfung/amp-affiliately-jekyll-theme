@@ -14,7 +14,14 @@ categories:
 tags:
   - code
   - styles
+css:
+  alert: true
 ---
+
+{% capture notice %}
+**LIVE DEMO:** Visit our [Code Block]({% post_url 2017-11-28-code %}) page to see the feature in action.
+{% endcapture %}
+{% include alert.html type="primary" content=notice %}
 
 **Amp Affiliately Jekyll Theme** has been updated with a new Code Block Wrapping design[^1]. This update addresses long-standing code formatting issues to enhance both readability and usability for content creators and readers.
 
@@ -42,9 +49,7 @@ Our dedicated toggle button lets you choose how to view code on your screen:
 - **Smart Placement:** Integrated within a responsive header—situated neatly between the featured image and post content and aligned with the publication date—it’s both easy to find and use.
 - **Smooth Operation:** Powered by AMP’s `amp-bind`, the toggle updates instantly without requiring a page reload.
 
-**LIVE DEMO:** Visit our [Code Block]({% post_url 2017-11-28-code %}) page to see the feature in action.
-
-### **2. Reliable Syntax Highlighting and Enhanced Scrollbar Visibility**
+### **2. Improved Syntax Highlighting and Scrollbar Visibility**
 
 Every aspect has been fine-tuned to maintain the integrity of your code and improve navigation:
 

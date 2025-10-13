@@ -14,6 +14,7 @@ image:
   width: "1920"
   height: "1080"
 css:
+  alert: true
   badge: true
   syntax: true
   custom: |-
@@ -58,7 +59,7 @@ featured: true
 
     You can optionally specify a branch, tag, or commit (e.g., `...jekyll-theme@v3.3.2`). If you don't, the `master` branch will be used.
 
-**Note**: You must use `jekyll-remote-theme` version `v0.4.2` or higher for Jekyll 4.0+.
+{% include alert.html type="info" content="**Note:** You must use `jekyll-remote-theme` version `v0.4.2` or higher for Jekyll 4.0+." %}
 
 * * *
 
@@ -97,11 +98,13 @@ Configure the core look and feel of your site.
 | `logo`    | The path to your logo image (JPG/PNG/SVG) for the navigation bar. This is also used for [Jekyll SEO Tag] structured data.                                                                                |
 | `name`    | Your site's name, used as alt text for the logo and in the copyright notice if not otherwise specified.                                                                                                  |
 
-**Note**: Regarding `title` and `url`, please also review the documentation for [Jekyll Feed] and [Jekyll SEO Tag].
-
-[Jekyll Feed]: https://github.com/jekyll/jekyll-feed "GitHub"
 [Jekyll SEO Tag]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
 [jekyll-seo-tag-usage]: https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub"
+
+{% capture theme_config_notice %}
+**Note:** Regarding `title` and `url`, please also review the documentation for [Jekyll Feed](https://github.com/jekyll/jekyll-feed "GitHub") and [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md "GitHub").
+{% endcapture %}
+{% include alert.html type="info" content=theme_config_notice %}
 
 * * *
 
@@ -121,8 +124,8 @@ nav:
 
 #### Menu Buttons <span>v2.7</span>{:.badge.badge-success}
 
-| Attribute | Property      | Description                                                                                                                                      |
-| :-------- | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute | Property      | Description                                                                                                                                          |
+| :-------- | :------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `buttons` | `gh_sponsors` | Set `true`{:.green} to show the **GitHub Sponsors** button in the navigation bar. Requires `social.github` to be configured.<br> _Default:_ `false`. |
 
 Example **GitHub Sponsors** buttons
@@ -140,16 +143,16 @@ Example **GitHub Sponsors** buttons
 
 Use these settings for menu items that should appear across multiple sites on the same domain (e.g., a link back to a main portfolio page).
 
-| Attribute | Property   | Description                                                                                                                                         |
-| :-------- | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute | Property   | Description                                                                                                                                                 |
+| :-------- | :--------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `global`  | `home`     | <span>v2.0</span>{:.badge.badge-success} <br> Set `false` to disable the **HOME** menu item.<br> _Default:_ `true`{:.green}.                                |
 |           | `menu`     | <span>v2.0</span>{:.badge.badge-success} <br> Set `true`{:.green} to include menu items from `_includes/main-nav/global-menu.html`.<br> _Default:_ `false`. |
 |           | `dropdown` | <span>v1.7.2</span>{:.badge.badge-success} <br> Set `false` to exclude global dropdowns.<br> _Default:_ `true`{:.green}.                                    |
 
 If `home` is enabled, you can further customize it:
 
-| Attribute | Property | Key        | Description                                                                                                |
-| :-------- | :------- | :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Attribute | Property | Key        | Description                                                                                                   |
+| :-------- | :------- | :--------- | :------------------------------------------------------------------------------------------------------------ |
 | `global`  | `home`   | `location` | Position of the **HOME** button.  _Options:_ `menu-start` or `menu-end`.<br> _Default:_ `menu-start`{:.blue}. |
 |           |          | `text`     | The text for the home menu item.<br> _Default:_ `Home`{:.blue}.                                               |
 
@@ -157,10 +160,10 @@ If `home` is enabled, you can further customize it:
 
 These items appear only on the current site.
 
-| Attribute | Property           | Description                                                                                                                                         |
-| :-------- | :----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `local`   | `max_title_length` | <span>v2.0</span>{:.badge.badge-success} <br> The maximum character length for the site title in the navigation bar. _Default_: `40`{:.blue}.            |
-|           | `items`            | <span>v1.7.2</span>{:.badge.badge-success} <br> An array of menu items, each with a `name` and `url`.                                                    |
+| Attribute | Property           | Description                                                                                                                                                  |
+| :-------- | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `local`   | `max_title_length` | <span>v2.0</span>{:.badge.badge-success} <br> The maximum character length for the site title in the navigation bar. _Default_: `40`{:.blue}.                |
+|           | `items`            | <span>v1.7.2</span>{:.badge.badge-success} <br> An array of menu items, each with a `name` and `url`.                                                        |
 |           | `menu`             | <span>v1.7.2</span>{:.badge.badge-success} <br> Set `true`{:.green} to include menu items from `_includes/main-nav/local-menu.html`.<br> _Default:_ `false`. |
 
 Example for `local.items`:
@@ -179,8 +182,8 @@ nav:
 
 ### List Sorting <span>v2.3</span>{:.badge.badge-success}
 
-| Attribute         | Description                                                                                     |
-| :---------------- | :---------------------------------------------------------------------------------------------- |
+| Attribute         | Description                                                                                         |
+| :---------------- | :-------------------------------------------------------------------------------------------------- |
 | `sort_categories` | Set `false` to disable alphabetical sorting of a post's categories.<br> _Default:_ `true`{:.green}. |
 | `sort_tags`       | Set `false` to disable alphabetical sorting of a post's tags.<br> _Default:_ `true`{:.green}.       |
 
@@ -190,8 +193,8 @@ nav:
 
 These options modify post content after it's generated.
 
-| Attribute      | Description                                                                                                                                                     |
-| :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute      | Description                                                                                                                                                        |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `anchor_link`  | Set `true`{:.green} to add anchor links to H2, H3, and H4 headings within posts, similar to [AnchorJS]. See the [demo][anchor-links-demo].<br> _Default:_ `false`. |
 | `target_blank` | Set `true`{:.green} to add `target="_blank"` and `rel="noopener noreferrer"` to all [external links][outbound-links] in posts.<br> _Default:_ `false`.             |
 
@@ -203,8 +206,8 @@ These options modify post content after it's generated.
 
 ### Sidebar Options
 
-| Attribute | Property       | Description                                                                     |
-| :-------- | :------------- | :------------------------------------------------------------------------------ |
+| Attribute | Property       | Description                                                                        |
+| :-------- | :------------- | :--------------------------------------------------------------------------------- |
 | `sidebar` | `featured`     | Set `false` to hide the **FEATURED** posts widget.<br> _Default:_ `true`{:.green}. |
 |           | `recent_posts` | Set `false` to hide the **RECENT POSTS** widget.<br> _Default:_ `true`{:.green}.   |
 
@@ -240,8 +243,8 @@ For detailed instructions, see the [Footer Configuration guide]({% post_url 2024
 
 This theme provides two methods for handling cookie consent.
 
-| Attribute         | Description                                                                                                                                     |
-| :---------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute         | Description                                                                                                                                             |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `consent`         | <span>v2.9</span>{:.badge.badge-success} <br> Set `true`{:.green} to enable a cookie consent UI.<br> _Default:_ `false`.                                |
 | `consent_preview` | <span>v3.3</span>{:.badge.badge-success} <br> Set `false` to disable the consent banner in the development environment.<br> _Default:_ `true`{:.green}. |
 
@@ -249,13 +252,16 @@ This theme provides two methods for handling cookie consent.
 
 A basic, customizable consent UI using `amp-consent` and `amp-script`. It allows users to manage consent by category.
 
-| Attribute          | Description                                                                                                              |
-| :----------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| Attribute          | Description                                                                                                                  |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------- |
 | `consent_dev_mode` | Set `false` to remove the `data-ampdevmode` attribute from the custom script for production.<br> _Default:_ `true`{:.green}. |
-| `amp_optimizer`    | **Deprecated since v3.3.1.** This setting is no longer required.                                                         |
-| `script_hash`      | **Deprecated since v3.3.1.** The theme now handles script hashing automatically.                                         |
+| `amp_optimizer`    | **Deprecated since v3.3.1.** This setting is no longer required.                                                             |
+| `script_hash`      | **Deprecated since v3.3.1.** The theme now handles script hashing automatically.                                             |
 
-**Note:** This built-in solution is for basic privacy practices and may not meet full GDPR compliance requirements. For more details, see the [Granular User Consent Updates]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %}).
+{% capture granular_consent_notice %}
+**NOTE:** This built-in solution is for basic privacy practices and may not meet full GDPR compliance requirements. For more details, see the [Granular User Consent Updates]({% post_url 2025-02-01-verifying-the-iubenda-cookie-solution %}).
+{% endcapture %}
+{% include alert.html type="info" content=granular_consent_notice %}
 
 #### 2. Iubenda Cookie Solution <span>v3.3</span>{:.badge.badge-success} <br> {#iubenda-cookie-consent}
 
@@ -263,11 +269,11 @@ Integrates [iubenda](https://www.iubenda.com), a Google-certified Consent Manage
 
 For a full guide, see [Introducing iubenda AMP Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}).
 
-| Attribute | Property             | Description                                                                                                                                |
-| :-------- | :------------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| `iubenda` | `siteId`             | Your unique Iubenda site ID.                                                                                                               |
-|           | `cookiePolicyId`     | Your Iubenda cookie policy ID.                                                                                                             |
-|           | `remote_consent_url` | The URL for the remote AMP consent banner.                                                                                                 |
+| Attribute | Property             | Description                                                                                                                                    |
+| :-------- | :------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| `iubenda` | `siteId`             | Your unique Iubenda site ID.                                                                                                                   |
+|           | `cookiePolicyId`     | Your Iubenda cookie policy ID.                                                                                                                 |
+|           | `remote_consent_url` | The URL for the remote AMP consent banner.                                                                                                     |
 |           | `tp_btn_style`       | Set `true`{:.green} to use the Iubenda-styled floating consent button.<br> _Default:_ `false`.                                                 |
 |           | `tp_btn_position`    | Position of the button (`top-left`, `top-right`, `bottom-left`, `bottom-right`).<br> _Default:_ `bottom-left`. (Requires `tp_btn_style: true`) |
 
@@ -332,14 +338,11 @@ Integrate powerful third-party services directly into your theme.
 
 #### GitHub
 
-| Attribute          | Description                                                                                                                                                             |
-| :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `repository`       | The name of your repository in `<Username>/<Project>` format (e.g., `chriskyfung/amp-affiliately-jekyll-theme`). This is required to enable the GitHub metadata widget. |
-| `resources_widget` | <span>v2.0</span>{:.badge.badge-success} <br> Set `false` to hide the **Resource** widget in the sidebar, which displays repository links.<br> _Default:_ `true`{:.green}.       |
+| Attribute          | Description                                                                                                                                                                |
+| :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `repository`       | <span>v1.2</span>{:.badge.badge-success} <br> The name of your repository in `<Username>/<Project>` format (e.g., `chriskyfung/amp-affiliately-jekyll-theme`). This is required to enable the GitHub metadata widget.    |
+| `resources_widget` | <span>v2.0</span>{:.badge.badge-success} <br> Set `false` to hide the **Resource** widget in the sidebar, which displays repository links.<br> _Default:_ `true`{:.green}. |
 
 When the `repository` is set, a **RESOURCES** widget will appear in the sidebar, providing links to the repository, issues, and releases. This feature uses the [jekyll-github-metadata] plugin.
 
 [jekyll-github-metadata]: https://github.com/jekyll/github-metadata
------------------------------------------------- |
-|       `Repository` | <span>v1.2</span>{:.badge.badge-success}<br> Declare The Repository Name in the `<Username>/<Project>`.                                  |
-| `resources_widget` | <span>v2.0</span>{:.badge.badge-success}<br> Enable side-widely display **Resourece** widget in sidebar.<br> _Default:_ `true`{:.green}. |
