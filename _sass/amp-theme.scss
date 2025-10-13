@@ -463,6 +463,14 @@ span {
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
+
+  :not(h1, h2, h3, h4, h5, h6) {
+    + {
+        h1, h2, h3, h4, h5, h6 {
+        margin-top: 2em;
+      }
+    }
+  }
 }
 
 blockquote {
@@ -475,6 +483,10 @@ blockquote {
 .article-post {
   blockquote, p {
     margin: 0 0 1.5rem;
+  }
+
+  p:has(+ ul) {
+    margin-bottom: 0;
   }
 }
 
