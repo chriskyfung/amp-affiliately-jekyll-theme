@@ -260,9 +260,12 @@ section {
   width: 100%;
   left: 0;
   right: 0;
-  bottom: -15px;
-  margin: auto;
-  padding: 0 20px;
+  bottom: 0;
+  margin: 0;
+  padding: 20px;
+  -webkit-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
+  transform: translateY(30%);
 }
 
 .listrecent {

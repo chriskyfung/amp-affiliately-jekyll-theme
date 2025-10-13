@@ -989,6 +989,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .card-title {
+  margin-top: 0;
   margin-bottom: 0.75rem;
 }
 
@@ -1120,7 +1121,7 @@ button.close {
 }
 
 .modal-title {
-  margin-bottom: 0;
+  margin: 0;
   line-height: 1.5;
 }
 
