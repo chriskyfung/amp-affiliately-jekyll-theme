@@ -4,6 +4,26 @@
 
 All notable changes to the AMP Affiliately Jekyll Theme will be documented in this file.
 
+## [3.5.0] - 2025-10-14
+
+### Added
+
+- **Components**: Introduced a new `alert` component for displaying important messages and notices.
+- **CI/CD**: Added a new GitHub Actions workflow (`jekyll-test.yml`) for running tests.
+
+### Changed
+
+- **Accessibility**: Improved accessibility for the code wrap toggle feature by adding `aria-pressed` and `aria-hidden` attributes.
+
+### Dependencies
+
+- Bumped `jekyll` from `~> 4.3.4` to `~> 4.4.1`.
+- Bumped `gulp-changed` from `^5.0.2` to `^5.0.3`.
+
+### Refactors
+
+- **Build**: Updated npm scripts to call `gulp` and `markdownlint-cli2` directly without `npx`.
+
 ## [3.4.1] - 2025-08-01
 
 ### Fixed
