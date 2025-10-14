@@ -4,6 +4,16 @@
 
 All notable changes to the AMP Affiliately Jekyll Theme will be documented in this file.
 
+## [3.5.1] - 2025-10-14
+
+### Fixed
+
+- **AMP**: Add `role="checkbox"` and `tabindex="0"` to the code-wrap toggle to resolve AMP validation errors.
+
+### Dependencies
+
+- Bumped `gulp-changed` from `5.0.3` to `5.0.4`.
+
 ## [3.5.0] - 2025-10-14
 
 ### Added
