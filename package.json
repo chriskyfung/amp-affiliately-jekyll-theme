@@ -50,7 +50,7 @@
     "amphtml-validator": "^1.0.38",
     "gulp": "^5.0.1",
     "gulp-amphtml-validator": "^1.0.8",
-    "gulp-changed": "^5.0.3",
+    "gulp-changed": "^5.0.4",
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-html-minifier-terser": "^7.1.0",
