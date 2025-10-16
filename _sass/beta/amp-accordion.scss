@@ -1,4 +1,4 @@
-@import "../amp-theme";
+@use "../amp-theme" as *;
 
 amp-accordion {
   margin-bottom: 1.5rem;
@@ -20,3 +20,4 @@ amp-accordion {
   font-weight: 900;
   margin-right: 0.75rem;
 }
+

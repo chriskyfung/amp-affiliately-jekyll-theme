@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "sass:color";
+
 // _sass/amp-bs4-alert.scss
 
 // Define alert colors for easy customization, aligned with Bootstrap 4 alerts.
@@ -50,21 +53,21 @@ $alert-colors: (
 
   // Generate alert variants from the map
   @each $name, $color-map in $alert-colors {
-    $bg-color: map-get($color-map, "bg");
-    $text-color: map-get($color-map, "text");
+    $bg-color: map.get($color-map, "bg");
+    $text-color: map.get($color-map, "text");
 
     @if $name == "primary" {
       // Default/Primary style
       &,
       &--primary {
         background-color: $bg-color;
-        border-color: darken($bg-color, 10%);
+        border-color: color.adjust($bg-color, $lightness: -10%);
         color: $text-color;
       }
     } @else {
       &--#{$name} {
         background-color: $bg-color;
-        border-color: darken($bg-color, 10%);
+        border-color: color.adjust($bg-color, $lightness: -10%);
         color: $text-color;
       }
     }

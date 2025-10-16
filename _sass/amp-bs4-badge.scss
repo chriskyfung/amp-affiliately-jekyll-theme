@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -62,11 +64,11 @@ $badge-colors: (
 
 @each $name, $color-map in $badge-colors {
   .badge-#{$name} {
-    background-color: map-get($color-map, "bg");
+    background-color: map.get($color-map, "bg");
 
     &[href] {
       &:focus, &:hover {
-        background-color: map-get($color-map, "hover");
+        background-color: map.get($color-map, "hover");
       }
     }
   }

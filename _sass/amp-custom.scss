@@ -1,4 +1,4 @@
-@import "amp-theme";
+@use "amp-theme" as *;
 
 /* Lightbox styles */
 amp-img[aria-label=lightbox] {

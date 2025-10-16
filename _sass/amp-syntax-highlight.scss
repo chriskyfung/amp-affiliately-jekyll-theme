@@ -6,6 +6,7 @@ $toggle-border: #777;
 $toggle-text: #ddd;
 $toggle-hover-bg: #777;
 $toggle-checked-bg: #00aa00;
+$toggle-checked-border: #00aa00;
 $toggle-checked-text: #fff;
 
 .code-wrap-toggle-container {
@@ -43,7 +44,7 @@ $toggle-checked-text: #fff;
 
 .code-wrap-toggle-input:checked + .code-wrap-toggle-label {
   background-color: $toggle-checked-bg;
-  border-color: $toggle-checked-bg;
+  border-color: $toggle-checked-border;
   color: $toggle-checked-text;
 
   .code-wrap-toggle-icon {
