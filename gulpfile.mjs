@@ -1,8 +1,8 @@
 import { src, dest, watch } from 'gulp';
-import changed from 'gulp-changed';
 import csso from 'gulp-csso';
 import ext_replace from 'gulp-ext-replace';
 import htmlmin from 'gulp-html-minifier-terser';
+import sourcemaps from 'gulp-sourcemaps';
 import gulpAmpValidator from 'gulp-amphtml-validator';
 
 import through2 from 'through2';
@@ -73,9 +73,10 @@ function validate() {
 
 function minifyCSS() {
   return src(cssFilesGlob)
-    .pipe(changed('./_includes/css/'))
+    .pipe(sourcemaps.init())
     .pipe(csso())
     .pipe(ext_replace('.min.css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('./_includes/css/'));
 }
 
