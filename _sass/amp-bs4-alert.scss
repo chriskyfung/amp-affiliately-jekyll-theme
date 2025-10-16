@@ -1,23 +1,40 @@
 // _sass/amp-bs4-alert.scss
 
 // Define alert colors for easy customization, aligned with Bootstrap 4 alerts.
-$alert-primary-bg: #cce5ff;
-$alert-secondary-bg: #e2e3e5;
-$alert-success-bg: #d4edda;
-$alert-danger-bg: #f8d7da;
-$alert-warning-bg: #fff3cd;
-$alert-info-bg: #d1ecf1;
-$alert-light-bg: #fefefe;
-$alert-dark-bg: #d6d8d9;
-
-$alert-primary-text: #004085;
-$alert-secondary-text: #383d41;
-$alert-success-text: #155724;
-$alert-danger-text: #721c24;
-$alert-warning-text: #856404;
-$alert-info-text: #0c5460;
-$alert-light-text: #818182;
-$alert-dark-text: #1b1e21;
+$alert-colors: (
+  "primary": (
+    "bg": #cce5ff,
+    "text": #004085
+  ),
+  "secondary": (
+    "bg": #e2e3e5,
+    "text": #383d41
+  ),
+  "success": (
+    "bg": #d4edda,
+    "text": #155724
+  ),
+  "danger": (
+    "bg": #f8d7da,
+    "text": #721c24
+  ),
+  "warning": (
+    "bg": #fff3cd,
+    "text": #856404
+  ),
+  "info": (
+    "bg": #d1ecf1,
+    "text": #0c5460
+  ),
+  "light": (
+    "bg": #fefefe,
+    "text": #818182
+  ),
+  "dark": (
+    "bg": #d6d8d9,
+    "text": #1b1e21
+  )
+);
 
 .alert {
   margin-bottom: 1.5rem;
@@ -31,54 +48,26 @@ $alert-dark-text: #1b1e21;
     margin-bottom: 0.5rem;
   }
 
-  // Default/Primary style
-  &,
-  &--primary {
-    background-color: $alert-primary-bg;
-    border-color: darken($alert-primary-bg, 10%);
-    color: $alert-primary-text;
-  }
+  // Generate alert variants from the map
+  @each $name, $color-map in $alert-colors {
+    $bg-color: map-get($color-map, "bg");
+    $text-color: map-get($color-map, "text");
 
-  &--secondary {
-    background-color: $alert-secondary-bg;
-    border-color: darken($alert-secondary-bg, 10%);
-    color: $alert-secondary-text;
-  }
-
-  &--success {
-    background-color: $alert-success-bg;
-    border-color: darken($alert-success-bg, 10%);
-    color: $alert-success-text;
-  }
-
-  &--danger {
-    background-color: $alert-danger-bg;
-    border-color: darken($alert-danger-bg, 10%);
-    color: $alert-danger-text;
-  }
-
-  &--warning {
-    background-color: $alert-warning-bg;
-    border-color: darken($alert-warning-bg, 10%);
-    color: $alert-warning-text;
-  }
-
-  &--info {
-    background-color: $alert-info-bg;
-    border-color: darken($alert-info-bg, 10%);
-    color: $alert-info-text;
-  }
-
-  &--light {
-    background-color: $alert-light-bg;
-    border-color: darken($alert-light-bg, 10%);
-    color: $alert-light-text;
-  }
-
-  &--dark {
-    background-color: $alert-dark-bg;
-    border-color: darken($alert-dark-bg, 10%);
-    color: $alert-dark-text;
+    @if $name == "primary" {
+      // Default/Primary style
+      &,
+      &--primary {
+        background-color: $bg-color;
+        border-color: darken($bg-color, 10%);
+        color: $text-color;
+      }
+    } @else {
+      &--#{$name} {
+        background-color: $bg-color;
+        border-color: darken($bg-color, 10%);
+        color: $text-color;
+      }
+    }
   }
 
   &__content {
