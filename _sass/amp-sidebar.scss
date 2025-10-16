@@ -14,7 +14,6 @@
     position: relative;
 
     span {
-      text-align: center;
       position: relative;
       background-color: #fff;
       z-index: 2;
@@ -50,38 +49,39 @@
     padding-bottom: 10px;
     padding-top: 10px;
   }
+
+  #mc_embed_signup {
+    form {
+      padding: 0;
+    }
+
+    .button {
+      width: 100%;
+      background: #675bff;
+      height: auto;
+      padding: 6px 20px;
+      font-weight: 600;
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 15px;
+      color: #999;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .mc-field-group,
+    input {
+      width: 100%;
+    }
+  }
 }
 
 .sidebar-section {
   margin-bottom: 2rem;
   padding: 30px 10px 30px 20px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.sidebar #mc_embed_signup {
-  form {
-    padding: 0;
-  }
-
-  .button {
-    width: 100%;
-    background: #675bff;
-    height: auto;
-    padding: 6px 20px;
-    font-weight: 600;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    font-weight: 400;
-    font-size: 15px;
-    color: #999;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  .mc-field-group, input {
-    width: 100%;
-  }
 }

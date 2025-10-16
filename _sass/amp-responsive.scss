@@ -1,5 +1,6 @@
 @media (min-width: 576px) {
-  .beforefooter {
+  .beforefooter,
+  .footer {
     text-align: left;
   }
 
@@ -11,10 +12,6 @@
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-  }
-
-  .footer {
-    text-align: left;
   }
 
   .footer-widget {
@@ -48,8 +45,10 @@
     font-size: 28px;
   }
 
-  .listfeaturedtag .card .thumbnail img {
-    left: -25%;
+  .listfeaturedtag {
+    .card .thumbnail img {
+      left: -25%;
+    }
   }
 
   .post-top-meta.authorpage {
@@ -133,7 +132,8 @@
 }
 
 @media (min-width: 1025px) {
-  .navbar-btngroup .btn, .navbar-toggleable-md .navbar-nav .nav-link {
+  .navbar-btngroup .btn,
+  .navbar-toggleable-md .navbar-nav .nav-link {
     margin-left: .75rem;
   }
 }
@@ -144,7 +144,8 @@
     max-width: 100%;
   }
 
-  .navbar-btngroup .btn, .navbar-toggleable-md .navbar-nav .nav-link {
+  .navbar-btngroup .btn,
+  .navbar-toggleable-md .navbar-nav .nav-link {
     margin-left: 1rem;
   }
 }
