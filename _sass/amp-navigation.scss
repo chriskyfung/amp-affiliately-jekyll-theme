@@ -15,7 +15,8 @@
       border-radius: 30px;
       cursor: pointer;
 
-      &:active, &:hover {
+      &:active,
+      &:hover {
         background: transparent;
         color: green;
       }
@@ -25,6 +26,23 @@
   .navbar-brand {
     font-weight: 500;
     padding: 0;
+
+    img {
+      margin-right: 7px;
+      vertical-align: text-bottom;
+      max-width: none;
+    }
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
+
+  .search-icon {
+    margin-left: -40px;
+    display: inline-block;
+    margin-top: 3px;
+    cursor: pointer;
   }
 }
 
@@ -34,33 +52,17 @@
   padding: 7px 1.5rem;
 }
 
-.dropdown-menu, .mediumnavigation .nav-item {
-  font-size: 0.9rem;
-}
-
 .dropdown-menu {
+  font-size: 0.9rem;
   display: none;
   overflow: auto;
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-menu, .dropdown-toggle:focus ~ .dropdown-menu, .dropdown:focus-within .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown-toggle:focus~.dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   display: block;
-}
-
-.mediumnavigation {
-  .search-icon {
-    margin-left: -40px;
-    display: inline-block;
-    margin-top: 3px;
-    cursor: pointer;
-  }
-
-  .navbar-brand img {
-    margin-right: 7px;
-    vertical-align: text-bottom;
-    max-width: none;
-  }
 }
 
 .navbar-collapse {
@@ -92,7 +94,9 @@
   z-index: 1030;
   overflow: hidden;
 
-  &:focus, &:hover, &:focus-within {
+  &:focus,
+  &:hover,
+  &:focus-within {
     overflow-x: visible;
     overflow-y: visible;
   }
