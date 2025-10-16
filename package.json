@@ -13,9 +13,14 @@
     "test": "npm run test:amp",
     "test:amp": "gulp validate",
     "deploy:status": "gh workflow view jekyll-build.yml",
-    "watch": "gulp minifyCSS",
+    "compile:scss": "sass _sass/:_includes/css/",
+    "minify:css": "gulp minifyCSS",
+    "watch:all": "npm-run-all --parallel watch:scss watch:css",
+    "watch:scss": "sass --watch _sass/:_includes/css/",
+    "watch:css": "gulp",
     "convert": "npm run css2scss",
-    "css2scss": "bash ./css_to_scss.sh"
+    "css2scss": "bash ./css_to_scss.sh",
+    "update:browserslist": "npx browserslist@latest --update-db"
   },
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
   "repository": {
@@ -54,6 +59,8 @@
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-html-minifier-terser": "^7.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.77.2",
     "through2": "^4.0.2"
   },
   "overrides": {
