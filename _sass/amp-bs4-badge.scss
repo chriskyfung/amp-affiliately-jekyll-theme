@@ -33,62 +33,41 @@ a.badge {
   border-radius: 10rem;
 }
 
-.badge-default {
-  background-color: #636c72;
+$badge-colors: (
+  "default": (
+    "bg": #636c72,
+    "hover": #4b5257
+  ),
+  "primary": (
+    "bg": #0275d8,
+    "hover": #025aa5
+  ),
+  "success": (
+    "bg": #5cb85c,
+    "hover": #449d44
+  ),
+  "info": (
+    "bg": #5bc0de,
+    "hover": #31b0d5
+  ),
+  "warning": (
+    "bg": #f0ad4e,
+    "hover": #ec971f
+  ),
+  "danger": (
+    "bg": #d9534f,
+    "hover": #c9302c
+  )
+);
 
-  &[href] {
-    &:focus, &:hover {
-      background-color: #4b5257;
-    }
-  }
-}
+@each $name, $color-map in $badge-colors {
+  .badge-#{$name} {
+    background-color: map-get($color-map, "bg");
 
-.badge-primary {
-  background-color: #0275d8;
-
-  &[href] {
-    &:focus, &:hover {
-      background-color: #025aa5;
-    }
-  }
-}
-
-.badge-success {
-  background-color: #5cb85c;
-
-  &[href] {
-    &:focus, &:hover {
-      background-color: #449d44;
-    }
-  }
-}
-
-.badge-info {
-  background-color: #5bc0de;
-
-  &[href] {
-    &:focus, &:hover {
-      background-color: #31b0d5;
-    }
-  }
-}
-
-.badge-warning {
-  background-color: #f0ad4e;
-
-  &[href] {
-    &:focus, &:hover {
-      background-color: #ec971f;
-    }
-  }
-}
-
-.badge-danger {
-  background-color: #d9534f;
-
-  &[href] {
-    &:focus, &:hover {
-      background-color: #c9302c;
+    &[href] {
+      &:focus, &:hover {
+        background-color: map-get($color-map, "hover");
+      }
     }
   }
 }
