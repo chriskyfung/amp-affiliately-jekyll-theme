@@ -73,6 +73,18 @@ section {
   }
 }
 
+.hr-h-rule {
+  margin-bottom: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 12px;
+  height: 1px;
+  content: "";
+  background-color: #f5f5f5;
+}
+
 .section-title {
   h2 {
     font-weight: 700;
@@ -81,15 +93,8 @@ section {
     position: relative;
 
     &:before {
-      margin-bottom: 0;
-      position: absolute;
-      z-index: 1;
+      @extend .hr-h-rule;
       left: 15px;
-      right: 0;
-      top: 12px;
-      height: 1px;
-      content: "";
-      background-color: #f5f5f5;
     }
   }
 
@@ -121,12 +126,6 @@ section {
   display: flex;
   justify-content: space-between;
   margin: 1.5rem 0;
-}
-
-.article-post {
-  ol, ul {
-    margin-bottom: 1.5rem;
-  }
 }
 
 .prevnextlinks {
@@ -181,6 +180,12 @@ section {
   margin-bottom: 20px;
 }
 
+@mixin card-title-shared {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
 .listfeaturedtag {
   .wrapmeta, .wrapthumbnail {
     position: relative;
@@ -225,26 +230,22 @@ section {
   }
 
   .card-title {
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.25;
+    @include card-title-shared;
   }
 }
 
 .listrecent .card-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 1.25;
+  @include card-title-shared;
 }
 
 .listfeaturedtag .card-title a, .listrecent .card-title a {
   color: #111;
   font-weight: 500;
-}
 
-.listfeaturedtag .card-title a:hover, .listrecent .card-title a:hover {
-  color: rgba(0, 0, 0, 0.6);
-  text-decoration: none;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+  }
 }
 
 .card-text {
@@ -326,6 +327,15 @@ div.post-date {
   font-size: small;
 }
 
+.icon-circle {
+  border: 1px solid #ddd;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
 span {
   &.author-meta, &.post-name {
     display: inline-block;
@@ -340,12 +350,8 @@ span {
     color: #75748a;
     align-items: center;
     float: right;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border: 1px solid #d0d0d0;
-    border-radius: 50%;
+    @extend .icon-circle;
+    border-color: #d0d0d0;
   }
 
   &.post-name a, &.post-read-more a:hover {
@@ -424,6 +430,10 @@ span {
   font-size: 1.0625rem;
   line-height: 1.6;
 
+  ol, ul {
+    margin-bottom: 1.5rem;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -435,6 +445,15 @@ span {
     }
   }
 
+  :not(h1, h2, h3, h4, h5, h6) + h1,
+  :not(h1, h2, h3, h4, h5, h6) + h2,
+  :not(h1, h2, h3, h4, h5, h6) + h3,
+  :not(h1, h2, h3, h4, h5, h6) + h4,
+  :not(h1, h2, h3, h4, h5, h6) + h5,
+  :not(h1, h2, h3, h4, h5, h6) + h6 {
+    margin-top: 2em;
+  }
+
   h1 {
     font-size: 2.25rem;
   }
@@ -442,35 +461,27 @@ span {
   h2 {
     font-size: 1.75rem;
   }
-  
+
   h3 {
     font-size: 1.5rem;
   }
-  
+
   h4 {
     font-size: 1.25rem;
   }
-  
+
   h5 {
     font-size: 1rem;
   }
-  
+
   h6 {
-    font-size: .875rem;
+    font-size: 0.875rem;
   }
 
   img.shadow {
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-  }
-
-  :not(h1, h2, h3, h4, h5, h6) {
-    + {
-        h1, h2, h3, h4, h5, h6 {
-        margin-top: 2em;
-      }
-    }
   }
 }
 
@@ -527,12 +538,7 @@ blockquote {
       margin-bottom: 9px;
 
       i.fa {
-        border: 1px solid #ddd;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        border-radius: 50%;
+        @extend .icon-circle;
       }
     }
 
@@ -622,6 +628,15 @@ a.btn {
   }
 }
 
+.btn-subscribe {
+  background-color: #1c9963;
+  border-color: #1c9963;
+  color: #fff;
+  fill: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .btn {
   &.follow {
     border-color: #6fd350;
@@ -636,14 +651,9 @@ a.btn {
   }
 
   &.subscribe {
-    background-color: #1c9963;
-    border-color: #1c9963;
-    color: #fff;
-    fill: #fff;
+    @extend .btn-subscribe;
     border-radius: 30px;
-    font-size: 0.85rem;
     margin-left: 10px;
-    font-weight: 600;
     text-transform: uppercase;
   }
 }
@@ -683,16 +693,12 @@ a.btn {
     }
 
     &[type=submit] {
-      background-color: #1c9963;
+      @extend .btn-subscribe;
       border: 1px solid #1c9963;
-      color: #fff;
-      fill: #fff;
-      font-size: 0.85rem;
       border-radius: 0;
       padding: 4px 10px;
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px;
-      font-weight: 600;
       height: 34px;
       letter-spacing: 0.5px;
       cursor: pointer;
@@ -823,14 +829,7 @@ span.navigation {
   position: relative;
 
   &:before {
-    margin-bottom: 0;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 12px;
-    height: 1px;
-    content: "";
+    @extend .hr-h-rule;
     background-color: #eee;
   }
 }

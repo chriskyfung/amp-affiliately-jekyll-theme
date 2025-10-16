@@ -24,7 +24,7 @@ hr {
   overflow: visible;
 }
 
-pre {
+pre, code, kbd, samp {
   font-family: monospace, sans-serif;
   font-size: 1em;
 }
@@ -43,11 +43,6 @@ abbr[title] {
 b, strong {
   font-weight: inherit;
   font-weight: bolder;
-}
-
-code, kbd, samp {
-  font-family: monospace, sans-serif;
-  font-size: 1em;
 }
 
 sub, sup {
@@ -278,31 +273,23 @@ pre {
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
-}
 
-@media (min-width: 576px) {
-  .container {
+  @media (min-width: 576px) {
     padding-right: 15px;
     padding-left: 15px;
   }
-}
 
-@media (min-width: 768px) {
-  .container {
+  @media (min-width: 768px) {
     padding-right: 15px;
     padding-left: 15px;
   }
-}
 
-@media (min-width: 992px) {
-  .container {
+  @media (min-width: 992px) {
     padding-right: 15px;
     padding-left: 15px;
   }
-}
 
-@media (min-width: 1200px) {
-  .container {
+  @media (min-width: 1200px) {
     padding-right: 15px;
     padding-left: 15px;
   }
