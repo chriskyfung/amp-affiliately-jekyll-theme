@@ -1,9 +1,15 @@
+@import "amp-theme";
+
+$footer-bg: #171e27;
+$footer-social-icon-color: #3c3838;
+$footer-widget-blob-bg: #e9e4ff;
+
 .beforefooter {
   background: linear-gradient(rgba(255, 241, 0, 0.8), rgba(255, 241, 0, 0.8)), url('https://chriskyfung.github.io/images/header-bg.jpg');
   background-size: contain;
   background-position-x: center;
   background-blend-mode: overlay;
-  color: #111;
+  color: $text-dark;
   max-width: 100%;
   margin: 50px auto -50px;
   padding: 50px 0;
@@ -14,16 +20,16 @@
   }
 
   @supports (background-blend-mode: overlay) {
-    background-color: #fff100;
+    background-color: $highlight-yellow;
     background-image: url('https://chriskyfung.github.io/images/header-bg.jpg');
     background-blend-mode: overlay;
   }
 }
 
 .footer {
-  background-color: #171e27;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  color: #999;
+  background-color: $footer-bg;
+  border-top: 1px solid $black-t-05;
+  color: $sep-color;
   margin-top: 50px;
   margin-bottom: 0;
   padding: 30px 0;
@@ -33,7 +39,7 @@
     color: inherit;
 
     &:hover {
-      color: #fff;
+      color: $background-white;
       text-decoration: none;
     }
   }
@@ -48,7 +54,7 @@
     font-size: 0.9em;
 
     a {
-      color: #eee;
+      color: $border-color;
     }
   }
 
@@ -65,7 +71,7 @@
       font-size: 18px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #fff;
+      color: $background-white;
       margin-bottom: 1.5rem;
     }
 
@@ -95,19 +101,19 @@
       line-height: 40px;
       text-align: center;
       display: inline-block;
-      background: #fff;
+      background: $background-white;
       border-radius: 3px;
-      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 10px 0 $black-t-10;
       font-size: 18px;
       margin-left: 5px;
-      color: #3c3838;
+      color: $footer-social-icon-color;
       margin-top: 10px;
     }
   }
 }
 
 .footer-widget-blob {
-  background: #e9e4ff;
+  background: $footer-widget-blob-bg;
   border-radius: 60% 70% 500% 70%;
 }
 

@@ -1,3 +1,5 @@
+@import "amp-theme";
+
 .left-sidebar {
   order: 1;
 }
@@ -15,7 +17,7 @@
 
     span {
       position: relative;
-      background-color: #fff;
+      background-color: $background-white;
       z-index: 2;
       display: inline-block;
       padding: 0 15px;
@@ -33,7 +35,7 @@
       width: 100%;
       height: 1px;
       content: "";
-      background-color: #333;
+      background-color: $text-medium;
     }
   }
 
@@ -43,7 +45,7 @@
   }
 
   li a {
-    color: #999;
+    color: $sep-color;
     border-bottom: 1px solid #f6f6f6;
     display: block;
     padding-bottom: 10px;
@@ -57,7 +59,7 @@
 
     .button {
       width: 100%;
-      background: #675bff;
+      background: $btn-primary-bg;
       height: auto;
       padding: 6px 20px;
       font-weight: 600;
@@ -67,7 +69,7 @@
     h2 {
       font-weight: 400;
       font-size: 15px;
-      color: #999;
+      color: $sep-color;
       margin-bottom: 1rem;
       line-height: 1.5;
       text-align: center;

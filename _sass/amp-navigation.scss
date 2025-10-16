@@ -1,9 +1,11 @@
+@import "amp-theme";
+
 .mediumnavigation {
   .form-control {
     font-size: 0.8rem;
     border-radius: 30px;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid $black-t-05;
   }
 
   .form-inline {
@@ -18,7 +20,7 @@
       &:active,
       &:hover {
         background: transparent;
-        color: green;
+        color: $green;
       }
     }
   }
@@ -66,7 +68,7 @@
 }
 
 .navbar-collapse {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $border-color-medium;
 }
 
 .navbar-btngroup {
@@ -110,16 +112,16 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #eee;
+    background: $border-color;
     border-radius: 0 3px 3px 0;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: $gray-400;
     border-radius: 3px;
 
     &:hover {
-      background: #888;
+      background: $text-lighter;
     }
   }
 }

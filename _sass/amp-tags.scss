@@ -1,3 +1,5 @@
+@import "amp-theme";
+
 .categories, .tags {
   list-style: none;
   padding-left: 0;
@@ -13,8 +15,8 @@
     }
 
     a {
-      background: #fff100;
-      color: #333;
+      background: $highlight-yellow;
+      color: $text-medium;
       padding: 3px 10px;
       border-radius: 3px;
       font-weight: 500;

@@ -27,6 +27,7 @@ $border-color-light: #f0f0f0;
 $border-color-medium: #ddd;
 $border-color-dark: #d0d0d0;
 $border-color-code: #e3edf3;
+$border-color-x-light: #f6f6f6;
 $rule-color: #f5f5f5;
 $sep-color: #999;
 
@@ -35,8 +36,15 @@ $btn-primary-bg: #675bff;
 $btn-primary-border: #483aff;
 $btn-primary-hover-bg: #483aff;
 $btn-primary-hover-border: #372cd8;
-
 $btn-subscribe-bg: #1c9963;
+
+// Transparent Colors
+$black-t-05: rgba(0, 0, 0, 0.05);
+$black-t-10: rgba(0, 0, 0, 0.1);
+
+// Miscellaneous
+$green: #008000;
+$gray-400: #ccc;
 
 // --- End Color Schema ---
 
@@ -84,7 +92,7 @@ pre {
   background: $background-white;
   transition: top 0.5s ease-in-out;
   padding: 1.5rem 1rem;
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px 0 $black-t-05;
 }
 
 .navbar-toggler-right {
@@ -193,7 +201,7 @@ section {
   background: $primary-accent;
   color: $background-white;
   border-radius: 4px;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px 0 $black-t-10;
   padding-left: 1em;
   padding-right: 1em;
 }
@@ -436,7 +444,7 @@ span {
     border-radius: 3px;
     font-weight: 500;
     padding: 15px 40px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px 0 $black-t-10;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 1px;
@@ -547,7 +555,7 @@ blockquote {
 .featured-image {
   display: block;
   margin-bottom: 2rem;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px 0 $black-t-10;
 
   &[fallback] {
     margin-bottom: 0;
@@ -556,7 +564,7 @@ blockquote {
 
 .article-post {
   amp-img, amp-iframe {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px 0 $black-t-10;
   }
 
   p iframe {
@@ -642,7 +650,7 @@ blockquote {
 }
 
 .btn {
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px 0 $black-t-10;
   font-weight: 500;
   font-size: 15px;
   border-radius: 0.3rem;

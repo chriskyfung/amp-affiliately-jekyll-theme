@@ -1,3 +1,5 @@
+@import "amp-theme";
+
 :root {
   --space-2: 1rem;
 
@@ -5,14 +7,14 @@
   --space-3: 1.5rem;
 
   /* 24px */
-  --consent-primary-color: #675bff;
-  --consent-primary-color-hover: #483aff;
+  --consent-primary-color: #{$btn-primary-bg};
+  --consent-primary-color-hover: #{$btn-primary-border};
 }
 
 #consent-ui {
   &,
   .container {
-    background: #fff;
+    background: $background-white;
     font-size: .9rem;
     transition: right 0.3s ease;
   }
@@ -29,7 +31,7 @@
     margin: .6rem auto .9rem;
 
     p {
-      color: #333;
+      color: $text-medium;
     }
   }
 
@@ -53,7 +55,7 @@
   }
 
   .button {
-    background-color: #fff;
+    background-color: $background-white;
     color: var(--consent-primary-color-hover);
     padding: 8px 16px;
     border: 2px solid var(--consent-primary-color);
@@ -64,13 +66,13 @@
 
     &:hover {
       background-color: var(--consent-primary-color-hover);
-      color: #fff;
+      color: $background-white;
     }
 
     &.fill {
       border: none;
       background: var(--consent-primary-color);
-      color: #fff;
+      color: $background-white;
 
       &:hover {
         background-color: var(--consent-primary-color-hover);

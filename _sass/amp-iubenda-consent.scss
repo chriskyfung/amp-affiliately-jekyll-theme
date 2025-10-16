@@ -1,3 +1,5 @@
+@import "amp-theme";
+
 .iubenda-tp-btn {
   position: fixed;
   z-index: 2147483647;
@@ -12,7 +14,7 @@
   margin: 16px;
   padding: 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .15);
-  background-color: #fff;
+  background-color: $background-white;
   display: inline-block;
   height: 34px;
   min-width: 34px;
