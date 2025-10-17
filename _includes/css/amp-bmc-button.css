@@ -4,7 +4,7 @@
   margin-bottom: 1px;
   box-shadow: none;
   border: none;
-  vertical-align: middle
+  vertical-align: middle;
 }
 .bmc-button {
   line-height: 35px;
@@ -20,19 +20,19 @@
   margin: 0 auto;
   font-family: Cookie, cursive;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box
-}
-.bmc-button,
-.bmc-button:active,
-.bmc-button:focus,
-.bmc-button:hover {
+  box-sizing: border-box;
   text-decoration: none;
   color: #fff;
-  -webkit-box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5)
+  -webkit-box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5);
 }
-.bmc-button:active,
-.bmc-button:focus,
-.bmc-button:hover {
+.bmc-button:active, .bmc-button:focus, .bmc-button:hover {
+  text-decoration: none;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5);
+}
+.bmc-button:active, .bmc-button:focus, .bmc-button:hover {
   box-shadow: 0 1px 2px 2px hsla(0, 0%, 75%, 0.5);
-  opacity: .85
+  opacity: 0.85;
 }
+
+/*# sourceMappingURL=amp-bmc-button.css.map */
