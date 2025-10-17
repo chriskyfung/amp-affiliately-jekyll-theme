@@ -16,7 +16,7 @@ This document provides essential context for the Gemini AI assistant to work eff
 - **Package Management:**
   - **Ruby:** `bundler` (`Gemfile`) for Jekyll and its plugins.
   - **Node.js:** `npm` (`package.json`) for development and build-time tooling.
-- **Styling:** SCSS, with source files located in `_sass/`.
+- **Styling:** SCSS, using the modern Sass module system (`@use`). Source files are located in `_sass/`. Theme variables are separated into `_sass/_theme-vars.scss` to prevent CSS duplication.
 - **Build System:** Gulp.js (`gulpfile.mjs`) is used for post-processing the Jekyll build output.
 
 ## Build & Development Workflow
