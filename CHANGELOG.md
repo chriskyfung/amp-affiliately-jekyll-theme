@@ -4,6 +4,30 @@
 
 All notable changes to the AMP Affiliately Jekyll Theme will be documented in this file.
 
+## [Unreleased]
+
+### Fixed
+
+- **Footer**: Fixed mismatched `<h3>` closing tags in footer includes.
+
+### Refactors
+
+- **SCSS**: Migrated from `@import` to the modern Sass module system (`@use`) to fix deprecation warnings and improve modularity.
+- **SCSS**: Introduced a structured color schema to centralize theme colors and improve maintainability.
+- **SCSS**: Systematically refactored and grouped styles across all major SCSS components for better organization and consistency. This includes `amp-theme`, `amp-custom`, `navigation`, `sidebar`, `footer`, `consent`, `amp-bs4`, `alerts`, and `badges`.
+- **SCSS**: Utilized `@each` loops for generating color variants for alerts and badges, reducing code duplication.
+- **SCSS**: Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication when `@use`d by multiple components.
+
+### Chore
+
+- **Scripts**: Added new npm scripts for SCSS compilation (`compile:scss`), minification (`minify:css`), and watching (`watch:scss`, `watch:css`, `watch:all`).
+- **Gulp**: Added source map generation to the `minifyCSS` Gulp task for easier debugging.
+- **Build**: Regenerated all compiled CSS files and source maps after SCSS refactoring.
+
+### Documentation
+
+- **README**: Updated the main `README.md` to reflect the modernized build system, including a new "Development & Build" section with details on key npm scripts.
+
 ## [3.5.1] - 2025-10-14
 
 ### Fixed

@@ -1,3 +1,5 @@
+@use "theme-vars" as *;
+
 .left-sidebar {
   order: 1;
 }
@@ -14,9 +16,8 @@
     position: relative;
 
     span {
-      text-align: center;
       position: relative;
-      background-color: #fff;
+      background-color: $background-white;
       z-index: 2;
       display: inline-block;
       padding: 0 15px;
@@ -34,7 +35,7 @@
       width: 100%;
       height: 1px;
       content: "";
-      background-color: #333;
+      background-color: $text-medium;
     }
   }
 
@@ -44,11 +45,40 @@
   }
 
   li a {
-    color: #999;
+    color: $sep-color;
     border-bottom: 1px solid #f6f6f6;
     display: block;
     padding-bottom: 10px;
     padding-top: 10px;
+  }
+
+  #mc_embed_signup {
+    form {
+      padding: 0;
+    }
+
+    .button {
+      width: 100%;
+      background: $btn-primary-bg;
+      height: auto;
+      padding: 6px 20px;
+      font-weight: 600;
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 15px;
+      color: $sep-color;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .mc-field-group,
+    input {
+      width: 100%;
+    }
   }
 }
 
@@ -56,32 +86,4 @@
   margin-bottom: 2rem;
   padding: 30px 10px 30px 20px;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.sidebar #mc_embed_signup {
-  form {
-    padding: 0;
-  }
-
-  .button {
-    width: 100%;
-    background: #675bff;
-    height: auto;
-    padding: 6px 20px;
-    font-weight: 600;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    font-weight: 400;
-    font-size: 15px;
-    color: #999;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  .mc-field-group, input {
-    width: 100%;
-  }
 }

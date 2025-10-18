@@ -1,3 +1,5 @@
+@use "theme-vars" as *;
+
 .article-post {
   .anchor-link {
     visibility: hidden;
@@ -6,17 +8,10 @@
     font-size: 1rem;
     margin-left: .5rem;
     vertical-align: super;
-
-    &:hover {
-      box-shadow: none;
-    }
   }
 
-  *:hover > .anchor-link {
+  *:hover > .anchor-link,
+  .anchor-link:focus {
     visibility: visible;
   }
-}
-
-.anchor-link:focus {
-  visibility: visible;
 }

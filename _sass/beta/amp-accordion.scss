@@ -1,9 +1,11 @@
+@use "../_theme-vars" as *;
+
 amp-accordion {
   margin-bottom: 1.5rem;
 
   > section {
     &[expanded] {
-      border: 1px solid #e3edf3;
+      border: 1px solid $border-color-code;
     }
 
     > * {
@@ -18,3 +20,4 @@ amp-accordion {
   font-weight: 900;
   margin-right: 0.75rem;
 }
+

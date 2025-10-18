@@ -46,7 +46,7 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 - **Enhanced Analytics:** Deep [Google Analytics 4 (GA4) integration](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/) with outbound link and video engagement tracking. 📊
 - **Customizable Footer:** Easily configure footer columns directly from `_config.yml`. 📝
 - **Improved UX & Styling:** A custom 404 page, refined typography, and enhanced styling for ToC and callouts. 🎨
-- **Modernized Build System:** Gulp now uses ES modules, and a new script simplifies CSS to SCSS conversion. 🔨
+- **Modernized Build & Styling:** Migrated to the modern Sass module system (`@use`) for improved performance and maintainability. The Gulp-based build system now uses ES modules, generates source maps for easier debugging, and includes new scripts for granular asset compilation and watching. Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication. 🔨
 - **Better Developer Experience:** Live reload for local development and deep VS Code integration with [Front Matter CMS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-cms/). 👨‍💻
 
 ### ✨ New Features in `v2.x.x`
@@ -245,19 +245,25 @@ If you have errors on your page, AMP will list those for you in the console. If 
 
 * * *
 
-## Using Gulp to Run and Optimize Jekyll Build 🥤
+## Development & Build 🛠️
 
-Run the following command to install Gulp, AMP Optimizer, and other node packages in the root directory of your project:
+This theme uses **npm** to manage development dependencies and **Gulp.js** to automate the build process, which includes compiling SCSS, optimizing for AMP, and minifying assets.
+
+### Installation
+
+First, install all the required Node.js and Ruby dependencies. From the root of the project, run:
 
 ```shell
 npm install
 ```
+This command will also automatically run `bundle install` to install the necessary Ruby gems.
 
-Build Jekyll locally and run the Gulp pipeline with the following command:
+### Key npm Scripts
 
-```shell
-npm run build
-```
+- **`npm run serve`**: The primary command for local development. It starts a Jekyll server with live reload, so you can see your changes instantly.
+- **`npm run build`**: Creates a production-ready build in the `_site` directory. It runs the Jekyll build, then optimizes and minifies the output with Gulp.
+- **`npm run test`**: Runs the Gulp `validate` task to check the generated `_site` for AMP compliance.
+- **`npm run watch:all`**: A convenient script for developers that watches all SCSS, CSS, and JavaScript files and recompiles them automatically on change.
 
 * * *
 

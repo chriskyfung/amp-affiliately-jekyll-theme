@@ -3,13 +3,12 @@
   box-shadow: none;
   color: goldenrod;
   font-size: 1rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   vertical-align: super;
 }
-.article-post .anchor-link:hover {
-  box-shadow: none;
-}
 .article-post *:hover > .anchor-link,
-.anchor-link:focus {
+.article-post .anchor-link:focus {
   visibility: visible;
 }
+
+/*# sourceMappingURL=amp-anchor-link.css.map */

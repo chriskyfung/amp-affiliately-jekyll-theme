@@ -20,7 +20,6 @@
   color: #ddd;
   transition: background-color 0.3s, color 0.3s;
 }
-
 .code-wrap-toggle-label:hover {
   background-color: #777;
 }
@@ -33,10 +32,9 @@
 
 .code-wrap-toggle-input:checked + .code-wrap-toggle-label {
   background-color: #00aa00;
-  border: 1px solid #00aa00;
+  border-color: #00aa00;
   color: #fff;
 }
-
 .code-wrap-toggle-input:checked + .code-wrap-toggle-label .code-wrap-toggle-icon {
   color: #fff;
 }
@@ -52,8 +50,6 @@
 .highlight pre::-webkit-scrollbar {
   height: 10px;
   width: 10px;
-}
-.highlight pre::-webkit-scrollbar {
   background-color: #555;
 }
 .highlight pre::-webkit-scrollbar-thumb {
@@ -61,27 +57,21 @@
   border-radius: 5px;
 }
 .highlight .hll {
-  background-color: #333333;
+  background-color: #333;
 }
-.highlight .c {
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
   color: #008800;
   font-style: italic;
   background-color: #0f140f;
 }
-.highlight .err, .highlight .g {
-  color: #ffffff;
+.highlight .err, .highlight .g, .highlight .l, .highlight .n, .highlight .o, .highlight .x, .highlight .p, .highlight .gd, .highlight .ge, .highlight .gr, .highlight .gh, .highlight .gi, .highlight .gp, .highlight .gs, .highlight .gu, .highlight .gt, .highlight .ld, .highlight .nb, .highlight .nc, .highlight .nd, .highlight .ni, .highlight .ne, .highlight .nl, .highlight .nn, .highlight .nx, .highlight .py, .highlight .ow, .highlight .bp {
+  color: #fff;
 }
-.highlight .k {
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .nt, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi {
   color: #fb660a;
+}
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kt, .highlight .nt, .highlight .gh, .highlight .gu {
   font-weight: bold;
-}
-.highlight .l, .highlight .n, .highlight .o, .highlight .x, .highlight .p {
-  color: #ffffff;
-}
-.highlight .cm {
-  color: #008800;
-  font-style: italic;
-  background-color: #0f140f;
 }
 .highlight .cp {
   color: #ff0007;
@@ -89,112 +79,32 @@
   font-style: italic;
   background-color: #0f140f;
 }
-.highlight .c1, .highlight .cs {
-  color: #008800;
-  font-style: italic;
-  background-color: #0f140f;
-}
-.highlight .gd, .highlight .ge, .highlight .gr {
-  color: #ffffff;
-}
-.highlight .gh {
-  color: #ffffff;
+.highlight .kt {
+  color: #cdcaa9;
   font-weight: bold;
 }
-.highlight .gi {
-  color: #ffffff;
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il {
+  color: #0086f7;
+  font-weight: bold;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss, .highlight .no {
+  color: #0086d2;
+}
+.highlight .na, .highlight .nf {
+  color: #ff0086;
+  font-weight: bold;
+}
+.highlight .w {
+  color: #888888;
 }
 .highlight .go {
   color: #444444;
   background-color: #222222;
 }
-.highlight .gp, .highlight .gs {
-  color: #ffffff;
-}
-.highlight .gu {
-  color: #ffffff;
-  font-weight: bold;
-}
-.highlight .gt {
-  color: #ffffff;
-}
-.highlight .kc, .highlight .kd, .highlight .kn {
-  color: #fb660a;
-  font-weight: bold;
-}
-.highlight .kp {
-  color: #fb660a;
-}
-.highlight .kr {
-  color: #fb660a;
-  font-weight: bold;
-}
-.highlight .kt {
-  color: #cdcaa9;
-  font-weight: bold;
-}
-.highlight .ld {
-  color: #ffffff;
-}
-.highlight .m {
-  color: #0086f7;
-  font-weight: bold;
-}
-.highlight .s {
-  color: #0086d2;
-}
-.highlight .na {
-  color: #ff0086;
-  font-weight: bold;
-}
-.highlight .nb, .highlight .nc {
-  color: #ffffff;
-}
-.highlight .no {
-  color: #0086d2;
-}
-.highlight .nd, .highlight .ni, .highlight .ne {
-  color: #ffffff;
-}
-.highlight .nf {
-  color: #ff0086;
-  font-weight: bold;
-}
-.highlight .nl, .highlight .nn, .highlight .nx, .highlight .py {
-  color: #ffffff;
-}
-.highlight .nt {
-  color: #fb660a;
-  font-weight: bold;
-}
-.highlight .nv {
-  color: #fb660a;
-}
-.highlight .ow {
-  color: #ffffff;
-}
-.highlight .w {
-  color: #888888;
-}
-.highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo {
-  color: #0086f7;
-  font-weight: bold;
-}
-.highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
-  color: #0086d2;
-}
-.highlight .bp {
-  color: #ffffff;
-}
-.highlight .vc, .highlight .vg, .highlight .vi {
-  color: #fb660a;
-}
-.highlight .il {
-  color: #0086f7;
-  font-weight: bold;
-}
 
 .rouge-table pre {
   border: none;
   margin: 0;
-}/*# sourceMappingURL=amp-syntax-highlight.css.map */
+}
+
+/*# sourceMappingURL=amp-syntax-highlight.css.map */

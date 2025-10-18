@@ -1,16 +1,15 @@
 @media (min-width: 576px) {
-  .beforefooter {
+  .beforefooter,
+  .footer {
     text-align: left;
   }
   .bmc-button {
     font-size: 16.5px;
   }
   .card-columns.listfeaturedtag {
+    -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-  }
-  .footer {
-    text-align: left;
   }
   .footer-widget {
     margin-bottom: 3rem;
@@ -67,12 +66,16 @@
     right: auto;
   }
   .listfeaturedtag .wrapmeta {
+    -webkit-flex: 0 0 58.333333%;
+    -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
     margin-left: -3px;
     height: inherit;
   }
   .listfeaturedtag .wrapthumbnail {
+    -webkit-flex: 0 0 41.666667%;
+    -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
     height: 258px;
@@ -98,7 +101,8 @@
   }
 }
 @media (min-width: 1025px) {
-  .navbar-btngroup .btn, .navbar-toggleable-md .navbar-nav .nav-link {
+  .navbar-btngroup .btn,
+  .navbar-toggleable-md .navbar-nav .nav-link {
     margin-left: 0.75rem;
   }
 }
@@ -107,15 +111,17 @@
     width: 1140px;
     max-width: 100%;
   }
-  .navbar-btngroup .btn, .navbar-toggleable-md .navbar-nav .nav-link {
+  .navbar-btngroup .btn,
+  .navbar-toggleable-md .navbar-nav .nav-link {
     margin-left: 1rem;
   }
 }
-@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+@supports (object-fit: cover) {
   .listfeaturedtag .card .thumbnail img {
     left: inherit;
     max-width: inherit;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
-}/*# sourceMappingURL=amp-responsive.css.map */
+}
+
+/*# sourceMappingURL=amp-responsive.css.map */

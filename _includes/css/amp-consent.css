@@ -1,40 +1,38 @@
 :root {
-  --space-2: 1rem;   /* 16px */
-  --space-3: 1.5rem; /* 24px */
+  --space-2: 1rem;
+  /* 16px */
+  --space-3: 1.5rem;
+  /* 24px */
+  --consent-primary-color: #675bff;
+  --consent-primary-color-hover: #483aff;
 }
 
 #consent-ui,
 #consent-ui .container {
   background: #fff;
-  font-size: .9rem;
+  font-size: 0.9rem;
   transition: right 0.3s ease;
 }
-
 #consent-ui h2 {
   display: flex;
   align-items: center;
-  color:#675bff;
+  color: var(--consent-primary-color);
   font-size: 1.6rem;
-  column-gap: .9rem;
+  column-gap: 0.9rem;
 }
-
 #consent-ui .description {
-  margin: .6rem auto .9rem;
-} 
-
+  margin: 0.6rem auto 0.9rem;
+}
 #consent-ui .description p {
   color: #333;
 }
-
 #consent-ui a {
-  color: #675bff;
+  color: var(--consent-primary-color);
 }
-
 #consent-ui a:hover {
-  color: #483aff;
+  color: var(--consent-primary-color-hover);
   text-decoration: underline;
 }
-
 #consent-ui .buttons {
   max-width: 100%;
   width: 300px;
@@ -44,56 +42,48 @@
   justify-content: center;
   gap: 0.6rem;
 }
-
-#consent-ui .button { 
+#consent-ui .button {
   background-color: #fff;
-  color: #483aff;
+  color: var(--consent-primary-color-hover);
   padding: 8px 16px;
-  border: 2px solid #675bff;
+  border: 2px solid var(--consent-primary-color);
   border-radius: 4px;
   cursor: pointer;
-  min-width: max(140px, calc(100% / 2 - 10px));
+  min-width: max(140px, 50% - 10px);
   transition: all 0.2s ease;
 }
-
 #consent-ui .button:hover {
-  background-color: #483aff;
+  background-color: var(--consent-primary-color-hover);
   color: #fff;
 }
-
 #consent-ui .button.fill {
   border: none;
-  background: #675bff;
+  background: var(--consent-primary-color);
   color: #fff;
 }
-
 #consent-ui .button.fill:hover {
-  background-color: #483aff;
+  background-color: var(--consent-primary-color-hover);
 }
 
 /* Consent Banner */
-
 #cookie-consent-banner {
-  padding: .9rem 1.5rem .1rem;
+  padding: 0.9rem 1.5rem 0.1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  column-gap: .9rem;
+  column-gap: 0.9rem;
 }
-
 #cookie-consent-banner header {
   max-width: 768px;
-  min-width: min(375px,100%);
+  min-width: min(375px, 100%);
   width: calc(100% - 320px);
 }
-
 #cookie-consent-banner h2 {
   font-size: 1.25rem;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
 /* Cookie Preference Modal */
-
 #cookie-preference-modal {
   position: fixed;
   top: 50%;
@@ -114,23 +104,23 @@
 }
 
 .consentLabel input {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 /* Consent Icon */
-
 #post-consent-ui {
   position: fixed;
   bottom: 50px;
   left: 20px;
   z-index: 99;
 }
-
 #post-consent-ui button {
   border-radius: 50%;
   font-size: 1.66rem;
   width: 3rem;
   height: 3rem;
   padding: 0;
-  border: 3px solid #483aff;
+  border: 3px solid var(--consent-primary-color-hover);
 }
+
+/*# sourceMappingURL=amp-consent.css.map */

@@ -35,7 +35,7 @@
           </div>
           <!-- End Tags -->
           {% include blocks/post-date.html %}
-          <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story" aria-label="Read story: {{ post.title | escape }}"><i class="fa fa-link" aria-hidden="true"></i></a></span>
+          <span class="post-read-more"><a href="{{ post.url | relative_url }}" title="Read Story" aria-label="Read story: {{ post.title | escape }}" class="icon-circle"><i class="fa fa-link" aria-hidden="true"></i></a></span>
           {% if page.url == "/blog/" or page.url contains "/blog/page"%}
           <div class="post-meta">
             {% include blocks/list-categories.html %}

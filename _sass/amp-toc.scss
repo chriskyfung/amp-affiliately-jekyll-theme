@@ -1,3 +1,5 @@
+@use "theme-vars" as *;
+
 .screen-reader-only {
   position: absolute;
   left: -5000px;
@@ -11,7 +13,7 @@
   font-weight: bold;
 }
 
-#markdown-toc {  
+#markdown-toc {
   ul {
     margin: 0;
   }
@@ -22,7 +24,8 @@
   }
 
   li::marker {
-    color: #483aff;
+    color: $btn-primary-border;
     font-size: .875rem;
   }
 }
+

@@ -1,9 +1,11 @@
+@use "theme-vars" as *;
+
 .invitation-codes {
   a {
     background: linear-gradient(139deg, #ffc92f, #ff185c, #f316d5, #b81ed2);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #fff;
+    color: $background-white;
     font-weight: 700;
     border-radius: 5px;
     padding: 0 10px;
