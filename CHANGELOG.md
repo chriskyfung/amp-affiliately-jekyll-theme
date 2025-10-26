@@ -1,28 +1,34 @@
 # AMP Affiliately Jekyll Theme Changelog
 
-<!-- markdownlint-disable MD024 -->
-
 All notable changes to the AMP Affiliately Jekyll Theme will be documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+<!-- markdownlint-disable MD024 -->
+
 ## [Unreleased]
+
+### Added
+
+- Added the ability to ignore specific files from the AMP validation pipeline by using the `--ignore-files` command-line argument in the `gulp validate` task.
+- Added new npm scripts for SCSS compilation (`compile:scss`), minification (`minify:css`), and watching (`watch:scss`, `watch:css`, `watch:all`).
+- Added source map generation to the `minifyCSS` Gulp task for easier debugging.
+
+### Changed
+
+- **Build**: Refactored the `validate` Gulp task for significantly improved performance by initializing the AMP validator only once per run and improving readability.
+- **SCSS**: Migrated from `@import` to the modern Sass module system (`@use`) to fix deprecation warnings and improve modularity.
+- **SCSS**: Introduced a structured color schema to centralize theme colors and improve maintainability.
+- **SCSS**: Systematically refactored and grouped styles across all major SCSS components for better organization and consistency.
+- **SCSS**: Utilized `@each` loops for generating color variants for alerts and badges, reducing code duplication.
+- **SCSS**: Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication.
+- **Build**: Regenerated all compiled CSS files and source maps after SCSS refactoring.
+- **Documentation**: Updated `README.md`, `GEMINI.md`, and `gulpfile.mjs` to document the new `--ignore-files` feature and add JSDoc comments.
 
 ### Fixed
 
 - **Footer**: Fixed mismatched `<h3>` closing tags in footer includes.
-
-### Refactors
-
-- **SCSS**: Migrated from `@import` to the modern Sass module system (`@use`) to fix deprecation warnings and improve modularity.
-- **SCSS**: Introduced a structured color schema to centralize theme colors and improve maintainability.
-- **SCSS**: Systematically refactored and grouped styles across all major SCSS components for better organization and consistency. This includes `amp-theme`, `amp-custom`, `navigation`, `sidebar`, `footer`, `consent`, `amp-bs4`, `alerts`, and `badges`.
-- **SCSS**: Utilized `@each` loops for generating color variants for alerts and badges, reducing code duplication.
-- **SCSS**: Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication when `@use`d by multiple components.
-
-### Chore
-
-- **Scripts**: Added new npm scripts for SCSS compilation (`compile:scss`), minification (`minify:css`), and watching (`watch:scss`, `watch:css`, `watch:all`).
-- **Gulp**: Added source map generation to the `minifyCSS` Gulp task for easier debugging.
-- **Build**: Regenerated all compiled CSS files and source maps after SCSS refactoring.
 
 ### Removed
 

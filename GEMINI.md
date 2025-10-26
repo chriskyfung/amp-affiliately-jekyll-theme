@@ -30,7 +30,7 @@ The primary development workflow is managed through `npm` scripts defined in `pa
     - `npx gulp build` runs a series of Gulp tasks on the output, which includes:
         - **AMP Optimization:** Running the `@ampproject/toolbox-optimizer`.
         - **HTML/CSS Minification:** Minifying all CSS and HTML files for performance.
-4. **AMP Validation:** `npm run test` runs the `gulp validate` task to check the generated `_site` for AMP compliance.
+4. **AMP Validation:** `npm run test` runs the `gulp validate` task to check the generated `_site` for AMP compliance. To ignore specific files, use the `--ignore-files` flag (e.g., `gulp validate --ignore-files=file1.html,file2.html`).
 5. **Deployment:** The theme itself is not deployed as a site. A GitHub Actions workflow in `.github/workflows/jekyll-build.yml` builds and deploys the _documentation and demo site_ to GitHub Pages.
 
 ## Development & Content Management

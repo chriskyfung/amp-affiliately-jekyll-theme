@@ -53,6 +53,8 @@ jobs:
         run: |
           sudo chmod -R 777 ./_site
           npx gulp build
+      - name: Verify AMP ⚡
+        run: npm run test:amp
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
