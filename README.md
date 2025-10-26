@@ -256,13 +256,14 @@ First, install all the required Node.js and Ruby dependencies. From the root of 
 ```shell
 npm install
 ```
+
 This command will also automatically run `bundle install` to install the necessary Ruby gems.
 
 ### Key npm Scripts
 
 - **`npm run serve`**: The primary command for local development. It starts a Jekyll server with live reload, so you can see your changes instantly.
 - **`npm run build`**: Creates a production-ready build in the `_site` directory. It runs the Jekyll build, then optimizes and minifies the output with Gulp.
-- **`npm run test`**: Runs the Gulp `validate` task to check the generated `_site` for AMP compliance.
+- **`npm run test`**: Runs the Gulp `validate` task to check the generated `_site` for AMP compliance. You can ignore specific files from validation by using the `--ignore-files` flag, providing a comma-separated list of file paths (e.g., `npm run test -- --ignore-files=file1.html,file2.html`).
 - **`npm run watch:all`**: A convenient script for developers that watches all SCSS, CSS, and JavaScript files and recompiles them automatically on change.
 
 * * *
