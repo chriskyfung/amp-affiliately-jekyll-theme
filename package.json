@@ -18,8 +18,6 @@
     "watch:all": "npm-run-all --parallel watch:scss watch:css",
     "watch:scss": "sass --no-charset --watch _sass/:_includes/css/",
     "watch:css": "gulp",
-    "convert": "npm run css2scss",
-    "css2scss": "bash ./css_to_scss.sh",
     "update:browserslist": "npx browserslist@latest --update-db"
   },
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
