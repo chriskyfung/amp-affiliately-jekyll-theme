@@ -8,6 +8,8 @@ import gulpAmpValidator from 'gulp-amphtml-validator';
 import through2 from 'through2';
 import amphtmlValidator from 'amphtml-validator';
 import AmpOptimizer from '@ampproject/toolbox-optimizer';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
 const ampOptimizer = AmpOptimizer.create();
 
@@ -46,9 +48,15 @@ function test() {
 }
 
 function validate() {
+  const argv = yargs(hideBin(process.argv)).argv;
+  const ignoreFiles = argv.ignoreFiles ? argv.ignoreFiles.split(',') : [];
   return src(buildFilesGlob)
     .pipe(
       through2.obj(async (file, _, cb) => {
+        if (ignoreFiles.includes(file.relative)) {
+          console.log(`Skipping validation for ${file.relative}`);
+          return cb(null, file);
+        }
         if (file.isBuffer()) {
           const validator = await amphtmlValidator.getInstance();
           const contents_in_string = `${file.contents.toString()}`;

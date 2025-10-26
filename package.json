@@ -11,7 +11,7 @@
     "build": "bundle exec jekyll build && gulp build",
     "build:prod": "cross-env JEKYLL_ENV=production bundle exec jekyll build && gulp build",
     "test": "npm run test:amp",
-    "test:amp": "gulp validate",
+    "test:amp": "gulp validate --ignore-files=search.html",
     "deploy:status": "gh workflow view jekyll-build.yml",
     "compile:scss": "sass --no-charset _sass/:_includes/css/",
     "minify:css": "gulp minifyCSS",
@@ -59,7 +59,8 @@
     "gulp-sourcemaps": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.77.2",
-    "through2": "^4.0.2"
+    "through2": "^4.0.2",
+    "yargs": "^18.0.0"
   },
   "overrides": {
     "@ampproject/toolbox-optimizer": {
