@@ -24,9 +24,9 @@ All notable changes to the AMP Affiliately Jekyll Theme will be documented in th
 - **Gulp**: Added source map generation to the `minifyCSS` Gulp task for easier debugging.
 - **Build**: Regenerated all compiled CSS files and source maps after SCSS refactoring.
 
-### Documentation
+### Removed
 
-- **README**: Updated the main `README.md` to reflect the modernized build system, including a new "Development & Build" section with details on key npm scripts.
+- **Scripts**: Dropped the `css_to_scss.sh` script and its related npm scripts.
 
 ## [3.5.1] - 2025-10-14
 

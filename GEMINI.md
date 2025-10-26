@@ -51,10 +51,6 @@ The primary development workflow is managed through `npm` scripts defined in `pa
   - The Front Matter CMS settings documentation is at https://frontmatter.codes/docs/settings
 - **Snippets:** An extensive library of snippets exists in `.frontmatter/config/content/snippets/`. These are the **preferred way** to insert complex elements like AMP components, Jekyll includes, and kramdown syntax to ensure consistency and correctness.
 
-### Developer Utilities
-
-- **CSS to SCSS Conversion:** The `css_to_scss.sh` script is a utility to help convert CSS files into the project's standard SCSS format, streamlining style development.
-
 ### Linting
 
 - **Tool:** `markdownlint-cli2`
@@ -94,4 +90,3 @@ This project follows the [Conventional Commits](https://www.conventionalcommits.
 - `frontmatter.json`: The central configuration for the Front Matter CMS.
 - `.frontmatter/`: Contains distributed Front Matter CMS configurations, including UI customizations and a rich snippet library.
 - `.markdownlint-cli2.yaml`: Defines the Markdown linting rules.
-- `css_to_scss.sh`: A utility script for converting CSS to SCSS.
