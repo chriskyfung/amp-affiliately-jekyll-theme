@@ -16,12 +16,15 @@ jobs:
           ruby-version: '3.3.6'
           bundler-cache: true
           cache-version: 0
-      - name: Build with Jekyll
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
       - name: Install node dependencies
         run: npm install
+      - name: Build site
+        run: |
+          npm run build:css
+          bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+          NODE_ENV: production
       - name: Optimize AMP ⚡ and Minify HTML 🗜
         run: |
           sudo chmod -R 777 ./_site
