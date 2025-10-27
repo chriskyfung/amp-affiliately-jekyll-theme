@@ -16,6 +16,8 @@ const ampOptimizer = AmpOptimizer.create();
 const buildFilesGlob = ['./_site/**/*.html', '!./_site/embeds/**'];
 const cssFilesGlob = ['./_includes/css/*.css', '!**/*.min.css'];
 
+const isProd = process.env.NODE_ENV === 'production';
+
 /**
  * Gulp task to optimize and minify HTML files.
  * @param {Function} cb - The callback function to signal task completion.
@@ -107,11 +109,11 @@ async function validate() {
  */
 function minifyCSS() {
   return src(cssFilesGlob)
-    .pipe(sourcemaps.init())
+    .pipe(isProd ? through2.obj() : sourcemaps.init()) // Conditionally init sourcemaps
     .pipe(csso())
     .on('error', log.error)
     .pipe(ext_replace('.min.css'))
-    .pipe(sourcemaps.write('.'))
+    .pipe(isProd ? through2.obj() : sourcemaps.write('.')) // Conditionally write sourcemaps
     .pipe(dest('./_includes/css/'));
 }
 
