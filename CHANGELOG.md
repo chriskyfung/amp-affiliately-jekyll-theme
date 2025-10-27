@@ -13,10 +13,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added the ability to ignore specific files from the AMP validation pipeline by using the `--ignore-files` command-line argument in the `gulp validate` task.
 - Added new npm scripts for SCSS compilation (`compile:scss`), minification (`minify:css`), and watching (`watch:scss`, `watch:css`, `watch:all`).
+- Added a new `build:css` script to orchestrate CSS compilation and minification.
 - Added source map generation to the `minifyCSS` Gulp task for easier debugging.
+- Added new `npm run build:dev` script for development builds and `npm run test:dev` for full AMP validation.
+- Added JSDoc comments to Gulp tasks for better documentation and maintainability.
+- Added error handling and improved logging to Gulp tasks (`minifyCSS`, `build`).
 
 ### Changed
 
+- **Build**: Enhanced the `build` and `build:dev` scripts to be fully integrated, automatically compiling SCSS and minifying CSS before the Jekyll build, ensuring a complete and reliable asset pipeline.
+- **Build**: Updated CI/CD workflows (`jekyll-build.yml`, `jekyll-test.yml`) to incorporate the new CSS asset build step, ensuring consistency with the local build environment.
 - **Build**: Refactored the `validate` Gulp task for significantly improved performance by initializing the AMP validator only once per run and improving readability.
 - **SCSS**: Migrated from `@import` to the modern Sass module system (`@use`) to fix deprecation warnings and improve modularity.
 - **SCSS**: Introduced a structured color schema to centralize theme colors and improve maintainability.
@@ -24,7 +30,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **SCSS**: Utilized `@each` loops for generating color variants for alerts and badges, reducing code duplication.
 - **SCSS**: Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication.
 - **Build**: Regenerated all compiled CSS files and source maps after SCSS refactoring.
-- **Documentation**: Updated `README.md`, `GEMINI.md`, and `gulpfile.mjs` to document the new `--ignore-files` feature and add JSDoc comments.
+- **Documentation**: Updated `README.md` and `GEMINI.md` to reflect the refactored build/test scripts and Gulp workflow. Enhanced `gulpfile.mjs` with JSDoc comments.
+- **Build**: Consolidated and clarified build and test scripts in `package.json`. The `npm run build` command now defaults to a production build, and `npm run test` is the primary validation script.
+- **Build**: CI/CD workflows updated to use the new `npm run test` command.
+- **Build**: Sourcemaps are now conditionally disabled for production builds in the `minifyCSS` Gulp task.
+- **Build**: Refactored `gulpfile.mjs` for better readability, robustness, and consolidated AMP validation.
 
 ### Fixed
 
@@ -33,6 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - **Scripts**: Dropped the `css_to_scss.sh` script and its related npm scripts.
+- **Dependencies**: Removed the `gulp-amphtml-validator` package.
 
 ## [3.5.1] - 2025-10-14
 

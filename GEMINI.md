@@ -25,13 +25,15 @@ The primary development workflow is managed through `npm` scripts defined in `pa
 
 1. **Installation:** `npm install` (which also runs `bundle install`) to install all Node.js and Ruby dependencies.
 2. **Local Development:** `npm run serve` (or `npm start`) starts the Jekyll development server with live reload enabled. This is the standard command for local theme development and previewing changes.
-3. **Production Build:** `npm run build` executes the full production build process:
-    - `bundle exec jekyll build` generates the static site into the `_site` directory.
-    - `npx gulp build` runs a series of Gulp tasks on the output, which includes:
-        - **AMP Optimization:** Running the `@ampproject/toolbox-optimizer`.
-        - **HTML/CSS Minification:** Minifying all CSS and HTML files for performance.
-4. **AMP Validation:** `npm run test` runs the `gulp validate` task to check the generated `_site` for AMP compliance. To ignore specific files, use the `--ignore-files` flag (e.g., `gulp validate --ignore-files=file1.html,file2.html`).
-5. **Deployment:** The theme itself is not deployed as a site. A GitHub Actions workflow in `.github/workflows/jekyll-build.yml` builds and deploys the _documentation and demo site_ to GitHub Pages.
+3. **Production Build:** `npm run build` executes the complete, integrated production build process. This single command orchestrates the following sequence:
+    - `npm run build:css`: Compiles SCSS to CSS and minifies the output.
+    - `bundle exec jekyll build`: Builds the Jekyll site (with `JEKYLL_ENV=production`), using the processed CSS.
+    - `gulp build`: Performs post-processing on the generated HTML in `_site` (AMP optimization and HTML minification).
+4. **Development Build:** `npm run build:dev` runs the same build pipeline as `npm run build` but without production-specific environment variables, making it suitable for debugging.
+5. **AMP Validation:**
+    - `npm run test`: Runs the `gulp validate` task on the build output, ignoring a predefined set of files (e.g., `search.html`). This is the primary test command used in CI workflows.
+    - `npm run test:dev`: Runs a full `gulp validate` on all generated files without any exclusions.
+6. **Deployment:** The theme itself is not deployed as a site. A GitHub Actions workflow in `.github/workflows/jekyll-build.yml` builds and deploys the _documentation and demo site_ to GitHub Pages, following the same integrated build process.
 
 ## Development & Content Management
 
