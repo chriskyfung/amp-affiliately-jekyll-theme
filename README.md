@@ -46,7 +46,7 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 - **Enhanced Analytics:** Deep [Google Analytics 4 (GA4) integration](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/) with outbound link and video engagement tracking. 📊
 - **Customizable Footer:** Easily configure footer columns directly from `_config.yml`. 📝
 - **Improved UX & Styling:** A custom 404 page, refined typography, and enhanced styling for ToC and callouts. 🎨
-- **Modernized Build & Styling:** Migrated to the modern Sass module system (`@use`) for improved performance and maintainability. The Gulp-based build system now uses ES modules, generates source maps for easier debugging, and includes new scripts for granular asset compilation and watching. Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication. 🔨
+- **Modernized Build & Styling:** Migrated to the modern Sass module system (`@use`). The build process features a fully integrated asset pipeline where `npm run build` handles everything from SCSS compilation and minification to Jekyll site generation and final HTML optimization. The Gulp-based system is refactored for robustness, uses ES modules, provides better logging, and conditionally generates sourcemaps. Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication. 🔨
 - **Better Developer Experience:** Live reload for local development and deep VS Code integration with [Front Matter CMS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-cms/). 👨‍💻
 
 ### ✨ New Features in `v2.x.x`
@@ -247,7 +247,7 @@ If you have errors on your page, AMP will list those for you in the console. If 
 
 ## Development & Build 🛠️
 
-This theme uses **npm** to manage development dependencies and **Gulp.js** to automate the build process, which includes compiling SCSS, optimizing for AMP, and minifying assets.
+This theme uses **npm** to manage development dependencies and **Gulp.js** to automate parts of the build process, including AMP optimization and asset minification.
 
 ### Installation
 
@@ -262,9 +262,12 @@ This command will also automatically run `bundle install` to install the necessa
 ### Key npm Scripts
 
 - **`npm run serve`**: The primary command for local development. It starts a Jekyll server with live reload, so you can see your changes instantly.
-- **`npm run build`**: Creates a production-ready build in the `_site` directory. It runs the Jekyll build, then optimizes and minifies the output with Gulp.
-- **`npm run test`**: Runs the Gulp `validate` task to check the generated `_site` for AMP compliance. You can ignore specific files from validation by using the `--ignore-files` flag, providing a comma-separated list of file paths (e.g., `npm run test -- --ignore-files=file1.html,file2.html`).
-- **`npm run watch:all`**: A convenient script for developers that watches all SCSS, CSS, and JavaScript files and recompiles them automatically on change.
+- **`npm run build`**: Creates a complete, production-ready build. This script compiles SCSS, minifies CSS, builds the site with Jekyll (`JEKYLL_ENV=production`), and finally optimizes and minifies the HTML output.
+- **`npm run build:dev`**: Creates a complete development build. It performs the same steps as `npm run build` but without the production-specific optimizations.
+- **`npm run test`**: Runs the Gulp `validate` task to check the generated `_site` for AMP compliance, ignoring a default set of files. This is the command used for CI checks.
+- **`npm run test:dev`**: Runs a full AMP validation on all generated files without ignoring any.
+- **`npm run build:css`**: A utility script that compiles SCSS and minifies the resulting CSS. This is automatically run as part of the `build` and `build:dev` scripts.
+- **`npm run watch:all`**: A convenient script for developers that watches all SCSS and CSS files and recompiles them automatically on change.
 
 * * *
 
