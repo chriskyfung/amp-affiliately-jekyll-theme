@@ -3,48 +3,45 @@ import csso from 'gulp-csso';
 import ext_replace from 'gulp-ext-replace';
 import htmlmin from 'gulp-html-minifier-terser';
 import sourcemaps from 'gulp-sourcemaps';
-import gulpAmpValidator from 'gulp-amphtml-validator';
-
 import through2 from 'through2';
 import amphtmlValidator from 'amphtml-validator';
 import AmpOptimizer from '@ampproject/toolbox-optimizer';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+import log from 'fancy-log';
+import colors from 'ansi-colors';
 
 const ampOptimizer = AmpOptimizer.create();
 
 const buildFilesGlob = ['./_site/**/*.html', '!./_site/embeds/**'];
 const cssFilesGlob = ['./_includes/css/*.css', '!**/*.min.css'];
 
+/**
+ * Gulp task to optimize and minify HTML files.
+ * @param {Function} cb - The callback function to signal task completion.
+ * @returns {NodeJS.ReadWriteStream} A Gulp stream.
+ */
 function build(cb) {
   return src(buildFilesGlob)
     .pipe(
       through2.obj(async (file, _, cb) => {
         if (file.isBuffer()) {
-          const date = new Date();
-          console.log(`[\x1b[90m${date.toLocaleTimeString('it-IT')}\x1b[0m] Running AMP Optimizer on ${file.path}`);
-          const optimizedHtml = await ampOptimizer.transformHtml(
-            file.contents.toString()
-          );
-          file.contents = Buffer.from(optimizedHtml);
+          log(`Running AMP Optimizer on ${file.relative}`);
+          try {
+            const optimizedHtml = await ampOptimizer.transformHtml(
+              file.contents.toString()
+            );
+            file.contents = Buffer.from(optimizedHtml);
+          } catch (err) {
+            log.error(`AMP Optimizer failed for ${file.relative}:`, err);
+            return cb(err);
+          }
         }
         cb(null, file);
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(dest('./_site/'));
-}
-
-function test() {
-  return src(buildFilesGlob)
-    // Validate the input and attach the validation result to the "amp" property
-    // of the file object.
-    .pipe(gulpAmpValidator.validate())
-    // Print the validation results to the console.
-    .pipe(gulpAmpValidator.format())
-    // Exit the process with error code (1) if an AMP validation error
-    // occurred.
-    .pipe(gulpAmpValidator.failAfterWarningOrError());
 }
 
 /**
@@ -57,13 +54,17 @@ function logValidationErrors(result, relativePath) {
     return;
   }
 
-  console.error(`\n${result.status}: ${relativePath}`);
+  log.error(colors.red(`${result.status}: ${relativePath}`));
   for (const error of result.errors) {
     let msg = `line ${error.line}, col ${error.col}: ${error.message}`;
     if (error.specUrl) {
       msg += ` (see ${error.specUrl})`;
     }
-    (error.severity === 'ERROR' ? console.error : console.warn)(msg);
+    if (error.severity === 'ERROR') {
+      log.error(colors.red(msg));
+    } else {
+      log.warn(colors.yellow(msg));
+    }
   }
 }
 
@@ -81,7 +82,7 @@ async function validate() {
     .pipe(
       through2.obj((file, _, cb) => {
         if (ignoreFiles.has(file.relative)) {
-          console.log(`Skipping validation for ${file.relative}`);
+          log(`Skipping validation for ${file.relative}`);
           return cb(null, file);
         }
 
@@ -113,4 +114,4 @@ export default function () {
   watch(cssFilesGlob, minifyCSS);
 }
 
-export { build, test, minifyCSS, validate };
+export { build, minifyCSS, validate };
