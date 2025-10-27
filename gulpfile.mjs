@@ -101,17 +101,27 @@ async function validate() {
     );
 }
 
+/**
+ * Gulp task to minify CSS files.
+ * @returns {NodeJS.ReadWriteStream} A Gulp stream.
+ */
 function minifyCSS() {
   return src(cssFilesGlob)
     .pipe(sourcemaps.init())
     .pipe(csso())
+    .on('error', log.error)
     .pipe(ext_replace('.min.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./_includes/css/'));
 }
 
-export default function () {
+/**
+ * Watches for changes in CSS files and runs the minifyCSS task.
+ */
+function watchFiles() {
   watch(cssFilesGlob, minifyCSS);
 }
+
+export default watchFiles;
 
 export { build, minifyCSS, validate };
