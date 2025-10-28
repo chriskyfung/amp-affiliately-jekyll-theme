@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Using AMP YouTube Components
-date: 2024-11-23 21:30 +0800
-last_modified_at: 2024-12-05 10:12 +0800
+date: 2025-10-28 17:10 +0800
 author: chris
 categories:
   - feature
@@ -27,12 +26,13 @@ This Jekyll theme integrates AMP (Accelerated Mobile Pages) components to enhanc
 
 ## Features
 
-- **Responsive Video Embedding**: The `<amp-youtube>` component automatically adjusts to different screen sizes, ensuring that videos are displayed optimally on all devices.
-- **Focused User Experience**: We've set the [`rel=0`][rel=0] parameter to the YouTube Player ensures that related videos shown after the video ends will come from the same channel, maintaining a focused user experience.
-- **Enhanced Tracking**: <span>v3.1</span>{:.badge.badge-success} With Google Analytics 4 (GA4) integration, you can track user interactions with your YouTube videos, including play, pause, and completion events. For more details, see the [Analytics Integration](#analytics-integration) section.
-- **Playlist Support**: You can embed individual YouTube videos or entire playlists, providing flexibility in content presentation.
-- **Privacy-Enhanced Mode**: <span>v3.2</span>{:.badge.badge-success} We've added the [`credentials="omit"`][credentials=omit] attribute to the `<amp-youtube>` component to improve user privacy. This attribute prevents tracking when videos are embedded, offering a more privacy-focused experience.
-- **Fallback Support**: For browsers that do not support the AMP YouTube player, a fallback message is provided, allowing users to watch the video directly on YouTube.
+- **Responsive Layout**: The `youtube.html` include leverages the `amp-youtube` component, which automatically adjusts video dimensions for optimal viewing on any device.
+- **Focused User Experience**: The embedded YouTube player is configured with `rel=0` to ensure that related videos suggested after playback are from the same channel.
+- **Enhanced SEO with Schema.org**: <span>v3.6</span>{:.badge.badge-info} The include automatically generates `VideoObject` structured data from the parameters provided, helping search engines understand and index video content more effectively.
+- **GA4-Ready Analytics**: <span>v3.1</span>{:.badge.badge-success} Integrates with Google Analytics 4 to track key video interactions, such as play, pause, and completion events. See the [Analytics Integration](#analytics-integration) section for more details.
+- **Playlist Embedding**: Supports embedding both individual videos and entire YouTube playlists.
+- **Privacy-Enhanced Mode**: <span>v3.2</span>{:.badge.badge-success} Includes the `credentials="omit"` attribute to prevent the YouTube player from sending tracking data, offering a more private user experience.
+- **Graceful Fallback**: Provides a fallback link for browsers that do not support the `amp-youtube` player, ensuring all users can access the content.
 
 [credentials=omit]: https://amp.dev/documentation/components/amp-youtube#credentials-(optional)
 [rel=0]: https://developers.google.com/youtube/player_parameters#rel
@@ -57,11 +57,13 @@ amp:
 
 ### Embedding YouTube Videos
 
-To embed a YouTube video, use the `youtube.html` template in your project. You can customize the embedding by providing the following parameters:
+To embed a YouTube video, use the `youtube.html` include in your project. You can customize the embedding by providing the following parameters:
 
 - **id**: The unique identifier for the YouTube video.
 - **playlist** (optional): The playlist ID for embedding a playlist.
 - **title** (optional): The title of the video for accessibility and tracking.
+- **description** (optional): <span>v3.6</span>{:.badge.badge-info} A brief summary of the video, used for `VideoObject` schema markup to improve SEO.
+- **upload_date** (optional): <span>v3.6</span>{:.badge.badge-info} The date the video was uploaded in `YYYY-MM-DD` format, also for schema markup.
 - **indent** (optional): The leading whitespace for resolving indentation issues with the include tag.
 
 ### Examples
@@ -70,27 +72,33 @@ To embed a YouTube video, use the `youtube.html` template in your project. You c
 
 ```liquid
 {% raw %}
-{% include youtube.html id="VIDEO_ID" title="VIDEO_TITLE" indent="  " %}
+{% include youtube.html id="VIDEO_ID" title="VIDEO_TITLE" description="A short description of the video." upload_date="YYYY-MM-DD" indent="  " %}
 {% endraw %}
 ```
 
 - Example Video 1:
-  {% include youtube.html id="8jumRGDgxiY" title="GSP319 Build a Website on Google Cloud: Challenge Lab | 🐱‍🏍 GCP learning tour" indent="  " %}
+  {% include youtube.html id="8jumRGDgxiY" title="GSP319 Build a Website on Google Cloud: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP319 Challenge Lab." upload_date="2020-06-10" indent="  " %}
 
 - Example Vdieo 2:
-  {% include youtube.html id="hkVAY9B0oOI" title="GSP346 Exploring Data with Looker: Challenge Lab | 🐱‍🏍 GCP learning tour" indent="  " %}
+  {% include youtube.html id="hkVAY9B0oOI" title="GSP346 Exploring Data with Looker: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP346 Challenge Lab." upload_date="2021-06-10" indent="  " %}
 
 #### Embedding a Playlist  
 
 ```liquid
 {% raw %}
-{% include youtube.html id="VIDEO_ID" playlist="PLAYLIST_ID" title="PLAYLIST_TITLE" %}
+{% include youtube.html id="VIDEO_ID" playlist="PLAYLIST_ID" title="PLAYLIST_TITLE" description="A short description of the playlist." upload_date="YYYY-MM-DD" %}
 {% endraw %}
 ```
 
 - Example Playlist:
 
-  {% include youtube.html id="C49jYtIMAsg" playlist="PLmQ8R1QWYBV72R3JoEWzIH1onqIiai6d0" title="Demos of Qwiklabs Challenge Labs - YouTube" indent="  " %}
+  {% include youtube.html id="C49jYtIMAsg" playlist="PLmQ8R1QWYBV72R3JoEWzIH1onqIiai6d0" title="Demos of Qwiklabs Challenge Labs - YouTube" description="A playlist of demo videos for Qwiklabs Challenge Labs." upload_date="2025-10-16" indent="  " %}
+
+## SEO and Schema Markup
+
+<span>v3.6</span>{:.badge.badge-info} The `youtube.html` include automatically generates `VideoObject` schema.org structured data. This helps search engines understand your video content, which can lead to better visibility in search results, including rich snippets like video carousels.
+
+The `title`, `description`, and `upload_date` parameters are used to populate this schema. Providing accurate and descriptive information in these fields is highly recommended for optimal SEO.
 
 ## Analytics Integration
 
