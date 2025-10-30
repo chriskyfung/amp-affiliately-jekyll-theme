@@ -161,8 +161,8 @@ You cannot use Markdown format or normal HTML tags. AMP provides its own custom 
 
 ### 🖼 Images
 
-Use the `picture.html` template to insert an image in the AMP format for automatically serving the image in the **WebP** format.
-The template also wraps the image with a `<figure>` tag with an optional caption element.
+Use the `picture.html` include to insert an image in the AMP format for automatically serving the image in the **WebP** format.
+This include also wraps the image with a `<figure>` tag with an optional caption element.
 
 ```ruby
 {% include picture.html img="welcome.jpg" height="400" width="800" %}
@@ -181,10 +181,10 @@ amp:
    youtube: true
 ```
 
-To embed a single video, use the following tag to include the `youtube.html` template.
+To embed a single video, use the following tag to insert the `youtube.html` include. It supports `title`, `description`, and `upload_date` parameters for generating `VideoObject` schema markup, which is beneficial for SEO.
 
 ```ruby
-{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" %}
+{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" description="A short description of the video." upload_date="YYYY-MM-DD" %}
 ```
 
 To embed a playlist, you need to set both the _playlist ID_ and the _ID of the first video within the playlist_.
