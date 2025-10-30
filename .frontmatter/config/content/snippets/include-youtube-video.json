@@ -2,7 +2,7 @@
   "$schema": "https://frontmatter.codes/config/content.snippets.schema.json",
   "title": "Embed a YouTube video with AMP",
   "description": "Use the youtube.html template to embed a YouTube video on your AMP page by providing the video ID",
-  "body": "{% include youtube.html id=\"[[vid]]\" title=\"[[title]]\" description=\"[[description]]\" upload_date=\"[[upload_date]]\" %}",
+  "body": "{% include youtube.html id=\"[[vid]]\" title=\"[[title]]\" description=\"[[description]]\" upload_date=\"[[upload_date]]\" thumb_quality=\"[[thumb_quality]]\" %}",
   "fields": [
     {
       "name": "vid",
@@ -31,6 +31,18 @@
       "type": "string",
       "single": true,
       "default": ""
+    },
+    {
+      "name": "thumb_quality",
+      "title": "Thumbnail Quality",
+      "type": "choice",
+      "choices": [
+        "maxres",
+        "hq",
+        "mq",
+        "sd"
+      ],
+      "default": "hq"
     }
   ]
 }

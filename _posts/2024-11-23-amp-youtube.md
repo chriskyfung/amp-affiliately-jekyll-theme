@@ -18,6 +18,7 @@ css:
   badge: true
   syntax: true
 excerpt: Enhance your website's performance with AMP YouTube components for fast, responsive video embedding and improved user experience.
+last_modified_at: 2025-10-30 15:10 +0800
 ---
 
 {% include toc.md %}
@@ -64,6 +65,7 @@ To embed a YouTube video, use the `youtube.html` include in your project. You ca
 - **title** (optional): The title of the video for accessibility and tracking.
 - **description** (optional): <span>v3.6</span>{:.badge.badge-info} A brief summary of the video, used for `VideoObject` schema markup to improve SEO.
 - **upload_date** (optional): <span>v3.6</span>{:.badge.badge-info} The date the video was uploaded in `YYYY-MM-DD` format, also for schema markup.
+- **thumb_quality** (optional): <span>v3.6</span>{:.badge.badge-info} The desired thumbnail quality. Accepts `sd` (standard), , `mq` (medium), `hq` (high), or `maxres` (maximum resolution). Defaults to `hq`.
 - **indent** (optional): The leading whitespace for resolving indentation issues with the include tag.
 
 ### Examples
@@ -72,21 +74,21 @@ To embed a YouTube video, use the `youtube.html` include in your project. You ca
 
 ```liquid
 {% raw %}
-{% include youtube.html id="VIDEO_ID" title="VIDEO_TITLE" description="A short description of the video." upload_date="YYYY-MM-DD" indent="  " %}
+{% include youtube.html id="VIDEO_ID" title="VIDEO_TITLE" description="A short description of the video." upload_date="YYYY-MM-DD" thumb_quality="hq" indent="  " %}
 {% endraw %}
 ```
 
 - Example Video 1:
-  {% include youtube.html id="8jumRGDgxiY" title="GSP319 Build a Website on Google Cloud: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP319 Challenge Lab." upload_date="2020-06-10" indent="  " %}
+  {% include youtube.html id="8jumRGDgxiY" title="GSP319 Build a Website on Google Cloud: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP319 Challenge Lab." upload_date="2020-06-10" thumb_quality="hq" indent="  " %}
 
 - Example Vdieo 2:
-  {% include youtube.html id="hkVAY9B0oOI" title="GSP346 Exploring Data with Looker: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP346 Challenge Lab." upload_date="2021-06-10" indent="  " %}
+  {% include youtube.html id="hkVAY9B0oOI" title="GSP346 Exploring Data with Looker: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP346 Challenge Lab." upload_date="2021-06-10" thumb_quality="sd" indent="  " %}
 
 #### Embedding a Playlist  
 
 ```liquid
 {% raw %}
-{% include youtube.html id="VIDEO_ID" playlist="PLAYLIST_ID" title="PLAYLIST_TITLE" description="A short description of the playlist." upload_date="YYYY-MM-DD" %}
+{% include youtube.html id="VIDEO_ID" playlist="PLAYLIST_ID" title="PLAYLIST_TITLE" description="A short description of the playlist." upload_date="YYYY-MM-DD" thumb_quality="mq" %}
 {% endraw %}
 ```
 
