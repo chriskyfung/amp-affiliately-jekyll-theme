@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **YouTube**: Add support for custom thumbnail quality.
+- **YouTube**: Add Schema.org VideoObject structured data to YouTube embeds to improve SEO.
+- **Snippets**: Add `description` and `upload_date` to YouTube snippets.
 - Added the ability to ignore specific files from the AMP validation pipeline by using the `--ignore-files` command-line argument in the `gulp validate` task.
 - Added new npm scripts for SCSS compilation (`compile:scss`), minification (`minify:css`), and watching (`watch:scss`, `watch:css`, `watch:all`).
 - Added a new `build:css` script to orchestrate CSS compilation and minification.
