@@ -74,27 +74,27 @@ To embed a YouTube video, use the `youtube.html` include in your project. You ca
 
 ```liquid
 {% raw %}
-{% include youtube.html id="VIDEO_ID" title="VIDEO_TITLE" description="A short description of the video." upload_date="YYYY-MM-DD" thumb_quality="hq" indent="  " %}
+{% include youtube.html id="VIDEO_ID" title="VIDEO_TITLE" description="A short description of the video." upload_date="YYYY-MM-DDThh:mm:ssZ" thumb_quality="hq" indent="  " %}
 {% endraw %}
 ```
 
 - Example Video 1:
-  {% include youtube.html id="8jumRGDgxiY" title="GSP319 Build a Website on Google Cloud: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP319 Challenge Lab." upload_date="2020-06-10" thumb_quality="hq" indent="  " %}
+  {% include youtube.html id="8jumRGDgxiY" title="GSP319 Build a Website on Google Cloud: Challenge Lab | 🐱‍🏍 GCP learning tour" description="Learn to deploy microservices on Kubernetes with this step-by-step guide. Covers cluster creation, application deployment, and containerization." upload_date="2020-06-10T09:45:00Z" thumb_quality="hq" indent="  " %}
 
 - Example Vdieo 2:
-  {% include youtube.html id="hkVAY9B0oOI" title="GSP346 Exploring Data with Looker: Challenge Lab | 🐱‍🏍 GCP learning tour" description="This video is a walkthrough of the GSP346 Challenge Lab." upload_date="2021-06-10" thumb_quality="sd" indent="  " %}
+  {% include youtube.html id="hkVAY9B0oOI" title="GSP346 Exploring Data with Looker: Challenge Lab | 🐱‍🏍 GCP learning tour" description="Learn how to create, merge, and save Looks in Looker with this Qwiklabs tutorial. Master data visualization and dashboard creation for your projects." upload_date="2021-06-10T04:23:30Z" thumb_quality="sd" indent="  " %}
 
 #### Embedding a Playlist  
 
 ```liquid
 {% raw %}
-{% include youtube.html id="VIDEO_ID" playlist="PLAYLIST_ID" title="PLAYLIST_TITLE" description="A short description of the playlist." upload_date="YYYY-MM-DD" thumb_quality="mq" %}
+{% include youtube.html id="VIDEO_ID" playlist="PLAYLIST_ID" title="PLAYLIST_TITLE" description="A short description of the playlist." upload_date="YYYY-MM-DDThh:mm:ssZ" thumb_quality="mq" %}
 {% endraw %}
 ```
 
 - Example Playlist:
 
-  {% include youtube.html id="C49jYtIMAsg" playlist="PLmQ8R1QWYBV72R3JoEWzIH1onqIiai6d0" title="Demos of Qwiklabs Challenge Labs - YouTube" description="A playlist of demo videos for Qwiklabs Challenge Labs." upload_date="2025-10-16" indent="  " %}
+  {% include youtube.html id="C49jYtIMAsg" playlist="PLmQ8R1QWYBV72R3JoEWzIH1onqIiai6d0" title="Demos of Qwiklabs Challenge Labs - YouTube" description="A playlist of demo videos for Qwiklabs Challenge Labs." upload_date="2021-06-25T08:04:50Z" indent="  " %}
 
 ## SEO and Schema Markup
 

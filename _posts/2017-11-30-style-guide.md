@@ -255,6 +255,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-{% include youtube.html id="lBTCB7yLs8Y" title="Intro to AMP (Accelerated Mobile Pages)" %}
+{% include youtube.html id="lBTCB7yLs8Y" title="Intro to AMP (Accelerated Mobile Pages)" description="Learn about Accelerated Mobile Pages (AMP), an open-source initiative to improve the mobile web experience. Discover benefits for users, publishers, and developers." upload_date="2016-02-11T22:00:13Z" %}
 
 ---
