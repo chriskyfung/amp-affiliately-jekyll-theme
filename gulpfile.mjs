@@ -1,4 +1,5 @@
 import { src, dest, watch } from 'gulp';
+import rename from 'gulp-rename';
 import ext_replace from 'gulp-ext-replace';
 import htmlmin from 'gulp-html-minifier-terser';
 import postcss from 'gulp-postcss';
@@ -111,10 +112,15 @@ function minifyCSS() {
   const plugins = [postcssCsso()];
 
   return src(cssFilesGlob)
-    .pipe(isProd ? through2.obj() : postcss(plugins, { map: { inline: false, annotation: true } }))
+    .pipe(postcss(plugins, isProd ? undefined : { map: { inline: false, annotation: true } }))
     .on('error', log.error)
     .pipe(ext_replace('.min.css'))
-    .pipe(isProd ? through2.obj() : postcss(plugins, { map: { inline: false, annotation: true } })) // sourcemaps.write is handled by postcss
+    // In dev, use gulp-rename to correctly name the sourcemap file, avoiding double minification.
+    .pipe(isProd ? through2.obj() : rename(function(path) {
+      if (path.extname === '.map') {
+        path.extname = '.min.css.map'; // Rename .css.map to .min.css.map
+      }
+    }))
     .pipe(dest('./_includes/css/'));
 }
 
