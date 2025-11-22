@@ -20,7 +20,7 @@ jobs:
         run: npm install
       - name: Build site
         run: |
-          npm run build:css
+          npm run css:build
           bundle exec jekyll build
         env:
           JEKYLL_ENV: production
