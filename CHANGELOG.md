@@ -7,7 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-disable MD024 -->
 
-## [Unreleased]
+## [3.6.1] - 2025-11-01
+
+### Changed
+
+- **CI**: Configure Dependabot groups and cooldowns, and rename CI workflow.
+
+### Fixed
+
+- **PostCSS**: Resolved PostCSS v7 vulnerability by upgrading to v8 and refactoring Gulp CSS pipeline.
+- **YouTube**: Correct `upload_date` format to ISO 8601 for YouTube includes.
+
+## Dependencies
+
+- Bumped `actions/checkout` from `5` to `6`.
+- Bumped `gulp-sourcemaps` from `2.6.5` to `3.0.0`.
+- Bumped `sass` from `1.93.2` to `1.94.2`.
+
+## [3.6.0] - 2025-11-01
 
 ### Added
 
