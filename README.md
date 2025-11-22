@@ -184,7 +184,7 @@ amp:
 To embed a single video, use the following tag to insert the `youtube.html` include. It supports `title`, `description`, and `upload_date` parameters for generating `VideoObject` schema markup, which is beneficial for SEO. You can also specify the thumbnail quality using the `thumb_quality` parameter (e.g., `mq`, `hq`, `sd`, `maxres`).
 
 ```ruby
-{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" description="A short description of the video." upload_date="YYYY-MM-DD" thumb_quality="hq" %}
+{% include youtube.html id="<YOUTUBE_VIDEO_UID>" title="Welcome to Watch this Video" description="A short description of the video." upload_date="YYYY-MM-DDThh:mm:ssZ" thumb_quality="hq" %}
 ```
 
 To embed a playlist, you need to set both the _playlist ID_ and the _ID of the first video within the playlist_.
