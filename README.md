@@ -266,7 +266,7 @@ This command will also automatically run `bundle install` to install the necessa
 - **`npm run build:dev`**: Creates a complete development build. It performs the same steps as `npm run build` but without the production-specific optimizations.
 - **`npm run test`**: Runs the Gulp `validate` task to check the generated `_site` for AMP compliance, ignoring a default set of files. This is the command used for CI checks.
 - **`npm run test:dev`**: Runs a full AMP validation on all generated files without ignoring any.
-- **`npm run build:css`**: A utility script that compiles SCSS and minifies the resulting CSS. This is automatically run as part of the `build` and `build:dev` scripts.
+- **`npm run css:build`**: A utility script that compiles SCSS and optimizes/minifies the resulting CSS using PostCSS. This is automatically run as part of the `build` and `build:dev` scripts.
 - **`npm run watch:all`**: A convenient script for developers that watches all SCSS and CSS files and recompiles them automatically on change.
 
 * * *

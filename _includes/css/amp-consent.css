@@ -18,7 +18,8 @@
   align-items: center;
   color: var(--consent-primary-color);
   font-size: 1.6rem;
-  column-gap: 0.9rem;
+  -moz-column-gap: 0.9rem;
+       column-gap: 0.9rem;
 }
 #consent-ui .description {
   margin: 0.6rem auto 0.9rem;
@@ -71,7 +72,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  column-gap: 0.9rem;
+  -moz-column-gap: 0.9rem;
+       column-gap: 0.9rem;
 }
 #cookie-consent-banner header {
   max-width: 768px;
@@ -80,7 +82,8 @@
 }
 #cookie-consent-banner h2 {
   font-size: 1.25rem;
-  column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 /* Cookie Preference Modal */

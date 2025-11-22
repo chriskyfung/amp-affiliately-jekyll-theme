@@ -9,11 +9,13 @@
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   border: 1px solid;
   border-radius: 6px;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 .gh-style.btn:hover {
   text-decoration: none;
@@ -366,11 +368,13 @@
   white-space: nowrap;
   cursor: pointer;
   -webkit-user-select: none;
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   background-color: transparent;
   border: 0;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 .gh-style.btn-link:hover {
   text-decoration: underline;
@@ -461,7 +465,5 @@
   vertical-align: text-bottom;
   fill: currentColor;
 }
-
-
 
 /*# sourceMappingURL=amp-github-sponsors-embed.css.map */

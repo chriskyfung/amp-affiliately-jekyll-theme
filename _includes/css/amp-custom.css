@@ -4,7 +4,8 @@ amp-img[aria-label=lightbox] {
 }
 
 amp-image-lightbox img {
-  object-fit: scale-down;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 amp-image-lightbox button:last-of-type {
   cursor: zoom-out;
@@ -13,6 +14,7 @@ amp-image-lightbox button:last-of-type {
 }
 
 amp-image-viewer img {
+  max-width: -moz-fit-content;
   max-width: fit-content;
   transition: width 0.25s linear;
 }
@@ -126,7 +128,8 @@ kbd {
 .listfeaturedtag .card-list .thumbnail img {
   width: 500px;
   height: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .listfeaturedtag .card-list .card-title {
   font-size: 1rem;
@@ -137,10 +140,12 @@ kbd {
 }
 
 .thumbnail.fit-left img {
-  object-position: left;
+  -o-object-position: left;
+     object-position: left;
 }
 .thumbnail.fit-right img {
-  object-position: right;
+  -o-object-position: right;
+     object-position: right;
 }
 
 /*# sourceMappingURL=amp-custom.css.map */

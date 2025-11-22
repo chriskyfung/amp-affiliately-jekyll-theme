@@ -1,1 +1,1 @@
-.disqus>amp-iframe.amp-notbuilt::before{content:"\f086";font-family:"Font Awesome 5 Free";font-weight:900;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.25rem;color:#a7a7a7}
+.disqus>amp-iframe.amp-notbuilt:before{color:#a7a7a7;content:"\f086";font-family:Font Awesome\ 5 Free;font-size:1.25rem;font-weight:900;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}

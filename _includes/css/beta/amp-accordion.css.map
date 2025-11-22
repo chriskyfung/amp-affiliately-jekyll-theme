@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../../_sass/beta/amp-accordion.scss"],"names":[],"mappings":"AAEA;EACE;;AAGE;EACE;;AAGF;EACE;;;AAKN;EACE;EACA;EACA;EACA","file":"amp-accordion.css"}
+{"version":3,"sources":["../../../_sass/beta/amp-accordion.scss","amp-accordion.css"],"names":[],"mappings":"AAEA;EACE,qBAAA;ACDF;ADII;EACE,yBAAA;ACFN;ADKI;EACE,wBAAA;ACHN;;ADQA;EACE,gBAAA;EACA,kCAAA;EACA,gBAAA;EACA,qBAAA;ACLF","file":"amp-accordion.css"}

@@ -1,8 +1,5 @@
 import { src, dest, watch } from 'gulp';
-import ext_replace from 'gulp-ext-replace';
 import htmlmin from 'gulp-html-minifier-terser';
-import postcss from 'gulp-postcss';
-import postcssCsso from 'postcss-csso';
 import through2 from 'through2';
 import amphtmlValidator from 'amphtml-validator';
 import AmpOptimizer from '@ampproject/toolbox-optimizer';
@@ -14,9 +11,6 @@ import colors from 'ansi-colors';
 const ampOptimizer = AmpOptimizer.create();
 
 const buildFilesGlob = ['./_site/**/*.html', '!./_site/embeds/**'];
-const cssFilesGlob = ['./_includes/css/*.css', '!**/*.min.css'];
-
-const isProd = process.env.NODE_ENV === 'production';
 
 /**
  * Gulp task to optimize and minify HTML files.
@@ -103,28 +97,6 @@ async function validate() {
     );
 }
 
-/**
- * Gulp task to minify CSS files.
- * @returns {NodeJS.ReadWriteStream} A Gulp stream.
- */
-function minifyCSS() {
-  const plugins = [postcssCsso()];
+export default build;
 
-  return src(cssFilesGlob)
-    .pipe(isProd ? through2.obj() : postcss(plugins, { map: { inline: false, annotation: true } }))
-    .on('error', log.error)
-    .pipe(ext_replace('.min.css'))
-    .pipe(isProd ? through2.obj() : postcss(plugins, { map: { inline: false, annotation: true } })) // sourcemaps.write is handled by postcss
-    .pipe(dest('./_includes/css/'));
-}
-
-/**
- * Watches for changes in CSS files and runs the minifyCSS task.
- */
-function watchFiles() {
-  watch(cssFilesGlob, minifyCSS);
-}
-
-export default watchFiles;
-
-export { build, minifyCSS, validate };
+export { build, validate };
