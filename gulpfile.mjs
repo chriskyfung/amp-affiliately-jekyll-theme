@@ -1,8 +1,8 @@
 import { src, dest, watch } from 'gulp';
-import csso from 'gulp-csso';
 import ext_replace from 'gulp-ext-replace';
 import htmlmin from 'gulp-html-minifier-terser';
-import sourcemaps from 'gulp-sourcemaps';
+import postcss from 'gulp-postcss';
+import postcssCsso from 'postcss-csso';
 import through2 from 'through2';
 import amphtmlValidator from 'amphtml-validator';
 import AmpOptimizer from '@ampproject/toolbox-optimizer';
@@ -108,12 +108,13 @@ async function validate() {
  * @returns {NodeJS.ReadWriteStream} A Gulp stream.
  */
 function minifyCSS() {
+  const plugins = [postcssCsso()];
+
   return src(cssFilesGlob)
-    .pipe(isProd ? through2.obj() : sourcemaps.init()) // Conditionally init sourcemaps
-    .pipe(csso())
+    .pipe(isProd ? through2.obj() : postcss(plugins, { map: { inline: false, annotation: true } }))
     .on('error', log.error)
     .pipe(ext_replace('.min.css'))
-    .pipe(isProd ? through2.obj() : sourcemaps.write('.')) // Conditionally write sourcemaps
+    .pipe(isProd ? through2.obj() : postcss(plugins, { map: { inline: false, annotation: true } })) // sourcemaps.write is handled by postcss
     .pipe(dest('./_includes/css/'));
 }
 
