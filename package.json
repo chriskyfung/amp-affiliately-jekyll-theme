@@ -59,7 +59,7 @@
     "gulp-csso": "^4.0.1",
     "gulp-ext-replace": "^0.3.0",
     "gulp-html-minifier-terser": "^7.1.0",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.94.2",
     "through2": "^4.0.2",
