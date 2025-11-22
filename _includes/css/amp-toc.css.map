@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../_sass/amp-toc.scss","../../_sass/_theme-vars.scss"],"names":[],"mappings":"AAEA;EACE;EACA;;AAEA;EACE;;;AAIJ;EACE;;;AAIA;EACE;;AAGF;EACE;EACA;;AAGF;EACE,OCSiB;EDRjB","file":"amp-toc.css"}
+{"version":3,"sources":["../../_sass/amp-toc.scss","amp-toc.css","../../_sass/_theme-vars.scss"],"names":[],"mappings":"AAEA;EACE,kBAAA;EACA,aAAA;ACDF;ADGE;EACE,OAAA;ACDJ;;ADKA;EACE,iBAAA;ACFF;;ADME;EACE,SAAA;ACHJ;ADME;EACE,mBAAA;EACA,oBAAA;ACJJ;ADOE;EACE,cESiB;EFRjB,mBAAA;ACLJ","file":"amp-toc.css"}

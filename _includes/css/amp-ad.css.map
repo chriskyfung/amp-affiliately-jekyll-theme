@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../_sass/amp-ad.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA","file":"amp-ad.css"}
+{"version":3,"sources":["../../_sass/amp-ad.scss","amp-ad.css"],"names":[],"mappings":"AAAA;EACE,gHAAA;EACA,wBAAA;EACA,4BAAA;EACA,qBAAA;ACCF","file":"amp-ad.css"}

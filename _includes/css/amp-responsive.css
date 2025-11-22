@@ -7,7 +7,6 @@
     font-size: 16.5px;
   }
   .card-columns.listfeaturedtag {
-    -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
   }
@@ -66,16 +65,12 @@
     right: auto;
   }
   .listfeaturedtag .wrapmeta {
-    -webkit-flex: 0 0 58.333333%;
-    -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
     margin-left: -3px;
     height: inherit;
   }
   .listfeaturedtag .wrapthumbnail {
-    -webkit-flex: 0 0 41.666667%;
-    -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
     height: 258px;
@@ -116,11 +111,12 @@
     margin-left: 1rem;
   }
 }
-@supports (object-fit: cover) {
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
   .listfeaturedtag .card .thumbnail img {
     left: inherit;
     max-width: inherit;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
