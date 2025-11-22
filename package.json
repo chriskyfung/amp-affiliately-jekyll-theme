@@ -18,7 +18,7 @@
     "css:compile": "sass --no-charset _sass/:_includes/css/ --style=expanded --source-map",
     "css:prefix": "postcss \"_includes/css/**/!(*.min).css\" --use autoprefixer --replace --map",
     "css:minify": "postcss \"_includes/css/**/!(*.min).css\" --use cssnano --dir _includes/css/ --base _includes/css/ --ext .min.css --no-map",
-    "css:watch": "nodemon --watch _sass --ext scss --exec \"npm run css:build:dev\"",
+    "css:watch": "nodemon --watch _sass --ext scss --exec \"npm run css:build\"",
     "update:browserslist": "npx browserslist@latest --update-db"
   },
   "homepage": "https://github.com/chriskyfung/amp-affiliately-jekyll-theme",
