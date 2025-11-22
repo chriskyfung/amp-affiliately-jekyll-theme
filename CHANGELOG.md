@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-disable MD024 -->
 
+## [3.6.2] - 2025-11-22
+
+### Added
+
+- **Build**: Added PostCSS toolchain for CSS optimization.
+
+### Removed
+
+- **Build**: Removed Gulp-based CSS minification.
+
+### Refactors
+
+- **CSS**: Rebuild CSS stylesheets using `npm run css:build`.
+
+### Chore
+
+- **CI**: Update CSS build script command in workflows.
+
+### Revert
+
+- Reverted "Fix: Resolve PostCSS v7 vulnerability and update Gulp pipeline (#158)".
+
 ## [3.6.1] - 2025-11-01
 
 ### Changed
