@@ -1,4 +1,4 @@
-name: Test Jekyll Build
+name: CI
 permissions:
   contents: read
 on:

@@ -14,7 +14,17 @@ updates:
     directory: "/"
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: "daily"
+      interval: "weekly"
+    cooldown:
+      default-days: 5
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
 
   # Enable version updates for Ruby gems
   - package-ecosystem: "bundler"
@@ -23,6 +33,11 @@ updates:
     # Check for updates once a week
     schedule:
       interval: "weekly"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
