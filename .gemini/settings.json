@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "amp-affiliately-jekyll-theme Docs": {
+      "httpUrl": "https://gitmcp.io/chriskyfung/amp-affiliately-jekyll-theme"
+    },
+    "amp-affiliately-jekyll-theme Pages": {
+      "httpUrl": "https://chriskyfung.gitmcp.io/amp-affiliately-jekyll-theme"
+    },
+    "jekyll Docs": {
+      "httpUrl": "https://gitmcp.io/jekyll/jekyll"
+    },
+    "amphtml Docs": {
+      "httpUrl": "https://gitmcp.io/ampproject/amphtml"
+    },
+    "amp-toolbox Docs": {
+      "httpUrl": "https://gitmcp.io/ampproject/amp-toolbox"
+    },
+    "vscode-front-matter Docs": {
+      "httpUrl": "https://gitmcp.io/estruyf/vscode-front-matter"
+    },
+    "markdownlint-cli2 Docs": {
+      "httpUrl": "https://gitmcp.io/igorshubovych/markdownlint-cli2"
+    }
+  }
+}
