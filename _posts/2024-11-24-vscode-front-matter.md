@@ -53,15 +53,15 @@ This section will guide you through the initial setup of Front Matter CMS with y
      - Download the [`external.js`](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/.frontmatter/ui/external.js) file from our GitHub repository.
      - Place the `external.js` file in the `.frontmatter/ui/` directory within your project folder. Create this directory if it doesn't already exist.
 
-3.  **Initialize Git Submodule for Shared Configuration**:
-    -   The shared Front Matter CMS configuration, including content types and snippets, is managed as a Git submodule.
-    -   Initialize and update the submodule by running the following command in your terminal:
+3. **Initialize Git Submodule for Shared Configuration**:
+    - The shared Front Matter CMS configuration, including content types and snippets, is managed as a Git submodule.
+    - Initialize and update the submodule by running the following command in your terminal:
 
         ```shell
         git submodule update --init --recursive
         ```
-        
-    -   This will pull the shared configuration from the [amp-affiliately-jekyll-theme-shared-frontmatter-config](https://github.com/chriskyfung/amp-affiliately-jekyll-theme-shared-frontmatter-config) repository into the `.frontmatter/config` directory.
+
+    - This will pull the shared configuration from the [amp-affiliately-jekyll-theme-shared-frontmatter-config](https://github.com/chriskyfung/amp-affiliately-jekyll-theme-shared-frontmatter-config) repository into the `.frontmatter/config` directory.
 
 4. **Install VS Code Front Matter Extension**
    - Open the **Extensions** view in VS Code by clicking on the square icon in the sidebar or pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
@@ -102,25 +102,28 @@ The `frontmatter.json` file has been simplified to provide a more streamlined an
     "$schema": "https://frontmatter.codes/frontmatter.schema.json"
     ```
 
--   **Modular Configuration with `extends`**
-    -   **`frontMatter.extends`**: This property is used to inherit configurations from one or more external files. In this theme, it points to the base configuration located in the shared submodule.
-        ```json
-        "frontMatter.extends": [
-          ".frontmatter/config/content/base.config.json"
-        ]
-        ```
-    -   The `base.config.json` file contains all the core settings, including framework details (`jekyll`), content type definitions, and snippet configurations. This modular approach makes the main `frontmatter.json` cleaner and easier to manage.
+- **Modular Configuration with `extends`**
+  - **`frontMatter.extends`**: This property is used to inherit configurations from one or more external files. In this theme, it points to the base configuration located in the shared submodule.
 
--   **Project-Specific Settings**
-    -   The main `frontmatter.json` file is now used for project-specific overrides and settings that are unique to your site.
-    -   **`frontMatter.content.publicFolder`**: Defines the directory for public assets.
-    -   **`frontMatter.preview.host`**, **`frontMatter.site.baseURL`**, **`frontMatter.website.host`**: These URLs should be customized to match your local development environment and live site.
-    -   **`frontMatter.extensibility.scripts`**: Specifies external scripts for additional functionalities, such as the custom card image renderer.
-        ```json
-        "frontMatter.extensibility.scripts": [
-          "[[workspace]]/.frontmatter/ui/external.js"
-        ]
-        ```
+    ```json
+    "frontMatter.extends": [
+      ".frontmatter/config/content/base.config.json"
+    ]
+    ```
+
+  - The `base.config.json` file contains all the core settings, including framework details (`jekyll`), content type definitions, and snippet configurations. This modular approach makes the main `frontmatter.json` cleaner and easier to manage.
+
+- **Project-Specific Settings**
+  - The main `frontmatter.json` file is now used for project-specific overrides and settings that are unique to your site.
+  - **`frontMatter.content.publicFolder`**: Defines the directory for public assets.
+  - **`frontMatter.preview.host`**, **`frontMatter.site.baseURL`**, **`frontMatter.website.host`**: These URLs should be customized to match your local development environment and live site.
+  - **`frontMatter.extensibility.scripts`**: Specifies external scripts for additional functionalities, such as the custom card image renderer.
+
+    ```json
+    "frontMatter.extensibility.scripts": [
+      "[[workspace]]/.frontmatter/ui/external.js"
+    ]
+    ```
 
 By using the `extends` feature, the theme separates the core CMS configuration (which you get from the submodule) from your personal site configuration, making updates and maintenance much simpler.
 
