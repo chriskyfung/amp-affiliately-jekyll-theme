@@ -1,0 +1,3 @@
+[submodule ".frontmatter/config"]
+	path = .frontmatter/config
+	url = https://github.com/chriskyfung/amp-affiliately-jekyll-theme-shared-frontmatter-config.git
