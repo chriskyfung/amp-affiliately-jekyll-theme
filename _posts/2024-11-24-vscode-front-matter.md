@@ -53,16 +53,23 @@ This section will guide you through the initial setup of Front Matter CMS with y
      - Download the [`external.js`](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/blob/master/.frontmatter/ui/external.js) file from our GitHub repository.
      - Place the `external.js` file in the `.frontmatter/ui/` directory within your project folder. Create this directory if it doesn't already exist.
 
-   - **Retrieve Snippets Configuration Files**:
-     - Download the snippet configuration files from the [GitHub snippets directory](https://github.com/chriskyfung/amp-affiliately-jekyll-theme/tree/master/.frontmatter/config/content/snippets) and place them in the `.frontmatter/config/content/snippets/` directory.
+3.  **Initialize Git Submodule for Shared Configuration**:
+    -   The shared Front Matter CMS configuration, including content types and snippets, is managed as a Git submodule.
+    -   Initialize and update the submodule by running the following command in your terminal:
 
-3. **Install VS Code Front Matter Extension**
+        ```shell
+        git submodule update --init --recursive
+        ```
+        
+    -   This will pull the shared configuration from the [amp-affiliately-jekyll-theme-shared-frontmatter-config](https://github.com/chriskyfung/amp-affiliately-jekyll-theme-shared-frontmatter-config) repository into the `.frontmatter/config` directory.
+
+4. **Install VS Code Front Matter Extension**
    - Open the **Extensions** view in VS Code by clicking on the square icon in the sidebar or pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
    - Search for **`Front Matter`** in the Extensions Marketplace.
    - Click **Install** to add the Front Matter extension to VS Code.
    - Ensure the extension is enabled in your VS Code environment after installation.
 
-4. **Configure Your Jekyll Project**
+5. **Configure Your Jekyll Project**
    - Open the `frontmatter.json` file in VS Code.
    - Update the following configurations to match your project's setup:
      - **site.baseURL**: Update to the base URL of your site.
@@ -75,18 +82,18 @@ This section will guide you through the initial setup of Front Matter CMS with y
 
    - Save the changes to the `frontmatter.json` file.
 
-5. **Refresh Front Matter Settings**
+6. **Refresh Front Matter Settings**
    - Open the Command Palette by pressing `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (on macOS).
    - Type and select **`Front Matter: Refresh Front Matter Settings`**.
 
-6. **Start Using Front Matter CMS**
+7. **Start Using Front Matter CMS**
    - Open the Front Matter panel in VS Code to start managing your content efficiently.
 
 Congratulations! You've successfully set up Front Matter CMS with your Jekyll theme. For a detailed breakdown of these files and their configurations, refer to the following sections.
 
 ## 3. Breakdown of `frontmatter.json`
 
-The `frontmatter.json` file is a crucial configuration file for Front Matter CMS, customized to work seamlessly with the Jekyll theme. Below are the key configurations you need to know:
+The `frontmatter.json` file has been simplified to provide a more streamlined and modular configuration for Front Matter CMS. It now primarily relies on the `extends` feature to inherit a base configuration.
 
 - **Schema Declaration**
   - **`$schema`**: Ensures the configuration adheres to the defined structure.
@@ -95,90 +102,27 @@ The `frontmatter.json` file is a crucial configuration file for Front Matter CMS
     "$schema": "https://frontmatter.codes/frontmatter.schema.json"
     ```
 
-- **Framework and Public Folder**
-  - **`frontMatter.framework.id`**: Specifies the framework used, which is Jekyll.
-  - **`frontMatter.content.publicFolder`**: Defines the directory for public assets.
-
-    ```json
-    "frontMatter.framework.id": "jekyll",
-    "frontMatter.content.publicFolder": "assets"
-    ```
-
-- **Preview Host**
-  - **`frontMatter.preview.host`**: Sets the local preview host.
-
-    ```json
-    "frontMatter.preview.host": "http://127.0.0.1:4000/project-name/"
-    ```
-
-- **Site and Website URLs**
-  - **`frontMatter.site.baseURL`**: Defines the base URL for your site.
-  - **`frontMatter.website.host`**: Specifies the URL for your website.
-
-    ```json
-    "frontMatter.site.baseURL": "https://your-site.github.io/",
-    "frontMatter.website.host": "https://your-site.github.io/project-name/"
-    ```
-
-- **Start Command**
-  - **`frontMatter.framework.startCommand`**: Specifies the command to start the Jekyll server with live reload.
-
-    ```json
-    "frontMatter.framework.startCommand": "bundle exec jekyll serve --trace --livereload"
-    ```
-
-- **Content Types**
-  - **`frontMatter.taxonomy.contentTypes`**: Configures the content types with various fields, tailored specifically for our Jekyll theme to ensure seamless integration and enhanced content management.
-
-    ```json
-    "frontMatter.taxonomy.contentTypes": [
-      {
-        "name": "default",
-        "fields": [
-          {
-            "title": "Layout",
-            "name": "layout",
-            "type": "choice",  // Options: archive, page, post
-            "default": "post",
-            "required": true
-          },
-          {
-            "title": "Title",
-            "name": "title",
-            "type": "string",
-            "required": true
-          },
-          {
-            "title": "Publishing date",
-            "name": "date",
-            "type": "datetime",
-            "default": "{{now}}",
-            "isPublishDate": true,
-            "required": true
-          },
-          {
-            "title": "Featured Image",
-            "name": "image",
-            "type": "fields",
-            "fields": [
-              /* Path, Width, Height fields with attributes */
-            ]
-          }
+-   **Modular Configuration with `extends`**
+    -   **`frontMatter.extends`**: This property is used to inherit configurations from one or more external files. In this theme, it points to the base configuration located in the shared submodule.
+        ```json
+        "frontMatter.extends": [
+          ".frontmatter/config/content/base.config.json"
         ]
-      }
-    ]
-    ```
+        ```
+    -   The `base.config.json` file contains all the core settings, including framework details (`jekyll`), content type definitions, and snippet configurations. This modular approach makes the main `frontmatter.json` cleaner and easier to manage.
 
-- **Extensibility Scripts**
-  - **`frontMatter.extensibility.scripts`**: Specifies external scripts for additional functionalities.
+-   **Project-Specific Settings**
+    -   The main `frontmatter.json` file is now used for project-specific overrides and settings that are unique to your site.
+    -   **`frontMatter.content.publicFolder`**: Defines the directory for public assets.
+    -   **`frontMatter.preview.host`**, **`frontMatter.site.baseURL`**, **`frontMatter.website.host`**: These URLs should be customized to match your local development environment and live site.
+    -   **`frontMatter.extensibility.scripts`**: Specifies external scripts for additional functionalities, such as the custom card image renderer.
+        ```json
+        "frontMatter.extensibility.scripts": [
+          "[[workspace]]/.frontmatter/ui/external.js"
+        ]
+        ```
 
-    ```json
-    "frontMatter.extensibility.scripts": [
-      "[[workspace]]/.frontmatter/ui/external.js"
-    ]
-    ```
-
-This `frontmatter.json` file provides a comprehensive configuration for managing content in your Jekyll project using Front Matter CMS in VS Code, enabling efficient content management and customization.
+By using the `extends` feature, the theme separates the core CMS configuration (which you get from the submodule) from your personal site configuration, making updates and maintenance much simpler.
 
 ## 4. Breakdown of `external.js`
 
