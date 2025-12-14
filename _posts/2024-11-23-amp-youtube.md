@@ -2,6 +2,7 @@
 layout: post
 title: Using AMP YouTube Components
 date: 2025-10-28 17:10 +0800
+last_modified_at: 2025-12-14 10:12 +0800
 author: chris
 categories:
   - feature
@@ -18,7 +19,6 @@ css:
   badge: true
   syntax: true
 excerpt: Enhance your website's performance with AMP YouTube components for fast, responsive video embedding and improved user experience.
-last_modified_at: 2025-10-30 15:10 +0800
 ---
 
 {% include toc.md %}
@@ -64,7 +64,7 @@ To embed a YouTube video, use the `youtube.html` include in your project. You ca
 - **playlist** (optional): The playlist ID for embedding a playlist.
 - **title** (optional): The title of the video for accessibility and tracking.
 - **description** (optional): <span>v3.6</span>{:.badge.badge-info} A brief summary of the video, used for `VideoObject` schema markup to improve SEO.
-- **upload_date** (optional): <span>v3.6</span>{:.badge.badge-info} The date the video was uploaded in `YYYY-MM-DD` format, also for schema markup.
+- **upload_date** (optional): <span>v3.6</span>{:.badge.badge-info} The date the video was uploaded in `YYYY-MM-DDThh:mm:ssZ` format, also for schema markup.
 - **thumb_quality** (optional): <span>v3.6</span>{:.badge.badge-info} The desired thumbnail quality. Accepts `sd` (standard), , `mq` (medium), `hq` (high), or `maxres` (maximum resolution). Defaults to `hq`.
 - **indent** (optional): The leading whitespace for resolving indentation issues with the include tag.
 
