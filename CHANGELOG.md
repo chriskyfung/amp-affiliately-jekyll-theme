@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-disable MD024 -->
 
+## [3.7.0] - 2025-12-16
+
+### Changed
+
+- **Front Matter**: Updated the Front Matter CMS setup guide to use a Git submodule for shared configurations, streamlining the process and ensuring consistency.
+
+### Fixed
+
+- **YouTube**: Corrected the `upload_date` format in the `youtube.html` include to accept `YYYY-MM-DDThh:mm:ssZ` for more precise schema markup.
+
+### Dependencies
+
+- Bump `sass` from `1.94.2` to `1.95.0`.
+
+### Refactors
+
+- **Front Matter**: Modularized the Front Matter configuration by moving content type definitions to an external file and using the `extends` feature.
+
+### Chore
+
+- **Front Matter**: Added the shared CMS configuration as a Git submodule.
+- **Node.js**: Updated `engines.node` in `package.json` to support LTS versions `^20.19.0`, `^22.12.0`, and `>=23.0.0`.
+- **Gemini**: Added Gemini MCP servers configuration.
+
+### Documentation
+
+- **README**: Added a GitMCP badge to indicate adherence to conventional commit standards.
+
 ## [3.6.2] - 2025-11-22
 
 ### Added
