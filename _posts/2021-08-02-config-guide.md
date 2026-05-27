@@ -265,7 +265,7 @@ A basic, customizable consent UI using `amp-consent` and `amp-script`. It allows
 
 #### 2. Iubenda Cookie Solution <span>v3.3</span>{:.badge.badge-success} <br> {#iubenda-cookie-consent}
 
-Integrates [iubenda](https://www.iubenda.com), a Google-certified Consent Management Platform (CMP) for robust GDPR and privacy compliance.
+Integrates [iubenda](https://iubenda.refr.cc/default/u/fumikr?s=esp&t=cp), a Google-certified Consent Management Platform (CMP) for robust GDPR and privacy compliance.
 
 For a full guide, see [Introducing iubenda AMP Cookie Solution]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}).
 

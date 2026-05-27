@@ -27,7 +27,7 @@ css:
 
 {% include alert.html type="primary" content="_Do you want to improve your website for visitors from different regions?_ Using geo-detection for cookie consent helps you show the right message and make more money from ads, all while keeping things easy and user-friendly." %}
 
-Last month, we introduced the Iubenda AMP Cookie Solution in the [release of our AMP Jekyll theme <span class="badge badge-success">v3.3.0</span>]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}). However, there's a catch: Iubenda's geo-detection feature is only available in their Advanced, Ultimate, and Tailored plans, which start at $24.99 USD.
+Last month, we introduced the [Iubenda AMP Cookie Solution in the release of our AMP Jekyll theme <span class="badge badge-success">v3.3.0</span>]({% post_url 2025-01-23-introducing-iubenda-amp-cookie-solution %}). However, there's a catch: [Iubenda](https://iubenda.refr.cc/default/u/fumikr?s=esp&t=cp)'s geo-detection feature is only available in their Advanced, Ultimate, and Tailored plans, which start at $24.99 USD.
 
 Here's the good news! This guide will show you a simple way to use `<amp-geo>` and `geoOverride` field within `<amp-consent>` to get geo-targeted consent for free. With these tools, you can manage cookie consent for different regions without spending extra money.
 
