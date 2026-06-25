@@ -69,14 +69,14 @@ This loads `_theme-vars.scss`, making all global variables available. `amp-custo
 
 ## Development Workflow
 
-The development and build workflow for SCSS is managed through `npm` scripts defined in `package.json`. These scripts provide a consistent and easy way to compile, watch, and minify your stylesheets.
+The development and build workflow for SCSS is managed through `pnpm` scripts defined in `package.json`. These scripts provide a consistent and easy way to compile, watch, and minify your stylesheets.
 
 Here are the essential commands:
 
-- `npm run compile:scss`: Compiles all SCSS files from the `_sass` directory into the final CSS file used by Jekyll.
-- `npm run minify:css`: Takes the compiled CSS and minifies it for production use, reducing file size.
-- `npm run watch:scss`: A crucial development command that automatically watches for any changes in your `.scss` files and recompiles them on the fly.
-- `npm run watch:all`: **This is the recommended command for active development.** It runs `watch:scss` and other watch tasks concurrently, providing a seamless live-reloading experience for all aspects of the theme.
+- `pnpm run compile:scss`: Compiles all SCSS files from the `_sass` directory into the final CSS file used by Jekyll.
+- `pnpm run minify:css`: Takes the compiled CSS and minifies it for production use, reducing file size.
+- `pnpm run watch:scss`: A crucial development command that automatically watches for any changes in your `.scss` files and recompiles them on the fly.
+- `pnpm run watch:all`: **This is the recommended command for active development.** It runs `watch:scss` and other watch tasks concurrently, providing a seamless live-reloading experience for all aspects of the theme.
 
 ## How to Add or Modify Styles
 
@@ -111,7 +111,7 @@ For adding your own custom styles, the recommended approach is to add them direc
     }
     ```
 
-3. **Compile and Verify:** If you are running `npm run watch:all`, the changes will be compiled automatically. Your new styles will now be active on your site. This method avoids the need to create new files or modify the theme's layout to include new stylesheets.
+3. **Compile and Verify:** If you are running `pnpm run watch:all`, the changes will be compiled automatically. Your new styles will now be active on your site. This method avoids the need to create new files or modify the theme's layout to include new stylesheets.
 
 ## Conclusion
 

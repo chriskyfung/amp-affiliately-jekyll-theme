@@ -46,7 +46,7 @@ This project offers an AMP-ready Jekyll theme for your blogs and websites.
 - **Enhanced Analytics:** Deep [Google Analytics 4 (GA4) integration](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/google-analytics-4/) with outbound link and video engagement tracking. 📊
 - **Customizable Footer:** Easily configure footer columns directly from `_config.yml`. 📝
 - **Improved UX & Styling:** A custom 404 page, refined typography, and enhanced styling for ToC and callouts. 🎨
-- **Modernized Build & Styling:** Migrated to the modern Sass module system (`@use`). The build process features a fully integrated asset pipeline where `npm run build` handles everything from SCSS compilation and minification to Jekyll site generation and final HTML optimization. The Gulp-based system is refactored for robustness, uses ES modules, provides better logging, and conditionally generates sourcemaps. Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication. 🔨
+- **Modernized Build & Styling:** Migrated to the modern Sass module system (`@use`). The build process features a fully integrated asset pipeline where `pnpm run build` handles everything from SCSS compilation and minification to Jekyll site generation and final HTML optimization. The Gulp-based system is refactored for robustness, uses ES modules, provides better logging, and conditionally generates sourcemaps. Separated theme variables into a dedicated partial (`_theme-vars.scss`) to prevent CSS duplication. 🔨
 - **Better Developer Experience:** Live reload for local development and deep VS Code integration with [Front Matter CMS](https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-cms/). 👨‍💻
 
 ### ✨ New Features in `v2.x.x`
