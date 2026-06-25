@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  CI:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,13 +26,15 @@ jobs:
           ruby-version: '3.3.6'
           bundler-cache: true
           cache-version: 0
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: 'pnpm'
       - name: Install node dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
       - name: Build site
         run: |
           npm run css:build

@@ -15,24 +15,24 @@ This document provides essential context for the Gemini AI assistant to work eff
 - **Primary Architectural Constraint:** **AMP-first**. All layouts, includes, and styles are designed to be AMP-compliant.
 - **Package Management:**
   - **Ruby:** `bundler` (`Gemfile`) for Jekyll and its plugins.
-  - **Node.js:** `npm` (`package.json`) for development and build-time tooling.
+  - **Node.js:** `pnpm` (`package.json`) for development and build-time tooling.
 - **Styling:** SCSS, using the modern Sass module system (`@use`). Source files are located in `_sass/`. Theme variables are separated into `_sass/_theme-vars.scss` to prevent CSS duplication.
 - **Build System:** Gulp.js (`gulpfile.mjs`) is used for post-processing the Jekyll build output.
 
 ## Build & Development Workflow
 
-The primary development workflow is managed through `npm` scripts defined in `package.json`.
+The primary development workflow is managed through `pnpm` scripts defined in `package.json`.
 
-1. **Installation:** `npm install` (which also runs `bundle install`) to install all Node.js and Ruby dependencies.
-2. **Local Development:** `npm run serve` (or `npm start`) starts the Jekyll development server with live reload enabled. This is the standard command for local theme development and previewing changes.
-3. **Production Build:** `npm run build` executes the complete, integrated production build process. This single command orchestrates the following sequence:
-    - `npm run build:css`: Compiles SCSS to CSS and minifies the output.
+1. **Installation:** `pnpm install` (which also runs `bundle install`) to install all Node.js and Ruby dependencies.
+2. **Local Development:** `pnpm run serve` (or `pnpm start`) starts the Jekyll development server with live reload enabled. This is the standard command for local theme development and previewing changes.
+3. **Production Build:** `pnpm run build` executes the complete, integrated production build process. This single command orchestrates the following sequence:
+    - `pnpm run build:css`: Compiles SCSS to CSS and minifies the output.
     - `bundle exec jekyll build`: Builds the Jekyll site (with `JEKYLL_ENV=production`), using the processed CSS.
     - `gulp build`: Performs post-processing on the generated HTML in `_site` (AMP optimization and HTML minification).
-4. **Development Build:** `npm run build:dev` runs the same build pipeline as `npm run build` but without production-specific environment variables, making it suitable for debugging.
+4. **Development Build:** `pnpm run build:dev` runs the same build pipeline as `pnpm run build` but without production-specific environment variables, making it suitable for debugging.
 5. **AMP Validation:**
-    - `npm run test`: Runs the `gulp validate` task on the build output, ignoring a predefined set of files (e.g., `search.html`). This is the primary test command used in CI workflows.
-    - `npm run test:dev`: Runs a full `gulp validate` on all generated files without any exclusions.
+    - `pnpm run test`: Runs the `gulp validate` task on the build output, ignoring a predefined set of files (e.g., `search.html`). This is the primary test command used in CI workflows.
+    - `pnpm run test:dev`: Runs a full `gulp validate` on all generated files without any exclusions.
 6. **Deployment:** The theme itself is not deployed as a site. A GitHub Actions workflow in `.github/workflows/jekyll-build.yml` builds and deploys the _documentation and demo site_ to GitHub Pages, following the same integrated build process.
 
 ## Development & Content Management
@@ -87,7 +87,7 @@ This project follows the [Conventional Commits](https://www.conventionalcommits.
 - `_layouts/`, `_includes/`, `_sass/`: The core directories containing the theme's templates, components, and styles.
 - `_posts/`: Contains all documentation and demo content for the GitHub Pages site.
 - `Gemfile`: Defines Jekyll and its plugin dependencies.
-- `package.json`: Defines Node.js development dependencies and `npm` scripts.
+- `package.json`: Defines Node.js development dependencies and `pnpm` scripts.
 - `gulpfile.mjs`: Contains the essential post-processing logic for AMP optimization, minification, and validation.
 - `frontmatter.json`: The central configuration for the Front Matter CMS.
 - `.frontmatter/`: Contains distributed Front Matter CMS configurations, including UI customizations and a rich snippet library.
