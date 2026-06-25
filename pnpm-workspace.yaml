@@ -2,6 +2,8 @@ packages:
   - '.'
 allowBuilds:
   '@parcel/watcher': false
+minimumReleaseAgeExclude:
+  - autoprefixer@10.5.2
 overrides:
   postcss: '>=8.5.10'
   terser: '>=5.14.2'
