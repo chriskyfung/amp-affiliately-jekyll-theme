@@ -7,6 +7,57 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-disable MD024 -->
 
+## [3.7.1] - 2026-07-22
+
+### Added
+
+- **Configuration**: Added `context7.json` configuration file for Context7 integration.
+
+### Changed
+
+- **Build**: Migrated package tooling from npm to pnpm and updated documentation.
+- **CI**: Run CI on Node.js 24.x and enable npm cache in GitHub Actions workflows.
+- **CI**: Group all GitHub Actions updates via Dependabot for better dependency management.
+- **CI**: Add concurrency control and reorder permissions in CI workflow.
+- **CI**: Rename GitHub Pages workflow to 'gh pages'.
+- **Documentation**: Remove outdated acknowledgement section from README.
+- **Documentation**: Remove GitMCP badge and add Context7 badge to README.
+- **Links**: Added iubenda affiliate referral links to configuration guide and setup post.
+
+### Fixed
+
+- **CSS**: Prevent layout offset caused by Edge Read Aloud feature.
+
+### Dependencies
+
+- Bumped `actions/checkout` from 5 to 6.
+- Bumped `actions/setup-node` in the GitHub Actions group.
+- Bumped `actions/configure-pages` from 5 to 6.
+- Bumped `actions/deploy-pages` from 4 to 5.
+- Bumped `actions/upload-pages-artifact`.
+- Bumped `addressable` from 2.8.7 to 2.9.0.
+- Bumped `concurrent-ruby` from 1.3.6 to 1.3.7.
+- Bumped `faraday` from 2.14.0 to 2.14.3.
+- Bumped `faraday-retry`.
+- Bumped `gulp-html-minizer-terser`.
+- Bumped `immutable` from 5.1.4 to 5.1.5.
+- Bumped `json` from 2.18.1 to 2.19.2.
+- Bumped `minimatch`.
+- Bumped `picomatch`.
+- Bumped `rimraf` in the development-dependencies group.
+- Bumped `sass` in the development-dependencies group.
+- Bumped `postcss` in the development-dependencies group.
+- Bumped `autoprefixer` in the development-dependencies group.
+- Bumped `cssnano` in the development-dependencies group.
+- Bumped `shell-quote` from 1.8.3 to 1.8.4.
+- Bumped `svgo` from 4.0.0 to 4.0.1.
+- Bumped `jekyll-seo-tag`.
+
+### Chore
+
+- Bumped npm dependencies to stable releases and updated Node.js engine versions.
+- Bumped the development-dependencies group across multiple directories with multiple updates.
+
 ## [3.7.0] - 2025-12-16
 
 ### Changed
