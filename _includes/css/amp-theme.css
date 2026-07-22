@@ -6,6 +6,7 @@ body {
 
 .mainheading {
   padding: 0 0 1rem;
+  contain: layout style paint;
 }
 .mainheading .above-title {
   display: flex;
@@ -53,6 +54,8 @@ pre {
 }
 
 .site-content {
+  display: flex;
+  flex-direction: column;
   padding-top: 2rem;
   margin-top: 57px;
   transition: all 0.4s;
@@ -381,6 +384,8 @@ span.post-name a, span.post-read-more a:hover {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.0625rem;
   line-height: 1.6;
+  contain: layout style paint;
+  min-width: 0;
 }
 .article-post ol, .article-post ul {
   margin-bottom: 1.5rem;
