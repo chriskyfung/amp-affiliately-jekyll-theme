@@ -53,6 +53,8 @@ pre {
 }
 
 .site-content {
+  display: flex;
+  flex-direction: column;
   padding-top: 2rem;
   margin-top: 57px;
   transition: all 0.4s;
