@@ -8,6 +8,7 @@ body {
 
 .mainheading {
   padding: 0 0 1rem;
+  contain: layout style paint;
 
   .above-title {
     display: flex;
@@ -433,6 +434,8 @@ span {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.0625rem;
   line-height: 1.6;
+  contain: layout style paint;
+  min-width: 0;
 
   ol, ul {
     margin-bottom: 1.5rem;
