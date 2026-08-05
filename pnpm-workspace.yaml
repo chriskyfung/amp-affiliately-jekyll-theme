@@ -4,6 +4,10 @@ allowBuilds:
   '@parcel/watcher': false
 minimumReleaseAgeExclude:
   - autoprefixer@10.5.2
+  - brace-expansion@1.1.16 || 1.1.17 || 1.1.18 || 5.0.7 || 5.0.8 || 5.0.9
+  - shell-quote@1.8.5
+  - immutable@5.1.8
+  - svgo@4.0.2
 overrides:
   postcss: '>=8.5.10'
   terser: '>=5.14.2'
