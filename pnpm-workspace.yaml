@@ -8,6 +8,12 @@ minimumReleaseAgeExclude:
   - shell-quote@1.8.5
   - immutable@5.1.8
   - svgo@4.0.2
+  - terser@5.14.2
+  - postcss@8.4.31 || 8.5.10 || 8.5.12 || 8.5.18 || 8.5.23
 overrides:
-  postcss: '>=8.5.10'
-  terser: '>=5.14.2'
+  postcss@<8.4.31: ^8.4.31
+  postcss@<8.5.10: ^8.5.10
+  postcss@<=8.5.11: ^8.5.12
+  postcss@<=8.5.17: ^8.5.18
+  postcss@<=8.5.22: ^8.5.23
+  terser@>=5.0.0 <5.14.2: ^5.14.2
