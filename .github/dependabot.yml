@@ -25,6 +25,9 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
+    commit-message:
+      include: scope
+      prefix: "⬆️ chore"
 
   # Enable version updates for Ruby gems
   - package-ecosystem: "bundler"
@@ -43,6 +46,9 @@ updates:
         dependency-type: "production"
       development-dependencies:
         dependency-type: "development"
+    commit-message:
+      include: scope
+      prefix: "⬆️ chore"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
@@ -55,4 +61,5 @@ updates:
       github-actions:
         patterns:
           - "*"
-      
+    commit-message:
+      prefix: "⬆️ chore(actions)"
