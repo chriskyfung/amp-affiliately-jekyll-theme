@@ -7,6 +7,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-disable MD024 -->
 
+## [3.7.2] - 2026-09-05
+
+### Changed
+
+- **CI**: Standardized Dependabot commit messages with custom prefixes for npm, bundler, and GitHub Actions ecosystems.
+- **CI**: Configured Dependabot update cooldowns (default: 5 days, major: 30 days, minor: 7 days, patch: 3 days) for npm, bundler, and GitHub Actions ecosystems.
+- **Build**: Bumped pnpm to 11.20.0 and updated `pnpm-workspace.yaml` with version exclusions and refined PostCSS/terser overrides.
+- **Submodule**: Updated `.frontmatter/config` submodule pointer from 6fe5d02 to 1c38c93 to pull in latest configuration changes.
+
+### Removed
+
+- **Build**: Removed `package-lock.json` to complete the migration to pnpm.
+
+### Dependencies
+
+- Bumped `nanoid` from 3.3.15 to 3.3.18 to fix CVE-2026-67213.
+- Bumped `autoprefixer` from 10.5.2 to 10.5.4.
+- Bumped `cssnano` from 8.0.2 to 8.0.10.
+- Bumped `postcss` from 8.5.15 to 8.5.26.
+- Bumped `sass` from 1.101.0 to 1.103.1.
+- Bumped `yargs` from 18.0.0 to 18.1.0.
+- Bumped `google-protobuf` from 4.34.1 to 4.36.1.
+- Bumped `sass-embedded` from 1.99.0 to 1.104.0.
+- Bumped `concurrent-ruby` from 1.3.7 to 1.3.8.
+- Bumped `http_parser.rb` from 0.8.0 to 0.8.1.
+- Bumped `i18n` from 1.14.8 to 1.15.2.
+- Bumped `json` from 2.20.0 to 2.21.2.
+- Bumped `csv` from 3.3.5 to 3.3.6.
+- Bumped `sawyer` from 0.9.2 to 0.9.3.
+- Bumped `tzinfo-data` from 1.2025.2 to 1.2026.3.
+
+### Chore
+
+- Bumped the development-dependencies group across multiple directories with multiple updates.
+- Bumped npm and Ruby dependencies to stable releases.
+
 ## [3.7.1] - 2026-07-22
 
 ### Added
