@@ -146,7 +146,7 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 RUBY VERSION
-   ruby 3.3.6p108
+   ruby 3.3.8p144
 
 BUNDLED WITH
    2.6.3
