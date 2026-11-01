@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   CI:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         node-version: [24.x]
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.6'
+          ruby-version: '4.0.1'
           bundler-cache: true
           cache-version: 0
       - name: Set up pnpm
